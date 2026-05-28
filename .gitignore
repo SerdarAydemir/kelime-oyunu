@@ -130,6 +130,8 @@ GoogleService-Info.plist[cite: 10]
 ios/Runner/Configs/Secrets.xcconfig[cite: 10]
 
 # --- Python İçerik Motoru (Level Generator) ---
+tools/level_generator/data/raw/
+tools/level_generator/data/processed/
 tools/level_generator/.venv/
 tools/level_generator/__pycache__/
 tools/level_generator/.pytest_cache/
