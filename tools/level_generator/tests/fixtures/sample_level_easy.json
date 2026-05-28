@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "level_id": 1,
+  "pack_id": "pack_001_test",
+  "difficulty": "easy",
+  "difficulty_score": 15,
+  "category": "test",
+  "category_display_tr": "Test",
+  "grid_size": { "rows": 6, "cols": 6 },
+  "grid": [
+    ["K", "E", "D", "İ", "B", "B"],
+    ["A", "B", "B", "B", "B", "B"],
+    ["L", "B", "E", "L", "İ", "F"],
+    ["E", "B", "B", "B", "B", "B"],
+    ["B", "B", "B", "B", "B", "B"],
+    ["B", "B", "B", "B", "B", "B"]
+  ],
+  "words": [
+    {
+      "word": "KEDİ",
+      "start": { "row": 0, "col": 0 },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "Miyavlayan ev hayvanı"
+    },
+    {
+      "word": "KALE",
+      "start": { "row": 0, "col": 0 },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 75,
+      "hint_tr": "Savunma yapısı"
+    },
+    {
+      "word": "ELİF",
+      "start": { "row": 2, "col": 2 },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 70,
+      "hint_tr": "Türkçe bir isim"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [60, 120, 180]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-28T00:00:00Z",
+  "generator_version": "1.0.0"
+}
