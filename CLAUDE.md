@@ -115,8 +115,9 @@ Her yeni görev geldiğinde şu sırayı bozmadan uygula:
 - Hatalı level: `SafetyGenerationError` fırlat, `sys.exit(1)` ile çık. Sessiz başarı yasak. (`coding-standards.md §8.7`)
 - Türkçe büyük/küçük harf: `tr_upper()` / `tr_lower()` helper'larını kullan, `str.upper()` değil. (`architecture.md §7.6`)
 - Her level `pydantic` ile validate edilir + Flutter parse testi (CI). (`coding-standards.md §8.6`)
-- Windows konsolunda Türkçe karakter için tüm Python script'lerinin başına ekle:
-  `import sys, io` ve `sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")`
+- Windows konsolunda Türkçe karakter için: `_force_utf8_stdout()` fonksiyonuna koy,
+  yalnızca `main()` / CLI giriş noktasından çağır.
+  Import edilebilen modüllerin tepesine asla koyma — pytest capture'ını bozar.
 
 ---
 
