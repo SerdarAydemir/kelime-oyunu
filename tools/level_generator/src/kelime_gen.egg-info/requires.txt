@@ -1,0 +1,9 @@
+pydantic>=2.5
+typer>=0.9
+rich>=13.7
+
+[dev]
+pytest>=7
+ruff>=0.1
+black>=23
+mypy>=1.7

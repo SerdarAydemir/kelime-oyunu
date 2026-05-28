@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: kelime-gen
+Version: 0.1.0
+Summary: Türkçe Kelime Bulmaca — level generator
+Requires-Python: >=3.11
+Requires-Dist: pydantic>=2.5
+Requires-Dist: typer>=0.9
+Requires-Dist: rich>=13.7
+Provides-Extra: dev
+Requires-Dist: pytest>=7; extra == "dev"
+Requires-Dist: ruff>=0.1; extra == "dev"
+Requires-Dist: black>=23; extra == "dev"
+Requires-Dist: mypy>=1.7; extra == "dev"
