@@ -18,7 +18,7 @@ dev = [
 ]
 
 [project.scripts]
-kelime-gen = "kelime_gen.__main__:app"
+kelime-gen = "kelime_gen.__main__:main"
 
 [tool.ruff]
 line-length = 100
