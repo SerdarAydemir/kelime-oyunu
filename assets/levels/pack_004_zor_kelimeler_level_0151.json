@@ -1,0 +1,219 @@
+{
+  "schema_version": 1,
+  "level_id": 151,
+  "pack_id": "pack_004_zor_kelimeler",
+  "difficulty": "hard",
+  "difficulty_score": 31,
+  "category": "zor_kelimeler",
+  "category_display_tr": "Zorlayıcı",
+  "grid_size": {
+    "rows": 10,
+    "cols": 10
+  },
+  "grid": [
+    [
+      "M",
+      "Z",
+      "K",
+      "İ",
+      "K",
+      "T",
+      "İ",
+      "Z",
+      "A",
+      "İ"
+    ],
+    [
+      "D",
+      "A",
+      "E",
+      "İ",
+      "A",
+      "A",
+      "Y",
+      "Ş",
+      "H",
+      "A"
+    ],
+    [
+      "B",
+      "N",
+      "V",
+      "I",
+      "İ",
+      "İ",
+      "İ",
+      "V",
+      "E",
+      "E"
+    ],
+    [
+      "O",
+      "B",
+      "S",
+      "R",
+      "A",
+      "E",
+      "N",
+      "A",
+      "Y",
+      "E"
+    ],
+    [
+      "L",
+      "M",
+      "E",
+      "M",
+      "O",
+      "Ü",
+      "K",
+      "Ç",
+      "H",
+      "L"
+    ],
+    [
+      "A",
+      "N",
+      "R",
+      "E",
+      "E",
+      "L",
+      "D",
+      "T",
+      "E",
+      "E"
+    ],
+    [
+      "R",
+      "L",
+      "Ş",
+      "A",
+      "L",
+      "U",
+      "P",
+      "A",
+      "Y",
+      "İ"
+    ],
+    [
+      "M",
+      "İ",
+      "R",
+      "E",
+      "A",
+      "İ",
+      "U",
+      "L",
+      "K",
+      "Ş"
+    ],
+    [
+      "A",
+      "Y",
+      "Ü",
+      "Z",
+      "D",
+      "E",
+      "C",
+      "İ",
+      "I",
+      "E"
+    ],
+    [
+      "S",
+      "S",
+      "M",
+      "E",
+      "U",
+      "A",
+      "E",
+      "I",
+      "F",
+      "Y"
+    ]
+  ],
+  "words": [
+    {
+      "word": "YÜZDECİ",
+      "start": {
+        "row": 8,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir zor_kelimeler kelimesi"
+    },
+    {
+      "word": "BOLARMA",
+      "start": {
+        "row": 2,
+        "col": 0
+      },
+      "direction": "vertical",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir zor_kelimeler kelimesi"
+    },
+    {
+      "word": "İKTİZA",
+      "start": {
+        "row": 0,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir zor_kelimeler kelimesi"
+    },
+    {
+      "word": "ŞALUPA",
+      "start": {
+        "row": 6,
+        "col": 2
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir zor_kelimeler kelimesi"
+    },
+    {
+      "word": "KEVSER",
+      "start": {
+        "row": 0,
+        "col": 2
+      },
+      "direction": "vertical",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir zor_kelimeler kelimesi"
+    },
+    {
+      "word": "HEYHEY",
+      "start": {
+        "row": 1,
+        "col": 8
+      },
+      "direction": "vertical",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir zor_kelimeler kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-29T11:40:12.368721+00:00",
+  "generator_version": "1.0.0"
+}

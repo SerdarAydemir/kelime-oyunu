@@ -3,7 +3,7 @@
   "level_id": 189,
   "pack_id": "pack_005_karisik",
   "difficulty": "medium",
-  "difficulty_score": 38,
+  "difficulty_score": 30,
   "category": "karisik",
   "category_display_tr": "Karışık",
   "grid_size": {
@@ -12,198 +12,143 @@
   },
   "grid": [
     [
-      "B",
-      "S",
-      "A",
-      "A",
-      "T",
       "İ",
       "N",
-      "E",
-      "Ç",
-      "K"
-    ],
-    [
-      "A",
-      "D",
-      "A",
-      "H",
-      "L",
-      "E",
-      "T",
-      "M",
-      "E",
-      "K"
-    ],
-    [
-      "K",
-      "U",
-      "D",
-      "İ",
-      "M",
-      "I",
-      "N",
-      "E",
-      "M",
-      "K"
-    ],
-    [
-      "I",
-      "K",
-      "İ",
-      "V",
-      "R",
-      "E",
-      "E",
-      "R",
-      "E",
-      "İ"
-    ],
-    [
-      "M",
-      "U",
-      "R",
-      "İ",
-      "A",
-      "E",
-      "H",
-      "E",
-      "N",
-      "R"
-    ],
-    [
-      "L",
-      "B",
-      "E",
       "C",
+      "B",
+      "M",
+      "D",
+      "A",
+      "O",
+      "R",
+      "L"
+    ],
+    [
+      "M",
+      "A",
+      "K",
+      "İ",
+      "K",
+      "Ü",
+      "S",
+      "İ",
+      "D",
+      "N"
+    ],
+    [
       "R",
       "E",
-      "R",
+      "A",
       "U",
+      "İ",
+      "Z",
+      "G",
+      "A",
+      "D",
+      "N"
+    ],
+    [
+      "E",
+      "I",
+      "F",
+      "Y",
+      "F",
+      "G",
+      "A",
+      "H",
+      "A",
+      "L"
+    ],
+    [
+      "Z",
+      "E",
+      "A",
+      "Y",
+      "E",
+      "Ü",
       "L",
-      "P"
+      "A",
+      "İ",
+      "Ç"
+    ],
+    [
+      "A",
+      "İ",
+      "D",
+      "D",
+      "N",
+      "İ",
+      "Y",
+      "L",
+      "B",
+      "Ç"
+    ],
+    [
+      "N",
+      "Z",
+      "A",
+      "İ",
+      "O",
+      "İ",
+      "O",
+      "A",
+      "O",
+      "U"
+    ],
+    [
+      "S",
+      "O",
+      "Ş",
+      "U",
+      "M",
+      "I",
+      "T",
+      "Y",
+      "N",
+      "L"
     ],
     [
       "I",
-      "E",
-      "N",
-      "D",
-      "İ",
-      "N",
-      "D",
-      "N",
-      "E",
-      "İ"
-    ],
-    [
-      "K",
       "T",
-      "M",
       "A",
-      "N",
+      "Ü",
+      "E",
+      "I",
+      "A",
       "D",
-      "N",
-      "A",
-      "N",
-      "K"
+      "Ü",
+      "C"
     ],
     [
-      "H",
-      "İ",
+      "Z",
+      "A",
       "E",
+      "R",
       "N",
-      "L",
-      "A",
-      "K",
-      "L",
-      "M",
-      "S"
-    ],
-    [
-      "A",
-      "İ",
-      "K",
-      "İ",
-      "İ",
-      "İ",
-      "K",
-      "U",
       "E",
-      "İ"
+      "K",
+      "B",
+      "T",
+      "U"
     ]
   ],
   "words": [
     {
-      "word": "ÇEMENLENME",
-      "start": {
-        "row": 0,
-        "col": 8
-      },
-      "direction": "vertical",
-      "length": 10,
-      "frequency_score": 20,
-      "hint_tr": "10 harfli bir karisik kelimesi"
-    },
-    {
-      "word": "DAHLETMEK",
+      "word": "KAFADAŞ",
       "start": {
         "row": 1,
-        "col": 1
-      },
-      "direction": "horizontal",
-      "length": 9,
-      "frequency_score": 30,
-      "hint_tr": "9 harfli bir karisik kelimesi"
-    },
-    {
-      "word": "KİRPİKSİ",
-      "start": {
-        "row": 2,
-        "col": 9
-      },
-      "direction": "vertical",
-      "length": 8,
-      "frequency_score": 40,
-      "hint_tr": "8 harfli bir karisik kelimesi"
-    },
-    {
-      "word": "BAKIMLIK",
-      "start": {
-        "row": 0,
-        "col": 0
-      },
-      "direction": "vertical",
-      "length": 8,
-      "frequency_score": 40,
-      "hint_tr": "8 harfli bir karisik kelimesi"
-    },
-    {
-      "word": "DİRENMEK",
-      "start": {
-        "row": 2,
         "col": 2
       },
       "direction": "vertical",
-      "length": 8,
-      "frequency_score": 40,
-      "hint_tr": "8 harfli bir karisik kelimesi"
-    },
-    {
-      "word": "SAATİNE",
-      "start": {
-        "row": 0,
-        "col": 1
-      },
-      "direction": "horizontal",
       "length": 7,
       "frequency_score": 50,
       "hint_tr": "7 harfli bir karisik kelimesi"
     },
     {
-      "word": "VİCDANİ",
+      "word": "FENOMEN",
       "start": {
         "row": 3,
-        "col": 3
+        "col": 4
       },
       "direction": "vertical",
       "length": 7,
@@ -211,10 +156,21 @@
       "hint_tr": "7 harfli bir karisik kelimesi"
     },
     {
-      "word": "UKUBET",
+      "word": "EZANSIZ",
+      "start": {
+        "row": 3,
+        "col": 0
+      },
+      "direction": "vertical",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "GALYOT",
       "start": {
         "row": 2,
-        "col": 1
+        "col": 6
       },
       "direction": "vertical",
       "length": 6,
@@ -222,15 +178,37 @@
       "hint_tr": "6 harfli bir karisik kelimesi"
     },
     {
-      "word": "LAK",
+      "word": "DÜZGÜ",
       "start": {
-        "row": 8,
-        "col": 4
+        "row": 0,
+        "col": 5
       },
-      "direction": "horizontal",
-      "length": 3,
-      "frequency_score": 90,
-      "hint_tr": "3 harfli bir karisik kelimesi"
+      "direction": "vertical",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "HALAY",
+      "start": {
+        "row": 3,
+        "col": 7
+      },
+      "direction": "vertical",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "ÇULCU",
+      "start": {
+        "row": 5,
+        "col": 9
+      },
+      "direction": "vertical",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir karisik kelimesi"
     }
   ],
   "bonus_words": [],
@@ -247,6 +225,6 @@
     "post_fill_scanned": true,
     "scanner_version": "1.0.0"
   },
-  "generated_at": "2026-05-28T21:12:06.432569+00:00",
+  "generated_at": "2026-05-29T11:40:18.456831+00:00",
   "generator_version": "1.0.0"
 }

@@ -1,0 +1,209 @@
+{
+  "schema_version": 1,
+  "level_id": 57,
+  "pack_id": "pack_002_genel",
+  "difficulty": "easy",
+  "difficulty_score": 28,
+  "category": "genel",
+  "category_display_tr": "Günlük",
+  "grid_size": {
+    "rows": 9,
+    "cols": 9
+  },
+  "grid": [
+    [
+      "N",
+      "O",
+      "R",
+      "U",
+      "A",
+      "E",
+      "E",
+      "E",
+      "A"
+    ],
+    [
+      "O",
+      "Ö",
+      "D",
+      "E",
+      "Y",
+      "İ",
+      "Ş",
+      "İ",
+      "K"
+    ],
+    [
+      "P",
+      "F",
+      "E",
+      "R",
+      "İ",
+      "H",
+      "L",
+      "G",
+      "I"
+    ],
+    [
+      "İ",
+      "S",
+      "L",
+      "N",
+      "L",
+      "U",
+      "N",
+      "L",
+      "Ş"
+    ],
+    [
+      "Y",
+      "K",
+      "O",
+      "F",
+      "S",
+      "A",
+      "Y",
+      "T",
+      "M"
+    ],
+    [
+      "O",
+      "A",
+      "R",
+      "B",
+      "E",
+      "D",
+      "E",
+      "O",
+      "A"
+    ],
+    [
+      "R",
+      "A",
+      "R",
+      "Ç",
+      "A",
+      "K",
+      "I",
+      "L",
+      "I"
+    ],
+    [
+      "E",
+      "T",
+      "D",
+      "O",
+      "S",
+      "İ",
+      "L",
+      "E",
+      "Z"
+    ],
+    [
+      "O",
+      "A",
+      "H",
+      "E",
+      "Y",
+      "Y",
+      "Y",
+      "D",
+      "D"
+    ]
+  ],
+  "words": [
+    {
+      "word": "ÖDEYİŞ",
+      "start": {
+        "row": 1,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir genel kelimesi"
+    },
+    {
+      "word": "OFSAYT",
+      "start": {
+        "row": 4,
+        "col": 2
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir genel kelimesi"
+    },
+    {
+      "word": "ARBEDE",
+      "start": {
+        "row": 5,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir genel kelimesi"
+    },
+    {
+      "word": "PİYORE",
+      "start": {
+        "row": 2,
+        "col": 0
+      },
+      "direction": "vertical",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir genel kelimesi"
+    },
+    {
+      "word": "AKIŞMA",
+      "start": {
+        "row": 0,
+        "col": 8
+      },
+      "direction": "vertical",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir genel kelimesi"
+    },
+    {
+      "word": "ÇAKILI",
+      "start": {
+        "row": 6,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir genel kelimesi"
+    },
+    {
+      "word": "FERİH",
+      "start": {
+        "row": 2,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir genel kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-29T11:39:59.619427+00:00",
+  "generator_version": "1.0.0"
+}

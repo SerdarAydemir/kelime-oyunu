@@ -3,162 +3,100 @@
   "level_id": 15,
   "pack_id": "pack_001_kisa_kelimeler",
   "difficulty": "easy",
-  "difficulty_score": 21,
+  "difficulty_score": 16,
   "category": "kisa_kelimeler",
-  "category_display_tr": "Kısa Kelimeler",
+  "category_display_tr": "Başlangıç",
   "grid_size": {
-    "rows": 10,
-    "cols": 10
+    "rows": 8,
+    "cols": 8
   },
   "grid": [
     [
+      "D",
       "L",
-      "N",
-      "İ",
-      "N",
       "İ",
       "A",
-      "L",
+      "D",
       "E",
-      "N",
-      "N"
+      "Z",
+      "I"
     ],
     [
+      "O",
+      "S",
+      "Y",
+      "Ü",
+      "K",
+      "Ş",
+      "R",
+      "E"
+    ],
+    [
+      "S",
+      "Ü",
+      "İ",
+      "T",
       "F",
-      "İ",
-      "İ",
-      "L",
-      "İ",
-      "D",
-      "K",
-      "E",
-      "D",
-      "A"
+      "Ş",
+      "A",
+      "P"
     ],
     [
       "N",
-      "A",
       "K",
-      "U",
-      "R",
-      "E",
+      "A",
+      "A",
       "A",
       "S",
-      "T",
-      "T"
-    ],
-    [
-      "U",
-      "N",
-      "T",
       "R",
-      "O",
-      "T",
-      "U",
-      "S",
-      "K",
-      "E"
-    ],
-    [
-      "A",
-      "O",
-      "R",
-      "K",
-      "İ",
-      "K",
-      "O",
-      "R",
-      "A",
-      "D"
-    ],
-    [
-      "L",
-      "A",
-      "R",
-      "D",
-      "S",
-      "E",
-      "R",
-      "İ",
-      "L",
-      "E"
-    ],
-    [
-      "N",
-      "İ",
-      "D",
-      "D",
-      "E",
-      "K",
-      "A",
-      "N",
-      "O",
-      "N"
-    ],
-    [
-      "A",
-      "N",
-      "R",
-      "İ",
-      "K",
-      "A",
-      "İ",
-      "K",
-      "D",
-      "A"
-    ],
-    [
-      "S",
-      "U",
-      "R",
-      "U",
-      "K",
-      "G",
-      "A",
-      "G",
-      "A",
       "İ"
     ],
     [
-      "K",
-      "R",
-      "S",
+      "C",
+      "E",
+      "C",
+      "Z",
       "A",
       "E",
-      "A",
+      "D",
+      "L"
+    ],
+    [
+      "Ö",
+      "E",
+      "Ö",
+      "F",
+      "I",
+      "M",
+      "I",
+      "K"
+    ],
+    [
+      "C",
+      "C",
+      "I",
+      "E",
+      "T",
       "K",
-      "R",
-      "G",
-      "O"
+      "E",
+      "A"
+    ],
+    [
+      "L",
+      "C",
+      "Z",
+      "D",
+      "A",
+      "U",
+      "U",
+      "A"
     ]
   ],
   "words": [
     {
-      "word": "KANO",
+      "word": "SÜİT",
       "start": {
-        "row": 6,
-        "col": 5
-      },
-      "direction": "horizontal",
-      "length": 4,
-      "frequency_score": 80,
-      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
-    },
-    {
-      "word": "URUK",
-      "start": {
-        "row": 8,
-        "col": 1
-      },
-      "direction": "horizontal",
-      "length": 4,
-      "frequency_score": 80,
-      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
-    },
-    {
-      "word": "FİİL",
-      "start": {
-        "row": 1,
+        "row": 2,
         "col": 0
       },
       "direction": "horizontal",
@@ -167,20 +105,9 @@
       "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
     },
     {
-      "word": "ADET",
+      "word": "İADE",
       "start": {
         "row": 0,
-        "col": 5
-      },
-      "direction": "vertical",
-      "length": 4,
-      "frequency_score": 80,
-      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
-    },
-    {
-      "word": "RİKA",
-      "start": {
-        "row": 7,
         "col": 2
       },
       "direction": "horizontal",
@@ -189,10 +116,10 @@
       "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
     },
     {
-      "word": "GAGA",
+      "word": "ECZA",
       "start": {
-        "row": 8,
-        "col": 5
+        "row": 4,
+        "col": 1
       },
       "direction": "horizontal",
       "length": 4,
@@ -200,32 +127,32 @@
       "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
     },
     {
-      "word": "ROT",
+      "word": "ASRİ",
       "start": {
         "row": 3,
-        "col": 3
-      },
-      "direction": "horizontal",
-      "length": 3,
-      "frequency_score": 90,
-      "hint_tr": "3 harfli bir kisa_kelimeler kelimesi"
-    },
-    {
-      "word": "KOR",
-      "start": {
-        "row": 4,
-        "col": 5
-      },
-      "direction": "horizontal",
-      "length": 3,
-      "frequency_score": 90,
-      "hint_tr": "3 harfli bir kisa_kelimeler kelimesi"
-    },
-    {
-      "word": "SER",
-      "start": {
-        "row": 5,
         "col": 4
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "PİL",
+      "start": {
+        "row": 2,
+        "col": 7
+      },
+      "direction": "vertical",
+      "length": 3,
+      "frequency_score": 90,
+      "hint_tr": "3 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "YÜK",
+      "start": {
+        "row": 1,
+        "col": 2
       },
       "direction": "horizontal",
       "length": 3,
@@ -247,6 +174,6 @@
     "post_fill_scanned": true,
     "scanner_version": "1.0.0"
   },
-  "generated_at": "2026-05-28T21:11:34.477408+00:00",
+  "generated_at": "2026-05-29T11:39:57.204485+00:00",
   "generator_version": "1.0.0"
 }

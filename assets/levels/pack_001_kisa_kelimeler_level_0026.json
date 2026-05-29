@@ -3,256 +3,161 @@
   "level_id": 26,
   "pack_id": "pack_001_kisa_kelimeler",
   "difficulty": "easy",
-  "difficulty_score": 22,
+  "difficulty_score": 18,
   "category": "kisa_kelimeler",
-  "category_display_tr": "Kısa Kelimeler",
+  "category_display_tr": "Başlangıç",
   "grid_size": {
-    "rows": 10,
-    "cols": 10
+    "rows": 8,
+    "cols": 8
   },
   "grid": [
     [
-      "İ",
       "N",
-      "K",
-      "P",
-      "R",
-      "İ",
-      "M",
-      "M",
-      "L",
-      "R"
-    ],
-    [
-      "A",
-      "U",
-      "A",
-      "A",
-      "Ş",
-      "D",
-      "T",
-      "R",
-      "Ü",
-      "K"
-    ],
-    [
-      "R",
-      "D",
-      "L",
-      "İ",
-      "U",
-      "K",
-      "K",
-      "A",
-      "N",
-      "D"
-    ],
-    [
-      "Ü",
-      "U",
-      "İ",
-      "İ",
-      "R",
-      "U",
-      "T",
-      "A",
       "S",
+      "N",
+      "A",
+      "R",
+      "Ü",
+      "R",
+      "H"
+    ],
+    [
+      "S",
+      "A",
+      "R",
+      "F",
+      "İ",
+      "K",
+      "U",
       "A"
     ],
     [
+      "U",
+      "K",
+      "N",
+      "İ",
+      "Y",
+      "N",
+      "Z",
+      "Z"
+    ],
+    [
+      "F",
+      "O",
+      "Ş",
+      "D",
+      "L",
+      "L",
+      "U",
+      "A"
+    ],
+    [
+      "İ",
+      "M",
+      "İ",
+      "N",
       "N",
       "A",
-      "G",
-      "D",
-      "V",
-      "S",
       "N",
-      "O",
-      "P",
       "İ"
     ],
     [
-      "Ş",
-      "K",
-      "D",
-      "Ö",
       "İ",
-      "U",
-      "O",
-      "L",
-      "V",
+      "C",
+      "M",
+      "A",
+      "Ş",
+      "R",
+      "T",
       "A"
     ],
     [
-      "U",
-      "İ",
-      "İ",
-      "R",
-      "İ",
-      "N",
-      "V",
-      "O",
-      "A",
-      "R"
-    ],
-    [
-      "A",
-      "A",
-      "İ",
       "T",
-      "Ö",
-      "İ",
-      "M",
-      "L",
-      "N",
-      "N"
-    ],
-    [
-      "İ",
-      "V",
-      "R",
-      "R",
+      "G",
       "T",
       "İ",
-      "A",
-      "Ş",
-      "İ",
-      "K"
-    ],
-    [
-      "A",
-      "A",
       "R",
       "İ",
-      "T",
-      "N",
-      "N",
-      "N",
+      "K",
+      "I"
+    ],
+    [
+      "Y",
+      "İ",
+      "E",
+      "R",
       "A",
-      "M"
+      "F",
+      "E",
+      "İ"
     ]
   ],
   "words": [
     {
-      "word": "SNOP",
-      "start": {
-        "row": 4,
-        "col": 5
-      },
-      "direction": "horizontal",
-      "length": 4,
-      "frequency_score": 80,
-      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
-    },
-    {
-      "word": "DÖRT",
-      "start": {
-        "row": 4,
-        "col": 3
-      },
-      "direction": "vertical",
-      "length": 4,
-      "frequency_score": 80,
-      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
-    },
-    {
-      "word": "SUNİ",
-      "start": {
-        "row": 4,
-        "col": 5
-      },
-      "direction": "vertical",
-      "length": 4,
-      "frequency_score": 80,
-      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
-    },
-    {
-      "word": "PRİM",
-      "start": {
-        "row": 0,
-        "col": 3
-      },
-      "direction": "horizontal",
-      "length": 4,
-      "frequency_score": 80,
-      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
-    },
-    {
-      "word": "OVMA",
-      "start": {
-        "row": 5,
-        "col": 6
-      },
-      "direction": "vertical",
-      "length": 4,
-      "frequency_score": 80,
-      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
-    },
-    {
-      "word": "TASA",
-      "start": {
-        "row": 3,
-        "col": 6
-      },
-      "direction": "horizontal",
-      "length": 4,
-      "frequency_score": 80,
-      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
-    },
-    {
-      "word": "TRÜK",
+      "word": "SUFİ",
       "start": {
         "row": 1,
-        "col": 6
+        "col": 0
       },
-      "direction": "horizontal",
+      "direction": "vertical",
       "length": 4,
       "frequency_score": 80,
       "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
     },
     {
-      "word": "ŞUA",
+      "word": "ARİF",
+      "start": {
+        "row": 4,
+        "col": 5
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "HAZA",
+      "start": {
+        "row": 0,
+        "col": 7
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "İCMA",
       "start": {
         "row": 5,
         "col": 0
       },
-      "direction": "vertical",
-      "length": 3,
-      "frequency_score": 90,
-      "hint_tr": "3 harfli bir kisa_kelimeler kelimesi"
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
     },
     {
-      "word": "LİG",
+      "word": "SAKO",
       "start": {
-        "row": 2,
-        "col": 2
-      },
-      "direction": "vertical",
-      "length": 3,
-      "frequency_score": 90,
-      "hint_tr": "3 harfli bir kisa_kelimeler kelimesi"
-    },
-    {
-      "word": "DUA",
-      "start": {
-        "row": 2,
+        "row": 0,
         "col": 1
       },
       "direction": "vertical",
-      "length": 3,
-      "frequency_score": 90,
-      "hint_tr": "3 harfli bir kisa_kelimeler kelimesi"
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
     },
     {
-      "word": "NAM",
+      "word": "UZUN",
       "start": {
-        "row": 9,
-        "col": 7
+        "row": 1,
+        "col": 6
       },
-      "direction": "horizontal",
-      "length": 3,
-      "frequency_score": 90,
-      "hint_tr": "3 harfli bir kisa_kelimeler kelimesi"
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
     }
   ],
   "bonus_words": [],
@@ -269,6 +174,6 @@
     "post_fill_scanned": true,
     "scanner_version": "1.0.0"
   },
-  "generated_at": "2026-05-28T21:11:35.206850+00:00",
+  "generated_at": "2026-05-29T11:39:57.651462+00:00",
   "generator_version": "1.0.0"
 }

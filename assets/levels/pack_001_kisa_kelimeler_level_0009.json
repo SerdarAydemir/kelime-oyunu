@@ -3,162 +3,100 @@
   "level_id": 9,
   "pack_id": "pack_001_kisa_kelimeler",
   "difficulty": "easy",
-  "difficulty_score": 21,
+  "difficulty_score": 18,
   "category": "kisa_kelimeler",
-  "category_display_tr": "Kısa Kelimeler",
+  "category_display_tr": "Başlangıç",
   "grid_size": {
-    "rows": 10,
-    "cols": 10
+    "rows": 8,
+    "cols": 8
   },
   "grid": [
     [
-      "O",
-      "İ",
-      "A",
-      "R",
-      "L",
-      "A",
-      "L",
+      "Ö",
+      "T",
+      "V",
+      "E",
+      "D",
+      "N",
       "K",
-      "A",
-      "K"
+      "U"
     ],
     [
-      "M",
-      "K",
-      "K",
+      "O",
+      "Ö",
       "N",
-      "M",
+      "R",
+      "E",
+      "B",
+      "S",
+      "I"
+    ],
+    [
+      "L",
+      "D",
+      "İ",
+      "B",
+      "R",
       "İ",
       "E",
-      "T",
-      "Z",
-      "N"
+      "L"
     ],
     [
-      "L",
-      "V",
-      "U",
-      "T",
-      "N",
+      "D",
       "K",
-      "Z",
-      "İ",
-      "Z",
-      "E"
-    ],
-    [
-      "N",
-      "A",
-      "R",
-      "İ",
-      "M",
-      "O",
-      "A",
-      "İ",
-      "L",
-      "N"
-    ],
-    [
-      "İ",
-      "L",
-      "A",
-      "O",
-      "U",
-      "N",
-      "H",
-      "A",
-      "L",
-      "A"
-    ],
-    [
-      "Z",
       "F",
       "E",
-      "C",
-      "Z",
       "A",
-      "İ",
       "A",
-      "E",
-      "T"
+      "D",
+      "Ç"
     ],
     [
-      "A",
-      "M",
-      "İ",
       "N",
-      "R",
-      "H",
-      "E",
+      "V",
       "A",
-      "E",
+      "T",
+      "S",
+      "U",
+      "M",
       "A"
     ],
     [
-      "Z",
-      "R",
-      "O",
-      "V",
-      "N",
       "İ",
       "O",
+      "K",
+      "A",
+      "K",
+      "D",
       "E",
-      "İ",
-      "K"
+      "L"
     ],
     [
-      "N",
-      "V",
-      "Z",
+      "U",
       "L",
-      "E",
-      "A",
-      "İ",
-      "A",
       "R",
-      "K"
+      "A",
+      "A",
+      "E",
+      "A",
+      "I"
     ],
     [
-      "L",
-      "A",
-      "Z",
+      "Ç",
       "İ",
-      "M",
-      "L",
       "V",
-      "E",
-      "M",
-      "K"
+      "A",
+      "H",
+      "A",
+      "A",
+      "E"
     ]
   ],
   "words": [
     {
-      "word": "ATAK",
+      "word": "VAHA",
       "start": {
-        "row": 4,
-        "col": 9
-      },
-      "direction": "vertical",
-      "length": 4,
-      "frequency_score": 80,
-      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
-    },
-    {
-      "word": "AKUR",
-      "start": {
-        "row": 0,
-        "col": 2
-      },
-      "direction": "vertical",
-      "length": 4,
-      "frequency_score": 80,
-      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
-    },
-    {
-      "word": "ECZA",
-      "start": {
-        "row": 5,
+        "row": 7,
         "col": 2
       },
       "direction": "horizontal",
@@ -167,43 +105,10 @@
       "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
     },
     {
-      "word": "İKON",
-      "start": {
-        "row": 1,
-        "col": 5
-      },
-      "direction": "vertical",
-      "length": 4,
-      "frequency_score": 80,
-      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
-    },
-    {
-      "word": "VALF",
-      "start": {
-        "row": 2,
-        "col": 1
-      },
-      "direction": "vertical",
-      "length": 4,
-      "frequency_score": 80,
-      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
-    },
-    {
-      "word": "AZİM",
-      "start": {
-        "row": 9,
-        "col": 1
-      },
-      "direction": "horizontal",
-      "length": 4,
-      "frequency_score": 80,
-      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
-    },
-    {
-      "word": "NİZA",
+      "word": "ÇALI",
       "start": {
         "row": 3,
-        "col": 0
+        "col": 7
       },
       "direction": "vertical",
       "length": 4,
@@ -211,15 +116,48 @@
       "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
     },
     {
-      "word": "HAL",
+      "word": "BETA",
+      "start": {
+        "row": 2,
+        "col": 3
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "VOLİ",
       "start": {
         "row": 4,
-        "col": 6
+        "col": 1
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "FAKR",
+      "start": {
+        "row": 3,
+        "col": 2
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "SUMA",
+      "start": {
+        "row": 4,
+        "col": 4
       },
       "direction": "horizontal",
-      "length": 3,
-      "frequency_score": 90,
-      "hint_tr": "3 harfli bir kisa_kelimeler kelimesi"
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
     }
   ],
   "bonus_words": [],
@@ -236,6 +174,6 @@
     "post_fill_scanned": true,
     "scanner_version": "1.0.0"
   },
-  "generated_at": "2026-05-28T21:11:33.763094+00:00",
+  "generated_at": "2026-05-29T11:39:56.775957+00:00",
   "generator_version": "1.0.0"
 }

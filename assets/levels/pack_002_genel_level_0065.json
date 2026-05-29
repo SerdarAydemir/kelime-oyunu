@@ -1,0 +1,209 @@
+{
+  "schema_version": 1,
+  "level_id": 65,
+  "pack_id": "pack_002_genel",
+  "difficulty": "easy",
+  "difficulty_score": 26,
+  "category": "genel",
+  "category_display_tr": "Günlük",
+  "grid_size": {
+    "rows": 9,
+    "cols": 9
+  },
+  "grid": [
+    [
+      "I",
+      "U",
+      "S",
+      "L",
+      "B",
+      "S",
+      "L",
+      "S",
+      "N"
+    ],
+    [
+      "R",
+      "A",
+      "U",
+      "R",
+      "O",
+      "N",
+      "Y",
+      "A",
+      "İ"
+    ],
+    [
+      "S",
+      "M",
+      "S",
+      "S",
+      "R",
+      "Y",
+      "İ",
+      "İ",
+      "Y"
+    ],
+    [
+      "İ",
+      "S",
+      "U",
+      "E",
+      "Ç",
+      "U",
+      "A",
+      "A",
+      "E"
+    ],
+    [
+      "Y",
+      "O",
+      "Z",
+      "V",
+      "L",
+      "P",
+      "E",
+      "I",
+      "T"
+    ],
+    [
+      "A",
+      "N",
+      "L",
+      "İ",
+      "U",
+      "R",
+      "E",
+      "E",
+      "M"
+    ],
+    [
+      "H",
+      "A",
+      "E",
+      "Ş",
+      "A",
+      "N",
+      "K",
+      "N",
+      "D"
+    ],
+    [
+      "U",
+      "R",
+      "L",
+      "İ",
+      "K",
+      "E",
+      "E",
+      "O",
+      "İ"
+    ],
+    [
+      "E",
+      "İ",
+      "A",
+      "S",
+      "İ",
+      "L",
+      "İ",
+      "K",
+      "N"
+    ]
+  ],
+  "words": [
+    {
+      "word": "BORÇLU",
+      "start": {
+        "row": 0,
+        "col": 4
+      },
+      "direction": "vertical",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir genel kelimesi"
+    },
+    {
+      "word": "ASİLİK",
+      "start": {
+        "row": 8,
+        "col": 2
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir genel kelimesi"
+    },
+    {
+      "word": "SEVİŞ",
+      "start": {
+        "row": 2,
+        "col": 3
+      },
+      "direction": "vertical",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir genel kelimesi"
+    },
+    {
+      "word": "NİYET",
+      "start": {
+        "row": 0,
+        "col": 8
+      },
+      "direction": "vertical",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir genel kelimesi"
+    },
+    {
+      "word": "SUSUZ",
+      "start": {
+        "row": 0,
+        "col": 2
+      },
+      "direction": "vertical",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir genel kelimesi"
+    },
+    {
+      "word": "SİYAH",
+      "start": {
+        "row": 2,
+        "col": 0
+      },
+      "direction": "vertical",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir genel kelimesi"
+    },
+    {
+      "word": "SONAR",
+      "start": {
+        "row": 3,
+        "col": 1
+      },
+      "direction": "vertical",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir genel kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-29T11:40:00.528049+00:00",
+  "generator_version": "1.0.0"
+}

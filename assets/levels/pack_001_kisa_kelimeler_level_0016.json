@@ -3,130 +3,90 @@
   "level_id": 16,
   "pack_id": "pack_001_kisa_kelimeler",
   "difficulty": "easy",
-  "difficulty_score": 21,
+  "difficulty_score": 16,
   "category": "kisa_kelimeler",
-  "category_display_tr": "Kısa Kelimeler",
+  "category_display_tr": "Başlangıç",
   "grid_size": {
-    "rows": 10,
-    "cols": 10
+    "rows": 8,
+    "cols": 8
   },
   "grid": [
     [
-      "K",
-      "T",
-      "E",
+      "D",
       "A",
-      "R",
-      "R",
+      "M",
+      "D",
+      "İ",
       "K",
-      "A",
-      "Y",
-      "A"
+      "L",
+      "Y"
     ],
     [
-      "K",
       "Ü",
-      "K",
-      "B",
-      "E",
+      "S",
+      "R",
+      "İ",
+      "A",
+      "Ö",
+      "Z",
+      "D"
+    ],
+    [
+      "Z",
+      "R",
+      "H",
+      "N",
       "E",
       "Y",
-      "A",
       "E",
+      "R"
+    ],
+    [
+      "D",
+      "Ş",
+      "İ",
+      "E",
+      "T",
+      "L",
+      "A",
       "E"
     ],
     [
-      "E",
-      "F",
-      "V",
-      "E",
-      "Y",
-      "Y",
-      "V",
-      "R",
+      "M",
       "A",
-      "Ş"
-    ],
-    [
-      "Ş",
-      "E",
-      "Ş",
-      "S",
-      "E",
-      "Y",
-      "Ş",
-      "Y",
-      "A",
-      "H"
-    ],
-    [
-      "A",
-      "Ş",
-      "T",
-      "Y",
-      "E",
-      "Z",
-      "Ü",
-      "H",
-      "T",
-      "T"
-    ],
-    [
+      "N",
       "K",
-      "H",
-      "R",
+      "İ",
       "E",
-      "F",
-      "E",
-      "A",
-      "A",
-      "H",
+      "D",
+      "R"
+    ],
+    [
+      "O",
+      "K",
+      "D",
+      "O",
+      "Ş",
+      "T",
+      "İ",
       "Y"
     ],
     [
-      "A",
-      "A",
-      "R",
-      "T",
-      "S",
-      "Ş",
-      "R",
-      "S",
-      "B",
-      "T"
-    ],
-    [
+      "D",
       "E",
-      "J",
-      "A",
-      "A",
       "Ü",
       "R",
-      "Y",
-      "E",
-      "R",
-      "Y"
+      "N",
+      "V",
+      "L",
+      "Ü"
     ],
     [
       "A",
+      "N",
+      "D",
       "E",
-      "A",
-      "S",
-      "T",
-      "T",
-      "A",
-      "V",
-      "E",
-      "A"
-    ],
-    [
-      "V",
-      "T",
-      "S",
-      "A",
-      "Y",
-      "S",
-      "E",
+      "İ",
       "K",
       "E",
       "Y"
@@ -134,21 +94,10 @@
   ],
   "words": [
     {
-      "word": "ZÜHT",
+      "word": "ADİL",
       "start": {
-        "row": 4,
-        "col": 5
-      },
-      "direction": "horizontal",
-      "length": 4,
-      "frequency_score": 80,
-      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
-    },
-    {
-      "word": "REYE",
-      "start": {
-        "row": 0,
-        "col": 4
+        "row": 3,
+        "col": 6
       },
       "direction": "vertical",
       "length": 4,
@@ -156,9 +105,9 @@
       "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
     },
     {
-      "word": "ABES",
+      "word": "İNEK",
       "start": {
-        "row": 0,
+        "row": 1,
         "col": 3
       },
       "direction": "vertical",
@@ -167,10 +116,10 @@
       "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
     },
     {
-      "word": "SEVK",
+      "word": "ÖYLE",
       "start": {
-        "row": 6,
-        "col": 7
+        "row": 1,
+        "col": 5
       },
       "direction": "vertical",
       "length": 4,
@@ -178,20 +127,9 @@
       "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
     },
     {
-      "word": "HAJE",
+      "word": "MODA",
       "start": {
-        "row": 5,
-        "col": 1
-      },
-      "direction": "vertical",
-      "length": 4,
-      "frequency_score": 80,
-      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
-    },
-    {
-      "word": "ŞAKA",
-      "start": {
-        "row": 3,
+        "row": 4,
         "col": 0
       },
       "direction": "vertical",
@@ -200,10 +138,10 @@
       "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
     },
     {
-      "word": "SÜT",
+      "word": "DÜZ",
       "start": {
-        "row": 6,
-        "col": 4
+        "row": 0,
+        "col": 0
       },
       "direction": "vertical",
       "length": 3,
@@ -211,9 +149,9 @@
       "hint_tr": "3 harfli bir kisa_kelimeler kelimesi"
     },
     {
-      "word": "TÜF",
+      "word": "ŞAK",
       "start": {
-        "row": 0,
+        "row": 3,
         "col": 1
       },
       "direction": "vertical",
@@ -236,6 +174,6 @@
     "post_fill_scanned": true,
     "scanner_version": "1.0.0"
   },
-  "generated_at": "2026-05-28T21:11:34.481276+00:00",
+  "generated_at": "2026-05-29T11:39:57.209610+00:00",
   "generator_version": "1.0.0"
 }

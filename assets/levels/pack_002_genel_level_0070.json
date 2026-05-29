@@ -1,0 +1,209 @@
+{
+  "schema_version": 1,
+  "level_id": 70,
+  "pack_id": "pack_002_genel",
+  "difficulty": "easy",
+  "difficulty_score": 24,
+  "category": "genel",
+  "category_display_tr": "Günlük",
+  "grid_size": {
+    "rows": 9,
+    "cols": 9
+  },
+  "grid": [
+    [
+      "N",
+      "D",
+      "D",
+      "A",
+      "N",
+      "I",
+      "O",
+      "A",
+      "T"
+    ],
+    [
+      "I",
+      "T",
+      "S",
+      "G",
+      "İ",
+      "R",
+      "M",
+      "E",
+      "R"
+    ],
+    [
+      "I",
+      "N",
+      "L",
+      "D",
+      "A",
+      "E",
+      "K",
+      "L",
+      "R"
+    ],
+    [
+      "E",
+      "V",
+      "A",
+      "L",
+      "İ",
+      "P",
+      "İ",
+      "T",
+      "O"
+    ],
+    [
+      "Ç",
+      "E",
+      "I",
+      "M",
+      "A",
+      "I",
+      "I",
+      "E",
+      "E"
+    ],
+    [
+      "I",
+      "H",
+      "A",
+      "B",
+      "R",
+      "A",
+      "M",
+      "A",
+      "O"
+    ],
+    [
+      "I",
+      "İ",
+      "D",
+      "Ç",
+      "A",
+      "L",
+      "G",
+      "I",
+      "Ç"
+    ],
+    [
+      "E",
+      "M",
+      "Z",
+      "İ",
+      "K",
+      "Y",
+      "I",
+      "D",
+      "C"
+    ],
+    [
+      "İ",
+      "F",
+      "N",
+      "U",
+      "S",
+      "L",
+      "K",
+      "E",
+      "M"
+    ]
+  ],
+  "words": [
+    {
+      "word": "ABRAMA",
+      "start": {
+        "row": 5,
+        "col": 2
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir genel kelimesi"
+    },
+    {
+      "word": "ÇALGIÇ",
+      "start": {
+        "row": 6,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir genel kelimesi"
+    },
+    {
+      "word": "GİRME",
+      "start": {
+        "row": 1,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir genel kelimesi"
+    },
+    {
+      "word": "VEHİM",
+      "start": {
+        "row": 3,
+        "col": 1
+      },
+      "direction": "vertical",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir genel kelimesi"
+    },
+    {
+      "word": "LİPİT",
+      "start": {
+        "row": 3,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir genel kelimesi"
+    },
+    {
+      "word": "EMZİK",
+      "start": {
+        "row": 7,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir genel kelimesi"
+    },
+    {
+      "word": "ANI",
+      "start": {
+        "row": 0,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 3,
+      "frequency_score": 90,
+      "hint_tr": "3 harfli bir genel kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-29T11:40:01.114617+00:00",
+  "generator_version": "1.0.0"
+}

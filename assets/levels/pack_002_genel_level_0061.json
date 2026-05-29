@@ -3,218 +3,153 @@
   "level_id": 61,
   "pack_id": "pack_002_genel",
   "difficulty": "easy",
-  "difficulty_score": 42,
+  "difficulty_score": 26,
   "category": "genel",
-  "category_display_tr": "Genel",
+  "category_display_tr": "Günlük",
   "grid_size": {
-    "rows": 10,
-    "cols": 10
+    "rows": 9,
+    "cols": 9
   },
   "grid": [
     [
-      "K",
-      "O",
-      "R",
       "D",
-      "K",
-      "A",
-      "M",
-      "E",
-      "S",
-      "E"
-    ],
-    [
       "O",
       "Ç",
-      "M",
-      "E",
       "K",
-      "K",
-      "A",
-      "Ş",
-      "A",
-      "D"
-    ],
-    [
-      "Ş",
-      "I",
-      "İ",
-      "R",
-      "N",
-      "O",
-      "G",
-      "K",
-      "R",
-      "E"
-    ],
-    [
-      "T",
-      "L",
-      "A",
-      "İ",
-      "S",
-      "R",
-      "A",
-      "İ",
-      "R",
-      "Ğ"
-    ],
-    [
-      "U",
-      "D",
-      "L",
-      "Ş",
-      "U",
-      "D",
-      "O",
-      "N",
-      "A",
-      "İ"
-    ],
-    [
-      "R",
-      "I",
-      "G",
-      "İ",
-      "R",
-      "E",
-      "H",
-      "C",
+      "Ü",
       "F",
-      "N"
-    ],
-    [
-      "T",
-      "R",
-      "L",
-      "K",
-      "A",
-      "O",
-      "A",
-      "İ",
-      "İ",
-      "İ"
-    ],
-    [
-      "M",
-      "M",
       "E",
-      "L",
-      "L",
-      "N",
       "R",
-      "L",
+      "Ö"
+    ],
+    [
+      "A",
+      "E",
       "Y",
-      "L"
-    ],
-    [
-      "A",
-      "A",
-      "R",
-      "İ",
-      "I",
-      "C",
-      "Ç",
-      "İ",
+      "L",
       "E",
+      "M",
+      "E",
+      "R",
       "M"
     ],
     [
       "K",
-      "K",
-      "Ş",
-      "K",
-      "K",
-      "U",
-      "E",
-      "K",
       "N",
-      "E"
+      "A",
+      "D",
+      "D",
+      "İ",
+      "V",
+      "I",
+      "İ"
+    ],
+    [
+      "R",
+      "D",
+      "Ü",
+      "Z",
+      "G",
+      "Ü",
+      "A",
+      "S",
+      "L"
+    ],
+    [
+      "U",
+      "İ",
+      "E",
+      "S",
+      "R",
+      "A",
+      "Y",
+      "B",
+      "S"
+    ],
+    [
+      "Ğ",
+      "Ğ",
+      "Ü",
+      "Y",
+      "D",
+      "T",
+      "K",
+      "E",
+      "İ"
+    ],
+    [
+      "E",
+      "F",
+      "R",
+      "İ",
+      "Z",
+      "L",
+      "L",
+      "K",
+      "Z"
+    ],
+    [
+      "T",
+      "Ö",
+      "N",
+      "E",
+      "S",
+      "R",
+      "E",
+      "N",
+      "D"
+    ],
+    [
+      "A",
+      "I",
+      "R",
+      "S",
+      "A",
+      "V",
+      "A",
+      "C",
+      "I"
     ]
   ],
   "words": [
     {
-      "word": "AKORDEONCU",
+      "word": "SAVACI",
       "start": {
-        "row": 0,
-        "col": 5
-      },
-      "direction": "vertical",
-      "length": 10,
-      "frequency_score": 20,
-      "hint_tr": "10 harfli bir genel kelimesi"
-    },
-    {
-      "word": "DERİŞİKLİK",
-      "start": {
-        "row": 0,
+        "row": 8,
         "col": 3
       },
-      "direction": "vertical",
-      "length": 10,
-      "frequency_score": 20,
-      "hint_tr": "10 harfli bir genel kelimesi"
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir genel kelimesi"
     },
     {
-      "word": "KOŞTURTMAK",
-      "start": {
-        "row": 0,
-        "col": 0
-      },
-      "direction": "vertical",
-      "length": 10,
-      "frequency_score": 20,
-      "hint_tr": "10 harfli bir genel kelimesi"
-    },
-    {
-      "word": "EŞKİNCİLİK",
-      "start": {
-        "row": 0,
-        "col": 7
-      },
-      "direction": "vertical",
-      "length": 10,
-      "frequency_score": 20,
-      "hint_tr": "10 harfli bir genel kelimesi"
-    },
-    {
-      "word": "SARRAFİYE",
-      "start": {
-        "row": 0,
-        "col": 8
-      },
-      "direction": "vertical",
-      "length": 9,
-      "frequency_score": 30,
-      "hint_tr": "9 harfli bir genel kelimesi"
-    },
-    {
-      "word": "DEĞİNİLME",
-      "start": {
-        "row": 1,
-        "col": 9
-      },
-      "direction": "vertical",
-      "length": 9,
-      "frequency_score": 30,
-      "hint_tr": "9 harfli bir genel kelimesi"
-    },
-    {
-      "word": "ÇILDIRMAK",
+      "word": "EYLEME",
       "start": {
         "row": 1,
         "col": 1
       },
-      "direction": "vertical",
-      "length": 9,
-      "frequency_score": 30,
-      "hint_tr": "9 harfli bir genel kelimesi"
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir genel kelimesi"
     },
     {
-      "word": "ALGLER",
+      "word": "NESREN",
       "start": {
-        "row": 3,
+        "row": 7,
         "col": 2
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir genel kelimesi"
+    },
+    {
+      "word": "MİLSİZ",
+      "start": {
+        "row": 1,
+        "col": 8
       },
       "direction": "vertical",
       "length": 6,
@@ -222,23 +157,34 @@
       "hint_tr": "6 harfli bir genel kelimesi"
     },
     {
-      "word": "HARÇ",
+      "word": "DÜZGÜ",
       "start": {
-        "row": 5,
-        "col": 6
+        "row": 3,
+        "col": 1
       },
-      "direction": "vertical",
-      "length": 4,
-      "frequency_score": 80,
-      "hint_tr": "4 harfli bir genel kelimesi"
+      "direction": "horizontal",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir genel kelimesi"
     },
     {
-      "word": "ALIK",
+      "word": "EFRİZ",
       "start": {
         "row": 6,
-        "col": 4
+        "col": 0
       },
-      "direction": "vertical",
+      "direction": "horizontal",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir genel kelimesi"
+    },
+    {
+      "word": "KÜFE",
+      "start": {
+        "row": 0,
+        "col": 3
+      },
+      "direction": "horizontal",
       "length": 4,
       "frequency_score": 80,
       "hint_tr": "4 harfli bir genel kelimesi"
@@ -258,6 +204,6 @@
     "post_fill_scanned": true,
     "scanner_version": "1.0.0"
   },
-  "generated_at": "2026-05-28T21:11:41.804112+00:00",
+  "generated_at": "2026-05-29T11:39:59.931423+00:00",
   "generator_version": "1.0.0"
 }

@@ -3,206 +3,119 @@
   "level_id": 84,
   "pack_id": "pack_003_orta_kelimeler",
   "difficulty": "medium",
-  "difficulty_score": 34,
+  "difficulty_score": 27,
   "category": "orta_kelimeler",
-  "category_display_tr": "Orta Kelimeler",
+  "category_display_tr": "Orta",
   "grid_size": {
-    "rows": 10,
-    "cols": 10
+    "rows": 9,
+    "cols": 9
   },
   "grid": [
     [
-      "S",
-      "O",
-      "T",
-      "E",
-      "F",
-      "C",
-      "İ",
       "R",
-      "K",
-      "R"
-    ],
-    [
-      "M",
-      "D",
-      "A",
-      "A",
-      "Z",
-      "I",
-      "K",
       "L",
-      "I",
-      "Ö"
-    ],
-    [
-      "A",
-      "C",
-      "S",
-      "A",
-      "I",
-      "R",
-      "E",
-      "T",
-      "M",
-      "Z"
-    ],
-    [
-      "V",
+      "O",
       "K",
-      "A",
-      "Y",
-      "M",
-      "A",
-      "K",
-      "S",
-      "İ",
-      "V"
-    ],
-    [
-      "R",
-      "E",
-      "T",
-      "A",
-      "Y",
-      "G",
       "A",
       "V",
       "T",
-      "A"
+      "T",
+      "I"
     ],
     [
+      "D",
       "A",
-      "Ç",
+      "H",
+      "Y",
+      "A",
+      "P",
+      "I",
+      "C",
+      "I"
+    ],
+    [
+      "B",
       "İ",
-      "Z",
+      "R",
+      "İ",
+      "B",
+      "A",
+      "Ş",
+      "E",
+      "U"
+    ],
+    [
+      "E",
+      "R",
+      "V",
+      "S",
+      "İ",
+      "C",
       "İ",
       "L",
-      "M",
-      "E",
-      "T",
-      "T"
-    ],
-    [
-      "C",
-      "K",
-      "O",
-      "M",
-      "E",
-      "D",
-      "İ",
-      "N",
-      "İ",
-      "A"
-    ],
-    [
-      "I",
-      "İ",
-      "K",
-      "A",
-      "Z",
-      "M",
-      "A",
-      "Ç",
-      "S",
       "N"
     ],
     [
-      "I",
-      "N",
-      "D",
-      "H",
+      "Ş",
+      "E",
+      "E",
+      "K",
+      "L",
+      "Ğ",
+      "U",
+      "A",
+      "K"
+    ],
+    [
+      "İ",
       "T",
-      "I",
+      "D",
       "S",
       "A",
+      "N",
+      "T",
+      "R",
+      "A"
+    ],
+    [
+      "Z",
+      "İ",
       "A",
+      "U",
+      "Ö",
+      "G",
+      "I",
+      "Y",
       "E"
     ],
     [
-      "H",
-      "A",
+      "T",
       "S",
-      "İ",
-      "S",
-      "O",
+      "T",
+      "Z",
       "E",
+      "İ",
+      "K",
+      "Z",
+      "D"
+    ],
+    [
+      "İ",
+      "U",
       "A",
-      "L",
-      "A"
+      "V",
+      "U",
+      "T",
+      "M",
+      "A",
+      "R"
     ]
   ],
   "words": [
     {
-      "word": "MAVRACI",
-      "start": {
-        "row": 1,
-        "col": 0
-      },
-      "direction": "vertical",
-      "length": 7,
-      "frequency_score": 50,
-      "hint_tr": "7 harfli bir orta_kelimeler kelimesi"
-    },
-    {
-      "word": "ÖZVATAN",
-      "start": {
-        "row": 1,
-        "col": 9
-      },
-      "direction": "vertical",
-      "length": 7,
-      "frequency_score": 50,
-      "hint_tr": "7 harfli bir orta_kelimeler kelimesi"
-    },
-    {
-      "word": "ÇİZİLME",
-      "start": {
-        "row": 5,
-        "col": 1
-      },
-      "direction": "horizontal",
-      "length": 7,
-      "frequency_score": 50,
-      "hint_tr": "7 harfli bir orta_kelimeler kelimesi"
-    },
-    {
-      "word": "İTTİSAL",
-      "start": {
-        "row": 3,
-        "col": 8
-      },
-      "direction": "vertical",
-      "length": 7,
-      "frequency_score": 50,
-      "hint_tr": "7 harfli bir orta_kelimeler kelimesi"
-    },
-    {
-      "word": "TEFCİR",
+      "word": "LOKAVT",
       "start": {
         "row": 0,
-        "col": 2
-      },
-      "direction": "horizontal",
-      "length": 6,
-      "frequency_score": 60,
-      "hint_tr": "6 harfli bir orta_kelimeler kelimesi"
-    },
-    {
-      "word": "KAZMAÇ",
-      "start": {
-        "row": 7,
-        "col": 2
-      },
-      "direction": "horizontal",
-      "length": 6,
-      "frequency_score": 60,
-      "hint_tr": "6 harfli bir orta_kelimeler kelimesi"
-    },
-    {
-      "word": "KAYMAK",
-      "start": {
-        "row": 3,
         "col": 1
       },
       "direction": "horizontal",
@@ -211,7 +124,40 @@
       "hint_tr": "6 harfli bir orta_kelimeler kelimesi"
     },
     {
-      "word": "AZIKLI",
+      "word": "İRİBAŞ",
+      "start": {
+        "row": 2,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "AVUTMA",
+      "start": {
+        "row": 8,
+        "col": 2
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "SANTRA",
+      "start": {
+        "row": 5,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "YAPICI",
       "start": {
         "row": 1,
         "col": 3
@@ -222,32 +168,21 @@
       "hint_tr": "6 harfli bir orta_kelimeler kelimesi"
     },
     {
-      "word": "KOMEDİ",
+      "word": "BEŞİZ",
       "start": {
-        "row": 6,
-        "col": 1
-      },
-      "direction": "horizontal",
-      "length": 6,
-      "frequency_score": 60,
-      "hint_tr": "6 harfli bir orta_kelimeler kelimesi"
-    },
-    {
-      "word": "HASİS",
-      "start": {
-        "row": 9,
+        "row": 2,
         "col": 0
       },
-      "direction": "horizontal",
+      "direction": "vertical",
       "length": 5,
       "frequency_score": 70,
       "hint_tr": "5 harfli bir orta_kelimeler kelimesi"
     },
     {
-      "word": "TAYGA",
+      "word": "SİCİL",
       "start": {
-        "row": 4,
-        "col": 2
+        "row": 3,
+        "col": 3
       },
       "direction": "horizontal",
       "length": 5,
@@ -269,6 +204,6 @@
     "post_fill_scanned": true,
     "scanner_version": "1.0.0"
   },
-  "generated_at": "2026-05-28T21:11:47.245721+00:00",
+  "generated_at": "2026-05-29T11:40:01.505480+00:00",
   "generator_version": "1.0.0"
 }

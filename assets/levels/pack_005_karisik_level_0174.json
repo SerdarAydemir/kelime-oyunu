@@ -3,7 +3,7 @@
   "level_id": 174,
   "pack_id": "pack_005_karisik",
   "difficulty": "medium",
-  "difficulty_score": 35,
+  "difficulty_score": 31,
   "category": "karisik",
   "category_display_tr": "Karışık",
   "grid_size": {
@@ -12,184 +12,162 @@
   },
   "grid": [
     [
-      "D",
+      "N",
+      "H",
+      "A",
       "İ",
-      "Z",
-      "E",
-      "M",
-      "L",
-      "İ",
-      "E",
-      "L",
-      "Y"
-    ],
-    [
-      "Y",
       "B",
-      "A",
-      "L",
-      "Ç",
+      "R",
+      "N",
       "O",
-      "V",
-      "A",
-      "E",
-      "M"
-    ],
-    [
       "İ",
-      "K",
-      "İ",
-      "K",
-      "A",
-      "D",
-      "R",
-      "A",
-      "N",
-      "Ü"
+      "I"
     ],
     [
-      "M",
-      "R",
-      "N",
-      "L",
-      "L",
-      "R",
-      "D",
-      "E",
       "A",
-      "Z"
-    ],
-    [
-      "D",
+      "A",
+      "K",
       "S",
-      "A",
-      "D",
-      "E",
-      "Y",
-      "A",
-      "Ğ",
-      "İ",
+      "Ü",
+      "R",
+      "U",
+      "O",
+      "O",
       "A"
     ],
     [
-      "Ş",
+      "L",
+      "R",
+      "I",
+      "K",
+      "K",
       "N",
-      "B",
-      "A",
-      "R",
-      "E",
-      "D",
-      "E",
-      "R",
-      "H"
+      "K",
+      "K",
+      "İ",
+      "K"
     ],
     [
-      "P",
-      "A",
-      "R",
-      "A",
       "N",
-      "O",
       "İ",
+      "G",
+      "E",
+      "E",
+      "E",
+      "G",
       "T",
       "A",
+      "D"
+    ],
+    [
+      "U",
+      "M",
+      "Ü",
+      "L",
+      "L",
+      "U",
+      "Ö",
+      "A",
+      "L",
+      "E"
+    ],
+    [
+      "Y",
+      "L",
+      "V",
+      "E",
+      "E",
+      "K",
+      "R",
+      "V",
+      "A",
+      "N"
+    ],
+    [
+      "İ",
+      "K",
+      "E",
+      "T",
+      "G",
+      "N",
+      "E",
+      "M",
+      "R",
       "İ"
     ],
     [
-      "K",
-      "Ç",
-      "Ü",
-      "R",
-      "Ü",
-      "T",
-      "Ü",
-      "Ş",
-      "I",
-      "R"
-    ],
-    [
-      "O",
-      "İ",
       "E",
-      "F",
       "I",
-      "L",
-      "D",
-      "I",
-      "R",
-      "Y"
+      "N",
+      "C",
+      "O",
+      "H",
+      "V",
+      "E",
+      "O",
+      "Z"
     ],
     [
-      "P",
-      "R",
+      "İ",
       "K",
+      "M",
       "N",
       "R",
-      "M",
+      "R",
       "L",
-      "İ",
+      "V",
+      "A",
+      "Ğ"
+    ],
+    [
       "K",
-      "T"
+      "A",
+      "E",
+      "D",
+      "N",
+      "D",
+      "İ",
+      "I",
+      "S",
+      "Ü"
     ]
   ],
   "words": [
     {
-      "word": "PARANOİT",
-      "start": {
-        "row": 6,
-        "col": 0
-      },
-      "direction": "horizontal",
-      "length": 8,
-      "frequency_score": 40,
-      "hint_tr": "8 harfli bir karisik kelimesi"
-    },
-    {
-      "word": "SADEYAĞ",
-      "start": {
-        "row": 4,
-        "col": 1
-      },
-      "direction": "horizontal",
-      "length": 7,
-      "frequency_score": 50,
-      "hint_tr": "7 harfli bir karisik kelimesi"
-    },
-    {
-      "word": "BALÇOVA",
-      "start": {
-        "row": 1,
-        "col": 1
-      },
-      "direction": "horizontal",
-      "length": 7,
-      "frequency_score": 50,
-      "hint_tr": "7 harfli bir karisik kelimesi"
-    },
-    {
-      "word": "DİZEMLİ",
+      "word": "İSKELET",
       "start": {
         "row": 0,
-        "col": 0
+        "col": 3
       },
-      "direction": "horizontal",
+      "direction": "vertical",
       "length": 7,
       "frequency_score": 50,
       "hint_tr": "7 harfli bir karisik kelimesi"
     },
     {
-      "word": "ÇÜRÜTÜŞ",
+      "word": "GÖREVLİ",
       "start": {
-        "row": 7,
-        "col": 1
+        "row": 3,
+        "col": 6
       },
-      "direction": "horizontal",
+      "direction": "vertical",
       "length": 7,
       "frequency_score": 50,
       "hint_tr": "7 harfli bir karisik kelimesi"
     },
     {
-      "word": "MÜZAHİR",
+      "word": "GÜVENME",
+      "start": {
+        "row": 3,
+        "col": 2
+      },
+      "direction": "vertical",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "AKDENİZ",
       "start": {
         "row": 1,
         "col": 9
@@ -200,26 +178,37 @@
       "hint_tr": "7 harfli bir karisik kelimesi"
     },
     {
-      "word": "KADRAN",
+      "word": "LEGORN",
       "start": {
-        "row": 2,
-        "col": 3
+        "row": 4,
+        "col": 4
       },
-      "direction": "horizontal",
+      "direction": "vertical",
       "length": 6,
       "frequency_score": 60,
       "hint_tr": "6 harfli bir karisik kelimesi"
     },
     {
-      "word": "FILDIR",
+      "word": "OKTAV",
       "start": {
-        "row": 8,
-        "col": 3
+        "row": 1,
+        "col": 7
       },
-      "direction": "horizontal",
-      "length": 6,
-      "frequency_score": 60,
-      "hint_tr": "6 harfli bir karisik kelimesi"
+      "direction": "vertical",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "HARİM",
+      "start": {
+        "row": 0,
+        "col": 1
+      },
+      "direction": "vertical",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir karisik kelimesi"
     }
   ],
   "bonus_words": [],
@@ -236,6 +225,6 @@
     "post_fill_scanned": true,
     "scanner_version": "1.0.0"
   },
-  "generated_at": "2026-05-28T21:12:03.237006+00:00",
+  "generated_at": "2026-05-29T11:40:15.936980+00:00",
   "generator_version": "1.0.0"
 }

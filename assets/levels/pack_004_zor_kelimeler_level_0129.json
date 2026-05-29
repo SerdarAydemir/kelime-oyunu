@@ -1,0 +1,219 @@
+{
+  "schema_version": 1,
+  "level_id": 129,
+  "pack_id": "pack_004_zor_kelimeler",
+  "difficulty": "hard",
+  "difficulty_score": 31,
+  "category": "zor_kelimeler",
+  "category_display_tr": "Zorlayıcı",
+  "grid_size": {
+    "rows": 10,
+    "cols": 10
+  },
+  "grid": [
+    [
+      "K",
+      "I",
+      "Ş",
+      "I",
+      "L",
+      "D",
+      "A",
+      "K",
+      "A",
+      "R"
+    ],
+    [
+      "A",
+      "A",
+      "L",
+      "R",
+      "A",
+      "O",
+      "İ",
+      "C",
+      "R",
+      "A"
+    ],
+    [
+      "A",
+      "L",
+      "L",
+      "E",
+      "K",
+      "M",
+      "E",
+      "D",
+      "I",
+      "Z"
+    ],
+    [
+      "D",
+      "İ",
+      "E",
+      "N",
+      "Ö",
+      "T",
+      "A",
+      "A",
+      "Ö",
+      "M"
+    ],
+    [
+      "A",
+      "A",
+      "İ",
+      "S",
+      "T",
+      "İ",
+      "N",
+      "G",
+      "A",
+      "O"
+    ],
+    [
+      "S",
+      "B",
+      "I",
+      "M",
+      "D",
+      "N",
+      "L",
+      "I",
+      "K",
+      "L"
+    ],
+    [
+      "İ",
+      "R",
+      "Ö",
+      "S",
+      "O",
+      "S",
+      "L",
+      "U",
+      "K",
+      "R"
+    ],
+    [
+      "R",
+      "İ",
+      "A",
+      "Ö",
+      "K",
+      "O",
+      "M",
+      "E",
+      "D",
+      "İ"
+    ],
+    [
+      "Z",
+      "L",
+      "R",
+      "I",
+      "İ",
+      "R",
+      "S",
+      "R",
+      "O",
+      "E"
+    ],
+    [
+      "İ",
+      "K",
+      "E",
+      "K",
+      "A",
+      "S",
+      "A",
+      "L",
+      "I",
+      "E"
+    ]
+  ],
+  "words": [
+    {
+      "word": "İSTİNGA",
+      "start": {
+        "row": 4,
+        "col": 2
+      },
+      "direction": "horizontal",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir zor_kelimeler kelimesi"
+    },
+    {
+      "word": "IŞILDAK",
+      "start": {
+        "row": 0,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir zor_kelimeler kelimesi"
+    },
+    {
+      "word": "RAZMOL",
+      "start": {
+        "row": 0,
+        "col": 9
+      },
+      "direction": "vertical",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir zor_kelimeler kelimesi"
+    },
+    {
+      "word": "KASALI",
+      "start": {
+        "row": 9,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir zor_kelimeler kelimesi"
+    },
+    {
+      "word": "KOMEDİ",
+      "start": {
+        "row": 7,
+        "col": 4
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir zor_kelimeler kelimesi"
+    },
+    {
+      "word": "SOSLUK",
+      "start": {
+        "row": 6,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir zor_kelimeler kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-29T11:40:07.057200+00:00",
+  "generator_version": "1.0.0"
+}

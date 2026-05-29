@@ -1,0 +1,230 @@
+{
+  "schema_version": 1,
+  "level_id": 173,
+  "pack_id": "pack_005_karisik",
+  "difficulty": "medium",
+  "difficulty_score": 30,
+  "category": "karisik",
+  "category_display_tr": "Karışık",
+  "grid_size": {
+    "rows": 10,
+    "cols": 10
+  },
+  "grid": [
+    [
+      "P",
+      "E",
+      "R",
+      "T",
+      "Y",
+      "K",
+      "Y",
+      "K",
+      "S",
+      "A"
+    ],
+    [
+      "İ",
+      "B",
+      "U",
+      "H",
+      "A",
+      "R",
+      "L",
+      "I",
+      "I",
+      "R"
+    ],
+    [
+      "Ş",
+      "K",
+      "L",
+      "T",
+      "E",
+      "Y",
+      "Z",
+      "E",
+      "R",
+      "P"
+    ],
+    [
+      "Ç",
+      "A",
+      "Ü",
+      "K",
+      "T",
+      "A",
+      "U",
+      "N",
+      "A",
+      "L"
+    ],
+    [
+      "E",
+      "Ç",
+      "A",
+      "B",
+      "I",
+      "İ",
+      "I",
+      "E",
+      "C",
+      "S"
+    ],
+    [
+      "L",
+      "L",
+      "O",
+      "H",
+      "P",
+      "O",
+      "E",
+      "E",
+      "A",
+      "R"
+    ],
+    [
+      "İ",
+      "I",
+      "R",
+      "I",
+      "A",
+      "N",
+      "U",
+      "K",
+      "N",
+      "Ş"
+    ],
+    [
+      "K",
+      "K",
+      "A",
+      "L",
+      "T",
+      "A",
+      "Ö",
+      "N",
+      "N",
+      "N"
+    ],
+    [
+      "N",
+      "U",
+      "R",
+      "L",
+      "I",
+      "O",
+      "E",
+      "Ö",
+      "R",
+      "I"
+    ],
+    [
+      "T",
+      "S",
+      "A",
+      "P",
+      "P",
+      "L",
+      "Y",
+      "A",
+      "R",
+      "K"
+    ]
+  ],
+  "words": [
+    {
+      "word": "TIPATIP",
+      "start": {
+        "row": 3,
+        "col": 4
+      },
+      "direction": "vertical",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "BUHARLI",
+      "start": {
+        "row": 1,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "İŞÇELİK",
+      "start": {
+        "row": 1,
+        "col": 0
+      },
+      "direction": "vertical",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "KAÇLIK",
+      "start": {
+        "row": 2,
+        "col": 1
+      },
+      "direction": "vertical",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "SIRACA",
+      "start": {
+        "row": 0,
+        "col": 8
+      },
+      "direction": "vertical",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "TEYZE",
+      "start": {
+        "row": 2,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "PERT",
+      "start": {
+        "row": 0,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir karisik kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-29T11:40:15.931733+00:00",
+  "generator_version": "1.0.0"
+}

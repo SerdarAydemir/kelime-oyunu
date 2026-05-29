@@ -1,0 +1,209 @@
+{
+  "schema_version": 1,
+  "level_id": 75,
+  "pack_id": "pack_002_genel",
+  "difficulty": "easy",
+  "difficulty_score": 24,
+  "category": "genel",
+  "category_display_tr": "Günlük",
+  "grid_size": {
+    "rows": 9,
+    "cols": 9
+  },
+  "grid": [
+    [
+      "D",
+      "M",
+      "E",
+      "L",
+      "C",
+      "T",
+      "D",
+      "E",
+      "N"
+    ],
+    [
+      "I",
+      "Ş",
+      "V",
+      "Ü",
+      "Ü",
+      "E",
+      "H",
+      "Ü",
+      "N"
+    ],
+    [
+      "T",
+      "E",
+      "U",
+      "T",
+      "L",
+      "V",
+      "A",
+      "E",
+      "A"
+    ],
+    [
+      "E",
+      "R",
+      "N",
+      "F",
+      "S",
+      "K",
+      "F",
+      "R",
+      "P"
+    ],
+    [
+      "U",
+      "A",
+      "I",
+      "E",
+      "İ",
+      "İ",
+      "İ",
+      "P",
+      "İ"
+    ],
+    [
+      "E",
+      "G",
+      "K",
+      "N",
+      "D",
+      "F",
+      "Z",
+      "L",
+      "P"
+    ],
+    [
+      "C",
+      "Ş",
+      "S",
+      "A",
+      "H",
+      "N",
+      "İ",
+      "D",
+      "O"
+    ],
+    [
+      "O",
+      "R",
+      "İ",
+      "D",
+      "Ü",
+      "K",
+      "K",
+      "K",
+      "H"
+    ],
+    [
+      "M",
+      "E",
+      "Ş",
+      "R",
+      "U",
+      "T",
+      "İ",
+      "R",
+      "L"
+    ]
+  ],
+  "words": [
+    {
+      "word": "LÜTFEN",
+      "start": {
+        "row": 0,
+        "col": 3
+      },
+      "direction": "vertical",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir genel kelimesi"
+    },
+    {
+      "word": "FİZİKİ",
+      "start": {
+        "row": 3,
+        "col": 6
+      },
+      "direction": "vertical",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir genel kelimesi"
+    },
+    {
+      "word": "MEŞRUT",
+      "start": {
+        "row": 8,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir genel kelimesi"
+    },
+    {
+      "word": "TEVKİF",
+      "start": {
+        "row": 0,
+        "col": 5
+      },
+      "direction": "vertical",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir genel kelimesi"
+    },
+    {
+      "word": "PİPO",
+      "start": {
+        "row": 3,
+        "col": 8
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir genel kelimesi"
+    },
+    {
+      "word": "SAHN",
+      "start": {
+        "row": 6,
+        "col": 2
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir genel kelimesi"
+    },
+    {
+      "word": "DÜK",
+      "start": {
+        "row": 7,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 3,
+      "frequency_score": 90,
+      "hint_tr": "3 harfli bir genel kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-29T11:40:01.463010+00:00",
+  "generator_version": "1.0.0"
+}

@@ -1,0 +1,219 @@
+{
+  "schema_version": 1,
+  "level_id": 134,
+  "pack_id": "pack_004_zor_kelimeler",
+  "difficulty": "hard",
+  "difficulty_score": 32,
+  "category": "zor_kelimeler",
+  "category_display_tr": "Zorlayıcı",
+  "grid_size": {
+    "rows": 10,
+    "cols": 10
+  },
+  "grid": [
+    [
+      "T",
+      "İ",
+      "S",
+      "D",
+      "G",
+      "R",
+      "E",
+      "S",
+      "Ü",
+      "N"
+    ],
+    [
+      "E",
+      "Ç",
+      "A",
+      "H",
+      "A",
+      "K",
+      "S",
+      "I",
+      "Z",
+      "U"
+    ],
+    [
+      "L",
+      "L",
+      "B",
+      "İ",
+      "D",
+      "D",
+      "İ",
+      "A",
+      "C",
+      "I"
+    ],
+    [
+      "N",
+      "E",
+      "S",
+      "R",
+      "P",
+      "S",
+      "İ",
+      "A",
+      "P",
+      "K"
+    ],
+    [
+      "K",
+      "N",
+      "Ö",
+      "S",
+      "E",
+      "Ç",
+      "İ",
+      "C",
+      "İ",
+      "Ç"
+    ],
+    [
+      "G",
+      "İ",
+      "K",
+      "R",
+      "Ü",
+      "E",
+      "S",
+      "I",
+      "Ş",
+      "İ"
+    ],
+    [
+      "N",
+      "Ş",
+      "Ü",
+      "U",
+      "Ğ",
+      "R",
+      "A",
+      "T",
+      "M",
+      "A"
+    ],
+    [
+      "D",
+      "Ğ",
+      "N",
+      "E",
+      "I",
+      "A",
+      "D",
+      "N",
+      "K",
+      "D"
+    ],
+    [
+      "K",
+      "K",
+      "T",
+      "Ş",
+      "U",
+      "Ş",
+      "I",
+      "Ü",
+      "Y",
+      "E"
+    ],
+    [
+      "U",
+      "O",
+      "Ü",
+      "M",
+      "K",
+      "L",
+      "R",
+      "İ",
+      "A",
+      "H"
+    ]
+  ],
+  "words": [
+    {
+      "word": "UĞRATMA",
+      "start": {
+        "row": 6,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir zor_kelimeler kelimesi"
+    },
+    {
+      "word": "İÇLENİŞ",
+      "start": {
+        "row": 0,
+        "col": 1
+      },
+      "direction": "vertical",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir zor_kelimeler kelimesi"
+    },
+    {
+      "word": "SÖKÜNTÜ",
+      "start": {
+        "row": 3,
+        "col": 2
+      },
+      "direction": "vertical",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir zor_kelimeler kelimesi"
+    },
+    {
+      "word": "İDDİACI",
+      "start": {
+        "row": 2,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir zor_kelimeler kelimesi"
+    },
+    {
+      "word": "HAKSIZ",
+      "start": {
+        "row": 1,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir zor_kelimeler kelimesi"
+    },
+    {
+      "word": "SEÇİCİ",
+      "start": {
+        "row": 4,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir zor_kelimeler kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-29T11:40:08.095910+00:00",
+  "generator_version": "1.0.0"
+}

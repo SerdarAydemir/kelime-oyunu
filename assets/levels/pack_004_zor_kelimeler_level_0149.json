@@ -1,0 +1,219 @@
+{
+  "schema_version": 1,
+  "level_id": 149,
+  "pack_id": "pack_004_zor_kelimeler",
+  "difficulty": "hard",
+  "difficulty_score": 33,
+  "category": "zor_kelimeler",
+  "category_display_tr": "Zorlayıcı",
+  "grid_size": {
+    "rows": 10,
+    "cols": 10
+  },
+  "grid": [
+    [
+      "M",
+      "N",
+      "G",
+      "N",
+      "Y",
+      "T",
+      "Y",
+      "D",
+      "I",
+      "M"
+    ],
+    [
+      "A",
+      "R",
+      "Ü",
+      "D",
+      "E",
+      "M",
+      "A",
+      "G",
+      "O",
+      "G"
+    ],
+    [
+      "N",
+      "R",
+      "L",
+      "U",
+      "R",
+      "A",
+      "K",
+      "Ü",
+      "R",
+      "A"
+    ],
+    [
+      "T",
+      "N",
+      "Ü",
+      "A",
+      "İ",
+      "H",
+      "S",
+      "U",
+      "L",
+      "A"
+    ],
+    [
+      "I",
+      "N",
+      "Ş",
+      "A",
+      "N",
+      "R",
+      "A",
+      "Y",
+      "E",
+      "T"
+    ],
+    [
+      "K",
+      "A",
+      "M",
+      "Y",
+      "D",
+      "Y",
+      "K",
+      "K",
+      "H",
+      "N"
+    ],
+    [
+      "İ",
+      "Ş",
+      "E",
+      "R",
+      "E",
+      "P",
+      "İ",
+      "R",
+      "T",
+      "İ"
+    ],
+    [
+      "A",
+      "Ö",
+      "A",
+      "O",
+      "E",
+      "R",
+      "N",
+      "Ş",
+      "A",
+      "N"
+    ],
+    [
+      "Ü",
+      "N",
+      "İ",
+      "R",
+      "Ş",
+      "I",
+      "C",
+      "A",
+      "R",
+      "A"
+    ],
+    [
+      "S",
+      "Ç",
+      "T",
+      "M",
+      "O",
+      "I",
+      "E",
+      "E",
+      "L",
+      "E"
+    ]
+  ],
+  "words": [
+    {
+      "word": "YERİNDE",
+      "start": {
+        "row": 0,
+        "col": 4
+      },
+      "direction": "vertical",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir zor_kelimeler kelimesi"
+    },
+    {
+      "word": "DEMAGOG",
+      "start": {
+        "row": 1,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir zor_kelimeler kelimesi"
+    },
+    {
+      "word": "SAKİNCE",
+      "start": {
+        "row": 3,
+        "col": 6
+      },
+      "direction": "vertical",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir zor_kelimeler kelimesi"
+    },
+    {
+      "word": "GÜLÜŞME",
+      "start": {
+        "row": 0,
+        "col": 2
+      },
+      "direction": "vertical",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir zor_kelimeler kelimesi"
+    },
+    {
+      "word": "MANTIKİ",
+      "start": {
+        "row": 0,
+        "col": 0
+      },
+      "direction": "vertical",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir zor_kelimeler kelimesi"
+    },
+    {
+      "word": "LEHTAR",
+      "start": {
+        "row": 3,
+        "col": 8
+      },
+      "direction": "vertical",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir zor_kelimeler kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-29T11:40:12.360987+00:00",
+  "generator_version": "1.0.0"
+}

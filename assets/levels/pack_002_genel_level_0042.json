@@ -1,0 +1,209 @@
+{
+  "schema_version": 1,
+  "level_id": 42,
+  "pack_id": "pack_002_genel",
+  "difficulty": "easy",
+  "difficulty_score": 24,
+  "category": "genel",
+  "category_display_tr": "Günlük",
+  "grid_size": {
+    "rows": 9,
+    "cols": 9
+  },
+  "grid": [
+    [
+      "Z",
+      "D",
+      "U",
+      "K",
+      "A",
+      "Y",
+      "I",
+      "P",
+      "Ü"
+    ],
+    [
+      "A",
+      "E",
+      "H",
+      "I",
+      "Y",
+      "L",
+      "S",
+      "E",
+      "M"
+    ],
+    [
+      "Ğ",
+      "A",
+      "A",
+      "İ",
+      "U",
+      "M",
+      "Z",
+      "N",
+      "M"
+    ],
+    [
+      "D",
+      "V",
+      "R",
+      "L",
+      "K",
+      "Ü",
+      "D",
+      "E",
+      "K"
+    ],
+    [
+      "M",
+      "I",
+      "A",
+      "S",
+      "L",
+      "U",
+      "K",
+      "F",
+      "L"
+    ],
+    [
+      "L",
+      "Ü",
+      "N",
+      "A",
+      "N",
+      "I",
+      "I",
+      "R",
+      "İ"
+    ],
+    [
+      "U",
+      "C",
+      "I",
+      "L",
+      "S",
+      "R",
+      "R",
+      "E",
+      "P"
+    ],
+    [
+      "Ü",
+      "O",
+      "A",
+      "G",
+      "M",
+      "P",
+      "A",
+      "T",
+      "Ç"
+    ],
+    [
+      "O",
+      "S",
+      "Ü",
+      "I",
+      "R",
+      "Ö",
+      "Y",
+      "Z",
+      "D"
+    ]
+  ],
+  "words": [
+    {
+      "word": "HARANI",
+      "start": {
+        "row": 1,
+        "col": 2
+      },
+      "direction": "vertical",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir genel kelimesi"
+    },
+    {
+      "word": "NEFRET",
+      "start": {
+        "row": 2,
+        "col": 7
+      },
+      "direction": "vertical",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir genel kelimesi"
+    },
+    {
+      "word": "SALGI",
+      "start": {
+        "row": 4,
+        "col": 3
+      },
+      "direction": "vertical",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir genel kelimesi"
+    },
+    {
+      "word": "KAYIP",
+      "start": {
+        "row": 0,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir genel kelimesi"
+    },
+    {
+      "word": "KIRAY",
+      "start": {
+        "row": 4,
+        "col": 6
+      },
+      "direction": "vertical",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir genel kelimesi"
+    },
+    {
+      "word": "KLİP",
+      "start": {
+        "row": 3,
+        "col": 8
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir genel kelimesi"
+    },
+    {
+      "word": "ZAĞ",
+      "start": {
+        "row": 0,
+        "col": 0
+      },
+      "direction": "vertical",
+      "length": 3,
+      "frequency_score": 90,
+      "hint_tr": "3 harfli bir genel kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-29T11:39:58.190969+00:00",
+  "generator_version": "1.0.0"
+}

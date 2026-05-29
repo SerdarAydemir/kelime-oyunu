@@ -1,0 +1,209 @@
+{
+  "schema_version": 1,
+  "level_id": 41,
+  "pack_id": "pack_002_genel",
+  "difficulty": "easy",
+  "difficulty_score": 25,
+  "category": "genel",
+  "category_display_tr": "Günlük",
+  "grid_size": {
+    "rows": 9,
+    "cols": 9
+  },
+  "grid": [
+    [
+      "I",
+      "L",
+      "İ",
+      "G",
+      "E",
+      "Ç",
+      "M",
+      "I",
+      "R"
+    ],
+    [
+      "D",
+      "E",
+      "İ",
+      "İ",
+      "Ş",
+      "A",
+      "A",
+      "E",
+      "R"
+    ],
+    [
+      "A",
+      "K",
+      "R",
+      "S",
+      "H",
+      "R",
+      "R",
+      "D",
+      "I"
+    ],
+    [
+      "Ğ",
+      "K",
+      "N",
+      "T",
+      "A",
+      "K",
+      "S",
+      "Y",
+      "D"
+    ],
+    [
+      "İ",
+      "V",
+      "Ğ",
+      "İ",
+      "S",
+      "Ç",
+      "Ö",
+      "D",
+      "U"
+    ],
+    [
+      "G",
+      "E",
+      "D",
+      "M",
+      "E",
+      "I",
+      "N",
+      "I",
+      "T"
+    ],
+    [
+      "K",
+      "R",
+      "E",
+      "I",
+      "Y",
+      "R",
+      "Ü",
+      "Ş",
+      "L"
+    ],
+    [
+      "D",
+      "R",
+      "E",
+      "S",
+      "C",
+      "B",
+      "M",
+      "E",
+      "U"
+    ],
+    [
+      "P",
+      "E",
+      "E",
+      "Ö",
+      "T",
+      "Ö",
+      "L",
+      "İ",
+      "K"
+    ]
+  ],
+  "words": [
+    {
+      "word": "ÇARKÇI",
+      "start": {
+        "row": 0,
+        "col": 5
+      },
+      "direction": "vertical",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir genel kelimesi"
+    },
+    {
+      "word": "DUTLUK",
+      "start": {
+        "row": 3,
+        "col": 8
+      },
+      "direction": "vertical",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir genel kelimesi"
+    },
+    {
+      "word": "EŞHAS",
+      "start": {
+        "row": 0,
+        "col": 4
+      },
+      "direction": "vertical",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir genel kelimesi"
+    },
+    {
+      "word": "İSTİM",
+      "start": {
+        "row": 1,
+        "col": 3
+      },
+      "direction": "vertical",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir genel kelimesi"
+    },
+    {
+      "word": "GEDME",
+      "start": {
+        "row": 5,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir genel kelimesi"
+    },
+    {
+      "word": "SÖNÜM",
+      "start": {
+        "row": 3,
+        "col": 6
+      },
+      "direction": "vertical",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir genel kelimesi"
+    },
+    {
+      "word": "DAĞİ",
+      "start": {
+        "row": 1,
+        "col": 0
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir genel kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-29T11:39:58.187353+00:00",
+  "generator_version": "1.0.0"
+}

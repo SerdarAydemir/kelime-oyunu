@@ -1,0 +1,230 @@
+{
+  "schema_version": 1,
+  "level_id": 165,
+  "pack_id": "pack_005_karisik",
+  "difficulty": "medium",
+  "difficulty_score": 29,
+  "category": "karisik",
+  "category_display_tr": "Karışık",
+  "grid_size": {
+    "rows": 10,
+    "cols": 10
+  },
+  "grid": [
+    [
+      "İ",
+      "G",
+      "İ",
+      "O",
+      "Ş",
+      "E",
+      "R",
+      "Ç",
+      "L",
+      "İ"
+    ],
+    [
+      "A",
+      "A",
+      "M",
+      "A",
+      "S",
+      "K",
+      "I",
+      "L",
+      "I",
+      "K"
+    ],
+    [
+      "D",
+      "İ",
+      "H",
+      "N",
+      "I",
+      "D",
+      "R",
+      "S",
+      "R",
+      "H"
+    ],
+    [
+      "K",
+      "L",
+      "I",
+      "L",
+      "Ü",
+      "A",
+      "E",
+      "Ş",
+      "Y",
+      "İ"
+    ],
+    [
+      "İ",
+      "E",
+      "Y",
+      "K",
+      "L",
+      "İ",
+      "D",
+      "D",
+      "R",
+      "D"
+    ],
+    [
+      "F",
+      "L",
+      "E",
+      "A",
+      "M",
+      "B",
+      "E",
+      "R",
+      "E",
+      "H"
+    ],
+    [
+      "İ",
+      "İ",
+      "E",
+      "G",
+      "Z",
+      "O",
+      "Z",
+      "C",
+      "U",
+      "N"
+    ],
+    [
+      "İ",
+      "N",
+      "A",
+      "Z",
+      "M",
+      "E",
+      "N",
+      "I",
+      "E",
+      "E"
+    ],
+    [
+      "D",
+      "E",
+      "R",
+      "N",
+      "R",
+      "N",
+      "I",
+      "L",
+      "A",
+      "E"
+    ],
+    [
+      "İ",
+      "R",
+      "İ",
+      "B",
+      "Ü",
+      "R",
+      "Ü",
+      "K",
+      "C",
+      "I"
+    ]
+  ],
+  "words": [
+    {
+      "word": "GAİLELİ",
+      "start": {
+        "row": 0,
+        "col": 1
+      },
+      "direction": "vertical",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "EGZOZCU",
+      "start": {
+        "row": 6,
+        "col": 2
+      },
+      "direction": "horizontal",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "ASKILIK",
+      "start": {
+        "row": 1,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "NAZMEN",
+      "start": {
+        "row": 7,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "BÜRÜK",
+      "start": {
+        "row": 9,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "AMBER",
+      "start": {
+        "row": 5,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "ŞERÇ",
+      "start": {
+        "row": 0,
+        "col": 4
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir karisik kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-29T11:40:15.875141+00:00",
+  "generator_version": "1.0.0"
+}

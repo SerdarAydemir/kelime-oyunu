@@ -1,0 +1,219 @@
+{
+  "schema_version": 1,
+  "level_id": 121,
+  "pack_id": "pack_004_zor_kelimeler",
+  "difficulty": "hard",
+  "difficulty_score": 31,
+  "category": "zor_kelimeler",
+  "category_display_tr": "Zorlayıcı",
+  "grid_size": {
+    "rows": 10,
+    "cols": 10
+  },
+  "grid": [
+    [
+      "Ç",
+      "E",
+      "G",
+      "L",
+      "Ğ",
+      "I",
+      "İ",
+      "E",
+      "M",
+      "Y"
+    ],
+    [
+      "I",
+      "A",
+      "Ö",
+      "N",
+      "N",
+      "N",
+      "Ü",
+      "N",
+      "İ",
+      "A"
+    ],
+    [
+      "U",
+      "İ",
+      "Ç",
+      "K",
+      "Y",
+      "L",
+      "İ",
+      "L",
+      "U",
+      "Z"
+    ],
+    [
+      "K",
+      "L",
+      "E",
+      "Ş",
+      "N",
+      "İ",
+      "K",
+      "O",
+      "D",
+      "H"
+    ],
+    [
+      "N",
+      "U",
+      "R",
+      "U",
+      "N",
+      "M",
+      "N",
+      "İ",
+      "M",
+      "A"
+    ],
+    [
+      "Ü",
+      "İ",
+      "İ",
+      "D",
+      "E",
+      "A",
+      "R",
+      "N",
+      "D",
+      "L"
+    ],
+    [
+      "L",
+      "N",
+      "P",
+      "A",
+      "U",
+      "K",
+      "I",
+      "E",
+      "V",
+      "K"
+    ],
+    [
+      "Z",
+      "Z",
+      "A",
+      "P",
+      "T",
+      "İ",
+      "Y",
+      "E",
+      "N",
+      "E"
+    ],
+    [
+      "I",
+      "E",
+      "A",
+      "Y",
+      "V",
+      "A",
+      "C",
+      "I",
+      "K",
+      "V"
+    ],
+    [
+      "P",
+      "E",
+      "R",
+      "H",
+      "İ",
+      "Z",
+      "K",
+      "A",
+      "Ş",
+      "İ"
+    ]
+  ],
+  "words": [
+    {
+      "word": "ZAPTİYE",
+      "start": {
+        "row": 7,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir zor_kelimeler kelimesi"
+    },
+    {
+      "word": "AYVACIK",
+      "start": {
+        "row": 8,
+        "col": 2
+      },
+      "direction": "horizontal",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir zor_kelimeler kelimesi"
+    },
+    {
+      "word": "HALKEVİ",
+      "start": {
+        "row": 3,
+        "col": 9
+      },
+      "direction": "vertical",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir zor_kelimeler kelimesi"
+    },
+    {
+      "word": "GÖÇERİ",
+      "start": {
+        "row": 0,
+        "col": 2
+      },
+      "direction": "vertical",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir zor_kelimeler kelimesi"
+    },
+    {
+      "word": "LİMAKİ",
+      "start": {
+        "row": 2,
+        "col": 5
+      },
+      "direction": "vertical",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir zor_kelimeler kelimesi"
+    },
+    {
+      "word": "PERHİZ",
+      "start": {
+        "row": 9,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir zor_kelimeler kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-29T11:40:05.612677+00:00",
+  "generator_version": "1.0.0"
+}

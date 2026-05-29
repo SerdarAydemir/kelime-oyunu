@@ -1,0 +1,209 @@
+{
+  "schema_version": 1,
+  "level_id": 82,
+  "pack_id": "pack_003_orta_kelimeler",
+  "difficulty": "medium",
+  "difficulty_score": 26,
+  "category": "orta_kelimeler",
+  "category_display_tr": "Orta",
+  "grid_size": {
+    "rows": 9,
+    "cols": 9
+  },
+  "grid": [
+    [
+      "N",
+      "S",
+      "U",
+      "S",
+      "T",
+      "A",
+      "H",
+      "A",
+      "I"
+    ],
+    [
+      "Z",
+      "Ü",
+      "K",
+      "N",
+      "Ç",
+      "V",
+      "Ü",
+      "P",
+      "O"
+    ],
+    [
+      "R",
+      "B",
+      "K",
+      "I",
+      "S",
+      "M",
+      "İ",
+      "İ",
+      "L"
+    ],
+    [
+      "E",
+      "Y",
+      "K",
+      "I",
+      "P",
+      "M",
+      "A",
+      "M",
+      "U"
+    ],
+    [
+      "L",
+      "E",
+      "Y",
+      "L",
+      "İ",
+      "S",
+      "N",
+      "İ",
+      "Ş"
+    ],
+    [
+      "T",
+      "İ",
+      "A",
+      "F",
+      "İ",
+      "Y",
+      "E",
+      "T",
+      "M"
+    ],
+    [
+      "Y",
+      "A",
+      "C",
+      "İ",
+      "Ç",
+      "D",
+      "İ",
+      "A",
+      "A"
+    ],
+    [
+      "E",
+      "T",
+      "A",
+      "N",
+      "K",
+      "E",
+      "R",
+      "O",
+      "Y"
+    ],
+    [
+      "O",
+      "P",
+      "E",
+      "R",
+      "A",
+      "İ",
+      "İ",
+      "B",
+      "A"
+    ]
+  ],
+  "words": [
+    {
+      "word": "TANKER",
+      "start": {
+        "row": 7,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "OLUŞMA",
+      "start": {
+        "row": 1,
+        "col": 8
+      },
+      "direction": "vertical",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "AFİYET",
+      "start": {
+        "row": 5,
+        "col": 2
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "KISMİ",
+      "start": {
+        "row": 2,
+        "col": 2
+      },
+      "direction": "horizontal",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "SUSTA",
+      "start": {
+        "row": 0,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "KIPMA",
+      "start": {
+        "row": 3,
+        "col": 2
+      },
+      "direction": "horizontal",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "OPERA",
+      "start": {
+        "row": 8,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir orta_kelimeler kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-29T11:40:01.498209+00:00",
+  "generator_version": "1.0.0"
+}

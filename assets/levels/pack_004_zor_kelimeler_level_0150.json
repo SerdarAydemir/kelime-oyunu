@@ -1,0 +1,219 @@
+{
+  "schema_version": 1,
+  "level_id": 150,
+  "pack_id": "pack_004_zor_kelimeler",
+  "difficulty": "hard",
+  "difficulty_score": 33,
+  "category": "zor_kelimeler",
+  "category_display_tr": "Zorlayıcı",
+  "grid_size": {
+    "rows": 10,
+    "cols": 10
+  },
+  "grid": [
+    [
+      "K",
+      "S",
+      "A",
+      "Ğ",
+      "I",
+      "T",
+      "S",
+      "A",
+      "L",
+      "E"
+    ],
+    [
+      "D",
+      "İ",
+      "J",
+      "İ",
+      "T",
+      "A",
+      "L",
+      "Ş",
+      "Y",
+      "L"
+    ],
+    [
+      "C",
+      "Ç",
+      "A",
+      "Y",
+      "H",
+      "A",
+      "N",
+      "E",
+      "A",
+      "U"
+    ],
+    [
+      "Ş",
+      "A",
+      "L",
+      "Y",
+      "U",
+      "N",
+      "I",
+      "S",
+      "Z",
+      "F"
+    ],
+    [
+      "K",
+      "A",
+      "P",
+      "U",
+      "Ç",
+      "İ",
+      "N",
+      "N",
+      "R",
+      "A"
+    ],
+    [
+      "A",
+      "S",
+      "A",
+      "L",
+      "L",
+      "I",
+      "K",
+      "K",
+      "Z",
+      "C"
+    ],
+    [
+      "Ğ",
+      "C",
+      "I",
+      "İ",
+      "E",
+      "N",
+      "İ",
+      "İ",
+      "N",
+      "I"
+    ],
+    [
+      "A",
+      "N",
+      "N",
+      "İ",
+      "İ",
+      "U",
+      "İ",
+      "M",
+      "T",
+      "K"
+    ],
+    [
+      "N",
+      "İ",
+      "A",
+      "U",
+      "Ü",
+      "R",
+      "I",
+      "I",
+      "Ş",
+      "N"
+    ],
+    [
+      "O",
+      "E",
+      "L",
+      "A",
+      "K",
+      "A",
+      "M",
+      "L",
+      "M",
+      "K"
+    ]
+  ],
+  "words": [
+    {
+      "word": "AĞITSAL",
+      "start": {
+        "row": 0,
+        "col": 2
+      },
+      "direction": "horizontal",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir zor_kelimeler kelimesi"
+    },
+    {
+      "word": "KAPUÇİN",
+      "start": {
+        "row": 4,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir zor_kelimeler kelimesi"
+    },
+    {
+      "word": "ASALLIK",
+      "start": {
+        "row": 5,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir zor_kelimeler kelimesi"
+    },
+    {
+      "word": "ÇAYHANE",
+      "start": {
+        "row": 2,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir zor_kelimeler kelimesi"
+    },
+    {
+      "word": "DİJİTAL",
+      "start": {
+        "row": 1,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir zor_kelimeler kelimesi"
+    },
+    {
+      "word": "UFACIK",
+      "start": {
+        "row": 2,
+        "col": 9
+      },
+      "direction": "vertical",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir zor_kelimeler kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-29T11:40:12.364455+00:00",
+  "generator_version": "1.0.0"
+}

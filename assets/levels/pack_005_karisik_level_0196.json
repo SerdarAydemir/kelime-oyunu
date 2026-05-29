@@ -1,0 +1,230 @@
+{
+  "schema_version": 1,
+  "level_id": 196,
+  "pack_id": "pack_005_karisik",
+  "difficulty": "medium",
+  "difficulty_score": 29,
+  "category": "karisik",
+  "category_display_tr": "Karışık",
+  "grid_size": {
+    "rows": 10,
+    "cols": 10
+  },
+  "grid": [
+    [
+      "O",
+      "D",
+      "G",
+      "Ü",
+      "E",
+      "E",
+      "İ",
+      "Z",
+      "İ",
+      "I"
+    ],
+    [
+      "N",
+      "P",
+      "V",
+      "I",
+      "F",
+      "E",
+      "T",
+      "N",
+      "K",
+      "Ş"
+    ],
+    [
+      "Ğ",
+      "R",
+      "İ",
+      "A",
+      "O",
+      "U",
+      "E",
+      "P",
+      "I",
+      "L"
+    ],
+    [
+      "A",
+      "A",
+      "B",
+      "R",
+      "R",
+      "S",
+      "P",
+      "S",
+      "O",
+      "K"
+    ],
+    [
+      "M",
+      "N",
+      "R",
+      "İ",
+      "S",
+      "A",
+      "İ",
+      "G",
+      "G",
+      "Y"
+    ],
+    [
+      "I",
+      "G",
+      "İ",
+      "F",
+      "Ü",
+      "L",
+      "Ş",
+      "Ü",
+      "N",
+      "T"
+    ],
+    [
+      "R",
+      "A",
+      "Y",
+      "E",
+      "O",
+      "İ",
+      "M",
+      "R",
+      "E",
+      "D"
+    ],
+    [
+      "İ",
+      "E",
+      "O",
+      "Ç",
+      "İ",
+      "S",
+      "E",
+      "Z",
+      "T",
+      "M"
+    ],
+    [
+      "K",
+      "K",
+      "K",
+      "A",
+      "A",
+      "E",
+      "R",
+      "L",
+      "E",
+      "M"
+    ],
+    [
+      "İ",
+      "L",
+      "İ",
+      "Y",
+      "M",
+      "N",
+      "Ö",
+      "L",
+      "L",
+      "R"
+    ]
+  ],
+  "words": [
+    {
+      "word": "VİBRİYO",
+      "start": {
+        "row": 1,
+        "col": 2
+      },
+      "direction": "vertical",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "TEPİŞME",
+      "start": {
+        "row": 1,
+        "col": 6
+      },
+      "direction": "vertical",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "SALİSEN",
+      "start": {
+        "row": 3,
+        "col": 5
+      },
+      "direction": "vertical",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "PRANGA",
+      "start": {
+        "row": 1,
+        "col": 1
+      },
+      "direction": "vertical",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "ARİFE",
+      "start": {
+        "row": 2,
+        "col": 3
+      },
+      "direction": "vertical",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "GÜRZ",
+      "start": {
+        "row": 4,
+        "col": 7
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "FORS",
+      "start": {
+        "row": 1,
+        "col": 4
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir karisik kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-29T11:40:19.852648+00:00",
+  "generator_version": "1.0.0"
+}

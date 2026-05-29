@@ -3,160 +3,98 @@
   "level_id": 8,
   "pack_id": "pack_001_kisa_kelimeler",
   "difficulty": "easy",
-  "difficulty_score": 21,
+  "difficulty_score": 16,
   "category": "kisa_kelimeler",
-  "category_display_tr": "Kısa Kelimeler",
+  "category_display_tr": "Başlangıç",
   "grid_size": {
-    "rows": 10,
-    "cols": 10
+    "rows": 8,
+    "cols": 8
   },
   "grid": [
     [
-      "Y",
-      "N",
-      "E",
+      "R",
+      "K",
+      "I",
+      "Ö",
       "T",
-      "E",
-      "E",
       "Ü",
-      "İ",
-      "M",
-      "N"
-    ],
-    [
-      "A",
-      "N",
       "E",
-      "R",
-      "N",
-      "R",
-      "T",
-      "T",
-      "T",
       "R"
     ],
     [
-      "K",
-      "U",
-      "Y",
+      "B",
       "T",
+      "R",
+      "U",
+      "I",
+      "R",
+      "D",
+      "E"
+    ],
+    [
+      "Ü",
+      "A",
+      "İ",
+      "İ",
+      "S",
+      "F",
+      "D",
+      "H"
+    ],
+    [
+      "A",
+      "Z",
+      "M",
+      "İ",
+      "E",
+      "L",
+      "E",
+      "M"
+    ],
+    [
+      "G",
+      "I",
+      "Ş",
+      "Z",
+      "M",
+      "İ",
+      "D",
+      "İ"
+    ],
+    [
+      "E",
+      "T",
+      "P",
+      "E",
+      "D",
+      "N",
+      "A",
+      "D"
+    ],
+    [
+      "N",
+      "Ğ",
+      "O",
+      "R",
       "İ",
       "N",
-      "M",
-      "T",
-      "O",
+      "G",
       "I"
     ],
     [
-      "U",
-      "N",
-      "E",
-      "O",
-      "N",
-      "U",
-      "E",
-      "S",
-      "K",
-      "Y"
-    ],
-    [
-      "A",
-      "S",
-      "R",
-      "F",
-      "A",
-      "Ğ",
       "I",
-      "N",
-      "R",
-      "Ü"
-    ],
-    [
-      "O",
-      "U",
-      "A",
-      "U",
-      "N",
-      "R",
-      "İ",
-      "B",
-      "R",
-      "A"
-    ],
-    [
-      "E",
+      "L",
+      "T",
       "S",
-      "A",
-      "U",
-      "U",
-      "K",
-      "İ",
-      "E",
-      "N",
-      "B"
-    ],
-    [
-      "U",
-      "Ü",
-      "N",
-      "E",
-      "C",
-      "E",
-      "I",
-      "Z",
-      "K",
-      "U"
-    ],
-    [
-      "E",
+      "V",
       "B",
-      "İ",
-      "A",
-      "E",
-      "C",
-      "F",
-      "M",
-      "N",
-      "K"
-    ],
-    [
-      "R",
-      "İ",
-      "K",
-      "M",
-      "İ",
-      "S",
-      "K",
-      "N",
-      "Y",
-      "E"
+      "U",
+      "L"
     ]
   ],
   "words": [
     {
-      "word": "MİSK",
-      "start": {
-        "row": 9,
-        "col": 3
-      },
-      "direction": "horizontal",
-      "length": 4,
-      "frequency_score": 80,
-      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
-    },
-    {
-      "word": "NECE",
-      "start": {
-        "row": 7,
-        "col": 2
-      },
-      "direction": "horizontal",
-      "length": 4,
-      "frequency_score": 80,
-      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
-    },
-    {
-      "word": "AĞIN",
+      "word": "MİDİ",
       "start": {
         "row": 4,
         "col": 4
@@ -167,21 +105,10 @@
       "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
     },
     {
-      "word": "BEZM",
-      "start": {
-        "row": 5,
-        "col": 7
-      },
-      "direction": "vertical",
-      "length": 4,
-      "frequency_score": 80,
-      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
-    },
-    {
-      "word": "EYER",
+      "word": "TAZI",
       "start": {
         "row": 1,
-        "col": 2
+        "col": 1
       },
       "direction": "vertical",
       "length": 4,
@@ -189,34 +116,45 @@
       "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
     },
     {
-      "word": "ÜTME",
+      "word": "ELEM",
       "start": {
-        "row": 0,
-        "col": 6
+        "row": 3,
+        "col": 4
       },
-      "direction": "vertical",
+      "direction": "horizontal",
       "length": 4,
       "frequency_score": 80,
       "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
     },
     {
-      "word": "TOFU",
+      "word": "GEN",
       "start": {
-        "row": 2,
+        "row": 4,
+        "col": 0
+      },
+      "direction": "vertical",
+      "length": 3,
+      "frequency_score": 90,
+      "hint_tr": "3 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "ZER",
+      "start": {
+        "row": 4,
         "col": 3
       },
       "direction": "vertical",
-      "length": 4,
-      "frequency_score": 80,
-      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+      "length": 3,
+      "frequency_score": 90,
+      "hint_tr": "3 harfli bir kisa_kelimeler kelimesi"
     },
     {
-      "word": "ABU",
+      "word": "BUL",
       "start": {
-        "row": 5,
-        "col": 9
+        "row": 7,
+        "col": 5
       },
-      "direction": "vertical",
+      "direction": "horizontal",
       "length": 3,
       "frequency_score": 90,
       "hint_tr": "3 harfli bir kisa_kelimeler kelimesi"
@@ -236,6 +174,6 @@
     "post_fill_scanned": true,
     "scanner_version": "1.0.0"
   },
-  "generated_at": "2026-05-28T21:11:33.751718+00:00",
+  "generated_at": "2026-05-29T11:39:56.773576+00:00",
   "generator_version": "1.0.0"
 }

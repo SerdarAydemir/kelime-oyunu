@@ -3,251 +3,175 @@
   "level_id": 94,
   "pack_id": "pack_003_orta_kelimeler",
   "difficulty": "medium",
-  "difficulty_score": 35,
+  "difficulty_score": 27,
   "category": "orta_kelimeler",
-  "category_display_tr": "Orta Kelimeler",
+  "category_display_tr": "Orta",
   "grid_size": {
-    "rows": 10,
-    "cols": 10
+    "rows": 9,
+    "cols": 9
   },
   "grid": [
     [
-      "L",
-      "N",
-      "H",
-      "G",
-      "Ö",
-      "L",
-      "E",
-      "T",
-      "S",
-      "N"
+      "A",
+      "Ü",
+      "İ",
+      "B",
+      "I",
+      "A",
+      "I",
+      "A",
+      "A"
     ],
     [
+      "H",
+      "K",
+      "L",
+      "M",
+      "N",
+      "K",
       "R",
-      "I",
+      "N",
+      "T"
+    ],
+    [
+      "A",
+      "B",
+      "E",
+      "Ş",
+      "T",
+      "A",
+      "Ş",
+      "O",
+      "A"
+    ],
+    [
+      "L",
+      "Ö",
+      "K",
+      "U",
+      "M",
+      "C",
+      "U",
+      "L",
+      "Y"
+    ],
+    [
+      "İ",
+      "M",
+      "A",
+      "Ç",
+      "Ö",
+      "Ğ",
+      "Ü",
+      "R",
+      "I"
+    ],
+    [
+      "Ç",
+      "Ö",
       "E",
       "K",
-      "I",
-      "R",
-      "A",
-      "T",
-      "L",
-      "H"
+      "M",
+      "S",
+      "F",
+      "N",
+      "Ş"
     ],
     [
-      "Ö",
-      "B",
-      "L",
-      "B",
-      "M",
-      "L",
-      "P",
+      "R",
+      "U",
+      "S",
+      "U",
       "O",
+      "K",
+      "U",
+      "M",
+      "L"
+    ],
+    [
       "A",
+      "G",
+      "N",
+      "A",
+      "A",
+      "M",
+      "R",
+      "D",
       "E"
     ],
     [
-      "G",
-      "O",
-      "E",
+      "İ",
+      "P",
       "A",
-      "D",
-      "D",
-      "U",
-      "R",
-      "V",
-      "S"
-    ],
-    [
+      "B",
       "A",
-      "M",
       "Z",
+      "I",
       "S",
-      "E",
-      "A",
-      "S",
-      "U",
-      "L",
-      "A"
-    ],
-    [
-      "M",
-      "B",
-      "O",
-      "I",
-      "V",
-      "T",
-      "A",
-      "Ç",
-      "I",
-      "P"
-    ],
-    [
-      "B",
-      "E",
-      "N",
-      "C",
-      "R",
-      "U",
-      "R",
-      "S",
-      "K",
-      "Ç"
-    ],
-    [
-      "O",
-      "R",
-      "N",
-      "I",
-      "İ",
-      "T",
-      "I",
-      "U",
-      "N",
-      "A"
-    ],
-    [
-      "T",
-      "E",
-      "İ",
-      "Y",
-      "S",
-      "Y",
-      "K",
-      "Z",
-      "R",
-      "B"
-    ],
-    [
-      "A",
-      "E",
-      "E",
-      "K",
-      "İ",
-      "A",
-      "B",
-      "R",
-      "I",
-      "T"
+      "I"
     ]
   ],
   "words": [
     {
-      "word": "HELEZON",
+      "word": "KUMCUL",
       "start": {
-        "row": 0,
+        "row": 3,
         "col": 2
       },
-      "direction": "vertical",
-      "length": 7,
-      "frequency_score": 50,
-      "hint_tr": "7 harfli bir orta_kelimeler kelimesi"
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir orta_kelimeler kelimesi"
     },
     {
-      "word": "SLAVLIK",
+      "word": "ATAYIŞ",
       "start": {
         "row": 0,
         "col": 8
       },
       "direction": "vertical",
-      "length": 7,
-      "frequency_score": 50,
-      "hint_tr": "7 harfli bir orta_kelimeler kelimesi"
-    },
-    {
-      "word": "PUSARIK",
-      "start": {
-        "row": 2,
-        "col": 6
-      },
-      "direction": "vertical",
-      "length": 7,
-      "frequency_score": 50,
-      "hint_tr": "7 harfli bir orta_kelimeler kelimesi"
-    },
-    {
-      "word": "HESAPÇA",
-      "start": {
-        "row": 1,
-        "col": 9
-      },
-      "direction": "vertical",
-      "length": 7,
-      "frequency_score": 50,
-      "hint_tr": "7 harfli bir orta_kelimeler kelimesi"
-    },
-    {
-      "word": "ORUÇSUZ",
-      "start": {
-        "row": 2,
-        "col": 7
-      },
-      "direction": "vertical",
-      "length": 7,
-      "frequency_score": 50,
-      "hint_tr": "7 harfli bir orta_kelimeler kelimesi"
-    },
-    {
-      "word": "DEVRİSİ",
-      "start": {
-        "row": 3,
-        "col": 4
-      },
-      "direction": "vertical",
-      "length": 7,
-      "frequency_score": 50,
-      "hint_tr": "7 harfli bir orta_kelimeler kelimesi"
-    },
-    {
-      "word": "GAMBOT",
-      "start": {
-        "row": 3,
-        "col": 0
-      },
-      "direction": "vertical",
       "length": 6,
       "frequency_score": 60,
       "hint_tr": "6 harfli bir orta_kelimeler kelimesi"
     },
     {
-      "word": "BASICI",
+      "word": "BAZISI",
       "start": {
-        "row": 2,
+        "row": 8,
         "col": 3
       },
-      "direction": "vertical",
+      "direction": "horizontal",
       "length": 6,
       "frequency_score": 60,
       "hint_tr": "6 harfli bir orta_kelimeler kelimesi"
     },
     {
-      "word": "TUTYA",
-      "start": {
-        "row": 5,
-        "col": 5
-      },
-      "direction": "vertical",
-      "length": 5,
-      "frequency_score": 70,
-      "hint_tr": "5 harfli bir orta_kelimeler kelimesi"
-    },
-    {
-      "word": "BOMBE",
+      "word": "BEŞTAŞ",
       "start": {
         "row": 2,
         "col": 1
       },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "HALİÇ",
+      "start": {
+        "row": 1,
+        "col": 0
+      },
       "direction": "vertical",
       "length": 5,
       "frequency_score": 70,
       "hint_tr": "5 harfli bir orta_kelimeler kelimesi"
     },
     {
-      "word": "GÖLET",
+      "word": "SUOKU",
       "start": {
-        "row": 0,
-        "col": 3
+        "row": 6,
+        "col": 2
       },
       "direction": "horizontal",
       "length": 5,
@@ -255,9 +179,9 @@
       "hint_tr": "5 harfli bir orta_kelimeler kelimesi"
     },
     {
-      "word": "KIRAT",
+      "word": "ÇÖĞÜR",
       "start": {
-        "row": 1,
+        "row": 4,
         "col": 3
       },
       "direction": "horizontal",
@@ -280,6 +204,6 @@
     "post_fill_scanned": true,
     "scanner_version": "1.0.0"
   },
-  "generated_at": "2026-05-28T21:11:48.913442+00:00",
+  "generated_at": "2026-05-29T11:40:01.872290+00:00",
   "generator_version": "1.0.0"
 }

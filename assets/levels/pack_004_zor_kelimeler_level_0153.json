@@ -1,0 +1,219 @@
+{
+  "schema_version": 1,
+  "level_id": 153,
+  "pack_id": "pack_004_zor_kelimeler",
+  "difficulty": "hard",
+  "difficulty_score": 32,
+  "category": "zor_kelimeler",
+  "category_display_tr": "Zorlayıcı",
+  "grid_size": {
+    "rows": 10,
+    "cols": 10
+  },
+  "grid": [
+    [
+      "E",
+      "R",
+      "U",
+      "Y",
+      "U",
+      "Ş",
+      "U",
+      "K",
+      "Y",
+      "I"
+    ],
+    [
+      "K",
+      "A",
+      "D",
+      "I",
+      "K",
+      "Ö",
+      "Y",
+      "R",
+      "P",
+      "Y"
+    ],
+    [
+      "Z",
+      "K",
+      "A",
+      "Y",
+      "M",
+      "A",
+      "K",
+      "Ş",
+      "E",
+      "A"
+    ],
+    [
+      "B",
+      "F",
+      "O",
+      "L",
+      "L",
+      "A",
+      "S",
+      "B",
+      "N",
+      "L"
+    ],
+    [
+      "I",
+      "L",
+      "M",
+      "N",
+      "E",
+      "I",
+      "K",
+      "İ",
+      "A",
+      "N"
+    ],
+    [
+      "H",
+      "U",
+      "Z",
+      "U",
+      "R",
+      "L",
+      "U",
+      "L",
+      "L",
+      "E"
+    ],
+    [
+      "M",
+      "Z",
+      "A",
+      "R",
+      "İ",
+      "L",
+      "Ü",
+      "İ",
+      "T",
+      "A"
+    ],
+    [
+      "T",
+      "L",
+      "I",
+      "A",
+      "M",
+      "Ş",
+      "Y",
+      "M",
+      "I",
+      "L"
+    ],
+    [
+      "M",
+      "C",
+      "E",
+      "E",
+      "İ",
+      "N",
+      "A",
+      "C",
+      "K",
+      "T"
+    ],
+    [
+      "M",
+      "Ö",
+      "L",
+      "D",
+      "E",
+      "İ",
+      "R",
+      "İ",
+      "I",
+      "O"
+    ]
+  ],
+  "words": [
+    {
+      "word": "HUZURLU",
+      "start": {
+        "row": 5,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir zor_kelimeler kelimesi"
+    },
+    {
+      "word": "PENALTI",
+      "start": {
+        "row": 1,
+        "col": 8
+      },
+      "direction": "vertical",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir zor_kelimeler kelimesi"
+    },
+    {
+      "word": "BİLİMCİ",
+      "start": {
+        "row": 3,
+        "col": 7
+      },
+      "direction": "vertical",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir zor_kelimeler kelimesi"
+    },
+    {
+      "word": "KADIKÖY",
+      "start": {
+        "row": 1,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir zor_kelimeler kelimesi"
+    },
+    {
+      "word": "KAYMAK",
+      "start": {
+        "row": 2,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir zor_kelimeler kelimesi"
+    },
+    {
+      "word": "UYUŞUK",
+      "start": {
+        "row": 0,
+        "col": 2
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir zor_kelimeler kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-29T11:40:13.412192+00:00",
+  "generator_version": "1.0.0"
+}

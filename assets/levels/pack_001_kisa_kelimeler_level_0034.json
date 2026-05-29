@@ -1,0 +1,179 @@
+{
+  "schema_version": 1,
+  "level_id": 34,
+  "pack_id": "pack_001_kisa_kelimeler",
+  "difficulty": "easy",
+  "difficulty_score": 17,
+  "category": "kisa_kelimeler",
+  "category_display_tr": "Başlangıç",
+  "grid_size": {
+    "rows": 8,
+    "cols": 8
+  },
+  "grid": [
+    [
+      "A",
+      "N",
+      "İ",
+      "A",
+      "E",
+      "I",
+      "S",
+      "A"
+    ],
+    [
+      "A",
+      "İ",
+      "E",
+      "R",
+      "M",
+      "Ü",
+      "A",
+      "R"
+    ],
+    [
+      "L",
+      "A",
+      "A",
+      "N",
+      "D",
+      "L",
+      "R",
+      "İ"
+    ],
+    [
+      "P",
+      "R",
+      "U",
+      "L",
+      "O",
+      "Ü",
+      "N",
+      "K"
+    ],
+    [
+      "Y",
+      "I",
+      "D",
+      "A",
+      "Y",
+      "Ş",
+      "I",
+      "U"
+    ],
+    [
+      "I",
+      "A",
+      "E",
+      "S",
+      "M",
+      "İ",
+      "Y",
+      "T"
+    ],
+    [
+      "S",
+      "Y",
+      "L",
+      "L",
+      "İ",
+      "F",
+      "T",
+      "A"
+    ],
+    [
+      "A",
+      "A",
+      "L",
+      "A",
+      "A",
+      "R",
+      "İ",
+      "B"
+    ]
+  ],
+  "words": [
+    {
+      "word": "ÜLÜŞ",
+      "start": {
+        "row": 1,
+        "col": 5
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "YISA",
+      "start": {
+        "row": 4,
+        "col": 0
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "RULO",
+      "start": {
+        "row": 3,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "ASLA",
+      "start": {
+        "row": 4,
+        "col": 3
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "İFTA",
+      "start": {
+        "row": 6,
+        "col": 4
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "KUT",
+      "start": {
+        "row": 3,
+        "col": 7
+      },
+      "direction": "vertical",
+      "length": 3,
+      "frequency_score": 90,
+      "hint_tr": "3 harfli bir kisa_kelimeler kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-29T11:39:57.673306+00:00",
+  "generator_version": "1.0.0"
+}

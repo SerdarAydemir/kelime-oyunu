@@ -1,0 +1,209 @@
+{
+  "schema_version": 1,
+  "level_id": 50,
+  "pack_id": "pack_002_genel",
+  "difficulty": "easy",
+  "difficulty_score": 26,
+  "category": "genel",
+  "category_display_tr": "Günlük",
+  "grid_size": {
+    "rows": 9,
+    "cols": 9
+  },
+  "grid": [
+    [
+      "R",
+      "İ",
+      "N",
+      "T",
+      "Ç",
+      "E",
+      "S",
+      "D",
+      "K"
+    ],
+    [
+      "T",
+      "I",
+      "E",
+      "A",
+      "S",
+      "Ç",
+      "N",
+      "İ",
+      "D"
+    ],
+    [
+      "T",
+      "Ü",
+      "Ş",
+      "N",
+      "A",
+      "I",
+      "A",
+      "Z",
+      "D"
+    ],
+    [
+      "İ",
+      "N",
+      "E",
+      "O",
+      "N",
+      "R",
+      "E",
+      "M",
+      "E"
+    ],
+    [
+      "T",
+      "İ",
+      "İ",
+      "A",
+      "S",
+      "Ç",
+      "M",
+      "E",
+      "A"
+    ],
+    [
+      "E",
+      "K",
+      "T",
+      "P",
+      "I",
+      "I",
+      "E",
+      "N",
+      "U"
+    ],
+    [
+      "L",
+      "I",
+      "İ",
+      "K",
+      "Z",
+      "L",
+      "Z",
+      "N",
+      "N"
+    ],
+    [
+      "E",
+      "I",
+      "D",
+      "A",
+      "I",
+      "N",
+      "R",
+      "T",
+      "E"
+    ],
+    [
+      "R",
+      "K",
+      "A",
+      "B",
+      "U",
+      "L",
+      "A",
+      "P",
+      "H"
+    ]
+  ],
+  "words": [
+    {
+      "word": "ÇIRÇIL",
+      "start": {
+        "row": 1,
+        "col": 5
+      },
+      "direction": "vertical",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir genel kelimesi"
+    },
+    {
+      "word": "RİNTÇE",
+      "start": {
+        "row": 0,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir genel kelimesi"
+    },
+    {
+      "word": "SANSIZ",
+      "start": {
+        "row": 1,
+        "col": 4
+      },
+      "direction": "vertical",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir genel kelimesi"
+    },
+    {
+      "word": "DİZMEN",
+      "start": {
+        "row": 0,
+        "col": 7
+      },
+      "direction": "vertical",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir genel kelimesi"
+    },
+    {
+      "word": "MEZRA",
+      "start": {
+        "row": 4,
+        "col": 6
+      },
+      "direction": "vertical",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir genel kelimesi"
+    },
+    {
+      "word": "KABUL",
+      "start": {
+        "row": 8,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir genel kelimesi"
+    },
+    {
+      "word": "TEL",
+      "start": {
+        "row": 4,
+        "col": 0
+      },
+      "direction": "vertical",
+      "length": 3,
+      "frequency_score": 90,
+      "hint_tr": "3 harfli bir genel kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-29T11:39:59.045200+00:00",
+  "generator_version": "1.0.0"
+}

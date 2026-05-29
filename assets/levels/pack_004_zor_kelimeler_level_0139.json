@@ -1,0 +1,219 @@
+{
+  "schema_version": 1,
+  "level_id": 139,
+  "pack_id": "pack_004_zor_kelimeler",
+  "difficulty": "hard",
+  "difficulty_score": 32,
+  "category": "zor_kelimeler",
+  "category_display_tr": "Zorlayıcı",
+  "grid_size": {
+    "rows": 10,
+    "cols": 10
+  },
+  "grid": [
+    [
+      "P",
+      "Y",
+      "P",
+      "I",
+      "R",
+      "Ç",
+      "N",
+      "A",
+      "E",
+      "T"
+    ],
+    [
+      "E",
+      "Ö",
+      "İ",
+      "M",
+      "P",
+      "O",
+      "I",
+      "L",
+      "K",
+      "A"
+    ],
+    [
+      "R",
+      "R",
+      "N",
+      "E",
+      "Ü",
+      "A",
+      "S",
+      "T",
+      "L",
+      "L"
+    ],
+    [
+      "S",
+      "E",
+      "S",
+      "A",
+      "T",
+      "İ",
+      "R",
+      "Y",
+      "A",
+      "İ"
+    ],
+    [
+      "E",
+      "E",
+      "Ü",
+      "B",
+      "A",
+      "R",
+      "E",
+      "A",
+      "D",
+      "M"
+    ],
+    [
+      "N",
+      "E",
+      "R",
+      "K",
+      "A",
+      "A",
+      "G",
+      "P",
+      "Ü",
+      "L"
+    ],
+    [
+      "K",
+      "A",
+      "İ",
+      "B",
+      "E",
+      "U",
+      "O",
+      "I",
+      "E",
+      "İ"
+    ],
+    [
+      "T",
+      "E",
+      "S",
+      "A",
+      "R",
+      "K",
+      "I",
+      "K",
+      "İ",
+      "K"
+    ],
+    [
+      "L",
+      "M",
+      "İ",
+      "N",
+      "İ",
+      "C",
+      "İ",
+      "K",
+      "K",
+      "A"
+    ],
+    [
+      "D",
+      "R",
+      "D",
+      "P",
+      "N",
+      "T",
+      "U",
+      "R",
+      "D",
+      "D"
+    ]
+  ],
+  "words": [
+    {
+      "word": "PERSENK",
+      "start": {
+        "row": 0,
+        "col": 0
+      },
+      "direction": "vertical",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir zor_kelimeler kelimesi"
+    },
+    {
+      "word": "ALTYAPI",
+      "start": {
+        "row": 0,
+        "col": 7
+      },
+      "direction": "vertical",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir zor_kelimeler kelimesi"
+    },
+    {
+      "word": "MİNİCİK",
+      "start": {
+        "row": 8,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir zor_kelimeler kelimesi"
+    },
+    {
+      "word": "TALİMLİ",
+      "start": {
+        "row": 0,
+        "col": 9
+      },
+      "direction": "vertical",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir zor_kelimeler kelimesi"
+    },
+    {
+      "word": "ESATİR",
+      "start": {
+        "row": 3,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir zor_kelimeler kelimesi"
+    },
+    {
+      "word": "SARKIK",
+      "start": {
+        "row": 7,
+        "col": 2
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir zor_kelimeler kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-29T11:40:09.876056+00:00",
+  "generator_version": "1.0.0"
+}

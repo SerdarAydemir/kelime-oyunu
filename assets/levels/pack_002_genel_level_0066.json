@@ -1,0 +1,209 @@
+{
+  "schema_version": 1,
+  "level_id": 66,
+  "pack_id": "pack_002_genel",
+  "difficulty": "easy",
+  "difficulty_score": 25,
+  "category": "genel",
+  "category_display_tr": "Günlük",
+  "grid_size": {
+    "rows": 9,
+    "cols": 9
+  },
+  "grid": [
+    [
+      "M",
+      "L",
+      "R",
+      "Z",
+      "D",
+      "İ",
+      "S",
+      "L",
+      "U"
+    ],
+    [
+      "E",
+      "O",
+      "V",
+      "O",
+      "K",
+      "A",
+      "L",
+      "İ",
+      "M"
+    ],
+    [
+      "E",
+      "V",
+      "E",
+      "B",
+      "A",
+      "L",
+      "I",
+      "N",
+      "G"
+    ],
+    [
+      "K",
+      "E",
+      "I",
+      "I",
+      "N",
+      "P",
+      "F",
+      "E",
+      "O"
+    ],
+    [
+      "S",
+      "İ",
+      "N",
+      "G",
+      "Ö",
+      "Z",
+      "E",
+      "N",
+      "E"
+    ],
+    [
+      "P",
+      "A",
+      "N",
+      "O",
+      "E",
+      "B",
+      "Z",
+      "İ",
+      "I"
+    ],
+    [
+      "O",
+      "K",
+      "A",
+      "T",
+      "R",
+      "G",
+      "A",
+      "Y",
+      "E"
+    ],
+    [
+      "T",
+      "E",
+      "R",
+      "S",
+      "I",
+      "R",
+      "Ç",
+      "A",
+      "E"
+    ],
+    [
+      "T",
+      "E",
+      "R",
+      "M",
+      "İ",
+      "K",
+      "Y",
+      "D",
+      "D"
+    ]
+  ],
+  "words": [
+    {
+      "word": "VEBALI",
+      "start": {
+        "row": 2,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir genel kelimesi"
+    },
+    {
+      "word": "GÖZENE",
+      "start": {
+        "row": 4,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir genel kelimesi"
+    },
+    {
+      "word": "TERMİK",
+      "start": {
+        "row": 8,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir genel kelimesi"
+    },
+    {
+      "word": "VOKAL",
+      "start": {
+        "row": 1,
+        "col": 2
+      },
+      "direction": "horizontal",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir genel kelimesi"
+    },
+    {
+      "word": "SIRÇA",
+      "start": {
+        "row": 7,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir genel kelimesi"
+    },
+    {
+      "word": "SPOT",
+      "start": {
+        "row": 4,
+        "col": 0
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir genel kelimesi"
+    },
+    {
+      "word": "GAYE",
+      "start": {
+        "row": 6,
+        "col": 5
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir genel kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-29T11:40:00.532151+00:00",
+  "generator_version": "1.0.0"
+}

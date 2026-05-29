@@ -1,0 +1,219 @@
+{
+  "schema_version": 1,
+  "level_id": 135,
+  "pack_id": "pack_004_zor_kelimeler",
+  "difficulty": "hard",
+  "difficulty_score": 32,
+  "category": "zor_kelimeler",
+  "category_display_tr": "Zorlayıcı",
+  "grid_size": {
+    "rows": 10,
+    "cols": 10
+  },
+  "grid": [
+    [
+      "Ç",
+      "D",
+      "R",
+      "İ",
+      "A",
+      "İ",
+      "V",
+      "K",
+      "I",
+      "O"
+    ],
+    [
+      "E",
+      "L",
+      "E",
+      "A",
+      "P",
+      "İ",
+      "Y",
+      "A",
+      "N",
+      "O"
+    ],
+    [
+      "A",
+      "K",
+      "U",
+      "M",
+      "A",
+      "N",
+      "Y",
+      "A",
+      "U",
+      "E"
+    ],
+    [
+      "M",
+      "I",
+      "Ş",
+      "A",
+      "Z",
+      "K",
+      "D",
+      "D",
+      "İ",
+      "Ü"
+    ],
+    [
+      "A",
+      "N",
+      "T",
+      "A",
+      "E",
+      "R",
+      "R",
+      "E",
+      "L",
+      "A"
+    ],
+    [
+      "A",
+      "R",
+      "L",
+      "Ş",
+      "K",
+      "E",
+      "O",
+      "Ü",
+      "İ",
+      "K"
+    ],
+    [
+      "V",
+      "E",
+      "Ğ",
+      "İ",
+      "R",
+      "M",
+      "E",
+      "K",
+      "G",
+      "E"
+    ],
+    [
+      "K",
+      "İ",
+      "E",
+      "M",
+      "A",
+      "N",
+      "Ş",
+      "O",
+      "N",
+      "U"
+    ],
+    [
+      "E",
+      "K",
+      "Ş",
+      "K",
+      "O",
+      "K",
+      "A",
+      "R",
+      "C",
+      "A"
+    ],
+    [
+      "I",
+      "M",
+      "U",
+      "K",
+      "T",
+      "E",
+      "Z",
+      "İ",
+      "A",
+      "L"
+    ]
+  ],
+  "words": [
+    {
+      "word": "KUMANYA",
+      "start": {
+        "row": 2,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir zor_kelimeler kelimesi"
+    },
+    {
+      "word": "EĞİRMEK",
+      "start": {
+        "row": 6,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir zor_kelimeler kelimesi"
+    },
+    {
+      "word": "MUKTEZİ",
+      "start": {
+        "row": 9,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir zor_kelimeler kelimesi"
+    },
+    {
+      "word": "KOKARCA",
+      "start": {
+        "row": 8,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir zor_kelimeler kelimesi"
+    },
+    {
+      "word": "PİYANO",
+      "start": {
+        "row": 1,
+        "col": 4
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir zor_kelimeler kelimesi"
+    },
+    {
+      "word": "MANŞON",
+      "start": {
+        "row": 7,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir zor_kelimeler kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-29T11:40:08.454816+00:00",
+  "generator_version": "1.0.0"
+}

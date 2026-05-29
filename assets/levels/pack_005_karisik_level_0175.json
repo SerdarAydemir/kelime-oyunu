@@ -3,7 +3,7 @@
   "level_id": 175,
   "pack_id": "pack_005_karisik",
   "difficulty": "medium",
-  "difficulty_score": 38,
+  "difficulty_score": 30,
   "category": "karisik",
   "category_display_tr": "Karışık",
   "grid_size": {
@@ -12,258 +12,203 @@
   },
   "grid": [
     [
-      "İ",
-      "O",
-      "I",
-      "Ö",
       "A",
-      "L",
-      "L",
-      "O",
-      "Ğ",
-      "E"
+      "E",
+      "P",
+      "A",
+      "T",
+      "E",
+      "N",
+      "I",
+      "E",
+      "K"
     ],
     [
-      "L",
-      "M",
       "Y",
-      "Z",
-      "R",
-      "M",
-      "Z",
-      "Ö",
-      "C",
-      "M"
-    ],
-    [
-      "O",
-      "E",
       "R",
       "E",
-      "K",
+      "N",
+      "G",
       "E",
       "L",
-      "S",
-      "E",
-      "R"
-    ],
-    [
-      "K",
-      "V",
-      "B",
       "N",
       "A",
-      "K",
+      "İ"
+    ],
+    [
+      "N",
+      "U",
+      "İ",
+      "L",
+      "D",
+      "S",
       "E",
-      "B",
-      "H",
-      "E"
+      "R",
+      "D",
+      "A"
+    ],
+    [
+      "Ğ",
+      "Y",
+      "A",
+      "T",
+      "Ü",
+      "A",
+      "O",
+      "V",
+      "A",
+      "U"
     ],
     [
       "A",
+      "C",
+      "I",
+      "G",
+      "Ö",
       "L",
-      "U",
+      "A",
+      "N",
       "İ",
-      "S",
-      "L",
-      "T",
-      "O",
-      "R",
       "Y"
     ],
     [
-      "N",
+      "R",
+      "O",
       "İ",
-      "R",
-      "E",
-      "I",
-      "E",
-      "A",
-      "Ğ",
-      "E",
-      "L"
-    ],
-    [
-      "T",
-      "T",
-      "U",
-      "K",
-      "Z",
+      "Ü",
+      "Ü",
       "N",
+      "L",
       "R",
-      "A",
-      "Z",
-      "E"
+      "L",
+      "A"
     ],
     [
+      "E",
       "A",
-      "H",
-      "K",
+      "İ",
+      "A",
+      "T",
+      "E",
       "I",
       "L",
-      "M",
-      "J",
+      "R",
+      "R"
+    ],
+    [
+      "D",
+      "A",
+      "Ğ",
+      "I",
       "T",
-      "H",
+      "M",
+      "A",
+      "A",
+      "R",
       "M"
     ],
     [
-      "C",
+      "R",
+      "M",
+      "H",
+      "K",
       "A",
-      "Ç",
-      "Z",
-      "I",
-      "E",
-      "İ",
+      "P",
       "A",
       "N",
-      "E"
+      "C",
+      "A"
     ],
     [
-      "I",
-      "N",
-      "A",
-      "Ç",
+      "D",
+      "D",
+      "O",
+      "Y",
+      "U",
+      "Ş",
       "K",
-      "K",
-      "M",
       "T",
-      "R",
+      "N",
       "K"
     ]
   ],
   "words": [
     {
-      "word": "ARKASIZLIK",
+      "word": "DAĞITMA",
       "start": {
-        "row": 0,
-        "col": 4
+        "row": 7,
+        "col": 0
       },
-      "direction": "vertical",
-      "length": 10,
-      "frequency_score": 20,
-      "hint_tr": "10 harfli bir karisik kelimesi"
+      "direction": "horizontal",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir karisik kelimesi"
     },
     {
-      "word": "EMREYLEMEK",
+      "word": "UYARMAK",
       "start": {
-        "row": 0,
+        "row": 3,
         "col": 9
       },
       "direction": "vertical",
-      "length": 10,
-      "frequency_score": 20,
-      "hint_tr": "10 harfli bir karisik kelimesi"
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir karisik kelimesi"
     },
     {
-      "word": "MEVLİTHAN",
+      "word": "KAPANCA",
       "start": {
-        "row": 1,
-        "col": 1
+        "row": 8,
+        "col": 3
       },
-      "direction": "vertical",
-      "length": 9,
-      "frequency_score": 30,
-      "hint_tr": "9 harfli bir karisik kelimesi"
+      "direction": "horizontal",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir karisik kelimesi"
     },
     {
-      "word": "LOKANTACI",
+      "word": "ACIGÖL",
       "start": {
-        "row": 1,
+        "row": 4,
         "col": 0
       },
-      "direction": "vertical",
-      "length": 9,
-      "frequency_score": 30,
-      "hint_tr": "9 harfli bir karisik kelimesi"
-    },
-    {
-      "word": "EKLENMEK",
-      "start": {
-        "row": 2,
-        "col": 5
-      },
-      "direction": "vertical",
-      "length": 8,
-      "frequency_score": 40,
-      "hint_tr": "8 harfli bir karisik kelimesi"
-    },
-    {
-      "word": "LETARJİ",
-      "start": {
-        "row": 2,
-        "col": 6
-      },
-      "direction": "vertical",
-      "length": 7,
-      "frequency_score": 50,
-      "hint_tr": "7 harfli bir karisik kelimesi"
-    },
-    {
-      "word": "BURUKÇA",
-      "start": {
-        "row": 3,
-        "col": 2
-      },
-      "direction": "vertical",
-      "length": 7,
-      "frequency_score": 50,
-      "hint_tr": "7 harfli bir karisik kelimesi"
-    },
-    {
-      "word": "BOĞATA",
-      "start": {
-        "row": 3,
-        "col": 7
-      },
-      "direction": "vertical",
+      "direction": "horizontal",
       "length": 6,
       "frequency_score": 60,
       "hint_tr": "6 harfli bir karisik kelimesi"
     },
     {
-      "word": "CEHRE",
+      "word": "DOYUŞ",
       "start": {
-        "row": 1,
-        "col": 8
-      },
-      "direction": "vertical",
-      "length": 5,
-      "frequency_score": 70,
-      "hint_tr": "5 harfli bir karisik kelimesi"
-    },
-    {
-      "word": "ÖZENİ",
-      "start": {
-        "row": 0,
-        "col": 3
-      },
-      "direction": "vertical",
-      "length": 5,
-      "frequency_score": 70,
-      "hint_tr": "5 harfli bir karisik kelimesi"
-    },
-    {
-      "word": "LOĞ",
-      "start": {
-        "row": 0,
-        "col": 6
+        "row": 9,
+        "col": 1
       },
       "direction": "horizontal",
-      "length": 3,
-      "frequency_score": 90,
-      "hint_tr": "3 harfli bir karisik kelimesi"
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir karisik kelimesi"
     },
     {
-      "word": "KIZ",
+      "word": "ENGEL",
       "start": {
-        "row": 6,
-        "col": 3
+        "row": 1,
+        "col": 2
       },
-      "direction": "vertical",
-      "length": 3,
-      "frequency_score": 90,
-      "hint_tr": "3 harfli bir karisik kelimesi"
+      "direction": "horizontal",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "PATEN",
+      "start": {
+        "row": 0,
+        "col": 2
+      },
+      "direction": "horizontal",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir karisik kelimesi"
     }
   ],
   "bonus_words": [],
@@ -280,6 +225,6 @@
     "post_fill_scanned": true,
     "scanner_version": "1.0.0"
   },
-  "generated_at": "2026-05-28T21:12:03.242503+00:00",
+  "generated_at": "2026-05-29T11:40:15.943605+00:00",
   "generator_version": "1.0.0"
 }

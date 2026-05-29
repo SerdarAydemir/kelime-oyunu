@@ -3,184 +3,130 @@
   "level_id": 116,
   "pack_id": "pack_003_orta_kelimeler",
   "difficulty": "medium",
-  "difficulty_score": 33,
+  "difficulty_score": 27,
   "category": "orta_kelimeler",
-  "category_display_tr": "Orta Kelimeler",
+  "category_display_tr": "Orta",
   "grid_size": {
-    "rows": 10,
-    "cols": 10
+    "rows": 9,
+    "cols": 9
   },
   "grid": [
     [
+      "N",
+      "N",
+      "Ç",
       "M",
-      "R",
-      "İ",
       "A",
-      "Z",
-      "U",
-      "H",
-      "U",
-      "R",
+      "I",
+      "N",
+      "T",
       "İ"
     ],
     [
-      "T",
       "E",
-      "L",
-      "Ş",
-      "U",
+      "I",
       "N",
-      "C",
-      "A",
-      "S",
-      "I"
-    ],
-    [
-      "A",
-      "L",
-      "U",
-      "I",
-      "G",
-      "E",
-      "L",
-      "E",
-      "M",
-      "E"
-    ],
-    [
-      "A",
-      "I",
-      "I",
-      "Ü",
-      "T",
-      "E",
-      "S",
       "R",
       "İ",
-      "Ş"
-    ],
-    [
-      "H",
-      "R",
+      "P",
+      "I",
       "A",
-      "S",
-      "Ü",
-      "T",
-      "U",
-      "N",
-      "E",
-      "M"
-    ],
-    [
-      "H",
-      "L",
-      "U",
-      "N",
-      "U",
-      "T",
-      "U",
-      "Ş",
-      "L",
-      "L"
-    ],
-    [
-      "Ü",
-      "S",
-      "E",
-      "R",
-      "Ü",
-      "V",
-      "E",
-      "N",
-      "U",
-      "E"
-    ],
-    [
-      "T",
-      "G",
-      "A",
-      "Z",
-      "A",
-      "N",
-      "İ",
-      "N",
-      "İ",
-      "E"
-    ],
-    [
-      "N",
-      "S",
-      "A",
-      "E",
-      "İ",
-      "T",
-      "E",
-      "N",
-      "Y",
       "A"
     ],
     [
-      "O",
-      "J",
+      "V",
+      "G",
       "E",
-      "O",
+      "Ğ",
+      "R",
+      "E",
+      "K",
+      "K",
+      "O"
+    ],
+    [
+      "S",
+      "A",
+      "A",
+      "Ü",
+      "N",
+      "E",
       "L",
-      "O",
-      "J",
+      "R",
+      "K"
+    ],
+    [
+      "E",
+      "Ç",
+      "E",
+      "N",
+      "G",
+      "E",
+      "L",
+      "K",
+      "R"
+    ],
+    [
+      "M",
+      "C",
+      "E",
+      "B",
+      "E",
+      "L",
+      "A",
+      "A",
+      "E"
+    ],
+    [
+      "E",
+      "L",
+      "T",
+      "U",
+      "T",
+      "U",
+      "K",
+      "A",
+      "A"
+    ],
+    [
+      "E",
+      "Ğ",
+      "İ",
+      "L",
       "İ",
       "N",
-      "I"
+      "T",
+      "İ",
+      "E"
+    ],
+    [
+      "R",
+      "E",
+      "V",
+      "İ",
+      "Z",
+      "E",
+      "L",
+      "N",
+      "U"
     ]
   ],
   "words": [
     {
-      "word": "ŞUNCASI",
-      "start": {
-        "row": 1,
-        "col": 3
-      },
-      "direction": "horizontal",
-      "length": 7,
-      "frequency_score": 50,
-      "hint_tr": "7 harfli bir orta_kelimeler kelimesi"
-    },
-    {
-      "word": "SERÜVEN",
-      "start": {
-        "row": 6,
-        "col": 1
-      },
-      "direction": "horizontal",
-      "length": 7,
-      "frequency_score": 50,
-      "hint_tr": "7 harfli bir orta_kelimeler kelimesi"
-    },
-    {
-      "word": "JEOLOJİ",
-      "start": {
-        "row": 9,
-        "col": 1
-      },
-      "direction": "horizontal",
-      "length": 7,
-      "frequency_score": 50,
-      "hint_tr": "7 harfli bir orta_kelimeler kelimesi"
-    },
-    {
-      "word": "TAAHHÜT",
+      "word": "EVSEME",
       "start": {
         "row": 1,
         "col": 0
       },
       "direction": "vertical",
-      "length": 7,
-      "frequency_score": 50,
-      "hint_tr": "7 harfli bir orta_kelimeler kelimesi"
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir orta_kelimeler kelimesi"
     },
     {
-      "word": "UNUTUŞ",
+      "word": "İLİNTİ",
       "start": {
-        "row": 5,
+        "row": 7,
         "col": 2
       },
       "direction": "horizontal",
@@ -189,54 +135,54 @@
       "hint_tr": "6 harfli bir orta_kelimeler kelimesi"
     },
     {
-      "word": "ZUHURİ",
-      "start": {
-        "row": 0,
-        "col": 4
-      },
-      "direction": "horizontal",
-      "length": 6,
-      "frequency_score": 60,
-      "hint_tr": "6 harfli bir orta_kelimeler kelimesi"
-    },
-    {
-      "word": "GELEME",
-      "start": {
-        "row": 2,
-        "col": 4
-      },
-      "direction": "horizontal",
-      "length": 6,
-      "frequency_score": 60,
-      "hint_tr": "6 harfli bir orta_kelimeler kelimesi"
-    },
-    {
-      "word": "SÜTUN",
-      "start": {
-        "row": 4,
-        "col": 3
-      },
-      "direction": "horizontal",
-      "length": 5,
-      "frequency_score": 70,
-      "hint_tr": "5 harfli bir orta_kelimeler kelimesi"
-    },
-    {
-      "word": "TESRİ",
-      "start": {
-        "row": 3,
-        "col": 4
-      },
-      "direction": "horizontal",
-      "length": 5,
-      "frequency_score": 70,
-      "hint_tr": "5 harfli bir orta_kelimeler kelimesi"
-    },
-    {
-      "word": "TENYA",
+      "word": "REVİZE",
       "start": {
         "row": 8,
-        "col": 5
+        "col": 0
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "GEĞREK",
+      "start": {
+        "row": 2,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "ÇENGEL",
+      "start": {
+        "row": 4,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "CEBEL",
+      "start": {
+        "row": 5,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "TUTUK",
+      "start": {
+        "row": 6,
+        "col": 2
       },
       "direction": "horizontal",
       "length": 5,
@@ -258,6 +204,6 @@
     "post_fill_scanned": true,
     "scanner_version": "1.0.0"
   },
-  "generated_at": "2026-05-28T21:11:51.744063+00:00",
+  "generated_at": "2026-05-29T11:40:04.463936+00:00",
   "generator_version": "1.0.0"
 }

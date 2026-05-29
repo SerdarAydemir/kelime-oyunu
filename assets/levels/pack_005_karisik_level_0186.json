@@ -1,0 +1,230 @@
+{
+  "schema_version": 1,
+  "level_id": 186,
+  "pack_id": "pack_005_karisik",
+  "difficulty": "medium",
+  "difficulty_score": 29,
+  "category": "karisik",
+  "category_display_tr": "Karışık",
+  "grid_size": {
+    "rows": 10,
+    "cols": 10
+  },
+  "grid": [
+    [
+      "E",
+      "N",
+      "E",
+      "A",
+      "Ş",
+      "E",
+      "A",
+      "Ç",
+      "A",
+      "N"
+    ],
+    [
+      "I",
+      "I",
+      "Z",
+      "S",
+      "I",
+      "L",
+      "İ",
+      "H",
+      "A",
+      "U"
+    ],
+    [
+      "D",
+      "S",
+      "İ",
+      "Ü",
+      "Ö",
+      "R",
+      "G",
+      "Ü",
+      "L",
+      "Ü"
+    ],
+    [
+      "L",
+      "O",
+      "H",
+      "R",
+      "P",
+      "H",
+      "İ",
+      "İ",
+      "B",
+      "T"
+    ],
+    [
+      "U",
+      "İ",
+      "A",
+      "K",
+      "S",
+      "U",
+      "D",
+      "R",
+      "U",
+      "A"
+    ],
+    [
+      "E",
+      "I",
+      "Y",
+      "Ü",
+      "U",
+      "S",
+      "B",
+      "A",
+      "T",
+      "R"
+    ],
+    [
+      "Y",
+      "L",
+      "A",
+      "N",
+      "E",
+      "U",
+      "I",
+      "Y",
+      "İ",
+      "İ"
+    ],
+    [
+      "Ş",
+      "A",
+      "L",
+      "Ç",
+      "Z",
+      "S",
+      "A",
+      "Ö",
+      "A",
+      "H"
+    ],
+    [
+      "R",
+      "T",
+      "E",
+      "Ü",
+      "D",
+      "Ö",
+      "D",
+      "L",
+      "K",
+      "Ç"
+    ],
+    [
+      "N",
+      "V",
+      "N",
+      "P",
+      "A",
+      "Y",
+      "T",
+      "O",
+      "N",
+      "İ"
+    ]
+  ],
+  "words": [
+    {
+      "word": "HAYALEN",
+      "start": {
+        "row": 3,
+        "col": 2
+      },
+      "direction": "vertical",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "TARİHÇİ",
+      "start": {
+        "row": 3,
+        "col": 9
+      },
+      "direction": "vertical",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "PAYTON",
+      "start": {
+        "row": 9,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "ÖRGÜLÜ",
+      "start": {
+        "row": 2,
+        "col": 4
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "ÜRKÜNÇ",
+      "start": {
+        "row": 2,
+        "col": 3
+      },
+      "direction": "vertical",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "HUSUS",
+      "start": {
+        "row": 3,
+        "col": 5
+      },
+      "direction": "vertical",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "AÇAN",
+      "start": {
+        "row": 0,
+        "col": 6
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir karisik kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-29T11:40:18.441820+00:00",
+  "generator_version": "1.0.0"
+}

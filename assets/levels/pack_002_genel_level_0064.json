@@ -1,0 +1,209 @@
+{
+  "schema_version": 1,
+  "level_id": 64,
+  "pack_id": "pack_002_genel",
+  "difficulty": "easy",
+  "difficulty_score": 26,
+  "category": "genel",
+  "category_display_tr": "Günlük",
+  "grid_size": {
+    "rows": 9,
+    "cols": 9
+  },
+  "grid": [
+    [
+      "S",
+      "A",
+      "İ",
+      "N",
+      "A",
+      "N",
+      "D",
+      "T",
+      "A"
+    ],
+    [
+      "Ö",
+      "Ğ",
+      "R",
+      "E",
+      "K",
+      "N",
+      "I",
+      "T",
+      "L"
+    ],
+    [
+      "I",
+      "N",
+      "İ",
+      "M",
+      "A",
+      "N",
+      "G",
+      "O",
+      "L"
+    ],
+    [
+      "R",
+      "Ö",
+      "S",
+      "Ü",
+      "V",
+      "E",
+      "N",
+      "L",
+      "T"
+    ],
+    [
+      "A",
+      "G",
+      "A",
+      "B",
+      "A",
+      "R",
+      "İ",
+      "Ü",
+      "R"
+    ],
+    [
+      "İ",
+      "Y",
+      "İ",
+      "C",
+      "E",
+      "O",
+      "I",
+      "E",
+      "R"
+    ],
+    [
+      "A",
+      "N",
+      "Ğ",
+      "H",
+      "O",
+      "İ",
+      "Ö",
+      "N",
+      "L"
+    ],
+    [
+      "C",
+      "A",
+      "M",
+      "S",
+      "I",
+      "N",
+      "T",
+      "Y",
+      "D"
+    ],
+    [
+      "E",
+      "B",
+      "E",
+      "E",
+      "P",
+      "T",
+      "S",
+      "N",
+      "G"
+    ]
+  ],
+  "words": [
+    {
+      "word": "GABARİ",
+      "start": {
+        "row": 4,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir genel kelimesi"
+    },
+    {
+      "word": "TOLÜEN",
+      "start": {
+        "row": 1,
+        "col": 7
+      },
+      "direction": "vertical",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir genel kelimesi"
+    },
+    {
+      "word": "SÜVEN",
+      "start": {
+        "row": 3,
+        "col": 2
+      },
+      "direction": "horizontal",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir genel kelimesi"
+    },
+    {
+      "word": "MANGO",
+      "start": {
+        "row": 2,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir genel kelimesi"
+    },
+    {
+      "word": "CAMSI",
+      "start": {
+        "row": 7,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir genel kelimesi"
+    },
+    {
+      "word": "İYİCE",
+      "start": {
+        "row": 5,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir genel kelimesi"
+    },
+    {
+      "word": "ÖĞREK",
+      "start": {
+        "row": 1,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir genel kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-29T11:39:59.972625+00:00",
+  "generator_version": "1.0.0"
+}

@@ -3,7 +3,7 @@
   "level_id": 171,
   "pack_id": "pack_005_karisik",
   "difficulty": "medium",
-  "difficulty_score": 40,
+  "difficulty_score": 33,
   "category": "karisik",
   "category_display_tr": "Karışık",
   "grid_size": {
@@ -12,214 +12,203 @@
   },
   "grid": [
     [
-      "A",
-      "S",
-      "U",
-      "L",
-      "A",
-      "E",
-      "Ç",
-      "U",
-      "F",
-      "Ç"
-    ],
-    [
-      "G",
-      "I",
-      "U",
-      "E",
-      "Y",
-      "F",
-      "A",
-      "R",
-      "İ",
-      "İ"
-    ],
-    [
-      "K",
-      "R",
-      "N",
-      "S",
-      "I",
-      "R",
-      "K",
-      "A",
-      "K",
-      "N"
-    ],
-    [
-      "A",
-      "N",
-      "I",
-      "Ç",
-      "K",
-      "E",
-      "I",
       "S",
       "İ",
-      "G"
-    ],
-    [
-      "R",
-      "A",
+      "İ",
+      "İ",
       "Y",
-      "A",
-      "U",
-      "N",
-      "Ş",
-      "P",
-      "R",
-      "E"
+      "S",
+      "I",
+      "Ü",
+      "T",
+      "U"
     ],
     [
       "L",
-      "Ş",
-      "P",
+      "İ",
+      "T",
+      "C",
+      "I",
+      "Ü",
+      "D",
+      "İ",
+      "N",
+      "I"
+    ],
+    [
+      "İ",
+      "İ",
+      "B",
+      "E",
+      "İ",
       "R",
-      "L",
-      "G",
+      "N",
+      "A",
+      "E",
+      "C"
+    ],
+    [
+      "B",
+      "T",
+      "E",
       "M",
+      "R",
       "A",
-      "C",
-      "N"
+      "Z",
+      "A",
+      "I",
+      "S"
+    ],
+    [
+      "G",
+      "E",
+      "L",
+      "E",
+      "N",
+      "H",
+      "İ",
+      "I",
+      "R",
+      "A"
     ],
     [
       "U",
-      "I",
+      "V",
+      "D",
+      "T",
+      "S",
+      "İ",
+      "U",
+      "L",
       "N",
-      "I",
-      "A",
-      "İ",
-      "A",
-      "C",
-      "İ",
-      "E"
+      "Y"
     ],
     [
-      "K",
-      "K",
+      "R",
+      "A",
+      "İ",
+      "M",
+      "İ",
+      "N",
+      "İ",
+      "B",
+      "Ü",
+      "S"
+    ],
+    [
+      "L",
+      "R",
+      "V",
+      "E",
+      "G",
+      "E",
+      "B",
+      "Z",
+      "E",
+      "U"
+    ],
+    [
+      "R",
+      "Ü",
+      "E",
+      "D",
+      "E",
+      "N",
+      "G",
       "E",
       "L",
-      "Ğ",
-      "L",
-      "İ",
-      "I",
-      "Y",
-      "L"
-    ],
-    [
-      "Y",
-      "Ç",
-      "A",
-      "S",
-      "I",
-      "İ",
-      "Ş",
-      "R",
-      "Ş",
       "İ"
     ],
     [
+      "Y",
+      "S",
+      "N",
+      "M",
+      "Ç",
+      "T",
+      "A",
       "L",
-      "A",
-      "A",
-      "E",
-      "R",
-      "R",
-      "R",
-      "A",
-      "A",
-      "K"
+      "İ",
+      "A"
     ]
   ],
   "words": [
     {
-      "word": "ÇİNGENELİK",
+      "word": "CEMETME",
       "start": {
-        "row": 0,
-        "col": 9
+        "row": 1,
+        "col": 3
       },
       "direction": "vertical",
-      "length": 10,
-      "frequency_score": 20,
-      "hint_tr": "10 harfli bir karisik kelimesi"
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir karisik kelimesi"
     },
     {
-      "word": "SIRNAŞIKÇA",
+      "word": "DENGELİ",
       "start": {
-        "row": 0,
+        "row": 8,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "MİNİBÜS",
+      "start": {
+        "row": 6,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "ELDİVEN",
+      "start": {
+        "row": 3,
+        "col": 2
+      },
+      "direction": "vertical",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "TEVARÜS",
+      "start": {
+        "row": 3,
         "col": 1
       },
       "direction": "vertical",
-      "length": 10,
-      "frequency_score": 20,
-      "hint_tr": "10 harfli bir karisik kelimesi"
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir karisik kelimesi"
     },
     {
-      "word": "AYIKULAĞI",
+      "word": "SÜRAHİ",
       "start": {
         "row": 0,
-        "col": 4
-      },
-      "direction": "vertical",
-      "length": 9,
-      "frequency_score": 30,
-      "hint_tr": "9 harfli bir karisik kelimesi"
-    },
-    {
-      "word": "FRENGİLİ",
-      "start": {
-        "row": 1,
         "col": 5
-      },
-      "direction": "vertical",
-      "length": 8,
-      "frequency_score": 40,
-      "hint_tr": "8 harfli bir karisik kelimesi"
-    },
-    {
-      "word": "RASPACI",
-      "start": {
-        "row": 1,
-        "col": 7
-      },
-      "direction": "vertical",
-      "length": 7,
-      "frequency_score": 50,
-      "hint_tr": "7 harfli bir karisik kelimesi"
-    },
-    {
-      "word": "FİKİRCİ",
-      "start": {
-        "row": 0,
-        "col": 8
-      },
-      "direction": "vertical",
-      "length": 7,
-      "frequency_score": 50,
-      "hint_tr": "7 harfli bir karisik kelimesi"
-    },
-    {
-      "word": "ÇAKIŞMA",
-      "start": {
-        "row": 0,
-        "col": 6
-      },
-      "direction": "vertical",
-      "length": 7,
-      "frequency_score": 50,
-      "hint_tr": "7 harfli bir karisik kelimesi"
-    },
-    {
-      "word": "KARLUK",
-      "start": {
-        "row": 2,
-        "col": 0
       },
       "direction": "vertical",
       "length": 6,
       "frequency_score": 60,
       "hint_tr": "6 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "GEBZE",
+      "start": {
+        "row": 7,
+        "col": 4
+      },
+      "direction": "horizontal",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir karisik kelimesi"
     }
   ],
   "bonus_words": [],
@@ -236,6 +225,6 @@
     "post_fill_scanned": true,
     "scanner_version": "1.0.0"
   },
-  "generated_at": "2026-05-28T21:12:02.572662+00:00",
+  "generated_at": "2026-05-29T11:40:15.923941+00:00",
   "generator_version": "1.0.0"
 }

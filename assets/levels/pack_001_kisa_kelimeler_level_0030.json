@@ -1,0 +1,179 @@
+{
+  "schema_version": 1,
+  "level_id": 30,
+  "pack_id": "pack_001_kisa_kelimeler",
+  "difficulty": "easy",
+  "difficulty_score": 17,
+  "category": "kisa_kelimeler",
+  "category_display_tr": "Başlangıç",
+  "grid_size": {
+    "rows": 8,
+    "cols": 8
+  },
+  "grid": [
+    [
+      "E",
+      "İ",
+      "K",
+      "T",
+      "M",
+      "H",
+      "A",
+      "Z"
+    ],
+    [
+      "S",
+      "N",
+      "A",
+      "E",
+      "E",
+      "A",
+      "L",
+      "C"
+    ],
+    [
+      "A",
+      "İ",
+      "R",
+      "L",
+      "A",
+      "L",
+      "E",
+      "I"
+    ],
+    [
+      "Y",
+      "İ",
+      "I",
+      "K",
+      "E",
+      "Ğ",
+      "E",
+      "R"
+    ],
+    [
+      "E",
+      "L",
+      "Y",
+      "T",
+      "A",
+      "H",
+      "T",
+      "T"
+    ],
+    [
+      "I",
+      "U",
+      "E",
+      "Ş",
+      "E",
+      "I",
+      "R",
+      "Z"
+    ],
+    [
+      "G",
+      "I",
+      "S",
+      "İ",
+      "D",
+      "N",
+      "R",
+      "N"
+    ],
+    [
+      "İ",
+      "K",
+      "N",
+      "Ş",
+      "B",
+      "L",
+      "U",
+      "M"
+    ]
+  ],
+  "words": [
+    {
+      "word": "KARI",
+      "start": {
+        "row": 0,
+        "col": 2
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "CIRT",
+      "start": {
+        "row": 1,
+        "col": 7
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "TAHT",
+      "start": {
+        "row": 4,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "BLUM",
+      "start": {
+        "row": 7,
+        "col": 4
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "SAYE",
+      "start": {
+        "row": 1,
+        "col": 0
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "HAZ",
+      "start": {
+        "row": 0,
+        "col": 5
+      },
+      "direction": "horizontal",
+      "length": 3,
+      "frequency_score": 90,
+      "hint_tr": "3 harfli bir kisa_kelimeler kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-29T11:39:57.663921+00:00",
+  "generator_version": "1.0.0"
+}

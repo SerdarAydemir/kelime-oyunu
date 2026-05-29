@@ -3,195 +3,141 @@
   "level_id": 63,
   "pack_id": "pack_002_genel",
   "difficulty": "easy",
-  "difficulty_score": 38,
+  "difficulty_score": 29,
   "category": "genel",
-  "category_display_tr": "Genel",
+  "category_display_tr": "Günlük",
   "grid_size": {
-    "rows": 10,
-    "cols": 10
+    "rows": 9,
+    "cols": 9
   },
   "grid": [
     [
-      "Y",
-      "L",
       "K",
-      "L",
-      "N",
-      "I",
+      "Ü",
+      "D",
+      "U",
+      "Y",
+      "U",
       "Ş",
-      "Ç",
-      "I",
-      "I"
+      "M",
+      "A"
     ],
     [
-      "E",
-      "E",
-      "O",
-      "G",
-      "U",
-      "T",
-      "A",
-      "E",
-      "R",
-      "N"
-    ],
-    [
-      "Z",
-      "N",
-      "R",
-      "E",
-      "T",
-      "A",
-      "I",
-      "K",
-      "Y",
-      "E"
-    ],
-    [
-      "K",
-      "A",
-      "K",
-      "L",
-      "U",
-      "P",
-      "L",
-      "O",
-      "O",
-      "M"
-    ],
-    [
-      "E",
-      "K",
-      "U",
-      "İ",
-      "K",
-      "I",
-      "P",
       "S",
-      "Ğ",
+      "T",
+      "R",
+      "N",
+      "L",
+      "E",
+      "U",
+      "Y",
+      "Ö"
+    ],
+    [
+      "U",
+      "L",
+      "Ö",
+      "D",
+      "İ",
+      "Ü",
+      "K",
+      "İ",
       "Z"
     ],
     [
-      "N",
-      "Z",
+      "P",
       "S",
+      "İ",
+      "İ",
+      "Z",
+      "D",
+      "O",
+      "I",
+      "E"
+    ],
+    [
+      "A",
+      "I",
+      "E",
       "R",
-      "Ğ",
+      "I",
+      "G",
       "N",
+      "N",
+      "N"
+    ],
+    [
+      "R",
+      "R",
+      "N",
+      "T",
+      "İ",
+      "Z",
+      "Ö",
+      "M",
+      "M"
+    ],
+    [
+      "A",
+      "P",
+      "Ü",
+      "İ",
       "Ş",
       "L",
-      "R",
-      "İ"
-    ],
-    [
-      "T",
       "E",
-      "U",
-      "S",
-      "N",
-      "C",
-      "T",
-      "O",
-      "U",
-      "R"
-    ],
-    [
-      "U",
-      "N",
-      "Z",
-      "İ",
-      "Z",
-      "A",
-      "Ğ",
-      "V",
       "M",
-      "İ"
+      "E"
     ],
     [
-      "I",
-      "Z",
-      "C",
-      "Z",
+      "M",
+      "Ç",
       "İ",
-      "K",
-      "E",
-      "A",
-      "E",
-      "Ş"
+      "B",
+      "U",
+      "N",
+      "S",
+      "U",
+      "Z"
     ],
     [
-      "R",
-      "R",
-      "A",
+      "E",
       "A",
       "L",
-      "N",
       "A",
-      "K",
+      "P",
       "A",
-      "İ"
+      "C",
+      "I",
+      "T"
     ]
   ],
   "words": [
     {
-      "word": "KORKUSUZCA",
+      "word": "BUNSUZ",
       "start": {
-        "row": 0,
-        "col": 2
-      },
-      "direction": "vertical",
-      "length": 10,
-      "frequency_score": 20,
-      "hint_tr": "10 harfli bir genel kelimesi"
-    },
-    {
-      "word": "ÇEKOSLOVAK",
-      "start": {
-        "row": 0,
-        "col": 7
-      },
-      "direction": "vertical",
-      "length": 10,
-      "frequency_score": 20,
-      "hint_tr": "10 harfli bir genel kelimesi"
-    },
-    {
-      "word": "TAPINCAK",
-      "start": {
-        "row": 1,
-        "col": 5
-      },
-      "direction": "vertical",
-      "length": 8,
-      "frequency_score": 40,
-      "hint_tr": "8 harfli bir genel kelimesi"
-    },
-    {
-      "word": "GELİRSİZ",
-      "start": {
-        "row": 1,
+        "row": 7,
         "col": 3
       },
-      "direction": "vertical",
-      "length": 8,
-      "frequency_score": 40,
-      "hint_tr": "8 harfli bir genel kelimesi"
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir genel kelimesi"
     },
     {
-      "word": "EMZİRİŞ",
+      "word": "İŞLEME",
       "start": {
-        "row": 2,
-        "col": 9
+        "row": 6,
+        "col": 3
       },
-      "direction": "vertical",
-      "length": 7,
-      "frequency_score": 50,
-      "hint_tr": "7 harfli bir genel kelimesi"
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir genel kelimesi"
     },
     {
-      "word": "NAKZEN",
+      "word": "SIRPÇA",
       "start": {
-        "row": 2,
+        "row": 3,
         "col": 1
       },
       "direction": "vertical",
@@ -200,9 +146,31 @@
       "hint_tr": "6 harfli bir genel kelimesi"
     },
     {
-      "word": "YOĞRUM",
+      "word": "SUPARA",
       "start": {
-        "row": 2,
+        "row": 1,
+        "col": 0
+      },
+      "direction": "vertical",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir genel kelimesi"
+    },
+    {
+      "word": "UYUŞMA",
+      "start": {
+        "row": 0,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir genel kelimesi"
+    },
+    {
+      "word": "ÖZENME",
+      "start": {
+        "row": 1,
         "col": 8
       },
       "direction": "vertical",
@@ -211,15 +179,15 @@
       "hint_tr": "6 harfli bir genel kelimesi"
     },
     {
-      "word": "NUTUK",
+      "word": "LAPACI",
       "start": {
-        "row": 0,
-        "col": 4
+        "row": 8,
+        "col": 2
       },
-      "direction": "vertical",
-      "length": 5,
-      "frequency_score": 70,
-      "hint_tr": "5 harfli bir genel kelimesi"
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir genel kelimesi"
     }
   ],
   "bonus_words": [],
@@ -236,6 +204,6 @@
     "post_fill_scanned": true,
     "scanner_version": "1.0.0"
   },
-  "generated_at": "2026-05-28T21:11:42.139870+00:00",
+  "generated_at": "2026-05-29T11:39:59.966055+00:00",
   "generator_version": "1.0.0"
 }

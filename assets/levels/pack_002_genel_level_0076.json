@@ -1,0 +1,209 @@
+{
+  "schema_version": 1,
+  "level_id": 76,
+  "pack_id": "pack_002_genel",
+  "difficulty": "easy",
+  "difficulty_score": 26,
+  "category": "genel",
+  "category_display_tr": "Günlük",
+  "grid_size": {
+    "rows": 9,
+    "cols": 9
+  },
+  "grid": [
+    [
+      "R",
+      "Ç",
+      "Ğ",
+      "B",
+      "K",
+      "E",
+      "E",
+      "D",
+      "M"
+    ],
+    [
+      "B",
+      "N",
+      "Ç",
+      "O",
+      "A",
+      "L",
+      "A",
+      "Ö",
+      "N"
+    ],
+    [
+      "O",
+      "S",
+      "A",
+      "L",
+      "K",
+      "I",
+      "M",
+      "R",
+      "İ"
+    ],
+    [
+      "R",
+      "G",
+      "U",
+      "S",
+      "Ü",
+      "L",
+      "D",
+      "M",
+      "A"
+    ],
+    [
+      "İ",
+      "V",
+      "G",
+      "G",
+      "L",
+      "İ",
+      "K",
+      "O",
+      "L"
+    ],
+    [
+      "K",
+      "E",
+      "A",
+      "R",
+      "T",
+      "Ç",
+      "I",
+      "İ",
+      "A"
+    ],
+    [
+      "C",
+      "C",
+      "E",
+      "S",
+      "T",
+      "E",
+      "T",
+      "R",
+      "U"
+    ],
+    [
+      "E",
+      "D",
+      "Ö",
+      "M",
+      "A",
+      "H",
+      "S",
+      "U",
+      "S"
+    ],
+    [
+      "O",
+      "İ",
+      "I",
+      "M",
+      "S",
+      "L",
+      "O",
+      "B",
+      "T"
+    ]
+  ],
+  "words": [
+    {
+      "word": "GLİKOL",
+      "start": {
+        "row": 4,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir genel kelimesi"
+    },
+    {
+      "word": "SALKIM",
+      "start": {
+        "row": 2,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir genel kelimesi"
+    },
+    {
+      "word": "MAHSUS",
+      "start": {
+        "row": 7,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir genel kelimesi"
+    },
+    {
+      "word": "BORİK",
+      "start": {
+        "row": 1,
+        "col": 0
+      },
+      "direction": "vertical",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir genel kelimesi"
+    },
+    {
+      "word": "GUSÜL",
+      "start": {
+        "row": 3,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir genel kelimesi"
+    },
+    {
+      "word": "ESTET",
+      "start": {
+        "row": 6,
+        "col": 2
+      },
+      "direction": "horizontal",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir genel kelimesi"
+    },
+    {
+      "word": "ARTÇI",
+      "start": {
+        "row": 5,
+        "col": 2
+      },
+      "direction": "horizontal",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir genel kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-29T11:40:01.467108+00:00",
+  "generator_version": "1.0.0"
+}

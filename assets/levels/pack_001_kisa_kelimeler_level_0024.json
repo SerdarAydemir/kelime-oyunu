@@ -3,162 +3,111 @@
   "level_id": 24,
   "pack_id": "pack_001_kisa_kelimeler",
   "difficulty": "easy",
-  "difficulty_score": 23,
+  "difficulty_score": 16,
   "category": "kisa_kelimeler",
-  "category_display_tr": "Kısa Kelimeler",
+  "category_display_tr": "Başlangıç",
   "grid_size": {
-    "rows": 10,
-    "cols": 10
+    "rows": 8,
+    "cols": 8
   },
   "grid": [
     [
-      "T",
-      "E",
       "İ",
       "N",
-      "Ö",
-      "M",
-      "Ç",
+      "İ",
+      "Ü",
+      "İ",
       "O",
-      "R",
-      "Ö"
-    ],
-    [
-      "S",
-      "Ü",
-      "J",
-      "E",
-      "Ç",
-      "E",
-      "Ş",
-      "Ü",
-      "R",
-      "Z"
-    ],
-    [
-      "D",
       "A",
-      "A",
-      "İ",
-      "B",
-      "Ü",
-      "A",
-      "D",
-      "N",
-      "L"
-    ],
-    [
-      "A",
-      "T",
-      "Ö",
-      "L",
-      "K",
-      "E",
-      "F",
-      "L",
-      "Ü",
-      "Ü"
-    ],
-    [
-      "A",
-      "A",
-      "B",
-      "A",
-      "S",
-      "L",
-      "T",
-      "L",
-      "S",
       "A"
     ],
     [
       "İ",
-      "O",
+      "G",
       "A",
-      "E",
-      "Ü",
-      "M",
+      "S",
+      "P",
+      "Y",
       "Ş",
-      "E",
-      "N",
-      "İ"
+      "C"
     ],
     [
-      "T",
-      "Ö",
-      "C",
-      "Ç",
-      "Ö",
+      "I",
       "A",
+      "K",
+      "Ü",
       "B",
-      "C",
+      "L",
+      "A",
+      "Y"
+    ],
+    [
+      "N",
+      "M",
+      "Y",
+      "L",
+      "D",
+      "T",
       "E",
+      "O"
+    ],
+    [
+      "İ",
+      "E",
+      "A",
+      "L",
+      "R",
+      "A",
+      "Ç",
+      "M"
+    ],
+    [
+      "D",
+      "O",
+      "N",
+      "D",
+      "I",
+      "A",
+      "I",
       "A"
     ],
     [
-      "M",
-      "E",
-      "E",
-      "S",
-      "M",
-      "V",
-      "B",
-      "R",
-      "R",
-      "R"
-    ],
-    [
-      "T",
-      "R",
-      "N",
-      "Ş",
-      "A",
-      "İ",
-      "L",
-      "Ü",
-      "K",
-      "B"
-    ],
-    [
-      "L",
-      "M",
-      "K",
-      "M",
       "D",
-      "A",
+      "L",
+      "K",
+      "İ",
       "Ğ",
-      "İ",
+      "K",
+      "P",
+      "T"
+    ],
+    [
       "R",
-      "K"
+      "İ",
+      "N",
+      "T",
+      "İ",
+      "S",
+      "A",
+      "İ"
     ]
   ],
   "words": [
     {
-      "word": "ŞENİ",
-      "start": {
-        "row": 5,
-        "col": 6
-      },
-      "direction": "horizontal",
-      "length": 4,
-      "frequency_score": 80,
-      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
-    },
-    {
-      "word": "CENK",
-      "start": {
-        "row": 6,
-        "col": 2
-      },
-      "direction": "vertical",
-      "length": 4,
-      "frequency_score": 80,
-      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
-    },
-    {
-      "word": "ŞAFT",
+      "word": "GASP",
       "start": {
         "row": 1,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "ÇIPA",
+      "start": {
+        "row": 4,
         "col": 6
       },
       "direction": "vertical",
@@ -167,10 +116,10 @@
       "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
     },
     {
-      "word": "DAĞİ",
+      "word": "İNTİ",
       "start": {
-        "row": 9,
-        "col": 4
+        "row": 7,
+        "col": 1
       },
       "direction": "horizontal",
       "length": 4,
@@ -178,89 +127,34 @@
       "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
     },
     {
-      "word": "MAVİ",
+      "word": "ACYO",
+      "start": {
+        "row": 0,
+        "col": 7
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "AKS",
       "start": {
         "row": 5,
         "col": 5
       },
       "direction": "vertical",
-      "length": 4,
-      "frequency_score": 80,
-      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+      "length": 3,
+      "frequency_score": 90,
+      "hint_tr": "3 harfli bir kisa_kelimeler kelimesi"
     },
     {
-      "word": "SÜJE",
-      "start": {
-        "row": 1,
-        "col": 0
-      },
-      "direction": "horizontal",
-      "length": 4,
-      "frequency_score": 80,
-      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
-    },
-    {
-      "word": "TEİN",
-      "start": {
-        "row": 0,
-        "col": 0
-      },
-      "direction": "horizontal",
-      "length": 4,
-      "frequency_score": 80,
-      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
-    },
-    {
-      "word": "ÖZLÜ",
-      "start": {
-        "row": 0,
-        "col": 9
-      },
-      "direction": "vertical",
-      "length": 4,
-      "frequency_score": 80,
-      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
-    },
-    {
-      "word": "AİT",
+      "word": "MAT",
       "start": {
         "row": 4,
-        "col": 0
+        "col": 7
       },
       "direction": "vertical",
-      "length": 3,
-      "frequency_score": 90,
-      "hint_tr": "3 harfli bir kisa_kelimeler kelimesi"
-    },
-    {
-      "word": "ÇOR",
-      "start": {
-        "row": 0,
-        "col": 6
-      },
-      "direction": "horizontal",
-      "length": 3,
-      "frequency_score": 90,
-      "hint_tr": "3 harfli bir kisa_kelimeler kelimesi"
-    },
-    {
-      "word": "BAS",
-      "start": {
-        "row": 4,
-        "col": 2
-      },
-      "direction": "horizontal",
-      "length": 3,
-      "frequency_score": 90,
-      "hint_tr": "3 harfli bir kisa_kelimeler kelimesi"
-    },
-    {
-      "word": "LÜK",
-      "start": {
-        "row": 8,
-        "col": 6
-      },
-      "direction": "horizontal",
       "length": 3,
       "frequency_score": 90,
       "hint_tr": "3 harfli bir kisa_kelimeler kelimesi"
@@ -280,6 +174,6 @@
     "post_fill_scanned": true,
     "scanner_version": "1.0.0"
   },
-  "generated_at": "2026-05-28T21:11:34.866254+00:00",
+  "generated_at": "2026-05-29T11:39:57.647037+00:00",
   "generator_version": "1.0.0"
 }

@@ -1,0 +1,209 @@
+{
+  "schema_version": 1,
+  "level_id": 74,
+  "pack_id": "pack_002_genel",
+  "difficulty": "easy",
+  "difficulty_score": 24,
+  "category": "genel",
+  "category_display_tr": "Günlük",
+  "grid_size": {
+    "rows": 9,
+    "cols": 9
+  },
+  "grid": [
+    [
+      "P",
+      "A",
+      "Ş",
+      "A",
+      "R",
+      "B",
+      "O",
+      "N",
+      "Ö"
+    ],
+    [
+      "Ö",
+      "I",
+      "E",
+      "D",
+      "Ü",
+      "R",
+      "Z",
+      "Ü",
+      "Ö"
+    ],
+    [
+      "F",
+      "Ş",
+      "Ü",
+      "H",
+      "K",
+      "E",
+      "Ü",
+      "T",
+      "S"
+    ],
+    [
+      "O",
+      "R",
+      "E",
+      "A",
+      "U",
+      "Ğ",
+      "R",
+      "C",
+      "B"
+    ],
+    [
+      "Y",
+      "S",
+      "M",
+      "M",
+      "Ü",
+      "R",
+      "I",
+      "İ",
+      "A"
+    ],
+    [
+      "A",
+      "Ğ",
+      "E",
+      "A",
+      "O",
+      "İ",
+      "S",
+      "T",
+      "R"
+    ],
+    [
+      "A",
+      "İ",
+      "Ş",
+      "M",
+      "A",
+      "C",
+      "A",
+      "O",
+      "İ"
+    ],
+    [
+      "A",
+      "R",
+      "E",
+      "L",
+      "U",
+      "E",
+      "N",
+      "O",
+      "T"
+    ],
+    [
+      "İ",
+      "I",
+      "S",
+      "M",
+      "D",
+      "İ",
+      "N",
+      "O",
+      "H"
+    ]
+  ],
+  "words": [
+    {
+      "word": "EĞRİCE",
+      "start": {
+        "row": 2,
+        "col": 5
+      },
+      "direction": "vertical",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir genel kelimesi"
+    },
+    {
+      "word": "ŞARBON",
+      "start": {
+        "row": 0,
+        "col": 2
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir genel kelimesi"
+    },
+    {
+      "word": "HAMAM",
+      "start": {
+        "row": 2,
+        "col": 3
+      },
+      "direction": "vertical",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir genel kelimesi"
+    },
+    {
+      "word": "DÜRZÜ",
+      "start": {
+        "row": 1,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir genel kelimesi"
+    },
+    {
+      "word": "BARİT",
+      "start": {
+        "row": 3,
+        "col": 8
+      },
+      "direction": "vertical",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir genel kelimesi"
+    },
+    {
+      "word": "FOYA",
+      "start": {
+        "row": 2,
+        "col": 0
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir genel kelimesi"
+    },
+    {
+      "word": "MEŞE",
+      "start": {
+        "row": 4,
+        "col": 2
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir genel kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-29T11:40:01.186105+00:00",
+  "generator_version": "1.0.0"
+}

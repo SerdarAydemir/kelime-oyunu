@@ -1,0 +1,209 @@
+{
+  "schema_version": 1,
+  "level_id": 55,
+  "pack_id": "pack_002_genel",
+  "difficulty": "easy",
+  "difficulty_score": 27,
+  "category": "genel",
+  "category_display_tr": "Günlük",
+  "grid_size": {
+    "rows": 9,
+    "cols": 9
+  },
+  "grid": [
+    [
+      "E",
+      "S",
+      "K",
+      "Z",
+      "N",
+      "N",
+      "E",
+      "O",
+      "K"
+    ],
+    [
+      "D",
+      "Ğ",
+      "U",
+      "İ",
+      "N",
+      "V",
+      "M",
+      "M",
+      "R"
+    ],
+    [
+      "Y",
+      "A",
+      "Z",
+      "I",
+      "Ş",
+      "N",
+      "M",
+      "I",
+      "E"
+    ],
+    [
+      "U",
+      "L",
+      "C",
+      "İ",
+      "Ğ",
+      "E",
+      "R",
+      "R",
+      "D"
+    ],
+    [
+      "A",
+      "G",
+      "R",
+      "E",
+      "G",
+      "A",
+      "E",
+      "R",
+      "İ"
+    ],
+    [
+      "A",
+      "O",
+      "K",
+      "E",
+      "P",
+      "E",
+      "N",
+      "K",
+      "F"
+    ],
+    [
+      "M",
+      "I",
+      "K",
+      "Y",
+      "K",
+      "H",
+      "N",
+      "U",
+      "E"
+    ],
+    [
+      "A",
+      "Z",
+      "O",
+      "N",
+      "A",
+      "L",
+      "İ",
+      "A",
+      "U"
+    ],
+    [
+      "Z",
+      "Ü",
+      "M",
+      "A",
+      "H",
+      "S",
+      "U",
+      "S",
+      "N"
+    ]
+  ],
+  "words": [
+    {
+      "word": "AGREGA",
+      "start": {
+        "row": 4,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir genel kelimesi"
+    },
+    {
+      "word": "AZONAL",
+      "start": {
+        "row": 7,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir genel kelimesi"
+    },
+    {
+      "word": "KEPENK",
+      "start": {
+        "row": 5,
+        "col": 2
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir genel kelimesi"
+    },
+    {
+      "word": "MAHSUS",
+      "start": {
+        "row": 8,
+        "col": 2
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir genel kelimesi"
+    },
+    {
+      "word": "YAZIŞ",
+      "start": {
+        "row": 2,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir genel kelimesi"
+    },
+    {
+      "word": "CİĞER",
+      "start": {
+        "row": 3,
+        "col": 2
+      },
+      "direction": "horizontal",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir genel kelimesi"
+    },
+    {
+      "word": "REDİF",
+      "start": {
+        "row": 1,
+        "col": 8
+      },
+      "direction": "vertical",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir genel kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-29T11:39:59.609668+00:00",
+  "generator_version": "1.0.0"
+}

@@ -3,264 +3,188 @@
   "level_id": 105,
   "pack_id": "pack_003_orta_kelimeler",
   "difficulty": "medium",
-  "difficulty_score": 35,
+  "difficulty_score": 27,
   "category": "orta_kelimeler",
-  "category_display_tr": "Orta Kelimeler",
+  "category_display_tr": "Orta",
   "grid_size": {
-    "rows": 10,
-    "cols": 10
+    "rows": 9,
+    "cols": 9
   },
   "grid": [
     [
-      "A",
-      "Ş",
+      "S",
+      "R",
+      "T",
+      "E",
+      "T",
       "N",
-      "B",
+      "Ğ",
+      "T",
+      "I"
+    ],
+    [
+      "R",
+      "L",
+      "D",
+      "R",
+      "L",
       "A",
+      "H",
+      "O",
+      "S"
+    ],
+    [
       "S",
       "F",
-      "A",
-      "L",
-      "T"
-    ],
-    [
-      "N",
+      "U",
       "Y",
-      "Ö",
-      "Ğ",
-      "R",
-      "E",
-      "N",
-      "İ",
-      "Ş",
-      "A"
-    ],
-    [
-      "S",
       "A",
-      "A",
-      "D",
-      "A",
-      "V",
-      "E",
-      "T",
-      "A",
-      "Ö"
-    ],
-    [
-      "Ö",
-      "Ş",
-      "E",
-      "H",
-      "İ",
       "R",
       "C",
-      "İ",
-      "K",
-      "Z"
+      "I",
+      "O"
     ],
     [
-      "Z",
+      "İ",
+      "E",
+      "S",
+      "U",
+      "S",
+      "T",
       "A",
-      "D",
+      "L",
+      "I"
+    ],
+    [
       "A",
       "R",
-      "S",
-      "I",
-      "Z",
       "İ",
+      "E",
+      "N",
+      "R",
+      "R",
+      "İ",
+      "O"
+    ],
+    [
+      "A",
+      "N",
+      "D",
+      "P",
+      "E",
+      "R",
+      "E",
+      "M",
       "E"
     ],
     [
       "L",
+      "E",
+      "E",
+      "A",
       "T",
-      "İ",
+      "I",
+      "T",
+      "R",
+      "D"
+    ],
+    [
+      "A",
+      "Z",
       "Ç",
-      "E",
       "V",
+      "E",
       "R",
-      "E",
-      "B",
-      "N"
-    ],
-    [
-      "E",
-      "I",
-      "Z",
-      "E",
-      "Ö",
-      "L",
-      "Ş",
-      "I",
-      "A",
-      "L"
-    ],
-    [
       "N",
-      "Ş",
-      "M",
-      "D",
-      "N",
-      "Z",
-      "S",
-      "R",
-      "R",
-      "E"
-    ],
-    [
-      "M",
-      "K",
       "İ",
-      "B",
-      "İ",
-      "R",
-      "L",
-      "İ",
-      "C",
-      "Ö"
+      "K"
     ],
     [
       "E",
-      "Y",
-      "R",
-      "I",
-      "A",
-      "R",
-      "L",
-      "A",
-      "A",
-      "A"
+      "Ü",
+      "M",
+      "M",
+      "E",
+      "T",
+      "İ",
+      "M",
+      "D"
     ]
   ],
   "words": [
     {
-      "word": "ÖZLENME",
+      "word": "FERNEZ",
       "start": {
-        "row": 3,
-        "col": 0
+        "row": 2,
+        "col": 1
       },
       "direction": "vertical",
-      "length": 7,
-      "frequency_score": 50,
-      "hint_tr": "7 harfli bir orta_kelimeler kelimesi"
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir orta_kelimeler kelimesi"
     },
     {
-      "word": "ÖĞRENİŞ",
+      "word": "PEREME",
       "start": {
-        "row": 1,
+        "row": 5,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "UYARCI",
+      "start": {
+        "row": 2,
         "col": 2
       },
       "direction": "horizontal",
-      "length": 7,
-      "frequency_score": 50,
-      "hint_tr": "7 harfli bir orta_kelimeler kelimesi"
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir orta_kelimeler kelimesi"
     },
     {
-      "word": "KİBİRLİ",
+      "word": "VERNİK",
+      "start": {
+        "row": 7,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "SUSTA",
+      "start": {
+        "row": 3,
+        "col": 2
+      },
+      "direction": "horizontal",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "LAHOS",
+      "start": {
+        "row": 1,
+        "col": 4
+      },
+      "direction": "horizontal",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "ÜMMET",
       "start": {
         "row": 8,
         "col": 1
       },
       "direction": "horizontal",
-      "length": 7,
-      "frequency_score": 50,
-      "hint_tr": "7 harfli bir orta_kelimeler kelimesi"
-    },
-    {
-      "word": "KİBARCA",
-      "start": {
-        "row": 3,
-        "col": 8
-      },
-      "direction": "vertical",
-      "length": 7,
-      "frequency_score": 50,
-      "hint_tr": "7 harfli bir orta_kelimeler kelimesi"
-    },
-    {
-      "word": "ŞEHİRCİ",
-      "start": {
-        "row": 3,
-        "col": 1
-      },
-      "direction": "horizontal",
-      "length": 7,
-      "frequency_score": 50,
-      "hint_tr": "7 harfli bir orta_kelimeler kelimesi"
-    },
-    {
-      "word": "YAŞATIŞ",
-      "start": {
-        "row": 1,
-        "col": 1
-      },
-      "direction": "vertical",
-      "length": 7,
-      "frequency_score": 50,
-      "hint_tr": "7 harfli bir orta_kelimeler kelimesi"
-    },
-    {
-      "word": "ÖZENLE",
-      "start": {
-        "row": 2,
-        "col": 9
-      },
-      "direction": "vertical",
-      "length": 6,
-      "frequency_score": 60,
-      "hint_tr": "6 harfli bir orta_kelimeler kelimesi"
-    },
-    {
-      "word": "ASFALT",
-      "start": {
-        "row": 0,
-        "col": 4
-      },
-      "direction": "horizontal",
-      "length": 6,
-      "frequency_score": 60,
-      "hint_tr": "6 harfli bir orta_kelimeler kelimesi"
-    },
-    {
-      "word": "ADAVET",
-      "start": {
-        "row": 2,
-        "col": 2
-      },
-      "direction": "horizontal",
-      "length": 6,
-      "frequency_score": 60,
-      "hint_tr": "6 harfli bir orta_kelimeler kelimesi"
-    },
-    {
-      "word": "ÇEVRE",
-      "start": {
-        "row": 5,
-        "col": 3
-      },
-      "direction": "horizontal",
-      "length": 5,
-      "frequency_score": 70,
-      "hint_tr": "5 harfli bir orta_kelimeler kelimesi"
-    },
-    {
-      "word": "ARSIZ",
-      "start": {
-        "row": 4,
-        "col": 3
-      },
-      "direction": "horizontal",
-      "length": 5,
-      "frequency_score": 70,
-      "hint_tr": "5 harfli bir orta_kelimeler kelimesi"
-    },
-    {
-      "word": "İZMİR",
-      "start": {
-        "row": 5,
-        "col": 2
-      },
-      "direction": "vertical",
       "length": 5,
       "frequency_score": 70,
       "hint_tr": "5 harfli bir orta_kelimeler kelimesi"
@@ -280,6 +204,6 @@
     "post_fill_scanned": true,
     "scanner_version": "1.0.0"
   },
-  "generated_at": "2026-05-28T21:11:50.684146+00:00",
+  "generated_at": "2026-05-29T11:40:02.778416+00:00",
   "generator_version": "1.0.0"
 }

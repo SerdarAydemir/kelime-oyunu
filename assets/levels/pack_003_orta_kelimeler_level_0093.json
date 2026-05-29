@@ -1,0 +1,209 @@
+{
+  "schema_version": 1,
+  "level_id": 93,
+  "pack_id": "pack_003_orta_kelimeler",
+  "difficulty": "medium",
+  "difficulty_score": 27,
+  "category": "orta_kelimeler",
+  "category_display_tr": "Orta",
+  "grid_size": {
+    "rows": 9,
+    "cols": 9
+  },
+  "grid": [
+    [
+      "I",
+      "Ş",
+      "I",
+      "G",
+      "E",
+      "R",
+      "E",
+      "K",
+      "İ"
+    ],
+    [
+      "A",
+      "A",
+      "Z",
+      "E",
+      "Y",
+      "O",
+      "N",
+      "D",
+      "D"
+    ],
+    [
+      "E",
+      "U",
+      "Ç",
+      "A",
+      "Y",
+      "M",
+      "D",
+      "N",
+      "A"
+    ],
+    [
+      "S",
+      "Y",
+      "Ü",
+      "K",
+      "L",
+      "E",
+      "R",
+      "D",
+      "A"
+    ],
+    [
+      "E",
+      "E",
+      "L",
+      "T",
+      "A",
+      "R",
+      "A",
+      "M",
+      "A"
+    ],
+    [
+      "C",
+      "A",
+      "İ",
+      "T",
+      "İ",
+      "C",
+      "İ",
+      "Ş",
+      "N"
+    ],
+    [
+      "D",
+      "V",
+      "İ",
+      "R",
+      "İ",
+      "B",
+      "A",
+      "Ş",
+      "N"
+    ],
+    [
+      "E",
+      "M",
+      "I",
+      "Z",
+      "M",
+      "I",
+      "Z",
+      "N",
+      "T"
+    ],
+    [
+      "I",
+      "N",
+      "İ",
+      "R",
+      "R",
+      "Ç",
+      "L",
+      "R",
+      "E"
+    ]
+  ],
+  "words": [
+    {
+      "word": "YÜKLER",
+      "start": {
+        "row": 3,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "MIZMIZ",
+      "start": {
+        "row": 7,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "İRİBAŞ",
+      "start": {
+        "row": 6,
+        "col": 2
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "TARAMA",
+      "start": {
+        "row": 4,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "SECDE",
+      "start": {
+        "row": 3,
+        "col": 0
+      },
+      "direction": "vertical",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "GEREK",
+      "start": {
+        "row": 0,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "İTİCİ",
+      "start": {
+        "row": 5,
+        "col": 2
+      },
+      "direction": "horizontal",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir orta_kelimeler kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-29T11:40:01.863596+00:00",
+  "generator_version": "1.0.0"
+}

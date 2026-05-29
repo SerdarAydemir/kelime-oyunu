@@ -1,0 +1,219 @@
+{
+  "schema_version": 1,
+  "level_id": 152,
+  "pack_id": "pack_004_zor_kelimeler",
+  "difficulty": "hard",
+  "difficulty_score": 30,
+  "category": "zor_kelimeler",
+  "category_display_tr": "Zorlayıcı",
+  "grid_size": {
+    "rows": 10,
+    "cols": 10
+  },
+  "grid": [
+    [
+      "Z",
+      "H",
+      "N",
+      "İ",
+      "E",
+      "Y",
+      "R",
+      "D",
+      "L",
+      "E"
+    ],
+    [
+      "H",
+      "A",
+      "Y",
+      "S",
+      "T",
+      "O",
+      "R",
+      "L",
+      "U",
+      "K"
+    ],
+    [
+      "A",
+      "N",
+      "E",
+      "V",
+      "R",
+      "O",
+      "Z",
+      "U",
+      "Ü",
+      "N"
+    ],
+    [
+      "M",
+      "T",
+      "B",
+      "V",
+      "I",
+      "E",
+      "A",
+      "I",
+      "E",
+      "L"
+    ],
+    [
+      "Ü",
+      "K",
+      "D",
+      "İ",
+      "Ö",
+      "Y",
+      "Ç",
+      "N",
+      "D",
+      "I"
+    ],
+    [
+      "Z",
+      "O",
+      "T",
+      "C",
+      "L",
+      "A",
+      "R",
+      "I",
+      "İ",
+      "A"
+    ],
+    [
+      "Ü",
+      "V",
+      "M",
+      "A",
+      "D",
+      "E",
+      "C",
+      "K",
+      "R",
+      "İ"
+    ],
+    [
+      "M",
+      "P",
+      "Ö",
+      "H",
+      "R",
+      "E",
+      "N",
+      "K",
+      "İ",
+      "I"
+    ],
+    [
+      "S",
+      "İ",
+      "D",
+      "İ",
+      "Z",
+      "T",
+      "K",
+      "D",
+      "C",
+      "D"
+    ],
+    [
+      "Ü",
+      "E",
+      "A",
+      "S",
+      "Ü",
+      "R",
+      "T",
+      "M",
+      "E",
+      "A"
+    ]
+  ],
+  "words": [
+    {
+      "word": "PÖHRENK",
+      "start": {
+        "row": 7,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir zor_kelimeler kelimesi"
+    },
+    {
+      "word": "TORLUK",
+      "start": {
+        "row": 1,
+        "col": 4
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir zor_kelimeler kelimesi"
+    },
+    {
+      "word": "DİRİCE",
+      "start": {
+        "row": 4,
+        "col": 8
+      },
+      "direction": "vertical",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir zor_kelimeler kelimesi"
+    },
+    {
+      "word": "VİCAHİ",
+      "start": {
+        "row": 3,
+        "col": 3
+      },
+      "direction": "vertical",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir zor_kelimeler kelimesi"
+    },
+    {
+      "word": "ÜZÜMSÜ",
+      "start": {
+        "row": 4,
+        "col": 0
+      },
+      "direction": "vertical",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir zor_kelimeler kelimesi"
+    },
+    {
+      "word": "NEVROZ",
+      "start": {
+        "row": 2,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir zor_kelimeler kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-29T11:40:12.724667+00:00",
+  "generator_version": "1.0.0"
+}
