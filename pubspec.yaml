@@ -1,0 +1,84 @@
+name: kelime_oyunu
+description: "Türkçe Kelime Bulmaca — casual word search oyunu."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.12.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # Audio & visual FX (skills.md §2)
+  audioplayers: ^6.4.0
+  confetti: ^0.8.0
+
+  # State management (Bloc + Cubit hybrid — skills.md §3)
+  equatable: ^2.0.5
+  flutter_bloc: ^9.0.0
+
+  # Firebase
+  firebase_analytics: ^11.3.8
+  firebase_crashlytics: ^4.2.0
+  firebase_remote_config: ^5.4.0
+
+  # Local storage (Hive AES encrypted — architecture.md §5)
+  flutter_secure_storage: ^9.0.0
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+
+  # Dependency injection
+  get_it: ^8.0.0
+
+  # Navigation (go_router — architecture.md §8)
+  go_router: ^14.0.0
+
+  # Ads & monetisation (skills.md §6)
+  google_mobile_ads: ^5.1.0
+  # app_tracking_transparency — add via `flutter pub add` when ATT feature is built
+  # purchases_flutter — add via `flutter pub add` when IAP feature is built
+
+  # Localisation
+  intl: ^0.20.2
+
+  # Simple scalar preferences
+  shared_preferences: ^2.3.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # Testing (skills.md §2 — mockito YASAK, mocktail kullan)
+  bloc_test: ^10.0.0
+  flutter_lints: ^6.0.0
+  mocktail: ^1.0.4
+  # Hive code generation — re-add when @HiveType models are first written:
+  # hive_generator + build_runner are incompatible with bloc_test on this SDK;
+  # pin exact versions at that point.
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    # Generated level packs (Python generator output — FAZ 1)
+    - assets/levels/
+    # Placeholder dirs — populate before first build
+    - assets/images/
+    - assets/fonts/
+    - assets/audio/
+
+  # Fonts added here once TTF files are placed in assets/fonts/
+  # fonts:
+  #   - family: Inter
+  #     fonts:
+  #       - asset: assets/fonts/Inter-Regular.ttf
+  #       - asset: assets/fonts/Inter-Bold.ttf
+  #         weight: 700
+  #   - family: Nunito
+  #     fonts:
+  #       - asset: assets/fonts/Nunito-Bold.ttf
+  #         weight: 700

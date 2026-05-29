@@ -1,0 +1,37 @@
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  language:
+    strict-casts: true
+    strict-raw-types: true
+  errors:
+    missing_required_param: error
+    missing_return: error
+    todo: ignore
+
+linter:
+  rules:
+    # Import discipline — relative imports FORBIDDEN (coding-standards.md §1.5)
+    - always_use_package_imports
+
+    # Resource leaks
+    - cancel_subscriptions
+    - close_sinks
+
+    # Async correctness
+    - unawaited_futures
+
+    # Print — use debugPrint instead (CLAUDE.md)
+    - avoid_print
+
+    # Widget / const best practices
+    - prefer_const_constructors
+    - prefer_const_constructors_in_immutables
+    - prefer_const_declarations
+    - prefer_const_literals_to_create_immutables
+
+    # Code style
+    - prefer_single_quotes
+    - require_trailing_commas
+    # sort_pub_dependencies intentionally disabled: packages are grouped by feature
+    # (state management, storage, ads, etc.) which is more readable than A-Z order.
