@@ -5,14 +5,22 @@ analyzer:
     strict-casts: true
     strict-raw-types: true
   errors:
+    invalid_annotation_target: ignore
     missing_required_param: error
     missing_return: error
     todo: ignore
+  exclude:
+    - lib/generated/**
+    - '**/*.g.dart'
+    - '**/*.freezed.dart'
 
 linter:
   rules:
     # Import discipline — relative imports FORBIDDEN (coding-standards.md §1.5)
     - always_use_package_imports
+
+    # Return types on all named functions / methods
+    - always_declare_return_types
 
     # Resource leaks
     - cancel_subscriptions
@@ -21,7 +29,7 @@ linter:
     # Async correctness
     - unawaited_futures
 
-    # Print — use debugPrint instead (CLAUDE.md)
+    # Print — use AppLogger / debugPrint instead (CLAUDE.md)
     - avoid_print
 
     # Widget / const best practices
@@ -29,6 +37,20 @@ linter:
     - prefer_const_constructors_in_immutables
     - prefer_const_declarations
     - prefer_const_literals_to_create_immutables
+
+    # Immutability
+    - prefer_final_locals
+    - prefer_final_in_for_each
+
+    # Widget tree ordering
+    - sort_child_properties_last
+
+    # Modern Dart idioms
+    - use_super_parameters
+
+    # Type safety
+    - avoid_dynamic_calls
+    - prefer_typing_uninitialized_variables
 
     # Code style
     - prefer_single_quotes
