@@ -1,0 +1,263 @@
+{
+  "schema_version": 1,
+  "level_id": 33,
+  "pack_id": "pack_001_kisa_kelimeler",
+  "difficulty": "easy",
+  "difficulty_score": 21,
+  "category": "kisa_kelimeler",
+  "category_display_tr": "Kısa Kelimeler",
+  "grid_size": {
+    "rows": 10,
+    "cols": 10
+  },
+  "grid": [
+    [
+      "N",
+      "T",
+      "A",
+      "M",
+      "E",
+      "S",
+      "A",
+      "N",
+      "D",
+      "I"
+    ],
+    [
+      "E",
+      "Ü",
+      "B",
+      "F",
+      "A",
+      "R",
+      "S",
+      "U",
+      "İ",
+      "E"
+    ],
+    [
+      "İ",
+      "R",
+      "E",
+      "D",
+      "R",
+      "N",
+      "N",
+      "M",
+      "E",
+      "E"
+    ],
+    [
+      "A",
+      "İ",
+      "J",
+      "A",
+      "E",
+      "İ",
+      "N",
+      "A",
+      "N",
+      "İ"
+    ],
+    [
+      "D",
+      "K",
+      "A",
+      "İ",
+      "E",
+      "M",
+      "Ü",
+      "R",
+      "F",
+      "İ"
+    ],
+    [
+      "E",
+      "U",
+      "Ç",
+      "R",
+      "İ",
+      "B",
+      "K",
+      "I",
+      "F",
+      "A"
+    ],
+    [
+      "A",
+      "B",
+      "A",
+      "N",
+      "N",
+      "I",
+      "S",
+      "R",
+      "İ",
+      "A"
+    ],
+    [
+      "I",
+      "E",
+      "U",
+      "K",
+      "I",
+      "Ç",
+      "Ç",
+      "İ",
+      "T",
+      "A"
+    ],
+    [
+      "U",
+      "T",
+      "Ü",
+      "I",
+      "E",
+      "I",
+      "E",
+      "N",
+      "I",
+      "İ"
+    ],
+    [
+      "İ",
+      "İ",
+      "A",
+      "D",
+      "D",
+      "A",
+      "B",
+      "A",
+      "A",
+      "E"
+    ]
+  ],
+  "words": [
+    {
+      "word": "BETİ",
+      "start": {
+        "row": 6,
+        "col": 1
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "FARS",
+      "start": {
+        "row": 1,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "DAİR",
+      "start": {
+        "row": 2,
+        "col": 3
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "UMAR",
+      "start": {
+        "row": 1,
+        "col": 7
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "NÜKS",
+      "start": {
+        "row": 3,
+        "col": 6
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "İADE",
+      "start": {
+        "row": 2,
+        "col": 0
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "KIÇ",
+      "start": {
+        "row": 7,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 3,
+      "frequency_score": 90,
+      "hint_tr": "3 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "BEJ",
+      "start": {
+        "row": 1,
+        "col": 2
+      },
+      "direction": "vertical",
+      "length": 3,
+      "frequency_score": 90,
+      "hint_tr": "3 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "ÇİT",
+      "start": {
+        "row": 7,
+        "col": 6
+      },
+      "direction": "horizontal",
+      "length": 3,
+      "frequency_score": 90,
+      "hint_tr": "3 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "TAM",
+      "start": {
+        "row": 0,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "length": 3,
+      "frequency_score": 90,
+      "hint_tr": "3 harfli bir kisa_kelimeler kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-28T21:11:36.005946+00:00",
+  "generator_version": "1.0.0"
+}

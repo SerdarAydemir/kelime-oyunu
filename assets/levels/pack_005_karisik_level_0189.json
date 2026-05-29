@@ -1,0 +1,252 @@
+{
+  "schema_version": 1,
+  "level_id": 189,
+  "pack_id": "pack_005_karisik",
+  "difficulty": "medium",
+  "difficulty_score": 38,
+  "category": "karisik",
+  "category_display_tr": "Karışık",
+  "grid_size": {
+    "rows": 10,
+    "cols": 10
+  },
+  "grid": [
+    [
+      "B",
+      "S",
+      "A",
+      "A",
+      "T",
+      "İ",
+      "N",
+      "E",
+      "Ç",
+      "K"
+    ],
+    [
+      "A",
+      "D",
+      "A",
+      "H",
+      "L",
+      "E",
+      "T",
+      "M",
+      "E",
+      "K"
+    ],
+    [
+      "K",
+      "U",
+      "D",
+      "İ",
+      "M",
+      "I",
+      "N",
+      "E",
+      "M",
+      "K"
+    ],
+    [
+      "I",
+      "K",
+      "İ",
+      "V",
+      "R",
+      "E",
+      "E",
+      "R",
+      "E",
+      "İ"
+    ],
+    [
+      "M",
+      "U",
+      "R",
+      "İ",
+      "A",
+      "E",
+      "H",
+      "E",
+      "N",
+      "R"
+    ],
+    [
+      "L",
+      "B",
+      "E",
+      "C",
+      "R",
+      "E",
+      "R",
+      "U",
+      "L",
+      "P"
+    ],
+    [
+      "I",
+      "E",
+      "N",
+      "D",
+      "İ",
+      "N",
+      "D",
+      "N",
+      "E",
+      "İ"
+    ],
+    [
+      "K",
+      "T",
+      "M",
+      "A",
+      "N",
+      "D",
+      "N",
+      "A",
+      "N",
+      "K"
+    ],
+    [
+      "H",
+      "İ",
+      "E",
+      "N",
+      "L",
+      "A",
+      "K",
+      "L",
+      "M",
+      "S"
+    ],
+    [
+      "A",
+      "İ",
+      "K",
+      "İ",
+      "İ",
+      "İ",
+      "K",
+      "U",
+      "E",
+      "İ"
+    ]
+  ],
+  "words": [
+    {
+      "word": "ÇEMENLENME",
+      "start": {
+        "row": 0,
+        "col": 8
+      },
+      "direction": "vertical",
+      "length": 10,
+      "frequency_score": 20,
+      "hint_tr": "10 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "DAHLETMEK",
+      "start": {
+        "row": 1,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "length": 9,
+      "frequency_score": 30,
+      "hint_tr": "9 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "KİRPİKSİ",
+      "start": {
+        "row": 2,
+        "col": 9
+      },
+      "direction": "vertical",
+      "length": 8,
+      "frequency_score": 40,
+      "hint_tr": "8 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "BAKIMLIK",
+      "start": {
+        "row": 0,
+        "col": 0
+      },
+      "direction": "vertical",
+      "length": 8,
+      "frequency_score": 40,
+      "hint_tr": "8 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "DİRENMEK",
+      "start": {
+        "row": 2,
+        "col": 2
+      },
+      "direction": "vertical",
+      "length": 8,
+      "frequency_score": 40,
+      "hint_tr": "8 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "SAATİNE",
+      "start": {
+        "row": 0,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "VİCDANİ",
+      "start": {
+        "row": 3,
+        "col": 3
+      },
+      "direction": "vertical",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "UKUBET",
+      "start": {
+        "row": 2,
+        "col": 1
+      },
+      "direction": "vertical",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "LAK",
+      "start": {
+        "row": 8,
+        "col": 4
+      },
+      "direction": "horizontal",
+      "length": 3,
+      "frequency_score": 90,
+      "hint_tr": "3 harfli bir karisik kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-28T21:12:06.432569+00:00",
+  "generator_version": "1.0.0"
+}

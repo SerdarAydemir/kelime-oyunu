@@ -1,0 +1,252 @@
+{
+  "schema_version": 1,
+  "level_id": 23,
+  "pack_id": "pack_001_kisa_kelimeler",
+  "difficulty": "easy",
+  "difficulty_score": 21,
+  "category": "kisa_kelimeler",
+  "category_display_tr": "Kısa Kelimeler",
+  "grid_size": {
+    "rows": 10,
+    "cols": 10
+  },
+  "grid": [
+    [
+      "N",
+      "A",
+      "K",
+      "İ",
+      "E",
+      "A",
+      "E",
+      "E",
+      "N",
+      "Ö"
+    ],
+    [
+      "N",
+      "G",
+      "C",
+      "L",
+      "E",
+      "Y",
+      "Ü",
+      "S",
+      "İ",
+      "N"
+    ],
+    [
+      "İ",
+      "N",
+      "A",
+      "K",
+      "E",
+      "S",
+      "E",
+      "T",
+      "O",
+      "N"
+    ],
+    [
+      "N",
+      "L",
+      "B",
+      "E",
+      "S",
+      "İ",
+      "L",
+      "Ö",
+      "A",
+      "O"
+    ],
+    [
+      "O",
+      "İ",
+      "E",
+      "Z",
+      "F",
+      "Ö",
+      "O",
+      "Z",
+      "İ",
+      "K"
+    ],
+    [
+      "G",
+      "N",
+      "Z",
+      "A",
+      "T",
+      "Y",
+      "N",
+      "K",
+      "Ö",
+      "N"
+    ],
+    [
+      "E",
+      "F",
+      "Ö",
+      "E",
+      "İ",
+      "İ",
+      "B",
+      "N",
+      "L",
+      "İ"
+    ],
+    [
+      "C",
+      "Ü",
+      "S",
+      "İ",
+      "İ",
+      "E",
+      "K",
+      "İ",
+      "N",
+      "L"
+    ],
+    [
+      "E",
+      "K",
+      "A",
+      "A",
+      "A",
+      "Y",
+      "O",
+      "L",
+      "İ",
+      "K"
+    ],
+    [
+      "F",
+      "Ü",
+      "G",
+      "N",
+      "L",
+      "A",
+      "L",
+      "A",
+      "A",
+      "İ"
+    ]
+  ],
+  "words": [
+    {
+      "word": "BESİ",
+      "start": {
+        "row": 3,
+        "col": 2
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "LALA",
+      "start": {
+        "row": 9,
+        "col": 4
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "AYOL",
+      "start": {
+        "row": 8,
+        "col": 4
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "EKİN",
+      "start": {
+        "row": 7,
+        "col": 5
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "GECE",
+      "start": {
+        "row": 5,
+        "col": 0
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "KESE",
+      "start": {
+        "row": 2,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "TÖZ",
+      "start": {
+        "row": 2,
+        "col": 7
+      },
+      "direction": "vertical",
+      "length": 3,
+      "frequency_score": 90,
+      "hint_tr": "3 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "ZAT",
+      "start": {
+        "row": 5,
+        "col": 2
+      },
+      "direction": "horizontal",
+      "length": 3,
+      "frequency_score": 90,
+      "hint_tr": "3 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "FÜG",
+      "start": {
+        "row": 9,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "length": 3,
+      "frequency_score": 90,
+      "hint_tr": "3 harfli bir kisa_kelimeler kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-28T21:11:34.859850+00:00",
+  "generator_version": "1.0.0"
+}

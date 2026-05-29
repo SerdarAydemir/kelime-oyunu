@@ -1,0 +1,263 @@
+{
+  "schema_version": 1,
+  "level_id": 11,
+  "pack_id": "pack_001_kisa_kelimeler",
+  "difficulty": "easy",
+  "difficulty_score": 22,
+  "category": "kisa_kelimeler",
+  "category_display_tr": "Kısa Kelimeler",
+  "grid_size": {
+    "rows": 10,
+    "cols": 10
+  },
+  "grid": [
+    [
+      "T",
+      "G",
+      "R",
+      "N",
+      "S",
+      "T",
+      "O",
+      "R",
+      "R",
+      "İ"
+    ],
+    [
+      "İ",
+      "T",
+      "R",
+      "R",
+      "R",
+      "M",
+      "A",
+      "A",
+      "P",
+      "K"
+    ],
+    [
+      "A",
+      "T",
+      "O",
+      "R",
+      "T",
+      "İ",
+      "G",
+      "L",
+      "I",
+      "A"
+    ],
+    [
+      "E",
+      "R",
+      "G",
+      "İ",
+      "R",
+      "L",
+      "O",
+      "Ç",
+      "Ç",
+      "R"
+    ],
+    [
+      "H",
+      "İ",
+      "B",
+      "E",
+      "R",
+      "O",
+      "P",
+      "E",
+      "A",
+      "T"
+    ],
+    [
+      "A",
+      "T",
+      "O",
+      "M",
+      "H",
+      "N",
+      "Ç",
+      "R",
+      "L",
+      "A"
+    ],
+    [
+      "Ç",
+      "N",
+      "O",
+      "T",
+      "M",
+      "A",
+      "T",
+      "İ",
+      "P",
+      "I"
+    ],
+    [
+      "I",
+      "N",
+      "O",
+      "T",
+      "A",
+      "R",
+      "N",
+      "L",
+      "K",
+      "L"
+    ],
+    [
+      "L",
+      "L",
+      "S",
+      "L",
+      "N",
+      "A",
+      "E",
+      "R",
+      "T",
+      "I"
+    ],
+    [
+      "O",
+      "T",
+      "A",
+      "A",
+      "İ",
+      "K",
+      "İ",
+      "E",
+      "E",
+      "K"
+    ]
+  ],
+  "words": [
+    {
+      "word": "ILIK",
+      "start": {
+        "row": 6,
+        "col": 9
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "ATOM",
+      "start": {
+        "row": 5,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "AGOP",
+      "start": {
+        "row": 1,
+        "col": 6
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "NOTA",
+      "start": {
+        "row": 7,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "ERGİ",
+      "start": {
+        "row": 3,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "STOR",
+      "start": {
+        "row": 0,
+        "col": 4
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "HİBE",
+      "start": {
+        "row": 4,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "ONAR",
+      "start": {
+        "row": 4,
+        "col": 5
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "TİP",
+      "start": {
+        "row": 6,
+        "col": 6
+      },
+      "direction": "horizontal",
+      "length": 3,
+      "frequency_score": 90,
+      "hint_tr": "3 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "ÇAL",
+      "start": {
+        "row": 3,
+        "col": 8
+      },
+      "direction": "vertical",
+      "length": 3,
+      "frequency_score": 90,
+      "hint_tr": "3 harfli bir kisa_kelimeler kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-28T21:11:33.772314+00:00",
+  "generator_version": "1.0.0"
+}

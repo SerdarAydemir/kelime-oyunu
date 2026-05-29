@@ -1,0 +1,263 @@
+{
+  "schema_version": 1,
+  "level_id": 61,
+  "pack_id": "pack_002_genel",
+  "difficulty": "easy",
+  "difficulty_score": 42,
+  "category": "genel",
+  "category_display_tr": "Genel",
+  "grid_size": {
+    "rows": 10,
+    "cols": 10
+  },
+  "grid": [
+    [
+      "K",
+      "O",
+      "R",
+      "D",
+      "K",
+      "A",
+      "M",
+      "E",
+      "S",
+      "E"
+    ],
+    [
+      "O",
+      "Ç",
+      "M",
+      "E",
+      "K",
+      "K",
+      "A",
+      "Ş",
+      "A",
+      "D"
+    ],
+    [
+      "Ş",
+      "I",
+      "İ",
+      "R",
+      "N",
+      "O",
+      "G",
+      "K",
+      "R",
+      "E"
+    ],
+    [
+      "T",
+      "L",
+      "A",
+      "İ",
+      "S",
+      "R",
+      "A",
+      "İ",
+      "R",
+      "Ğ"
+    ],
+    [
+      "U",
+      "D",
+      "L",
+      "Ş",
+      "U",
+      "D",
+      "O",
+      "N",
+      "A",
+      "İ"
+    ],
+    [
+      "R",
+      "I",
+      "G",
+      "İ",
+      "R",
+      "E",
+      "H",
+      "C",
+      "F",
+      "N"
+    ],
+    [
+      "T",
+      "R",
+      "L",
+      "K",
+      "A",
+      "O",
+      "A",
+      "İ",
+      "İ",
+      "İ"
+    ],
+    [
+      "M",
+      "M",
+      "E",
+      "L",
+      "L",
+      "N",
+      "R",
+      "L",
+      "Y",
+      "L"
+    ],
+    [
+      "A",
+      "A",
+      "R",
+      "İ",
+      "I",
+      "C",
+      "Ç",
+      "İ",
+      "E",
+      "M"
+    ],
+    [
+      "K",
+      "K",
+      "Ş",
+      "K",
+      "K",
+      "U",
+      "E",
+      "K",
+      "N",
+      "E"
+    ]
+  ],
+  "words": [
+    {
+      "word": "AKORDEONCU",
+      "start": {
+        "row": 0,
+        "col": 5
+      },
+      "direction": "vertical",
+      "length": 10,
+      "frequency_score": 20,
+      "hint_tr": "10 harfli bir genel kelimesi"
+    },
+    {
+      "word": "DERİŞİKLİK",
+      "start": {
+        "row": 0,
+        "col": 3
+      },
+      "direction": "vertical",
+      "length": 10,
+      "frequency_score": 20,
+      "hint_tr": "10 harfli bir genel kelimesi"
+    },
+    {
+      "word": "KOŞTURTMAK",
+      "start": {
+        "row": 0,
+        "col": 0
+      },
+      "direction": "vertical",
+      "length": 10,
+      "frequency_score": 20,
+      "hint_tr": "10 harfli bir genel kelimesi"
+    },
+    {
+      "word": "EŞKİNCİLİK",
+      "start": {
+        "row": 0,
+        "col": 7
+      },
+      "direction": "vertical",
+      "length": 10,
+      "frequency_score": 20,
+      "hint_tr": "10 harfli bir genel kelimesi"
+    },
+    {
+      "word": "SARRAFİYE",
+      "start": {
+        "row": 0,
+        "col": 8
+      },
+      "direction": "vertical",
+      "length": 9,
+      "frequency_score": 30,
+      "hint_tr": "9 harfli bir genel kelimesi"
+    },
+    {
+      "word": "DEĞİNİLME",
+      "start": {
+        "row": 1,
+        "col": 9
+      },
+      "direction": "vertical",
+      "length": 9,
+      "frequency_score": 30,
+      "hint_tr": "9 harfli bir genel kelimesi"
+    },
+    {
+      "word": "ÇILDIRMAK",
+      "start": {
+        "row": 1,
+        "col": 1
+      },
+      "direction": "vertical",
+      "length": 9,
+      "frequency_score": 30,
+      "hint_tr": "9 harfli bir genel kelimesi"
+    },
+    {
+      "word": "ALGLER",
+      "start": {
+        "row": 3,
+        "col": 2
+      },
+      "direction": "vertical",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir genel kelimesi"
+    },
+    {
+      "word": "HARÇ",
+      "start": {
+        "row": 5,
+        "col": 6
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir genel kelimesi"
+    },
+    {
+      "word": "ALIK",
+      "start": {
+        "row": 6,
+        "col": 4
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir genel kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-28T21:11:41.804112+00:00",
+  "generator_version": "1.0.0"
+}

@@ -1,0 +1,263 @@
+{
+  "schema_version": 1,
+  "level_id": 20,
+  "pack_id": "pack_001_kisa_kelimeler",
+  "difficulty": "easy",
+  "difficulty_score": 22,
+  "category": "kisa_kelimeler",
+  "category_display_tr": "Kısa Kelimeler",
+  "grid_size": {
+    "rows": 10,
+    "cols": 10
+  },
+  "grid": [
+    [
+      "Ş",
+      "İ",
+      "İ",
+      "İ",
+      "U",
+      "A",
+      "A",
+      "L",
+      "N",
+      "N"
+    ],
+    [
+      "S",
+      "A",
+      "L",
+      "T",
+      "A",
+      "N",
+      "N",
+      "N",
+      "E",
+      "İ"
+    ],
+    [
+      "R",
+      "R",
+      "E",
+      "İ",
+      "İ",
+      "E",
+      "D",
+      "İ",
+      "N",
+      "E"
+    ],
+    [
+      "A",
+      "L",
+      "İ",
+      "O",
+      "B",
+      "E",
+      "Z",
+      "N",
+      "E",
+      "E"
+    ],
+    [
+      "E",
+      "F",
+      "Ş",
+      "Z",
+      "U",
+      "M",
+      "İ",
+      "T",
+      "Y",
+      "A"
+    ],
+    [
+      "T",
+      "O",
+      "Ç",
+      "Y",
+      "N",
+      "D",
+      "E",
+      "N",
+      "M",
+      "N"
+    ],
+    [
+      "M",
+      "R",
+      "İ",
+      "N",
+      "A",
+      "R",
+      "Z",
+      "T",
+      "İ",
+      "İ"
+    ],
+    [
+      "S",
+      "A",
+      "H",
+      "A",
+      "L",
+      "İ",
+      "A",
+      "A",
+      "E",
+      "A"
+    ],
+    [
+      "İ",
+      "A",
+      "Y",
+      "V",
+      "A",
+      "İ",
+      "A",
+      "R",
+      "E",
+      "T"
+    ],
+    [
+      "A",
+      "F",
+      "A",
+      "L",
+      "R",
+      "T",
+      "A",
+      "H",
+      "T",
+      "R"
+    ]
+  ],
+  "words": [
+    {
+      "word": "İŞÇİ",
+      "start": {
+        "row": 3,
+        "col": 2
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "FORA",
+      "start": {
+        "row": 4,
+        "col": 1
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "TARH",
+      "start": {
+        "row": 6,
+        "col": 7
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "AFAL",
+      "start": {
+        "row": 9,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "AYVA",
+      "start": {
+        "row": 8,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "DİNE",
+      "start": {
+        "row": 2,
+        "col": 6
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "SALT",
+      "start": {
+        "row": 1,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "OBEZ",
+      "start": {
+        "row": 3,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "ZUM",
+      "start": {
+        "row": 4,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 3,
+      "frequency_score": 90,
+      "hint_tr": "3 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "EZA",
+      "start": {
+        "row": 5,
+        "col": 6
+      },
+      "direction": "vertical",
+      "length": 3,
+      "frequency_score": 90,
+      "hint_tr": "3 harfli bir kisa_kelimeler kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-28T21:11:34.837073+00:00",
+  "generator_version": "1.0.0"
+}

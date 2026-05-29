@@ -1,0 +1,241 @@
+{
+  "schema_version": 1,
+  "level_id": 1,
+  "pack_id": "pack_001_kisa_kelimeler",
+  "difficulty": "easy",
+  "difficulty_score": 22,
+  "category": "kisa_kelimeler",
+  "category_display_tr": "Kısa Kelimeler",
+  "grid_size": {
+    "rows": 10,
+    "cols": 10
+  },
+  "grid": [
+    [
+      "R",
+      "E",
+      "İ",
+      "Ç",
+      "I",
+      "Ş",
+      "N",
+      "R",
+      "E",
+      "M"
+    ],
+    [
+      "N",
+      "K",
+      "L",
+      "I",
+      "İ",
+      "E",
+      "Ö",
+      "İ",
+      "Ö",
+      "O"
+    ],
+    [
+      "R",
+      "M",
+      "O",
+      "M",
+      "E",
+      "M",
+      "Ş",
+      "Ş",
+      "I",
+      "D"
+    ],
+    [
+      "E",
+      "E",
+      "D",
+      "A",
+      "K",
+      "K",
+      "İ",
+      "Ç",
+      "N",
+      "A"
+    ],
+    [
+      "N",
+      "L",
+      "A",
+      "R",
+      "Z",
+      "N",
+      "V",
+      "R",
+      "Ş",
+      "İ"
+    ],
+    [
+      "A",
+      "V",
+      "E",
+      "A",
+      "İ",
+      "D",
+      "E",
+      "K",
+      "R",
+      "K"
+    ],
+    [
+      "O",
+      "O",
+      "E",
+      "N",
+      "A",
+      "K",
+      "Z",
+      "L",
+      "E",
+      "L"
+    ],
+    [
+      "İ",
+      "L",
+      "R",
+      "I",
+      "İ",
+      "Z",
+      "İ",
+      "N",
+      "N",
+      "I"
+    ],
+    [
+      "R",
+      "M",
+      "L",
+      "L",
+      "İ",
+      "L",
+      "M",
+      "A",
+      "R",
+      "T"
+    ],
+    [
+      "Ö",
+      "Z",
+      "G",
+      "Ü",
+      "R",
+      "İ",
+      "N",
+      "İ",
+      "N",
+      "E"
+    ]
+  ],
+  "words": [
+    {
+      "word": "MODA",
+      "start": {
+        "row": 0,
+        "col": 9
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "İZİN",
+      "start": {
+        "row": 7,
+        "col": 4
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "ŞİVE",
+      "start": {
+        "row": 2,
+        "col": 6
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "ÇIMA",
+      "start": {
+        "row": 0,
+        "col": 3
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "MART",
+      "start": {
+        "row": 8,
+        "col": 6
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "ÖZGÜ",
+      "start": {
+        "row": 9,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "LODA",
+      "start": {
+        "row": 1,
+        "col": 2
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "EKME",
+      "start": {
+        "row": 0,
+        "col": 1
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-28T21:11:33.317772+00:00",
+  "generator_version": "1.0.0"
+}

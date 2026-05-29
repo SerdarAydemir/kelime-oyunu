@@ -1,0 +1,263 @@
+{
+  "schema_version": 1,
+  "level_id": 7,
+  "pack_id": "pack_001_kisa_kelimeler",
+  "difficulty": "easy",
+  "difficulty_score": 22,
+  "category": "kisa_kelimeler",
+  "category_display_tr": "Kısa Kelimeler",
+  "grid_size": {
+    "rows": 10,
+    "cols": 10
+  },
+  "grid": [
+    [
+      "M",
+      "E",
+      "N",
+      "K",
+      "K",
+      "E",
+      "O",
+      "U",
+      "K",
+      "N"
+    ],
+    [
+      "E",
+      "T",
+      "B",
+      "O",
+      "A",
+      "K",
+      "A",
+      "R",
+      "T",
+      "K"
+    ],
+    [
+      "Z",
+      "N",
+      "L",
+      "K",
+      "U",
+      "P",
+      "L",
+      "A",
+      "K",
+      "A"
+    ],
+    [
+      "A",
+      "E",
+      "E",
+      "E",
+      "Y",
+      "N",
+      "A",
+      "Ü",
+      "K",
+      "L"
+    ],
+    [
+      "B",
+      "A",
+      "Z",
+      "N",
+      "U",
+      "L",
+      "N",
+      "Y",
+      "L",
+      "E"
+    ],
+    [
+      "L",
+      "O",
+      "Y",
+      "T",
+      "M",
+      "R",
+      "U",
+      "E",
+      "E",
+      "T"
+    ],
+    [
+      "A",
+      "E",
+      "U",
+      "R",
+      "E",
+      "T",
+      "M",
+      "T",
+      "E",
+      "N"
+    ],
+    [
+      "E",
+      "K",
+      "Y",
+      "U",
+      "N",
+      "K",
+      "R",
+      "Ü",
+      "U",
+      "L"
+    ],
+    [
+      "E",
+      "N",
+      "U",
+      "N",
+      "A",
+      "R",
+      "E",
+      "L",
+      "U",
+      "E"
+    ],
+    [
+      "A",
+      "U",
+      "Z",
+      "T",
+      "O",
+      "R",
+      "Y",
+      "Ü",
+      "M",
+      "T"
+    ]
+  ],
+  "words": [
+    {
+      "word": "TÜLÜ",
+      "start": {
+        "row": 6,
+        "col": 7
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "KENT",
+      "start": {
+        "row": 2,
+        "col": 3
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "UMRE",
+      "start": {
+        "row": 5,
+        "col": 6
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "PLAK",
+      "start": {
+        "row": 2,
+        "col": 5
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "UYUZ",
+      "start": {
+        "row": 6,
+        "col": 2
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "KART",
+      "start": {
+        "row": 1,
+        "col": 5
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "UYUM",
+      "start": {
+        "row": 2,
+        "col": 4
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "BAZ",
+      "start": {
+        "row": 4,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "length": 3,
+      "frequency_score": 90,
+      "hint_tr": "3 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "BOA",
+      "start": {
+        "row": 1,
+        "col": 2
+      },
+      "direction": "horizontal",
+      "length": 3,
+      "frequency_score": 90,
+      "hint_tr": "3 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "TOR",
+      "start": {
+        "row": 9,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 3,
+      "frequency_score": 90,
+      "hint_tr": "3 harfli bir kisa_kelimeler kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-28T21:11:33.747099+00:00",
+  "generator_version": "1.0.0"
+}

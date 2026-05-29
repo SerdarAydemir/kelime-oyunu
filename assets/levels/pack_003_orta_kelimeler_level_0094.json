@@ -1,0 +1,285 @@
+{
+  "schema_version": 1,
+  "level_id": 94,
+  "pack_id": "pack_003_orta_kelimeler",
+  "difficulty": "medium",
+  "difficulty_score": 35,
+  "category": "orta_kelimeler",
+  "category_display_tr": "Orta Kelimeler",
+  "grid_size": {
+    "rows": 10,
+    "cols": 10
+  },
+  "grid": [
+    [
+      "L",
+      "N",
+      "H",
+      "G",
+      "Ö",
+      "L",
+      "E",
+      "T",
+      "S",
+      "N"
+    ],
+    [
+      "R",
+      "I",
+      "E",
+      "K",
+      "I",
+      "R",
+      "A",
+      "T",
+      "L",
+      "H"
+    ],
+    [
+      "Ö",
+      "B",
+      "L",
+      "B",
+      "M",
+      "L",
+      "P",
+      "O",
+      "A",
+      "E"
+    ],
+    [
+      "G",
+      "O",
+      "E",
+      "A",
+      "D",
+      "D",
+      "U",
+      "R",
+      "V",
+      "S"
+    ],
+    [
+      "A",
+      "M",
+      "Z",
+      "S",
+      "E",
+      "A",
+      "S",
+      "U",
+      "L",
+      "A"
+    ],
+    [
+      "M",
+      "B",
+      "O",
+      "I",
+      "V",
+      "T",
+      "A",
+      "Ç",
+      "I",
+      "P"
+    ],
+    [
+      "B",
+      "E",
+      "N",
+      "C",
+      "R",
+      "U",
+      "R",
+      "S",
+      "K",
+      "Ç"
+    ],
+    [
+      "O",
+      "R",
+      "N",
+      "I",
+      "İ",
+      "T",
+      "I",
+      "U",
+      "N",
+      "A"
+    ],
+    [
+      "T",
+      "E",
+      "İ",
+      "Y",
+      "S",
+      "Y",
+      "K",
+      "Z",
+      "R",
+      "B"
+    ],
+    [
+      "A",
+      "E",
+      "E",
+      "K",
+      "İ",
+      "A",
+      "B",
+      "R",
+      "I",
+      "T"
+    ]
+  ],
+  "words": [
+    {
+      "word": "HELEZON",
+      "start": {
+        "row": 0,
+        "col": 2
+      },
+      "direction": "vertical",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "SLAVLIK",
+      "start": {
+        "row": 0,
+        "col": 8
+      },
+      "direction": "vertical",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "PUSARIK",
+      "start": {
+        "row": 2,
+        "col": 6
+      },
+      "direction": "vertical",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "HESAPÇA",
+      "start": {
+        "row": 1,
+        "col": 9
+      },
+      "direction": "vertical",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "ORUÇSUZ",
+      "start": {
+        "row": 2,
+        "col": 7
+      },
+      "direction": "vertical",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "DEVRİSİ",
+      "start": {
+        "row": 3,
+        "col": 4
+      },
+      "direction": "vertical",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "GAMBOT",
+      "start": {
+        "row": 3,
+        "col": 0
+      },
+      "direction": "vertical",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "BASICI",
+      "start": {
+        "row": 2,
+        "col": 3
+      },
+      "direction": "vertical",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "TUTYA",
+      "start": {
+        "row": 5,
+        "col": 5
+      },
+      "direction": "vertical",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "BOMBE",
+      "start": {
+        "row": 2,
+        "col": 1
+      },
+      "direction": "vertical",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "GÖLET",
+      "start": {
+        "row": 0,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "KIRAT",
+      "start": {
+        "row": 1,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir orta_kelimeler kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-28T21:11:48.913442+00:00",
+  "generator_version": "1.0.0"
+}

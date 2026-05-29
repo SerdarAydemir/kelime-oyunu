@@ -1,0 +1,285 @@
+{
+  "schema_version": 1,
+  "level_id": 36,
+  "pack_id": "pack_001_kisa_kelimeler",
+  "difficulty": "easy",
+  "difficulty_score": 24,
+  "category": "kisa_kelimeler",
+  "category_display_tr": "Kısa Kelimeler",
+  "grid_size": {
+    "rows": 10,
+    "cols": 10
+  },
+  "grid": [
+    [
+      "E",
+      "I",
+      "D",
+      "A",
+      "L",
+      "S",
+      "A",
+      "A",
+      "N",
+      "I"
+    ],
+    [
+      "B",
+      "K",
+      "N",
+      "A",
+      "D",
+      "O",
+      "R",
+      "D",
+      "İ",
+      "R"
+    ],
+    [
+      "A",
+      "D",
+      "A",
+      "Ş",
+      "U",
+      "N",
+      "O",
+      "S",
+      "C",
+      "I"
+    ],
+    [
+      "P",
+      "R",
+      "N",
+      "E",
+      "S",
+      "E",
+      "P",
+      "S",
+      "E",
+      "İ"
+    ],
+    [
+      "A",
+      "İ",
+      "K",
+      "E",
+      "L",
+      "İ",
+      "K",
+      "E",
+      "B",
+      "L"
+    ],
+    [
+      "K",
+      "R",
+      "L",
+      "O",
+      "U",
+      "N",
+      "R",
+      "Ş",
+      "O",
+      "L"
+    ],
+    [
+      "A",
+      "T",
+      "A",
+      "N",
+      "E",
+      "S",
+      "İ",
+      "N",
+      "R",
+      "A"
+    ],
+    [
+      "A",
+      "Ü",
+      "K",
+      "I",
+      "D",
+      "Ş",
+      "E",
+      "R",
+      "U",
+      "İ"
+    ],
+    [
+      "D",
+      "R",
+      "L",
+      "O",
+      "B",
+      "U",
+      "A",
+      "S",
+      "E",
+      "O"
+    ],
+    [
+      "B",
+      "K",
+      "I",
+      "E",
+      "R",
+      "İ",
+      "O",
+      "D",
+      "E",
+      "K"
+    ]
+  ],
+  "words": [
+    {
+      "word": "ELİK",
+      "start": {
+        "row": 4,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "AKLI",
+      "start": {
+        "row": 6,
+        "col": 2
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "İLLA",
+      "start": {
+        "row": 3,
+        "col": 9
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "ESİN",
+      "start": {
+        "row": 6,
+        "col": 4
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "BORU",
+      "start": {
+        "row": 4,
+        "col": 8
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "OBUA",
+      "start": {
+        "row": 8,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "ADAŞ",
+      "start": {
+        "row": 2,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "SONE",
+      "start": {
+        "row": 0,
+        "col": 5
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "NİCE",
+      "start": {
+        "row": 0,
+        "col": 8
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "TÜRK",
+      "start": {
+        "row": 6,
+        "col": 1
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "ROP",
+      "start": {
+        "row": 1,
+        "col": 6
+      },
+      "direction": "vertical",
+      "length": 3,
+      "frequency_score": 90,
+      "hint_tr": "3 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "PAK",
+      "start": {
+        "row": 3,
+        "col": 0
+      },
+      "direction": "vertical",
+      "length": 3,
+      "frequency_score": 90,
+      "hint_tr": "3 harfli bir kisa_kelimeler kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-28T21:11:36.364542+00:00",
+  "generator_version": "1.0.0"
+}

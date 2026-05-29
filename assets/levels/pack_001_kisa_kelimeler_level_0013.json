@@ -1,0 +1,252 @@
+{
+  "schema_version": 1,
+  "level_id": 13,
+  "pack_id": "pack_001_kisa_kelimeler",
+  "difficulty": "easy",
+  "difficulty_score": 20,
+  "category": "kisa_kelimeler",
+  "category_display_tr": "Kısa Kelimeler",
+  "grid_size": {
+    "rows": 10,
+    "cols": 10
+  },
+  "grid": [
+    [
+      "F",
+      "N",
+      "A",
+      "R",
+      "L",
+      "Ş",
+      "A",
+      "İ",
+      "A",
+      "İ"
+    ],
+    [
+      "E",
+      "L",
+      "E",
+      "N",
+      "C",
+      "E",
+      "E",
+      "R",
+      "Y",
+      "Z"
+    ],
+    [
+      "Z",
+      "İ",
+      "N",
+      "D",
+      "İ",
+      "B",
+      "F",
+      "O",
+      "T",
+      "A"
+    ],
+    [
+      "A",
+      "R",
+      "C",
+      "E",
+      "O",
+      "N",
+      "E",
+      "Y",
+      "A",
+      "T"
+    ],
+    [
+      "R",
+      "İ",
+      "A",
+      "Z",
+      "A",
+      "T",
+      "İ",
+      "R",
+      "L",
+      "Y"
+    ],
+    [
+      "R",
+      "N",
+      "R",
+      "B",
+      "L",
+      "Y",
+      "A",
+      "Z",
+      "İ",
+      "E"
+    ],
+    [
+      "İ",
+      "H",
+      "T",
+      "D",
+      "B",
+      "Y",
+      "N",
+      "A",
+      "R",
+      "N"
+    ],
+    [
+      "L",
+      "A",
+      "R",
+      "D",
+      "R",
+      "Ş",
+      "Ş",
+      "R",
+      "D",
+      "İ"
+    ],
+    [
+      "R",
+      "L",
+      "F",
+      "Z",
+      "D",
+      "R",
+      "E",
+      "A",
+      "Y",
+      "D"
+    ],
+    [
+      "L",
+      "T",
+      "R",
+      "Y",
+      "İ",
+      "T",
+      "N",
+      "E",
+      "L",
+      "H"
+    ]
+  ],
+  "words": [
+    {
+      "word": "FOTA",
+      "start": {
+        "row": 2,
+        "col": 6
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "İNDİ",
+      "start": {
+        "row": 2,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "CART",
+      "start": {
+        "row": 3,
+        "col": 2
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "FEZA",
+      "start": {
+        "row": 0,
+        "col": 0
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "HALT",
+      "start": {
+        "row": 6,
+        "col": 1
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "ŞEN",
+      "start": {
+        "row": 7,
+        "col": 6
+      },
+      "direction": "vertical",
+      "length": 3,
+      "frequency_score": 90,
+      "hint_tr": "3 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "NAR",
+      "start": {
+        "row": 0,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "length": 3,
+      "frequency_score": 90,
+      "hint_tr": "3 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "YAZ",
+      "start": {
+        "row": 5,
+        "col": 5
+      },
+      "direction": "horizontal",
+      "length": 3,
+      "frequency_score": 90,
+      "hint_tr": "3 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "ŞEB",
+      "start": {
+        "row": 0,
+        "col": 5
+      },
+      "direction": "vertical",
+      "length": 3,
+      "frequency_score": 90,
+      "hint_tr": "3 harfli bir kisa_kelimeler kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-28T21:11:34.120412+00:00",
+  "generator_version": "1.0.0"
+}

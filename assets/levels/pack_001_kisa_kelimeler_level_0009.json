@@ -1,0 +1,241 @@
+{
+  "schema_version": 1,
+  "level_id": 9,
+  "pack_id": "pack_001_kisa_kelimeler",
+  "difficulty": "easy",
+  "difficulty_score": 21,
+  "category": "kisa_kelimeler",
+  "category_display_tr": "Kısa Kelimeler",
+  "grid_size": {
+    "rows": 10,
+    "cols": 10
+  },
+  "grid": [
+    [
+      "O",
+      "İ",
+      "A",
+      "R",
+      "L",
+      "A",
+      "L",
+      "K",
+      "A",
+      "K"
+    ],
+    [
+      "M",
+      "K",
+      "K",
+      "N",
+      "M",
+      "İ",
+      "E",
+      "T",
+      "Z",
+      "N"
+    ],
+    [
+      "L",
+      "V",
+      "U",
+      "T",
+      "N",
+      "K",
+      "Z",
+      "İ",
+      "Z",
+      "E"
+    ],
+    [
+      "N",
+      "A",
+      "R",
+      "İ",
+      "M",
+      "O",
+      "A",
+      "İ",
+      "L",
+      "N"
+    ],
+    [
+      "İ",
+      "L",
+      "A",
+      "O",
+      "U",
+      "N",
+      "H",
+      "A",
+      "L",
+      "A"
+    ],
+    [
+      "Z",
+      "F",
+      "E",
+      "C",
+      "Z",
+      "A",
+      "İ",
+      "A",
+      "E",
+      "T"
+    ],
+    [
+      "A",
+      "M",
+      "İ",
+      "N",
+      "R",
+      "H",
+      "E",
+      "A",
+      "E",
+      "A"
+    ],
+    [
+      "Z",
+      "R",
+      "O",
+      "V",
+      "N",
+      "İ",
+      "O",
+      "E",
+      "İ",
+      "K"
+    ],
+    [
+      "N",
+      "V",
+      "Z",
+      "L",
+      "E",
+      "A",
+      "İ",
+      "A",
+      "R",
+      "K"
+    ],
+    [
+      "L",
+      "A",
+      "Z",
+      "İ",
+      "M",
+      "L",
+      "V",
+      "E",
+      "M",
+      "K"
+    ]
+  ],
+  "words": [
+    {
+      "word": "ATAK",
+      "start": {
+        "row": 4,
+        "col": 9
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "AKUR",
+      "start": {
+        "row": 0,
+        "col": 2
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "ECZA",
+      "start": {
+        "row": 5,
+        "col": 2
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "İKON",
+      "start": {
+        "row": 1,
+        "col": 5
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "VALF",
+      "start": {
+        "row": 2,
+        "col": 1
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "AZİM",
+      "start": {
+        "row": 9,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "NİZA",
+      "start": {
+        "row": 3,
+        "col": 0
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "HAL",
+      "start": {
+        "row": 4,
+        "col": 6
+      },
+      "direction": "horizontal",
+      "length": 3,
+      "frequency_score": 90,
+      "hint_tr": "3 harfli bir kisa_kelimeler kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-28T21:11:33.763094+00:00",
+  "generator_version": "1.0.0"
+}

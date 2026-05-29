@@ -1,0 +1,285 @@
+{
+  "schema_version": 1,
+  "level_id": 10,
+  "pack_id": "pack_001_kisa_kelimeler",
+  "difficulty": "easy",
+  "difficulty_score": 24,
+  "category": "kisa_kelimeler",
+  "category_display_tr": "Kısa Kelimeler",
+  "grid_size": {
+    "rows": 10,
+    "cols": 10
+  },
+  "grid": [
+    [
+      "K",
+      "Y",
+      "U",
+      "S",
+      "U",
+      "N",
+      "A",
+      "K",
+      "Y",
+      "F"
+    ],
+    [
+      "N",
+      "O",
+      "N",
+      "I",
+      "K",
+      "A",
+      "N",
+      "R",
+      "A",
+      "İ"
+    ],
+    [
+      "Ö",
+      "A",
+      "U",
+      "K",
+      "Ü",
+      "F",
+      "E",
+      "F",
+      "P",
+      "L"
+    ],
+    [
+      "G",
+      "Ü",
+      "Ç",
+      "Y",
+      "O",
+      "G",
+      "A",
+      "U",
+      "I",
+      "O"
+    ],
+    [
+      "A",
+      "E",
+      "I",
+      "A",
+      "N",
+      "İ",
+      "E",
+      "T",
+      "A",
+      "R"
+    ],
+    [
+      "K",
+      "A",
+      "N",
+      "E",
+      "N",
+      "E",
+      "P",
+      "A",
+      "A",
+      "R"
+    ],
+    [
+      "E",
+      "O",
+      "L",
+      "L",
+      "S",
+      "R",
+      "S",
+      "F",
+      "A",
+      "A"
+    ],
+    [
+      "R",
+      "L",
+      "Ö",
+      "K",
+      "Ç",
+      "E",
+      "A",
+      "İ",
+      "N",
+      "T"
+    ],
+    [
+      "K",
+      "S",
+      "E",
+      "A",
+      "R",
+      "K",
+      "O",
+      "L",
+      "N",
+      "E"
+    ],
+    [
+      "E",
+      "T",
+      "E",
+      "N",
+      "K",
+      "İ",
+      "Ö",
+      "P",
+      "Ü",
+      "Ş"
+    ]
+  ],
+  "words": [
+    {
+      "word": "FİLO",
+      "start": {
+        "row": 0,
+        "col": 9
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "FUTA",
+      "start": {
+        "row": 2,
+        "col": 7
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "YAPI",
+      "start": {
+        "row": 0,
+        "col": 8
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "SUNA",
+      "start": {
+        "row": 0,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "ÖKÇE",
+      "start": {
+        "row": 7,
+        "col": 2
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "ÖPÜŞ",
+      "start": {
+        "row": 9,
+        "col": 6
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "ERKE",
+      "start": {
+        "row": 6,
+        "col": 0
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "YOGA",
+      "start": {
+        "row": 3,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "RATE",
+      "start": {
+        "row": 5,
+        "col": 9
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "GÜÇ",
+      "start": {
+        "row": 3,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "length": 3,
+      "frequency_score": 90,
+      "hint_tr": "3 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "FİL",
+      "start": {
+        "row": 6,
+        "col": 7
+      },
+      "direction": "vertical",
+      "length": 3,
+      "frequency_score": 90,
+      "hint_tr": "3 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "KÜF",
+      "start": {
+        "row": 2,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 3,
+      "frequency_score": 90,
+      "hint_tr": "3 harfli bir kisa_kelimeler kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-28T21:11:33.768363+00:00",
+  "generator_version": "1.0.0"
+}

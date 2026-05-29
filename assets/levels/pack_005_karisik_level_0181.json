@@ -1,0 +1,263 @@
+{
+  "schema_version": 1,
+  "level_id": 181,
+  "pack_id": "pack_005_karisik",
+  "difficulty": "medium",
+  "difficulty_score": 38,
+  "category": "karisik",
+  "category_display_tr": "Karışık",
+  "grid_size": {
+    "rows": 10,
+    "cols": 10
+  },
+  "grid": [
+    [
+      "E",
+      "Z",
+      "E",
+      "V",
+      "A",
+      "L",
+      "S",
+      "İ",
+      "Z",
+      "U"
+    ],
+    [
+      "K",
+      "A",
+      "R",
+      "N",
+      "A",
+      "V",
+      "A",
+      "L",
+      "S",
+      "I"
+    ],
+    [
+      "K",
+      "G",
+      "Ö",
+      "N",
+      "C",
+      "Ü",
+      "E",
+      "A",
+      "L",
+      "A"
+    ],
+    [
+      "R",
+      "A",
+      "N",
+      "D",
+      "E",
+      "V",
+      "U",
+      "E",
+      "V",
+      "İ"
+    ],
+    [
+      "F",
+      "A",
+      "Z",
+      "L",
+      "A",
+      "Ş",
+      "S",
+      "B",
+      "E",
+      "L"
+    ],
+    [
+      "Ö",
+      "I",
+      "D",
+      "Ş",
+      "İ",
+      "R",
+      "Y",
+      "A",
+      "N",
+      "E"
+    ],
+    [
+      "B",
+      "A",
+      "R",
+      "K",
+      "O",
+      "D",
+      "A",
+      "N",
+      "E",
+      "Ş"
+    ],
+    [
+      "D",
+      "D",
+      "A",
+      "K",
+      "Ş",
+      "I",
+      "N",
+      "L",
+      "I",
+      "K"
+    ],
+    [
+      "T",
+      "A",
+      "K",
+      "I",
+      "R",
+      "T",
+      "I",
+      "S",
+      "I",
+      "Z"
+    ],
+    [
+      "E",
+      "Ö",
+      "R",
+      "K",
+      "N",
+      "U",
+      "O",
+      "D",
+      "U",
+      "N"
+    ]
+  ],
+  "words": [
+    {
+      "word": "KARNAVALSI",
+      "start": {
+        "row": 1,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "length": 10,
+      "frequency_score": 20,
+      "hint_tr": "10 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "TAKIRTISIZ",
+      "start": {
+        "row": 8,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "length": 10,
+      "frequency_score": 20,
+      "hint_tr": "10 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "RANDEVUEVİ",
+      "start": {
+        "row": 3,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "length": 10,
+      "frequency_score": 20,
+      "hint_tr": "10 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "ZEVALSİZ",
+      "start": {
+        "row": 0,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "length": 8,
+      "frequency_score": 40,
+      "hint_tr": "8 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "AKŞINLIK",
+      "start": {
+        "row": 7,
+        "col": 2
+      },
+      "direction": "horizontal",
+      "length": 8,
+      "frequency_score": 40,
+      "hint_tr": "8 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "ŞİRYAN",
+      "start": {
+        "row": 5,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "BARKOD",
+      "start": {
+        "row": 6,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "FAZLA",
+      "start": {
+        "row": 4,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "GÖNCÜ",
+      "start": {
+        "row": 2,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "ODUN",
+      "start": {
+        "row": 9,
+        "col": 6
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir karisik kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-28T21:12:04.668198+00:00",
+  "generator_version": "1.0.0"
+}

@@ -1,0 +1,241 @@
+{
+  "schema_version": 1,
+  "level_id": 95,
+  "pack_id": "pack_003_orta_kelimeler",
+  "difficulty": "medium",
+  "difficulty_score": 30,
+  "category": "orta_kelimeler",
+  "category_display_tr": "Orta Kelimeler",
+  "grid_size": {
+    "rows": 10,
+    "cols": 10
+  },
+  "grid": [
+    [
+      "L",
+      "E",
+      "B",
+      "B",
+      "E",
+      "Y",
+      "K",
+      "İ",
+      "M",
+      "R"
+    ],
+    [
+      "M",
+      "I",
+      "K",
+      "D",
+      "Ü",
+      "Z",
+      "M",
+      "E",
+      "C",
+      "İ"
+    ],
+    [
+      "A",
+      "Ç",
+      "R",
+      "B",
+      "R",
+      "A",
+      "D",
+      "D",
+      "Z",
+      "A"
+    ],
+    [
+      "K",
+      "Ö",
+      "İ",
+      "L",
+      "E",
+      "M",
+      "K",
+      "L",
+      "A",
+      "E"
+    ],
+    [
+      "R",
+      "M",
+      "Y",
+      "A",
+      "A",
+      "E",
+      "R",
+      "E",
+      "İ",
+      "A"
+    ],
+    [
+      "O",
+      "M",
+      "E",
+      "S",
+      "E",
+      "R",
+      "E",
+      "T",
+      "A",
+      "N"
+    ],
+    [
+      "O",
+      "E",
+      "N",
+      "Y",
+      "M",
+      "İ",
+      "K",
+      "O",
+      "Z",
+      "D"
+    ],
+    [
+      "İ",
+      "Ü",
+      "İ",
+      "M",
+      "R",
+      "İ",
+      "A",
+      "R",
+      "O",
+      "I"
+    ],
+    [
+      "İ",
+      "R",
+      "C",
+      "Ç",
+      "N",
+      "E",
+      "G",
+      "İ",
+      "E",
+      "Z"
+    ],
+    [
+      "N",
+      "E",
+      "İ",
+      "R",
+      "A",
+      "R",
+      "G",
+      "I",
+      "N",
+      "E"
+    ]
+  ],
+  "words": [
+    {
+      "word": "SERETAN",
+      "start": {
+        "row": 5,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "LEBBEYK",
+      "start": {
+        "row": 0,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "DÜZMECİ",
+      "start": {
+        "row": 1,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "YENİCİ",
+      "start": {
+        "row": 4,
+        "col": 2
+      },
+      "direction": "vertical",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "MAKRO",
+      "start": {
+        "row": 1,
+        "col": 0
+      },
+      "direction": "vertical",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "ARGIN",
+      "start": {
+        "row": 9,
+        "col": 4
+      },
+      "direction": "horizontal",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "MİKOZ",
+      "start": {
+        "row": 6,
+        "col": 4
+      },
+      "direction": "horizontal",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "ÇÖMME",
+      "start": {
+        "row": 2,
+        "col": 1
+      },
+      "direction": "vertical",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir orta_kelimeler kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-28T21:11:48.919509+00:00",
+  "generator_version": "1.0.0"
+}

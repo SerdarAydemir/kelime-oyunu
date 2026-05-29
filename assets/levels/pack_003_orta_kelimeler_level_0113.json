@@ -1,0 +1,252 @@
+{
+  "schema_version": 1,
+  "level_id": 113,
+  "pack_id": "pack_003_orta_kelimeler",
+  "difficulty": "medium",
+  "difficulty_score": 34,
+  "category": "orta_kelimeler",
+  "category_display_tr": "Orta Kelimeler",
+  "grid_size": {
+    "rows": 10,
+    "cols": 10
+  },
+  "grid": [
+    [
+      "H",
+      "U",
+      "K",
+      "U",
+      "K",
+      "E",
+      "N",
+      "E",
+      "N",
+      "Ö"
+    ],
+    [
+      "I",
+      "E",
+      "L",
+      "U",
+      "M",
+      "B",
+      "A",
+      "G",
+      "O",
+      "T"
+    ],
+    [
+      "A",
+      "A",
+      "I",
+      "I",
+      "E",
+      "E",
+      "E",
+      "E",
+      "R",
+      "I"
+    ],
+    [
+      "H",
+      "P",
+      "M",
+      "İ",
+      "T",
+      "E",
+      "L",
+      "T",
+      "E",
+      "İ"
+    ],
+    [
+      "I",
+      "E",
+      "B",
+      "E",
+      "L",
+      "İ",
+      "R",
+      "G",
+      "E",
+      "A"
+    ],
+    [
+      "M",
+      "R",
+      "A",
+      "L",
+      "Ö",
+      "T",
+      "L",
+      "E",
+      "Ğ",
+      "İ"
+    ],
+    [
+      "B",
+      "S",
+      "M",
+      "R",
+      "H",
+      "M",
+      "U",
+      "L",
+      "L",
+      "N"
+    ],
+    [
+      "I",
+      "E",
+      "A",
+      "B",
+      "E",
+      "L",
+      "İ",
+      "R",
+      "L",
+      "İ"
+    ],
+    [
+      "L",
+      "N",
+      "İ",
+      "K",
+      "A",
+      "L",
+      "İ",
+      "N",
+      "O",
+      "S"
+    ],
+    [
+      "I",
+      "K",
+      "E",
+      "N",
+      "S",
+      "B",
+      "İ",
+      "Ş",
+      "E",
+      "K"
+    ]
+  ],
+  "words": [
+    {
+      "word": "BELİRGE",
+      "start": {
+        "row": 4,
+        "col": 2
+      },
+      "direction": "horizontal",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "BELİRLİ",
+      "start": {
+        "row": 7,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "LUMBAGO",
+      "start": {
+        "row": 1,
+        "col": 2
+      },
+      "direction": "horizontal",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "HUKUKEN",
+      "start": {
+        "row": 0,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "KALİNOS",
+      "start": {
+        "row": 8,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "PERSENK",
+      "start": {
+        "row": 3,
+        "col": 1
+      },
+      "direction": "vertical",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "HIMBIL",
+      "start": {
+        "row": 3,
+        "col": 0
+      },
+      "direction": "vertical",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "ÖTLEĞİ",
+      "start": {
+        "row": 5,
+        "col": 4
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "BİŞEK",
+      "start": {
+        "row": 9,
+        "col": 5
+      },
+      "direction": "horizontal",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir orta_kelimeler kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-28T21:11:51.729395+00:00",
+  "generator_version": "1.0.0"
+}

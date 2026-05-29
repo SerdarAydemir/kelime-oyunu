@@ -1,0 +1,285 @@
+{
+  "schema_version": 1,
+  "level_id": 175,
+  "pack_id": "pack_005_karisik",
+  "difficulty": "medium",
+  "difficulty_score": 38,
+  "category": "karisik",
+  "category_display_tr": "Karışık",
+  "grid_size": {
+    "rows": 10,
+    "cols": 10
+  },
+  "grid": [
+    [
+      "İ",
+      "O",
+      "I",
+      "Ö",
+      "A",
+      "L",
+      "L",
+      "O",
+      "Ğ",
+      "E"
+    ],
+    [
+      "L",
+      "M",
+      "Y",
+      "Z",
+      "R",
+      "M",
+      "Z",
+      "Ö",
+      "C",
+      "M"
+    ],
+    [
+      "O",
+      "E",
+      "R",
+      "E",
+      "K",
+      "E",
+      "L",
+      "S",
+      "E",
+      "R"
+    ],
+    [
+      "K",
+      "V",
+      "B",
+      "N",
+      "A",
+      "K",
+      "E",
+      "B",
+      "H",
+      "E"
+    ],
+    [
+      "A",
+      "L",
+      "U",
+      "İ",
+      "S",
+      "L",
+      "T",
+      "O",
+      "R",
+      "Y"
+    ],
+    [
+      "N",
+      "İ",
+      "R",
+      "E",
+      "I",
+      "E",
+      "A",
+      "Ğ",
+      "E",
+      "L"
+    ],
+    [
+      "T",
+      "T",
+      "U",
+      "K",
+      "Z",
+      "N",
+      "R",
+      "A",
+      "Z",
+      "E"
+    ],
+    [
+      "A",
+      "H",
+      "K",
+      "I",
+      "L",
+      "M",
+      "J",
+      "T",
+      "H",
+      "M"
+    ],
+    [
+      "C",
+      "A",
+      "Ç",
+      "Z",
+      "I",
+      "E",
+      "İ",
+      "A",
+      "N",
+      "E"
+    ],
+    [
+      "I",
+      "N",
+      "A",
+      "Ç",
+      "K",
+      "K",
+      "M",
+      "T",
+      "R",
+      "K"
+    ]
+  ],
+  "words": [
+    {
+      "word": "ARKASIZLIK",
+      "start": {
+        "row": 0,
+        "col": 4
+      },
+      "direction": "vertical",
+      "length": 10,
+      "frequency_score": 20,
+      "hint_tr": "10 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "EMREYLEMEK",
+      "start": {
+        "row": 0,
+        "col": 9
+      },
+      "direction": "vertical",
+      "length": 10,
+      "frequency_score": 20,
+      "hint_tr": "10 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "MEVLİTHAN",
+      "start": {
+        "row": 1,
+        "col": 1
+      },
+      "direction": "vertical",
+      "length": 9,
+      "frequency_score": 30,
+      "hint_tr": "9 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "LOKANTACI",
+      "start": {
+        "row": 1,
+        "col": 0
+      },
+      "direction": "vertical",
+      "length": 9,
+      "frequency_score": 30,
+      "hint_tr": "9 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "EKLENMEK",
+      "start": {
+        "row": 2,
+        "col": 5
+      },
+      "direction": "vertical",
+      "length": 8,
+      "frequency_score": 40,
+      "hint_tr": "8 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "LETARJİ",
+      "start": {
+        "row": 2,
+        "col": 6
+      },
+      "direction": "vertical",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "BURUKÇA",
+      "start": {
+        "row": 3,
+        "col": 2
+      },
+      "direction": "vertical",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "BOĞATA",
+      "start": {
+        "row": 3,
+        "col": 7
+      },
+      "direction": "vertical",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "CEHRE",
+      "start": {
+        "row": 1,
+        "col": 8
+      },
+      "direction": "vertical",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "ÖZENİ",
+      "start": {
+        "row": 0,
+        "col": 3
+      },
+      "direction": "vertical",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "LOĞ",
+      "start": {
+        "row": 0,
+        "col": 6
+      },
+      "direction": "horizontal",
+      "length": 3,
+      "frequency_score": 90,
+      "hint_tr": "3 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "KIZ",
+      "start": {
+        "row": 6,
+        "col": 3
+      },
+      "direction": "vertical",
+      "length": 3,
+      "frequency_score": 90,
+      "hint_tr": "3 harfli bir karisik kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-28T21:12:03.242503+00:00",
+  "generator_version": "1.0.0"
+}

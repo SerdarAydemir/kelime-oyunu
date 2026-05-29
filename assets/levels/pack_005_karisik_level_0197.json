@@ -1,0 +1,252 @@
+{
+  "schema_version": 1,
+  "level_id": 197,
+  "pack_id": "pack_005_karisik",
+  "difficulty": "medium",
+  "difficulty_score": 37,
+  "category": "karisik",
+  "category_display_tr": "Karışık",
+  "grid_size": {
+    "rows": 10,
+    "cols": 10
+  },
+  "grid": [
+    [
+      "G",
+      "E",
+      "K",
+      "E",
+      "H",
+      "L",
+      "E",
+      "K",
+      "H",
+      "A"
+    ],
+    [
+      "L",
+      "İ",
+      "T",
+      "A",
+      "A",
+      "I",
+      "Y",
+      "İ",
+      "A",
+      "N"
+    ],
+    [
+      "İ",
+      "T",
+      "E",
+      "Y",
+      "L",
+      "A",
+      "Ö",
+      "T",
+      "P",
+      "T"
+    ],
+    [
+      "S",
+      "İ",
+      "S",
+      "R",
+      "A",
+      "N",
+      "N",
+      "A",
+      "L",
+      "İ"
+    ],
+    [
+      "E",
+      "A",
+      "E",
+      "I",
+      "S",
+      "K",
+      "E",
+      "P",
+      "O",
+      "N"
+    ],
+    [
+      "R",
+      "K",
+      "L",
+      "Ş",
+      "T",
+      "E",
+      "T",
+      "Ç",
+      "İ",
+      "O"
+    ],
+    [
+      "İ",
+      "A",
+      "S",
+      "M",
+      "A",
+      "K",
+      "İ",
+      "I",
+      "T",
+      "M"
+    ],
+    [
+      "N",
+      "S",
+      "Ü",
+      "A",
+      "M",
+      "R",
+      "L",
+      "I",
+      "T",
+      "İ"
+    ],
+    [
+      "Ş",
+      "E",
+      "L",
+      "K",
+      "E",
+      "P",
+      "M",
+      "L",
+      "R",
+      "N"
+    ],
+    [
+      "A",
+      "R",
+      "N",
+      "A",
+      "M",
+      "A",
+      "E",
+      "İ",
+      "P",
+      "Y"
+    ]
+  ],
+  "words": [
+    {
+      "word": "YÖNETİLME",
+      "start": {
+        "row": 1,
+        "col": 6
+      },
+      "direction": "vertical",
+      "length": 9,
+      "frequency_score": 30,
+      "hint_tr": "9 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "ANTİNOMİ",
+      "start": {
+        "row": 0,
+        "col": 9
+      },
+      "direction": "vertical",
+      "length": 8,
+      "frequency_score": 40,
+      "hint_tr": "8 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "TESELSÜL",
+      "start": {
+        "row": 1,
+        "col": 2
+      },
+      "direction": "vertical",
+      "length": 8,
+      "frequency_score": 40,
+      "hint_tr": "8 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "GLİSERİN",
+      "start": {
+        "row": 0,
+        "col": 0
+      },
+      "direction": "vertical",
+      "length": 8,
+      "frequency_score": 40,
+      "hint_tr": "8 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "AYRIŞMAK",
+      "start": {
+        "row": 1,
+        "col": 3
+      },
+      "direction": "vertical",
+      "length": 8,
+      "frequency_score": 40,
+      "hint_tr": "8 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "HAPLOİT",
+      "start": {
+        "row": 0,
+        "col": 8
+      },
+      "direction": "vertical",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "KİTAPÇI",
+      "start": {
+        "row": 0,
+        "col": 7
+      },
+      "direction": "vertical",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "LASTA",
+      "start": {
+        "row": 2,
+        "col": 4
+      },
+      "direction": "vertical",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir karisik kelimesi"
+    },
+    {
+      "word": "KEHLE",
+      "start": {
+        "row": 0,
+        "col": 2
+      },
+      "direction": "horizontal",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir karisik kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-28T21:12:08.355156+00:00",
+  "generator_version": "1.0.0"
+}

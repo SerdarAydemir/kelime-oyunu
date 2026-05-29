@@ -1,0 +1,241 @@
+{
+  "schema_version": 1,
+  "level_id": 6,
+  "pack_id": "pack_001_kisa_kelimeler",
+  "difficulty": "easy",
+  "difficulty_score": 19,
+  "category": "kisa_kelimeler",
+  "category_display_tr": "Kısa Kelimeler",
+  "grid_size": {
+    "rows": 10,
+    "cols": 10
+  },
+  "grid": [
+    [
+      "İ",
+      "E",
+      "R",
+      "İ",
+      "İ",
+      "A",
+      "K",
+      "S",
+      "K",
+      "L"
+    ],
+    [
+      "İ",
+      "E",
+      "İ",
+      "T",
+      "S",
+      "İ",
+      "İ",
+      "K",
+      "A",
+      "İ"
+    ],
+    [
+      "A",
+      "K",
+      "İ",
+      "B",
+      "O",
+      "Z",
+      "L",
+      "İ",
+      "C",
+      "E"
+    ],
+    [
+      "I",
+      "B",
+      "I",
+      "F",
+      "Z",
+      "A",
+      "B",
+      "A",
+      "T",
+      "E"
+    ],
+    [
+      "İ",
+      "B",
+      "R",
+      "I",
+      "A",
+      "A",
+      "R",
+      "İ",
+      "K",
+      "E"
+    ],
+    [
+      "İ",
+      "R",
+      "İ",
+      "R",
+      "I",
+      "İ",
+      "K",
+      "E",
+      "F",
+      "E"
+    ],
+    [
+      "T",
+      "S",
+      "I",
+      "A",
+      "I",
+      "O",
+      "C",
+      "A",
+      "P",
+      "E"
+    ],
+    [
+      "P",
+      "A",
+      "R",
+      "S",
+      "K",
+      "B",
+      "A",
+      "S",
+      "İ",
+      "İ"
+    ],
+    [
+      "R",
+      "A",
+      "R",
+      "İ",
+      "K",
+      "E",
+      "L",
+      "B",
+      "E",
+      "İ"
+    ],
+    [
+      "A",
+      "E",
+      "İ",
+      "R",
+      "İ",
+      "E",
+      "L",
+      "A",
+      "R",
+      "İ"
+    ]
+  ],
+  "words": [
+    {
+      "word": "LİCE",
+      "start": {
+        "row": 2,
+        "col": 6
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "ABAT",
+      "start": {
+        "row": 3,
+        "col": 5
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "PARS",
+      "start": {
+        "row": 7,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "KEFE",
+      "start": {
+        "row": 5,
+        "col": 6
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "BAS",
+      "start": {
+        "row": 7,
+        "col": 5
+      },
+      "direction": "horizontal",
+      "length": 3,
+      "frequency_score": 90,
+      "hint_tr": "3 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "FIR",
+      "start": {
+        "row": 3,
+        "col": 3
+      },
+      "direction": "vertical",
+      "length": 3,
+      "frequency_score": 90,
+      "hint_tr": "3 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "BOZ",
+      "start": {
+        "row": 2,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 3,
+      "frequency_score": 90,
+      "hint_tr": "3 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "AKS",
+      "start": {
+        "row": 0,
+        "col": 5
+      },
+      "direction": "horizontal",
+      "length": 3,
+      "frequency_score": 90,
+      "hint_tr": "3 harfli bir kisa_kelimeler kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-28T21:11:33.741771+00:00",
+  "generator_version": "1.0.0"
+}

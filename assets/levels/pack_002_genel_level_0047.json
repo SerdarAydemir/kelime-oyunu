@@ -1,0 +1,252 @@
+{
+  "schema_version": 1,
+  "level_id": 47,
+  "pack_id": "pack_002_genel",
+  "difficulty": "easy",
+  "difficulty_score": 34,
+  "category": "genel",
+  "category_display_tr": "Genel",
+  "grid_size": {
+    "rows": 10,
+    "cols": 10
+  },
+  "grid": [
+    [
+      "K",
+      "İ",
+      "M",
+      "A",
+      "M",
+      "S",
+      "U",
+      "Y",
+      "U",
+      "I"
+    ],
+    [
+      "I",
+      "I",
+      "P",
+      "Y",
+      "A",
+      "Z",
+      "I",
+      "L",
+      "A",
+      "R"
+    ],
+    [
+      "R",
+      "T",
+      "E",
+      "A",
+      "U",
+      "A",
+      "S",
+      "Ş",
+      "E",
+      "Y"
+    ],
+    [
+      "K",
+      "Y",
+      "N",
+      "S",
+      "K",
+      "D",
+      "A",
+      "U",
+      "A",
+      "L"
+    ],
+    [
+      "T",
+      "I",
+      "İ",
+      "D",
+      "Ş",
+      "E",
+      "H",
+      "E",
+      "R",
+      "E"
+    ],
+    [
+      "I",
+      "A",
+      "Ş",
+      "D",
+      "T",
+      "Y",
+      "R",
+      "İ",
+      "A",
+      "K"
+    ],
+    [
+      "R",
+      "L",
+      "T",
+      "K",
+      "U",
+      "D",
+      "U",
+      "R",
+      "U",
+      "Ş"
+    ],
+    [
+      "M",
+      "P",
+      "E",
+      "N",
+      "T",
+      "A",
+      "T",
+      "L",
+      "O",
+      "N"
+    ],
+    [
+      "A",
+      "R",
+      "D",
+      "I",
+      "A",
+      "A",
+      "B",
+      "U",
+      "U",
+      "T"
+    ],
+    [
+      "R",
+      "İ",
+      "A",
+      "K",
+      "D",
+      "İ",
+      "K",
+      "E",
+      "N",
+      "I"
+    ]
+  ],
+  "words": [
+    {
+      "word": "PENTATLON",
+      "start": {
+        "row": 7,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "length": 9,
+      "frequency_score": 30,
+      "hint_tr": "9 harfli bir genel kelimesi"
+    },
+    {
+      "word": "KIRKTIRMA",
+      "start": {
+        "row": 0,
+        "col": 0
+      },
+      "direction": "vertical",
+      "length": 9,
+      "frequency_score": 30,
+      "hint_tr": "9 harfli bir genel kelimesi"
+    },
+    {
+      "word": "İMAMSUYU",
+      "start": {
+        "row": 0,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "length": 8,
+      "frequency_score": 40,
+      "hint_tr": "8 harfli bir genel kelimesi"
+    },
+    {
+      "word": "AKDİKEN",
+      "start": {
+        "row": 9,
+        "col": 2
+      },
+      "direction": "horizontal",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir genel kelimesi"
+    },
+    {
+      "word": "KUDURUŞ",
+      "start": {
+        "row": 6,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir genel kelimesi"
+    },
+    {
+      "word": "ENİŞTE",
+      "start": {
+        "row": 2,
+        "col": 2
+      },
+      "direction": "vertical",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir genel kelimesi"
+    },
+    {
+      "word": "YAZILA",
+      "start": {
+        "row": 1,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir genel kelimesi"
+    },
+    {
+      "word": "BUUT",
+      "start": {
+        "row": 8,
+        "col": 6
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir genel kelimesi"
+    },
+    {
+      "word": "SAH",
+      "start": {
+        "row": 2,
+        "col": 6
+      },
+      "direction": "vertical",
+      "length": 3,
+      "frequency_score": 90,
+      "hint_tr": "3 harfli bir genel kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-28T21:11:37.858749+00:00",
+  "generator_version": "1.0.0"
+}

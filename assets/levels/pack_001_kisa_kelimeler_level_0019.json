@@ -1,0 +1,241 @@
+{
+  "schema_version": 1,
+  "level_id": 19,
+  "pack_id": "pack_001_kisa_kelimeler",
+  "difficulty": "easy",
+  "difficulty_score": 20,
+  "category": "kisa_kelimeler",
+  "category_display_tr": "Kısa Kelimeler",
+  "grid_size": {
+    "rows": 10,
+    "cols": 10
+  },
+  "grid": [
+    [
+      "R",
+      "K",
+      "D",
+      "D",
+      "O",
+      "R",
+      "E",
+      "K",
+      "R",
+      "O"
+    ],
+    [
+      "L",
+      "U",
+      "B",
+      "R",
+      "E",
+      "L",
+      "L",
+      "I",
+      "U",
+      "E"
+    ],
+    [
+      "D",
+      "İ",
+      "U",
+      "Ü",
+      "L",
+      "İ",
+      "R",
+      "İ",
+      "S",
+      "K"
+    ],
+    [
+      "S",
+      "S",
+      "S",
+      "İ",
+      "İ",
+      "E",
+      "A",
+      "R",
+      "I",
+      "A"
+    ],
+    [
+      "Y",
+      "B",
+      "D",
+      "E",
+      "K",
+      "A",
+      "T",
+      "K",
+      "A",
+      "R"
+    ],
+    [
+      "İ",
+      "L",
+      "A",
+      "L",
+      "A",
+      "A",
+      "D",
+      "T",
+      "I",
+      "R"
+    ],
+    [
+      "K",
+      "Ü",
+      "L",
+      "T",
+      "R",
+      "İ",
+      "İ",
+      "İ",
+      "A",
+      "Ü"
+    ],
+    [
+      "K",
+      "R",
+      "A",
+      "E",
+      "I",
+      "İ",
+      "E",
+      "A",
+      "E",
+      "E"
+    ],
+    [
+      "U",
+      "A",
+      "L",
+      "Y",
+      "Ü",
+      "K",
+      "R",
+      "A",
+      "I",
+      "E"
+    ],
+    [
+      "O",
+      "T",
+      "S",
+      "U",
+      "B",
+      "D",
+      "İ",
+      "Y",
+      "D",
+      "L"
+    ]
+  ],
+  "words": [
+    {
+      "word": "OTSU",
+      "start": {
+        "row": 9,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "KÜLT",
+      "start": {
+        "row": 6,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "DORE",
+      "start": {
+        "row": 0,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "LALA",
+      "start": {
+        "row": 5,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "İRİS",
+      "start": {
+        "row": 2,
+        "col": 5
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "YÜK",
+      "start": {
+        "row": 8,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 3,
+      "frequency_score": 90,
+      "hint_tr": "3 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "BRE",
+      "start": {
+        "row": 1,
+        "col": 2
+      },
+      "direction": "horizontal",
+      "length": 3,
+      "frequency_score": 90,
+      "hint_tr": "3 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "TIR",
+      "start": {
+        "row": 5,
+        "col": 7
+      },
+      "direction": "horizontal",
+      "length": 3,
+      "frequency_score": 90,
+      "hint_tr": "3 harfli bir kisa_kelimeler kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-28T21:11:34.827631+00:00",
+  "generator_version": "1.0.0"
+}

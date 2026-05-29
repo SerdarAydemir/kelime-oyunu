@@ -1,0 +1,263 @@
+{
+  "schema_version": 1,
+  "level_id": 2,
+  "pack_id": "pack_001_kisa_kelimeler",
+  "difficulty": "easy",
+  "difficulty_score": 22,
+  "category": "kisa_kelimeler",
+  "category_display_tr": "Kısa Kelimeler",
+  "grid_size": {
+    "rows": 10,
+    "cols": 10
+  },
+  "grid": [
+    [
+      "C",
+      "İ",
+      "R",
+      "Ü",
+      "E",
+      "N",
+      "B",
+      "E",
+      "H",
+      "K"
+    ],
+    [
+      "L",
+      "U",
+      "R",
+      "O",
+      "V",
+      "A",
+      "İ",
+      "Z",
+      "I",
+      "I"
+    ],
+    [
+      "R",
+      "R",
+      "Ü",
+      "C",
+      "U",
+      "U",
+      "A",
+      "U",
+      "R",
+      "M"
+    ],
+    [
+      "T",
+      "E",
+      "R",
+      "A",
+      "L",
+      "E",
+      "K",
+      "T",
+      "T",
+      "O"
+    ],
+    [
+      "Ü",
+      "N",
+      "İ",
+      "R",
+      "K",
+      "N",
+      "O",
+      "A",
+      "A",
+      "A"
+    ],
+    [
+      "R",
+      "O",
+      "L",
+      "R",
+      "H",
+      "L",
+      "M",
+      "N",
+      "R",
+      "R"
+    ],
+    [
+      "E",
+      "A",
+      "K",
+      "A",
+      "M",
+      "İ",
+      "İ",
+      "K",
+      "B",
+      "M"
+    ],
+    [
+      "A",
+      "V",
+      "R",
+      "M",
+      "İ",
+      "E",
+      "L",
+      "K",
+      "R",
+      "S"
+    ],
+    [
+      "A",
+      "A",
+      "E",
+      "R",
+      "R",
+      "A",
+      "E",
+      "A",
+      "İ",
+      "Ü"
+    ],
+    [
+      "A",
+      "E",
+      "K",
+      "U",
+      "P",
+      "A",
+      "O",
+      "I",
+      "T",
+      "T"
+    ]
+  ],
+  "words": [
+    {
+      "word": "ENLİ",
+      "start": {
+        "row": 3,
+        "col": 5
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "KOMİ",
+      "start": {
+        "row": 3,
+        "col": 6
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "BRİT",
+      "start": {
+        "row": 6,
+        "col": 8
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "VAİZ",
+      "start": {
+        "row": 1,
+        "col": 4
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "TÜRE",
+      "start": {
+        "row": 3,
+        "col": 0
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "RÜCU",
+      "start": {
+        "row": 2,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "HIRT",
+      "start": {
+        "row": 0,
+        "col": 8
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "KUPA",
+      "start": {
+        "row": 9,
+        "col": 2
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "SÜT",
+      "start": {
+        "row": 7,
+        "col": 9
+      },
+      "direction": "vertical",
+      "length": 3,
+      "frequency_score": 90,
+      "hint_tr": "3 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "İLK",
+      "start": {
+        "row": 4,
+        "col": 2
+      },
+      "direction": "vertical",
+      "length": 3,
+      "frequency_score": 90,
+      "hint_tr": "3 harfli bir kisa_kelimeler kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-28T21:11:33.322875+00:00",
+  "generator_version": "1.0.0"
+}

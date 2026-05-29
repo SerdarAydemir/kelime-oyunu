@@ -68,7 +68,8 @@ def generate_level(
                 for c, cell in enumerate(row)
                 if cell != ""
             }
-            filled = safe_fill(grid, word_cells, blacklist, word_strings)
+            # word_pool omitted -> filler uses the full Turkish alphabet.
+            filled = safe_fill(grid, word_cells, blacklist)
             hints = write_hints([p.word for p in placements], category)
             enriched = [
                 WordPlacement(

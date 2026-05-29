@@ -1,0 +1,285 @@
+{
+  "schema_version": 1,
+  "level_id": 111,
+  "pack_id": "pack_003_orta_kelimeler",
+  "difficulty": "medium",
+  "difficulty_score": 35,
+  "category": "orta_kelimeler",
+  "category_display_tr": "Orta Kelimeler",
+  "grid_size": {
+    "rows": 10,
+    "cols": 10
+  },
+  "grid": [
+    [
+      "S",
+      "D",
+      "E",
+      "J",
+      "E",
+      "K",
+      "T",
+      "Ö",
+      "R",
+      "U"
+    ],
+    [
+      "A",
+      "Y",
+      "R",
+      "A",
+      "N",
+      "C",
+      "I",
+      "T",
+      "C",
+      "A"
+    ],
+    [
+      "R",
+      "K",
+      "İ",
+      "Ö",
+      "O",
+      "J",
+      "A",
+      "İ",
+      "E",
+      "Ö"
+    ],
+    [
+      "B",
+      "O",
+      "N",
+      "A",
+      "D",
+      "M",
+      "T",
+      "B",
+      "L",
+      "Ğ"
+    ],
+    [
+      "A",
+      "Ş",
+      "S",
+      "U",
+      "D",
+      "G",
+      "E",
+      "Ö",
+      "S",
+      "R"
+    ],
+    [
+      "L",
+      "U",
+      "A",
+      "L",
+      "T",
+      "Ü",
+      "E",
+      "L",
+      "E",
+      "E"
+    ],
+    [
+      "D",
+      "N",
+      "N",
+      "U",
+      "A",
+      "D",
+      "S",
+      "Ü",
+      "İ",
+      "T"
+    ],
+    [
+      "O",
+      "L",
+      "L",
+      "B",
+      "H",
+      "Ü",
+      "S",
+      "N",
+      "K",
+      "İ"
+    ],
+    [
+      "Ö",
+      "M",
+      "I",
+      "E",
+      "R",
+      "C",
+      "Ü",
+      "M",
+      "U",
+      "M"
+    ],
+    [
+      "N",
+      "R",
+      "E",
+      "Y",
+      "A",
+      "Ü",
+      "R",
+      "E",
+      "O",
+      "S"
+    ]
+  ],
+  "words": [
+    {
+      "word": "TEESSÜR",
+      "start": {
+        "row": 3,
+        "col": 6
+      },
+      "direction": "vertical",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "BÖLÜNME",
+      "start": {
+        "row": 3,
+        "col": 7
+      },
+      "direction": "vertical",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "İNSANLI",
+      "start": {
+        "row": 2,
+        "col": 2
+      },
+      "direction": "vertical",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "AYRANCI",
+      "start": {
+        "row": 1,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "EJEKTÖR",
+      "start": {
+        "row": 0,
+        "col": 2
+      },
+      "direction": "horizontal",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "ÖĞRETİM",
+      "start": {
+        "row": 2,
+        "col": 9
+      },
+      "direction": "vertical",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "ULUBEY",
+      "start": {
+        "row": 4,
+        "col": 3
+      },
+      "direction": "vertical",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "GÜDÜCÜ",
+      "start": {
+        "row": 4,
+        "col": 5
+      },
+      "direction": "vertical",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "KOŞUN",
+      "start": {
+        "row": 2,
+        "col": 1
+      },
+      "direction": "vertical",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "BALDO",
+      "start": {
+        "row": 3,
+        "col": 0
+      },
+      "direction": "vertical",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "TAHRA",
+      "start": {
+        "row": 5,
+        "col": 4
+      },
+      "direction": "vertical",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "CELSE",
+      "start": {
+        "row": 1,
+        "col": 8
+      },
+      "direction": "vertical",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir orta_kelimeler kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-28T21:11:51.369161+00:00",
+  "generator_version": "1.0.0"
+}

@@ -134,20 +134,30 @@ def safe_fill(
     grid: Grid,
     word_cells: set[tuple[int, int]],
     blacklist: set[str],
-    word_pool: list[str],
+    word_pool: list[str] | None = None,
 ) -> Grid:
     """Fill empty cells with safe filler letters and return a clean grid.
 
-    The filler alphabet is derived from the letters present in `word_pool`
-    (weighted by TR_LETTER_FREQUENCY); an empty pool falls back to the full
-    Turkish alphabet. Tries up to MAX_FILL_ATTEMPTS re-randomizations.
+    The filler alphabet defaults to the full 29-letter Turkish alphabet. A
+    narrow, word-derived alphabet concentrates on common letters and collides
+    with the profanity blacklist too often, so the full alphabet (which
+    includes rare letters) is used for real generation.
+
+    `word_pool` is optional: when provided, the filler alphabet is restricted
+    to the letters present in it (weighted by TR_LETTER_FREQUENCY). This is
+    used to make the impossible-fill scenario deterministic in tests; an empty
+    pool falls back to the full alphabet. Tries up to MAX_FILL_ATTEMPTS
+    re-randomizations.
 
     Raises:
         SafetyGenerationError: if no profanity-free fill is found in time.
     """
-    letter_pool = sorted({letter for word in word_pool for letter in word})
-    if not letter_pool:
+    if word_pool is None:
         letter_pool = sorted(TR_LETTER_FREQUENCY)
+    else:
+        letter_pool = sorted({letter for word in word_pool for letter in word})
+        if not letter_pool:
+            letter_pool = sorted(TR_LETTER_FREQUENCY)
     weights = [TR_LETTER_FREQUENCY.get(letter, _FALLBACK_WEIGHT) for letter in letter_pool]
 
     for _ in range(MAX_FILL_ATTEMPTS):

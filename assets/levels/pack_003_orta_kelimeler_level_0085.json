@@ -1,0 +1,263 @@
+{
+  "schema_version": 1,
+  "level_id": 85,
+  "pack_id": "pack_003_orta_kelimeler",
+  "difficulty": "medium",
+  "difficulty_score": 33,
+  "category": "orta_kelimeler",
+  "category_display_tr": "Orta Kelimeler",
+  "grid_size": {
+    "rows": 10,
+    "cols": 10
+  },
+  "grid": [
+    [
+      "T",
+      "I",
+      "P",
+      "E",
+      "R",
+      "U",
+      "K",
+      "A",
+      "R",
+      "U"
+    ],
+    [
+      "E",
+      "R",
+      "A",
+      "R",
+      "R",
+      "Ş",
+      "U",
+      "Ç",
+      "R",
+      "D"
+    ],
+    [
+      "S",
+      "L",
+      "K",
+      "T",
+      "M",
+      "E",
+      "A",
+      "R",
+      "T",
+      "E"
+    ],
+    [
+      "P",
+      "D",
+      "I",
+      "Ş",
+      "H",
+      "N",
+      "P",
+      "S",
+      "A",
+      "N"
+    ],
+    [
+      "İ",
+      "U",
+      "L",
+      "İ",
+      "O",
+      "E",
+      "Ş",
+      "O",
+      "N",
+      "K"
+    ],
+    [
+      "H",
+      "Y",
+      "L",
+      "I",
+      "K",
+      "L",
+      "Ö",
+      "L",
+      "E",
+      "O"
+    ],
+    [
+      "K",
+      "A",
+      "I",
+      "A",
+      "U",
+      "M",
+      "M",
+      "U",
+      "L",
+      "Ç"
+    ],
+    [
+      "P",
+      "R",
+      "R",
+      "D",
+      "L",
+      "E",
+      "İ",
+      "Ğ",
+      "İ",
+      "K"
+    ],
+    [
+      "E",
+      "T",
+      "E",
+      "K",
+      "N",
+      "E",
+      "N",
+      "A",
+      "Y",
+      "A"
+    ],
+    [
+      "Y",
+      "I",
+      "Y",
+      "N",
+      "A",
+      "O",
+      "E",
+      "N",
+      "Ş",
+      "R"
+    ]
+  ],
+  "words": [
+    {
+      "word": "PERUKAR",
+      "start": {
+        "row": 0,
+        "col": 2
+      },
+      "direction": "horizontal",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "ŞENELME",
+      "start": {
+        "row": 1,
+        "col": 5
+      },
+      "direction": "vertical",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "SOLUĞAN",
+      "start": {
+        "row": 3,
+        "col": 7
+      },
+      "direction": "vertical",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "KOÇKAR",
+      "start": {
+        "row": 4,
+        "col": 9
+      },
+      "direction": "vertical",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "AKILLI",
+      "start": {
+        "row": 1,
+        "col": 2
+      },
+      "direction": "vertical",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "TANELİ",
+      "start": {
+        "row": 2,
+        "col": 8
+      },
+      "direction": "vertical",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "ŞÖMİNE",
+      "start": {
+        "row": 4,
+        "col": 6
+      },
+      "direction": "vertical",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "TESPİH",
+      "start": {
+        "row": 0,
+        "col": 0
+      },
+      "direction": "vertical",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "DUYAR",
+      "start": {
+        "row": 3,
+        "col": 1
+      },
+      "direction": "vertical",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "TEKNE",
+      "start": {
+        "row": 8,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir orta_kelimeler kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-28T21:11:47.285831+00:00",
+  "generator_version": "1.0.0"
+}

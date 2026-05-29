@@ -101,7 +101,7 @@ def test_retries_after_safety_error(monkeypatch: pytest.MonkeyPatch) -> None:
         grid: list[list[str]],
         word_cells: set[tuple[int, int]],
         blacklist: set[str],
-        word_pool: list[str],
+        word_pool: list[str] | None = None,
     ) -> list[list[str]]:
         calls["n"] += 1
         if calls["n"] == 1:

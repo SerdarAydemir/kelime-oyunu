@@ -1,0 +1,285 @@
+{
+  "schema_version": 1,
+  "level_id": 29,
+  "pack_id": "pack_001_kisa_kelimeler",
+  "difficulty": "easy",
+  "difficulty_score": 25,
+  "category": "kisa_kelimeler",
+  "category_display_tr": "Kısa Kelimeler",
+  "grid_size": {
+    "rows": 10,
+    "cols": 10
+  },
+  "grid": [
+    [
+      "I",
+      "H",
+      "O",
+      "B",
+      "İ",
+      "R",
+      "D",
+      "İ",
+      "R",
+      "İ"
+    ],
+    [
+      "N",
+      "V",
+      "A",
+      "H",
+      "A",
+      "İ",
+      "M",
+      "G",
+      "E",
+      "N"
+    ],
+    [
+      "K",
+      "K",
+      "K",
+      "A",
+      "A",
+      "L",
+      "H",
+      "V",
+      "I",
+      "N"
+    ],
+    [
+      "A",
+      "C",
+      "E",
+      "O",
+      "K",
+      "K",
+      "A",
+      "E",
+      "S",
+      "O"
+    ],
+    [
+      "Y",
+      "İ",
+      "E",
+      "Ç",
+      "U",
+      "C",
+      "U",
+      "I",
+      "İ",
+      "U"
+    ],
+    [
+      "I",
+      "C",
+      "L",
+      "S",
+      "A",
+      "D",
+      "Y",
+      "İ",
+      "L",
+      "L"
+    ],
+    [
+      "N",
+      "İ",
+      "E",
+      "Ö",
+      "I",
+      "R",
+      "I",
+      "L",
+      "E",
+      "A"
+    ],
+    [
+      "İ",
+      "Y",
+      "K",
+      "V",
+      "N",
+      "D",
+      "U",
+      "A",
+      "R",
+      "N"
+    ],
+    [
+      "I",
+      "L",
+      "İ",
+      "E",
+      "A",
+      "A",
+      "H",
+      "A",
+      "R",
+      "U"
+    ],
+    [
+      "S",
+      "N",
+      "M",
+      "M",
+      "İ",
+      "N",
+      "A",
+      "B",
+      "Y",
+      "A"
+    ]
+  ],
+  "words": [
+    {
+      "word": "VAHA",
+      "start": {
+        "row": 1,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "ULAN",
+      "start": {
+        "row": 4,
+        "col": 9
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "ÇUCU",
+      "start": {
+        "row": 4,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "OKKA",
+      "start": {
+        "row": 3,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "SÖVE",
+      "start": {
+        "row": 5,
+        "col": 3
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "ELEK",
+      "start": {
+        "row": 4,
+        "col": 2
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "İMGE",
+      "start": {
+        "row": 1,
+        "col": 5
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "DİRİ",
+      "start": {
+        "row": 0,
+        "col": 6
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "AYIN",
+      "start": {
+        "row": 3,
+        "col": 0
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "AHAR",
+      "start": {
+        "row": 8,
+        "col": 5
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "CİCİ",
+      "start": {
+        "row": 3,
+        "col": 1
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "HOBİ",
+      "start": {
+        "row": 0,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-28T21:11:35.571746+00:00",
+  "generator_version": "1.0.0"
+}

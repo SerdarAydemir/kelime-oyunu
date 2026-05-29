@@ -11,6 +11,7 @@ from itertools import product
 import pytest
 
 from kelime_gen.validators.post_fill_safety import (
+    TR_LETTER_FREQUENCY,
     SafetyGenerationError,
     safe_fill,
     scan_grid,
@@ -64,16 +65,24 @@ def test_safe_fill_produces_clean_full_grid() -> None:
         ["", "", ""],
     ]
     word_cells = {(0, 0), (0, 1), (0, 2)}
-    result = safe_fill(
-        grid,
-        word_cells=word_cells,
-        blacklist={"BCDFG"},
-        word_pool=["KEDİ", "MASA"],
-    )
+    # Default filler alphabet (word_pool omitted).
+    result = safe_fill(grid, word_cells=word_cells, blacklist={"BCDFG"})
     # Word cells untouched.
     assert result[0] == ["K", "E", "D"]
     # No empty cells remain.
     assert all(cell != "" for row in result for cell in row)
+
+
+def test_safe_fill_default_uses_full_alphabet() -> None:
+    # No word_pool -> filler drawn from the full Turkish alphabet.
+    grid = [["" for _ in range(5)] for _ in range(5)]
+    result = safe_fill(grid, word_cells=set(), blacklist=set())
+    cells = [cell for row in result for cell in row]
+    # Fully filled with valid Turkish letters.
+    assert all(cell != "" for cell in cells)
+    assert all(cell in TR_LETTER_FREQUENCY for cell in cells)
+    # A wide alphabet was used, not a narrow word-derived pool.
+    assert len(set(cells)) >= 6
 
 
 def test_safe_fill_impossible_raises() -> None:

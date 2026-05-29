@@ -1,0 +1,252 @@
+{
+  "schema_version": 1,
+  "level_id": 115,
+  "pack_id": "pack_003_orta_kelimeler",
+  "difficulty": "medium",
+  "difficulty_score": 32,
+  "category": "orta_kelimeler",
+  "category_display_tr": "Orta Kelimeler",
+  "grid_size": {
+    "rows": 10,
+    "cols": 10
+  },
+  "grid": [
+    [
+      "U",
+      "Ö",
+      "Ş",
+      "K",
+      "E",
+      "K",
+      "R",
+      "E",
+      "R",
+      "S"
+    ],
+    [
+      "S",
+      "Z",
+      "A",
+      "E",
+      "R",
+      "L",
+      "N",
+      "A",
+      "V",
+      "E"
+    ],
+    [
+      "N",
+      "E",
+      "İ",
+      "A",
+      "U",
+      "I",
+      "M",
+      "M",
+      "I",
+      "K"
+    ],
+    [
+      "A",
+      "M",
+      "F",
+      "A",
+      "L",
+      "L",
+      "U",
+      "S",
+      "N",
+      "E"
+    ],
+    [
+      "S",
+      "E",
+      "D",
+      "E",
+      "V",
+      "R",
+      "A",
+      "N",
+      "D",
+      "R"
+    ],
+    [
+      "E",
+      "K",
+      "Ş",
+      "İ",
+      "M",
+      "D",
+      "İ",
+      "K",
+      "İ",
+      "E"
+    ],
+    [
+      "S",
+      "A",
+      "D",
+      "A",
+      "L",
+      "L",
+      "İ",
+      "A",
+      "S",
+      "V"
+    ],
+    [
+      "I",
+      "D",
+      "E",
+      "F",
+      "I",
+      "Ş",
+      "K",
+      "I",
+      "A",
+      "İ"
+    ],
+    [
+      "U",
+      "U",
+      "A",
+      "T",
+      "A",
+      "K",
+      "L",
+      "I",
+      "K",
+      "T"
+    ],
+    [
+      "O",
+      "R",
+      "M",
+      "A",
+      "N",
+      "R",
+      "K",
+      "I",
+      "E",
+      "L"
+    ]
+  ],
+  "words": [
+    {
+      "word": "ATAKLIK",
+      "start": {
+        "row": 8,
+        "col": 2
+      },
+      "direction": "horizontal",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "KEREVİT",
+      "start": {
+        "row": 2,
+        "col": 9
+      },
+      "direction": "vertical",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "ŞİMDİKİ",
+      "start": {
+        "row": 5,
+        "col": 2
+      },
+      "direction": "horizontal",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "FALLUS",
+      "start": {
+        "row": 3,
+        "col": 2
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "DEVRAN",
+      "start": {
+        "row": 4,
+        "col": 2
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "ÖZEMEK",
+      "start": {
+        "row": 0,
+        "col": 1
+      },
+      "direction": "vertical",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "ORMAN",
+      "start": {
+        "row": 9,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "FIŞKI",
+      "start": {
+        "row": 7,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir orta_kelimeler kelimesi"
+    },
+    {
+      "word": "KEKRE",
+      "start": {
+        "row": 0,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir orta_kelimeler kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-28T21:11:51.739635+00:00",
+  "generator_version": "1.0.0"
+}

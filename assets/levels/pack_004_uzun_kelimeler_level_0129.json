@@ -1,0 +1,263 @@
+{
+  "schema_version": 1,
+  "level_id": 129,
+  "pack_id": "pack_004_uzun_kelimeler",
+  "difficulty": "hard",
+  "difficulty_score": 45,
+  "category": "uzun_kelimeler",
+  "category_display_tr": "Uzun Kelimeler",
+  "grid_size": {
+    "rows": 10,
+    "cols": 10
+  },
+  "grid": [
+    [
+      "K",
+      "A",
+      "R",
+      "Ş",
+      "I",
+      "L",
+      "A",
+      "Y",
+      "I",
+      "Ş"
+    ],
+    [
+      "B",
+      "Ü",
+      "Z",
+      "G",
+      "Ü",
+      "L",
+      "E",
+      "M",
+      "E",
+      "K"
+    ],
+    [
+      "A",
+      "Ğ",
+      "I",
+      "R",
+      "B",
+      "A",
+      "Ş",
+      "L",
+      "I",
+      "I"
+    ],
+    [
+      "U",
+      "Z",
+      "I",
+      "B",
+      "A",
+      "R",
+      "M",
+      "A",
+      "K",
+      "L"
+    ],
+    [
+      "G",
+      "E",
+      "R",
+      "E",
+      "Ğ",
+      "İ",
+      "N",
+      "C",
+      "E",
+      "A"
+    ],
+    [
+      "A",
+      "K",
+      "I",
+      "T",
+      "I",
+      "L",
+      "I",
+      "Ş",
+      "N",
+      "E"
+    ],
+    [
+      "V",
+      "E",
+      "J",
+      "E",
+      "T",
+      "A",
+      "L",
+      "İ",
+      "N",
+      "A"
+    ],
+    [
+      "I",
+      "N",
+      "E",
+      "B",
+      "B",
+      "A",
+      "Ş",
+      "L",
+      "I",
+      "K"
+    ],
+    [
+      "K",
+      "O",
+      "K",
+      "L",
+      "A",
+      "Y",
+      "I",
+      "Ş",
+      "A",
+      "N"
+    ],
+    [
+      "K",
+      "U",
+      "R",
+      "A",
+      "K",
+      "Ç",
+      "I",
+      "L",
+      "Ç",
+      "U"
+    ]
+  ],
+  "words": [
+    {
+      "word": "BÜZGÜLEMEK",
+      "start": {
+        "row": 1,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "length": 10,
+      "frequency_score": 20,
+      "hint_tr": "10 harfli bir uzun_kelimeler kelimesi"
+    },
+    {
+      "word": "KARŞILAYIŞ",
+      "start": {
+        "row": 0,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "length": 10,
+      "frequency_score": 20,
+      "hint_tr": "10 harfli bir uzun_kelimeler kelimesi"
+    },
+    {
+      "word": "GEREĞİNCE",
+      "start": {
+        "row": 4,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "length": 9,
+      "frequency_score": 30,
+      "hint_tr": "9 harfli bir uzun_kelimeler kelimesi"
+    },
+    {
+      "word": "VEJETALİN",
+      "start": {
+        "row": 6,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "length": 9,
+      "frequency_score": 30,
+      "hint_tr": "9 harfli bir uzun_kelimeler kelimesi"
+    },
+    {
+      "word": "NEBBAŞLIK",
+      "start": {
+        "row": 7,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "length": 9,
+      "frequency_score": 30,
+      "hint_tr": "9 harfli bir uzun_kelimeler kelimesi"
+    },
+    {
+      "word": "AĞIRBAŞLI",
+      "start": {
+        "row": 2,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "length": 9,
+      "frequency_score": 30,
+      "hint_tr": "9 harfli bir uzun_kelimeler kelimesi"
+    },
+    {
+      "word": "AKITILIŞ",
+      "start": {
+        "row": 5,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "length": 8,
+      "frequency_score": 40,
+      "hint_tr": "8 harfli bir uzun_kelimeler kelimesi"
+    },
+    {
+      "word": "ZIBARMAK",
+      "start": {
+        "row": 3,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "length": 8,
+      "frequency_score": 40,
+      "hint_tr": "8 harfli bir uzun_kelimeler kelimesi"
+    },
+    {
+      "word": "KOKLAYIŞ",
+      "start": {
+        "row": 8,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "length": 8,
+      "frequency_score": 40,
+      "hint_tr": "8 harfli bir uzun_kelimeler kelimesi"
+    },
+    {
+      "word": "KURAKÇIL",
+      "start": {
+        "row": 9,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "length": 8,
+      "frequency_score": 40,
+      "hint_tr": "8 harfli bir uzun_kelimeler kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-28T21:11:53.686075+00:00",
+  "generator_version": "1.0.0"
+}

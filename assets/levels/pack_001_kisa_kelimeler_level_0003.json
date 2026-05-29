@@ -1,0 +1,263 @@
+{
+  "schema_version": 1,
+  "level_id": 3,
+  "pack_id": "pack_001_kisa_kelimeler",
+  "difficulty": "easy",
+  "difficulty_score": 22,
+  "category": "kisa_kelimeler",
+  "category_display_tr": "Kısa Kelimeler",
+  "grid_size": {
+    "rows": 10,
+    "cols": 10
+  },
+  "grid": [
+    [
+      "N",
+      "E",
+      "A",
+      "L",
+      "R",
+      "E",
+      "Ş",
+      "A",
+      "T",
+      "O"
+    ],
+    [
+      "İ",
+      "T",
+      "L",
+      "A",
+      "A",
+      "S",
+      "T",
+      "T",
+      "A",
+      "E"
+    ],
+    [
+      "A",
+      "İ",
+      "A",
+      "İ",
+      "P",
+      "O",
+      "S",
+      "A",
+      "A",
+      "E"
+    ],
+    [
+      "M",
+      "L",
+      "Ç",
+      "A",
+      "Ş",
+      "M",
+      "A",
+      "M",
+      "A",
+      "H"
+    ],
+    [
+      "İ",
+      "K",
+      "A",
+      "O",
+      "E",
+      "A",
+      "E",
+      "A",
+      "S",
+      "K"
+    ],
+    [
+      "Ü",
+      "L",
+      "N",
+      "K",
+      "R",
+      "T",
+      "K",
+      "K",
+      "E",
+      "S"
+    ],
+    [
+      "N",
+      "N",
+      "E",
+      "R",
+      "İ",
+      "G",
+      "Ü",
+      "N",
+      "Ü",
+      "E"
+    ],
+    [
+      "A",
+      "T",
+      "R",
+      "M",
+      "İ",
+      "K",
+      "A",
+      "R",
+      "Ş",
+      "M"
+    ],
+    [
+      "K",
+      "O",
+      "L",
+      "E",
+      "R",
+      "E",
+      "A",
+      "T",
+      "L",
+      "A"
+    ],
+    [
+      "K",
+      "İ",
+      "L",
+      "L",
+      "E",
+      "S",
+      "E",
+      "N",
+      "R",
+      "E"
+    ]
+  ],
+  "words": [
+    {
+      "word": "POSA",
+      "start": {
+        "row": 2,
+        "col": 4
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "ŞERİ",
+      "start": {
+        "row": 3,
+        "col": 4
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "GÜNÜ",
+      "start": {
+        "row": 6,
+        "col": 5
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "ŞATO",
+      "start": {
+        "row": 0,
+        "col": 6
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "İLLE",
+      "start": {
+        "row": 9,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "SEMA",
+      "start": {
+        "row": 5,
+        "col": 9
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "AÇAN",
+      "start": {
+        "row": 2,
+        "col": 2
+      },
+      "direction": "vertical",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "MİKA",
+      "start": {
+        "row": 7,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "MAH",
+      "start": {
+        "row": 3,
+        "col": 7
+      },
+      "direction": "horizontal",
+      "length": 3,
+      "frequency_score": 90,
+      "hint_tr": "3 harfli bir kisa_kelimeler kelimesi"
+    },
+    {
+      "word": "SEN",
+      "start": {
+        "row": 9,
+        "col": 5
+      },
+      "direction": "horizontal",
+      "length": 3,
+      "frequency_score": 90,
+      "hint_tr": "3 harfli bir kisa_kelimeler kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-28T21:11:33.389798+00:00",
+  "generator_version": "1.0.0"
+}

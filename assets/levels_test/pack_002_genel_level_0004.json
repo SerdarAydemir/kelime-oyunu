@@ -1,0 +1,285 @@
+{
+  "schema_version": 1,
+  "level_id": 4,
+  "pack_id": "pack_002_genel",
+  "difficulty": "easy",
+  "difficulty_score": 38,
+  "category": "genel",
+  "category_display_tr": "Genel",
+  "grid_size": {
+    "rows": 10,
+    "cols": 10
+  },
+  "grid": [
+    [
+      "I",
+      "L",
+      "İ",
+      "D",
+      "E",
+      "R",
+      "F",
+      "İ",
+      "Ğ",
+      "İ"
+    ],
+    [
+      "D",
+      "İ",
+      "R",
+      "İ",
+      "L",
+      "T",
+      "İ",
+      "Ş",
+      "Ç",
+      "İ"
+    ],
+    [
+      "S",
+      "T",
+      "İ",
+      "P",
+      "İ",
+      "L",
+      "E",
+      "M",
+      "E",
+      "K"
+    ],
+    [
+      "D",
+      "İ",
+      "Z",
+      "E",
+      "M",
+      "S",
+      "İ",
+      "Z",
+      "H",
+      "B"
+    ],
+    [
+      "O",
+      "D",
+      "İ",
+      "L",
+      "İ",
+      "M",
+      "K",
+      "E",
+      "Z",
+      "A"
+    ],
+    [
+      "İ",
+      "Ş",
+      "M",
+      "U",
+      "Z",
+      "İ",
+      "P",
+      "Ç",
+      "E",
+      "A"
+    ],
+    [
+      "U",
+      "A",
+      "O",
+      "S",
+      "L",
+      "A",
+      "L",
+      "O",
+      "M",
+      "A"
+    ],
+    [
+      "D",
+      "N",
+      "L",
+      "B",
+      "İ",
+      "L",
+      "E",
+      "Ş",
+      "E",
+      "N"
+    ],
+    [
+      "A",
+      "D",
+      "A",
+      "M",
+      "C",
+      "I",
+      "L",
+      "L",
+      "I",
+      "K"
+    ],
+    [
+      "H",
+      "E",
+      "L",
+      "M",
+      "E",
+      "L",
+      "E",
+      "N",
+      "M",
+      "E"
+    ]
+  ],
+  "words": [
+    {
+      "word": "ADAMCILLIK",
+      "start": {
+        "row": 8,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "length": 10,
+      "frequency_score": 20,
+      "hint_tr": "10 harfli bir genel kelimesi"
+    },
+    {
+      "word": "HELMELENME",
+      "start": {
+        "row": 9,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "length": 10,
+      "frequency_score": 20,
+      "hint_tr": "10 harfli bir genel kelimesi"
+    },
+    {
+      "word": "TİPİLEMEK",
+      "start": {
+        "row": 2,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "length": 9,
+      "frequency_score": 30,
+      "hint_tr": "9 harfli bir genel kelimesi"
+    },
+    {
+      "word": "DİRİLTİŞ",
+      "start": {
+        "row": 1,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "length": 8,
+      "frequency_score": 40,
+      "hint_tr": "8 harfli bir genel kelimesi"
+    },
+    {
+      "word": "DİZEMSİZ",
+      "start": {
+        "row": 3,
+        "col": 0
+      },
+      "direction": "horizontal",
+      "length": 8,
+      "frequency_score": 40,
+      "hint_tr": "8 harfli bir genel kelimesi"
+    },
+    {
+      "word": "BİLEŞEN",
+      "start": {
+        "row": 7,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir genel kelimesi"
+    },
+    {
+      "word": "MUZİPÇE",
+      "start": {
+        "row": 5,
+        "col": 2
+      },
+      "direction": "horizontal",
+      "length": 7,
+      "frequency_score": 50,
+      "hint_tr": "7 harfli bir genel kelimesi"
+    },
+    {
+      "word": "SLALOM",
+      "start": {
+        "row": 6,
+        "col": 3
+      },
+      "direction": "horizontal",
+      "length": 6,
+      "frequency_score": 60,
+      "hint_tr": "6 harfli bir genel kelimesi"
+    },
+    {
+      "word": "DİLİM",
+      "start": {
+        "row": 4,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir genel kelimesi"
+    },
+    {
+      "word": "LİDER",
+      "start": {
+        "row": 0,
+        "col": 1
+      },
+      "direction": "horizontal",
+      "length": 5,
+      "frequency_score": 70,
+      "hint_tr": "5 harfli bir genel kelimesi"
+    },
+    {
+      "word": "KEZA",
+      "start": {
+        "row": 4,
+        "col": 6
+      },
+      "direction": "horizontal",
+      "length": 4,
+      "frequency_score": 80,
+      "hint_tr": "4 harfli bir genel kelimesi"
+    },
+    {
+      "word": "FİĞ",
+      "start": {
+        "row": 0,
+        "col": 6
+      },
+      "direction": "horizontal",
+      "length": 3,
+      "frequency_score": 90,
+      "hint_tr": "3 harfli bir genel kelimesi"
+    }
+  ],
+  "bonus_words": [],
+  "rewards": {
+    "coins_base": 50,
+    "coins_perfect": 100,
+    "stars_threshold_seconds": [
+      60,
+      120,
+      180
+    ]
+  },
+  "safety": {
+    "post_fill_scanned": true,
+    "scanner_version": "1.0.0"
+  },
+  "generated_at": "2026-05-28T21:13:32.064819+00:00",
+  "generator_version": "1.0.0"
+}
