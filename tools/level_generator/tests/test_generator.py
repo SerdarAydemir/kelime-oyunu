@@ -9,9 +9,10 @@ import pytest
 
 from kelime_gen import generator
 from kelime_gen.generator import generate_level, generate_pack
-from kelime_gen.schema import Difficulty, Direction, Level
+from kelime_gen.schema import Difficulty, Direction, Level, WordPlacement
 from kelime_gen.validators.post_fill_safety import SafetyGenerationError
 from kelime_gen.word_pool import PoolEntry
+from kelime_gen.word_search_generator import WordSearchGenerationError
 
 _HV = [Direction.HORIZONTAL, Direction.VERTICAL]
 
@@ -21,7 +22,7 @@ def _seed_rng() -> None:
     random.seed(42)
 
 
-def _sample_words() -> list[PoolEntry]:
+def _sample_pool() -> list[PoolEntry]:
     return [
         PoolEntry(word="KEDİ", frequency_score=80),
         PoolEntry(word="KUŞ", frequency_score=75),
@@ -36,10 +37,11 @@ def test_generate_level_success() -> None:
         difficulty=Difficulty.EASY,
         category="test",
         category_display_tr="Test",
-        words=_sample_words(),
+        word_pool=_sample_pool(),
         grid_size=6,
         directions=_HV,
         blacklist=set(),
+        words_per_level=3,
     )
     assert isinstance(level, Level)
     assert level.safety.post_fill_scanned is True
@@ -50,8 +52,9 @@ def test_generate_level_success() -> None:
 
 
 def test_generate_level_impossible_returns_none() -> None:
-    # Three 10-letter words cannot fit in a 4x4 grid -> retries exhausted -> None.
-    words = [
+    # Three 10-letter words cannot fit in a 4x4 grid; every resample draws the
+    # same three words -> all attempts exhausted -> None.
+    word_pool = [
         PoolEntry(word="ABCDEFGHIJ", frequency_score=10),
         PoolEntry(word="KLMNOPRSTU", frequency_score=10),
         PoolEntry(word="VYZABCDEFG", frequency_score=10),
@@ -62,26 +65,27 @@ def test_generate_level_impossible_returns_none() -> None:
         difficulty=Difficulty.HARD,
         category="test",
         category_display_tr="Test",
-        words=words,
+        word_pool=word_pool,
         grid_size=4,
         directions=_HV,
         blacklist=set(),
+        words_per_level=3,
     )
     assert level is None
 
 
 def test_generate_pack_writes_files(tmp_path: Path) -> None:
-    words_by_level = [_sample_words(), _sample_words()]
     ok, fail = generate_pack(
         pack_id="pack_001_test",
         level_ids=[1, 2],
-        words_by_level=words_by_level,
+        word_pool=_sample_pool(),
         difficulty=Difficulty.EASY,
         category="test",
         category_display_tr="Test",
         grid_size=6,
         directions=_HV,
         blacklist=set(),
+        words_per_level=3,
         output_dir=tmp_path,
     )
     assert ok == 2
@@ -116,10 +120,47 @@ def test_retries_after_safety_error(monkeypatch: pytest.MonkeyPatch) -> None:
         difficulty=Difficulty.EASY,
         category="test",
         category_display_tr="Test",
-        words=_sample_words(),
+        word_pool=_sample_pool(),
         grid_size=6,
         directions=_HV,
         blacklist=set(),
+        words_per_level=3,
     )
     assert level is not None
     assert calls["n"] == 2  # retried once after the SafetyGenerationError
+
+
+def test_word_resample_triggered(monkeypatch: pytest.MonkeyPatch) -> None:
+    # Force every grid attempt of the first word sample to fail, then succeed.
+    # Crossing into attempt > MAX_GRID_RESETS proves a second word sample ran.
+    calls = {"n": 0}
+    real_generate_grid = generator.generate_grid
+
+    def flaky_generate_grid(
+        words: list[str],
+        grid_size: int,
+        directions: list[Direction],
+        max_attempts: int = 1000,
+    ) -> tuple[list[list[str]], list[WordPlacement]]:
+        calls["n"] += 1
+        if calls["n"] <= generator.MAX_GRID_RESETS:
+            raise WordSearchGenerationError("forced placement failure")
+        return real_generate_grid(words, grid_size, directions, max_attempts)
+
+    monkeypatch.setattr(generator, "generate_grid", flaky_generate_grid)
+
+    level = generate_level(
+        level_id=1,
+        pack_id="pack_001_test",
+        difficulty=Difficulty.EASY,
+        category="test",
+        category_display_tr="Test",
+        word_pool=_sample_pool(),
+        grid_size=6,
+        directions=_HV,
+        blacklist=set(),
+        words_per_level=3,
+    )
+    assert level is not None
+    # Exhausted all MAX_GRID_RESETS of sample #1, then resampled words.
+    assert calls["n"] > generator.MAX_GRID_RESETS
