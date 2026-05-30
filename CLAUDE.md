@@ -22,7 +22,7 @@ Her yeni görev geldiğinde şu sırayı bozmadan uygula:
 
 ## Geliştirme Önceliği
 
-1. **Önce Python level generator** (`tools/level_generator/`) — Flutter'a tek satır yazmadan önce 200 geçerli JSON level üretilmeli.
+1. **Önce Python puzzle generator** (`tools/puzzle_generator/`) — Flutter'a tek satır yazmadan önce 200 geçerli JSON puzzle üretilmeli.
 2. **Sonra Flutter** — mock servislerle; akış onaylandıktan sonra gerçek SDK.
 
 (`skills.md §1`)
@@ -109,12 +109,13 @@ Her yeni görev geldiğinde şu sırayı bozmadan uygula:
 
 ---
 
-## Python Level Generator Kuralları
+## Python Puzzle Generator Kuralları
 
-- Post-fill küfür taraması zorunlu (`post_fill_safety.py`). `safety.post_fill_scanned = true` olmayan level dosyaya yazılmaz. (`architecture.md §7.3`)
-- Hatalı level: `SafetyGenerationError` fırlat, `sys.exit(1)` ile çık. Sessiz başarı yasak. (`coding-standards.md §8.7`)
+- Pipeline adımları (sırasıyla): CSP fill → mask template → clue_writer. (`architecture.md §7.1`)
+- Post-fill küfür taraması zorunlu (`post_fill_safety.py`). `safety.post_fill_scanned = true` olmayan puzzle dosyaya yazılmaz. (`architecture.md §7.3`)
+- Hatalı puzzle: `SafetyGenerationError` fırlat, `sys.exit(1)` ile çık. Sessiz başarı yasak. (`coding-standards.md §8.7`)
 - Türkçe büyük/küçük harf: `tr_upper()` / `tr_lower()` helper'larını kullan, `str.upper()` değil. (`architecture.md §7.6`)
-- Her level `pydantic` ile validate edilir + Flutter parse testi (CI). (`coding-standards.md §8.6`)
+- Her puzzle `pydantic` ile validate edilir + Flutter parse testi (CI). (`coding-standards.md §8.6`)
 - Windows konsolunda Türkçe karakter için: `_force_utf8_stdout()` fonksiyonuna koy,
   yalnızca `main()` / CLI giriş noktasından çağır.
   Import edilebilen modüllerin tepesine asla koyma — pytest capture'ını bozar.

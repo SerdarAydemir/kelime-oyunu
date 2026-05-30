@@ -64,8 +64,8 @@ flutter:
   uses-material-design: true
 
   assets:
-    # Generated level packs (Python generator output — FAZ 1)
-    - assets/levels/
+    # Generated puzzle packs (Python generator output — FAZ 1)
+    - assets/puzzles/
     # Placeholder dirs — populate before first build
     - assets/images/
     - assets/fonts/
