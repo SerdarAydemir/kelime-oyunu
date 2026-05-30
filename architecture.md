@@ -1,1024 +1,1386 @@
-# Mimari Dökümanı (architecture.md)
-
-> **Sürüm 3.0** — Bu dosya nedir? Projenin teknik mimarisi, klasör yapısı, veri modelleri ve sözleşmeleri (contract) tanımlar. `skills.md` "ne yapılacağını", bu dosya "nasıl yapılacağını" belirler.
-
----
-
-## 1. Klasör Yapısı (Feature-First)
-
-```
-kelime_oyunu/
-├── android/
-├── ios/
-├── assets/
-│   ├── fonts/
-│   │   ├── Inter-Regular.ttf
-│   │   ├── Inter-Bold.ttf
-│   │   └── Nunito-Bold.ttf
-│   ├── images/
-│   │   ├── icons/
-│   │   ├── illustrations/
-│   │   └── backgrounds/
-│   ├── audio/
-│   │   ├── sfx/                  # tap, success, error, level_complete
-│   │   └── music/                # menu_loop, gameplay_loop (opsiyonel)
-│   ├── levels/
-│   │   ├── pack_001_baslangic.json
-│   │   ├── pack_002_kolay.json
-│   │   └── manifest.json         # tüm packlerin listesi
-│   └── data/
-│       └── word_frequency_tr.json  # dolgu harfler + difficulty_score için
-├── lib/
-│   ├── main.dart
-│   ├── app.dart                  # MaterialApp + Bloc/Cubit Providers
-│   ├── core/
-│   │   ├── constants/
-│   │   │   ├── app_colors.dart
-│   │   │   ├── app_typography.dart
-│   │   │   ├── app_dimensions.dart
-│   │   │   ├── ad_unit_ids.dart       # --dart-define + test-ID assert
-│   │   │   ├── legal_urls.dart
-│   │   │   └── turkish_alphabet.dart  # collation + frekans
-│   │   ├── theme/
-│   │   │   ├── app_theme.dart
-│   │   │   ├── light_theme.dart
-│   │   │   └── dark_theme.dart
-│   │   ├── storage/
-│   │   │   └── secure_hive.dart       # AES key + şifreli box açma
-│   │   ├── utils/
-│   │   │   ├── turkish_locale.dart    # toUpperCase(tr), compare
-│   │   │   ├── result.dart            # Result<T, E> sealed class
-│   │   │   └── logger.dart            # debugPrint wrapper
-│   │   ├── errors/
-│   │   │   └── app_exception.dart     # sealed exception hierarchy
-│   │   ├── router/
-│   │   │   └── app_router.dart        # go_router
-│   │   └── di/
-│   │       └── service_locator.dart   # get_it
-│   ├── features/
-│   │   ├── splash/
-│   │   ├── consent/                   # KVKK + UMP + ATT
-│   │   ├── menu/                      # cubit
-│   │   ├── gameplay/                  # bloc (tutorial overlay buraya gömülü)
-│   │   │   ├── bloc/
-│   │   │   │   ├── gameplay_bloc.dart
-│   │   │   │   ├── gameplay_event.dart
-│   │   │   │   └── gameplay_state.dart
-│   │   │   ├── models/
-│   │   │   │   ├── level.dart
-│   │   │   │   ├── grid_cell.dart
-│   │   │   │   ├── word_placement.dart
-│   │   │   │   ├── active_level_state.dart   # resume için
-│   │   │   │   └── hint_type.dart
-│   │   │   ├── services/
-│   │   │   │   ├── level_loader_service.dart
-│   │   │   │   ├── word_validator_service.dart
-│   │   │   │   └── hint_service.dart
-│   │   │   ├── views/
-│   │   │   │   ├── gameplay_screen.dart
-│   │   │   │   ├── grid_painter.dart        # CustomPainter
-│   │   │   │   ├── tutorial_overlay.dart    # in-context tutorial
-│   │   │   │   ├── word_list_widget.dart
-│   │   │   │   └── hint_panel_widget.dart
-│   │   │   └── widgets/
-│   │   ├── progress/                  # cubit
-│   │   │   ├── cubit/
-│   │   │   ├── models/
-│   │   │   │   └── user_progress.dart
-│   │   │   ├── services/
-│   │   │   │   └── progress_repository.dart  # Hive
-│   │   │   └── views/
-│   │   ├── wallet/                    # cubit
-│   │   │   ├── cubit/
-│   │   │   ├── models/
-│   │   │   │   └── coin_wallet.dart
-│   │   │   └── services/
-│   │   ├── monetization/              # cubit
-│   │   │   ├── cubit/
-│   │   │   ├── services/
-│   │   │   │   ├── ad_service.dart           # interface (ağ-bağımsız)
-│   │   │   │   ├── mock_ad_service.dart
-│   │   │   │   ├── admob_ad_service.dart     # MVP impl (AppLovin v1.1+)
-│   │   │   │   ├── iap_service.dart          # interface
-│   │   │   │   ├── mock_iap_service.dart
-│   │   │   │   └── revenuecat_iap_service.dart
-│   │   │   └── views/
-│   │   │       └── shop_screen.dart
-│   │   ├── settings/                  # cubit
-│   │   └── daily/                     # v1.1 günlük puzzle
-│   ├── l10n/
-│   │   ├── app_tr.arb
-│   │   ├── app_en.arb
-│   │   └── l10n.yaml
-│   └── generated/                     # .gitignore'da
-├── test/
-│   ├── fixtures/
-│   │   ├── sample_level_easy.json
-│   │   └── sample_level_hard.json
-│   ├── features/
-│   │   ├── gameplay/
-│   │   │   ├── gameplay_bloc_test.dart
-│   │   │   └── word_validator_service_test.dart
-│   │   └── monetization/
-│   └── helpers/
-│       └── pump_app.dart
-├── integration_test/
-│   └── happy_path_test.dart
-├── tools/
-│   └── level_generator/                      # Python projesi (ÖNCE BU)
-│       ├── pyproject.toml
-│       ├── README.md
-│       ├── src/
-│       │   └── kelime_gen/
-│       │       ├── __init__.py
-│       │       ├── __main__.py               # typer CLI
-│       │       ├── schema.py                 # pydantic models
-│       │       ├── word_pool.py              # TDK temizleme + frekans
-│       │       ├── difficulty.py             # difficulty_score hesabı
-│       │       ├── word_search_generator.py  # backtracking
-│       │       ├── csp_solver.py             # crossword (opsiyonel/ileri)
-│       │       ├── hint_writer.py            # özgün ipucu üretimi
-│       │       └── validators/
-│       │           ├── schema_validator.py
-│       │           └── post_fill_safety.py   # KÜFÜR TARAMA (kritik)
-│       ├── data/
-│       │   ├── raw/
-│       │   │   ├── tdk_words.txt             # CanNuhlar repo
-│       │   │   └── profanity_blacklist.txt   # ooguz repo
-│       │   └── processed/
-│       │       └── word_pool_cleaned.json
-│       └── tests/
-├── docs/
-│   └── adr/
-│       ├── 0001-flutter-over-react-native.md
-│       ├── 0002-bloc-cubit-hybrid.md
-│       ├── 0003-hive-over-sqflite.md
-│       └── 0004-no-flame-custompainter.md
-├── pubspec.yaml
-├── analysis_options.yaml
-├── .gitignore
-├── README.md
-├── CHANGELOG.md
-├── skills.md
-├── architecture.md
-└── coding-standards.md
-```
-
----
-
-## 2. Katman Mimarisi
-
-```
-┌─────────────────────────────────────────────┐
-│  Views (Widget)                             │
-│  - Sadece UI, BlocBuilder/Listener          │
-└─────────────┬───────────────────────────────┘
-              │ Event ↓     ↑ State
-┌─────────────▼───────────────────────────────┐
-│  Bloc (gameplay) / Cubit (diğer)            │
-│  - İş mantığı, Service çağrıları             │
-└─────────────┬───────────────────────────────┘
-┌─────────────▼───────────────────────────────┐
-│  Services (interface)                       │
-│  - İş kuralları, Mock + Real implementasyon  │
-└─────────────┬───────────────────────────────┘
-┌─────────────▼───────────────────────────────┐
-│  Repositories                               │
-│  - Hive (AES), SharedPreferences, asset      │
-└─────────────┬───────────────────────────────┘
-┌─────────────▼───────────────────────────────┐
-│  Data Sources                               │
-│  - JSON files, Firebase, AdMob SDK          │
-└─────────────────────────────────────────────┘
-```
-
-**Kural:** Alt katman üstünü tanımaz. UI → Bloc/Cubit → Service → Repo → Data. Ters yön yasak.
-
-**DI:** `get_it` ile service locator. Bloc/Cubit'ler `BlocProvider` ile sağlanır; servisler `getIt<AdService>()` ile alınır.
-
----
-
-## 3. Bloc / Cubit Tasarım Şablonu
-
-### 3.1 Gameplay = Bloc (event-driven)
-```dart
-// lib/features/gameplay/bloc/gameplay_event.dart
-sealed class GameplayEvent {}
-
-class GameplayLevelLoaded extends GameplayEvent {
-  final int levelId;
-  GameplayLevelLoaded(this.levelId);
-}
-
-class GameplayCellTapped extends GameplayEvent {
-  final int row;
-  final int col;
-  GameplayCellTapped(this.row, this.col);
-}
-
-class GameplayWordSubmitted extends GameplayEvent {}
-
-class GameplayHintRequested extends GameplayEvent {
-  final HintType type;
-  GameplayHintRequested(this.type);
-}
-
-// Resume: uygulama arka plandan dönünce kaydedilmiş oturum yüklenir
-class GameplaySessionRestored extends GameplayEvent {
-  final ActiveLevelState saved;
-  GameplaySessionRestored(this.saved);
-}
-```
-
-```dart
-// lib/features/gameplay/bloc/gameplay_state.dart
-sealed class GameplayState {
-  const GameplayState();
-}
-
-class GameplayInitial extends GameplayState {
-  const GameplayInitial();
-}
-
-class GameplayLoading extends GameplayState {
-  const GameplayLoading();
-}
-
-class GameplayActive extends GameplayState {
-  final Level level;
-  final List<List<GridCell>> grid;
-  final Set<String> foundWords;
-  final List<GridCell> currentSelection;
-  final int coinsEarned;
-  final int hintsUsed;
-  final Duration elapsed;
-  final bool isTutorial;
-  final int tutorialStep;
-
-  const GameplayActive({
-    required this.level,
-    required this.grid,
-    required this.foundWords,
-    required this.currentSelection,
-    required this.coinsEarned,
-    required this.hintsUsed,
-    required this.elapsed,
-    this.isTutorial = false,
-    this.tutorialStep = 0,
-  });
-
-  GameplayActive copyWith({/* ... */});
-}
-
-class GameplayCompleted extends GameplayState {
-  final int totalCoins;
-  final int stars;
-  final Duration totalTime;
-  const GameplayCompleted({
-    required this.totalCoins,
-    required this.stars,
-    required this.totalTime,
-  });
-}
-
-class GameplayError extends GameplayState {
-  final String message;
-  const GameplayError(this.message);
-}
-```
-
-### 3.2 Diğer Ekranlar = Cubit (basit state)
-```dart
-// lib/features/wallet/cubit/wallet_cubit.dart
-class WalletCubit extends Cubit<WalletState> {
-  WalletCubit(this._repo) : super(const WalletState(balance: 0));
-  final WalletRepository _repo;
-
-  Future<void> load() async {
-    final balance = await _repo.readBalance();
-    emit(WalletState(balance: balance));
-  }
-
-  Future<bool> spend(int amount, {required String reason}) async {
-    if (state.balance < amount) return false;
-    final newBalance = state.balance - amount;
-    await _repo.writeBalance(newBalance);
-    emit(WalletState(balance: newBalance));
-    return true;
-  }
-
-  Future<void> earn(int amount, {required String source}) async {
-    final newBalance = state.balance + amount;
-    await _repo.writeBalance(newBalance);
-    emit(WalletState(balance: newBalance));
-  }
-}
-```
-
-**Kural:** State'ler sealed class (Dart 3+). `freezed` opsiyonel (paket eklemeden önce sor).
-
----
-
-## 4. Level JSON Şeması
-
-Python tarafının üreteceği ve Flutter tarafının tüketeceği **kontrat**.
-
-### 4.1 Şema
-```json
-{
-  "$schema": "https://kelime-oyunu.app/schemas/level/v1.json",
-  "schema_version": 1,
-  "level_id": 42,
-  "pack_id": "pack_002_hayvanlar",
-  "difficulty": "easy",
-  "difficulty_score": 34,
-  "category": "hayvanlar",
-  "category_display_tr": "Hayvanlar",
-  "grid_size": { "rows": 8, "cols": 8 },
-  "grid": [
-    ["K", "E", "D", "İ", "A", "R", "N", "L"],
-    ["B", "T", "K", "U", "Ş", "M", "E", "İ"]
-  ],
-  "words": [
-    {
-      "word": "KEDİ",
-      "start": { "row": 0, "col": 0 },
-      "direction": "horizontal",
-      "length": 4,
-      "frequency_score": 88,
-      "hint_tr": "Miyavlayan ev hayvanı"
-    },
-    {
-      "word": "KUŞ",
-      "start": { "row": 1, "col": 2 },
-      "direction": "horizontal",
-      "length": 3,
-      "frequency_score": 75,
-      "hint_tr": "Uçan canlı"
-    }
-  ],
-  "bonus_words": ["EK", "EL"],
-  "rewards": {
-    "coins_base": 50,
-    "coins_perfect": 100,
-    "stars_threshold_seconds": [60, 120, 180]
-  },
-  "safety": {
-    "post_fill_scanned": true,
-    "scanner_version": "1.0.0"
-  },
-  "generated_at": "2026-05-15T10:30:00Z",
-  "generator_version": "1.2.0"
-}
-```
-
-### 4.2 Alan Açıklamaları
-| Alan | Tip | Zorunlu | Açıklama |
-|---|---|---|---|
-| `schema_version` | int | ✅ | Şu an `1`. Major değişiklik → migration kodu. |
-| `level_id` | int | ✅ | Global benzersiz, 1'den başlar. |
-| `pack_id` | string | ✅ | snake_case. |
-| `difficulty` | enum | ✅ | tutorial/easy/medium/hard/expert |
-| `difficulty_score` | int (0-100) | ✅ | Hesaplanmış zorluk (bkz. § 7.4). Level sıralama + A/B test. |
-| `grid` | string[][] | ✅ | Her hücre tek Türkçe harf. **Dolgu dahil tüm grid küfür taramasından geçmiş olmalı.** |
-| `words[].frequency_score` | int (0-100) | ✅ | Kelime sıklığı; yüksek = yaygın = kolay. |
-| `words[].hint_tr` | string ≤60 | ✅ | TDK tanımı **doğrudan kullanılmaz**; özgün/yeniden yazılmış. |
-| `bonus_words` | string[] | ⚪ | Grid'de oluşmuş ek geçerli Türkçe kelimeler. |
-| `safety.post_fill_scanned` | bool | ✅ | `true` değilse Flutter level'i **yüklemeyi reddeder** (assert). |
-
-### 4.3 Manifest.json
-```json
-{
-  "version": "1.0.0",
-  "total_levels": 200,
-  "packs": [
-    {
-      "id": "pack_001_baslangic",
-      "title_tr": "Başlangıç",
-      "level_ids": [1,2,3,4,5,6,7,8,9,10],
-      "unlock_requirement": null,
-      "icon": "icons/pack_starter.png"
-    },
-    {
-      "id": "pack_002_hayvanlar",
-      "title_tr": "Hayvanlar",
-      "level_ids": [11,12,13],
-      "unlock_requirement": {
-        "type": "previous_pack_completed",
-        "pack_id": "pack_001_baslangic"
-      },
-      "icon": "icons/pack_animals.png"
-    }
-  ]
-}
-```
-
----
-
-## 5. Hive Veri Modelleri
-
-### 5.1 Box Listesi
-| Box adı | Tip | Şifreli? | İçerik |
-|---|---|---|---|
-| `user_progress` | `UserProgress` (typeId: 0) | ⚪ Hayır | Bitirilen leveller, yıldızlar |
-| `active_session` | `ActiveLevelState` (typeId: 6) | ⚪ Hayır | **Yarım kalan oturum (resume)** |
-| `coin_wallet` | `CoinWallet` (typeId: 1) | ✅ **AES** | Coin bakiyesi |
-| `app_settings` | `AppSettings` (typeId: 2) | ⚪ Hayır | Ses, müzik, dil, tema |
-| `ad_state` | `AdState` (typeId: 3) | ✅ **AES** | Son interstitial timestamp, frekans cap |
-| `iap_state` | `IapState` (typeId: 4) | ✅ **AES** | Reklamsız satın alındı mı |
-| `daily_state` | `DailyState` (typeId: 5) | ⚪ Hayır | Streak, son giriş |
-
-### 5.2 ActiveLevelState (Resume — KRİTİK)
-```dart
-// lib/features/gameplay/models/active_level_state.dart
-@HiveType(typeId: 6)
-class ActiveLevelState {
-  @HiveField(0)
-  final int levelId;
-
-  @HiveField(1)
-  final List<String> foundWords;   // şu ana dek bulunan kelimeler
-
-  @HiveField(2)
-  final int elapsedSeconds;
-
-  @HiveField(3)
-  final int hintsUsed;
-
-  @HiveField(4)
-  final DateTime lastInteractionAt;
-
-  const ActiveLevelState({
-    required this.levelId,
-    required this.foundWords,
-    required this.elapsedSeconds,
-    required this.hintsUsed,
-    required this.lastInteractionAt,
-  });
-}
-```
-- Her kelime bulunduğunda / her 10 saniyede bir `active_session` box'a yazılır (debounce).
-- Bölüm tamamlanınca box temizlenir.
-- Açılışta `active_session` doluysa → "Devam Et" kartı ana menüde gösterilir; oyuncu kaldığı yerden başlar (`GameplaySessionRestored`).
-
-### 5.3 UserProgress
-```dart
-// lib/features/progress/models/user_progress.dart
-@HiveType(typeId: 0)
-class UserProgress extends HiveObject {
-  @HiveField(0)
-  final Map<int, LevelResult> completedLevels;
-
-  @HiveField(1)
-  int currentLevelId;
-
-  @HiveField(2)
-  DateTime? lastPlayedAt;
-
-  UserProgress({
-    required this.completedLevels,
-    required this.currentLevelId,
-    this.lastPlayedAt,
-  });
-}
-
-@HiveType(typeId: 10)
-class LevelResult {
-  @HiveField(0) final int levelId;
-  @HiveField(1) final int stars;          // 1-3
-  @HiveField(2) final int durationSeconds;
-  @HiveField(3) final int hintsUsed;
-  @HiveField(4) final DateTime completedAt;
-
-  LevelResult({
-    required this.levelId,
-    required this.stars,
-    required this.durationSeconds,
-    required this.hintsUsed,
-    required this.completedAt,
-  });
-}
-```
-
-### 5.4 Şifreli Box Açma (AES)
-```dart
-// lib/core/storage/secure_hive.dart
-import 'dart:convert';
-import 'package:flutter_secure_storage/flutter_secure_storage.dart';
-import 'package:hive_flutter/hive_flutter.dart';
-
-class SecureHive {
-  static const _keyName = 'hive_aes_key';
-  static const _storage = FlutterSecureStorage();
-
-  /// Returns a stable AES cipher, generating+persisting a key on first run.
-  static Future<HiveAesCipher> cipher() async {
-    var encoded = await _storage.read(key: _keyName);
-    if (encoded == null) {
-      final key = Hive.generateSecureKey(); // 256-bit
-      encoded = base64UrlEncode(key);
-      await _storage.write(key: _keyName, value: encoded);
-    }
-    return HiveAesCipher(base64Url.decode(encoded));
-  }
-}
-```
-```dart
-// kullanım (main.dart):
-final cipher = await SecureHive.cipher();
-await Hive.openBox<CoinWallet>('coin_wallet', encryptionCipher: cipher);
-await Hive.openBox<AdState>('ad_state', encryptionCipher: cipher);
-await Hive.openBox<IapState>('iap_state', encryptionCipher: cipher);
-// şifresizler:
-await Hive.openBox<UserProgress>('user_progress');
-await Hive.openBox<ActiveLevelState>('active_session');
-```
-> Bu, dosya yöneticisiyle yapılan amatör coin/cap hilelerini ~%99 eler. Tam koruma (server-side) v2.0.
-
-### 5.5 ActiveLevelState — Lifecycle Flush (Veri Kaybı Önleme)
-
-Debounce + "kelime bulununca yaz" yetmez; kullanıcı uygulamayı ortada öldürebilir. İki katmanlı savunma:
-
-**Katman 1 — AppLifecycleListener (birincil, Flutter 3.13+):**
-```dart
-// lib/features/gameplay/bloc/gameplay_bloc.dart
-// GameplayBloc constructor'ında:
-_lifecycleListener = AppLifecycleListener(
-  onPause: _flushSessionIfDirty,    // Android: arka plana geç
-  onInactive: _flushSessionIfDirty, // iOS: kontrol merkezi vb.
-);
-
-Future<void> _flushSessionIfDirty() async {
-  final s = state;
-  if (s is! GameplayActive || !s.isDirty) return;
-  await _progressRepo.saveActiveSession(ActiveLevelState(
-    levelId: s.level.levelId,
-    foundWords: s.foundWords.toList(),
-    elapsedSeconds: s.elapsed.inSeconds,
-    hintsUsed: s.hintsUsed,
-    lastInteractionAt: DateTime.now(),
-  ));
-}
-```
-- `isDirty` flag: son flush'tan sonra state değiştiyse `true`. Gereksiz Hive yazımını engeller (`inactive` iOS'ta sık tetiklenir).
-- `AppLifecycleListener` Bloc'un `close()` içinde `dispose()` edilir.
-
-**Katman 2 — Debounce penceresi 3 sn (ikincil, lifecycle yakalanamasa diye):**
-- Her kelime bulunduğunda + her ipucu kullanımında anında yaz.
-- Ek olarak 3 saniyelik timer debounce (10 sn değil).
-
-### 5.6 Android Auto-Backup Çökme Riski ve Çözümü (ÖNEMLİ)
-
-**Risk:** Android'de `Auto-Backup` varsayılan açık. Uygulama silinip tekrar kurulunca Google Drive'dan eski şifreli `.hive` dosyaları geri yüklenir. Ama uygulama silinince Keystore'daki AES anahtarı da gider. Sonuç: eski şifreli veri + yok anahtar = `HiveError` → **açılışta çökme.**
-
-**Çözüm A (MVP — uygulandı):** `allowBackup` tamamen kapat.
-```xml
-<!-- android/app/src/main/AndroidManifest.xml -->
-<application
-    android:allowBackup="false"
-    android:fullBackupContent="false"
-    ...>
-```
-- Basit, sıfır risk. Trade-off: uygulama silinince ilerleme gider (MVP'de hesap yok zaten; kabul edilebilir).
-- v1.1'de hesap sistemi veya selective backup (B seçeneği) değerlendirilebilir.
-
-**Savunma kodu (çift güvenlik):** Yine de box açılışını `try/catch` içine al; decrypt hatası gelirse **çökme yerine** box temizle + sıfırla:
-```dart
-// lib/core/storage/secure_hive.dart
-static Future<Box<T>> openBoxSafe<T>(
-  String name, {
-  HiveCipher? cipher,
-}) async {
-  try {
-    return await Hive.openBox<T>(name, encryptionCipher: cipher);
-  } catch (e, st) {
-    FirebaseCrashlytics.instance.recordError(e, st,
-        reason: 'Hive decrypt failed — clearing box: $name');
-    await Hive.deleteBoxFromDisk(name);
-    return Hive.openBox<T>(name, encryptionCipher: cipher);
-  }
-}
-```
-Kullanıcı coin'ini kaybeder ama uygulama açılır. Kayıp < çökme.
-
----
-
-## 6. Service Interface'leri (Mock-First)
-
-### 6.1 AdService (ağ-bağımsız)
-```dart
-// lib/features/monetization/services/ad_service.dart
-abstract class AdService {
-  Future<void> initialize();
-  Future<void> requestConsent();              // UMP
-  Future<bool> showInterstitial({required String placement});
-  Future<bool> showRewarded({required String placement});
-  Stream<BannerHandle?> bannerStream({required String placement});
-  bool get isInterstitialReady;
-  bool get isRewardedReady;
-  void setRemoveAdsPurchased(bool value);
-}
-```
-- MVP implementasyonu: `admob_ad_service.dart`.
-- v1.1+ AppLovin MAX'e geçişte: `applovin_ad_service.dart` yazılır, AdService **interface'i değişmez**, Bloc/UI dokunulmaz.
-
-### 6.2 IapService
-```dart
-abstract class IapService {
-  Future<void> initialize();
-  Future<List<IapProduct>> fetchProducts();
-  Future<PurchaseOutcome> purchase(String productId);
-  Future<bool> restorePurchases();
-  Stream<EntitlementStatus> entitlementStream();
-  Future<bool> hasRemoveAdsPurchase();
-}
-```
-
-### 6.3 LevelLoaderService
-```dart
-abstract class LevelLoaderService {
-  Future<Level> loadLevel(int levelId);
-  Future<Manifest> loadManifest();
-  Future<List<Pack>> loadPacks();
-}
-```
-- `loadLevel` parse ederken `safety.post_fill_scanned == true` doğrular; değilse `LevelNotScannedException` fırlatır.
-
-### 6.4 Mock Kuralları
-- `debugPrint('[MockXService] action: $details')` her çağrıda
-- Random delay (200–800 ms)
-- Configurable failure (`MockAdService(failureRate: 0.1)`) — test için
-- Singleton (hot-reload state korunur)
-
----
-
-## 7. Python Level Generator (tools/level_generator) — ÖNCE BU YAZILIR
-
-### 7.1 Pipeline
-```
-[raw TDK list (76K)  — CanNuhlar repo]
-       ↓
-[1. profanity filter (ooguz blacklist)]
-       ↓
-[2. length filter (3–12 harf), yabancı harf (Q/W/X) ele]
-       ↓
-[3. kategori sınıflandırma (manual + LLM assist)]
-       ↓
-[4. frekans skorlama (Türkçe corpus) → frequency_score]
-       ↓
-[word_pool_cleaned.json]
-       ↓
-[generator: word_search (backtracking) / crossword (CSP)]
-       ↓
-[grid DOLGU harfleri (Türkçe frekansa göre)]
-       ↓
-[★ POST-FILL SAFETY: her satır/sütun/diyagonal n-gram küfür taraması ★]
-       ↓   (eşleşme → dolguyu re-randomize; 100 denemede çözülmezse grid reset)
-[hint_writer: özgün ipucu üretimi (LLM + insan QA)]
-       ↓
-[difficulty.py: difficulty_score hesabı]
-       ↓
-[schema_validator (pydantic) + Flutter parse testi]
-       ↓
-[assets/levels/*.json]
-```
-
-### 7.2 Pydantic Şeması
-```python
-# tools/level_generator/src/kelime_gen/schema.py
-from enum import Enum
-from pydantic import BaseModel, Field
-
-class Difficulty(str, Enum):
-    TUTORIAL = "tutorial"; EASY = "easy"; MEDIUM = "medium"
-    HARD = "hard"; EXPERT = "expert"
-
-class Direction(str, Enum):
-    HORIZONTAL = "horizontal"; VERTICAL = "vertical"
-    DIAGONAL_DOWN = "diagonal_down"; DIAGONAL_UP = "diagonal_up"
-
-class Position(BaseModel):
-    row: int = Field(ge=0); col: int = Field(ge=0)
-
-class WordPlacement(BaseModel):
-    word: str = Field(min_length=2, max_length=15)
-    start: Position
-    direction: Direction
-    length: int = Field(ge=2, le=15)
-    frequency_score: int = Field(ge=0, le=100)
-    hint_tr: str = Field(max_length=60)
-
-class GridSize(BaseModel):
-    rows: int = Field(ge=5, le=18); cols: int = Field(ge=5, le=18)
-
-class Rewards(BaseModel):
-    coins_base: int = Field(ge=10, le=500)
-    coins_perfect: int = Field(ge=20, le=1000)
-    stars_threshold_seconds: list[int] = Field(min_length=3, max_length=3)
-
-class Safety(BaseModel):
-    post_fill_scanned: bool
-    scanner_version: str
-
-class Level(BaseModel):
-    schema_version: int = 1
-    level_id: int = Field(ge=1)
-    pack_id: str
-    difficulty: Difficulty
-    difficulty_score: int = Field(ge=0, le=100)
-    category: str
-    category_display_tr: str
-    grid_size: GridSize
-    grid: list[list[str]]
-    words: list[WordPlacement] = Field(min_length=3, max_length=25)
-    bonus_words: list[str] = []
-    rewards: Rewards
-    safety: Safety
-    generated_at: str
-    generator_version: str
-```
-
-### 7.3 Post-Fill Küfür Taraması (KRİTİK — "Scrabble Efekti" Önleme)
-Dolgu harfleri rastgele konunca grid içinde istemeden küfür oluşabilir. Bu yüzden dolgudan **sonra**:
-```python
-# tools/level_generator/src/kelime_gen/validators/post_fill_safety.py
-def scan_grid(grid: list[list[str]], blacklist: set[str],
-              min_n: int = 3, max_n: int = 6) -> list[str]:
-    """Tüm yatay, dikey ve iki çapraz hatları (ve ters okunuşlarını)
-    n-gram pencereleriyle tarar; karalisteyle eşleşen alt dizgileri döndürür."""
-    hits: list[str] = []
-    lines = _all_lines(grid)  # satır + sütun + 2 diyagonal yön
-    for line in lines:
-        s = "".join(line)
-        for variant in (s, s[::-1]):  # ters okunuş da kontrol
-            for n in range(min_n, max_n + 1):
-                for i in range(len(variant) - n + 1):
-                    sub = variant[i:i + n]
-                    if sub in blacklist:
-                        hits.append(sub)
-    return hits
-```
-- `scan_grid` boş liste dönene kadar dolgu yeniden randomize edilir; katmanlı retry:
-
-```python
-# tools/level_generator/src/kelime_gen/validators/post_fill_safety.py
-
-class SafetyGenerationError(Exception):
-    """Raised when a clean grid cannot be produced within attempt budgets."""
-
-MAX_FILL_ATTEMPTS   = 100   # dolgu re-randomize
-MAX_GRID_RESETS     = 10    # aynı kelimelerle grid baştan
-MAX_WORD_RESAMPLES  = 3     # farklı kelime seti dene
-TIMEOUT_SECONDS     = 30    # mutlak zaman sınırı
-
-def safe_fill(
-    grid: list[list[str]],
-    word_cells: set[tuple[int, int]],
-    blacklist: set[str],
-    word_pool: list[str],
-) -> list[list[str]]:
-    import time
-    deadline = time.monotonic() + TIMEOUT_SECONDS
-
-    for word_attempt in range(MAX_WORD_RESAMPLES):
-        for grid_attempt in range(MAX_GRID_RESETS):
-            for fill_attempt in range(MAX_FILL_ATTEMPTS):
-                if time.monotonic() > deadline:
-                    raise SafetyGenerationError(
-                        f"Timeout after {TIMEOUT_SECONDS}s — "
-                        f"word_attempt={word_attempt}, grid_attempt={grid_attempt}"
-                    )
-                candidate = _randomize_fill(grid, word_cells)
-                if not scan_grid(candidate, blacklist):
-                    return candidate  # ✅ temiz grid bulundu
-            # 100 dolgu denemesi başarısız → grid sıfırla (farklı yerleşim)
-            grid = _reset_grid_layout(grid, word_cells)
-
-        # 10 grid reset başarısız → farklı kelime seti
-        grid, word_cells = _resample_words(word_pool)
-
-    # Her şey başarısız
-    raise SafetyGenerationError(
-        "Cannot produce profanity-free grid after all retries"
-    )
-```
-
-**Generator üst katmanında:**
-```python
-# tools/level_generator/src/kelime_gen/generator.py
-import sys
-
-def generate_level(level_id: int, ...) -> Level | None:
-    try:
-        filled_grid = safe_fill(grid, word_cells, blacklist, word_pool)
-        level = _build_level(filled_grid, ...)
-        # pydantic doğrulama — safety.post_fill_scanned False ise hata fırlatır
-        Level.model_validate(level.model_dump())
-        return level
-    except SafetyGenerationError as e:
-        print(f"[WARN] Level {level_id} skipped: {e}", file=sys.stderr)
-        return None  # build raporu "üretilemedi" listesine ekler
-
-# CLI exit code — CI bu kodu yakalar
-if failed_levels:
-    print(f"[ERROR] {len(failed_levels)} level(s) failed: {failed_levels}",
-          file=sys.stderr)
-    sys.exit(1)  # sessizce başarı döndürme; hatalı dosya asla yazılmaz
-```
-
-- `safety.post_fill_scanned = False` olan level pydantic validate'de hata verir → dosyaya yazılmaz.
-- `sys.exit(1)` ile CI pipeline görünür kırmızı olur; sessiz başarı **asla**.
-- Flutter `LevelLoaderService` hâlâ ikinci kontrol noktası: flag `False` ise `LevelNotScannedException`.
-
-### 7.4 difficulty_score
-```python
-# tools/level_generator/src/kelime_gen/difficulty.py
-def difficulty_score(level) -> int:
-    """0 (en kolay) – 100 (en zor). Ağırlıklar deneysel; Remote Config ile ayarlanabilir."""
-    grid_factor = (level.grid_size.rows * level.grid_size.cols) / (18 * 18)
-    word_count_factor = len(level.words) / 25
-    avg_len = sum(w.length for w in level.words) / len(level.words)
-    len_factor = (avg_len - 2) / 13
-    avg_freq = sum(w.frequency_score for w in level.words) / len(level.words)
-    rarity_factor = 1 - (avg_freq / 100)            # az frekans = zor
-    diag = sum(1 for w in level.words
-               if w.direction.value.startswith("diagonal")) / len(level.words)
-    raw = (0.20 * grid_factor + 0.20 * word_count_factor +
-           0.20 * len_factor + 0.30 * rarity_factor + 0.10 * diag)
-    return round(min(100, max(0, raw * 100)))
-```
-
-### 7.5 Türkçe Harf Frekansları (dolgu için)
-```python
-TR_LETTER_FREQUENCY = {
-    "A": 11.92, "E": 8.91, "İ": 8.60, "N": 7.49, "R": 6.95,
-    "L": 5.92, "I": 5.20, "K": 4.71, "D": 4.68, "M": 3.75,
-    "U": 3.43, "Y": 3.34, "T": 3.14, "S": 3.01, "O": 2.61,
-    # ... kalan harfler
-}
-```
-
-### 7.6 Türkçe İşleme (Python)
-```python
-TR_UPPER_MAP = str.maketrans("iı", "İI")
-TR_LOWER_MAP = str.maketrans("İI", "iı")
-def tr_upper(t: str) -> str: return t.translate(TR_UPPER_MAP).upper()
-def tr_lower(t: str) -> str: return t.translate(TR_LOWER_MAP).lower()
-```
-
----
-
-## 8. Routing (go_router)
-```dart
-// lib/core/router/app_router.dart
-'/'                    → SplashScreen
-'/consent'             → ConsentScreen
-'/menu'                → MenuScreen        // "Devam Et" kartı resume için burada
-'/packs'               → PacksScreen
-'/gameplay/:levelId'   → GameplayScreen    // tutorial overlay bölüm 1-4'te aktif
-'/shop'                → ShopScreen
-'/settings'            → SettingsScreen
-'/legal/privacy'       → PrivacyPolicyScreen (WebView)
-'/legal/terms'         → TermsScreen
-```
-Deep-link şeması v1.1.
-
----
-
-## 9. Tema ve Tasarım Token'ları
-```dart
-// lib/core/constants/app_colors.dart
-class AppColors {
-  static const primary = Color(0xFF1565C0);
-  static const primaryDark = Color(0xFF0D47A1);
-  static const accent = Color(0xFFFFA000);
-  static const success = Color(0xFF2E7D32);
-  static const error = Color(0xFFC62828);
-  static const warning = Color(0xFFF9A825);
-  static const gridCellNormal = Color(0xFFFAFAFA);
-  static const gridCellSelected = Color(0xFFFFE082);
-  static const gridCellFound = Color(0xFFA5D6A7);
-  static const gridCellLocked = Color(0xFFB0BEC5);
-  static const coinGold = Color(0xFFFFC107);
-  static const star = Color(0xFFFFB300);
-}
-```
-Ham `Color(0xFF...)` literal yasak; sadece `AppColors.x` veya `Theme.of(context)`.
-
----
-
-## 10. Analytics Event Şeması (Firebase)
-snake_case, ≤40 karakter.
-
-| Event | Parametreler | Ne zaman |
-|---|---|---|
-| `app_open` | `is_first_open` | Açılış |
-| `consent_given` / `consent_denied` | `consent_type` (kvkk/ump/att) | Rıza |
-| `tutorial_step_done` | `step_index` | In-context tutorial adımı |
-| `tutorial_completed` | `total_steps` | Tutorial bitti |
-| `level_started` | `level_id`, `difficulty`, `difficulty_score`, `category` | Bölüme girildi |
-| `level_completed` | `level_id`, `duration_seconds`, `stars`, `hints_used`, `coins_earned` | Bitti |
-| `level_resumed` | `level_id`, `found_words_count` | Yarım oturum devam |
-| `level_abandoned` | `level_id`, `found_words_count` | Bölümden çıkıldı |
-| `hint_used` | `level_id`, `hint_type`, `source` (coin/ad) | İpucu |
-| `ad_shown` | `ad_type`, `placement`, `network` | Reklam |
-| `ad_rewarded_completed` | `placement`, `reward_type`, `reward_amount` | Ödüllü tamam |
-| `iap_initiated` / `iap_completed` / `iap_failed` | `product_id`, `price_local`/`error_code` | IAP |
-| `coins_spent` / `coins_earned` | `amount`, `reason`/`source` | Ekonomi |
-
-**User properties:** `total_levels_completed`, `is_paying_user`, `consent_status`, `total_play_minutes`.
-
----
-
-## 11. Environment ve Build
-
-### 11.1 --dart-define Anahtarları
-```bash
-flutter build apk --release \
-  --dart-define=ADMOB_APP_ID_ANDROID=ca-app-pub-xxx~yyy \
-  --dart-define=ADMOB_INTERSTITIAL_ID_ANDROID=ca-app-pub-xxx/zzz \
-  --dart-define=ADMOB_REWARDED_ID_ANDROID=ca-app-pub-xxx/www \
-  --dart-define=ADMOB_BANNER_ID_ANDROID=ca-app-pub-xxx/vvv \
-  --dart-define=REVENUECAT_PUBLIC_KEY_ANDROID=goog_xxx \
-  --dart-define=ENV=production
-```
-
-### 11.2 Build Flavors
-`dev` (test reklamı, dev Firebase) / `staging` / `production`.
-
-### 11.3 Secret Sınırı
-- `--dart-define` ile geçirilen değerler APK içinden okunabilir; ama AdMob unit ID + RevenueCat **public** key zaten public sayılır → **MVP için kabul edilen risk**.
-- **Gerçek sırlar (RevenueCat secret key, imza anahtarı, ileride backend JWT secret) ASLA client'ta değil.** Yalnızca sunucu tarafında.
-
-### 11.4 Test-ID Production Koruması (ZORUNLU)
-Test AdMob ID'si canlıda kalırsa Google hesabı askıya alır. `ad_unit_ids.dart`:
-```dart
-// lib/core/constants/ad_unit_ids.dart
-import 'package:flutter/foundation.dart';
-
-class AdUnitIds {
-  static const _testInterstitial = 'ca-app-pub-3940256099942544/1033173712';
-
-  static const interstitialAndroid = String.fromEnvironment(
-    'ADMOB_INTERSTITIAL_ID_ANDROID',
-    defaultValue: _testInterstitial,
-  );
-
-  /// Call once at startup. Crashes early in release if a test ID leaked.
-  static void assertNoTestIdsInRelease() {
-    if (kReleaseMode) {
-      assert(
-        !interstitialAndroid.contains('3940256099942544'),
-        'TEST AdMob ID detected in RELEASE build — aborting.',
-      );
-      // assert release'de çalışmaz; ek olarak hard guard:
-      if (interstitialAndroid.contains('3940256099942544')) {
-        throw StateError('Test AdMob ID in release build');
-      }
-    }
-  }
-}
-```
-
-### 11.5 .gitignore Önemli Maddeler
-```
-/lib/generated/
-/build/
-.dart_tool/
-.env
-.env.*
-*.keystore
-google-services.json
-GoogleService-Info.plist
-ios/Runner/Configs/Secrets.xcconfig
-```
-> Firebase config dev/staging için repo'da olabilir; production CI secret'tan inject.
-
----
-
-## 12. Test Stratejisi (özet — detay coding-standards.md)
-| Tip | Coverage | Konum |
-|---|---|---|
-| Unit (service + bloc/cubit) | %85+ | `test/features/*/` |
-| Widget | smoke + kritik | `test/features/*/views/` |
-| Integration | happy path | `integration_test/` |
-| Python generator | %70+ | `tools/level_generator/tests/` |
-
-Python tarafında **post-fill küfür taraması** için ayrı test seti zorunlu (bilinen kötü gridler fixture olarak).
-
----
-
-## 13. ADR (Mimari Karar Kayıtları)
-`docs/adr/` altında:
-- `0001-flutter-over-react-native.md`
-- `0002-bloc-cubit-hybrid.md`
-- `0003-hive-over-sqflite.md`
-- `0004-no-flame-custompainter.md` ← Flame'i neden çıkardığımız
-
----
-
-## 14. Versiyon Geçmişi
-| Sürüm | Tarih | Değişiklik |
-|---|---|---|
-| 1.0 | 2026-05 | İlk taslak |
-| 3.0 | 2026-05 | Flame çıkarıldı (klasör/model güncellendi); ActiveLevelState (resume); AES şifreli box'lar + SecureHive; AdMob-only servis (admob_ad_service); difficulty_score + difficulty.py; post-fill küfür taraması (post_fill_safety.py + safety alanı); test-ID assert; tutorial overlay gameplay'e gömüldü; Bloc/Cubit ayrımı klasöre yansıtıldı |
+# \# architecture.md — Mimari Dokümanı (v4.1)
+
+# 
+
+# > \*\*SÜRÜM NOTU (v4.1 — BÜYÜK YENİDEN TASARIM)\*\*
+
+# > Bu sürüm, oyunu "word search" (harf ızgarasında gizli kelime arama) mekaniğinden,
+
+# > \*\*rekabetçi İskandinav çengel bulmaca\*\* (Easybrain "Cross Up" tarzı) mekaniğine taşır.
+
+# > Oyuncu, bir bota karşı sıra-tabanlı puan yarışı yapar; elindeki harfleri ipuçlu
+
+# > bulmaca tahtasına yerleştirir.
+
+# >
+
+# > v3.x'teki word search grid üretimi (`word\_search\_generator.py`) ve eski JSON şema
+
+# > \*\*terk edilmiştir\*\*. Korunan altyapı için bkz. §12 (Korunan/Atılan Kod).
+
+# 
+
+# \---
+
+# 
+
+# \## İçindekiler
+
+# 1\. Oyun Mekaniği Spesifikasyonu
+
+# 2\. Klasör Yapısı (Feature-First)
+
+# 3\. Katman Mimarisi ve State Yönetimi
+
+# 4\. JSON Şema v2 (Puzzle Veri Modeli)
+
+# 5\. Mask Template Sistemi
+
+# 6\. CSP Fill Algoritması (Python)
+
+# 7\. İpucu Sistemi (TDK → LLM → Placeholder)
+
+# 8\. Flutter Runtime: GameBloc + Skor Motoru
+
+# 9\. Flutter Runtime: AI Rakip (Bot)
+
+# 10\. Flutter Runtime: Harf Yerleştirme + Animasyon
+
+# 11\. Veri Saklama (Hive) + Resume
+
+# 12\. Reklam ve Monetizasyon
+
+# 13\. Korunan / Atılan Kod Tablosu
+
+# 14\. Türkçe Dil Kuralları
+
+# 15\. Üretim Hattı Özeti (Pipeline)
+
+# 
+
+# \---
+
+# 
+
+# \## 1. Oyun Mekaniği Spesifikasyonu
+
+# 
+
+# \### 1.1 Genel Akış
+
+# \- Oyun \*\*günlük\*\*: her gün bir bot profiliyle (örn. "Sokrates") eşleşilir.
+
+# \- \*\*Sıra-tabanlı\*\*: Önce oyuncu hamle yapar → "Onayla" → sonra bot hamle yapar → tekrar oyuncu.
+
+# \- Oyun, \*\*tahtadaki son boş hücre dolunca\*\* biter. Süre sınırı yoktur.
+
+# \- Yarıda bırakılırsa, \*\*kaldığı yerden devam\*\* edilir (resume, §11).
+
+# \- Bitişte: basit özet ekranı ("Kazandın! 109 vs 38, +71 puan fark"). \*\*Zengin istatistik dashboard MVP'de YOK.\*\*
+
+# 
+
+# \### 1.2 Tahta (Grid)
+
+# \- İskandinav çengel bulmaca: ipucu hücreleri grid \*\*içinde\*\*, ok yönüyle.
+
+# \- İpucu tipi: \*\*metin\*\* ("İÇİNE ALMAK") veya \*\*görsel\*\* (MVP'de görsel sonra, §7).
+
+# \- \*\*Çift ipucu hücresi\*\*: bir hücrede 2 ipucu, farklı yönlere (örn. üst yarı "ESKİ HÜKÜMDAR UNVANI" → sağ ok, alt yarı "ON BİRİNCİ AY" → aşağı ok).
+
+# \- Oklar: sağ (→) veya aşağı (↓). Kelime, ipucu hücresinden ok yönünde uzanır.
+
+# \- Kelimeler \*\*kesişir\*\* (intersection): ortak hücre, iki kelime için de geçerli harf.
+
+# \- \*\*Tek-harf cevaplar\*\* olabilir ("ÜÇÜNCÜ HARFİMİZ" → C; "KLORUN SİMGESİ" → tek hücre).
+
+# \- Türkçe karakterler: Ç, Ş, Ğ, İ, I, Ö, Ü tam desteklenir (kuyruklu Ş/Ç render dahil).
+
+# 
+
+# \### 1.3 Harf Eli (Rack)
+
+# \- Başlangıçta \*\*5 harf\*\*.
+
+# \- \*\*Reklam izleyerek 6. harf\*\* açılır (rack'teki "+/Ad" yuvası → rewarded video).
+
+# \- Rack harfleri, \*\*tahtada çözülmesi gereken hücrelere uygun\*\* rastgele dağıtılır (Scrabble torbası DEĞİL — bulmacanın ihtiyaç duyduğu harfler ağırlıklı).
+
+# \- Bir hamle onaylandıktan sonra rack eksilen harf sayısı kadar yeniden doldurulur.
+
+# &#x20; - \*\*İstisna:\*\* Yanlış yerleştirilen harf rack'e geri döner; sıra tekrar gelince o harf rack'te kalır (yani 5 yerine 4 yeni harf gelir, biri eski).
+
+# 
+
+# \### 1.4 Puanlama (KESİN KURALLAR)
+
+# | Olay | Puan |
+
+# |------|------|
+
+# | Doğru harf yerleştirme | \*\*+1\*\* (her harf, yeşil "+1" animasyonu) |
+
+# | Yanlış harf yerleştirme | \*\*−1\*\* (kırmızı "−1", harf rack'e döner) |
+
+# | Bir kelimeyi tamamlama | \*\*kelime uzunluğu kadar\*\* bonus (örn. 4 harfli → +4) |
+
+# | Eli tamamen boşaltma (5 harf) | \*\*+5\*\* ("Harikasın 🚀 Muhteşem 5'li") |
+
+# | Eli tamamen boşaltma (6 harf, power-up'lı) | \*\*+6\*\* ("Etkileyici 🎉 Süper 6'lı") |
+
+# 
+
+# > \*\*NOT — İki ayrı bonus:\*\* "Kelime tamamlama" bonusu (kelime uzunluğu kadar) ve
+
+# > "el boşaltma" bonusu (5 veya 6) \*\*farklı\*\* şeylerdir. Bir hamlede ikisi de gerçekleşebilir.
+
+# 
+
+# \### 1.5 Aksiyon Butonları (Alt Panel)
+
+# \- \*\*Değiştir\*\* (sol): Bottom-sheet açar, "en fazla 5 harf seç" → reklam izle → yeni harfler. Sıra harcar.
+
+# \- \*\*Pas / Onayla\*\* (orta): Grid'e harf konmadıysa "Pas" (sıra bota geçer), en az 1 harf konduysa "Onayla".
+
+# \- \*\*Kelime / "K" (sağ, Ad rozetli)\*\*: İpucu hücresine tıklayınca açılan modal — "Bu ipucunu kullanmak istiyor musun? → Kelimeyi Aç" → reklam izle → o kelime açığa çıkar (gri harflerle). Sıra harcamaz (yardım).
+
+# 
+
+# \### 1.6 Renk Kodları (Tahta)
+
+# \- \*\*Turuncu/sabit siyah harf\*\*: oyuncunun doğru yerleştirdiği, kalıcı.
+
+# \- \*\*Yeşil "+1" / "+N" rozeti\*\*: puan animasyonu (kısa süreli).
+
+# \- \*\*Kırmızı çerçeve + "−1"\*\*: yanlış yerleştirme.
+
+# \- \*\*Gri harf\*\*: "Kelimeyi Aç" ile açılan veya bot tarafından doldurulan harf.
+
+# \- \*\*Yeşil arka plan hücre\*\*: ipucu hücresi.
+
+# 
+
+# \### 1.7 Ekranlar
+
+# \- \*\*Yükleme\*\*: logo + progress bar + silik ipucu görselleri arka planda ("Yükleniyor...").
+
+# \- \*\*Günlük Rakip popup\*\*: "Bugün Rakibin: Sokrates" + avatar + açıklama + "Oyuna Başla".
+
+# \- \*\*Oyun ekranı\*\*: üst skor tabelası (Sen X vs Y Bot+avatar), scrollable grid, rack, aksiyon barı, alt banner.
+
+# \- \*\*Oyun sonu\*\*: "Kazandın!/Kaybettin" + skorlar + fark + "Yarın yeni karşılaşma".
+
+# \- \*\*3 sekmeli alt nav\*\* (genel uygulama): Ana / Günlük / Profil(Me).
+
+# 
+
+# \---
+
+# 
+
+# \## 2. Klasör Yapısı (Feature-First)
+
+# 
+
+# ```
+
+# lib/
+
+# ├── main.dart
+
+# ├── app.dart
+
+# ├── core/
+
+# │   ├── constants/        # app\_colors, app\_typography, app\_dimensions
+
+# │   ├── theme/            # app\_theme (light + dark)
+
+# │   ├── router/           # app\_router (go\_router)
+
+# │   ├── utils/            # result.dart, logger.dart, turkish.dart
+
+# │   ├── errors/           # app\_exception.dart
+
+# │   └── di/               # service\_locator.dart (get\_it)
+
+# ├── data/
+
+# │   ├── models/           # puzzle, cell, word, player\_state, bot\_profile (Hive + json)
+
+# │   ├── repositories/     # puzzle\_repository, progress\_repository
+
+# │   └── sources/          # asset\_puzzle\_source (JSON loader), secure\_hive
+
+# ├── features/
+
+# │   ├── gameplay/
+
+# │   │   ├── bloc/         # game\_bloc, game\_event, game\_state
+
+# │   │   ├── engine/       # score\_engine, bot\_engine, rack\_manager
+
+# │   │   ├── view/         # game\_screen
+
+# │   │   └── widgets/      # grid\_painter, rack\_widget, score\_header,
+
+# │   │                     #   action\_bar, clue\_modal, swap\_sheet, flying\_letter
+
+# │   ├── matchmaking/      # daily\_opponent (bot seçimi + popup)
+
+# │   ├── home/             # ana menü + sekmeler
+
+# │   ├── result/           # oyun sonu özet ekranı
+
+# │   ├── monetization/     # ad\_service, iap\_service (+ mock'lar)
+
+# │   └── settings/
+
+# └── l10n/                 # .arb dosyaları (tr)
+
+# 
+
+# assets/
+
+# ├── puzzles/              # Python'ın ürettiği .json bölümler + manifest.json
+
+# ├── clue\_images/          # (FAZ ileri) görsel ipuçları
+
+# ├── fonts/
+
+# └── audio/
+
+# 
+
+# tools/
+
+# └── puzzle\_generator/     # (eski level\_generator yeniden adlandırılır)
+
+# &#x20;   ├── src/kelime\_gen/
+
+# &#x20;   │   ├── schema.py            # YENİ v2 şema
+
+# &#x20;   │   ├── word\_pool.py         # KORUNDU (Türkçe filtre + frekans)
+
+# &#x20;   │   ├── mask\_template.py     # YENİ: mask yükle + transform
+
+# &#x20;   │   ├── csp\_filler.py        # YENİ: AC-3 + backtracking fill
+
+# &#x20;   │   ├── clue\_writer.py       # YENİ: TDK/placeholder ipucu
+
+# &#x20;   │   ├── post\_fill\_safety.py  # KORUNDU (küfür tarama, uyarlanır)
+
+# &#x20;   │   ├── difficulty.py        # UYARLANIR
+
+# &#x20;   │   ├── generator.py         # YENİDEN: mask seç → fill → ipucu → doğrula
+
+# &#x20;   │   └── \_\_main\_\_.py          # CLI
+
+# &#x20;   ├── templates/               # YENİ: elle tasarlanmış mask şablonları
+
+# &#x20;   │   ├── small\_\*.json   (6×5)
+
+# &#x20;   │   ├── medium\_\*.json  (8×6)
+
+# &#x20;   │   └── large\_\*.json   (10×7)
+
+# &#x20;   └── tests/
+
+# ```
+
+# 
+
+# \---
+
+# 
+
+# \## 3. Katman Mimarisi ve State Yönetimi
+
+# 
+
+# \### 3.1 Katman Sırası
+
+# ```
+
+# View → Bloc/Cubit → Engine → Repository → Source/Data
+
+# ```
+
+# Ters yön çağrı yasak. UI iş mantığı içermez; event gönderir, state dinler.
+
+# 
+
+# \### 3.2 State Yönetimi
+
+# \- \*\*Gameplay → `Bloc`\*\* (event-driven, karmaşık sıra-tabanlı akış).
+
+# \- \*\*Diğer her şey → `Cubit`\*\* (home, settings, matchmaking, result).
+
+# \- Gameplay'in alt motorları (`ScoreEngine`, `BotEngine`, `RackManager`) \*\*saf Dart sınıflarıdır\*\* (Bloc'tan bağımsız, unit-test edilebilir). Bloc bunları orkestratör olarak kullanır.
+
+# 
+
+# \### 3.3 Neden Flame YOK (ADR-0004 devam)
+
+# Grid + animasyonlar `CustomPainter` + `AnimationController` + `Overlay` ile çözülür.
+
+# Flame, bu 2D ızgara-tabanlı, fizik içermeyen oyun için aşırı ağırdır. Harf uçma
+
+# animasyonu Overlay+AnimatedPositioned ile yapılır (§10).
+
+# 
+
+# \---
+
+# 
+
+# \## 4. JSON Şema v2 (Puzzle Veri Modeli)
+
+# 
+
+# \### 4.1 Üst Seviye Yapı
+
+# ```json
+
+# {
+
+# &#x20; "schema\_version": 2,
+
+# &#x20; "puzzle\_id": 27,
+
+# &#x20; "size": "medium",
+
+# &#x20; "grid": { "rows": 8, "cols": 6 },
+
+# &#x20; "cells": \[ /\* CellSpec\[] — aşağıda \*/ ],
+
+# &#x20; "words": \[ /\* WordSpec\[] — aşağıda \*/ ],
+
+# &#x20; "difficulty": "medium",
+
+# &#x20; "difficulty\_score": 45,
+
+# &#x20; "template\_id": "medium\_03",
+
+# &#x20; "safety": { "post\_fill\_scanned": true, "scanner\_version": "2.0.0" },
+
+# &#x20; "generated\_at": "2026-05-29T23:01:00Z",
+
+# &#x20; "generator\_version": "2.0.0"
+
+# }
+
+# ```
+
+# 
+
+# \### 4.2 CellSpec — Her hücrenin tipi
+
+# Grid `rows×cols` boyutunda; her hücre şu tiplerden biri:
+
+# 
+
+# ```json
+
+# // Boş harf hücresi (oyuncu dolduracak)
+
+# { "row": 1, "col": 1, "type": "letter", "solution": "K", "word\_ids": \["w1", "w7"] }
+
+# 
+
+# // Tek ipucu hücresi
+
+# { "row": 0, "col": 1, "type": "clue",
+
+# &#x20; "clues": \[ { "text": "İÇİNE ALMAK", "arrow": "down", "word\_id": "w1" } ] }
+
+# 
+
+# // Çift ipucu hücresi (2 ipucu, farklı yönler)
+
+# { "row": 2, "col": 3, "type": "clue",
+
+# &#x20; "clues": \[
+
+# &#x20;   { "text": "ESKİ HÜKÜMDAR UNVANI", "arrow": "right", "word\_id": "w4" },
+
+# &#x20;   { "text": "ON BİRİNCİ AY",        "arrow": "down",  "word\_id": "w5" }
+
+# &#x20; ] }
+
+# 
+
+# // Görsel ipucu hücresi (FAZ ileri — MVP'de image\_id null/opsiyonel)
+
+# { "row": 0, "col": 4, "type": "clue",
+
+# &#x20; "clues": \[ { "text": "Lahana", "image\_id": "cabbage", "arrow": "down", "word\_id": "w3" } ] }
+
+# 
+
+# // Bloklu/kullanılmayan hücre (tahtanın dışı kalan boşluklar)
+
+# { "row": 5, "col": 2, "type": "blank" }
+
+# ```
+
+# 
+
+# \*\*Alan kuralları:\*\*
+
+# \- `arrow`: `"right"` | `"down"` (MVP). İleride çapraz eklenebilir ama PLAN DIŞI.
+
+# \- `solution`: tek Türkçe büyük harf (`tr\_upper` ile normalize, §14).
+
+# \- `word\_ids`: bu hücrenin parçası olduğu kelime(ler); kesişim hücresinde >1.
+
+# \- Bir `clue` hücresi 1 veya 2 ipucu taşır (`clues` listesi 1-2 eleman).
+
+# 
+
+# \### 4.3 WordSpec — Her kelimenin tanımı
+
+# ```json
+
+# {
+
+# &#x20; "id": "w1",
+
+# &#x20; "answer": "KAPSAMAK",
+
+# &#x20; "length": 8,
+
+# &#x20; "direction": "down",
+
+# &#x20; "clue\_cell": { "row": 0, "col": 1 },
+
+# &#x20; "start\_cell": { "row": 1, "col": 1 },
+
+# &#x20; "cells": \[ {"row":1,"col":1}, {"row":2,"col":1}, ... ],
+
+# &#x20; "clue": { "text": "İÇİNE ALMAK", "image\_id": null, "source": "placeholder" },
+
+# &#x20; "frequency\_score": 35
+
+# }
+
+# ```
+
+# \- `cells`: çözüm hücrelerinin sıralı listesi (ipucu hücresi hariç).
+
+# \- `clue.source`: `"tdk"` | `"llm"` | `"placeholder"` (§7).
+
+# \- `frequency\_score`: word\_pool'dan gelir (difficulty hesabı için).
+
+# \- Tek-harf kelime: `length: 1`, `cells` tek eleman.
+
+# 
+
+# \### 4.4 Doğrulama Kuralları (schema\_validator)
+
+# \- Her `WordSpec.cells\[i]` → `grid` sınırları içinde.
+
+# \- Her çözüm hücresi `cells\[i]` için `CellSpec.solution == answer\[i]`.
+
+# \- Kesişim: bir `letter` hücresi birden çok `word\_id` taşıyorsa, tüm o kelimelerin
+
+# &#x20; o noktadaki harfi \*\*aynı\*\* olmalı (uyumlu kesişim — çatışma = geçersiz).
+
+# \- `clue\_cell` tipi `clue` olmalı ve ilgili `word\_id`'yi içermeli.
+
+# \- `safety.post\_fill\_scanned == true` değilse dosya yazılmaz (§6.4, korunan kural).
+
+# \- Türkçe upper-case: tüm `answer` ve `solution` `tr\_upper` formatında.
+
+# 
+
+# \---
+
+# 
+
+# \## 5. Mask Template Sistemi
+
+# 
+
+# \### 5.1 Neden Şablon? (Strateji 1)
+
+# Akademik literatür (Engel 2009, TU München): İskandinav crossword üretimi iki problemdir —
+
+# (1) \*\*mask\*\* (hücre yerleşimi + ok yönleri) ve (2) \*\*fill\*\* (kelime doldurma). Mask üretimi
+
+# zordur ve otomatik çözümler düşük kalitelidir; fill ise çözülmüş bir CSP problemidir.
+
+# 
+
+# \*\*Kararımız:\*\* Mask'leri \*\*elle/yarı-elle tasarla\*\* (Strateji 1 + hibrit-C: Claude Code taslak
+
+# üretir, kullanıcı seçer/düzeltir), fill'i \*\*CSP ile otomatik\*\* yap.
+
+# 
+
+# \### 5.2 Çeşitlilik Stratejisi (Tek-tip mask sorununun çözümü)
+
+# İki katman:
+
+# 1\. \*\*Çok şablon\*\*: 3 boyut × \~15+ şablon = 45+ elle şablon. Bilinçli çeşitlilik
+
+# &#x20;  (sağ kolonda bazen tek uzun kelime, bazen 2-3 kısa; ipucu hücreleri farklı noktalarda).
+
+# 2\. \*\*Transform\*\*: Her şablon → yatay ayna + 180° döndürme ile \~3-4 varyant.
+
+# &#x20;  45 şablon → \~150 efektif mask. (Transform `mask\_template.py`'de otomatik.)
+
+# 3\. \*\*Çok dolum\*\*: Her mask farklı kelime setiyle defalarca dolar → yüzlerce bölüm.
+
+# 
+
+# \### 5.3 Boyutlar
+
+# | Tip | Grid | Kelime (hedef) | Oturum | Kullanım |
+
+# |-----|------|----------------|--------|----------|
+
+# | \*\*small\*\* | 6×5 | 6-8 | 2-3 dk | İlk bölümler, günlük hızlı |
+
+# | \*\*medium\*\* | 8×6 | 9-12 | 4-5 dk | Ana akış |
+
+# | \*\*large\*\* | 10×7 | 13-16 | 6-8 dk | Zor/hafta sonu |
+
+# 
+
+# \### 5.4 Mask Şablon Formatı (`templates/medium\_03.json`)
+
+# Mask, \*\*çözüm harflerini içermez\*\* — sadece hücre tiplerini ve ok yönlerini tanımlar.
+
+# CSP filler daha sonra `solution` ve `answer` alanlarını doldurur.
+
+# 
+
+# ```json
+
+# {
+
+# &#x20; "template\_id": "medium\_03",
+
+# &#x20; "size": "medium",
+
+# &#x20; "grid": { "rows": 8, "cols": 6 },
+
+# &#x20; "cells": \[
+
+# &#x20;   { "row": 0, "col": 1, "type": "clue", "clues": \[ { "arrow": "down", "slot\_id": "s1" } ] },
+
+# &#x20;   { "row": 0, "col": 4, "type": "clue", "image\_slot": true,
+
+# &#x20;     "clues": \[ { "arrow": "down", "slot\_id": "s3" } ] },
+
+# &#x20;   { "row": 2, "col": 3, "type": "clue",
+
+# &#x20;     "clues": \[ { "arrow": "right", "slot\_id": "s4" }, { "arrow": "down", "slot\_id": "s5" } ] },
+
+# &#x20;   { "row": 1, "col": 1, "type": "letter" },
+
+# &#x20;   { "row": 5, "col": 2, "type": "blank" }
+
+# &#x20; ],
+
+# &#x20; "slots": \[
+
+# &#x20;   { "slot\_id": "s1", "direction": "down",  "clue\_cell": {"row":0,"col":1},
+
+# &#x20;     "cells": \[ {"row":1,"col":1}, {"row":2,"col":1}, {"row":3,"col":1} ], "length": 3 }
+
+# &#x20; ],
+
+# &#x20; "transformable": true
+
+# }
+
+# ```
+
+# \- `slot`: doldurulacak bir kelime yuvası (uzunluk + hücreler + yön). CSP'nin "değişken"i.
+
+# \- `slot\_id`: ipucu ↔ slot bağlantısı.
+
+# \- `image\_slot: true`: bu ipucunun görsel olabileceğini işaretler (FAZ ileri).
+
+# \- `transformable`: ayna/döndürme uygulanabilir mi (asimetrik dekorlar için false olabilir).
+
+# 
+
+# \### 5.5 Transform (mask\_template.py)
+
+# \- `mirror\_horizontal(mask)`: sütunları ters çevir, ok yönlerini ayarla (right ↔ ... dikkat:
+
+# &#x20; right aynalanınca sol-kaynak olur; İskandinav'da sadece right/down olduğu için ayna
+
+# &#x20; sonrası ok yönü yeniden hesaplanır — geçersiz olanlar elenir).
+
+# \- `rotate\_180(mask)`: hem satır hem sütun ters; right→(left geçersiz) olacağından
+
+# &#x20; rotate\_180 yalnızca right+down simetrisi korunan şablonlarda uygulanır.
+
+# \- \*\*Kritik:\*\* Transform sonrası mask `validate\_mask()` ile doğrulanır; geçersiz ok
+
+# &#x20; yönü üreten transformlar atılır. (Sadece right/down kısıtı korunmalı.)
+
+# 
+
+# \### 5.6 Şablon Tasarım Süreci (hibrit-C)
+
+# 1\. Claude Code, `templates/` altına boyut başına taslak şablonlar üretir (kurallı:
+
+# &#x20;  kenarlardan ok, çeşitli slot dağılımları).
+
+# 2\. Kullanıcı, Cross Up ekran görüntülerine bakarak en iyi şablonları seçer/düzeltir.
+
+# 3\. Onaylanan şablonlar repoya girer.
+
+# 
+
+# \---
+
+# 
+
+# \## 6. CSP Fill Algoritması (Python)
+
+# 
+
+# \### 6.1 Problem Tanımı
+
+# Verilen bir \*\*mask\*\* (slot'lar = değişkenler) ve \*\*kelime havuzu\*\* (domain) için, her slot'a
+
+# uzunluğu uyan bir kelime ata; kesişen slot'lar kesişim noktasında \*\*aynı harfi\*\* paylaşsın.
+
+# Bu klasik bir Constraint Satisfaction Problem'dir (referans: Harvard CS50 crossword,
+
+# N1SL/CrosswordGeneratorCSP, AhmadYahya97/CrosswordsGeneration).
+
+# 
+
+# \### 6.2 Bileşenler
+
+# \- \*\*Değişkenler (variables):\*\* mask'teki slot'lar.
+
+# \- \*\*Domain:\*\* her slot için, word\_pool'dan uzunluğu eşleşen kelimeler.
+
+# \- \*\*Unary constraint:\*\* kelime uzunluğu == slot uzunluğu; tüm kelimeler farklı (bir bulmacada
+
+# &#x20; tekrar yok).
+
+# \- \*\*Binary constraint (arc):\*\* iki slot kesişiyorsa, kesişim hücresindeki harfler eşit.
+
+# 
+
+# \### 6.3 Algoritma (csp\_filler.py)
+
+# ```
+
+# def fill\_mask(mask, word\_pool, blacklist) -> FilledPuzzle | None:
+
+# &#x20;   1. Node consistency: her slot domain'ini uzunluğa göre filtrele.
+
+# &#x20;   2. AC-3: arc-consistency uygula, kesişim kısıtıyla domain'leri daralt.
+
+# &#x20;      (kesişen slot çiftleri için desteklenmeyen kelimeleri at)
+
+# &#x20;   3. Backtracking search:
+
+# &#x20;      - MRV heuristic: en az domain'li slot'u seç (minimum remaining values)
+
+# &#x20;      - Degree heuristic: eşitlikte en çok kesişimi olanı seç
+
+# &#x20;      - LCV: kelime sıralamasında en az kısıtlayanı dene (least constraining value)
+
+# &#x20;      - Her atamada forward-check (komşu domain boşalırsa geri al)
+
+# &#x20;   4. Tüm slot'lar atanınca → FilledPuzzle (solution harfleri grid'e yazılır)
+
+# &#x20;   5. Çözüm yoksa None
+
+# ```
+
+# \- Kelime seçimi `frequency\_score` ile ağırlıklandırılabilir (kolay bölümde yüksek frekanslı
+
+# &#x20; kelimeleri tercih et → difficulty kontrolü).
+
+# \- \*\*Tek-harf slot desteği:\*\* length=1 slot'lar için domain, kelime havuzundan değil
+
+# &#x20; \*\*sembol/kısaltma havuzundan\*\* gelir (§6.5).
+
+# 
+
+# \### 6.4 Güvenlik (post\_fill\_safety — KORUNDU, uyarlandı)
+
+# \- Mask dolduktan sonra, grid'de oluşan \*\*tüm yatay+dikey diziler\*\* (kesintisiz harf
+
+# &#x20; segmentleri) küfür taramasından geçer (`scan\_grid`, v1.4'ten korunan 8-yön mantığı —
+
+# &#x20; ama burada sadece right/down olduğu için yatay+dikey yeterli; çapraz opsiyonel kapatılır).
+
+# \- Bir küfür segmenti bulunursa → bu fill REDDEDİLİR, CSP yeniden denenir (farklı kelime seti).
+
+# \- `safety.post\_fill\_scanned = true` olmayan bölüm asla yazılmaz (sessiz başarı yasak,
+
+# &#x20; `SafetyGenerationError` + `sys.exit(1)`).
+
+# \- \*\*Fark:\*\* v3'teki rastgele dolgu artık YOK — tüm hücreler gerçek kelimelerin harfi.
+
+# &#x20; Yine de kesişen kelimeler istenmeyen bir dizi oluşturabilir, o yüzden tarama korunur.
+
+# 
+
+# \### 6.5 Tek-Harf / Sembol Havuzu (YENİ — küçük, elle)
+
+# `data/symbols.json`: tek hücrelik cevaplar için küçük küratörlü liste.
+
+# ```json
+
+# \[
+
+# &#x20; { "answer": "C", "clue": "ÜÇÜNCÜ HARFİMİZ" },
+
+# &#x20; { "answer": "Ç", "clue": "NOKTALI KUYRUK" },
+
+# &#x20; { "answer": "O", "clue": "OKSİJEN SİMGESİ" }
+
+# ]
+
+# ```
+
+# Bu liste elle hazırlanır (TDK'dan gelmez). CSP, length=1 slot'lara buradan atar.
+
+# 
+
+# \### 6.6 3-Katmanlı Retry (generator.py — v1.6'dan korunan desen)
+
+# ```
+
+# for mask\_attempt in range(MAX\_MASK\_RESELECTS=5):       # farklı mask dene
+
+# &#x20;   mask = pick\_mask(size)  (+ rastgele transform)
+
+# &#x20;   for fill\_attempt in range(MAX\_FILL\_ATTEMPTS=20):   # CSP'yi farklı seed'le dene
+
+# &#x20;       result = fill\_mask(mask, word\_pool, blacklist)
+
+# &#x20;       if result and post\_fill\_safe(result):
+
+# &#x20;           return build\_puzzle(result, ...)
+
+# raise PuzzleGenerationError → sys.exit(1)
+
+# ```
+
+# 
+
+# \---
+
+# 
+
+# \## 7. İpucu Sistemi (TDK → LLM → Placeholder)
+
+# 
+
+# \### 7.1 İki Aşama
+
+# \*\*Aşama 1 (ŞİMDİ):\*\* TDK'dan kısa tanım çek → word\_pool'a `tdk\_definition` alanı ekle.
+
+# Tanım yoksa/uygunsuzsa → placeholder.
+
+# \*\*Aşama 2 (SONRA, ayrı adım):\*\* LLM ile TDK tanımını telif-temiz, kısa, kelimeyi ele
+
+# vermeyen ipucuna çevir.
+
+# 
+
+# \### 7.2 Telif Notu (KRİTİK)
+
+# TDK \*\*kelime listesi\*\* kamu malıdır; \*\*tanım metinleri\*\* TDK telifindedir. Bu yüzden TDK
+
+# tanımı oyunda \*\*doğrudan kullanılmaz\*\* — sadece LLM'e girdi olur, LLM baştan yazar.
+
+# Aama 1'de bölüm dosyasına yazılan ipucu ya placeholder ya (geçici, dahili) TDK olabilir;
+
+# \*\*yayına çıkan ipuçları Aşama 2'den (LLM) gelir.\*\* `clue.source` bunu izler.
+
+# 
+
+# \### 7.3 Placeholder Formatı (clue\_writer.py — Aşama 1 fallback)
+
+# ```
+
+# "{length} harfli kelime"            # en basit
+
+# \# veya kategori bilgisi varsa:
+
+# "{length} harfli bir {kategori}"
+
+# ```
+
+# 
+
+# \### 7.4 TDK Tanım Çekme (Aşama 1)
+
+# \- Kaynak: TDK Sözlük (resmi API yoksa nazik crawler, rate-limit'li).
+
+# \- Filtre: tanım kelimenin kendisini içeriyorsa at; çok uzunsa kırp; teknik/müstehcen tanımları ele.
+
+# \- Çıktı: `word\_pool\_cleaned.json`'a `tdk\_definition` alanı (opsiyonel).
+
+# \- \*\*Bu adım MVP'yi bloklamaz\*\* — placeholder ile bölüm üretimi çalışır, ipuçları sonra zenginleşir.
+
+# 
+
+# \### 7.5 Görsel İpuçları (FAZ İLERİ — MVP'de YOK)
+
+# \- `image\_slot: true` olan slot'lar ileride `clue\_images/` altındaki görsellerle eşlenir.
+
+# \- MVP'de bu slot'lar da metin ipucu kullanır (`image\_id: null`).
+
+# 
+
+# \---
+
+# 
+
+# \## 8. Flutter Runtime: GameBloc + Skor Motoru
+
+# 
+
+# \### 8.1 GameBloc — Sıra-Tabanlı State Machine
+
+# \*\*Events:\*\*
+
+# ```
+
+# LoadPuzzle(puzzleId)            // bölüm + bot profili yükle
+
+# SelectWord(wordId)             // ipucu/hücreye dokun → kelime vurgula
+
+# PlaceLetter(rackIndex, cell)   // rack'ten harfi hücreye koy
+
+# RecallLetter(cell)             // konan harfi rack'e geri al
+
+# ConfirmMove()                  // "Onayla" → doğrula, puanla, sıra bota
+
+# PassMove()                     // "Pas" → sıra bota (harf konmadıysa)
+
+# SwapLetters(indices)           // "Değiştir" (reklam sonrası)
+
+# RevealWord(wordId)             // "Kelimeyi Aç" (reklam sonrası)
+
+# UnlockSixthSlot()              // 6. harf yuvası (reklam sonrası)
+
+# BotMoveCompleted(botMove)      // bot hamlesi bitti → sıra oyuncuya
+
+# ```
+
+# \*\*State (GameState):\*\*
+
+# ```
+
+# PuzzleData puzzle              // immutable bölüm verisi
+
+# Map<Cell,PlacedLetter> board   // tahtanın güncel durumu (kalıcı + geçici)
+
+# List<RackTile> rack            // eldeki harfler (boş yuva dahil)
+
+# List<Cell> pendingPlacements   // bu turda konan, henüz onaylanmamış harfler
+
+# int playerScore, botScore
+
+# TurnPhase phase                // playerTurn | resolving | botTurn | finished
+
+# String? highlightedWordId
+
+# GameStatus status              // playing | won | lost | draw
+
+# ```
+
+# 
+
+# \### 8.2 ScoreEngine (saf Dart)
+
+# ```
+
+# class ScoreEngine {
+
+# &#x20; // Bir onaylanan hamledeki tüm puanları hesaplar.
+
+# &#x20; MoveResult resolveMove({
+
+# &#x20;   required List<Placement> placements,   // bu turda konan harfler
+
+# &#x20;   required PuzzleData puzzle,
+
+# &#x20;   required Map<Cell,PlacedLetter> board,
+
+# &#x20;   required int rackStartCount,           // tur başı rack (5 veya 6)
+
+# &#x20; });
+
+# &#x20; // Döner: doğru harf sayısı (+1 her biri), yanlışlar (−1),
+
+# &#x20; //        tamamlanan kelimeler (uzunluk bonusu),
+
+# &#x20; //        el boşaldı mı (+5/+6 bonusu),
+
+# &#x20; //        toplam delta + animasyon olayları (her hücre için +1/−1/+N etiketi)
+
+# }
+
+# ```
+
+# Kurallar §1.4'ten birebir. Yanlış harf → board'a koyma, rack'e iade işaretle.
+
+# 
+
+# \### 8.3 RackManager (saf Dart)
+
+# \- Tur başı rack doldurma (5 veya 6).
+
+# \- Yanlış iade edilen harfi koruma (bir sonraki turda kalır).
+
+# \- Harf dağıtımı: tahtada \*\*henüz çözülmemiş hücrelerin\*\* çözüm harflerinden ağırlıklı
+
+# &#x20; rastgele seçim (oyuncunun ilerleyebilmesini garanti eder; tamamen rastgele değil).
+
+# \- Swap: seçili harfleri havuza iade, yenilerini çek.
+
+# 
+
+# \---
+
+# 
+
+# \## 9. Flutter Runtime: AI Rakip (Bot)
+
+# 
+
+# \### 9.1 Bot Davranışı (BotEngine, saf Dart)
+
+# \- Sıra bota geçince çağrılır; tahtadaki \*\*çözülmemiş hücrelerden\*\* kendi hamlesini üretir.
+
+# \- Bot, oyuncunun rack'inden bağımsızdır — kendi "bildiği" harfleri doğrudan tahtaya koyar.
+
+# \- Hamle büyüklüğü zorluğa göre değişir (kaç harf koyacağı).
+
+# \- Oyunun sonuna doğru, kalan boşlukları kapatma eğilimi artar (agresifleşir).
+
+# 
+
+# \### 9.2 Zorluk Eğrisi (Bölüm Bazlı — kullanıcı tanımı)
+
+# Döngüsel, her 20 bölümde bir tekrar:
+
+# ```
+
+# Bölüm % 20:
+
+# &#x20; 1-5   → kolay   (bot az harf koyar, bazen yanlış/atlar, oyuncuya alan bırakır)
+
+# &#x20; 6-15  → orta    (dengeli)
+
+# &#x20; 16-20 → zor     (bot çok harf koyar, hızlı, son boşlukları kapar)
+
+# ```
+
+# `BotProfile` modeli: `{ id, name, avatar, description, difficultyBand }`.
+
+# Günlük rakip seçimi `matchmaking` feature'ında; difficultyBand bölüm numarasından türetilir.
+
+# 
+
+# \### 9.3 Bot "Hile" Sınırı
+
+# Bot her zaman doğru harf koyar (yanlış koyma simülasyonu sadece "kolay" seviyede, alan
+
+# bırakmak için kasıtlı atlama olarak modellenir). Bot, çözümü bildiği için adildir —
+
+# zorluk, \*\*kaç hücre ve hangi hızda\*\* kapattığıyla ayarlanır, çözümü bilip bilmemesiyle değil.
+
+# 
+
+# \### 9.4 Dinamik Zorluk (Rubber-Banding)
+
+# Statik band (§9.2) \*\*taban çizgisidir\*\*; bot hamle seçerken anlık skor farkına göre band
+
+# \*\*içinde\*\* kayar. Amaç: rekabeti hep zirvede tutmak.
+
+# 
+
+# ```
+
+# skorFarkı = botScore - playerScore
+
+# Bot, tahtadaki olası hamleleri bulur, sonra:
+
+# &#x20; - Bot ÖNDEYSE (skorFarkı > 0):  daha kısa/düşük puanlı hamle seç (oyuncuya nefes)
+
+# &#x20; - Bot GERİDEYSE (skorFarkı < 0): en yüksek puanlı hamleyi seç (acımasız)
+
+# &#x20; - Başa başsa: band'ın varsayılan davranışı
+
+# ```
+
+# 
+
+# \*\*KRİTİK DENGE — aşırı rubber-banding hissedilmemeli:\*\*
+
+# \- Ayar, \*\*zorluk band'ı içinde\*\* sınırlanır (clamp). Kolay bölümde yumuşak aralık,
+
+# &#x20; zor bölümde geniş aralık. Bot asla tamamen aptallaşmaz veya "tanrı" olmaz.
+
+# \- \*\*Tavan/taban:\*\* her band için min/max agresiflik tanımlı; rubber-banding bu sınırlar
+
+# &#x20; arasında interpolasyon yapar. Oyuncu "bot hep bana denk geliyor" diye sahtelik
+
+# &#x20; hissetmemeli — bu yüzden ayar yumuşak ve sınırlı.
+
+# \- `BotProfile.difficultyBand` taban davranışı belirler; rubber-banding üstüne ince ayar.
+
+# 
+
+# \### 9.5 İnsansı Gecikme (Humanized Delay)
+
+# Sıra bota geçince anında hamle yapmak mekanik/sinir bozucu hissettirir. Bot hamlesi
+
+# \*\*hesaplanır ama gösterimi geciktirilir\*\*:
+
+# 
+
+# ```
+
+# GameBloc akışı (sıra bota geçince):
+
+# &#x20; 1. emit(phase = botTurn, botThinking = true)
+
+# &#x20;      → UI: "Sokrates düşünüyor..." + avatar etrafında animasyon
+
+# &#x20; 2. Bot hamlesi HEMEN hesaplanır (BotEngine, UI donmaz)
+
+# &#x20; 3. await Future.delayed(random 2-5 sn)   // sadece GÖSTERİM gecikmesi
+
+# &#x20; 4. add(BotMoveCompleted(move))
+
+# &#x20;      → harfler tahtaya yerleşir, bot skoru artar, sıra oyuncuya
+
+# ```
+
+# \- Gecikme \*\*rastgele 2-5 sn\*\* (her seferinde sabit değil → daha insansı).
+
+# \- Hesaplama gecikmeden önce yapılır; gecikme yalnızca dramatik bekleme içindir.
+
+# 
+
+# \---
+
+# 
+
+# \## 10. Flutter Runtime: Harf Yerleştirme + Animasyon
+
+# 
+
+# \### 10.1 Grid Çizimi (GridPainter — CustomPainter)
+
+# \- \*\*İki katmanlı painter:\*\*
+
+# &#x20; - Statik katman: grid çizgileri, ipucu hücreleri (metin/ok/yeşil zemin), kalıcı harfler.
+
+# &#x20; - Dinamik katman: vurgulanan kelime (gri highlight), geçici harfler, puan rozetleri.
+
+# \- `shouldRepaint`: yalnızca ilgili katman değiştiğinde true.
+
+# \- Tek `GestureDetector` → hücre koordinatına çevir (hit-test), Bloc'a event.
+
+# \- Scrollable + (opsiyonel) zoomable: `InteractiveViewer` ile sarmalanır (large grid için).
+
+# \- Türkçe karakter render: `Inter`/`Nunito` (Latin-Extended) ile Ş/Ç kuyrukları doğru.
+
+# 
+
+# \### 10.2 Harf Uçma Animasyonu (Overlay tabanlı)
+
+# \*\*Yaklaşım: Overlay + AnimatedPositioned (Hero DEĞİL).\*\*
+
+# Gerekçe: Hero route-geçişleri içindir; burada aynı ekranda rack→grid uçuşu var.
+
+# ```
+
+# 1\. Oyuncu rack tile'a dokunur (veya hedef hücreye sürükler).
+
+# 2\. Tile'ın global pozisyonu + hedef hücre global pozisyonu hesaplanır.
+
+# 3\. OverlayEntry ile uçan bir harf widget'ı eklenir.
+
+# 4\. AnimationController (200-300ms, Curves.easeOutBack) ile pozisyon tween'lenir.
+
+# 5\. Animasyon bitince Overlay kaldırılır, Bloc'a PlaceLetter event'i gider,
+
+# &#x20;  harf grid'de "geçici" olarak görünür.
+
+# ```
+
+# \- Puan rozetleri ("+1", "+N", "−1"): hücre üstünde kısa Overlay animasyonu (yükselip solma).
+
+# \- Onay sonrası "Harikasın 🚀 +5" toast: ekran ortasında AnimatedOpacity+Scale banner.
+
+# \- Konfeti (kazanınca): `confetti` paketi (zaten pubspec'te).
+
+# 
+
+# \### 10.3 Performans Bütçesi
+
+# \- Idle (animasyon yokken): 0 repaint hedefi.
+
+# \- Cold start < 2.5 sn, oynanış ≥ 60 fps.
+
+# 
+
+# \---
+
+# 
+
+# \## 11. Veri Saklama (Hive) + Resume
+
+# 
+
+# \### 11.1 Box'lar
+
+# | Box | İçerik | Şifreli? |
+
+# |-----|--------|----------|
+
+# | `active\_game` | yarım kalan oyun durumu (resume) | \*\*AES\*\* |
+
+# | `progress` | tamamlanan bölümler, seri, kazanma sayısı | \*\*AES\*\* |
+
+# | `coin\_wallet` | coin bakiyesi | \*\*AES\*\* |
+
+# | `iap\_state` | reklamsız satın alma durumu | \*\*AES\*\* |
+
+# | `ad\_state` | reklam frequency cap zaman damgaları | \*\*AES\*\* |
+
+# | `settings` | ses, tema vb. (shared\_preferences de olabilir) | hayır |
+
+# 
+
+# AES anahtarı: `flutter\_secure\_storage` → `SecureHive.cipher()` (v3'ten korunan desen).
+
+# 
+
+# \### 11.2 Resume + Save-Scumming Önlemi
+
+# \- `active\_game` ve `progress`, \*\*hem oyuncu hem bot hamlesinden sonra ANINDA\*\* yazılır
+
+# &#x20; (bu iki box için debounce YOK — save-scumming önlemi).
+
+# \- Yazım \*\*senkron ve UI güncellemesinden ÖNCE\*\*: önce şifreli kaydet, sonra ekranı güncelle.
+
+# &#x20; Böylece "force kill" ile son hamleyi geri almak zorlaşır.
+
+# \- Ek olarak `AppLifecycleListener` (onPause/onInactive) ile son durum garanti flush.
+
+# \- İçerik: board durumu, rack, skorlar, sıra fazı, bölüm id, bot durumu, skor geçmişi.
+
+# \- Oyun bitince `active\_game` temizlenir; `progress` güncellenir (seri, kazanma).
+
+# \- AndroidManifest `allowBackup="false"` (reinstall çökmesi önlemi).
+
+# 
+
+# > \*\*DÜRÜST GÜVENLİK NOTU:\*\* AES şifreleme + anında flush, save-scumming'i \*makul ölçüde
+
+# > zorlaştırır\* ama \*\*%100 engellemez\*\*. Kararlı bir kullanıcı flush anından önce force-kill
+
+# > edebilir. Tam koruma sunucu-otoritesi (online) gerektirir → MVP DIŞI. Hedefimiz "kolay
+
+# > istismarı engellemek", "kırılamaz" değil. Şifreleme ayrıca JSON box'ların düz metin
+
+# > okunup düzenlenmesini (coin/skor hilesi) engeller.
+
+# 
+
+# \---
+
+# 
+
+# \## 12. Reklam ve Monetizasyon
+
+# 
+
+# \### 12.1 Reklam Yerleşimleri (videodan doğrulanmış)
+
+# | Tip | Yer | Kural |
+
+# |-----|-----|-------|
+
+# | \*\*Banner\*\* | Oyun ekranı alt + ana menü alt | Reklamsız satın alınca kalkar |
+
+# | \*\*Interstitial\*\* | Bölüm/oyun arası (oyun bitince) | Oyun ESNASINDA yok; min 90 sn cap; reklamsız'da kalkar |
+
+# | \*\*Rewarded\*\* | "Kelime" (ipucu aç), "Değiştir" (harf değiştir), 6. harf yuvası | Reklamsız'da AKTİF kalır |
+
+# 
+
+# \### 12.2 Kurallar (KORUNDU, v3'ten)
+
+# \- İlk 3 bölüm: hiç reklam yok.
+
+# \- Consent (UMP) → reklam SDK'sı başlatılmadan önce.
+
+# \- `AdService` interface ağ-bağımsız; MVP impl `admob\_ad\_service.dart` (+ `mock\_ad\_service`).
+
+# \- Test reklam ID'leri production'a sızmamalı: `AdUnitIds.assertNoTestIdsInRelease()`.
+
+# \- AppLovin mediation v1.1+'a ertelendi.
+
+# 
+
+# \---
+
+# 
+
+# \## 13. Korunan / Atılan Kod Tablosu
+
+# 
+
+# | Bileşen | Durum | Not |
+
+# |---------|-------|-----|
+
+# | `word\_pool.py` | ✅ \*\*KORUNDU\*\* | Türkçe filtre, küfür, frekans — aynen kullanılır |
+
+# | `data/raw/tdk\_words.txt`, `profanity\_blacklist.txt` | ✅ KORUNDU | Kaynak veri |
+
+# | `post\_fill\_safety.py` (scan\_grid) | ✅ KORUNDU (uyarlanır) | Sadece yatay+dikey; rastgele dolgu kısmı çıkar |
+
+# | `schema.py` (pydantic altyapısı) | 🔄 YENİDEN | v2 şema (cells/clues/words) — yapı korunur, içerik yeni |
+
+# | `difficulty.py` | 🔄 UYARLANIR | Yeni faktörler (slot sayısı, ipucu zorluğu, frekans) |
+
+# | `\_\_main\_\_.py` (typer CLI iskeleti) | ✅ KORUNDU (komut güncellenir) | `generate` mantığı değişir |
+
+# | `word\_search\_generator.py` | ❌ \*\*ATILDI\*\* | Yerine CSP filler |
+
+# | Eski JSON şema (grid: harfli matris) | ❌ ATILDI | Yerine v2 (cells + words) |
+
+# | `hint\_writer.py` (placeholder) | 🔄 → `clue\_writer.py` | İpucu mantığı genişler |
+
+# | 196 üretilmiş word-search level | ❌ ATILDI | Yeni şemayla yeniden üretilecek |
+
+# | Flutter iskelet (main/app/core/theme/router) | ✅ \*\*KORUNDU\*\* | Aynen kullanılır |
+
+# | Flutter `AppColors/Typography/Dimensions/Result/Logger` | ✅ KORUNDU | Aynen |
+
+# | `pubspec.yaml` tech stack | ✅ KORUNDU | Flame yok, mevcut paketler yeterli |
+
+# 
+
+# \*\*Yeni yazılacaklar:\*\* `mask\_template.py`, `csp\_filler.py`, `clue\_writer.py` (genişletilmiş),
+
+# `templates/\*.json` (elle), `data/symbols.json`, ve tüm `features/gameplay` runtime
+
+# (GameBloc, ScoreEngine, BotEngine, RackManager, GridPainter, animasyonlar).
+
+# 
+
+# \---
+
+# 
+
+# \## 14. Türkçe Dil Kuralları (KORUNDU)
+
+# \- `tr\_upper()` / `tr\_lower()`: `i↔İ`, `ı↔I` doğru. `str.upper()` YASAK.
+
+# \- Tüm `answer`/`solution` üretimde `tr\_upper` ile normalize.
+
+# \- Q, W, X kelime havuzunda yok (word\_pool filtresi).
+
+# \- Flutter render: Latin-Extended font (Inter/Nunito) → Ş, Ç, Ğ kuyrukları doğru.
+
+# \- Windows konsol: `\_force\_utf8\_stdout()` yalnızca CLI giriş noktasında.
+
+# 
+
+# \---
+
+# 
+
+# \## 15. Üretim Hattı Özeti (Pipeline)
+
+# 
+
+# \### Python (bölüm üretimi — offline)
+
+# ```
+
+# 1\. word\_pool.py        → word\_pool\_cleaned.json  (KORUNDU)
+
+# 2\. (Aşama1) clue: TDK tanım çek → word\_pool'a ekle (opsiyonel, MVP placeholder)
+
+# 3\. mask\_template.py    → templates/\*.json yükle + transform → mask havuzu
+
+# 4\. csp\_filler.py       → mask'i word\_pool'dan doldur (AC-3 + backtracking)
+
+# 5\. post\_fill\_safety    → küfür tara (yatay+dikey)
+
+# 6\. clue\_writer.py      → her kelimeye ipucu (placeholder/tdk/llm)
+
+# 7\. difficulty.py       → difficulty\_score
+
+# 8\. schema.py           → v2 JSON doğrula + yaz (safety flag zorunlu)
+
+# 9\. build\_manifest.py   → manifest.json (KORUNDU, uyarlanır)
+
+# &#x20;  → assets/puzzles/
+
+# ```
+
+# 
+
+# \### Flutter (oynanış — runtime)
+
+# ```
+
+# LoadPuzzle → matchmaking (günlük bot) → GameScreen
+
+# &#x20; → GameBloc (sıra-tabanlı) orkestratör:
+
+# &#x20;      RackManager (harf dağıt) + ScoreEngine (puanla) + BotEngine (bot hamle)
+
+# &#x20; → GridPainter (çiz) + Overlay (uçan harf, rozet, toast)
+
+# &#x20; → her hamle: Hive active\_game flush (resume)
+
+# &#x20; → tahta dolunca: result ekranı (basit özet)
+
+# &#x20; → reklam: banner/interstitial/rewarded (AdService)
+
+# ```
+
+# 
+
+# \### İlk Üretim Hedefi
+
+# \- Önce \*\*medium\*\* boyutta \~10-15 mask şablonu + CSP fill → \~50 test bölümü.
+
+# \- Doğrulama: tüm bölümler schema\_validator'dan geçer, küfür yok, çözülebilir.
+
+# \- Sonra small + large eklenir, hedef 150-200 bölüm.
+
+# 
+
+# \---
+
+# 
+
+# > \*\*Bir sonraki adım:\*\* Bu doküman onaylanınca, `skills.md` ve `coding-standards.md`
+
+# > v4.0'a uyumlanır (özellikle "Oyun Tasarımı" ve "Python pipeline" bölümleri), eski
+
+# > `architecture.md` bununla değiştirilir, sonra Python tarafında ilk yeni modül
+
+# > (`schema.py` v2) yazılır.
+
