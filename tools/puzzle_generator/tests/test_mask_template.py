@@ -15,7 +15,7 @@ from kelime_gen.mask_template import (
     mirror_horizontal,
     rotate_180,
 )
-from kelime_gen.schema import CellType, ClueArrow, GridSize, PuzzleSize, WordCell
+from kelime_gen.schema import CellType, ClueArrow, GridSize, PuzzleSize
 
 # ── In-memory fixture helpers ─────────────────────────────────────────────────
 

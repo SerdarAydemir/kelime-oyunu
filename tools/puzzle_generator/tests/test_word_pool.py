@@ -1,10 +1,10 @@
 # tools/level_generator/tests/test_word_pool.py
 """Unit tests for the word pool cleaning pipeline."""
 
-from kelime_gen.word_pool import build_pool, tr_upper
+from kelime_gen.word_pool import PoolEntry, build_pool, tr_upper
 
 
-def _words(pool: list[dict[str, object]]) -> set[object]:
+def _words(pool: list[PoolEntry]) -> set[str]:
     return {entry["word"] for entry in pool}
 
 
