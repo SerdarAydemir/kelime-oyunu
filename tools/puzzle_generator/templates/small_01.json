@@ -1,0 +1,51 @@
+{
+  "template_id": "small_01",
+  "size": "small",
+  "grid": { "rows": 6, "cols": 5 },
+  "transformable": true,
+  "cells": [
+    { "row": 0, "col": 1, "type": "clue", "clue_slots": ["s1"] },
+    { "row": 0, "col": 2, "type": "clue", "clue_slots": ["s2"] },
+    { "row": 0, "col": 3, "type": "clue", "clue_slots": ["s3"] },
+    { "row": 0, "col": 4, "type": "clue", "clue_slots": ["s7"] },
+    { "row": 1, "col": 0, "type": "clue", "clue_slots": ["s4"] },
+    { "row": 3, "col": 0, "type": "clue", "clue_slots": ["s5"] },
+    { "row": 4, "col": 1, "type": "clue", "clue_slots": ["s6"] },
+
+    { "row": 1, "col": 1, "type": "letter", "slot_ids": ["s1", "s4"] },
+    { "row": 2, "col": 1, "type": "letter", "slot_ids": ["s1"] },
+    { "row": 3, "col": 1, "type": "letter", "slot_ids": ["s1", "s5"] },
+
+    { "row": 1, "col": 2, "type": "letter", "slot_ids": ["s2", "s4"] },
+    { "row": 2, "col": 2, "type": "letter", "slot_ids": ["s2"] },
+    { "row": 3, "col": 2, "type": "letter", "slot_ids": ["s2", "s5"] },
+    { "row": 4, "col": 2, "type": "letter", "slot_ids": ["s2", "s6"] },
+
+    { "row": 1, "col": 3, "type": "letter", "slot_ids": ["s3", "s4"] },
+    { "row": 2, "col": 3, "type": "letter", "slot_ids": ["s3"] },
+    { "row": 3, "col": 3, "type": "letter", "slot_ids": ["s3", "s5"] },
+
+    { "row": 1, "col": 4, "type": "letter", "slot_ids": ["s4", "s7"] },
+    { "row": 2, "col": 4, "type": "letter", "slot_ids": ["s7"] },
+    { "row": 3, "col": 4, "type": "letter", "slot_ids": ["s5", "s7"] },
+
+    { "row": 4, "col": 3, "type": "letter", "slot_ids": ["s6"] },
+    { "row": 4, "col": 4, "type": "letter", "slot_ids": ["s6"] }
+  ],
+  "slots": [
+    { "slot_id": "s1", "direction": "down", "clue_cell": { "row": 0, "col": 1 },
+      "cells": [ { "row": 1, "col": 1 }, { "row": 2, "col": 1 }, { "row": 3, "col": 1 } ], "length": 3 },
+    { "slot_id": "s2", "direction": "down", "clue_cell": { "row": 0, "col": 2 },
+      "cells": [ { "row": 1, "col": 2 }, { "row": 2, "col": 2 }, { "row": 3, "col": 2 }, { "row": 4, "col": 2 } ], "length": 4 },
+    { "slot_id": "s3", "direction": "down", "clue_cell": { "row": 0, "col": 3 },
+      "cells": [ { "row": 1, "col": 3 }, { "row": 2, "col": 3 }, { "row": 3, "col": 3 } ], "length": 3 },
+    { "slot_id": "s7", "direction": "down", "clue_cell": { "row": 0, "col": 4 },
+      "cells": [ { "row": 1, "col": 4 }, { "row": 2, "col": 4 }, { "row": 3, "col": 4 } ], "length": 3 },
+    { "slot_id": "s4", "direction": "right", "clue_cell": { "row": 1, "col": 0 },
+      "cells": [ { "row": 1, "col": 1 }, { "row": 1, "col": 2 }, { "row": 1, "col": 3 }, { "row": 1, "col": 4 } ], "length": 4 },
+    { "slot_id": "s5", "direction": "right", "clue_cell": { "row": 3, "col": 0 },
+      "cells": [ { "row": 3, "col": 1 }, { "row": 3, "col": 2 }, { "row": 3, "col": 3 }, { "row": 3, "col": 4 } ], "length": 4 },
+    { "slot_id": "s6", "direction": "right", "clue_cell": { "row": 4, "col": 1 },
+      "cells": [ { "row": 4, "col": 2 }, { "row": 4, "col": 3 }, { "row": 4, "col": 4 } ], "length": 3 }
+  ]
+}

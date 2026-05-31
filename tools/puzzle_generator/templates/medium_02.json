@@ -1,0 +1,66 @@
+{
+  "template_id": "medium_02",
+  "size": "medium",
+  "grid": { "rows": 8, "cols": 6 },
+  "transformable": true,
+  "cells": [
+    { "row": 0, "col": 1, "type": "clue", "clue_slots": ["DL"] },
+    { "row": 0, "col": 3, "type": "clue", "clue_slots": ["DM"] },
+    { "row": 0, "col": 5, "type": "clue", "clue_slots": ["DO"] },
+    { "row": 2, "col": 4, "type": "clue", "clue_slots": ["DN"] },
+    { "row": 1, "col": 0, "type": "clue", "clue_slots": ["A1"] },
+    { "row": 3, "col": 0, "type": "clue", "clue_slots": ["A2"] },
+    { "row": 5, "col": 0, "type": "clue", "clue_slots": ["A3"] },
+    { "row": 4, "col": 2, "type": "clue", "clue_slots": ["dbl_r", "dbl_d"] },
+
+    { "row": 1, "col": 1, "type": "letter", "slot_ids": ["DL", "A1"] },
+    { "row": 2, "col": 1, "type": "letter", "slot_ids": ["DL"] },
+    { "row": 3, "col": 1, "type": "letter", "slot_ids": ["DL", "A2"] },
+    { "row": 4, "col": 1, "type": "letter", "slot_ids": ["DL"] },
+    { "row": 5, "col": 1, "type": "letter", "slot_ids": ["DL", "A3"] },
+    { "row": 6, "col": 1, "type": "letter", "slot_ids": ["DL"] },
+    { "row": 7, "col": 1, "type": "letter", "slot_ids": ["DL"] },
+
+    { "row": 1, "col": 2, "type": "letter", "slot_ids": ["A1"] },
+    { "row": 3, "col": 2, "type": "letter", "slot_ids": ["A2"] },
+    { "row": 5, "col": 2, "type": "letter", "slot_ids": ["dbl_d", "A3"] },
+    { "row": 6, "col": 2, "type": "letter", "slot_ids": ["dbl_d"] },
+    { "row": 7, "col": 2, "type": "letter", "slot_ids": ["dbl_d"] },
+
+    { "row": 1, "col": 3, "type": "letter", "slot_ids": ["DM", "A1"] },
+    { "row": 2, "col": 3, "type": "letter", "slot_ids": ["DM"] },
+    { "row": 3, "col": 3, "type": "letter", "slot_ids": ["DM", "A2"] },
+    { "row": 4, "col": 3, "type": "letter", "slot_ids": ["dbl_r"] },
+    { "row": 5, "col": 3, "type": "letter", "slot_ids": ["A3"] },
+
+    { "row": 3, "col": 4, "type": "letter", "slot_ids": ["DN", "A2"] },
+    { "row": 4, "col": 4, "type": "letter", "slot_ids": ["DN", "dbl_r"] },
+    { "row": 5, "col": 4, "type": "letter", "slot_ids": ["DN", "A3"] },
+
+    { "row": 1, "col": 5, "type": "letter", "slot_ids": ["DO"] },
+    { "row": 2, "col": 5, "type": "letter", "slot_ids": ["DO"] },
+    { "row": 3, "col": 5, "type": "letter", "slot_ids": ["DO", "A2"] },
+    { "row": 4, "col": 5, "type": "letter", "slot_ids": ["DO", "dbl_r"] },
+    { "row": 5, "col": 5, "type": "letter", "slot_ids": ["A3"] }
+  ],
+  "slots": [
+    { "slot_id": "DL", "direction": "down", "clue_cell": { "row": 0, "col": 1 },
+      "cells": [ { "row": 1, "col": 1 }, { "row": 2, "col": 1 }, { "row": 3, "col": 1 }, { "row": 4, "col": 1 }, { "row": 5, "col": 1 }, { "row": 6, "col": 1 }, { "row": 7, "col": 1 } ], "length": 7 },
+    { "slot_id": "DM", "direction": "down", "clue_cell": { "row": 0, "col": 3 },
+      "cells": [ { "row": 1, "col": 3 }, { "row": 2, "col": 3 }, { "row": 3, "col": 3 } ], "length": 3 },
+    { "slot_id": "DN", "direction": "down", "clue_cell": { "row": 2, "col": 4 },
+      "cells": [ { "row": 3, "col": 4 }, { "row": 4, "col": 4 }, { "row": 5, "col": 4 } ], "length": 3 },
+    { "slot_id": "DO", "direction": "down", "clue_cell": { "row": 0, "col": 5 },
+      "cells": [ { "row": 1, "col": 5 }, { "row": 2, "col": 5 }, { "row": 3, "col": 5 }, { "row": 4, "col": 5 } ], "length": 4 },
+    { "slot_id": "dbl_r", "direction": "right", "clue_cell": { "row": 4, "col": 2 },
+      "cells": [ { "row": 4, "col": 3 }, { "row": 4, "col": 4 }, { "row": 4, "col": 5 } ], "length": 3 },
+    { "slot_id": "dbl_d", "direction": "down", "clue_cell": { "row": 4, "col": 2 },
+      "cells": [ { "row": 5, "col": 2 }, { "row": 6, "col": 2 }, { "row": 7, "col": 2 } ], "length": 3 },
+    { "slot_id": "A1", "direction": "right", "clue_cell": { "row": 1, "col": 0 },
+      "cells": [ { "row": 1, "col": 1 }, { "row": 1, "col": 2 }, { "row": 1, "col": 3 } ], "length": 3 },
+    { "slot_id": "A2", "direction": "right", "clue_cell": { "row": 3, "col": 0 },
+      "cells": [ { "row": 3, "col": 1 }, { "row": 3, "col": 2 }, { "row": 3, "col": 3 }, { "row": 3, "col": 4 }, { "row": 3, "col": 5 } ], "length": 5 },
+    { "slot_id": "A3", "direction": "right", "clue_cell": { "row": 5, "col": 0 },
+      "cells": [ { "row": 5, "col": 1 }, { "row": 5, "col": 2 }, { "row": 5, "col": 3 }, { "row": 5, "col": 4 }, { "row": 5, "col": 5 } ], "length": 5 }
+  ]
+}
