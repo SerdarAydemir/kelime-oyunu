@@ -119,3 +119,22 @@ def test_generate_pack_writes_json(tmp_path: Path) -> None:
         parsed = PuzzleData.model_validate_json(f.read_text(encoding="utf-8"))
         assert parsed.safety.post_fill_scanned is True
         assert len(parsed.words) == 2
+
+
+# ── 4: a blacklisted crossing word is steered around by the CSP guard ─────────
+
+
+def test_generate_puzzle_blacklist_steers_fill() -> None:
+    # "KAR" crossing "ARI" spells KAR on row 1; blacklist it so the only clean
+    # crossing left is "SAP" × "ARI" ... but ARI[0] must equal the row word's
+    # index-1 letter. Blacklisting KAR forces the filler to a clean alternative
+    # rather than discarding the whole puzzle. The produced puzzle must be
+    # profanity-free under the same blacklist.
+    blacklist = {"KAR"}
+    puzzle = generate_puzzle(
+        _crossing_template(), _pool(), blacklist, puzzle_id=1, category=None, seed=1
+    )
+    assert puzzle is not None
+    assert puzzle.safety.post_fill_scanned is True
+    # No across/down answer may be the blacklisted word.
+    assert all(w.answer != "KAR" for w in puzzle.words)

@@ -44,12 +44,13 @@ def test_scan_detects_vertical() -> None:
     assert "BCDFG" in scan_grid(grid, blacklist={"BCDFG"})
 
 
-def test_scan_detects_diagonal() -> None:
+def test_scan_does_not_detect_diagonal() -> None:
+    """Diagonal patterns must NOT be flagged — crossword, not word-search."""
     word = "BCDFG"
     grid = [["" for _ in range(5)] for _ in range(5)]
     for i, letter in enumerate(word):
-        grid[i][i] = letter  # down-right main diagonal
-    assert "BCDFG" in scan_grid(grid, blacklist={"BCDFG"})
+        grid[i][i] = letter  # down-right main diagonal — invisible to players
+    assert scan_grid(grid, blacklist={"BCDFG"}) == []
 
 
 def test_scan_empty_cell_breaks_chain() -> None:

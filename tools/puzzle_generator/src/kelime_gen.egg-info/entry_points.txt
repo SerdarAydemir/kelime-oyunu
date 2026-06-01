@@ -1,2 +1,2 @@
 [console_scripts]
-kelime-gen = kelime_gen.__main__:app
+kelime-gen = kelime_gen.__main__:main

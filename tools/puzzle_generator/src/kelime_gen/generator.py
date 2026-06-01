@@ -124,7 +124,7 @@ def generate_puzzle(
     category: str | None,
     tdk_definitions: dict[str, str] | None = None,
     generator_version: str = "2.0.0",
-    max_fill_attempts: int = 20,
+    max_fill_attempts: int = 200,
     seed: int | None = None,
 ) -> PuzzleData | None:
     """Generate one validated PuzzleData, or None on any recoverable failure.
@@ -135,10 +135,14 @@ def generate_puzzle(
     word_strings = [p["word"] for p in word_pool]
     freq_map = {p["word"]: p["frequency_score"] for p in word_pool}
 
-    # 1-2. CSP fill.
+    # 1-2. CSP fill. The blacklist is passed so the filler avoids cross-slot
+    # profanity at the word level; scan_grid below stays the authoritative net.
     try:
         fill = CSPFiller(
-            word_strings, max_attempts=max_fill_attempts, seed=seed
+            word_strings,
+            blacklist=blacklist,
+            max_attempts=max_fill_attempts,
+            seed=seed,
         ).fill(template)
     except FillError as exc:
         print(f"[SKIP] puzzle {puzzle_id}: fill failed — {exc}", file=sys.stderr)
@@ -146,6 +150,8 @@ def generate_puzzle(
     slot_assignments = fill.slot_assignments
 
     # 3. Render the grid and scan it for profanity (architecture.md §6.4).
+    #    Defence in depth: the CSP guard should make this a no-op, but a full
+    #    independent scan is the contract behind safety.post_fill_scanned.
     grid = _build_grid(template, slot_assignments)
     hits = scan_grid(grid, blacklist)
     if hits:

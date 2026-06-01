@@ -36,28 +36,22 @@ class SafetyGenerationError(Exception):
 
 
 def _lines(grid: Grid) -> list[list[str]]:
-    """Return every horizontal, vertical and diagonal line as a cell list."""
+    """Return every horizontal and vertical line as a cell list.
+
+    Diagonal directions are intentionally excluded: this is a crossword-style
+    puzzle where words only run right or down. Players never read diagonals,
+    so diagonal profanity scanning would produce false positives and make CSP
+    fill unnecessarily hard. See architecture.md §6.4.
+    """
     rows = len(grid)
     cols = len(grid[0]) if rows else 0
     lines: list[list[str]] = []
 
-    # Horizontal (rows) and vertical (columns).
+    # Horizontal (rows) and vertical (columns) only.
     for r in range(rows):
         lines.append(list(grid[r]))
     for c in range(cols):
         lines.append([grid[r][c] for r in range(rows)])
-
-    # Diagonals going down-right (constant r - c), ordered top-to-bottom.
-    for k in range(-(cols - 1), rows):
-        diag = [grid[r][c] for r in range(rows) for c in range(cols) if r - c == k]
-        if diag:
-            lines.append(diag)
-
-    # Diagonals going up-right (constant r + c), ordered left-to-right.
-    for k in range(rows + cols - 1):
-        diag = [grid[r][c] for c in range(cols) for r in range(rows) if r + c == k]
-        if diag:
-            lines.append(diag)
 
     return lines
 
@@ -78,28 +72,47 @@ def _segments(line: list[str]) -> list[str]:
     return segments
 
 
+def scan_segment(
+    text: str,
+    blacklist: frozenset[str] | set[str],
+    min_n: int = 3,
+    max_n: int = 6,
+) -> list[str]:
+    """Scan one contiguous run (forward and reversed) for blacklisted substrings.
+
+    This is the shared primitive used both by scan_grid (full-grid post-fill
+    scan) and by the CSP filler's incremental profanity guard, so the two
+    layers reject exactly the same strings by construction. Returns every
+    matched window of length min_n..max_n (may contain duplicates).
+    """
+    hits: list[str] = []
+    for variant in (text, text[::-1]):
+        length = len(variant)
+        for n in range(min_n, max_n + 1):
+            for i in range(length - n + 1):
+                window = variant[i : i + n]
+                if window in blacklist:
+                    hits.append(window)
+    return hits
+
+
 def scan_grid(
     grid: Grid,
     blacklist: set[str],
     min_n: int = 3,
     max_n: int = 6,
 ) -> list[str]:
-    """Scan all lines (and their reverse readings) for blacklisted substrings.
+    """Scan horizontal and vertical lines for blacklisted substrings.
 
-    Scans every horizontal, vertical and both diagonal lines. Empty ("") cells
-    break a line into segments, so only contiguous filled runs are examined.
-    Returns every matched substring (possibly with duplicates).
+    Diagonal directions are not scanned (crossword puzzle, not word-search).
+    Each contiguous filled run is checked both forward and reversed, so a
+    blacklisted word written backwards is also caught. Empty ("") cells break
+    a line into segments. Returns every matched substring (may contain dupes).
     """
     hits: list[str] = []
     for line in _lines(grid):
         for segment in _segments(line):
-            for variant in (segment, segment[::-1]):
-                length = len(variant)
-                for n in range(min_n, max_n + 1):
-                    for i in range(length - n + 1):
-                        window = variant[i : i + n]
-                        if window in blacklist:
-                            hits.append(window)
+            hits.extend(scan_segment(segment, blacklist, min_n, max_n))
     return hits
 
 

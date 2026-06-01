@@ -8,6 +8,7 @@ import pytest
 from kelime_gen.csp_filler import CSPFiller, FillError, compute_intersections
 from kelime_gen.mask_template import MaskTemplate, SlotSpec, TemplateCellSpec
 from kelime_gen.schema import CellType, ClueArrow, GridSize, PuzzleSize, WordCell
+from kelime_gen.validators.post_fill_safety import scan_grid
 
 # ── In-memory template builder ────────────────────────────────────────────────
 
@@ -242,3 +243,107 @@ def test_five_slot_crossword_fills() -> None:
     inter = compute_intersections(template.slots)
     for (x_id, y_id), (ix, iy) in inter.items():
         assert result.slot_assignments[x_id][ix] == result.slot_assignments[y_id][iy]
+
+
+# ── Profanity guard (blacklist-aware CSP) ─────────────────────────────────────
+
+
+def _three_parallel_downs() -> MaskTemplate:
+    """Three non-crossing down slots in cols 1-3, each length 2 (rows 1-2).
+
+    Rows 1 and 2 each form a length-3 horizontal run made of letters from three
+    *different* vertical words — exactly the cross-slot adjacency that produces
+    incidental profanity but is invisible to the CSP's crossing constraints.
+    """
+    return _template(
+        "t_downs",
+        4,
+        4,
+        [
+            {"slot_id": "d1", "direction": "down", "clue_cell": (0, 1),
+             "cells": [(1, 1), (2, 1)]},
+            {"slot_id": "d2", "direction": "down", "clue_cell": (0, 2),
+             "cells": [(1, 2), (2, 2)]},
+            {"slot_id": "d3", "direction": "down", "clue_cell": (0, 3),
+             "cells": [(1, 3), (2, 3)]},
+        ],
+    )
+
+
+def _grid_from(result_assignments: dict[str, str], template: MaskTemplate) -> list[list[str]]:
+    """Render slot assignments onto a rows×cols grid (clue cells stay '')."""
+    grid = [["" for _ in range(template.grid.cols)] for _ in range(template.grid.rows)]
+    slot_by_id = {s.slot_id: s for s in template.slots}
+    for slot_id, word in result_assignments.items():
+        for idx, wc in enumerate(slot_by_id[slot_id].cells):
+            grid[wc.row][wc.col] = word[idx]
+    return grid
+
+
+# ── 11: blacklist steers the fill away from cross-slot profanity ──────────────
+
+
+def test_blacklist_avoids_cross_slot_profanity() -> None:
+    # row1 is a permutation of {A, M, K}; "AMK" (and its reverse "KMA") are
+    # blacklisted. A blacklist-aware fill must produce a clean grid.
+    template = _three_parallel_downs()
+    pool = ["AL", "ME", "KO"]
+    for seed in range(10):
+        filler = CSPFiller(pool, blacklist={"AMK"}, seed=seed)
+        result = filler.fill(template)
+        grid = _grid_from(result.slot_assignments, template)
+        assert scan_grid(grid, {"AMK"}) == []
+        assert len(set(result.slot_assignments.values())) == 3  # all-different
+
+
+# ── 12: every possible fill is profane → FillError ────────────────────────────
+
+
+def test_only_profane_fill_raises() -> None:
+    # Blacklisting all six permutations of {A, M, K} leaves no clean row1.
+    template = _three_parallel_downs()
+    every_perm = {"AMK", "AKM", "MAK", "MKA", "KAM", "KMA"}
+    filler = CSPFiller(["AL", "ME", "KO"], blacklist=every_perm, max_attempts=5, seed=1)
+    with pytest.raises(FillError):
+        filler.fill(template)
+
+
+# ── 13: internal grid is exactly the solution (place/restore correctness) ─────
+
+
+def test_internal_grid_matches_solution() -> None:
+    template = _three_parallel_downs()
+    filler = CSPFiller(["AL", "ME", "KO"], blacklist={"AMK"}, seed=3)
+    result = filler.fill(template)
+    # After a successful fill the partial grid holds the solution and nothing
+    # else — no residue from rejected words or backtracked branches.
+    expected = {
+        (wc.row, wc.col): result.slot_assignments[s.slot_id][idx]
+        for s in template.slots
+        for idx, wc in enumerate(s.cells)
+    }
+    assert filler._grid == expected
+
+
+# ── 14: blacklist-aware fill is deterministic across instances ────────────────
+
+
+def test_blacklist_determinism_two_instances() -> None:
+    template = _three_parallel_downs()
+    pool = ["AL", "ME", "KO"]
+    a = CSPFiller(list(pool), blacklist={"AMK"}, seed=42).fill(template)
+    b = CSPFiller(list(pool), blacklist={"AMK"}, seed=42).fill(template)
+    assert a.slot_assignments == b.slot_assignments
+
+
+# ── 15: same instance, two fill() calls → identical (no state leakage) ────────
+
+
+def test_same_instance_repeat_fill_identical() -> None:
+    # Calling fill() twice on ONE instance must reset RNG + grid so the second
+    # result matches the first exactly (critical for P3 seed determinism).
+    template = _three_parallel_downs()
+    filler = CSPFiller(["AL", "ME", "KO"], blacklist={"AMK"}, seed=7)
+    first = filler.fill(template)
+    second = filler.fill(template)
+    assert first.slot_assignments == second.slot_assignments
