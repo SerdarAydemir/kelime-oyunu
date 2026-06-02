@@ -182,7 +182,7 @@
       "row": 2,
       "col": 1,
       "type": "letter",
-      "solution": "A",
+      "solution": "I",
       "word_ids": [
         "D1"
       ],
@@ -192,7 +192,7 @@
       "row": 3,
       "col": 1,
       "type": "letter",
-      "solution": "Z",
+      "solution": "P",
       "word_ids": [
         "D1",
         "A2"
@@ -203,7 +203,7 @@
       "row": 4,
       "col": 1,
       "type": "letter",
-      "solution": "A",
+      "solution": "I",
       "word_ids": [
         "D1"
       ],
@@ -235,7 +235,7 @@
       "row": 2,
       "col": 2,
       "type": "letter",
-      "solution": "Y",
+      "solution": "L",
       "word_ids": [
         "D2"
       ],
@@ -256,7 +256,7 @@
       "row": 5,
       "col": 2,
       "type": "letter",
-      "solution": "O",
+      "solution": "L",
       "word_ids": [
         "A3"
       ],
@@ -341,7 +341,7 @@
       "row": 2,
       "col": 4,
       "type": "letter",
-      "solution": "E",
+      "solution": "Ö",
       "word_ids": [
         "D4"
       ],
@@ -351,7 +351,7 @@
       "row": 3,
       "col": 4,
       "type": "letter",
-      "solution": "T",
+      "solution": "K",
       "word_ids": [
         "D4",
         "A2"
@@ -362,7 +362,7 @@
       "row": 5,
       "col": 4,
       "type": "letter",
-      "solution": "L",
+      "solution": "P",
       "word_ids": [
         "A3"
       ],
@@ -372,7 +372,7 @@
       "row": 6,
       "col": 4,
       "type": "letter",
-      "solution": "U",
+      "solution": "E",
       "word_ids": [
         "A4"
       ],
@@ -393,7 +393,7 @@
       "row": 2,
       "col": 5,
       "type": "letter",
-      "solution": "Z",
+      "solution": "Y",
       "word_ids": [
         "D5a"
       ],
@@ -436,7 +436,7 @@
       "row": 7,
       "col": 5,
       "type": "letter",
-      "solution": "P",
+      "solution": "A",
       "word_ids": [
         "D5b"
       ],
@@ -446,7 +446,7 @@
   "words": [
     {
       "id": "D1",
-      "answer": "KAZAK",
+      "answer": "KIPIK",
       "length": 5,
       "direction": "down",
       "clue_cell": {
@@ -490,7 +490,7 @@
     },
     {
       "id": "D2",
-      "answer": "AYA",
+      "answer": "ALA",
       "length": 3,
       "direction": "down",
       "clue_cell": {
@@ -574,7 +574,7 @@
     },
     {
       "id": "D4",
-      "answer": "KET",
+      "answer": "KÖK",
       "length": 3,
       "direction": "down",
       "clue_cell": {
@@ -610,7 +610,7 @@
     },
     {
       "id": "D5a",
-      "answer": "AZA",
+      "answer": "AYA",
       "length": 3,
       "direction": "down",
       "clue_cell": {
@@ -646,7 +646,7 @@
     },
     {
       "id": "D5b",
-      "answer": "ARP",
+      "answer": "ARA",
       "length": 3,
       "direction": "down",
       "clue_cell": {
@@ -726,7 +726,7 @@
     },
     {
       "id": "A2",
-      "answer": "ZARTA",
+      "answer": "PARKA",
       "length": 5,
       "direction": "right",
       "clue_cell": {
@@ -770,7 +770,7 @@
     },
     {
       "id": "A3",
-      "answer": "KOALA",
+      "answer": "KLAPA",
       "length": 5,
       "direction": "right",
       "clue_cell": {
@@ -814,7 +814,7 @@
     },
     {
       "id": "A4",
-      "answer": "KUR",
+      "answer": "KER",
       "length": 3,
       "direction": "right",
       "clue_cell": {
@@ -856,6 +856,6 @@
     "post_fill_scanned": true,
     "scanner_version": "2.0.0"
   },
-  "generated_at": "2026-05-31T17:48:01.970368+00:00",
+  "generated_at": "2026-06-01T22:07:53.805783+00:00",
   "generator_version": "2.0.0"
 }

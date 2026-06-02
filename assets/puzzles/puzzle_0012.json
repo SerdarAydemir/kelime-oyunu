@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
   "puzzle_id": 12,
-  "size": "small",
+  "size": "large",
   "grid": {
-    "rows": 6,
-    "cols": 5
+    "rows": 10,
+    "cols": 7
   },
   "cells": [
     {
@@ -15,25 +15,9 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "3 harfli kelime",
+          "text": "7 harfli kelime",
           "arrow": "down",
-          "word_id": "s1",
-          "image_id": null,
-          "source": "placeholder"
-        }
-      ]
-    },
-    {
-      "row": 0,
-      "col": 2,
-      "type": "clue",
-      "solution": null,
-      "word_ids": [],
-      "clues": [
-        {
-          "text": "4 harfli kelime",
-          "arrow": "down",
-          "word_id": "s2",
+          "word_id": "D1",
           "image_id": null,
           "source": "placeholder"
         }
@@ -47,9 +31,9 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "3 harfli kelime",
+          "text": "4 harfli kelime",
           "arrow": "down",
-          "word_id": "s3",
+          "word_id": "D2",
           "image_id": null,
           "source": "placeholder"
         }
@@ -57,15 +41,31 @@
     },
     {
       "row": 0,
-      "col": 4,
+      "col": 5,
       "type": "clue",
       "solution": null,
       "word_ids": [],
       "clues": [
         {
-          "text": "3 harfli kelime",
+          "text": "9 harfli kelime",
           "arrow": "down",
-          "word_id": "s7",
+          "word_id": "D3",
+          "image_id": null,
+          "source": "placeholder"
+        }
+      ]
+    },
+    {
+      "row": 0,
+      "col": 6,
+      "type": "clue",
+      "solution": null,
+      "word_ids": [],
+      "clues": [
+        {
+          "text": "5 harfli kelime",
+          "arrow": "down",
+          "word_id": "D6",
           "image_id": null,
           "source": "placeholder"
         }
@@ -79,9 +79,25 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "4 harfli kelime",
+          "text": "6 harfli kelime",
           "arrow": "right",
-          "word_id": "s4",
+          "word_id": "A1",
+          "image_id": null,
+          "source": "placeholder"
+        }
+      ]
+    },
+    {
+      "row": 2,
+      "col": 2,
+      "type": "clue",
+      "solution": null,
+      "word_ids": [],
+      "clues": [
+        {
+          "text": "5 harfli kelime",
+          "arrow": "down",
+          "word_id": "D4",
           "image_id": null,
           "source": "placeholder"
         }
@@ -95,9 +111,9 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "4 harfli kelime",
+          "text": "6 harfli kelime",
           "arrow": "right",
-          "word_id": "s5",
+          "word_id": "A2",
           "image_id": null,
           "source": "placeholder"
         }
@@ -105,7 +121,23 @@
     },
     {
       "row": 4,
-      "col": 1,
+      "col": 0,
+      "type": "clue",
+      "solution": null,
+      "word_ids": [],
+      "clues": [
+        {
+          "text": "5 harfli kelime",
+          "arrow": "right",
+          "word_id": "A7",
+          "image_id": null,
+          "source": "placeholder"
+        }
+      ]
+    },
+    {
+      "row": 5,
+      "col": 0,
       "type": "clue",
       "solution": null,
       "word_ids": [],
@@ -113,7 +145,87 @@
         {
           "text": "3 harfli kelime",
           "arrow": "right",
-          "word_id": "s6",
+          "word_id": "A3",
+          "image_id": null,
+          "source": "placeholder"
+        }
+      ]
+    },
+    {
+      "row": 5,
+      "col": 4,
+      "type": "clue",
+      "solution": null,
+      "word_ids": [],
+      "clues": [
+        {
+          "text": "4 harfli kelime",
+          "arrow": "down",
+          "word_id": "D5",
+          "image_id": null,
+          "source": "placeholder"
+        }
+      ]
+    },
+    {
+      "row": 6,
+      "col": 0,
+      "type": "clue",
+      "solution": null,
+      "word_ids": [],
+      "clues": [
+        {
+          "text": "5 harfli kelime",
+          "arrow": "right",
+          "word_id": "A4",
+          "image_id": null,
+          "source": "placeholder"
+        }
+      ]
+    },
+    {
+      "row": 7,
+      "col": 0,
+      "type": "clue",
+      "solution": null,
+      "word_ids": [],
+      "clues": [
+        {
+          "text": "5 harfli kelime",
+          "arrow": "right",
+          "word_id": "A5",
+          "image_id": null,
+          "source": "placeholder"
+        }
+      ]
+    },
+    {
+      "row": 8,
+      "col": 0,
+      "type": "clue",
+      "solution": null,
+      "word_ids": [],
+      "clues": [
+        {
+          "text": "5 harfli kelime",
+          "arrow": "right",
+          "word_id": "A8",
+          "image_id": null,
+          "source": "placeholder"
+        }
+      ]
+    },
+    {
+      "row": 9,
+      "col": 0,
+      "type": "clue",
+      "solution": null,
+      "word_ids": [],
+      "clues": [
+        {
+          "text": "6 harfli kelime",
+          "arrow": "right",
+          "word_id": "A6",
           "image_id": null,
           "source": "placeholder"
         }
@@ -123,10 +235,63 @@
       "row": 1,
       "col": 1,
       "type": "letter",
-      "solution": "T",
+      "solution": "K",
       "word_ids": [
-        "s1",
-        "s4"
+        "D1",
+        "A1"
+      ],
+      "clues": []
+    },
+    {
+      "row": 1,
+      "col": 2,
+      "type": "letter",
+      "solution": "A",
+      "word_ids": [
+        "A1"
+      ],
+      "clues": []
+    },
+    {
+      "row": 1,
+      "col": 3,
+      "type": "letter",
+      "solution": "L",
+      "word_ids": [
+        "D2",
+        "A1"
+      ],
+      "clues": []
+    },
+    {
+      "row": 1,
+      "col": 4,
+      "type": "letter",
+      "solution": "P",
+      "word_ids": [
+        "A1"
+      ],
+      "clues": []
+    },
+    {
+      "row": 1,
+      "col": 5,
+      "type": "letter",
+      "solution": "A",
+      "word_ids": [
+        "D3",
+        "A1"
+      ],
+      "clues": []
+    },
+    {
+      "row": 1,
+      "col": 6,
+      "type": "letter",
+      "solution": "K",
+      "word_ids": [
+        "D6",
+        "A1"
       ],
       "clues": []
     },
@@ -134,52 +299,115 @@
       "row": 2,
       "col": 1,
       "type": "letter",
+      "solution": "U",
+      "word_ids": [
+        "D1"
+      ],
+      "clues": []
+    },
+    {
+      "row": 2,
+      "col": 3,
+      "type": "letter",
       "solution": "A",
       "word_ids": [
-        "s1"
+        "D2"
+      ],
+      "clues": []
+    },
+    {
+      "row": 2,
+      "col": 5,
+      "type": "letter",
+      "solution": "K",
+      "word_ids": [
+        "D3"
+      ],
+      "clues": []
+    },
+    {
+      "row": 2,
+      "col": 6,
+      "type": "letter",
+      "solution": "R",
+      "word_ids": [
+        "D6"
       ],
       "clues": []
     },
     {
       "row": 3,
+      "col": 1,
+      "type": "letter",
+      "solution": "T",
+      "word_ids": [
+        "D1",
+        "A2"
+      ],
+      "clues": []
+    },
+    {
+      "row": 3,
+      "col": 2,
+      "type": "letter",
+      "solution": "A",
+      "word_ids": [
+        "D4",
+        "A2"
+      ],
+      "clues": []
+    },
+    {
+      "row": 3,
+      "col": 3,
+      "type": "letter",
+      "solution": "L",
+      "word_ids": [
+        "D2",
+        "A2"
+      ],
+      "clues": []
+    },
+    {
+      "row": 3,
+      "col": 4,
+      "type": "letter",
+      "solution": "İ",
+      "word_ids": [
+        "A2"
+      ],
+      "clues": []
+    },
+    {
+      "row": 3,
+      "col": 5,
+      "type": "letter",
+      "solution": "K",
+      "word_ids": [
+        "D3",
+        "A2"
+      ],
+      "clues": []
+    },
+    {
+      "row": 3,
+      "col": 6,
+      "type": "letter",
+      "solution": "A",
+      "word_ids": [
+        "D6",
+        "A2"
+      ],
+      "clues": []
+    },
+    {
+      "row": 4,
       "col": 1,
       "type": "letter",
       "solution": "S",
       "word_ids": [
-        "s1",
-        "s5"
-      ],
-      "clues": []
-    },
-    {
-      "row": 1,
-      "col": 2,
-      "type": "letter",
-      "solution": "A",
-      "word_ids": [
-        "s2",
-        "s4"
-      ],
-      "clues": []
-    },
-    {
-      "row": 2,
-      "col": 2,
-      "type": "letter",
-      "solution": "T",
-      "word_ids": [
-        "s2"
-      ],
-      "clues": []
-    },
-    {
-      "row": 3,
-      "col": 2,
-      "type": "letter",
-      "solution": "A",
-      "word_ids": [
-        "s2",
-        "s5"
+        "D1",
+        "A7"
       ],
       "clues": []
     },
@@ -189,101 +417,333 @@
       "type": "letter",
       "solution": "K",
       "word_ids": [
-        "s2",
-        "s6"
+        "D4",
+        "A7"
       ],
       "clues": []
     },
     {
-      "row": 1,
+      "row": 4,
       "col": 3,
+      "type": "letter",
+      "solution": "A",
+      "word_ids": [
+        "D2",
+        "A7"
+      ],
+      "clues": []
+    },
+    {
+      "row": 4,
+      "col": 4,
+      "type": "letter",
+      "solution": "L",
+      "word_ids": [
+        "A7"
+      ],
+      "clues": []
+    },
+    {
+      "row": 4,
+      "col": 5,
+      "type": "letter",
+      "solution": "A",
+      "word_ids": [
+        "D3",
+        "A7"
+      ],
+      "clues": []
+    },
+    {
+      "row": 4,
+      "col": 6,
+      "type": "letter",
+      "solution": "N",
+      "word_ids": [
+        "D6"
+      ],
+      "clues": []
+    },
+    {
+      "row": 5,
+      "col": 1,
+      "type": "letter",
+      "solution": "A",
+      "word_ids": [
+        "D1",
+        "A3"
+      ],
+      "clues": []
+    },
+    {
+      "row": 5,
+      "col": 2,
+      "type": "letter",
+      "solution": "R",
+      "word_ids": [
+        "D4",
+        "A3"
+      ],
+      "clues": []
+    },
+    {
+      "row": 5,
+      "col": 3,
+      "type": "letter",
+      "solution": "Ş",
+      "word_ids": [
+        "A3"
+      ],
+      "clues": []
+    },
+    {
+      "row": 5,
+      "col": 5,
+      "type": "letter",
+      "solution": "R",
+      "word_ids": [
+        "D3"
+      ],
+      "clues": []
+    },
+    {
+      "row": 5,
+      "col": 6,
       "type": "letter",
       "solution": "K",
       "word_ids": [
-        "s3",
-        "s4"
+        "D6"
       ],
       "clues": []
     },
     {
-      "row": 2,
-      "col": 3,
+      "row": 6,
+      "col": 1,
       "type": "letter",
-      "solution": "O",
+      "solution": "M",
       "word_ids": [
-        "s3"
+        "D1",
+        "A4"
       ],
       "clues": []
     },
     {
-      "row": 3,
+      "row": 6,
+      "col": 2,
+      "type": "letter",
+      "solution": "A",
+      "word_ids": [
+        "D4",
+        "A4"
+      ],
+      "clues": []
+    },
+    {
+      "row": 6,
       "col": 3,
       "type": "letter",
       "solution": "R",
       "word_ids": [
-        "s3",
-        "s5"
+        "A4"
       ],
       "clues": []
     },
     {
-      "row": 1,
+      "row": 6,
       "col": 4,
+      "type": "letter",
+      "solution": "K",
+      "word_ids": [
+        "D5",
+        "A4"
+      ],
+      "clues": []
+    },
+    {
+      "row": 6,
+      "col": 5,
       "type": "letter",
       "solution": "A",
       "word_ids": [
-        "s4",
-        "s7"
+        "D3",
+        "A4"
       ],
       "clues": []
     },
     {
-      "row": 2,
-      "col": 4,
-      "type": "letter",
-      "solution": "T",
-      "word_ids": [
-        "s7"
-      ],
-      "clues": []
-    },
-    {
-      "row": 3,
-      "col": 4,
+      "row": 7,
+      "col": 1,
       "type": "letter",
       "solution": "A",
       "word_ids": [
-        "s5",
-        "s7"
+        "D1",
+        "A5"
       ],
       "clues": []
     },
     {
-      "row": 4,
+      "row": 7,
+      "col": 2,
+      "type": "letter",
+      "solution": "N",
+      "word_ids": [
+        "D4",
+        "A5"
+      ],
+      "clues": []
+    },
+    {
+      "row": 7,
       "col": 3,
       "type": "letter",
-      "solution": "I",
+      "solution": "L",
       "word_ids": [
-        "s6"
+        "A5"
       ],
       "clues": []
     },
     {
-      "row": 4,
+      "row": 7,
       "col": 4,
       "type": "letter",
-      "solution": "Ğ",
+      "solution": "A",
       "word_ids": [
-        "s6"
+        "D5",
+        "A5"
+      ],
+      "clues": []
+    },
+    {
+      "row": 7,
+      "col": 5,
+      "type": "letter",
+      "solution": "M",
+      "word_ids": [
+        "D3",
+        "A5"
+      ],
+      "clues": []
+    },
+    {
+      "row": 8,
+      "col": 1,
+      "type": "letter",
+      "solution": "Y",
+      "word_ids": [
+        "A8"
+      ],
+      "clues": []
+    },
+    {
+      "row": 8,
+      "col": 2,
+      "type": "letter",
+      "solution": "O",
+      "word_ids": [
+        "A8"
+      ],
+      "clues": []
+    },
+    {
+      "row": 8,
+      "col": 3,
+      "type": "letter",
+      "solution": "S",
+      "word_ids": [
+        "A8"
+      ],
+      "clues": []
+    },
+    {
+      "row": 8,
+      "col": 4,
+      "type": "letter",
+      "solution": "M",
+      "word_ids": [
+        "D5",
+        "A8"
+      ],
+      "clues": []
+    },
+    {
+      "row": 8,
+      "col": 5,
+      "type": "letter",
+      "solution": "A",
+      "word_ids": [
+        "D3",
+        "A8"
+      ],
+      "clues": []
+    },
+    {
+      "row": 9,
+      "col": 1,
+      "type": "letter",
+      "solution": "K",
+      "word_ids": [
+        "A6"
+      ],
+      "clues": []
+    },
+    {
+      "row": 9,
+      "col": 2,
+      "type": "letter",
+      "solution": "O",
+      "word_ids": [
+        "A6"
+      ],
+      "clues": []
+    },
+    {
+      "row": 9,
+      "col": 3,
+      "type": "letter",
+      "solution": "F",
+      "word_ids": [
+        "A6"
+      ],
+      "clues": []
+    },
+    {
+      "row": 9,
+      "col": 4,
+      "type": "letter",
+      "solution": "A",
+      "word_ids": [
+        "D5",
+        "A6"
+      ],
+      "clues": []
+    },
+    {
+      "row": 9,
+      "col": 5,
+      "type": "letter",
+      "solution": "N",
+      "word_ids": [
+        "D3",
+        "A6"
+      ],
+      "clues": []
+    },
+    {
+      "row": 9,
+      "col": 6,
+      "type": "letter",
+      "solution": "A",
+      "word_ids": [
+        "A6"
       ],
       "clues": []
     }
   ],
   "words": [
     {
-      "id": "s1",
-      "answer": "TAS",
-      "length": 3,
+      "id": "D1",
+      "answer": "KUTSAMA",
+      "length": 7,
       "direction": "down",
       "clue_cell": {
         "row": 0,
@@ -305,39 +765,147 @@
         {
           "row": 3,
           "col": 1
+        },
+        {
+          "row": 4,
+          "col": 1
+        },
+        {
+          "row": 5,
+          "col": 1
+        },
+        {
+          "row": 6,
+          "col": 1
+        },
+        {
+          "row": 7,
+          "col": 1
         }
       ],
       "clue": {
-        "text": "3 harfli kelime",
+        "text": "7 harfli kelime",
         "arrow": "down",
-        "word_id": "s1",
+        "word_id": "D1",
         "image_id": null,
         "source": "placeholder"
       },
-      "frequency_score": 90
+      "frequency_score": 50
     },
     {
-      "id": "s2",
-      "answer": "ATAK",
+      "id": "D2",
+      "answer": "LALA",
       "length": 4,
       "direction": "down",
       "clue_cell": {
         "row": 0,
-        "col": 2
+        "col": 3
       },
       "start_cell": {
         "row": 1,
-        "col": 2
+        "col": 3
       },
       "cells": [
         {
           "row": 1,
-          "col": 2
+          "col": 3
         },
         {
           "row": 2,
-          "col": 2
+          "col": 3
         },
+        {
+          "row": 3,
+          "col": 3
+        },
+        {
+          "row": 4,
+          "col": 3
+        }
+      ],
+      "clue": {
+        "text": "4 harfli kelime",
+        "arrow": "down",
+        "word_id": "D2",
+        "image_id": null,
+        "source": "placeholder"
+      },
+      "frequency_score": 80
+    },
+    {
+      "id": "D3",
+      "answer": "AKKARAMAN",
+      "length": 9,
+      "direction": "down",
+      "clue_cell": {
+        "row": 0,
+        "col": 5
+      },
+      "start_cell": {
+        "row": 1,
+        "col": 5
+      },
+      "cells": [
+        {
+          "row": 1,
+          "col": 5
+        },
+        {
+          "row": 2,
+          "col": 5
+        },
+        {
+          "row": 3,
+          "col": 5
+        },
+        {
+          "row": 4,
+          "col": 5
+        },
+        {
+          "row": 5,
+          "col": 5
+        },
+        {
+          "row": 6,
+          "col": 5
+        },
+        {
+          "row": 7,
+          "col": 5
+        },
+        {
+          "row": 8,
+          "col": 5
+        },
+        {
+          "row": 9,
+          "col": 5
+        }
+      ],
+      "clue": {
+        "text": "9 harfli kelime",
+        "arrow": "down",
+        "word_id": "D3",
+        "image_id": null,
+        "source": "placeholder"
+      },
+      "frequency_score": 30
+    },
+    {
+      "id": "D4",
+      "answer": "AKRAN",
+      "length": 5,
+      "direction": "down",
+      "clue_cell": {
+        "row": 2,
+        "col": 2
+      },
+      "start_cell": {
+        "row": 3,
+        "col": 2
+      },
+      "cells": [
         {
           "row": 3,
           "col": 2
@@ -345,93 +913,117 @@
         {
           "row": 4,
           "col": 2
+        },
+        {
+          "row": 5,
+          "col": 2
+        },
+        {
+          "row": 6,
+          "col": 2
+        },
+        {
+          "row": 7,
+          "col": 2
+        }
+      ],
+      "clue": {
+        "text": "5 harfli kelime",
+        "arrow": "down",
+        "word_id": "D4",
+        "image_id": null,
+        "source": "placeholder"
+      },
+      "frequency_score": 70
+    },
+    {
+      "id": "D5",
+      "answer": "KAMA",
+      "length": 4,
+      "direction": "down",
+      "clue_cell": {
+        "row": 5,
+        "col": 4
+      },
+      "start_cell": {
+        "row": 6,
+        "col": 4
+      },
+      "cells": [
+        {
+          "row": 6,
+          "col": 4
+        },
+        {
+          "row": 7,
+          "col": 4
+        },
+        {
+          "row": 8,
+          "col": 4
+        },
+        {
+          "row": 9,
+          "col": 4
         }
       ],
       "clue": {
         "text": "4 harfli kelime",
         "arrow": "down",
-        "word_id": "s2",
+        "word_id": "D5",
         "image_id": null,
         "source": "placeholder"
       },
       "frequency_score": 80
     },
     {
-      "id": "s3",
-      "answer": "KOR",
-      "length": 3,
+      "id": "D6",
+      "answer": "KRANK",
+      "length": 5,
       "direction": "down",
       "clue_cell": {
         "row": 0,
-        "col": 3
+        "col": 6
       },
       "start_cell": {
         "row": 1,
-        "col": 3
+        "col": 6
       },
       "cells": [
         {
           "row": 1,
-          "col": 3
+          "col": 6
         },
         {
           "row": 2,
-          "col": 3
+          "col": 6
         },
         {
           "row": 3,
-          "col": 3
+          "col": 6
+        },
+        {
+          "row": 4,
+          "col": 6
+        },
+        {
+          "row": 5,
+          "col": 6
         }
       ],
       "clue": {
-        "text": "3 harfli kelime",
+        "text": "5 harfli kelime",
         "arrow": "down",
-        "word_id": "s3",
+        "word_id": "D6",
         "image_id": null,
         "source": "placeholder"
       },
-      "frequency_score": 90
+      "frequency_score": 70
     },
     {
-      "id": "s7",
-      "answer": "ATA",
-      "length": 3,
-      "direction": "down",
-      "clue_cell": {
-        "row": 0,
-        "col": 4
-      },
-      "start_cell": {
-        "row": 1,
-        "col": 4
-      },
-      "cells": [
-        {
-          "row": 1,
-          "col": 4
-        },
-        {
-          "row": 2,
-          "col": 4
-        },
-        {
-          "row": 3,
-          "col": 4
-        }
-      ],
-      "clue": {
-        "text": "3 harfli kelime",
-        "arrow": "down",
-        "word_id": "s7",
-        "image_id": null,
-        "source": "placeholder"
-      },
-      "frequency_score": 90
-    },
-    {
-      "id": "s4",
-      "answer": "TAKA",
-      "length": 4,
+      "id": "A1",
+      "answer": "KALPAK",
+      "length": 6,
       "direction": "right",
       "clue_cell": {
         "row": 1,
@@ -457,21 +1049,29 @@
         {
           "row": 1,
           "col": 4
+        },
+        {
+          "row": 1,
+          "col": 5
+        },
+        {
+          "row": 1,
+          "col": 6
         }
       ],
       "clue": {
-        "text": "4 harfli kelime",
+        "text": "6 harfli kelime",
         "arrow": "right",
-        "word_id": "s4",
+        "word_id": "A1",
         "image_id": null,
         "source": "placeholder"
       },
-      "frequency_score": 80
+      "frequency_score": 60
     },
     {
-      "id": "s5",
-      "answer": "SARA",
-      "length": 4,
+      "id": "A2",
+      "answer": "TALİKA",
+      "length": 6,
       "direction": "right",
       "clue_cell": {
         "row": 3,
@@ -497,31 +1097,215 @@
         {
           "row": 3,
           "col": 4
+        },
+        {
+          "row": 3,
+          "col": 5
+        },
+        {
+          "row": 3,
+          "col": 6
         }
       ],
       "clue": {
-        "text": "4 harfli kelime",
+        "text": "6 harfli kelime",
         "arrow": "right",
-        "word_id": "s5",
+        "word_id": "A2",
         "image_id": null,
         "source": "placeholder"
       },
-      "frequency_score": 80
+      "frequency_score": 60
     },
     {
-      "id": "s6",
-      "answer": "KIĞ",
+      "id": "A3",
+      "answer": "ARŞ",
       "length": 3,
       "direction": "right",
       "clue_cell": {
-        "row": 4,
+        "row": 5,
+        "col": 0
+      },
+      "start_cell": {
+        "row": 5,
         "col": 1
+      },
+      "cells": [
+        {
+          "row": 5,
+          "col": 1
+        },
+        {
+          "row": 5,
+          "col": 2
+        },
+        {
+          "row": 5,
+          "col": 3
+        }
+      ],
+      "clue": {
+        "text": "3 harfli kelime",
+        "arrow": "right",
+        "word_id": "A3",
+        "image_id": null,
+        "source": "placeholder"
+      },
+      "frequency_score": 90
+    },
+    {
+      "id": "A4",
+      "answer": "MARKA",
+      "length": 5,
+      "direction": "right",
+      "clue_cell": {
+        "row": 6,
+        "col": 0
+      },
+      "start_cell": {
+        "row": 6,
+        "col": 1
+      },
+      "cells": [
+        {
+          "row": 6,
+          "col": 1
+        },
+        {
+          "row": 6,
+          "col": 2
+        },
+        {
+          "row": 6,
+          "col": 3
+        },
+        {
+          "row": 6,
+          "col": 4
+        },
+        {
+          "row": 6,
+          "col": 5
+        }
+      ],
+      "clue": {
+        "text": "5 harfli kelime",
+        "arrow": "right",
+        "word_id": "A4",
+        "image_id": null,
+        "source": "placeholder"
+      },
+      "frequency_score": 70
+    },
+    {
+      "id": "A5",
+      "answer": "ANLAM",
+      "length": 5,
+      "direction": "right",
+      "clue_cell": {
+        "row": 7,
+        "col": 0
+      },
+      "start_cell": {
+        "row": 7,
+        "col": 1
+      },
+      "cells": [
+        {
+          "row": 7,
+          "col": 1
+        },
+        {
+          "row": 7,
+          "col": 2
+        },
+        {
+          "row": 7,
+          "col": 3
+        },
+        {
+          "row": 7,
+          "col": 4
+        },
+        {
+          "row": 7,
+          "col": 5
+        }
+      ],
+      "clue": {
+        "text": "5 harfli kelime",
+        "arrow": "right",
+        "word_id": "A5",
+        "image_id": null,
+        "source": "placeholder"
+      },
+      "frequency_score": 70
+    },
+    {
+      "id": "A6",
+      "answer": "KOFANA",
+      "length": 6,
+      "direction": "right",
+      "clue_cell": {
+        "row": 9,
+        "col": 0
+      },
+      "start_cell": {
+        "row": 9,
+        "col": 1
+      },
+      "cells": [
+        {
+          "row": 9,
+          "col": 1
+        },
+        {
+          "row": 9,
+          "col": 2
+        },
+        {
+          "row": 9,
+          "col": 3
+        },
+        {
+          "row": 9,
+          "col": 4
+        },
+        {
+          "row": 9,
+          "col": 5
+        },
+        {
+          "row": 9,
+          "col": 6
+        }
+      ],
+      "clue": {
+        "text": "6 harfli kelime",
+        "arrow": "right",
+        "word_id": "A6",
+        "image_id": null,
+        "source": "placeholder"
+      },
+      "frequency_score": 60
+    },
+    {
+      "id": "A7",
+      "answer": "SKALA",
+      "length": 5,
+      "direction": "right",
+      "clue_cell": {
+        "row": 4,
+        "col": 0
       },
       "start_cell": {
         "row": 4,
-        "col": 2
+        "col": 1
       },
       "cells": [
+        {
+          "row": 4,
+          "col": 1
+        },
         {
           "row": 4,
           "col": 2
@@ -533,25 +1317,73 @@
         {
           "row": 4,
           "col": 4
+        },
+        {
+          "row": 4,
+          "col": 5
         }
       ],
       "clue": {
-        "text": "3 harfli kelime",
+        "text": "5 harfli kelime",
         "arrow": "right",
-        "word_id": "s6",
+        "word_id": "A7",
         "image_id": null,
         "source": "placeholder"
       },
-      "frequency_score": 90
+      "frequency_score": 70
+    },
+    {
+      "id": "A8",
+      "answer": "YOSMA",
+      "length": 5,
+      "direction": "right",
+      "clue_cell": {
+        "row": 8,
+        "col": 0
+      },
+      "start_cell": {
+        "row": 8,
+        "col": 1
+      },
+      "cells": [
+        {
+          "row": 8,
+          "col": 1
+        },
+        {
+          "row": 8,
+          "col": 2
+        },
+        {
+          "row": 8,
+          "col": 3
+        },
+        {
+          "row": 8,
+          "col": 4
+        },
+        {
+          "row": 8,
+          "col": 5
+        }
+      ],
+      "clue": {
+        "text": "5 harfli kelime",
+        "arrow": "right",
+        "word_id": "A8",
+        "image_id": null,
+        "source": "placeholder"
+      },
+      "frequency_score": 70
     }
   ],
-  "difficulty": "easy",
-  "difficulty_score": 21,
-  "template_id": "small_01",
+  "difficulty": "medium",
+  "difficulty_score": 40,
+  "template_id": "large_03",
   "safety": {
     "post_fill_scanned": true,
     "scanner_version": "2.0.0"
   },
-  "generated_at": "2026-05-31T17:43:49.373426+00:00",
+  "generated_at": "2026-06-01T22:08:54.936388+00:00",
   "generator_version": "2.0.0"
 }
