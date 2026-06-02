@@ -1,0 +1,156 @@
+// lib/features/gameplay/engine/rack_manager.dart
+
+import 'dart:math';
+
+import 'package:equatable/equatable.dart';
+
+import 'package:kelime_oyunu/data/models/puzzle.dart';
+
+// Pure Dart rack manager (architecture.md §8.3). No Flutter imports so it stays
+// unit-testable. All randomness is seeded for reproducibility.
+
+/// One tile in the player's letter rack.
+class RackTile extends Equatable {
+  const RackTile({
+    required this.letter,
+    this.isPlaced = false,
+    this.isReturned = false,
+  });
+
+  final String letter;
+
+  /// Whether the tile is currently placed on the board this turn (pending).
+  final bool isPlaced;
+
+  /// Whether the tile came back this turn because it was placed incorrectly.
+  final bool isReturned;
+
+  @override
+  List<Object?> get props => [letter, isPlaced, isReturned];
+}
+
+/// Builds and refills the player's rack from the puzzle's unsolved cells.
+class RackManager {
+  const RackManager();
+
+  static const int baseRackSize = 5;
+  static const int powerUpRackSize = 6;
+
+  // Full 29-letter Turkish alphabet (no Q/W/X) used as a fallback source when
+  // the puzzle has too few unsolved cells to fill the rack (architecture.md §14).
+  static const List<String> _turkishAlphabet = [
+    'A', 'B', 'C', 'Ç', 'D', 'E', 'F', 'G', 'Ğ', 'H', 'I', 'İ', //
+    'J', 'K', 'L', 'M', 'N', 'O', 'Ö', 'P', 'R', 'S', 'Ş', 'T', //
+    'U', 'Ü', 'V', 'Y', 'Z',
+  ];
+
+  /// Builds the opening rack of [rackSize] tiles.
+  List<RackTile> initialRack({
+    required PuzzleData puzzle,
+    required Map<WordCell, String> board,
+    required int rackSize,
+    required int seed,
+  }) {
+    final rng = Random(seed);
+    final letters = _drawFillLetters(
+      count: rackSize,
+      puzzle: puzzle,
+      board: board,
+      rng: rng,
+    );
+    return [for (final letter in letters) RackTile(letter: letter)];
+  }
+
+  /// Rebuilds the rack after a confirmed move (architecture.md §8.3, Karar 2).
+  ///
+  /// The next rack is the union of: tiles the player never placed this turn
+  /// (their strategic carry-over), the [returnedLetters] that came back wrong
+  /// (flagged [RackTile.isReturned]), and freshly drawn tiles topping the rack
+  /// up to [baseRackSize].
+  List<RackTile> refill({
+    required List<RackTile> currentRack,
+    required PuzzleData puzzle,
+    required Map<WordCell, String> board,
+    required List<String> returnedLetters,
+    required int seed,
+  }) {
+    final rng = Random(seed);
+    final kept = <RackTile>[
+      for (final tile in currentRack)
+        if (!tile.isPlaced) RackTile(letter: tile.letter),
+    ];
+    final returned = <RackTile>[
+      for (final letter in returnedLetters)
+        RackTile(letter: letter, isReturned: true),
+    ];
+    final carryOver = [...kept, ...returned];
+    final need = baseRackSize - carryOver.length;
+    final fresh = need > 0
+        ? _drawFillLetters(count: need, puzzle: puzzle, board: board, rng: rng)
+        : const <String>[];
+    return [
+      ...carryOver,
+      for (final letter in fresh) RackTile(letter: letter),
+    ];
+  }
+
+  /// Replaces the tiles at [swapIndices] with freshly drawn ones; size unchanged.
+  List<RackTile> swapLetters({
+    required List<RackTile> currentRack,
+    required List<int> swapIndices,
+    required PuzzleData puzzle,
+    required Map<WordCell, String> board,
+    required int seed,
+  }) {
+    final rng = Random(seed);
+    final swapSet = swapIndices.toSet();
+    final fresh = _drawFillLetters(
+      count: swapSet.length,
+      puzzle: puzzle,
+      board: board,
+      rng: rng,
+    );
+    var freshIndex = 0;
+    return [
+      for (var i = 0; i < currentRack.length; i++)
+        if (swapSet.contains(i))
+          RackTile(letter: fresh[freshIndex++])
+        else
+          currentRack[i],
+    ];
+  }
+
+  // Collects the solution letters of every still-unsolved letter cell.
+  List<String> _unsolvedLetters(
+    PuzzleData puzzle,
+    Map<WordCell, String> board,
+  ) {
+    final letters = <String>[];
+    for (final cell in puzzle.cells) {
+      if (cell.type != CellType.letter) continue;
+      final position = WordCell(row: cell.row, col: cell.col);
+      if (board.containsKey(position)) continue;
+      final solution = cell.solution;
+      if (solution != null) letters.add(solution);
+    }
+    return letters;
+  }
+
+  // Draws [count] letters: first from the shuffled unsolved-cell pool (so the
+  // player can always make progress), then from the Turkish alphabet fallback.
+  List<String> _drawFillLetters({
+    required int count,
+    required PuzzleData puzzle,
+    required Map<WordCell, String> board,
+    required Random rng,
+  }) {
+    final pool = _unsolvedLetters(puzzle, board)..shuffle(rng);
+    return [
+      for (var i = 0; i < count; i++)
+        if (i < pool.length)
+          pool[i]
+        else
+          _turkishAlphabet[rng.nextInt(_turkishAlphabet.length)],
+    ];
+  }
+}
