@@ -55,6 +55,7 @@ class GameActive extends GameState {
     required this.rackSize,
     required this.revealedWordIds,
     this.highlightedWordId,
+    this.selectedRackIndex = -1,
   });
 
   final PuzzleData puzzle;
@@ -84,6 +85,10 @@ class GameActive extends GameState {
   /// IDs of words the player revealed with a hint.
   final Set<String> revealedWordIds;
 
+  /// Index of the rack tile the player has tapped but not yet placed.
+  /// -1 means no tile is currently selected (sentinel — avoids nullable copyWith ambiguity).
+  final int selectedRackIndex;
+
   GameActive copyWith({
     PuzzleData? puzzle,
     Map<WordCell, String>? board,
@@ -97,6 +102,7 @@ class GameActive extends GameState {
     GameStatus? status,
     int? rackSize,
     Set<String>? revealedWordIds,
+    int? selectedRackIndex,
   }) {
     return GameActive(
       puzzle: puzzle ?? this.puzzle,
@@ -111,6 +117,7 @@ class GameActive extends GameState {
       status: status ?? this.status,
       rackSize: rackSize ?? this.rackSize,
       revealedWordIds: revealedWordIds ?? this.revealedWordIds,
+      selectedRackIndex: selectedRackIndex ?? this.selectedRackIndex,
     );
   }
 
@@ -128,5 +135,6 @@ class GameActive extends GameState {
         status,
         rackSize,
         revealedWordIds,
+        selectedRackIndex,
       ];
 }

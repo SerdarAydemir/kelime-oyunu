@@ -144,3 +144,11 @@ Her yeni görev geldiğinde şu sırayı bozmadan uygula:
 | Klasör yapısı, mimari katmanlar, Hive modelleri, JSON şeması | `architecture.md` |
 | Dart stili, lint, test şablonları, git/commit, Python standartları | `coding-standards.md` |
 | Flame neden çıkarıldı | `docs/adr/0004-no-flame-custompainter.md` |
+
+
+## Tamamlanan Adımlar
+- P1-P9: Python puzzle generator ✅ (200 puzzle üretildi)
+- F1: Data layer (PuzzleData, repository) ✅
+- F2: Engines (ScoreEngine, RackManager, BotEngine) ✅  
+- F3: GameBloc ✅
+- F4: Başlıyor (GridPainter + GameScreen)

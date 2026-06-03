@@ -34,6 +34,7 @@ class GameBloc extends Bloc<GameEvent, GameState> {
     on<LettersSwapped>(_onLettersSwapped);
     on<WordRevealed>(_onWordRevealed);
     on<SixthSlotUnlocked>(_onSixthSlotUnlocked);
+    on<RackTileSelected>(_onRackTileSelected);
   }
 
   final PuzzleRepository _puzzleRepo;
@@ -262,6 +263,15 @@ class GameBloc extends Bloc<GameEvent, GameState> {
     await Future<void>.delayed(Duration(milliseconds: botMove.thinkingDelayMs));
     if (isClosed) return;
     add(BotMoveCompleted(botMove));
+  }
+
+  void _onRackTileSelected(
+    RackTileSelected event,
+    Emitter<GameState> emit,
+  ) {
+    final current = state;
+    if (current is! GameActive) return;
+    emit(current.copyWith(selectedRackIndex: event.rackIndex));
   }
 
   GameActive _finish(GameActive snapshot) {

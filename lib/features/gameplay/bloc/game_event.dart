@@ -99,3 +99,14 @@ class WordRevealed extends GameEvent {
 class SixthSlotUnlocked extends GameEvent {
   const SixthSlotUnlocked();
 }
+
+/// The player tapped a rack tile to select it for placement.
+/// [rackIndex] == -1 clears the current selection.
+class RackTileSelected extends GameEvent {
+  const RackTileSelected(this.rackIndex);
+
+  final int rackIndex;
+
+  @override
+  List<Object?> get props => [rackIndex];
+}
