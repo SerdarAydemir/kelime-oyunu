@@ -2,6 +2,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import 'package:kelime_oyunu/features/gameplay/view/game_screen.dart';
+
 /// Centralised route configuration (architecture.md §8).
 ///
 /// Every [GoRoute.builder] currently returns a [_PlaceholderScreen]. Replace
@@ -13,7 +15,7 @@ abstract final class AppRouter {
     routes: [
       GoRoute(
         path: '/',
-        builder: (context, state) => const _PlaceholderScreen(label: 'Splash'),
+        builder: (context, state) => const _QuickStartScreen(),
       ),
       GoRoute(
         path: '/consent',
@@ -30,8 +32,11 @@ abstract final class AppRouter {
       GoRoute(
         path: '/gameplay/:levelId',
         builder: (context, state) {
-          final levelId = state.pathParameters['levelId'] ?? '0';
-          return _PlaceholderScreen(label: 'Gameplay · $levelId');
+          final levelId = int.tryParse(
+                state.pathParameters['levelId'] ?? '1',
+              ) ??
+              1;
+          return GameScreen(puzzleId: levelId);
         },
       ),
       GoRoute(
@@ -68,4 +73,30 @@ class _PlaceholderScreen extends StatelessWidget {
       body: Center(child: Text(label, style: Theme.of(context).textTheme.headlineMedium)),
     );
   }
+}
+
+/// Temporary quick-start screen: shows a spinner and immediately navigates
+/// to puzzle #1. Replaced by the real splash + menu flow in a later phase.
+class _QuickStartScreen extends StatefulWidget {
+  const _QuickStartScreen();
+
+  @override
+  State<_QuickStartScreen> createState() => _QuickStartScreenState();
+}
+
+class _QuickStartScreenState extends State<_QuickStartScreen> {
+  @override
+  void initState() {
+    super.initState();
+    // Temporary: jump straight into the game.
+    // Real splash → consent → menu → packs flow comes in a later phase.
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (mounted) context.go('/gameplay/1');
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) => const Scaffold(
+        body: Center(child: CircularProgressIndicator()),
+      );
 }

@@ -190,6 +190,10 @@ class GameBloc extends Bloc<GameEvent, GameState> {
       rack: freshRack,
       phase: TurnPhase.playerTurn,
       botThinking: false,
+      botPlacedCells: {
+        ...current.botPlacedCells,
+        ...event.botMove.placements.map((p) => p.cell),
+      },
     );
     emit(
       isBoardComplete(current.puzzle, newBoard) ? _finish(afterBot) : afterBot,

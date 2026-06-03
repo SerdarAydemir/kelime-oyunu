@@ -93,7 +93,7 @@ class _GameActiveContent extends StatelessWidget {
           botName: 'Sokrates',
           botThinking: state.botThinking,
         ),
-        RackWidget(rack: state.rack, onTileTap: (_) {}),
+        RackWidget(rack: state.rack, onTileTap: (_) {}, onTileRecall: (_) {}),
         ActionBar(
           pendingPlacements: state.pendingPlacements,
           onConfirm: () {},

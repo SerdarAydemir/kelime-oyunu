@@ -7,11 +7,13 @@ class RackWidget extends StatelessWidget {
   const RackWidget({
     required this.rack,
     required this.onTileTap,
+    required this.onTileRecall,
     super.key,
   });
 
   final List<RackTile> rack;
   final void Function(int rackIndex) onTileTap;
+  final void Function(int rackIndex) onTileRecall;
 
   @override
   Widget build(BuildContext context) {
@@ -24,6 +26,7 @@ class RackWidget extends StatelessWidget {
           _RackTileWidget(
             tile: rack[i],
             onTap: rack[i].isPlaced ? null : () => onTileTap(i),
+            onLongPress: rack[i].isPlaced ? () => onTileRecall(i) : null,
           ),
         ],
       ],
@@ -35,10 +38,12 @@ class _RackTileWidget extends StatelessWidget {
   const _RackTileWidget({
     required this.tile,
     required this.onTap,
+    this.onLongPress,
   });
 
   final RackTile tile;
   final VoidCallback? onTap;
+  final VoidCallback? onLongPress;
 
   static const double _tileSize = 48.0;
 
@@ -46,6 +51,7 @@ class _RackTileWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
+      onLongPress: onLongPress,
       child: Opacity(
         opacity: tile.isPlaced ? 0.4 : 1.0,
         child: Container(

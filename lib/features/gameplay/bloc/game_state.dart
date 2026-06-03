@@ -56,6 +56,7 @@ class GameActive extends GameState {
     required this.revealedWordIds,
     this.highlightedWordId,
     this.selectedRackIndex = -1,
+    this.botPlacedCells = const {},
   });
 
   final PuzzleData puzzle;
@@ -89,6 +90,9 @@ class GameActive extends GameState {
   /// -1 means no tile is currently selected (sentinel — avoids nullable copyWith ambiguity).
   final int selectedRackIndex;
 
+  /// Cells where the bot placed letters (persisted across turns for visual feedback).
+  final Set<WordCell> botPlacedCells;
+
   GameActive copyWith({
     PuzzleData? puzzle,
     Map<WordCell, String>? board,
@@ -103,6 +107,7 @@ class GameActive extends GameState {
     int? rackSize,
     Set<String>? revealedWordIds,
     int? selectedRackIndex,
+    Set<WordCell>? botPlacedCells,
   }) {
     return GameActive(
       puzzle: puzzle ?? this.puzzle,
@@ -118,6 +123,7 @@ class GameActive extends GameState {
       rackSize: rackSize ?? this.rackSize,
       revealedWordIds: revealedWordIds ?? this.revealedWordIds,
       selectedRackIndex: selectedRackIndex ?? this.selectedRackIndex,
+      botPlacedCells: botPlacedCells ?? this.botPlacedCells,
     );
   }
 
@@ -136,5 +142,6 @@ class GameActive extends GameState {
         rackSize,
         revealedWordIds,
         selectedRackIndex,
+        botPlacedCells,
       ];
 }

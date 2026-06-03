@@ -1,9 +1,8 @@
 // lib/features/gameplay/view/game_screen.dart
 
+import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:go_router/go_router.dart';
-
 import 'package:kelime_oyunu/data/models/puzzle.dart';
 import 'package:kelime_oyunu/data/repositories/puzzle_repository.dart';
 import 'package:kelime_oyunu/features/gameplay/bloc/game_bloc.dart';
@@ -66,7 +65,9 @@ class _GameBody extends StatelessWidget {
             SnackBar(content: Text(state.message)),
           );
         } else if (state is GameActive && state.status != GameStatus.playing) {
-          context.go('/result'); // TODO: wire up result route
+          // TODO: context.go('/result') — result route henüz tanımlı değil,
+          // GoRouter bilinmeyen route'a go() çağrısında crash eder.
+          debugPrint('Game finished with status: ${state.status}');
         }
       },
       builder: (context, state) {
@@ -101,14 +102,20 @@ class _GameActiveBody extends StatelessWidget {
             botThinking: state.botThinking,
           ),
           Expanded(
-            child: Center(
-              child: GridPainter(
-                puzzle: state.puzzle,
-                board: state.board,
-                pendingPlacements: state.pendingPlacements,
-                highlightedWordId: state.highlightedWordId,
-                revealedWordIds: state.revealedWordIds,
-                onCellTap: (cell) => _onCellTap(context, cell),
+            child: SingleChildScrollView(
+              child: Center(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 8),
+                  child: GridPainter(
+                    puzzle: state.puzzle,
+                    board: state.board,
+                    pendingPlacements: state.pendingPlacements,
+                    highlightedWordId: state.highlightedWordId,
+                    revealedWordIds: state.revealedWordIds,
+                    botPlacedCells: state.botPlacedCells,
+                    onCellTap: (cell) => _onCellTap(context, cell),
+                  ),
+                ),
               ),
             ),
           ),
@@ -116,6 +123,14 @@ class _GameActiveBody extends StatelessWidget {
             rack: state.rack,
             onTileTap: (i) =>
                 context.read<GameBloc>().add(RackTileSelected(i)),
+            onTileRecall: (i) {
+              final tile = state.rack[i];
+              final placement = state.pendingPlacements
+                  .firstWhereOrNull((p) => p.letter == tile.letter);
+              if (placement != null) {
+                context.read<GameBloc>().add(LetterRecalled(placement.cell));
+              }
+            },
           ),
           ActionBar(
             pendingPlacements: state.pendingPlacements,
@@ -144,15 +159,16 @@ class _GameActiveBody extends StatelessWidget {
       bloc.add(LetterPlaced(rackIndex: state.selectedRackIndex, cell: cell));
       bloc.add(const RackTileSelected(-1)); // clear selection
     } else {
-      // No tile selected — try to highlight the word at this cell.
-      var wordId = '';
-      for (final w in state.puzzle.words) {
-        if (w.cells.any((c) => c.row == cell.row && c.col == cell.col)) {
-          wordId = w.id;
-          break;
-        }
+      final isPending = state.pendingPlacements
+          .any((p) => p.cell.row == cell.row && p.cell.col == cell.col);
+      if (isPending) {
+        bloc.add(LetterRecalled(cell));
+      } else {
+        final tappedWord = state.puzzle.words.firstWhereOrNull(
+          (w) => w.cells.any((c) => c.row == cell.row && c.col == cell.col),
+        );
+        if (tappedWord != null) bloc.add(WordSelected(tappedWord.id));
       }
-      if (wordId.isNotEmpty) bloc.add(WordSelected(wordId));
     }
   }
 

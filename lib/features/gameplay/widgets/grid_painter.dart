@@ -14,6 +14,7 @@ class GridPainter extends StatelessWidget {
     required this.pendingPlacements,
     required this.highlightedWordId,
     required this.revealedWordIds,
+    required this.botPlacedCells,
     required this.onCellTap,
     super.key,
   });
@@ -23,6 +24,7 @@ class GridPainter extends StatelessWidget {
   final List<Placement> pendingPlacements;
   final String? highlightedWordId;
   final Set<String> revealedWordIds;
+  final Set<WordCell> botPlacedCells;
   final void Function(WordCell) onCellTap;
 
   @override
@@ -44,6 +46,7 @@ class GridPainter extends StatelessWidget {
                 painter: GridStaticPainter(
                   board: board,
                   revealedWordIds: revealedWordIds,
+                  botPlacedCells: botPlacedCells,
                   puzzle: puzzle,
                   cellSize: cellSize,
                 ),
@@ -84,6 +87,7 @@ class GridStaticPainter extends CustomPainter {
   GridStaticPainter({
     required this.board,
     required this.revealedWordIds,
+    required this.botPlacedCells,
     required this.puzzle,
     required this.cellSize,
   })  : _cellMap = {
@@ -96,6 +100,7 @@ class GridStaticPainter extends CustomPainter {
 
   final Map<WordCell, String> board;
   final Set<String> revealedWordIds;
+  final Set<WordCell> botPlacedCells;
   final PuzzleData puzzle;
   final double cellSize;
 
@@ -184,13 +189,19 @@ class GridStaticPainter extends CustomPainter {
     if (letter == null) return;
 
     final isRevealed = _revealedCells.contains(cell);
+    final isBot = botPlacedCells.contains(cell);
+    final color = isRevealed
+        ? AppColors.gridCellLocked
+        : isBot
+            ? Colors.grey.shade600
+            : Colors.black;
     final letterPainter = TextPainter(
       text: TextSpan(
         text: letter,
         style: TextStyle(
           fontSize: 20,
           fontWeight: FontWeight.bold,
-          color: isRevealed ? AppColors.gridCellLocked : Colors.black,
+          color: color,
         ),
       ),
       textDirection: TextDirection.ltr,
@@ -221,7 +232,9 @@ class GridStaticPainter extends CustomPainter {
 
   @override
   bool shouldRepaint(covariant GridStaticPainter old) =>
-      board != old.board || revealedWordIds != old.revealedWordIds;
+      board != old.board ||
+      revealedWordIds != old.revealedWordIds ||
+      botPlacedCells != old.botPlacedCells;
 }
 
 class GridDynamicPainter extends CustomPainter {
