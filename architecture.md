@@ -638,6 +638,124 @@
 
 # 
 
+# \### 5.7 Otomatik Mask Sentezi + "Kenar Incidental" Gerçeği (Sınır İmkânsızlık Teoremi)
+
+# 
+
+# `mask\_synth.py` elle şablonlara ek olarak şablonları \*\*otomatik\*\* (deterministik, seed'li) üretir.
+
+# Tasarımın temelinde şu kanıtlanmış gerçek yatar:
+
+# 
+
+# \*\*Sınır İmkânsızlık Teoremi.\*\* "blank=0 (tam dolu) + HER harf dizisinin grid-içi clue-head'i
+
+# var (incidental dizi YOK) + min uzunluk 3 + kelimeler kesişir (connected)" — bu dört kısıt
+
+# \*\*aynı anda tutulamaz\*\*, grid boyutundan bağımsız. Kanıt (sol-üst köşe): bir yatay run'ın
+
+# head'i solunda, dikey run'ın head'i üstündedir; dolayısıyla col 0'da başlayan yatay run ve
+
+# row 0'da başlayan dikey run \*\*grid dışında\*\* head ister → head'siz. Köşe (0,0) harf olamaz
+
+# (iki yönü de head'siz → öksüz), clue olmalı; ama clue olunca ya barren kalır ya da onu
+
+# besleyecek kelime row 2 / col 1'de kaçınılmaz bir \*\*head'siz kenar run'ı\*\* doğurur. Hangi
+
+# yapı denenirse denensin köşe çelişki üretir. ∎
+
+# 
+
+# \*\*Sonuç (kabul edilen model — "loose"):\*\* Gerçek İskandinav çengelinde olduğu gibi, grid
+
+# \*\*kenarındaki\*\* hücreler "unchecked" olabilir (yalnızca tek yöne ait). Yani:
+
+# \- \*\*Interior run\*\* (start ≥ 1, yani başının solunda/üstünde grid-içi hücre var): \*\*slot\*\*'tur;
+
+# &#x20; clue-head'i vardır, uzunluğu 3–8 \*\*(HARD)\*\*.
+
+# \- \*\*Edge-start run\*\* (col 0 / row 0'da başlayan): \*\*incidental\*\* — slot değildir, clue'su yoktur,
+
+# &#x20; uzunluk kısıtsızdır; her hücresi \*\*dik yöndeki bir interior slot\*\* tarafından kaplanmalıdır.
+
+# \- Öksüz yok (her harf ≥1 interior slot'ta), barren yok (her clue ≥1 slot başlatır),
+
+# &#x20; length-2 interior yasak, \*\*min kesişim ≥ slot\_sayısı/2\*\* (HARD).
+
+# \- blank=0 KORUNUR (kenar farkı "blank" değildir; o hücreler de harf/clue'dur, sadece o
+
+# &#x20; bölgedeki bazı diziler clue'suzdur — Cross Up'ın kenar davranışının ta kendisi).
+
+# 
+
+# \*\*Connectivity bulgusu (üçüncü sınır sonucu):\*\* "Tüm slot'lar TEK bağlı bileşen" hedefi de
+
+# blank=0 + min-3 + no-orphan altında \*\*infeasible\*\*. 6×6 exhaustive (tam tarama) → 0 tek-bileşen
+
+# geçerli grid; 8×6/9×6'da constructive en iyi \*\*2 bileşen\*\* (nadir), tipik 3-5. Neden: gerçek
+
+# İskandinav çengeli 2-harfli kelimeler + daha gevşek "unchecked" sayesinde bağlanır; min-3 kuralı
+
+# tüm slot'ları tek bileşende zincirlemeyi engeller. \*\*Uzlaşma:\*\* "tek bileşen" HARD kısıtı yerine
+
+# \*\*`bileşen ≤ max_components` (default 3, görsel incelemeyle ayarlanır)\*\* kullanılır; `min_crossings`
+
+# HARD kalır. (max\_components=2 ulaşılabilir ama nadir → düşük yield.)
+
+# 
+
+# \*\*Üreteç yaklaşımı (kesişim-önce constructive):\*\* Serbest CLUE/LETTER DFS ve reading-order
+
+# constructive \*\*elendi\*\* (deneysel: ~0 connected çözüm). Doğru yöntem: önce interlocking
+
+# across+down \*\*iskeleti\*\* yerleştir (kesişimler kasıtlı), sonra frontier-backtracking ile grid'i
+
+# doldur, en son tüm kısıtları + min-kesişim'i doğrula; başarısızsa farklı seed ile yeniden dene.
+
+# 
+
+# \### 5.8 Dördüncü Sınır Sonucu — "Solid Blok Kaçınılmazlığı" ve min-1 Çözümü
+
+# 
+
+# \*\*Bulgu.\*\* blank=0 + \*\*min uzunluk 3\*\* ⟹ \*\*dolu (solid) harf bloğu KAÇINILMAZ.\*\* 6×6 exhaustive
+
+# (tam tarama): 218 geçerli min-3 grid'in \*\*tamamında\*\* ≥3×3 tam-harf dikdörtgeni var, no-block
+
+# olan SIFIR. Yani min-3 ile her tam-dolu grid "word-search" görünümüne mahkûm; gerçek Cross Up'ın
+
+# serpiştirilmiş, değişik-uzunlukta görünümü min-3 ile imkânsız.
+
+# 
+
+# \*\*Çözüm (kabul edilen): min uzunluk 3 → 1.\*\* Tek-harf (simge: "Azotun simgesi"→N) ve 2-harf
+
+# kelimeler slot olarak serbest. Kanıt: 6×6'da blank=0 + min-1 + no-3×3-blok \*\*209,583\*\* geçerli
+
+# grid (5×5 tam tarama) — fizibıl ve bol. interior run geçerlik kuralı \*\*1≤len≤8\*\* (length-1/2
+
+# artık valid slot); length-1 → symbols havuzu, length-2 → 2-harf havuz, 3-8 → ana havuz.
+
+# 
+
+# \*\*Aşırı-parçalanma karşı dengesi (length-bias).\*\* min-1 kontrolsüz bırakılırsa grid "nokta-nokta"
+
+# olur (8+ bileşen, çok tek-harf). Bu yüzden:
+
+# \- \*\*Length dağılım bias'ı:\*\* 3-5 ağır (çoğunluk), 6-8 ılımlı (birkaç uzun), 1-2 nadir.
+
+# \- \*\*Tek/çift-harf slot tavanı\*\* (`max_len1_slots`, `max_len2_slots` ≈ 3) → dottiness engellenir.
+
+# \- \*\*No-3×3-blok\*\* fill sırasında budanır (min-1 ile kısa slot bloğu kırabildiğinden fizibıl).
+
+# \- Ölçülen denge (8×6): slot ~16-18, clue oranı ~0.25-0.30, L3-5 baskın, L6-8 0-2, bileşen ≤4.
+
+# \- \*\*Clue oranı bandı 0.25-0.40\*\* (önceki 0.30-0.40 tahmini deneysel olarak yüksek çıktı:
+
+# &#x20; no-block+dengeli grid'ler doğal olarak ~0.27'de kümeleniyor).
+
+# 
+
 # \---
 
 # 

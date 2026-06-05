@@ -76,7 +76,7 @@ def scan_segment(
     text: str,
     blacklist: frozenset[str] | set[str],
     min_n: int = 3,
-    max_n: int = 6,
+    max_n: int = 8,
 ) -> list[str]:
     """Scan one contiguous run (forward and reversed) for blacklisted substrings.
 
@@ -84,10 +84,18 @@ def scan_segment(
     scan) and by the CSP filler's incremental profanity guard, so the two
     layers reject exactly the same strings by construction. Returns every
     matched window of length min_n..max_n (may contain duplicates).
+
+    Short-word rule (architecture.md §5.8): a segment shorter than ``min_n``
+    (i.e. a 1- or 2-letter slot, or a 2-letter incidental edge run) is checked
+    as a *whole word* only. Two-letter substrings *inside* longer words are
+    never scanned, so innocent syllables never prune a legitimate long word.
     """
     hits: list[str] = []
     for variant in (text, text[::-1]):
         length = len(variant)
+        # Whole-word check for short segments (2-letter words), no 2-gram scan.
+        if 2 <= length < min_n and variant in blacklist:
+            hits.append(variant)
         for n in range(min_n, max_n + 1):
             for i in range(length - n + 1):
                 window = variant[i : i + n]
@@ -100,7 +108,7 @@ def scan_grid(
     grid: Grid,
     blacklist: set[str],
     min_n: int = 3,
-    max_n: int = 6,
+    max_n: int = 8,
 ) -> list[str]:
     """Scan horizontal and vertical lines for blacklisted substrings.
 

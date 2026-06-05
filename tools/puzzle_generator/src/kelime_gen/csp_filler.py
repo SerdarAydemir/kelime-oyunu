@@ -75,7 +75,7 @@ class CSPFiller:
         max_attempts: int = 20,
         seed: int | None = None,
         min_n: int = 3,
-        max_n: int = 6,
+        max_n: int = 8,
     ) -> None:
         # Defensive normalization; word_pool.py already returns clean upper-case.
         self._word_pool: list[str] = [tr_upper(w) for w in word_pool]
