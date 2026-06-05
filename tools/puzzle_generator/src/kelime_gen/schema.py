@@ -44,7 +44,7 @@ class ClueSpec(BaseModel):
     arrow: ClueArrow
     word_id: str
     image_id: str | None = None
-    source: Literal["tdk", "llm", "placeholder"] = "placeholder"
+    source: Literal["tdk", "llm", "placeholder", "curated"] = "placeholder"
 
 
 class CellType(str, Enum):

@@ -19,8 +19,14 @@ import json
 from pathlib import Path
 
 from kelime_gen.schema import tr_upper
+from kelime_gen.word_pool import PoolEntry
 
 MAX_SLOT_LEN = 8
+
+# Frequency scores for curated single- and two-letter entries.  Higher than
+# the main-pool range (40-90) so they are considered "easy" for difficulty.
+_FREQ_LEN1 = 95
+_FREQ_LEN2 = 92
 
 
 def _load_answer_clue(path: Path) -> dict[str, str]:
@@ -58,3 +64,52 @@ def build_combined_pool(
         if 3 <= len(upper) <= max_len:
             words.add(upper)
     return sorted(words)
+
+
+def build_combined_pool_entries(
+    main_pool: list[PoolEntry],
+    symbols_path: Path,
+    two_letter_path: Path,
+    max_len: int = MAX_SLOT_LEN,
+) -> tuple[list[PoolEntry], dict[str, str]]:
+    """Build (entries, curated_clues) for the min-1 combined pool.
+
+    entries:
+      Deduplicated, sorted list of PoolEntry covering all slot lengths 1..max_len.
+      - len-1: from symbols.json (freq=95)
+      - len-2: from two_letter.json (freq=92)
+      - len-3..max_len: from main_pool (original frequency_score preserved)
+
+    curated_clues:
+      answer -> clue text for every len-1 and len-2 entry.  The clue_writer
+      gives these priority over TDK/placeholder so the player always sees a
+      hand-crafted hint for single letters and common two-letter words.
+
+    Both outputs are sorted by answer string for downstream determinism.
+    """
+    symbols = load_symbols(symbols_path)
+    two_letter = load_two_letter(two_letter_path)
+
+    curated_clues: dict[str, str] = {**symbols, **two_letter}
+
+    seen: set[str] = set()
+    entries: list[PoolEntry] = []
+
+    for answer, _ in sorted(symbols.items()):
+        if answer not in seen:
+            seen.add(answer)
+            entries.append(PoolEntry(word=answer, frequency_score=_FREQ_LEN1))
+
+    for answer, _ in sorted(two_letter.items()):
+        if answer not in seen:
+            seen.add(answer)
+            entries.append(PoolEntry(word=answer, frequency_score=_FREQ_LEN2))
+
+    for entry in main_pool:
+        upper = tr_upper(entry["word"])
+        if 3 <= len(upper) <= max_len and upper not in seen:
+            seen.add(upper)
+            entries.append(PoolEntry(word=upper, frequency_score=entry["frequency_score"]))
+
+    entries.sort(key=lambda e: e["word"])
+    return entries, curated_clues

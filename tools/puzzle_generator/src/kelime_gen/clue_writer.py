@@ -48,23 +48,28 @@ def write_clue(
     word: str,
     tdk_definition: str | None = None,
     category: str | None = None,
+    curated_clues: dict[str, str] | None = None,
 ) -> ClueSpec:
     """Produce a ClueSpec for *word*.
 
     Priority:
-      1. *tdk_definition* → source="tdk", text stripped + capitalised + truncated.
-      2. *category*       → source="placeholder", "{n} harfli bir {category}".
-      3. Neither          → source="placeholder", "{n} harfli kelime".
+      1. *curated_clues[word]* → source="curated" (hand-crafted; len-1/2 answers).
+      2. *tdk_definition*      → source="tdk", text stripped + capitalised + truncated.
+      3. *category*            → source="placeholder", "{n} harfli bir {category}".
+      4. Neither               → source="placeholder", "{n} harfli kelime".
 
     *arrow* defaults to RIGHT and *word_id* to "" — the generator assigns both.
     """
     word_len = len(word)
 
-    if tdk_definition is not None:
+    if curated_clues and word in curated_clues:
+        text: str = truncate_clue(_capitalise_first(curated_clues[word].strip()))
+        source: str = "curated"
+    elif tdk_definition is not None:
         cleaned = tdk_definition.strip()
         capitalised = _capitalise_first(cleaned)
-        text: str = truncate_clue(capitalised)
-        source: str = "tdk"
+        text = truncate_clue(capitalised)
+        source = "tdk"
     elif category is not None:
         text = f"{word_len} harfli bir {tr_lower(category.strip())}"
         source = "placeholder"
@@ -85,14 +90,16 @@ def write_clues(
     tdk_definitions: dict[str, str] | None = None,
     categories: dict[str, str] | None = None,
     default_category: str | None = None,
+    curated_clues: dict[str, str] | None = None,
 ) -> list[ClueSpec]:
     """Produce a ClueSpec for every word in *words*.
 
     Per-word priority:
-      1. ``tdk_definitions[word]`` if provided.
-      2. ``categories[word]`` if provided.
-      3. *default_category* if provided.
-      4. Bare placeholder fallback.
+      1. ``curated_clues[word]`` if provided (len-1/2 hand-crafted clues).
+      2. ``tdk_definitions[word]`` if provided.
+      3. ``categories[word]`` if provided.
+      4. *default_category* if provided.
+      5. Bare placeholder fallback.
 
     Supports mixed batches (each word may have a different category) as well as
     single-category batches (pass *default_category*).
@@ -104,5 +111,7 @@ def write_clues(
     for word in words:
         tdk_def = tdk_defs.get(word)
         cat = cats.get(word) or default_category
-        result.append(write_clue(word, tdk_definition=tdk_def, category=cat))
+        result.append(
+            write_clue(word, tdk_definition=tdk_def, category=cat, curated_clues=curated_clues)
+        )
     return result

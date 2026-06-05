@@ -10,7 +10,8 @@ from typing import Annotated
 import typer
 
 from kelime_gen.generator import generate_pack
-from kelime_gen.mask_template import MaskTemplate, load_templates_dir
+from kelime_gen.pools import build_combined_pool_entries
+from kelime_gen.schema import PuzzleSize
 from kelime_gen.word_pool import PoolEntry, load_blacklist
 
 app = typer.Typer(
@@ -23,13 +24,15 @@ app = typer.Typer(
 _ROOT = Path(__file__).resolve().parents[2]
 _POOL_PATH = _ROOT / "data" / "processed" / "word_pool_cleaned.json"
 _BLACKLIST_PATH = _ROOT / "data" / "raw" / "profanity_blacklist.txt"
-_TEMPLATES_DIR = _ROOT / "templates"
+_SYMBOLS_PATH = _ROOT / "data" / "symbols.json"
+_TWO_LETTER_PATH = _ROOT / "data" / "two_letter.json"
 
 # Placeholder clues stay bare ("N harfli kelime"). The later LLM phase fills
 # tdk_definitions instead of touching this constant (architecture.md §7).
 _DEFAULT_CATEGORY: str | None = None
 
-_VALID_SIZES = ("small", "medium", "large", "all")
+# Only medium (8×6) is supported in this phase (architecture.md §5.3).
+_VALID_SIZES = ("medium",)
 
 
 def _force_utf8_stdout() -> None:
@@ -44,7 +47,7 @@ def _force_utf8_stdout() -> None:
         sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8")
 
 
-def _load_pool(path: Path) -> list[PoolEntry]:
+def _load_main_pool(path: Path) -> list[PoolEntry]:
     """Load the cleaned word pool JSON into PoolEntry items."""
     raw = json.loads(path.read_text(encoding="utf-8"))
     return [
@@ -67,13 +70,13 @@ def generate(
         "assets/puzzles"
     ),
     size: Annotated[
-        str, typer.Option(help="small | medium | large | all")
-    ] = "all",
+        str, typer.Option(help="medium  (small/large: Adım 5'e bırakıldı)")
+    ] = "medium",
 ) -> None:
-    """Bulmaca bölümlerini üretir ve JSON olarak yazar."""
+    """Bulmaca bölümlerini synth mask ile üretir ve JSON olarak yazar."""
     if size not in _VALID_SIZES:
         print(
-            f"Geçersiz size '{size}'. Seçenekler: {', '.join(_VALID_SIZES)}.",
+            f"Geçersiz size '{size}'. Desteklenen: {', '.join(_VALID_SIZES)}.",
             file=sys.stderr,
         )
         raise typer.Exit(code=1)
@@ -85,31 +88,30 @@ def generate(
         )
         raise typer.Exit(code=1)
 
-    pool = _load_pool(_POOL_PATH)
-    blacklist = load_blacklist(_BLACKLIST_PATH) if _BLACKLIST_PATH.exists() else set()
+    for data_path in (_SYMBOLS_PATH, _TWO_LETTER_PATH):
+        if not data_path.exists():
+            print(f"Veri dosyası bulunamadı: {data_path}.", file=sys.stderr)
+            raise typer.Exit(code=1)
 
-    templates: list[MaskTemplate] = load_templates_dir(_TEMPLATES_DIR)
-    if size != "all":
-        templates = [t for t in templates if t.size.value == size]
-    if not templates:
-        print(
-            f"Şablon bulunamadı (size={size}, klasör={_TEMPLATES_DIR}). "
-            "Önce templates/ altına mask şablonları ekle.",
-            file=sys.stderr,
-        )
-        raise typer.Exit(code=1)
+    main_pool = _load_main_pool(_POOL_PATH)
+    combined_pool, curated_clues = build_combined_pool_entries(
+        main_pool, _SYMBOLS_PATH, _TWO_LETTER_PATH
+    )
+    blacklist = load_blacklist(_BLACKLIST_PATH) if _BLACKLIST_PATH.exists() else set()
+    puzzle_size = PuzzleSize(size)
 
     success, failed = generate_pack(
-        templates=templates,
-        word_pool=pool,
+        word_pool=combined_pool,
         blacklist=blacklist,
         start_puzzle_id=1,
         count=count,
         category=_DEFAULT_CATEGORY,
         output_dir=output_dir,
+        size=puzzle_size,
+        curated_clues=curated_clues,
     )
 
-    print(f"\nToplam: {success} üretildi, {failed} başarısız ({len(templates)} şablon)")
+    print(f"\nToplam: {success} üretildi, {failed} başarısız")
     if failed > 0:
         raise typer.Exit(code=1)
 

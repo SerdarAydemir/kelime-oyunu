@@ -2,12 +2,13 @@
 """Orchestrates the v2 puzzle generation pipeline (architecture.md §6.6, §15).
 
 Pipeline per puzzle:
-  mask template (+ transform) -> CSP fill -> post-fill profanity scan
+  synthesize mask (seed=puzzle_id) -> CSP fill -> post-fill profanity scan
   -> clue writing -> CellSpec/WordSpec assembly -> difficulty score
   -> validated PuzzleData -> JSON on disk.
 
-csp_filler owns the fill, post_fill_safety owns the profanity scan, and
-clue_writer owns the clue text; this module wires them together.
+csp_filler owns the fill, post_fill_safety owns the profanity scan,
+clue_writer owns the clue text, and mask_synth owns the mask; this module
+wires them together.
 """
 
 import random
@@ -19,12 +20,15 @@ from pydantic import ValidationError
 from kelime_gen.clue_writer import write_clues
 from kelime_gen.csp_filler import CSPFiller, FillError
 from kelime_gen.difficulty import difficulty_score
-from kelime_gen.mask_template import MaskTemplate, get_transforms
+from kelime_gen.mask_synth import MaskSynthError, SynthParams, synthesize
+from kelime_gen.mask_template import MaskTemplate
 from kelime_gen.schema import (
     CellSpec,
     CellType,
     ClueSpec,
+    GridSize,
     PuzzleData,
+    PuzzleSize,
     SafetyInfo,
     WordCell,
     WordSpec,
@@ -123,6 +127,7 @@ def generate_puzzle(
     puzzle_id: int,
     category: str | None,
     tdk_definitions: dict[str, str] | None = None,
+    curated_clues: dict[str, str] | None = None,
     generator_version: str = "2.0.0",
     max_fill_attempts: int = 200,
     seed: int | None = None,
@@ -137,12 +142,15 @@ def generate_puzzle(
 
     # 1-2. CSP fill. The blacklist is passed so the filler avoids cross-slot
     # profanity at the word level; scan_grid below stays the authoritative net.
+    # min_n=3 / max_n=8 match the profanity scanner window (architecture.md §6.4).
     try:
         fill = CSPFiller(
             word_strings,
             blacklist=blacklist,
             max_attempts=max_fill_attempts,
             seed=seed,
+            min_n=3,
+            max_n=8,
         ).fill(template)
     except FillError as exc:
         print(f"[SKIP] puzzle {puzzle_id}: fill failed — {exc}", file=sys.stderr)
@@ -161,11 +169,15 @@ def generate_puzzle(
         )
         return None
 
-    # 4. Clues — attach the real word_id and arrow direction to each slot's clue.
+    # 4. Clues — curated (len-1/2) beats TDK beats placeholder.
+    #    Then attach the real word_id and arrow direction to each slot's clue.
     items = list(slot_assignments.items())
     answers = [answer for _, answer in items]
     raw_clues = write_clues(
-        answers, tdk_definitions=tdk_definitions, default_category=category
+        answers,
+        tdk_definitions=tdk_definitions,
+        default_category=category,
+        curated_clues=curated_clues,
     )
     slot_by_id = {s.slot_id: s for s in template.slots}
     clue_by_slot: dict[str, ClueSpec] = {
@@ -197,42 +209,65 @@ def generate_puzzle(
     )
 
 
+# Grid dimensions per named size (architecture.md §5.3).
+_SIZE_DIMS: dict[PuzzleSize, tuple[int, int]] = {
+    PuzzleSize.MEDIUM: (8, 6),
+}
+
+
 def generate_pack(
-    templates: list[MaskTemplate],
     word_pool: list[PoolEntry],
     blacklist: set[str],
     start_puzzle_id: int,
     count: int,
     category: str | None,
     output_dir: Path,
+    size: PuzzleSize = PuzzleSize.MEDIUM,
     tdk_definitions: dict[str, str] | None = None,
+    curated_clues: dict[str, str] | None = None,
     generator_version: str = "2.0.0",
-    seed: int | None = None,
+    synth_params: SynthParams | None = None,
 ) -> tuple[int, int]:
     """Generate *count* puzzles into *output_dir*; return (success, failure).
 
-    Each puzzle picks a random template and a random geometric transform of it,
-    then writes puzzle_{id:04d}.json. *seed* makes selection reproducible.
+    Each puzzle synthesizes a fresh MaskTemplate deterministically from its
+    puzzle_id (seed=puzzle_id), then fills it from *word_pool*.  No pre-built
+    template files are required.
+
+    Only PuzzleSize.MEDIUM (8×6) is supported in this phase; other sizes raise
+    ValueError (architecture.md §5.3 — small/large deferred to Step 5).
     """
-    if not templates:
-        raise ValueError("generate_pack requires at least one template")
+    if size not in _SIZE_DIMS:
+        raise ValueError(
+            f"generate_pack: size {size.value!r} not yet supported "
+            f"(supported: {[s.value for s in _SIZE_DIMS]})"
+        )
+    rows, cols = _SIZE_DIMS[size]
     output_dir.mkdir(parents=True, exist_ok=True)
-    rng = random.Random(seed)
     success = 0
     failed = 0
 
     for offset in range(count):
         puzzle_id = start_puzzle_id + offset
-        variant = rng.choice(get_transforms(rng.choice(templates)))
+
+        # Synthesize a fresh mask deterministically from puzzle_id.
+        try:
+            template = synthesize(rows, cols, size, seed=puzzle_id, params=synth_params)
+        except MaskSynthError as exc:
+            print(f"[SKIP] puzzle {puzzle_id}: mask synth failed — {exc}", file=sys.stderr)
+            failed += 1
+            continue
+
         puzzle = generate_puzzle(
-            template=variant,
+            template=template,
             word_pool=word_pool,
             blacklist=blacklist,
             puzzle_id=puzzle_id,
             category=category,
             tdk_definitions=tdk_definitions,
+            curated_clues=curated_clues,
             generator_version=generator_version,
-            seed=rng.randrange(1_000_000),
+            seed=puzzle_id,
         )
         if puzzle is None:
             failed += 1
