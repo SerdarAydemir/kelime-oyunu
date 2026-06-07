@@ -10,8 +10,212 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="839b1ae2-04a1-48ef-a642-27a3a9d0b3fd" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/architecture.md" beforeDir="false" afterPath="$PROJECT_DIR$/architecture.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/puzzles/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0001.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/puzzles/puzzle_0001.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0002.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/puzzles/puzzle_0002.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0003.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/puzzles/puzzle_0003.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0004.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/puzzles/puzzle_0004.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0005.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/puzzles/puzzle_0005.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0006.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0007.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0008.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0009.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0010.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0011.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0012.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0013.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0014.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0015.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0016.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0017.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0018.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0019.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0020.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0021.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0022.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0023.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0024.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0025.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0026.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0027.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0028.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0029.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0030.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0031.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0032.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0033.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0034.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0035.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0036.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0037.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0038.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0039.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0040.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0041.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0042.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0043.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0044.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0045.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0046.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0047.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0048.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0049.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0050.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0051.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0052.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0053.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0054.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0055.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0056.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0057.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0058.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0059.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0060.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0061.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0062.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0063.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0064.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0065.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0066.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0067.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0068.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0069.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0070.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0071.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0072.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0073.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0074.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0075.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0076.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0077.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0078.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0079.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0080.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0081.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0082.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0083.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0084.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0085.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0086.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0087.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0088.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0089.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0090.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0091.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0092.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0093.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0094.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0095.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0096.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0097.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0098.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0099.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0100.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0101.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0102.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0103.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0104.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0105.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0106.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0107.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0108.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0109.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0110.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0111.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0112.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0113.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0114.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0115.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0116.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0117.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0118.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0119.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0120.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0121.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0122.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0123.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0124.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0125.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0126.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0127.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0128.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0129.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0130.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0131.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0132.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0133.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0134.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0135.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0136.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0137.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0138.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0139.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0140.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0141.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0142.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0143.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0144.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0145.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0146.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0147.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0148.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0149.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0150.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0151.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0152.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0153.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0154.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0155.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0156.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0157.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0158.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0159.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0160.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0161.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0162.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0163.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0164.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0165.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0166.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0167.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0168.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0169.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0170.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0171.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0172.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0173.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0174.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0175.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0176.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0177.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0178.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0179.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0180.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0181.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0182.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0183.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0184.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0185.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0186.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0187.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0188.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0189.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0190.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0191.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0192.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0193.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0194.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0195.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0196.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0197.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0198.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0199.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/puzzles/puzzle_0200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/puzzle_generator/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/tools/puzzle_generator/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/puzzle_generator/scripts/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/puzzle_generator/src/kelime_gen/mask_synth.py" beforeDir="false" afterPath="$PROJECT_DIR$/tools/puzzle_generator/src/kelime_gen/mask_synth.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,31 +258,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Flutter.main.dart.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "io.flutter.project.isFirstOpen": "true",
-    "io.flutter.reload.alreadyRun": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Dev/kelime-oyunu",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "device.screenshot",
-    "show.migrate.to.gradle.popup": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Flutter.main.dart.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;io.flutter.project.isFirstOpen&quot;: &quot;true&quot;,
+    &quot;io.flutter.reload.alreadyRun&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Dev/kelime-oyunu&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;device.screenshot&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   }
-}]]></component>
+}</component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="839b1ae2-04a1-48ef-a642-27a3a9d0b3fd" name="Changes" comment="" />

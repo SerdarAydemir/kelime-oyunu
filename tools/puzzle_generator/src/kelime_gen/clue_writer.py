@@ -2,12 +2,11 @@
 """Clue text generation for puzzle words (architecture.md §7).
 
 Priority order for a single word:
-  1. TDK definition  → source="tdk"    (strip, first-letter capitalise, truncate)
-  2. Category hint   → source="placeholder"  ("{n} harfli bir {category}")
-  3. Bare fallback   → source="placeholder"  ("{n} harfli kelime")
+  1. Curated clue  → source="curated"  (hand-crafted; len-1/2 answers)
+  2. Master clue   → source="llm"      (LLM-written; len 3-8 answers)
+  3. Category hint → source="placeholder"  ("{n} harfli bir {category}")
+  4. Bare fallback → source="placeholder"  ("{n} harfli kelime")
 
-LLM rewriting (§7.1 Phase 2) and TDK network fetching (§7.4) are out of scope
-here; the generator orchestrator will handle those layers.
 word_id and arrow direction are left as defaults (generator.py assigns them).
 """
 
@@ -46,17 +45,20 @@ def _capitalise_first(text: str) -> str:
 
 def write_clue(
     word: str,
-    tdk_definition: str | None = None,
     category: str | None = None,
     curated_clues: dict[str, str] | None = None,
+    master_clues: dict[str, str] | None = None,
 ) -> ClueSpec:
     """Produce a ClueSpec for *word*.
 
     Priority:
       1. *curated_clues[word]* → source="curated" (hand-crafted; len-1/2 answers).
-      2. *tdk_definition*      → source="tdk", text stripped + capitalised + truncated.
+      2. *master_clues[word]*  → source="llm" (LLM-written; len 3-8 answers).
       3. *category*            → source="placeholder", "{n} harfli bir {category}".
       4. Neither               → source="placeholder", "{n} harfli kelime".
+
+    Curated and master clues are first-letter capitalised and truncated to fit
+    the 60-character clue budget.
 
     *arrow* defaults to RIGHT and *word_id* to "" — the generator assigns both.
     """
@@ -65,11 +67,9 @@ def write_clue(
     if curated_clues and word in curated_clues:
         text: str = truncate_clue(_capitalise_first(curated_clues[word].strip()))
         source: str = "curated"
-    elif tdk_definition is not None:
-        cleaned = tdk_definition.strip()
-        capitalised = _capitalise_first(cleaned)
-        text = truncate_clue(capitalised)
-        source = "tdk"
+    elif master_clues and word in master_clues:
+        text = truncate_clue(_capitalise_first(master_clues[word].strip()))
+        source = "llm"
     elif category is not None:
         text = f"{word_len} harfli bir {tr_lower(category.strip())}"
         source = "placeholder"
@@ -87,16 +87,16 @@ def write_clue(
 
 def write_clues(
     words: list[str],
-    tdk_definitions: dict[str, str] | None = None,
     categories: dict[str, str] | None = None,
     default_category: str | None = None,
     curated_clues: dict[str, str] | None = None,
+    master_clues: dict[str, str] | None = None,
 ) -> list[ClueSpec]:
     """Produce a ClueSpec for every word in *words*.
 
     Per-word priority:
       1. ``curated_clues[word]`` if provided (len-1/2 hand-crafted clues).
-      2. ``tdk_definitions[word]`` if provided.
+      2. ``master_clues[word]`` if provided (LLM-written, len 3-8 clues).
       3. ``categories[word]`` if provided.
       4. *default_category* if provided.
       5. Bare placeholder fallback.
@@ -104,14 +104,17 @@ def write_clues(
     Supports mixed batches (each word may have a different category) as well as
     single-category batches (pass *default_category*).
     """
-    tdk_defs = tdk_definitions or {}
     cats = categories or {}
 
     result: list[ClueSpec] = []
     for word in words:
-        tdk_def = tdk_defs.get(word)
         cat = cats.get(word) or default_category
         result.append(
-            write_clue(word, tdk_definition=tdk_def, category=cat, curated_clues=curated_clues)
+            write_clue(
+                word,
+                category=cat,
+                curated_clues=curated_clues,
+                master_clues=master_clues,
+            )
         )
     return result

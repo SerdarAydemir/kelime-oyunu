@@ -82,6 +82,19 @@ class SynthParams:
     # Cost discount for double-clue placements (one cell heading two words).
     double_clue_bonus: float = 1.5
 
+    # ── Geometry seal (Cross Up standard, GÖREV 1) ──────────────────────────────
+    # Crossing-less cell cap: at most this fraction of letter cells may belong to
+    # a single slot (no intersection help). 0.35 -> >= ~65% of cells cross two
+    # words. Empirically 0.25 was feasible but rare (1000-1500 restarts, 2-4
+    # min/seed); 0.35 keeps a healthy yield (median ~56 restarts) while lifting
+    # crossing coverage far above the un-gated ~47%.
+    max_single_slot_ratio: float = 0.35
+    # Incidental-run length cap: a clue-headless edge run (a horizontal run that
+    # starts at col 0, or a vertical run that starts at row 0) may not exceed
+    # this length. 3 kills the long un-clued "word-search" rows/cols; tighter
+    # values are redundant since the single-slot cap already shortens edge runs.
+    max_incidental_len: int = 3
+
 
 @dataclass
 class _Run:
@@ -218,6 +231,57 @@ def _has_solid_block(grid: Grid, rows: int, cols: int, min_h: int, min_w: int) -
 def _slot_length_counts(runs: list[_Run]) -> Counter[int]:
     """Histogram of slot lengths (1..8)."""
     return Counter(len(run.cells) for run in runs)
+
+
+def _single_slot_ratio(runs: list[_Run]) -> float:
+    """Fraction of letter cells owned by exactly one slot (no crossing).
+
+    The orphan gate guarantees every cell has >= 1 owner, so this is simply
+    (cells with exactly one owner) / (all letter cells). Lower is better: a low
+    ratio means most letters cross two words and get intersection help.
+    """
+    cnt: Counter[Cell] = Counter()
+    for run in runs:
+        for cell in run.cells:
+            cnt[cell] += 1
+    if not cnt:
+        return 0.0
+    single = sum(1 for v in cnt.values() if v == 1)
+    return single / len(cnt)
+
+
+def _max_incidental_len(grid: Grid, rows: int, cols: int) -> int:
+    """Longest clue-headless (incidental) maximal letter run.
+
+    In the loose model a horizontal run has a clue head iff it starts at col >= 1
+    (the cell to its left is then a CLUE); a vertical run is clued iff it starts
+    at row >= 1. So runs starting at the top row / left column are incidental.
+    Returns the longest such run length, or 0 if there are none.
+    """
+    longest = 0
+    for r in range(rows):
+        c = 0
+        while c < cols:
+            if grid.get((r, c)) == CellType.LETTER:
+                start = c
+                while c < cols and grid.get((r, c)) == CellType.LETTER:
+                    c += 1
+                if start == 0:
+                    longest = max(longest, c - start)
+            else:
+                c += 1
+    for c in range(cols):
+        r = 0
+        while r < rows:
+            if grid.get((r, c)) == CellType.LETTER:
+                start = r
+                while r < rows and grid.get((r, c)) == CellType.LETTER:
+                    r += 1
+                if start == 0:
+                    longest = max(longest, r - start)
+            else:
+                r += 1
+    return longest
 
 
 def _evaluate(grid: Grid, rows: int, cols: int, params: SynthParams) -> list[_Run] | None:
@@ -565,6 +629,11 @@ def synthesize(
         if _crossing_count(runs) < min_x:
             continue
         if _component_count(runs) > p.max_components:
+            continue
+        # Geometry seal (GÖREV 1): cap crossing-less cells and incidental runs.
+        if _single_slot_ratio(runs) > p.max_single_slot_ratio:
+            continue
+        if _max_incidental_len(grid, rows, cols) > p.max_incidental_len:
             continue
         return _assemble(grid, runs, rows, cols, size, seed)
     raise MaskSynthError(f"no valid grid for {rows}x{cols} (seed={seed}, restarts={p.max_restarts})")

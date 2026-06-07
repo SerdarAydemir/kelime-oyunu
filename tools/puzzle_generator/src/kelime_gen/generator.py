@@ -126,8 +126,8 @@ def generate_puzzle(
     blacklist: set[str],
     puzzle_id: int,
     category: str | None,
-    tdk_definitions: dict[str, str] | None = None,
     curated_clues: dict[str, str] | None = None,
+    master_clues: dict[str, str] | None = None,
     generator_version: str = "2.0.0",
     max_fill_attempts: int = 200,
     seed: int | None = None,
@@ -169,15 +169,15 @@ def generate_puzzle(
         )
         return None
 
-    # 4. Clues — curated (len-1/2) beats TDK beats placeholder.
+    # 4. Clues — curated (len-1/2) beats LLM (len 3-8) beats placeholder.
     #    Then attach the real word_id and arrow direction to each slot's clue.
     items = list(slot_assignments.items())
     answers = [answer for _, answer in items]
     raw_clues = write_clues(
         answers,
-        tdk_definitions=tdk_definitions,
         default_category=category,
         curated_clues=curated_clues,
+        master_clues=master_clues,
     )
     slot_by_id = {s.slot_id: s for s in template.slots}
     clue_by_slot: dict[str, ClueSpec] = {
@@ -223,8 +223,8 @@ def generate_pack(
     category: str | None,
     output_dir: Path,
     size: PuzzleSize = PuzzleSize.MEDIUM,
-    tdk_definitions: dict[str, str] | None = None,
     curated_clues: dict[str, str] | None = None,
+    master_clues: dict[str, str] | None = None,
     generator_version: str = "2.0.0",
     synth_params: SynthParams | None = None,
 ) -> tuple[int, int]:
@@ -264,8 +264,8 @@ def generate_pack(
             blacklist=blacklist,
             puzzle_id=puzzle_id,
             category=category,
-            tdk_definitions=tdk_definitions,
             curated_clues=curated_clues,
+            master_clues=master_clues,
             generator_version=generator_version,
             seed=puzzle_id,
         )

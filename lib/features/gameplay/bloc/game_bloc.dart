@@ -1,5 +1,6 @@
 // lib/features/gameplay/bloc/game_bloc.dart
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:kelime_oyunu/core/errors/app_exception.dart';
@@ -94,6 +95,18 @@ class GameBloc extends Bloc<GameEvent, GameState> {
   void _onLetterPlaced(LetterPlaced event, Emitter<GameState> emit) {
     final current = state;
     if (current is! GameActive) return;
+    // Reject invalid targets: clue/blank cells and already-committed cells.
+    // Defence in depth — the UI also filters these (game_screen._onCellTap).
+    final isLetterCell = current.puzzle.cells.any(
+      (c) =>
+          c.type == CellType.letter &&
+          c.row == event.cell.row &&
+          c.col == event.cell.col,
+    );
+    if (!isLetterCell || current.board.containsKey(event.cell)) {
+      debugPrint('Rejected placement on invalid cell: ${event.cell}');
+      return;
+    }
     final tile = current.rack[event.rackIndex];
     final placement = Placement(
       cell: event.cell,

@@ -16,6 +16,10 @@ dev = [
     "black>=23",
     "mypy>=1.7",
 ]
+# Build-time clue generation (scripts/generate_clues.py). Not shipped to Flutter.
+clues = [
+    "google-genai>=2.0",
+]
 
 [project.scripts]
 kelime-gen = "kelime_gen.__main__:main"
@@ -29,6 +33,9 @@ line-length = 100
 
 [tool.mypy]
 strict = true
+# src for the kelime_gen package, scripts for sibling-imported build tools
+# (e.g. generate_clues.py -> clue_engine.py).
+mypy_path = ["src", "scripts"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

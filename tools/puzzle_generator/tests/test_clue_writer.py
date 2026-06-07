@@ -1,5 +1,5 @@
 # tools/puzzle_generator/tests/test_clue_writer.py
-"""Unit tests for clue_writer — placeholder and TDK clue generation."""
+"""Unit tests for clue_writer — curated, master (LLM), and placeholder clues."""
 
 import pytest
 
@@ -7,46 +7,46 @@ from kelime_gen.clue_writer import truncate_clue, write_clue, write_clues
 from kelime_gen.schema import ClueArrow, ClueSpec
 
 
-# ── 1: TDK definition → source and text ──────────────────────────────────────
+# ── 1: master clue → source "llm" and text ───────────────────────────────────
 
 
-def test_tdk_definition_source() -> None:
-    clue = write_clue("KEDI", tdk_definition="Evcil bir hayvan")
-    assert clue.source == "tdk"
+def test_master_clue_source() -> None:
+    clue = write_clue("KEDI", master_clues={"KEDI": "Evcil bir hayvan"})
+    assert clue.source == "llm"
     assert clue.text == "Evcil bir hayvan"
 
 
 # ── 2: leading/trailing whitespace is stripped ───────────────────────────────
 
 
-def test_tdk_definition_stripped() -> None:
-    clue = write_clue("KEDI", tdk_definition="  Evcil bir hayvan  ")
+def test_master_clue_stripped() -> None:
+    clue = write_clue("KEDI", master_clues={"KEDI": "  Evcil bir hayvan  "})
     assert clue.text == "Evcil bir hayvan"
 
 
 # ── 3: lower-case first letter is capitalised (Turkish-aware) ─────────────────
 
 
-def test_tdk_first_letter_capitalised_turkish() -> None:
+def test_master_first_letter_capitalised_turkish() -> None:
     # 'ı' must become 'I', not 'i'.
-    clue = write_clue("ISIK", tdk_definition="ışık veren nesne")
+    clue = write_clue("ISIK", master_clues={"ISIK": "ışık veren nesne"})
     assert clue.text.startswith("Işık")
 
     # Regular ASCII: 'e' → 'E'.
-    clue2 = write_clue("KEDI", tdk_definition="evcil hayvan")
+    clue2 = write_clue("KEDI", master_clues={"KEDI": "evcil hayvan"})
     assert clue2.text.startswith("E")
 
     # Turkish dotted i: 'i' → 'İ'.
-    clue3 = write_clue("INCI", tdk_definition="inci tanesi")
+    clue3 = write_clue("INCI", master_clues={"INCI": "inci tanesi"})
     assert clue3.text.startswith("İ")
 
 
-# ── 4: long TDK definition is truncated ──────────────────────────────────────
+# ── 4: long master clue is truncated ─────────────────────────────────────────
 
 
-def test_tdk_long_definition_truncated() -> None:
+def test_master_long_clue_truncated() -> None:
     long_def = "A" * 70          # 70 chars, well over the 60-char limit
-    clue = write_clue("KEDI", tdk_definition=long_def)
+    clue = write_clue("KEDI", master_clues={"KEDI": long_def})
     assert len(clue.text) == 60
     assert clue.text.endswith("...")
 
@@ -54,11 +54,31 @@ def test_tdk_long_definition_truncated() -> None:
 # ── 5: exactly 60 characters is NOT truncated ────────────────────────────────
 
 
-def test_tdk_exactly_60_chars_not_truncated() -> None:
+def test_master_exactly_60_chars_not_truncated() -> None:
     exact_def = "B" * 60
-    clue = write_clue("KEDI", tdk_definition=exact_def)
+    clue = write_clue("KEDI", master_clues={"KEDI": exact_def})
     assert clue.text == exact_def
     assert not clue.text.endswith("...")
+
+
+# ── 5b: priority — curated beats master beats placeholder ─────────────────────
+
+
+def test_priority_curated_beats_master() -> None:
+    clue = write_clue(
+        "EV",
+        curated_clues={"EV": "Yaşanılan mesken"},
+        master_clues={"EV": "Bir yapı"},
+    )
+    assert clue.source == "curated"
+    assert clue.text == "Yaşanılan mesken"
+
+
+def test_priority_master_beats_placeholder() -> None:
+    # No curated entry, no category → master clue wins over bare placeholder.
+    clue = write_clue("KEDI", category="Hayvan", master_clues={"KEDI": "Evcil hayvan"})
+    assert clue.source == "llm"
+    assert clue.text == "Evcil hayvan"
 
 
 # ── 6: category produces correct placeholder text ────────────────────────────

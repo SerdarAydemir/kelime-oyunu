@@ -238,6 +238,27 @@ void main() {
         isA<GameActive>().having((s) => s.pendingPlacements.length, 'pending', 1),
       ],
     );
+
+    // ── 4a: BUG 1 — non-letter (clue/blank) cell is rejected (no-op) ─────────
+    blocTest<GameBloc, GameState>(
+      'ignores placement on a non-letter cell',
+      build: buildBloc,
+      seed: _activeState,
+      // (0,0) is outside the KOL word, so it is not a letter cell.
+      act: (bloc) =>
+          bloc.add(const LetterPlaced(rackIndex: 0, cell: WordCell(row: 0, col: 0))),
+      expect: () => <GameState>[],
+    );
+
+    // ── 4b: BUG 1 — already-committed cell is rejected (no-op) ───────────────
+    blocTest<GameBloc, GameState>(
+      'ignores placement on an already-filled cell',
+      build: buildBloc,
+      seed: () => _activeState(board: {_cell11: 'K'}),
+      act: (bloc) =>
+          bloc.add(const LetterPlaced(rackIndex: 0, cell: _cell11)),
+      expect: () => <GameState>[],
+    );
   });
 
   group('LetterRecalled', () {

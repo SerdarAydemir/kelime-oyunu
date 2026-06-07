@@ -152,12 +152,26 @@ class _GameActiveBody extends StatelessWidget {
     );
   }
 
+  // Whether [cell] can accept a placement: a letter cell that is not yet
+  // committed. Clue/blank cells and solved/revealed cells are not placeable.
+  bool _isPlaceable(WordCell cell) {
+    final isLetterCell = state.puzzle.cells.any(
+      (c) =>
+          c.type == CellType.letter && c.row == cell.row && c.col == cell.col,
+    );
+    return isLetterCell && !state.board.containsKey(cell);
+  }
+
   void _onCellTap(BuildContext context, WordCell cell) {
     final bloc = context.read<GameBloc>();
     if (state.selectedRackIndex != -1) {
-      // A rack tile is selected — place it on the tapped cell.
-      bloc.add(LetterPlaced(rackIndex: state.selectedRackIndex, cell: cell));
-      bloc.add(const RackTileSelected(-1)); // clear selection
+      // A rack tile is selected — place it only on a valid empty letter cell.
+      // Invalid targets are ignored; the selection is kept so the player can
+      // tap a different cell without re-selecting the tile.
+      if (_isPlaceable(cell)) {
+        bloc.add(LetterPlaced(rackIndex: state.selectedRackIndex, cell: cell));
+        bloc.add(const RackTileSelected(-1)); // clear selection
+      }
     } else {
       final isPending = state.pendingPlacements
           .any((p) => p.cell.row == cell.row && p.cell.col == cell.col);

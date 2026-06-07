@@ -1,3 +1,6 @@
+# Puzzle backup (large generated files, not for commit)
+assets/puzzles_backup/
+
 # Miscellaneous
 *.class
 *.lock

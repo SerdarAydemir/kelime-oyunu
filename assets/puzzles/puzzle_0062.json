@@ -1,66 +1,64 @@
 {
   "schema_version": 2,
   "puzzle_id": 62,
-  "size": "small",
+  "size": "medium",
   "grid": {
-    "rows": 6,
-    "cols": 5
+    "rows": 8,
+    "cols": 6
   },
   "cells": [
     {
-      "row": 1,
-      "col": 1,
+      "row": 0,
+      "col": 0,
       "type": "clue",
       "solution": null,
       "word_ids": [],
       "clues": [
         {
-          "text": "3 harfli kelime",
+          "text": "Arapça'da prens",
           "arrow": "right",
-          "word_id": "aa",
+          "word_id": "A1",
           "image_id": null,
-          "source": "placeholder"
+          "source": "llm"
         },
         {
-          "text": "3 harfli kelime",
+          "text": "Ters dönme hareketi",
           "arrow": "down",
-          "word_id": "dd",
+          "word_id": "D1",
           "image_id": null,
-          "source": "placeholder"
+          "source": "llm"
         }
       ]
+    },
+    {
+      "row": 0,
+      "col": 1,
+      "type": "letter",
+      "solution": "M",
+      "word_ids": [
+        "A1"
+      ],
+      "clues": []
     },
     {
       "row": 0,
       "col": 2,
-      "type": "clue",
-      "solution": null,
-      "word_ids": [],
-      "clues": [
-        {
-          "text": "3 harfli kelime",
-          "arrow": "down",
-          "word_id": "d2",
-          "image_id": null,
-          "source": "placeholder"
-        }
-      ]
+      "type": "letter",
+      "solution": "İ",
+      "word_ids": [
+        "A1"
+      ],
+      "clues": []
     },
     {
       "row": 0,
       "col": 3,
-      "type": "clue",
-      "solution": null,
-      "word_ids": [],
-      "clues": [
-        {
-          "text": "3 harfli kelime",
-          "arrow": "down",
-          "word_id": "d3",
-          "image_id": null,
-          "source": "placeholder"
-        }
-      ]
+      "type": "letter",
+      "solution": "R",
+      "word_ids": [
+        "A1"
+      ],
+      "clues": []
     },
     {
       "row": 0,
@@ -70,56 +68,78 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "3 harfli kelime",
+          "text": "Su çıkan yer",
           "arrow": "down",
-          "word_id": "d4",
+          "word_id": "D2",
           "image_id": null,
-          "source": "placeholder"
+          "source": "llm"
         }
       ]
     },
     {
-      "row": 2,
-      "col": 0,
+      "row": 0,
+      "col": 5,
       "type": "clue",
       "solution": null,
       "word_ids": [],
       "clues": [
         {
-          "text": "4 harfli kelime",
-          "arrow": "right",
-          "word_id": "a3",
+          "text": "Farklı renklerde",
+          "arrow": "down",
+          "word_id": "D3",
           "image_id": null,
-          "source": "placeholder"
+          "source": "llm"
         }
       ]
     },
     {
-      "row": 3,
+      "row": 1,
       "col": 0,
+      "type": "letter",
+      "solution": "T",
+      "word_ids": [
+        "D1"
+      ],
+      "clues": []
+    },
+    {
+      "row": 1,
+      "col": 1,
       "type": "clue",
       "solution": null,
       "word_ids": [],
       "clues": [
         {
-          "text": "4 harfli kelime",
-          "arrow": "right",
-          "word_id": "a2",
+          "text": "Romen rakamıyla elli",
+          "arrow": "down",
+          "word_id": "D4",
           "image_id": null,
-          "source": "placeholder"
+          "source": "curated"
         }
       ]
     },
     {
       "row": 1,
       "col": 2,
-      "type": "letter",
-      "solution": "K",
-      "word_ids": [
-        "aa",
-        "d2"
-      ],
-      "clues": []
+      "type": "clue",
+      "solution": null,
+      "word_ids": [],
+      "clues": [
+        {
+          "text": "3 harfli kelime",
+          "arrow": "right",
+          "word_id": "A2",
+          "image_id": null,
+          "source": "placeholder"
+        },
+        {
+          "text": "Dur, bekleme",
+          "arrow": "down",
+          "word_id": "D5",
+          "image_id": null,
+          "source": "llm"
+        }
+      ]
     },
     {
       "row": 1,
@@ -127,8 +147,7 @@
       "type": "letter",
       "solution": "A",
       "word_ids": [
-        "aa",
-        "d3"
+        "A2"
       ],
       "clues": []
     },
@@ -136,10 +155,31 @@
       "row": 1,
       "col": 4,
       "type": "letter",
-      "solution": "M",
+      "solution": "K",
       "word_ids": [
-        "aa",
-        "d4"
+        "A2",
+        "D2"
+      ],
+      "clues": []
+    },
+    {
+      "row": 1,
+      "col": 5,
+      "type": "letter",
+      "solution": "A",
+      "word_ids": [
+        "A2",
+        "D3"
+      ],
+      "clues": []
+    },
+    {
+      "row": 2,
+      "col": 0,
+      "type": "letter",
+      "solution": "A",
+      "word_ids": [
+        "D1"
       ],
       "clues": []
     },
@@ -147,120 +187,494 @@
       "row": 2,
       "col": 1,
       "type": "letter",
+      "solution": "L",
+      "word_ids": [
+        "D4"
+      ],
+      "clues": []
+    },
+    {
+      "row": 2,
+      "col": 2,
+      "type": "letter",
       "solution": "K",
       "word_ids": [
-        "dd",
-        "a3"
+        "D5"
+      ],
+      "clues": []
+    },
+    {
+      "row": 2,
+      "col": 3,
+      "type": "clue",
+      "solution": null,
+      "word_ids": [],
+      "clues": [
+        {
+          "text": "Kırmızı renk",
+          "arrow": "right",
+          "word_id": "A3",
+          "image_id": null,
+          "source": "curated"
+        },
+        {
+          "text": "Çürük, bozuk",
+          "arrow": "down",
+          "word_id": "D6",
+          "image_id": null,
+          "source": "llm"
+        }
+      ]
+    },
+    {
+      "row": 2,
+      "col": 4,
+      "type": "letter",
+      "solution": "A",
+      "word_ids": [
+        "A3",
+        "D2"
+      ],
+      "clues": []
+    },
+    {
+      "row": 2,
+      "col": 5,
+      "type": "letter",
+      "solution": "L",
+      "word_ids": [
+        "A3",
+        "D3"
+      ],
+      "clues": []
+    },
+    {
+      "row": 3,
+      "col": 0,
+      "type": "letter",
+      "solution": "K",
+      "word_ids": [
+        "D1"
       ],
       "clues": []
     },
     {
       "row": 3,
       "col": 1,
+      "type": "clue",
+      "solution": null,
+      "word_ids": [],
+      "clues": [
+        {
+          "text": "Opera solosu",
+          "arrow": "right",
+          "word_id": "A4",
+          "image_id": null,
+          "source": "llm"
+        }
+      ]
+    },
+    {
+      "row": 3,
+      "col": 2,
       "type": "letter",
-      "solution": "E",
+      "solution": "A",
       "word_ids": [
-        "dd",
-        "a2"
+        "A4",
+        "D5"
+      ],
+      "clues": []
+    },
+    {
+      "row": 3,
+      "col": 3,
+      "type": "letter",
+      "solution": "R",
+      "word_ids": [
+        "A4",
+        "D6"
+      ],
+      "clues": []
+    },
+    {
+      "row": 3,
+      "col": 4,
+      "type": "letter",
+      "solution": "Y",
+      "word_ids": [
+        "A4",
+        "D2"
+      ],
+      "clues": []
+    },
+    {
+      "row": 3,
+      "col": 5,
+      "type": "letter",
+      "solution": "A",
+      "word_ids": [
+        "A4",
+        "D3"
+      ],
+      "clues": []
+    },
+    {
+      "row": 4,
+      "col": 0,
+      "type": "letter",
+      "solution": "L",
+      "word_ids": [
+        "D1"
       ],
       "clues": []
     },
     {
       "row": 4,
       "col": 1,
+      "type": "clue",
+      "solution": null,
+      "word_ids": [],
+      "clues": [
+        {
+          "text": "Kısa bir küfür",
+          "arrow": "right",
+          "word_id": "A5",
+          "image_id": null,
+          "source": "llm"
+        },
+        {
+          "text": "Ataları yücelten",
+          "arrow": "down",
+          "word_id": "D7",
+          "image_id": null,
+          "source": "llm"
+        }
+      ]
+    },
+    {
+      "row": 4,
+      "col": 2,
       "type": "letter",
-      "solution": "K",
+      "solution": "L",
       "word_ids": [
-        "dd"
+        "A5",
+        "D5"
       ],
       "clues": []
     },
     {
-      "row": 2,
-      "col": 2,
+      "row": 4,
+      "col": 3,
       "type": "letter",
       "solution": "A",
       "word_ids": [
-        "d2",
-        "a3"
+        "A5",
+        "D6"
       ],
       "clues": []
     },
     {
-      "row": 3,
+      "row": 4,
+      "col": 4,
+      "type": "letter",
+      "solution": "N",
+      "word_ids": [
+        "A5",
+        "D2"
+      ],
+      "clues": []
+    },
+    {
+      "row": 4,
+      "col": 5,
+      "type": "clue",
+      "solution": null,
+      "word_ids": [],
+      "clues": [
+        {
+          "text": "Dilin aldığı lezzet",
+          "arrow": "down",
+          "word_id": "D8",
+          "image_id": null,
+          "source": "llm"
+        }
+      ]
+    },
+    {
+      "row": 5,
+      "col": 0,
+      "type": "letter",
+      "solution": "A",
+      "word_ids": [
+        "D1"
+      ],
+      "clues": []
+    },
+    {
+      "row": 5,
+      "col": 1,
+      "type": "letter",
+      "solution": "Ö",
+      "word_ids": [
+        "D7"
+      ],
+      "clues": []
+    },
+    {
+      "row": 5,
       "col": 2,
+      "type": "clue",
+      "solution": null,
+      "word_ids": [],
+      "clues": [
+        {
+          "text": "Çizgi, sınır",
+          "arrow": "right",
+          "word_id": "A6",
+          "image_id": null,
+          "source": "llm"
+        },
+        {
+          "text": "Beyaz, temiz",
+          "arrow": "down",
+          "word_id": "D9",
+          "image_id": null,
+          "source": "curated"
+        }
+      ]
+    },
+    {
+      "row": 5,
+      "col": 3,
+      "type": "letter",
+      "solution": "H",
+      "word_ids": [
+        "A6",
+        "D6"
+      ],
+      "clues": []
+    },
+    {
+      "row": 5,
+      "col": 4,
+      "type": "letter",
+      "solution": "A",
+      "word_ids": [
+        "A6",
+        "D2"
+      ],
+      "clues": []
+    },
+    {
+      "row": 5,
+      "col": 5,
       "type": "letter",
       "solution": "T",
       "word_ids": [
-        "d2",
-        "a2"
+        "A6",
+        "D8"
       ],
       "clues": []
     },
     {
-      "row": 2,
-      "col": 3,
-      "type": "letter",
-      "solution": "R",
-      "word_ids": [
-        "d3",
-        "a3"
-      ],
-      "clues": []
+      "row": 6,
+      "col": 0,
+      "type": "clue",
+      "solution": null,
+      "word_ids": [],
+      "clues": [
+        {
+          "text": "Yakın arkadaş",
+          "arrow": "right",
+          "word_id": "A7",
+          "image_id": null,
+          "source": "llm"
+        }
+      ]
     },
     {
-      "row": 3,
-      "col": 3,
+      "row": 6,
+      "col": 1,
       "type": "letter",
       "solution": "K",
       "word_ids": [
-        "d3",
-        "a2"
+        "A7",
+        "D7"
       ],
       "clues": []
     },
     {
-      "row": 2,
-      "col": 4,
+      "row": 6,
+      "col": 2,
       "type": "letter",
       "solution": "A",
       "word_ids": [
-        "d4",
-        "a3"
+        "A7",
+        "D9"
       ],
       "clues": []
     },
     {
-      "row": 3,
+      "row": 6,
+      "col": 3,
+      "type": "letter",
+      "solution": "N",
+      "word_ids": [
+        "A7",
+        "D6"
+      ],
+      "clues": []
+    },
+    {
+      "row": 6,
       "col": 4,
       "type": "letter",
-      "solution": "İ",
+      "solution": "K",
       "word_ids": [
-        "d4",
-        "a2"
+        "A7",
+        "D2"
+      ],
+      "clues": []
+    },
+    {
+      "row": 6,
+      "col": 5,
+      "type": "letter",
+      "solution": "A",
+      "word_ids": [
+        "A7",
+        "D8"
+      ],
+      "clues": []
+    },
+    {
+      "row": 7,
+      "col": 0,
+      "type": "clue",
+      "solution": null,
+      "word_ids": [],
+      "clues": [
+        {
+          "text": "İşin ehli kişi",
+          "arrow": "right",
+          "word_id": "A8",
+          "image_id": null,
+          "source": "llm"
+        }
+      ]
+    },
+    {
+      "row": 7,
+      "col": 1,
+      "type": "letter",
+      "solution": "E",
+      "word_ids": [
+        "A8",
+        "D7"
+      ],
+      "clues": []
+    },
+    {
+      "row": 7,
+      "col": 2,
+      "type": "letter",
+      "solution": "K",
+      "word_ids": [
+        "A8",
+        "D9"
+      ],
+      "clues": []
+    },
+    {
+      "row": 7,
+      "col": 3,
+      "type": "letter",
+      "solution": "E",
+      "word_ids": [
+        "A8",
+        "D6"
+      ],
+      "clues": []
+    },
+    {
+      "row": 7,
+      "col": 4,
+      "type": "clue",
+      "solution": null,
+      "word_ids": [],
+      "clues": [
+        {
+          "text": "Zamanın simgesi",
+          "arrow": "right",
+          "word_id": "A9",
+          "image_id": null,
+          "source": "curated"
+        }
+      ]
+    },
+    {
+      "row": 7,
+      "col": 5,
+      "type": "letter",
+      "solution": "T",
+      "word_ids": [
+        "A9",
+        "D8"
       ],
       "clues": []
     }
   ],
   "words": [
     {
-      "id": "aa",
-      "answer": "KAM",
+      "id": "A1",
+      "answer": "MİR",
+      "length": 3,
+      "direction": "right",
+      "clue_cell": {
+        "row": 0,
+        "col": 0
+      },
+      "start_cell": {
+        "row": 0,
+        "col": 1
+      },
+      "cells": [
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 3
+        }
+      ],
+      "clue": {
+        "text": "Arapça'da prens",
+        "arrow": "right",
+        "word_id": "A1",
+        "image_id": null,
+        "source": "llm"
+      },
+      "frequency_score": 90
+    },
+    {
+      "id": "A2",
+      "answer": "AKA",
       "length": 3,
       "direction": "right",
       "clue_cell": {
         "row": 1,
-        "col": 1
+        "col": 2
       },
       "start_cell": {
         "row": 1,
-        "col": 2
+        "col": 3
       },
       "cells": [
-        {
-          "row": 1,
-          "col": 2
-        },
         {
           "row": 1,
           "col": 3
@@ -268,129 +682,321 @@
         {
           "row": 1,
           "col": 4
+        },
+        {
+          "row": 1,
+          "col": 5
         }
       ],
       "clue": {
         "text": "3 harfli kelime",
         "arrow": "right",
-        "word_id": "aa",
+        "word_id": "A2",
         "image_id": null,
         "source": "placeholder"
       },
       "frequency_score": 90
     },
     {
-      "id": "dd",
-      "answer": "KEK",
-      "length": 3,
-      "direction": "down",
+      "id": "A3",
+      "answer": "AL",
+      "length": 2,
+      "direction": "right",
       "clue_cell": {
-        "row": 1,
-        "col": 1
+        "row": 2,
+        "col": 3
       },
       "start_cell": {
         "row": 2,
-        "col": 1
+        "col": 4
       },
       "cells": [
         {
           "row": 2,
-          "col": 1
+          "col": 4
+        },
+        {
+          "row": 2,
+          "col": 5
+        }
+      ],
+      "clue": {
+        "text": "Kırmızı renk",
+        "arrow": "right",
+        "word_id": "A3",
+        "image_id": null,
+        "source": "curated"
+      },
+      "frequency_score": 92
+    },
+    {
+      "id": "A4",
+      "answer": "ARYA",
+      "length": 4,
+      "direction": "right",
+      "clue_cell": {
+        "row": 3,
+        "col": 1
+      },
+      "start_cell": {
+        "row": 3,
+        "col": 2
+      },
+      "cells": [
+        {
+          "row": 3,
+          "col": 2
         },
         {
           "row": 3,
-          "col": 1
+          "col": 3
+        },
+        {
+          "row": 3,
+          "col": 4
+        },
+        {
+          "row": 3,
+          "col": 5
+        }
+      ],
+      "clue": {
+        "text": "Opera solosu",
+        "arrow": "right",
+        "word_id": "A4",
+        "image_id": null,
+        "source": "llm"
+      },
+      "frequency_score": 80
+    },
+    {
+      "id": "A5",
+      "answer": "LAN",
+      "length": 3,
+      "direction": "right",
+      "clue_cell": {
+        "row": 4,
+        "col": 1
+      },
+      "start_cell": {
+        "row": 4,
+        "col": 2
+      },
+      "cells": [
+        {
+          "row": 4,
+          "col": 2
         },
         {
           "row": 4,
+          "col": 3
+        },
+        {
+          "row": 4,
+          "col": 4
+        }
+      ],
+      "clue": {
+        "text": "Kısa bir küfür",
+        "arrow": "right",
+        "word_id": "A5",
+        "image_id": null,
+        "source": "llm"
+      },
+      "frequency_score": 90
+    },
+    {
+      "id": "A6",
+      "answer": "HAT",
+      "length": 3,
+      "direction": "right",
+      "clue_cell": {
+        "row": 5,
+        "col": 2
+      },
+      "start_cell": {
+        "row": 5,
+        "col": 3
+      },
+      "cells": [
+        {
+          "row": 5,
+          "col": 3
+        },
+        {
+          "row": 5,
+          "col": 4
+        },
+        {
+          "row": 5,
+          "col": 5
+        }
+      ],
+      "clue": {
+        "text": "Çizgi, sınır",
+        "arrow": "right",
+        "word_id": "A6",
+        "image_id": null,
+        "source": "llm"
+      },
+      "frequency_score": 90
+    },
+    {
+      "id": "A7",
+      "answer": "KANKA",
+      "length": 5,
+      "direction": "right",
+      "clue_cell": {
+        "row": 6,
+        "col": 0
+      },
+      "start_cell": {
+        "row": 6,
+        "col": 1
+      },
+      "cells": [
+        {
+          "row": 6,
           "col": 1
+        },
+        {
+          "row": 6,
+          "col": 2
+        },
+        {
+          "row": 6,
+          "col": 3
+        },
+        {
+          "row": 6,
+          "col": 4
+        },
+        {
+          "row": 6,
+          "col": 5
         }
       ],
       "clue": {
-        "text": "3 harfli kelime",
-        "arrow": "down",
-        "word_id": "dd",
+        "text": "Yakın arkadaş",
+        "arrow": "right",
+        "word_id": "A7",
         "image_id": null,
-        "source": "placeholder"
+        "source": "llm"
+      },
+      "frequency_score": 70
+    },
+    {
+      "id": "A8",
+      "answer": "EKE",
+      "length": 3,
+      "direction": "right",
+      "clue_cell": {
+        "row": 7,
+        "col": 0
+      },
+      "start_cell": {
+        "row": 7,
+        "col": 1
+      },
+      "cells": [
+        {
+          "row": 7,
+          "col": 1
+        },
+        {
+          "row": 7,
+          "col": 2
+        },
+        {
+          "row": 7,
+          "col": 3
+        }
+      ],
+      "clue": {
+        "text": "İşin ehli kişi",
+        "arrow": "right",
+        "word_id": "A8",
+        "image_id": null,
+        "source": "llm"
       },
       "frequency_score": 90
     },
     {
-      "id": "d2",
-      "answer": "KAT",
-      "length": 3,
+      "id": "A9",
+      "answer": "T",
+      "length": 1,
+      "direction": "right",
+      "clue_cell": {
+        "row": 7,
+        "col": 4
+      },
+      "start_cell": {
+        "row": 7,
+        "col": 5
+      },
+      "cells": [
+        {
+          "row": 7,
+          "col": 5
+        }
+      ],
+      "clue": {
+        "text": "Zamanın simgesi",
+        "arrow": "right",
+        "word_id": "A9",
+        "image_id": null,
+        "source": "curated"
+      },
+      "frequency_score": 95
+    },
+    {
+      "id": "D1",
+      "answer": "TAKLA",
+      "length": 5,
       "direction": "down",
       "clue_cell": {
         "row": 0,
-        "col": 2
+        "col": 0
       },
       "start_cell": {
         "row": 1,
-        "col": 2
+        "col": 0
       },
       "cells": [
         {
           "row": 1,
-          "col": 2
+          "col": 0
         },
         {
           "row": 2,
-          "col": 2
+          "col": 0
         },
         {
           "row": 3,
-          "col": 2
+          "col": 0
+        },
+        {
+          "row": 4,
+          "col": 0
+        },
+        {
+          "row": 5,
+          "col": 0
         }
       ],
       "clue": {
-        "text": "3 harfli kelime",
+        "text": "Ters dönme hareketi",
         "arrow": "down",
-        "word_id": "d2",
+        "word_id": "D1",
         "image_id": null,
-        "source": "placeholder"
+        "source": "llm"
       },
-      "frequency_score": 90
+      "frequency_score": 70
     },
     {
-      "id": "d3",
-      "answer": "ARK",
-      "length": 3,
-      "direction": "down",
-      "clue_cell": {
-        "row": 0,
-        "col": 3
-      },
-      "start_cell": {
-        "row": 1,
-        "col": 3
-      },
-      "cells": [
-        {
-          "row": 1,
-          "col": 3
-        },
-        {
-          "row": 2,
-          "col": 3
-        },
-        {
-          "row": 3,
-          "col": 3
-        }
-      ],
-      "clue": {
-        "text": "3 harfli kelime",
-        "arrow": "down",
-        "word_id": "d3",
-        "image_id": null,
-        "source": "placeholder"
-      },
-      "frequency_score": 90
-    },
-    {
-      "id": "d4",
-      "answer": "MAİ",
-      "length": 3,
+      "id": "D2",
+      "answer": "KAYNAK",
+      "length": 6,
       "direction": "down",
       "clue_cell": {
         "row": 0,
@@ -412,25 +1018,73 @@
         {
           "row": 3,
           "col": 4
+        },
+        {
+          "row": 4,
+          "col": 4
+        },
+        {
+          "row": 5,
+          "col": 4
+        },
+        {
+          "row": 6,
+          "col": 4
         }
       ],
       "clue": {
-        "text": "3 harfli kelime",
+        "text": "Su çıkan yer",
         "arrow": "down",
-        "word_id": "d4",
+        "word_id": "D2",
         "image_id": null,
-        "source": "placeholder"
+        "source": "llm"
+      },
+      "frequency_score": 60
+    },
+    {
+      "id": "D3",
+      "answer": "ALA",
+      "length": 3,
+      "direction": "down",
+      "clue_cell": {
+        "row": 0,
+        "col": 5
+      },
+      "start_cell": {
+        "row": 1,
+        "col": 5
+      },
+      "cells": [
+        {
+          "row": 1,
+          "col": 5
+        },
+        {
+          "row": 2,
+          "col": 5
+        },
+        {
+          "row": 3,
+          "col": 5
+        }
+      ],
+      "clue": {
+        "text": "Farklı renklerde",
+        "arrow": "down",
+        "word_id": "D3",
+        "image_id": null,
+        "source": "llm"
       },
       "frequency_score": 90
     },
     {
-      "id": "a3",
-      "answer": "KARA",
-      "length": 4,
-      "direction": "right",
+      "id": "D4",
+      "answer": "L",
+      "length": 1,
+      "direction": "down",
       "clue_cell": {
-        "row": 2,
-        "col": 0
+        "row": 1,
+        "col": 1
       },
       "start_cell": {
         "row": 2,
@@ -440,77 +1094,209 @@
         {
           "row": 2,
           "col": 1
-        },
-        {
-          "row": 2,
-          "col": 2
-        },
-        {
-          "row": 2,
-          "col": 3
-        },
-        {
-          "row": 2,
-          "col": 4
         }
       ],
       "clue": {
-        "text": "4 harfli kelime",
-        "arrow": "right",
-        "word_id": "a3",
+        "text": "Romen rakamıyla elli",
+        "arrow": "down",
+        "word_id": "D4",
         "image_id": null,
-        "source": "placeholder"
+        "source": "curated"
       },
-      "frequency_score": 80
+      "frequency_score": 95
     },
     {
-      "id": "a2",
-      "answer": "ETKİ",
-      "length": 4,
-      "direction": "right",
+      "id": "D5",
+      "answer": "KAL",
+      "length": 3,
+      "direction": "down",
       "clue_cell": {
-        "row": 3,
-        "col": 0
+        "row": 1,
+        "col": 2
       },
       "start_cell": {
-        "row": 3,
-        "col": 1
+        "row": 2,
+        "col": 2
       },
       "cells": [
         {
-          "row": 3,
-          "col": 1
+          "row": 2,
+          "col": 2
         },
         {
           "row": 3,
           "col": 2
         },
         {
+          "row": 4,
+          "col": 2
+        }
+      ],
+      "clue": {
+        "text": "Dur, bekleme",
+        "arrow": "down",
+        "word_id": "D5",
+        "image_id": null,
+        "source": "llm"
+      },
+      "frequency_score": 90
+    },
+    {
+      "id": "D6",
+      "answer": "RAHNE",
+      "length": 5,
+      "direction": "down",
+      "clue_cell": {
+        "row": 2,
+        "col": 3
+      },
+      "start_cell": {
+        "row": 3,
+        "col": 3
+      },
+      "cells": [
+        {
           "row": 3,
           "col": 3
         },
         {
-          "row": 3,
-          "col": 4
+          "row": 4,
+          "col": 3
+        },
+        {
+          "row": 5,
+          "col": 3
+        },
+        {
+          "row": 6,
+          "col": 3
+        },
+        {
+          "row": 7,
+          "col": 3
         }
       ],
       "clue": {
-        "text": "4 harfli kelime",
-        "arrow": "right",
-        "word_id": "a2",
+        "text": "Çürük, bozuk",
+        "arrow": "down",
+        "word_id": "D6",
         "image_id": null,
-        "source": "placeholder"
+        "source": "llm"
       },
-      "frequency_score": 80
+      "frequency_score": 70
+    },
+    {
+      "id": "D7",
+      "answer": "ÖKE",
+      "length": 3,
+      "direction": "down",
+      "clue_cell": {
+        "row": 4,
+        "col": 1
+      },
+      "start_cell": {
+        "row": 5,
+        "col": 1
+      },
+      "cells": [
+        {
+          "row": 5,
+          "col": 1
+        },
+        {
+          "row": 6,
+          "col": 1
+        },
+        {
+          "row": 7,
+          "col": 1
+        }
+      ],
+      "clue": {
+        "text": "Ataları yücelten",
+        "arrow": "down",
+        "word_id": "D7",
+        "image_id": null,
+        "source": "llm"
+      },
+      "frequency_score": 90
+    },
+    {
+      "id": "D8",
+      "answer": "TAT",
+      "length": 3,
+      "direction": "down",
+      "clue_cell": {
+        "row": 4,
+        "col": 5
+      },
+      "start_cell": {
+        "row": 5,
+        "col": 5
+      },
+      "cells": [
+        {
+          "row": 5,
+          "col": 5
+        },
+        {
+          "row": 6,
+          "col": 5
+        },
+        {
+          "row": 7,
+          "col": 5
+        }
+      ],
+      "clue": {
+        "text": "Dilin aldığı lezzet",
+        "arrow": "down",
+        "word_id": "D8",
+        "image_id": null,
+        "source": "llm"
+      },
+      "frequency_score": 90
+    },
+    {
+      "id": "D9",
+      "answer": "AK",
+      "length": 2,
+      "direction": "down",
+      "clue_cell": {
+        "row": 5,
+        "col": 2
+      },
+      "start_cell": {
+        "row": 6,
+        "col": 2
+      },
+      "cells": [
+        {
+          "row": 6,
+          "col": 2
+        },
+        {
+          "row": 7,
+          "col": 2
+        }
+      ],
+      "clue": {
+        "text": "Beyaz, temiz",
+        "arrow": "down",
+        "word_id": "D9",
+        "image_id": null,
+        "source": "curated"
+      },
+      "frequency_score": 92
     }
   ],
-  "difficulty": "easy",
-  "difficulty_score": 20,
-  "template_id": "small_02",
+  "difficulty": "medium",
+  "difficulty_score": 30,
+  "template_id": "medium_synth_62",
   "safety": {
     "post_fill_scanned": true,
     "scanner_version": "2.0.0"
   },
-  "generated_at": "2026-06-01T22:19:23.642523+00:00",
+  "generated_at": "2026-06-07T12:34:29.698540+00:00",
   "generator_version": "2.0.0"
 }

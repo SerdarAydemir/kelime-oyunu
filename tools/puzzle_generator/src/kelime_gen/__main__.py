@@ -9,9 +9,10 @@ from typing import Annotated
 
 import typer
 
+from kelime_gen.build_manifest import build_manifest
 from kelime_gen.generator import generate_pack
 from kelime_gen.pools import build_combined_pool_entries
-from kelime_gen.schema import PuzzleSize
+from kelime_gen.schema import PuzzleSize, tr_upper
 from kelime_gen.word_pool import PoolEntry, load_blacklist
 
 app = typer.Typer(
@@ -23,12 +24,13 @@ app = typer.Typer(
 # Generator root (tools/puzzle_generator), resolved from this file's location.
 _ROOT = Path(__file__).resolve().parents[2]
 _POOL_PATH = _ROOT / "data" / "processed" / "word_pool_cleaned.json"
+_MASTER_CLUES_PATH = _ROOT / "data" / "processed" / "master_clues.json"
 _BLACKLIST_PATH = _ROOT / "data" / "raw" / "profanity_blacklist.txt"
 _SYMBOLS_PATH = _ROOT / "data" / "symbols.json"
 _TWO_LETTER_PATH = _ROOT / "data" / "two_letter.json"
 
-# Placeholder clues stay bare ("N harfli kelime"). The later LLM phase fills
-# tdk_definitions instead of touching this constant (architecture.md §7).
+# Words absent from master_clues.json fall back to the bare placeholder
+# ("N harfli kelime"); curated len-1/2 clues always take priority (§7).
 _DEFAULT_CATEGORY: str | None = None
 
 # Only medium (8×6) is supported in this phase (architecture.md §5.3).
@@ -54,6 +56,16 @@ def _load_main_pool(path: Path) -> list[PoolEntry]:
         PoolEntry(word=item["word"], frequency_score=item["frequency_score"])
         for item in raw
     ]
+
+
+def _load_master_clues(path: Path) -> dict[str, str]:
+    """Load master_clues.json into an upper-cased answer -> clue text map.
+
+    Keys are tr_upper-normalised so they match the upper-cased answer strings
+    the combined pool produces (architecture.md §7.6).
+    """
+    raw = json.loads(path.read_text(encoding="utf-8"))
+    return {tr_upper(word): entry["text"] for word, entry in raw.items()}
 
 
 @app.callback()
@@ -88,7 +100,7 @@ def generate(
         )
         raise typer.Exit(code=1)
 
-    for data_path in (_SYMBOLS_PATH, _TWO_LETTER_PATH):
+    for data_path in (_SYMBOLS_PATH, _TWO_LETTER_PATH, _MASTER_CLUES_PATH):
         if not data_path.exists():
             print(f"Veri dosyası bulunamadı: {data_path}.", file=sys.stderr)
             raise typer.Exit(code=1)
@@ -97,6 +109,7 @@ def generate(
     combined_pool, curated_clues = build_combined_pool_entries(
         main_pool, _SYMBOLS_PATH, _TWO_LETTER_PATH
     )
+    master_clues = _load_master_clues(_MASTER_CLUES_PATH)
     blacklist = load_blacklist(_BLACKLIST_PATH) if _BLACKLIST_PATH.exists() else set()
     puzzle_size = PuzzleSize(size)
 
@@ -109,9 +122,15 @@ def generate(
         output_dir=output_dir,
         size=puzzle_size,
         curated_clues=curated_clues,
+        master_clues=master_clues,
     )
 
+    # Rebuild the manifest so it always reflects the puzzle files on disk; this
+    # runs even on partial packs so Flutter never reads a stale manifest (§8).
+    manifest = build_manifest(output_dir)
+
     print(f"\nToplam: {success} üretildi, {failed} başarısız")
+    print(f"Manifest güncellendi: {manifest['total_puzzles']} bölüm.")
     if failed > 0:
         raise typer.Exit(code=1)
 
