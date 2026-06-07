@@ -11,11 +11,7 @@ import 'package:kelime_oyunu/data/models/puzzle.dart';
 
 /// One tile in the player's letter rack.
 class RackTile extends Equatable {
-  const RackTile({
-    required this.letter,
-    this.isPlaced = false,
-    this.isReturned = false,
-  });
+  const RackTile({required this.letter, this.isPlaced = false, this.isReturned = false});
 
   final String letter;
 
@@ -52,12 +48,7 @@ class RackManager {
     required int seed,
   }) {
     final rng = Random(seed);
-    final letters = _drawFillLetters(
-      count: rackSize,
-      puzzle: puzzle,
-      board: board,
-      rng: rng,
-    );
+    final letters = _drawFillLetters(count: rackSize, puzzle: puzzle, board: board, rng: rng);
     return [for (final letter in letters) RackTile(letter: letter)];
   }
 
@@ -80,18 +71,14 @@ class RackManager {
         if (!tile.isPlaced) RackTile(letter: tile.letter),
     ];
     final returned = <RackTile>[
-      for (final letter in returnedLetters)
-        RackTile(letter: letter, isReturned: true),
+      for (final letter in returnedLetters) RackTile(letter: letter, isReturned: true),
     ];
     final carryOver = [...kept, ...returned];
     final need = baseRackSize - carryOver.length;
     final fresh = need > 0
         ? _drawFillLetters(count: need, puzzle: puzzle, board: board, rng: rng)
         : const <String>[];
-    return [
-      ...carryOver,
-      for (final letter in fresh) RackTile(letter: letter),
-    ];
+    return [...carryOver, for (final letter in fresh) RackTile(letter: letter)];
   }
 
   /// Replaces the tiles at [swapIndices] with freshly drawn ones; size unchanged.
@@ -104,27 +91,56 @@ class RackManager {
   }) {
     final rng = Random(seed);
     final swapSet = swapIndices.toSet();
-    final fresh = _drawFillLetters(
-      count: swapSet.length,
-      puzzle: puzzle,
-      board: board,
-      rng: rng,
-    );
+    final fresh = _drawFillLetters(count: swapSet.length, puzzle: puzzle, board: board, rng: rng);
     var freshIndex = 0;
     return [
       for (var i = 0; i < currentRack.length; i++)
-        if (swapSet.contains(i))
-          RackTile(letter: fresh[freshIndex++])
-        else
-          currentRack[i],
+        if (swapSet.contains(i)) RackTile(letter: fresh[freshIndex++]) else currentRack[i],
+    ];
+  }
+
+  /// Whether any rack tile is the correct solution for an unsolved letter cell.
+  ///
+  /// When false the player has no scoring move and the rack must be refreshed
+  /// (see [ensurePlayable]); otherwise the game soft-locks (architecture.md §8.3).
+  bool hasPlayableMove({
+    required List<RackTile> rack,
+    required PuzzleData puzzle,
+    required Map<WordCell, String> board,
+  }) {
+    final needed = _unsolvedLetters(puzzle, board).toSet();
+    return rack.any((tile) => needed.contains(tile.letter));
+  }
+
+  /// Returns [currentRack] unchanged when it already has a playable move;
+  /// otherwise replaces every "dead" tile (letter not matching any unsolved
+  /// cell) with a board-aware draw. This is a replace, not a top-up: it breaks
+  /// the soft-lock where a full rack of dead tiles can never be refilled because
+  /// returned tiles keep the rack at baseRackSize (need == 0). While the board
+  /// is incomplete the unsolved pool is non-empty, so the result always holds at
+  /// least one playable tile.
+  List<RackTile> ensurePlayable({
+    required List<RackTile> currentRack,
+    required PuzzleData puzzle,
+    required Map<WordCell, String> board,
+    required int seed,
+  }) {
+    if (hasPlayableMove(rack: currentRack, puzzle: puzzle, board: board)) {
+      return currentRack;
+    }
+    final rng = Random(seed);
+    final needed = _unsolvedLetters(puzzle, board).toSet();
+    final deadCount = currentRack.where((t) => !needed.contains(t.letter)).length;
+    final fresh = _drawFillLetters(count: deadCount, puzzle: puzzle, board: board, rng: rng);
+    var i = 0;
+    return [
+      for (final tile in currentRack)
+        if (needed.contains(tile.letter)) tile else RackTile(letter: fresh[i++]),
     ];
   }
 
   // Collects the solution letters of every still-unsolved letter cell.
-  List<String> _unsolvedLetters(
-    PuzzleData puzzle,
-    Map<WordCell, String> board,
-  ) {
+  List<String> _unsolvedLetters(PuzzleData puzzle, Map<WordCell, String> board) {
     final letters = <String>[];
     for (final cell in puzzle.cells) {
       if (cell.type != CellType.letter) continue;
@@ -147,10 +163,7 @@ class RackManager {
     final pool = _unsolvedLetters(puzzle, board)..shuffle(rng);
     return [
       for (var i = 0; i < count; i++)
-        if (i < pool.length)
-          pool[i]
-        else
-          _turkishAlphabet[rng.nextInt(_turkishAlphabet.length)],
+        if (i < pool.length) pool[i] else _turkishAlphabet[rng.nextInt(_turkishAlphabet.length)],
     ];
   }
 }

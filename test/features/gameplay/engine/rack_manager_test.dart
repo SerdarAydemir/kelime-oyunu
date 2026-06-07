@@ -12,10 +12,10 @@ import '../../../helpers/engine_test_fixtures.dart';
 
 // Builds a board where every letter cell of [puzzle] is already solved.
 Map<WordCell, String> _fullBoard(PuzzleData puzzle) => {
-      for (final cell in puzzle.cells)
-        if (cell.type == CellType.letter && cell.solution != null)
-          WordCell(row: cell.row, col: cell.col): cell.solution!,
-    };
+  for (final cell in puzzle.cells)
+    if (cell.type == CellType.letter && cell.solution != null)
+      WordCell(row: cell.row, col: cell.col): cell.solution!,
+};
 
 void main() {
   const manager = RackManager();
@@ -23,14 +23,8 @@ void main() {
   // A 7-letter word gives 7 unsolved cells, enough to fill a rack without the
   // alphabet fallback. Solution letters: {K, A, L, E, M, O}.
   PuzzleData wordPuzzle() => puzzleFromWords([
-        buildWord(
-          id: 'w1',
-          answer: 'KALEMOK',
-          startRow: 1,
-          startCol: 1,
-          direction: ClueArrow.right,
-        ),
-      ]);
+    buildWord(id: 'w1', answer: 'KALEMOK', startRow: 1, startCol: 1, direction: ClueArrow.right),
+  ]);
 
   group('RackManager.initialRack', () {
     // ── 1 ──────────────────────────────────────────────────────────────────
@@ -111,10 +105,7 @@ void main() {
         seed: 5,
       );
       expect(rack.length, RackManager.baseRackSize);
-      expect(
-        rack.any((t) => t.letter == 'Z' && t.isReturned),
-        isTrue,
-      );
+      expect(rack.any((t) => t.letter == 'Z' && t.isReturned), isTrue);
     });
 
     // ── 9 (Karar 2) ─────────────────────────────────────────────────────────
@@ -122,13 +113,7 @@ void main() {
       // Puzzle letters {K, Ö, P, R, Ü} deliberately exclude A and B so freshly
       // drawn tiles cannot collide with the unplayed letters under test.
       final puzzle = puzzleFromWords([
-        buildWord(
-          id: 'w1',
-          answer: 'KÖPRÜ',
-          startRow: 1,
-          startCol: 1,
-          direction: ClueArrow.right,
-        ),
+        buildWord(id: 'w1', answer: 'KÖPRÜ', startRow: 1, startCol: 1, direction: ClueArrow.right),
       ]);
       const currentRack = [
         RackTile(letter: 'A'), // unplayed — must be kept
@@ -155,14 +140,8 @@ void main() {
   group('RackManager.swapLetters', () {
     // A puzzle whose every unsolved cell is 'B' makes the draw deterministic.
     PuzzleData allBPuzzle() => puzzleFromWords([
-          buildWord(
-            id: 'w1',
-            answer: 'BBBBB',
-            startRow: 1,
-            startCol: 1,
-            direction: ClueArrow.right,
-          ),
-        ]);
+      buildWord(id: 'w1', answer: 'BBBBB', startRow: 1, startCol: 1, direction: ClueArrow.right),
+    ]);
 
     const aRack = [
       RackTile(letter: 'A'),
@@ -197,6 +176,80 @@ void main() {
         seed: 8,
       );
       expect(rack.length, aRack.length);
+    });
+  });
+
+  group('RackManager.hasPlayableMove', () {
+    // ── 10 ─────────────────────────────────────────────────────────────────
+    test('true when a rack tile matches an unsolved cell', () {
+      // 'K' is a solution letter of KALEMOK.
+      const rack = [
+        RackTile(letter: 'K'),
+        RackTile(letter: 'Z'),
+        RackTile(letter: 'J'),
+        RackTile(letter: 'V'),
+        RackTile(letter: 'Y'),
+      ];
+      expect(manager.hasPlayableMove(rack: rack, puzzle: wordPuzzle(), board: const {}), isTrue);
+    });
+
+    // ── 11 ─────────────────────────────────────────────────────────────────
+    test('false when no rack tile matches any unsolved cell', () {
+      // None of {Z, J, V, Y, B} appears in KALEMOK.
+      const deadRack = [
+        RackTile(letter: 'Z'),
+        RackTile(letter: 'J'),
+        RackTile(letter: 'V'),
+        RackTile(letter: 'Y'),
+        RackTile(letter: 'B'),
+      ];
+      expect(
+        manager.hasPlayableMove(rack: deadRack, puzzle: wordPuzzle(), board: const {}),
+        isFalse,
+      );
+    });
+  });
+
+  group('RackManager.ensurePlayable', () {
+    const deadRack = [
+      RackTile(letter: 'Z'),
+      RackTile(letter: 'J'),
+      RackTile(letter: 'V'),
+      RackTile(letter: 'Y'),
+      RackTile(letter: 'B'),
+    ];
+
+    // ── 12 ─────────────────────────────────────────────────────────────────
+    test('turns a fully dead rack into a playable one', () {
+      final puzzle = wordPuzzle();
+      final rack = manager.ensurePlayable(
+        currentRack: deadRack,
+        puzzle: puzzle,
+        board: const {},
+        seed: 12,
+      );
+      expect(rack.length, deadRack.length);
+      // Assert the outcome (playable), not specific letters — RNG-independent.
+      expect(manager.hasPlayableMove(rack: rack, puzzle: puzzle, board: const {}), isTrue);
+    });
+
+    // ── 13 ─────────────────────────────────────────────────────────────────
+    test('leaves an already-playable rack untouched (carry-over preserved)', () {
+      // 'K' is live, so the rack is not stuck and must be returned as-is.
+      const liveRack = [
+        RackTile(letter: 'K'),
+        RackTile(letter: 'Z'),
+        RackTile(letter: 'J'),
+        RackTile(letter: 'V'),
+        RackTile(letter: 'Y'),
+      ];
+      final rack = manager.ensurePlayable(
+        currentRack: liveRack,
+        puzzle: wordPuzzle(),
+        board: const {},
+        seed: 13,
+      );
+      expect(rack, equals(liveRack));
     });
   });
 

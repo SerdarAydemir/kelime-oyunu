@@ -51,10 +51,7 @@ class GameBloc extends Bloc<GameEvent, GameState> {
   int _turnCounter = 0;
   int _nextSeed() => _seed + _turnCounter++;
 
-  Future<void> _onPuzzleLoadRequested(
-    PuzzleLoadRequested event,
-    Emitter<GameState> emit,
-  ) async {
+  Future<void> _onPuzzleLoadRequested(PuzzleLoadRequested event, Emitter<GameState> emit) async {
     emit(const GameLoading());
     try {
       final puzzle = await _puzzleRepo.loadPuzzle(event.puzzleId);
@@ -98,10 +95,7 @@ class GameBloc extends Bloc<GameEvent, GameState> {
     // Reject invalid targets: clue/blank cells and already-committed cells.
     // Defence in depth — the UI also filters these (game_screen._onCellTap).
     final isLetterCell = current.puzzle.cells.any(
-      (c) =>
-          c.type == CellType.letter &&
-          c.row == event.cell.row &&
-          c.col == event.cell.col,
+      (c) => c.type == CellType.letter && c.row == event.cell.row && c.col == event.cell.col,
     );
     if (!isLetterCell || current.board.containsKey(event.cell)) {
       debugPrint('Rejected placement on invalid cell: ${event.cell}');
@@ -120,10 +114,7 @@ class GameBloc extends Bloc<GameEvent, GameState> {
       placement,
     ];
     emit(
-      current.copyWith(
-        pendingPlacements: pending,
-        rack: markPlacedTiles(current.rack, pending),
-      ),
+      current.copyWith(pendingPlacements: pending, rack: markPlacedTiles(current.rack, pending)),
     );
   }
 
@@ -135,17 +126,11 @@ class GameBloc extends Bloc<GameEvent, GameState> {
         if (p.cell != event.cell) p,
     ];
     emit(
-      current.copyWith(
-        pendingPlacements: pending,
-        rack: markPlacedTiles(current.rack, pending),
-      ),
+      current.copyWith(pendingPlacements: pending, rack: markPlacedTiles(current.rack, pending)),
     );
   }
 
-  Future<void> _onMoveConfirmed(
-    MoveConfirmed event,
-    Emitter<GameState> emit,
-  ) async {
+  Future<void> _onMoveConfirmed(MoveConfirmed event, Emitter<GameState> emit) async {
     final current = state;
     if (current is! GameActive) return;
     final result = _scoreEngine.resolveMove(
@@ -192,31 +177,30 @@ class GameBloc extends Bloc<GameEvent, GameState> {
       rackStartCount: 0,
     );
     final newBoard = result.updatedBoard;
-    // Content-preserving rack reset: keep every tile, clear transient flags so
-    // the player starts their next turn clean (Karar 2/3).
-    final freshRack = [
-      for (final tile in current.rack) RackTile(letter: tile.letter),
-    ];
+    // Clear transient flags (Karar 2/3), then guarantee a playable rack so the
+    // player can always move when the turn returns — fixes the dead-tile lock.
+    final resetRack = [for (final t in current.rack) RackTile(letter: t.letter)];
+    final playableRack = _rackManager.ensurePlayable(
+      currentRack: resetRack,
+      puzzle: current.puzzle,
+      board: newBoard,
+      seed: _nextSeed(),
+    );
+    if (!identical(playableRack, resetRack)) {
+      debugPrint('Rack stuck after bot move; refreshed to a playable rack.');
+    }
     final afterBot = current.copyWith(
       board: newBoard,
       botScore: current.botScore + result.scoreDelta,
-      rack: freshRack,
+      rack: playableRack,
       phase: TurnPhase.playerTurn,
       botThinking: false,
-      botPlacedCells: {
-        ...current.botPlacedCells,
-        ...event.botMove.placements.map((p) => p.cell),
-      },
+      botPlacedCells: {...current.botPlacedCells, ...event.botMove.placements.map((p) => p.cell)},
     );
-    emit(
-      isBoardComplete(current.puzzle, newBoard) ? _finish(afterBot) : afterBot,
-    );
+    emit(isBoardComplete(current.puzzle, newBoard) ? _finish(afterBot) : afterBot);
   }
 
-  Future<void> _onLettersSwapped(
-    LettersSwapped event,
-    Emitter<GameState> emit,
-  ) async {
+  Future<void> _onLettersSwapped(LettersSwapped event, Emitter<GameState> emit) async {
     final current = state;
     if (current is! GameActive) return;
     final rack = _rackManager.swapLetters(
@@ -259,10 +243,7 @@ class GameBloc extends Bloc<GameEvent, GameState> {
       seed: _nextSeed(),
     );
     emit(
-      current.copyWith(
-        rack: [...current.rack, ...extra],
-        rackSize: RackManager.powerUpRackSize,
-      ),
+      current.copyWith(rack: [...current.rack, ...extra], rackSize: RackManager.powerUpRackSize),
     );
   }
 
@@ -282,23 +263,14 @@ class GameBloc extends Bloc<GameEvent, GameState> {
     add(BotMoveCompleted(botMove));
   }
 
-  void _onRackTileSelected(
-    RackTileSelected event,
-    Emitter<GameState> emit,
-  ) {
+  void _onRackTileSelected(RackTileSelected event, Emitter<GameState> emit) {
     final current = state;
     if (current is! GameActive) return;
     emit(current.copyWith(selectedRackIndex: event.rackIndex));
   }
 
   GameActive _finish(GameActive snapshot) {
-    final status = snapshot.playerScore > snapshot.botScore
-        ? GameStatus.won
-        : GameStatus.lost;
-    return snapshot.copyWith(
-      phase: TurnPhase.finished,
-      botThinking: false,
-      status: status,
-    );
+    final status = snapshot.playerScore > snapshot.botScore ? GameStatus.won : GameStatus.lost;
+    return snapshot.copyWith(phase: TurnPhase.finished, botThinking: false, status: status);
   }
 }

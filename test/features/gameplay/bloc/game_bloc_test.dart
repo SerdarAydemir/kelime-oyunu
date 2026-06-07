@@ -28,13 +28,7 @@ class MockBotEngine extends Mock implements BotEngine {}
 
 // A 3-letter word "KOL" at (1,1)-(1,3): letter cells K, O, L.
 final _puzzle = puzzleFromWords([
-  buildWord(
-    id: 'w1',
-    answer: 'KOL',
-    startRow: 1,
-    startCol: 1,
-    direction: ClueArrow.right,
-  ),
+  buildWord(id: 'w1', answer: 'KOL', startRow: 1, startCol: 1, direction: ClueArrow.right),
 ]);
 
 // Board with every letter cell filled — used to drive the finish transition.
@@ -62,10 +56,7 @@ const _botProfile = BotProfile(
   difficultyBand: DifficultyBand.medium,
 );
 
-MoveResult _moveResult({
-  int scoreDelta = 1,
-  Map<WordCell, String>? updatedBoard,
-}) {
+MoveResult _moveResult({int scoreDelta = 1, Map<WordCell, String>? updatedBoard}) {
   return MoveResult(
     placements: const [],
     events: const [],
@@ -127,13 +118,13 @@ void main() {
   });
 
   GameBloc buildBloc() => GameBloc(
-        puzzleRepo: puzzleRepo,
-        scoreEngine: scoreEngine,
-        rackManager: rackManager,
-        botEngine: botEngine,
-        botProfile: _botProfile,
-        puzzleIndex: 0,
-      );
+    puzzleRepo: puzzleRepo,
+    scoreEngine: scoreEngine,
+    rackManager: rackManager,
+    botEngine: botEngine,
+    botProfile: _botProfile,
+    puzzleIndex: 0,
+  );
 
   void stubInitialRack() {
     when(
@@ -181,6 +172,19 @@ void main() {
     ).thenReturn(const BotMove(placements: [], thinkingDelayMs: 0));
   }
 
+  // Returns the rack it was given (the "not stuck" path) so bot-turn tests using
+  // the mocked RackManager keep the player's rack unchanged.
+  void stubEnsurePlayable() {
+    when(
+      () => rackManager.ensurePlayable(
+        currentRack: any(named: 'currentRack'),
+        puzzle: any(named: 'puzzle'),
+        board: any(named: 'board'),
+        seed: any(named: 'seed'),
+      ),
+    ).thenAnswer((inv) => inv.namedArguments[#currentRack] as List<RackTile>);
+  }
+
   group('PuzzleLoadRequested', () {
     // ── 1 ──────────────────────────────────────────────────────────────────
     blocTest<GameBloc, GameState>(
@@ -198,8 +202,9 @@ void main() {
     blocTest<GameBloc, GameState>(
       'emits [GameLoading, GameError] when the puzzle is missing',
       build: () {
-        when(() => puzzleRepo.loadPuzzle(999))
-            .thenThrow(const PuzzleNotFoundException('not found'));
+        when(
+          () => puzzleRepo.loadPuzzle(999),
+        ).thenThrow(const PuzzleNotFoundException('not found'));
         return buildBloc();
       },
       act: (bloc) => bloc.add(const PuzzleLoadRequested(999)),
@@ -217,11 +222,7 @@ void main() {
       expect: () => [
         isA<GameActive>()
             .having((s) => s.pendingPlacements.length, 'pending', 1)
-            .having(
-              (s) => s.rack.firstWhere((t) => t.letter == 'K').isPlaced,
-              'K placed',
-              true,
-            ),
+            .having((s) => s.rack.firstWhere((t) => t.letter == 'K').isPlaced, 'K placed', true),
       ],
     );
 
@@ -245,8 +246,7 @@ void main() {
       build: buildBloc,
       seed: _activeState,
       // (0,0) is outside the KOL word, so it is not a letter cell.
-      act: (bloc) =>
-          bloc.add(const LetterPlaced(rackIndex: 0, cell: WordCell(row: 0, col: 0))),
+      act: (bloc) => bloc.add(const LetterPlaced(rackIndex: 0, cell: WordCell(row: 0, col: 0))),
       expect: () => <GameState>[],
     );
 
@@ -255,8 +255,7 @@ void main() {
       'ignores placement on an already-filled cell',
       build: buildBloc,
       seed: () => _activeState(board: {_cell11: 'K'}),
-      act: (bloc) =>
-          bloc.add(const LetterPlaced(rackIndex: 0, cell: _cell11)),
+      act: (bloc) => bloc.add(const LetterPlaced(rackIndex: 0, cell: _cell11)),
       expect: () => <GameState>[],
     );
   });
@@ -274,9 +273,7 @@ void main() {
           RackTile(letter: 'A'),
           RackTile(letter: 'B'),
         ],
-        pending: const [
-          Placement(cell: _cell11, letter: 'K', expected: 'K'),
-        ],
+        pending: const [Placement(cell: _cell11, letter: 'K', expected: 'K')],
       ),
       act: (bloc) => bloc.add(const LetterRecalled(_cell11)),
       expect: () => [
@@ -295,6 +292,7 @@ void main() {
         stubResolveMove(_moveResult(scoreDelta: 1));
         stubRefill();
         stubComputeMove();
+        stubEnsurePlayable();
         return buildBloc();
       },
       seed: () => _activeState(
@@ -348,6 +346,7 @@ void main() {
       'applies the bot move and hands the turn back to the player',
       build: () {
         stubResolveMove(_moveResult(scoreDelta: 2));
+        stubEnsurePlayable();
         return buildBloc();
       },
       seed: () => _activeState(phase: TurnPhase.botThinking, botThinking: true),
@@ -366,6 +365,41 @@ void main() {
             .having((s) => s.botScore, 'botScore', 2),
       ],
     );
+
+    // ── BUG 2: a fully dead rack is refreshed when the turn returns ──────────
+    // Real RackManager + ScoreEngine so ensurePlayable actually runs; the seeded
+    // rack {Z,J,V,Y,B} shares no letter with KOL, so it must be refreshed.
+    blocTest<GameBloc, GameState>(
+      'refreshes a stuck (all-dead) rack so the player can move again',
+      build: () => GameBloc(
+        puzzleRepo: puzzleRepo,
+        scoreEngine: const ScoreEngine(),
+        rackManager: const RackManager(),
+        botEngine: botEngine,
+        botProfile: _botProfile,
+        puzzleIndex: 0,
+      ),
+      seed: () => _activeState(
+        phase: TurnPhase.botThinking,
+        botThinking: true,
+        rack: const [
+          RackTile(letter: 'Z'),
+          RackTile(letter: 'J'),
+          RackTile(letter: 'V'),
+          RackTile(letter: 'Y'),
+          RackTile(letter: 'B'),
+        ],
+      ),
+      act: (bloc) => bloc.add(const BotMoveCompleted(BotMove(placements: [], thinkingDelayMs: 0))),
+      expect: () => [
+        isA<GameActive>().having(
+          (s) =>
+              const RackManager().hasPlayableMove(rack: s.rack, puzzle: s.puzzle, board: s.board),
+          'rack has a playable move',
+          isTrue,
+        ),
+      ],
+    );
   });
 
   group('MovePassed', () {
@@ -375,6 +409,7 @@ void main() {
       build: () {
         stubResolveMove(_moveResult(scoreDelta: 0));
         stubComputeMove();
+        stubEnsurePlayable();
         return buildBloc();
       },
       seed: _activeState,
@@ -394,9 +429,7 @@ void main() {
       build: buildBloc,
       seed: _activeState,
       act: (bloc) => bloc.add(const WordSelected('w1')),
-      expect: () => [
-        isA<GameActive>().having((s) => s.highlightedWordId, 'highlight', 'w1'),
-      ],
+      expect: () => [isA<GameActive>().having((s) => s.highlightedWordId, 'highlight', 'w1')],
     );
   });
 }
