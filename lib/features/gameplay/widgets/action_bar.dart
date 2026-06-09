@@ -11,14 +11,22 @@ class ActionBar extends StatelessWidget {
     required this.onPass,
     required this.onSwap,
     required this.onReveal,
+    this.revealActive = false,
     super.key,
   });
 
   final List<Placement> pendingPlacements;
-  final VoidCallback onConfirm;
-  final VoidCallback onPass;
+
+  /// Null while reveal mode is active: gameplay actions are disabled.
+  final VoidCallback? onConfirm;
+  final VoidCallback? onPass;
   final VoidCallback? onSwap;
+
+  /// Toggles reveal mode; null when revealing is not allowed (bot's turn).
   final VoidCallback? onReveal;
+
+  /// Whether reveal mode is on — the lamp renders in its "active" look.
+  final bool revealActive;
 
   @override
   Widget build(BuildContext context) {
@@ -27,20 +35,13 @@ class ActionBar extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
       child: Row(
         children: [
-          _CircleIconButton(
-            icon: Icons.swap_horiz,
-            onTap: hasPending ? null : onSwap,
-          ),
+          _CircleIconButton(icon: Icons.swap_horiz, onTap: hasPending ? null : onSwap),
           const SizedBox(width: 8),
           Expanded(
-            child: _ConfirmPassButton(
-              hasPending: hasPending,
-              onConfirm: onConfirm,
-              onPass: onPass,
-            ),
+            child: _ConfirmPassButton(hasPending: hasPending, onConfirm: onConfirm, onPass: onPass),
           ),
           const SizedBox(width: 8),
-          _RevealButton(onReveal: onReveal),
+          _RevealButton(onReveal: onReveal, active: revealActive),
         ],
       ),
     );
@@ -48,10 +49,7 @@ class ActionBar extends StatelessWidget {
 }
 
 class _CircleIconButton extends StatelessWidget {
-  const _CircleIconButton({
-    required this.icon,
-    required this.onTap,
-  });
+  const _CircleIconButton({required this.icon, required this.onTap});
 
   final IconData icon;
   final VoidCallback? onTap;
@@ -74,11 +72,7 @@ class _CircleIconButton extends StatelessWidget {
             width: 1.5,
           ),
         ),
-        child: Icon(
-          icon,
-          color: isDisabled ? Colors.grey : AppColors.primary,
-          size: 22,
-        ),
+        child: Icon(icon, color: isDisabled ? Colors.grey : AppColors.primary, size: 22),
       ),
     );
   }
@@ -92,8 +86,8 @@ class _ConfirmPassButton extends StatelessWidget {
   });
 
   final bool hasPending;
-  final VoidCallback onConfirm;
-  final VoidCallback onPass;
+  final VoidCallback? onConfirm;
+  final VoidCallback? onPass;
 
   @override
   Widget build(BuildContext context) {
@@ -104,17 +98,12 @@ class _ConfirmPassButton extends StatelessWidget {
         style: ElevatedButton.styleFrom(
           backgroundColor: AppColors.success,
           foregroundColor: Colors.white,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(24),
-          ),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
           elevation: 2,
         ),
         child: Text(
           hasPending ? 'Onayla' : 'Pas',
-          style: const TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 16,
-          ),
+          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
         ),
       ),
     );
@@ -122,9 +111,12 @@ class _ConfirmPassButton extends StatelessWidget {
 }
 
 class _RevealButton extends StatelessWidget {
-  const _RevealButton({required this.onReveal});
+  const _RevealButton({required this.onReveal, required this.active});
 
   final VoidCallback? onReveal;
+
+  /// Reveal mode is on: render filled so the toggle state is obvious.
+  final bool active;
 
   @override
   Widget build(BuildContext context) {
@@ -141,15 +133,23 @@ class _RevealButton extends StatelessWidget {
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               // TODO: add AppColors.revealActiveBg token (0xFFFFF8E1)
-              color: isDisabled ? AppColors.gridCellLocked : const Color(0xFFFFF8E1),
+              color: isDisabled
+                  ? AppColors.gridCellLocked
+                  : active
+                  ? AppColors.accent
+                  : const Color(0xFFFFF8E1),
               border: Border.all(
                 color: isDisabled ? AppColors.gridCellLocked : AppColors.accent,
                 width: 1.5,
               ),
             ),
             child: Icon(
-              Icons.lightbulb_outline,
-              color: isDisabled ? Colors.grey : AppColors.accent,
+              active ? Icons.lightbulb : Icons.lightbulb_outline,
+              color: isDisabled
+                  ? Colors.grey
+                  : active
+                  ? Colors.white
+                  : AppColors.accent,
               size: 22,
             ),
           ),
@@ -164,11 +164,7 @@ class _RevealButton extends StatelessWidget {
               ),
               child: const Text(
                 'Ad',
-                style: TextStyle(
-                  fontSize: 9,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ),
+                style: TextStyle(fontSize: 9, fontWeight: FontWeight.bold, color: Colors.white),
               ),
             ),
           ),
