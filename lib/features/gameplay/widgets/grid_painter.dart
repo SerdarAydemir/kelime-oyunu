@@ -15,6 +15,7 @@ class GridPainter extends StatelessWidget {
     required this.highlightedWordId,
     required this.revealedWordIds,
     required this.botPlacedCells,
+    required this.revealMode,
     required this.onCellTap,
     super.key,
   });
@@ -25,7 +26,13 @@ class GridPainter extends StatelessWidget {
   final String? highlightedWordId;
   final Set<String> revealedWordIds;
   final Set<WordCell> botPlacedCells;
-  final void Function(WordCell) onCellTap;
+
+  /// Joker mode: clue cells are highlighted as selectable reveal targets.
+  final bool revealMode;
+
+  /// [bottomHalf] tells which half of the cell was hit — it selects between
+  /// the two clues of a double-clue cell while in reveal mode.
+  final void Function(WordCell cell, bool bottomHalf) onCellTap;
 
   @override
   Widget build(BuildContext context) {
@@ -58,6 +65,7 @@ class GridPainter extends StatelessWidget {
                 painter: GridDynamicPainter(
                   pendingPlacements: pendingPlacements,
                   highlightedWordId: highlightedWordId,
+                  revealMode: revealMode,
                   puzzle: puzzle,
                   cellSize: cellSize,
                 ),
@@ -69,7 +77,8 @@ class GridPainter extends StatelessWidget {
                 final col = (details.localPosition.dx / cellSize).floor();
                 final row = (details.localPosition.dy / cellSize).floor();
                 if (row >= 0 && col >= 0 && row < puzzle.grid.rows && col < puzzle.grid.cols) {
-                  onCellTap(WordCell(row: row, col: col));
+                  final bottomHalf = details.localPosition.dy - row * cellSize > cellSize / 2;
+                  onCellTap(WordCell(row: row, col: col), bottomHalf);
                 }
               },
             ),
@@ -135,6 +144,14 @@ class GridStaticPainter extends CustomPainter {
         canvas,
         Rect.fromLTWH(rect.left, rect.top + half, rect.width, half),
         spec.clues[1],
+      );
+      // Divider between the two clues; each half is its own reveal target.
+      canvas.drawLine(
+        Offset(rect.left, rect.top + half),
+        Offset(rect.right, rect.top + half),
+        Paint()
+          ..color = Colors.black
+          ..strokeWidth = 1,
       );
     } else if (spec.clues.isNotEmpty) {
       _drawSingleClue(canvas, rect, spec.clues[0]);
@@ -225,17 +242,33 @@ class GridDynamicPainter extends CustomPainter {
   GridDynamicPainter({
     required this.pendingPlacements,
     required this.highlightedWordId,
+    required this.revealMode,
     required this.puzzle,
     required this.cellSize,
   });
 
   final List<Placement> pendingPlacements;
   final String? highlightedWordId;
+  final bool revealMode;
   final PuzzleData puzzle;
   final double cellSize;
 
   @override
   void paint(Canvas canvas, Size size) {
+    // Joker mode: outline every clue cell as a selectable reveal target.
+    // MVP look — the grow+blur animation is deferred (F6).
+    if (revealMode) {
+      final border = Paint()
+        ..color = AppColors.accent
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 3;
+      for (final c in puzzle.cells) {
+        if (c.type != CellType.clue) continue;
+        final rect = Rect.fromLTWH(c.col * cellSize, c.row * cellSize, cellSize, cellSize);
+        canvas.drawRect(rect.deflate(1.5), border);
+      }
+    }
+
     if (highlightedWordId != null) {
       WordSpec? word;
       for (final w in puzzle.words) {
@@ -280,5 +313,7 @@ class GridDynamicPainter extends CustomPainter {
 
   @override
   bool shouldRepaint(covariant GridDynamicPainter old) =>
-      pendingPlacements != old.pendingPlacements || highlightedWordId != old.highlightedWordId;
+      pendingPlacements != old.pendingPlacements ||
+      highlightedWordId != old.highlightedWordId ||
+      revealMode != old.revealMode;
 }
