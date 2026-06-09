@@ -159,7 +159,6 @@ class GridStaticPainter extends CustomPainter {
   }
 
   void _drawSingleClue(Canvas canvas, Rect rect, ClueSpec clue) {
-    final arrow = clue.arrow == ClueArrow.right ? '▶' : '▼';
     final textPainter = TextPainter(
       text: TextSpan(
         text: clue.text,
@@ -169,18 +168,24 @@ class GridStaticPainter extends CustomPainter {
       maxLines: 2,
     )..layout(maxWidth: rect.width - 4);
     textPainter.paint(canvas, Offset(rect.left + 2, rect.top + 2));
+    _drawArrowBadge(canvas, rect, clue.arrow);
+  }
 
-    final arrowPainter = TextPainter(
-      text: TextSpan(
-        text: arrow,
-        style: const TextStyle(fontSize: 8, color: Colors.black),
-      ),
-      textDirection: TextDirection.ltr,
-    )..layout();
-    arrowPainter.paint(
-      canvas,
-      Offset(rect.right - arrowPainter.width - 1, rect.bottom - arrowPainter.height - 1),
+  // Uniform arrow badge: white triangle on an orange rounded square for BOTH
+  // directions. The previous '▶' text glyph rendered as an emoji on Android
+  // (orange box) while '▼' stayed plain black; custom drawing keeps them equal.
+  void _drawArrowBadge(Canvas canvas, Rect rect, ClueArrow arrow) {
+    const s = 10.0;
+    final badge = Rect.fromLTWH(rect.right - s - 2, rect.bottom - s - 2, s, s);
+    canvas.drawRRect(
+      RRect.fromRectAndRadius(badge, const Radius.circular(2)),
+      Paint()..color = AppColors.accent,
     );
+    final c = badge.center;
+    final pts = arrow == ClueArrow.right
+        ? [Offset(c.dx - 2, c.dy - 3), Offset(c.dx - 2, c.dy + 3), Offset(c.dx + 3, c.dy)]
+        : [Offset(c.dx - 3, c.dy - 2), Offset(c.dx + 3, c.dy - 2), Offset(c.dx, c.dy + 3)];
+    canvas.drawPath(Path()..addPolygon(pts, true), Paint()..color = Colors.white);
   }
 
   void _drawLetterCell(Canvas canvas, Rect rect, WordCell cell) {
@@ -255,17 +260,13 @@ class GridDynamicPainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    // Joker mode: outline every clue cell as a selectable reveal target.
-    // MVP look — the grow+blur animation is deferred (F6).
+    // Joker mode: dim every non-clue cell so the green clue cells stand out
+    // as the selectable targets (spotlight). MVP look — grow+blur is F6.
     if (revealMode) {
-      final border = Paint()
-        ..color = AppColors.accent
-        ..style = PaintingStyle.stroke
-        ..strokeWidth = 3;
+      final dim = Paint()..color = Colors.black45;
       for (final c in puzzle.cells) {
-        if (c.type != CellType.clue) continue;
-        final rect = Rect.fromLTWH(c.col * cellSize, c.row * cellSize, cellSize, cellSize);
-        canvas.drawRect(rect.deflate(1.5), border);
+        if (c.type == CellType.clue) continue;
+        canvas.drawRect(Rect.fromLTWH(c.col * cellSize, c.row * cellSize, cellSize, cellSize), dim);
       }
     }
 
