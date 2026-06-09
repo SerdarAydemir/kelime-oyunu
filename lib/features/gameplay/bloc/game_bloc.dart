@@ -86,7 +86,9 @@ class GameBloc extends Bloc<GameEvent, GameState> {
   void _onWordSelected(WordSelected event, Emitter<GameState> emit) {
     final current = state;
     if (current is! GameActive) return;
-    emit(current.copyWith(highlightedWordId: event.wordId));
+    // Toggle: tapping the already-highlighted word clears the selection.
+    final next = current.highlightedWordId == event.wordId ? null : event.wordId;
+    emit(current.copyWith(highlightedWordId: next));
   }
 
   void _onLetterPlaced(LetterPlaced event, Emitter<GameState> emit) {
@@ -151,6 +153,7 @@ class GameBloc extends Bloc<GameEvent, GameState> {
       ),
       pendingPlacements: const [],
       playerScore: current.playerScore + result.scoreDelta,
+      highlightedWordId: null, // a confirmed move clears any selection
     );
     if (isBoardComplete(current.puzzle, newBoard)) {
       emit(_finish(afterMove));
@@ -216,20 +219,12 @@ class GameBloc extends Bloc<GameEvent, GameState> {
   void _onWordRevealed(WordRevealed event, Emitter<GameState> emit) {
     final current = state;
     if (current is! GameActive) return;
-    final matches = current.puzzle.words.where((w) => w.id == event.wordId);
-    if (matches.isEmpty) return;
-    final newBoard = Map<WordCell, String>.of(current.board);
-    for (final cell in matches.first.cells) {
-      final solution = _solutionByCell[cell];
-      if (solution != null) newBoard[cell] = solution;
-    }
-    // A reveal is a help action: the turn does not change (§1.5).
-    emit(
-      current.copyWith(
-        board: newBoard,
-        revealedWordIds: {...current.revealedWordIds, event.wordId},
-      ),
-    );
+    if (!current.puzzle.words.any((w) => w.id == event.wordId)) return;
+    // Reveal SHOWS the word as a ghost (the painter draws the solution faintly
+    // on still-empty, playable cells); it does NOT commit letters to the board.
+    // The player still places real tiles to score, so the board can only be
+    // completed — and the game finished — through a real move (§1.5).
+    emit(current.copyWith(revealedWordIds: {...current.revealedWordIds, event.wordId}));
   }
 
   void _onSixthSlotUnlocked(SixthSlotUnlocked event, Emitter<GameState> emit) {

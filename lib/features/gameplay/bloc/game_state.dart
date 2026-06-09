@@ -93,6 +93,10 @@ class GameActive extends GameState {
   /// Cells where the bot placed letters (persisted across turns for visual feedback).
   final Set<WordCell> botPlacedCells;
 
+  // Sentinel for copyWith: distinguishes "argument omitted → keep current" from
+  // "explicitly passed null → clear". Needed so highlightedWordId can be cleared.
+  static const Object _unset = Object();
+
   GameActive copyWith({
     PuzzleData? puzzle,
     Map<WordCell, String>? board,
@@ -102,7 +106,7 @@ class GameActive extends GameState {
     int? botScore,
     TurnPhase? phase,
     bool? botThinking,
-    String? highlightedWordId,
+    Object? highlightedWordId = _unset,
     GameStatus? status,
     int? rackSize,
     Set<String>? revealedWordIds,
@@ -118,7 +122,9 @@ class GameActive extends GameState {
       botScore: botScore ?? this.botScore,
       phase: phase ?? this.phase,
       botThinking: botThinking ?? this.botThinking,
-      highlightedWordId: highlightedWordId ?? this.highlightedWordId,
+      highlightedWordId: identical(highlightedWordId, _unset)
+          ? this.highlightedWordId
+          : highlightedWordId as String?,
       status: status ?? this.status,
       rackSize: rackSize ?? this.rackSize,
       revealedWordIds: revealedWordIds ?? this.revealedWordIds,
@@ -129,19 +135,19 @@ class GameActive extends GameState {
 
   @override
   List<Object?> get props => [
-        puzzle,
-        board,
-        rack,
-        pendingPlacements,
-        playerScore,
-        botScore,
-        phase,
-        botThinking,
-        highlightedWordId,
-        status,
-        rackSize,
-        revealedWordIds,
-        selectedRackIndex,
-        botPlacedCells,
-      ];
+    puzzle,
+    board,
+    rack,
+    pendingPlacements,
+    playerScore,
+    botScore,
+    phase,
+    botThinking,
+    highlightedWordId,
+    status,
+    rackSize,
+    revealedWordIds,
+    selectedRackIndex,
+    botPlacedCells,
+  ];
 }

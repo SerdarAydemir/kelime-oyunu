@@ -24,6 +24,11 @@ abstract final class AppColors {
   static const Color gridCellFound = Color(0xFFA5D6A7);
   static const Color gridCellLocked = Color(0xFFB0BEC5);
 
+  // Faint solution letter drawn on a revealed-but-unplayed cell (joker ghost).
+  // Deliberately lighter (~grey.shade350) than the bot grey (grey.shade600) so
+  // the two stay distinct while the bot colour remains in the grey family.
+  static const Color ghost = Color(0xFFC4C4C4);
+
   // ── Economy ────────────────────────────────────────────────────────────────
   static const Color coinGold = Color(0xFFFFC107);
   static const Color star = Color(0xFFFFB300);

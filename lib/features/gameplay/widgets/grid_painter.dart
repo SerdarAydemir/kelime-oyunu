@@ -68,10 +68,7 @@ class GridPainter extends StatelessWidget {
               onTapDown: (details) {
                 final col = (details.localPosition.dx / cellSize).floor();
                 final row = (details.localPosition.dy / cellSize).floor();
-                if (row >= 0 &&
-                    col >= 0 &&
-                    row < puzzle.grid.rows &&
-                    col < puzzle.grid.cols) {
+                if (row >= 0 && col >= 0 && row < puzzle.grid.rows && col < puzzle.grid.cols) {
                   onCellTap(WordCell(row: row, col: col));
                 }
               },
@@ -90,13 +87,11 @@ class GridStaticPainter extends CustomPainter {
     required this.botPlacedCells,
     required this.puzzle,
     required this.cellSize,
-  })  : _cellMap = {
-          for (final c in puzzle.cells) WordCell(row: c.row, col: c.col): c,
-        },
-        _revealedCells = {
-          for (final w in puzzle.words)
-            if (revealedWordIds.contains(w.id)) ...w.cells,
-        };
+  }) : _cellMap = {for (final c in puzzle.cells) WordCell(row: c.row, col: c.col): c},
+       _revealedCells = {
+         for (final w in puzzle.words)
+           if (revealedWordIds.contains(w.id)) ...w.cells,
+       };
 
   final Map<WordCell, String> board;
   final Set<String> revealedWordIds;
@@ -113,12 +108,7 @@ class GridStaticPainter extends CustomPainter {
       for (var col = 0; col < puzzle.grid.cols; col++) {
         final cell = WordCell(row: row, col: col);
         final spec = _cellMap[cell];
-        final rect = Rect.fromLTWH(
-          col * cellSize,
-          row * cellSize,
-          cellSize,
-          cellSize,
-        );
+        final rect = Rect.fromLTWH(col * cellSize, row * cellSize, cellSize, cellSize);
         if (spec == null || spec.type == CellType.blank) {
           _drawBlankCell(canvas, rect);
         } else if (spec.type == CellType.clue) {
@@ -140,11 +130,7 @@ class GridStaticPainter extends CustomPainter {
     canvas.drawRect(rect, Paint()..color = const Color(0xFFE8F5E9));
     if (spec.clues.length >= 2) {
       final half = rect.height / 2;
-      _drawSingleClue(
-        canvas,
-        Rect.fromLTWH(rect.left, rect.top, rect.width, half),
-        spec.clues[0],
-      );
+      _drawSingleClue(canvas, Rect.fromLTWH(rect.left, rect.top, rect.width, half), spec.clues[0]);
       _drawSingleClue(
         canvas,
         Rect.fromLTWH(rect.left, rect.top + half, rect.width, half),
@@ -176,42 +162,40 @@ class GridStaticPainter extends CustomPainter {
     )..layout();
     arrowPainter.paint(
       canvas,
-      Offset(
-        rect.right - arrowPainter.width - 1,
-        rect.bottom - arrowPainter.height - 1,
-      ),
+      Offset(rect.right - arrowPainter.width - 1, rect.bottom - arrowPainter.height - 1),
     );
   }
 
   void _drawLetterCell(Canvas canvas, Rect rect, WordCell cell) {
     canvas.drawRect(rect, Paint()..color = AppColors.gridCellNormal);
     final letter = board[cell];
-    if (letter == null) return;
+    if (letter == null) {
+      // Revealed but unplayed: draw the solution as a faint, playable ghost.
+      // The cell stays empty in [board], so it remains placeable.
+      if (_revealedCells.contains(cell)) {
+        final ghost = _cellMap[cell]?.solution;
+        if (ghost != null) _paintCenteredLetter(canvas, rect, ghost, AppColors.ghost);
+      }
+      return;
+    }
+    // Committed letters: bot grey, player black. Revealed cells are never
+    // committed in the ghost model, so there is no locked colour here.
+    final color = botPlacedCells.contains(cell) ? Colors.grey.shade600 : Colors.black;
+    _paintCenteredLetter(canvas, rect, letter, color);
+  }
 
-    final isRevealed = _revealedCells.contains(cell);
-    final isBot = botPlacedCells.contains(cell);
-    final color = isRevealed
-        ? AppColors.gridCellLocked
-        : isBot
-            ? Colors.grey.shade600
-            : Colors.black;
-    final letterPainter = TextPainter(
+  // Draws [text] centred in [rect] using the standard cell letter style.
+  void _paintCenteredLetter(Canvas canvas, Rect rect, String text, Color color) {
+    final tp = TextPainter(
       text: TextSpan(
-        text: letter,
-        style: TextStyle(
-          fontSize: 20,
-          fontWeight: FontWeight.bold,
-          color: color,
-        ),
+        text: text,
+        style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: color),
       ),
       textDirection: TextDirection.ltr,
     )..layout();
-    letterPainter.paint(
+    tp.paint(
       canvas,
-      Offset(
-        rect.left + (cellSize - letterPainter.width) / 2,
-        rect.top + (cellSize - letterPainter.height) / 2,
-      ),
+      Offset(rect.left + (cellSize - tp.width) / 2, rect.top + (cellSize - tp.height) / 2),
     );
   }
 
@@ -265,12 +249,7 @@ class GridDynamicPainter extends CustomPainter {
         final highlightPaint = Paint()..color = const Color(0x22000000);
         for (final cell in word.cells) {
           canvas.drawRect(
-            Rect.fromLTWH(
-              cell.col * cellSize,
-              cell.row * cellSize,
-              cellSize,
-              cellSize,
-            ),
+            Rect.fromLTWH(cell.col * cellSize, cell.row * cellSize, cellSize, cellSize),
             highlightPaint,
           );
         }
@@ -288,26 +267,18 @@ class GridDynamicPainter extends CustomPainter {
       final tp = TextPainter(
         text: TextSpan(
           text: placement.letter,
-          style: const TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-            color: Colors.black,
-          ),
+          style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black),
         ),
         textDirection: TextDirection.ltr,
       )..layout();
       tp.paint(
         canvas,
-        Offset(
-          rect.left + (cellSize - tp.width) / 2,
-          rect.top + (cellSize - tp.height) / 2,
-        ),
+        Offset(rect.left + (cellSize - tp.width) / 2, rect.top + (cellSize - tp.height) / 2),
       );
     }
   }
 
   @override
   bool shouldRepaint(covariant GridDynamicPainter old) =>
-      pendingPlacements != old.pendingPlacements ||
-      highlightedWordId != old.highlightedWordId;
+      pendingPlacements != old.pendingPlacements || highlightedWordId != old.highlightedWordId;
 }
