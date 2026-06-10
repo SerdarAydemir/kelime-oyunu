@@ -137,6 +137,29 @@ void main() {
     });
   });
 
+  group('RackManager.refill targetSize (+1 letter joker)', () {
+    // ── 9a: refill keeps the unlocked 6-tile rack instead of shrinking to 5 ──
+    test('tops up to 6 when targetSize is powerUpRackSize', () {
+      const playedRack = [
+        RackTile(letter: 'K', isPlaced: true),
+        RackTile(letter: 'A', isPlaced: true),
+        RackTile(letter: 'L', isPlaced: true),
+        RackTile(letter: 'E', isPlaced: true),
+        RackTile(letter: 'M', isPlaced: true),
+        RackTile(letter: 'O', isPlaced: true),
+      ];
+      final rack = manager.refill(
+        currentRack: playedRack,
+        puzzle: wordPuzzle(),
+        board: const {},
+        returnedLetters: const [],
+        seed: 14,
+        targetSize: RackManager.powerUpRackSize,
+      );
+      expect(rack.length, RackManager.powerUpRackSize);
+    });
+  });
+
   group('RackManager.swapLetters', () {
     // A puzzle whose every unsolved cell is 'B' makes the draw deterministic.
     PuzzleData allBPuzzle() => puzzleFromWords([

@@ -57,13 +57,14 @@ class RackManager {
   /// The next rack is the union of: tiles the player never placed this turn
   /// (their strategic carry-over), the [returnedLetters] that came back wrong
   /// (flagged [RackTile.isReturned]), and freshly drawn tiles topping the rack
-  /// up to [baseRackSize].
+  /// up to [targetSize] — 5, or 6 once the +1 letter joker is unlocked.
   List<RackTile> refill({
     required List<RackTile> currentRack,
     required PuzzleData puzzle,
     required Map<WordCell, String> board,
     required List<String> returnedLetters,
     required int seed,
+    int targetSize = baseRackSize,
   }) {
     final rng = Random(seed);
     final kept = <RackTile>[
@@ -74,7 +75,7 @@ class RackManager {
       for (final letter in returnedLetters) RackTile(letter: letter, isReturned: true),
     ];
     final carryOver = [...kept, ...returned];
-    final need = baseRackSize - carryOver.length;
+    final need = targetSize - carryOver.length;
     final fresh = need > 0
         ? _drawFillLetters(count: need, puzzle: puzzle, board: board, rng: rng)
         : const <String>[];
