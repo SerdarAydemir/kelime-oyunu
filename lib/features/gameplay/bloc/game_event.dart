@@ -75,14 +75,18 @@ class BotMoveCompleted extends GameEvent {
   List<Object?> get props => [botMove];
 }
 
-/// The player swapped the rack tiles at [swapIndices] (after a rewarded ad).
+/// The player swapped the rack tiles at [swapIndices].
+///
+/// [viaAd] true: the swap was paid for with a rewarded ad and the turn stays
+/// with the player. false: the swap is free but consumes the turn (§1.5).
 class LettersSwapped extends GameEvent {
-  const LettersSwapped(this.swapIndices);
+  const LettersSwapped(this.swapIndices, {this.viaAd = false});
 
   final List<int> swapIndices;
+  final bool viaAd;
 
   @override
-  List<Object?> get props => [swapIndices];
+  List<Object?> get props => [swapIndices, viaAd];
 }
 
 /// The player spent a hint to reveal the whole word [wordId] (after an ad).

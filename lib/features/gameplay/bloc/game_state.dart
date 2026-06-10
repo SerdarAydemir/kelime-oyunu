@@ -57,7 +57,11 @@ class GameActive extends GameState {
     this.highlightedWordId,
     this.selectedRackIndex = -1,
     this.botPlacedCells = const {},
+    this.swapQuotaRemaining = swapQuotaPerMatch,
   });
+
+  /// Total letters the player may swap over one match (swap joker budget).
+  static const int swapQuotaPerMatch = 12;
 
   final PuzzleData puzzle;
 
@@ -93,6 +97,9 @@ class GameActive extends GameState {
   /// Cells where the bot placed letters (persisted across turns for visual feedback).
   final Set<WordCell> botPlacedCells;
 
+  /// Letters the player may still swap this match (each swapped letter costs 1).
+  final int swapQuotaRemaining;
+
   // Sentinel for copyWith: distinguishes "argument omitted → keep current" from
   // "explicitly passed null → clear". Needed so highlightedWordId can be cleared.
   static const Object _unset = Object();
@@ -112,6 +119,7 @@ class GameActive extends GameState {
     Set<String>? revealedWordIds,
     int? selectedRackIndex,
     Set<WordCell>? botPlacedCells,
+    int? swapQuotaRemaining,
   }) {
     return GameActive(
       puzzle: puzzle ?? this.puzzle,
@@ -130,6 +138,7 @@ class GameActive extends GameState {
       revealedWordIds: revealedWordIds ?? this.revealedWordIds,
       selectedRackIndex: selectedRackIndex ?? this.selectedRackIndex,
       botPlacedCells: botPlacedCells ?? this.botPlacedCells,
+      swapQuotaRemaining: swapQuotaRemaining ?? this.swapQuotaRemaining,
     );
   }
 
@@ -149,5 +158,6 @@ class GameActive extends GameState {
     revealedWordIds,
     selectedRackIndex,
     botPlacedCells,
+    swapQuotaRemaining,
   ];
 }

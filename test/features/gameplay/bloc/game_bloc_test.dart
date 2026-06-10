@@ -79,6 +79,7 @@ GameActive _activeState({
   bool botThinking = false,
   String? highlightedWordId,
   int rackSize = RackManager.baseRackSize,
+  int swapQuotaRemaining = GameActive.swapQuotaPerMatch,
 }) {
   return GameActive(
     puzzle: _puzzle,
@@ -93,6 +94,7 @@ GameActive _activeState({
     rackSize: rackSize,
     revealedWordIds: const {},
     highlightedWordId: highlightedWordId,
+    swapQuotaRemaining: swapQuotaRemaining,
   );
 }
 
@@ -107,6 +109,7 @@ void main() {
     registerFallbackValue(<WordCell, String>{});
     registerFallbackValue(<RackTile>[]);
     registerFallbackValue(<String>[]);
+    registerFallbackValue(<int>[]);
     registerFallbackValue(<Placement>[]);
     registerFallbackValue(DifficultyBand.easy);
   });
@@ -172,6 +175,18 @@ void main() {
         seed: any(named: 'seed'),
       ),
     ).thenReturn(const BotMove(placements: [], thinkingDelayMs: 0));
+  }
+
+  void stubSwapLetters() {
+    when(
+      () => rackManager.swapLetters(
+        currentRack: any(named: 'currentRack'),
+        swapIndices: any(named: 'swapIndices'),
+        puzzle: any(named: 'puzzle'),
+        board: any(named: 'board'),
+        seed: any(named: 'seed'),
+      ),
+    ).thenReturn(_defaultRack);
   }
 
   // Returns the rack it was given (the "not stuck" path) so bot-turn tests using
@@ -473,6 +488,54 @@ void main() {
         isA<GameActive>().having((s) => s.phase, 'phase', TurnPhase.botThinking),
         isA<GameActive>().having((s) => s.phase, 'phase', TurnPhase.playerTurn),
       ],
+    );
+  });
+
+  group('LettersSwapped', () {
+    // ── swap joker: ad-paid swap keeps the turn and costs quota ──────────────
+    blocTest<GameBloc, GameState>(
+      'via ad: swaps, decrements quota by letter count, keeps the turn',
+      build: () {
+        stubSwapLetters();
+        return buildBloc();
+      },
+      seed: _activeState,
+      act: (bloc) => bloc.add(const LettersSwapped([0, 1], viaAd: true)),
+      expect: () => [
+        isA<GameActive>()
+            .having((s) => s.swapQuotaRemaining, 'quota', GameActive.swapQuotaPerMatch - 2)
+            .having((s) => s.phase, 'phase', TurnPhase.playerTurn),
+      ],
+    );
+
+    // ── swap joker: free swap costs the turn ─────────────────────────────────
+    blocTest<GameBloc, GameState>(
+      'without ad: swaps, decrements quota and hands the turn to the bot',
+      build: () {
+        stubSwapLetters();
+        stubResolveMove(_moveResult(scoreDelta: 0));
+        stubComputeMove();
+        stubEnsurePlayable();
+        return buildBloc();
+      },
+      seed: _activeState,
+      act: (bloc) => bloc.add(const LettersSwapped([0])),
+      wait: const Duration(milliseconds: 50),
+      expect: () => [
+        isA<GameActive>()
+            .having((s) => s.phase, 'phase', TurnPhase.botThinking)
+            .having((s) => s.swapQuotaRemaining, 'quota', GameActive.swapQuotaPerMatch - 1),
+        isA<GameActive>().having((s) => s.phase, 'phase', TurnPhase.playerTurn),
+      ],
+    );
+
+    // ── swap joker: exhausted quota rejects the swap (no-op) ─────────────────
+    blocTest<GameBloc, GameState>(
+      'rejects a swap larger than the remaining quota',
+      build: buildBloc,
+      seed: () => _activeState(swapQuotaRemaining: 1),
+      act: (bloc) => bloc.add(const LettersSwapped([0, 1], viaAd: true)),
+      expect: () => <GameState>[],
     );
   });
 

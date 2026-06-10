@@ -15,6 +15,7 @@ import 'package:kelime_oyunu/features/gameplay/widgets/action_bar.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/grid_painter.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/rack_widget.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/score_header.dart';
+import 'package:kelime_oyunu/features/gameplay/widgets/swap_sheet.dart';
 
 // Bot identity used for all matches in this version of the screen.
 const _kBotProfile = BotProfile(
@@ -152,7 +153,7 @@ class _GameActiveBodyState extends State<_GameActiveBody> {
                 ? null
                 : () => context.read<GameBloc>().add(const MoveConfirmed()),
             onPass: _revealMode ? null : () => context.read<GameBloc>().add(const MovePassed()),
-            onSwap: !_revealMode && state.pendingPlacements.isEmpty
+            onSwap: !_revealMode && state.pendingPlacements.isEmpty && state.swapQuotaRemaining > 0
                 ? () => _showSwapSheet(context)
                 : null,
             onReveal: _canReveal ? () => setState(() => _revealMode = !_revealMode) : null,
@@ -253,15 +254,15 @@ class _GameActiveBodyState extends State<_GameActiveBody> {
     bloc.add(const SixthSlotUnlocked());
   }
 
-  void _showSwapSheet(BuildContext context) {
-    showModalBottomSheet<void>(
+  /// Opens the swap sheet; dispatches the swap with the chosen payment.
+  Future<void> _showSwapSheet(BuildContext context) async {
+    final bloc = context.read<GameBloc>();
+    final choice = await showModalBottomSheet<SwapChoice>(
       context: context,
-      builder: (_) => const Center(
-        child: Padding(
-          padding: EdgeInsets.all(24),
-          child: Text('Harf değiştirme yakında'), // TODO: SwapSheet
-        ),
-      ),
+      builder: (_) => SwapSheet(rack: state.rack, quotaRemaining: state.swapQuotaRemaining),
     );
+    if (!mounted || choice == null) return;
+    // TODO: gate the viaAd path behind a real rewarded ad (AdService phase).
+    bloc.add(LettersSwapped(choice.indices, viaAd: choice.viaAd));
   }
 }

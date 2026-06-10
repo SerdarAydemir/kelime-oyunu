@@ -207,6 +207,12 @@ class GameBloc extends Bloc<GameEvent, GameState> {
   Future<void> _onLettersSwapped(LettersSwapped event, Emitter<GameState> emit) async {
     final current = state;
     if (current is! GameActive) return;
+    // Each swapped letter costs 1 from the per-match quota (12).
+    final count = event.swapIndices.toSet().length;
+    if (count == 0 || count > current.swapQuotaRemaining) {
+      debugPrint('Rejected swap: quota ${current.swapQuotaRemaining}, asked $count');
+      return;
+    }
     final rack = _rackManager.swapLetters(
       currentRack: current.rack,
       swapIndices: event.swapIndices,
@@ -214,7 +220,16 @@ class GameBloc extends Bloc<GameEvent, GameState> {
       board: current.board,
       seed: _nextSeed(),
     );
-    await _runBotTurn(current.copyWith(rack: rack), emit);
+    final next = current.copyWith(
+      rack: rack,
+      swapQuotaRemaining: current.swapQuotaRemaining - count,
+    );
+    // Ad-paid swap keeps the turn; the free swap costs it (§1.5).
+    if (event.viaAd) {
+      emit(next);
+      return;
+    }
+    await _runBotTurn(next, emit);
   }
 
   void _onWordRevealed(WordRevealed event, Emitter<GameState> emit) {
