@@ -132,6 +132,8 @@ class _GameActiveBodyState extends State<_GameActiveBody> {
           ),
           RackWidget(
             rack: state.rack,
+            showPlusSlot: state.rackSize == RackManager.baseRackSize,
+            onPlusTap: _canReveal && !_revealMode ? () => _confirmSixthSlot(context) : null,
             onTileTap: (i) => context.read<GameBloc>().add(RackTileSelected(i)),
             onTileRecall: (i) {
               final tile = state.rack[i];
@@ -227,6 +229,28 @@ class _GameActiveBodyState extends State<_GameActiveBody> {
     if (!mounted || confirmed != true) return;
     bloc.add(WordRevealed(clue.wordId));
     setState(() => _revealMode = false);
+  }
+
+  /// Confirms the +1 letter joker; "Evet" unlocks the sixth rack slot.
+  Future<void> _confirmSixthSlot(BuildContext context) async {
+    final bloc = context.read<GameBloc>();
+    final confirmed = await showDialog<bool>(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        title: const Text('+1 harf jokeri'),
+        content: const Text(
+          'Reklam izleyerek 6. harf yuvasını açmak ister misin? '
+          'Bu maç boyunca her el 6 harfle oynarsın; eli boşaltırsan +6 bonus!',
+        ),
+        actions: [
+          TextButton(onPressed: () => Navigator.pop(ctx, false), child: const Text('Hayır')),
+          TextButton(onPressed: () => Navigator.pop(ctx, true), child: const Text('Evet')),
+        ],
+      ),
+    );
+    if (!mounted || confirmed != true) return;
+    // TODO: gate behind a real rewarded ad once AdService lands (mock for MVP).
+    bloc.add(const SixthSlotUnlocked());
   }
 
   void _showSwapSheet(BuildContext context) {
