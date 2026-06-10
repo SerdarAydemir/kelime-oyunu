@@ -78,6 +78,7 @@ GameActive _activeState({
   TurnPhase phase = TurnPhase.playerTurn,
   bool botThinking = false,
   String? highlightedWordId,
+  int rackSize = RackManager.baseRackSize,
 }) {
   return GameActive(
     puzzle: _puzzle,
@@ -89,7 +90,7 @@ GameActive _activeState({
     phase: phase,
     botThinking: botThinking,
     status: GameStatus.playing,
-    rackSize: RackManager.baseRackSize,
+    rackSize: rackSize,
     revealedWordIds: const {},
     highlightedWordId: highlightedWordId,
   );
@@ -145,6 +146,7 @@ void main() {
         board: any(named: 'board'),
         returnedLetters: any(named: 'returnedLetters'),
         seed: any(named: 'seed'),
+        targetSize: any(named: 'targetSize'),
       ),
     ).thenReturn(_defaultRack);
   }
@@ -337,6 +339,36 @@ void main() {
             .having((s) => s.phase, 'phase', TurnPhase.finished)
             .having((s) => s.status, 'status', GameStatus.won),
       ],
+    );
+
+    // ── 8b (+1 joker): refill is asked for the unlocked 6-tile rack size ─────
+    blocTest<GameBloc, GameState>(
+      'refills to the unlocked rack size after a move',
+      build: () {
+        stubResolveMove(_moveResult(scoreDelta: 1));
+        stubRefill();
+        stubComputeMove();
+        stubEnsurePlayable();
+        return buildBloc();
+      },
+      seed: () => _activeState(
+        rackSize: RackManager.powerUpRackSize,
+        pending: const [Placement(cell: _cell11, letter: 'K', expected: 'K')],
+      ),
+      act: (bloc) => bloc.add(const MoveConfirmed()),
+      wait: const Duration(milliseconds: 50),
+      verify: (_) {
+        verify(
+          () => rackManager.refill(
+            currentRack: any(named: 'currentRack'),
+            puzzle: any(named: 'puzzle'),
+            board: any(named: 'board'),
+            returnedLetters: any(named: 'returnedLetters'),
+            seed: any(named: 'seed'),
+            targetSize: RackManager.powerUpRackSize,
+          ),
+        ).called(1);
+      },
     );
 
     // ── 8a: a confirmed move clears the word highlight ──────────────────────

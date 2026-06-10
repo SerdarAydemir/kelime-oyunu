@@ -150,6 +150,7 @@ class GameBloc extends Bloc<GameEvent, GameState> {
         board: newBoard,
         returnedLetters: result.returnedLetters,
         seed: _nextSeed(),
+        targetSize: current.rackSize,
       ),
       pendingPlacements: const [],
       playerScore: current.playerScore + result.scoreDelta,
