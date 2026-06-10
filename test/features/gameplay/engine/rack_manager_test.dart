@@ -200,6 +200,48 @@ void main() {
       );
       expect(rack.length, aRack.length);
     });
+
+    // ── 6a (swap joker): discarded letter is not drawn back when avoidable ──
+    test('avoids re-drawing the discarded letter when an alternative exists', () {
+      // Pool letters are {B, B, B, B, C}: discarding 'B' must yield the only
+      // alternative 'C', regardless of the seed.
+      final puzzle = puzzleFromWords([
+        buildWord(id: 'w1', answer: 'BBBBC', startRow: 1, startCol: 1, direction: ClueArrow.right),
+      ]);
+      final rack = manager.swapLetters(
+        currentRack: const [
+          RackTile(letter: 'B'),
+          RackTile(letter: 'A'),
+          RackTile(letter: 'A'),
+          RackTile(letter: 'A'),
+          RackTile(letter: 'A'),
+        ],
+        swapIndices: const [0],
+        puzzle: puzzle,
+        board: const {},
+        seed: 15,
+      );
+      expect(rack[0].letter, 'C');
+    });
+
+    // ── 6b (swap joker): falls back to the discard when nothing else remains ─
+    test('re-draws the discarded letter when the pool has no alternative', () {
+      // All-'B' pool: discarding 'B' can only yield 'B' again.
+      final rack = manager.swapLetters(
+        currentRack: const [
+          RackTile(letter: 'B'),
+          RackTile(letter: 'A'),
+          RackTile(letter: 'A'),
+          RackTile(letter: 'A'),
+          RackTile(letter: 'A'),
+        ],
+        swapIndices: const [0],
+        puzzle: allBPuzzle(),
+        board: const {},
+        seed: 16,
+      );
+      expect(rack[0].letter, 'B');
+    });
   });
 
   group('RackManager.hasPlayableMove', () {

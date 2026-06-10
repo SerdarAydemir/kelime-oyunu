@@ -83,6 +83,10 @@ class RackManager {
   }
 
   /// Replaces the tiles at [swapIndices] with freshly drawn ones; size unchanged.
+  ///
+  /// The discarded letters are only re-drawn when the pool offers no
+  /// alternative — swapping an 'X' away and immediately getting it back
+  /// would make the joker feel broken.
   List<RackTile> swapLetters({
     required List<RackTile> currentRack,
     required List<int> swapIndices,
@@ -92,7 +96,14 @@ class RackManager {
   }) {
     final rng = Random(seed);
     final swapSet = swapIndices.toSet();
-    final fresh = _drawFillLetters(count: swapSet.length, puzzle: puzzle, board: board, rng: rng);
+    final discarded = {for (final i in swapSet) currentRack[i].letter};
+    final fresh = _drawFillLetters(
+      count: swapSet.length,
+      puzzle: puzzle,
+      board: board,
+      rng: rng,
+      exclude: discarded,
+    );
     var freshIndex = 0;
     return [
       for (var i = 0; i < currentRack.length; i++)
@@ -155,16 +166,24 @@ class RackManager {
 
   // Draws [count] letters: first from the shuffled unsolved-cell pool (so the
   // player can always make progress), then from the Turkish alphabet fallback.
+  // Letters in [exclude] are pushed to the back of the queue so they are only
+  // drawn when no alternative remains (used by swapLetters for discards).
   List<String> _drawFillLetters({
     required int count,
     required PuzzleData puzzle,
     required Map<WordCell, String> board,
     required Random rng,
+    Set<String> exclude = const {},
   }) {
     final pool = _unsolvedLetters(puzzle, board)..shuffle(rng);
+    final ordered = [...pool.where((l) => !exclude.contains(l)), ...pool.where(exclude.contains)];
+    final alphabet = [
+      for (final l in _turkishAlphabet)
+        if (!exclude.contains(l)) l,
+    ];
     return [
       for (var i = 0; i < count; i++)
-        if (i < pool.length) pool[i] else _turkishAlphabet[rng.nextInt(_turkishAlphabet.length)],
+        if (i < ordered.length) ordered[i] else alphabet[rng.nextInt(alphabet.length)],
     ];
   }
 }
