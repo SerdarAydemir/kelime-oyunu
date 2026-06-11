@@ -72,10 +72,18 @@ def _two_non_crossing() -> MaskTemplate:
         4,
         4,
         [
-            {"slot_id": "s1", "direction": "right", "clue_cell": (0, 0),
-             "cells": [(0, 1), (0, 2), (0, 3)]},
-            {"slot_id": "s2", "direction": "right", "clue_cell": (2, 0),
-             "cells": [(2, 1), (2, 2), (2, 3)]},
+            {
+                "slot_id": "s1",
+                "direction": "right",
+                "clue_cell": (0, 0),
+                "cells": [(0, 1), (0, 2), (0, 3)],
+            },
+            {
+                "slot_id": "s2",
+                "direction": "right",
+                "clue_cell": (2, 0),
+                "cells": [(2, 1), (2, 2), (2, 3)],
+            },
         ],
     )
 
@@ -87,10 +95,18 @@ def _crossing() -> MaskTemplate:
         4,
         4,
         [
-            {"slot_id": "s1", "direction": "right", "clue_cell": (1, 0),
-             "cells": [(1, 1), (1, 2), (1, 3)]},
-            {"slot_id": "s2", "direction": "down", "clue_cell": (0, 2),
-             "cells": [(1, 2), (2, 2), (3, 2)]},
+            {
+                "slot_id": "s1",
+                "direction": "right",
+                "clue_cell": (1, 0),
+                "cells": [(1, 1), (1, 2), (1, 3)],
+            },
+            {
+                "slot_id": "s2",
+                "direction": "down",
+                "clue_cell": (0, 2),
+                "cells": [(1, 2), (2, 2), (3, 2)],
+            },
         ],
     )
 
@@ -145,10 +161,18 @@ def test_mrv_selects_smallest_domain_first() -> None:
         4,
         6,
         [
-            {"slot_id": "long", "direction": "right", "clue_cell": (0, 0),
-             "cells": [(0, 1), (0, 2), (0, 3), (0, 4)]},
-            {"slot_id": "short", "direction": "right", "clue_cell": (2, 0),
-             "cells": [(2, 1), (2, 2), (2, 3)]},
+            {
+                "slot_id": "long",
+                "direction": "right",
+                "clue_cell": (0, 0),
+                "cells": [(0, 1), (0, 2), (0, 3), (0, 4)],
+            },
+            {
+                "slot_id": "short",
+                "direction": "right",
+                "clue_cell": (2, 0),
+                "cells": [(2, 1), (2, 2), (2, 3)],
+            },
         ],
     )
     # Four length-4 words, only two length-3 words → "short" has the smaller domain.
@@ -200,8 +224,7 @@ def test_single_letter_slot_without_symbols_raises() -> None:
         4,
         4,
         [
-            {"slot_id": "s1", "direction": "right", "clue_cell": (0, 0),
-             "cells": [(0, 1)]},
+            {"slot_id": "s1", "direction": "right", "clue_cell": (0, 0), "cells": [(0, 1)]},
         ],
     )
     filler = CSPFiller(["KAR", "ARI"], seed=9)  # no length-1 entries
@@ -220,16 +243,36 @@ def test_five_slot_crossword_fills() -> None:
         6,
         6,
         [
-            {"slot_id": "a1", "direction": "right", "clue_cell": (1, 0),
-             "cells": [(1, 1), (1, 2), (1, 3)]},
-            {"slot_id": "a2", "direction": "right", "clue_cell": (3, 0),
-             "cells": [(3, 1), (3, 2), (3, 3)]},
-            {"slot_id": "d1", "direction": "down", "clue_cell": (0, 1),
-             "cells": [(1, 1), (2, 1), (3, 1)]},
-            {"slot_id": "d2", "direction": "down", "clue_cell": (0, 2),
-             "cells": [(1, 2), (2, 2), (3, 2)]},
-            {"slot_id": "d3", "direction": "down", "clue_cell": (0, 3),
-             "cells": [(1, 3), (2, 3), (3, 3)]},
+            {
+                "slot_id": "a1",
+                "direction": "right",
+                "clue_cell": (1, 0),
+                "cells": [(1, 1), (1, 2), (1, 3)],
+            },
+            {
+                "slot_id": "a2",
+                "direction": "right",
+                "clue_cell": (3, 0),
+                "cells": [(3, 1), (3, 2), (3, 3)],
+            },
+            {
+                "slot_id": "d1",
+                "direction": "down",
+                "clue_cell": (0, 1),
+                "cells": [(1, 1), (2, 1), (3, 1)],
+            },
+            {
+                "slot_id": "d2",
+                "direction": "down",
+                "clue_cell": (0, 2),
+                "cells": [(1, 2), (2, 2), (3, 2)],
+            },
+            {
+                "slot_id": "d3",
+                "direction": "down",
+                "clue_cell": (0, 3),
+                "cells": [(1, 3), (2, 3), (3, 3)],
+            },
         ],
     )
     pool = ["KAR", "LAF", "KOL", "RAF", "ARA", "TOP", "SAP", "YOL", "SES", "GÜL"]
@@ -260,12 +303,9 @@ def _three_parallel_downs() -> MaskTemplate:
         4,
         4,
         [
-            {"slot_id": "d1", "direction": "down", "clue_cell": (0, 1),
-             "cells": [(1, 1), (2, 1)]},
-            {"slot_id": "d2", "direction": "down", "clue_cell": (0, 2),
-             "cells": [(1, 2), (2, 2)]},
-            {"slot_id": "d3", "direction": "down", "clue_cell": (0, 3),
-             "cells": [(1, 3), (2, 3)]},
+            {"slot_id": "d1", "direction": "down", "clue_cell": (0, 1), "cells": [(1, 1), (2, 1)]},
+            {"slot_id": "d2", "direction": "down", "clue_cell": (0, 2), "cells": [(1, 2), (2, 2)]},
+            {"slot_id": "d3", "direction": "down", "clue_cell": (0, 3), "cells": [(1, 3), (2, 3)]},
         ],
     )
 
@@ -347,3 +387,34 @@ def test_same_instance_repeat_fill_identical() -> None:
     first = filler.fill(template)
     second = filler.fill(template)
     assert first.slot_assignments == second.slot_assignments
+
+
+# ── Per-attempt node budget (heavy-tail guard) ────────────────────────────────
+
+
+def test_node_budget_zero_exhausts_every_attempt() -> None:
+    # Budget 0 aborts each attempt on its very first node, so the fill fails
+    # after max_attempts budget hits — never by exploring the search tree.
+    filler = CSPFiller(["KAR", "ARA", "TOP"], max_attempts=3, seed=1, node_budget=0)
+    with pytest.raises(FillError):
+        filler.fill(_two_non_crossing())
+    assert filler.last_budget_hits == 3
+    assert filler.last_attempts == 3
+
+
+def test_node_budget_none_disables_guard() -> None:
+    filler = CSPFiller(["KAR", "ARA", "TOP"], seed=1, node_budget=None)
+    result = filler.fill(_two_non_crossing())
+    assert set(result.slot_assignments) == {"s1", "s2"}
+    assert filler.last_budget_hits == 0
+
+
+def test_default_budget_untouched_on_small_fill() -> None:
+    # Small templates stay far below the default budget: identical behaviour,
+    # one attempt, zero hits (backward compatibility of the default).
+    filler = CSPFiller(["KAR", "ARI", "TOP", "SAP"], seed=2)
+    result = filler.fill(_crossing())
+    assert filler.last_budget_hits == 0
+    assert filler.last_attempts == 1
+    unlimited = CSPFiller(["KAR", "ARI", "TOP", "SAP"], seed=2, node_budget=None)
+    assert unlimited.fill(_crossing()).slot_assignments == result.slot_assignments

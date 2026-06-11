@@ -39,6 +39,10 @@ class FillError(Exception):
     """Raised when no consistent fill is found within max_attempts."""
 
 
+class _NodeBudgetExceeded(Exception):
+    """Internal: one backtracking attempt ran past its node budget."""
+
+
 class FillResult(BaseModel):
     """A successful fill: slot_id -> assigned word (Turkish upper-case)."""
 
@@ -76,6 +80,7 @@ class CSPFiller:
         seed: int | None = None,
         min_n: int = 3,
         max_n: int = 8,
+        node_budget: int | None = 25_000,
     ) -> None:
         # Defensive normalization; word_pool.py already returns clean upper-case.
         self._word_pool: list[str] = [tr_upper(w) for w in word_pool]
@@ -86,6 +91,11 @@ class CSPFiller:
         self._min_n = min_n
         self._max_n = max_n
         self._max_attempts = max_attempts
+        # Per-attempt backtracking node budget (None disables). Failing fills
+        # are heavy-tailed: a single unlucky search tree can run for minutes,
+        # so each attempt is capped and retried with a different shuffle.
+        self._node_budget = node_budget
+        self._nodes = 0
         self._seed = seed
         self._rng = random.Random(seed)
         # Partial grid + run index, (re)built per fill() when a blacklist is set.
@@ -96,6 +106,8 @@ class CSPFiller:
         self.last_assignment_order: list[str] = []
         self.domains_before_ac3: dict[str, int] = {}
         self.domains_after_ac3: dict[str, int] = {}
+        self.last_budget_hits = 0
+        self.last_attempts = 0
 
     def fill(self, template: MaskTemplate) -> FillResult:
         """Fill the template's slots. Raises FillError on failure."""
@@ -119,9 +131,7 @@ class CSPFiller:
         for slot in slots:
             words = [w for w in self._word_pool if len(w) == slot.length]
             if not words:
-                raise FillError(
-                    f"slot {slot.slot_id!r}: no length-{slot.length} words in pool"
-                )
+                raise FillError(f"slot {slot.slot_id!r}: no length-{slot.length} words in pool")
             base_domains[slot.slot_id] = words
         self.domains_before_ac3 = {s: len(d) for s, d in base_domains.items()}
 
@@ -129,18 +139,27 @@ class CSPFiller:
         self._ac3(base_domains, intersections, neighbors)
         self.domains_after_ac3 = {s: len(d) for s, d in base_domains.items()}
 
-        # 3. Backtracking search with random restarts.
-        for _ in range(self._max_attempts):
+        # 3. Backtracking search with random restarts. Every attempt gets its
+        # own node budget; an exhausted attempt is abandoned and retried with
+        # a different domain shuffle (the RNG keeps advancing across attempts).
+        self.last_budget_hits = 0
+        self.last_attempts = 0
+        for attempt in range(self._max_attempts):
             # Each restart starts from an empty grid — no residue from the
             # previous attempt may influence the profanity guard.
             self._grid = {}
+            self._nodes = 0
             domains = {s: list(d) for s, d in base_domains.items()}
             for d in domains.values():
                 self._rng.shuffle(d)
             self.last_assignment_order = []
             assignment: dict[str, str] = {}
-            if self._backtrack(assignment, domains, intersections, neighbors):
-                return FillResult(slot_assignments=assignment)
+            self.last_attempts = attempt + 1
+            try:
+                if self._backtrack(assignment, domains, intersections, neighbors):
+                    return FillResult(slot_assignments=assignment)
+            except _NodeBudgetExceeded:
+                self.last_budget_hits += 1
 
         raise FillError(f"no consistent fill after {self._max_attempts} attempts")
 
@@ -301,6 +320,9 @@ class CSPFiller:
         intersections: Intersections,
         neighbors: dict[str, list[str]],
     ) -> bool:
+        self._nodes += 1
+        if self._node_budget is not None and self._nodes > self._node_budget:
+            raise _NodeBudgetExceeded
         if len(assignment) == len(domains):
             return True
 
@@ -363,11 +385,7 @@ class CSPFiller:
             removed = 0
             for n_id in open_neighbors:
                 idx_s, idx_n = intersections[(slot_id, n_id)]
-                removed += sum(
-                    1
-                    for wn in domains[n_id]
-                    if word == wn or word[idx_s] != wn[idx_n]
-                )
+                removed += sum(1 for wn in domains[n_id] if word == wn or word[idx_s] != wn[idx_n])
             return removed
 
         return sorted(domains[slot_id], key=constraining)
@@ -387,11 +405,7 @@ class CSPFiller:
             key = (slot_id, n_id)
             if key in intersections:
                 idx_s, idx_n = intersections[key]
-                filtered = [
-                    wn
-                    for wn in domains[n_id]
-                    if word != wn and word[idx_s] == wn[idx_n]
-                ]
+                filtered = [wn for wn in domains[n_id] if word != wn and word[idx_s] == wn[idx_n]]
             else:
                 # No crossing: only enforce the global all-different constraint.
                 filtered = [wn for wn in domains[n_id] if wn != word]
