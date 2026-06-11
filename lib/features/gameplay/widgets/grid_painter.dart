@@ -200,9 +200,9 @@ class GridStaticPainter extends CustomPainter {
       }
       return;
     }
-    // Committed letters: bot grey, player black. Revealed cells are never
+    // Committed letters: bot blue, player black. Revealed cells are never
     // committed in the ghost model, so there is no locked colour here.
-    final color = botPlacedCells.contains(cell) ? Colors.grey.shade600 : Colors.black;
+    final color = botPlacedCells.contains(cell) ? AppColors.botLetter : Colors.black;
     _paintCenteredLetter(canvas, rect, letter, color);
   }
 

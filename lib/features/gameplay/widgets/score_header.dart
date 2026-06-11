@@ -23,28 +23,30 @@ class ScoreHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+      // Both sides get equal flex so the fixed middle child ("VS") sits at the
+      // true screen centre regardless of how wide either score block is.
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          _ScorePill(label: 'Sen $playerScore'),
-          const Text(
-            'VS',
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+          Expanded(
+            child: Align(
+              alignment: Alignment.centerLeft,
+              child: _ScorePill(label: 'Sen $playerScore'),
+            ),
           ),
-          Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Text(
-                '$botScore $botName',
-                style: const TextStyle(fontWeight: FontWeight.w600),
+          const Text('VS', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+          Expanded(
+            child: Align(
+              alignment: Alignment.centerRight,
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text('$botScore $botName', style: const TextStyle(fontWeight: FontWeight.w600)),
+                  const SizedBox(width: 8),
+                  const _BotAvatar(),
+                  if (botThinking) ...[const SizedBox(width: 4), const _AnimatedDots()],
+                ],
               ),
-              const SizedBox(width: 8),
-              const _BotAvatar(),
-              if (botThinking) ...[
-                const SizedBox(width: 4),
-                const _AnimatedDots(),
-              ],
-            ],
+            ),
           ),
         ],
       ),
@@ -61,17 +63,10 @@ class _ScorePill extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-      decoration: BoxDecoration(
-        color: AppColors.success,
-        borderRadius: BorderRadius.circular(20),
-      ),
+      decoration: BoxDecoration(color: AppColors.success, borderRadius: BorderRadius.circular(20)),
       child: Text(
         label,
-        style: const TextStyle(
-          color: Colors.white,
-          fontWeight: FontWeight.bold,
-          fontSize: 14,
-        ),
+        style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 14),
       ),
     );
   }
@@ -117,9 +112,6 @@ class _AnimatedDotsState extends State<_AnimatedDots> {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      '.' * _dotCount,
-      style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
-    );
+    return Text('.' * _dotCount, style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold));
   }
 }
