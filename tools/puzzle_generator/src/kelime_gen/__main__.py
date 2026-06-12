@@ -4,6 +4,8 @@
 import io
 import json
 import sys
+import time
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Annotated
 
@@ -11,6 +13,8 @@ import typer
 
 from kelime_gen.build_manifest import build_manifest
 from kelime_gen.generator import generate_pack
+from kelime_gen.mask_synth_frame import load_library
+from kelime_gen.pack_report import build_report, format_report, verify_pack, write_report
 from kelime_gen.pools import build_combined_pool_entries
 from kelime_gen.schema import PuzzleSize, tr_upper
 from kelime_gen.word_pool import PoolEntry, load_blacklist
@@ -28,12 +32,16 @@ _MASTER_CLUES_PATH = _ROOT / "data" / "processed" / "master_clues.json"
 _BLACKLIST_PATH = _ROOT / "data" / "raw" / "profanity_blacklist.txt"
 _SYMBOLS_PATH = _ROOT / "data" / "symbols.json"
 _TWO_LETTER_PATH = _ROOT / "data" / "two_letter.json"
+# Full-frame mask library cache (derived, reproducible -> not committed) and
+# the per-run generation reports.
+_FRAME_CACHE_PATH = _ROOT / "data" / "cache" / "frame_masks_9x7.json"
+_REPORTS_DIR = _ROOT / "reports"
 
 # Words absent from master_clues.json fall back to the bare placeholder
 # ("N harfli kelime"); curated len-1/2 clues always take priority (§7).
 _DEFAULT_CATEGORY: str | None = None
 
-# Only medium (8×6) is supported in this phase (architecture.md §5.3).
+# Only medium (9×7 full frame) is supported in this phase.
 _VALID_SIZES = ("medium",)
 
 
@@ -52,10 +60,7 @@ def _force_utf8_stdout() -> None:
 def _load_main_pool(path: Path) -> list[PoolEntry]:
     """Load the cleaned word pool JSON into PoolEntry items."""
     raw = json.loads(path.read_text(encoding="utf-8"))
-    return [
-        PoolEntry(word=item["word"], frequency_score=item["frequency_score"])
-        for item in raw
-    ]
+    return [PoolEntry(word=item["word"], frequency_score=item["frequency_score"]) for item in raw]
 
 
 def _load_master_clues(path: Path) -> dict[str, str]:
@@ -78,12 +83,8 @@ def _callback() -> None:
 @app.command()
 def generate(
     count: Annotated[int, typer.Option(help="Üretilecek bulmaca sayısı")] = 200,
-    output_dir: Annotated[Path, typer.Option(help="Çıktı klasörü")] = Path(
-        "assets/puzzles"
-    ),
-    size: Annotated[
-        str, typer.Option(help="medium  (small/large: Adım 5'e bırakıldı)")
-    ] = "medium",
+    output_dir: Annotated[Path, typer.Option(help="Çıktı klasörü")] = Path("assets/puzzles"),
+    size: Annotated[str, typer.Option(help="medium  (small/large: Adım 5'e bırakıldı)")] = "medium",
 ) -> None:
     """Bulmaca bölümlerini synth mask ile üretir ve JSON olarak yazar."""
     if size not in _VALID_SIZES:
@@ -113,25 +114,45 @@ def generate(
     blacklist = load_blacklist(_BLACKLIST_PATH) if _BLACKLIST_PATH.exists() else set()
     puzzle_size = PuzzleSize(size)
 
-    success, failed = generate_pack(
+    # Frame mask library: loaded from cache, or enumerated once (~30 s).
+    lib_started = time.perf_counter()
+    library = load_library(_FRAME_CACHE_PATH)
+    print(
+        f"Mask kütüphanesi: {len(library)} mask "
+        f"({time.perf_counter() - lib_started:.1f} sn, kaynak: {_FRAME_CACHE_PATH.name})"
+    )
+
+    pack_started = time.perf_counter()
+    result = generate_pack(
         word_pool=combined_pool,
         blacklist=blacklist,
         start_puzzle_id=1,
         count=count,
         category=_DEFAULT_CATEGORY,
         output_dir=output_dir,
+        library=library,
         size=puzzle_size,
         curated_clues=curated_clues,
         master_clues=master_clues,
     )
+    total_seconds = time.perf_counter() - pack_started
 
     # Rebuild the manifest so it always reflects the puzzle files on disk; this
     # runs even on partial packs so Flutter never reads a stale manifest (§8).
     manifest = build_manifest(output_dir)
 
-    print(f"\nToplam: {success} üretildi, {failed} başarısız")
+    # Independent post-generation verification + persisted report.
+    verification = verify_pack(output_dir, expected_count=count)
+    report = build_report(verification, list(result.stats), total_seconds)
+    stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+    report_path = _REPORTS_DIR / f"generation_report_{stamp}.json"
+    write_report(report, report_path)
+
+    print(f"\nToplam: {result.success} üretildi, {result.failed} başarısız")
     print(f"Manifest güncellendi: {manifest['total_puzzles']} bölüm.")
-    if failed > 0:
+    print(f"Rapor: {report_path}\n")
+    print(format_report(report))
+    if result.failed > 0 or not verification["ok"]:
         raise typer.Exit(code=1)
 
 

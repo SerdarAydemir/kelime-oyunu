@@ -1,6 +1,10 @@
 # Puzzle backup (large generated files, not for commit)
 assets/puzzles_backup/
 
+# Old-geometry (8x6 loose model) puzzle archive — superseded by the 9x7
+# full-frame production in assets/puzzles/ (reproducible: mask_synth.py kept)
+assets/puzzles_v1/
+
 # Miscellaneous
 *.class
 *.lock
@@ -135,6 +139,8 @@ ios/Runner/Configs/Secrets.xcconfig[cite: 10]
 # --- Python İçerik Motoru (Puzzle Generator) ---
 tools/puzzle_generator/data/raw/
 tools/puzzle_generator/data/processed/
+tools/puzzle_generator/data/cache/
+tools/puzzle_generator/reports/
 tools/puzzle_generator/.venv/
 tools/puzzle_generator/__pycache__/
 tools/puzzle_generator/.pytest_cache/

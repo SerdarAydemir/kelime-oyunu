@@ -2,31 +2,38 @@
 """Orchestrates the v2 puzzle generation pipeline (architecture.md §6.6, §15).
 
 Pipeline per puzzle:
-  synthesize mask (seed=puzzle_id) -> CSP fill -> post-fill profanity scan
-  -> clue writing -> CellSpec/WordSpec assembly -> difficulty score
+  pick a full-frame mask from the enumerated library (seed=puzzle_id)
+  -> CSP fill -> post-fill profanity scan -> clue writing
+  -> CellSpec/WordSpec assembly -> difficulty score
   -> validated PuzzleData -> JSON on disk.
 
+If the fill fails on the picked mask, the pack loop falls back to the *next*
+mask in library order (never a seed restart) until the puzzle fills, so a
+full pack is effectively guaranteed. Masks that produced a written puzzle are
+never reused within one pack (mask uniqueness).
+
 csp_filler owns the fill, post_fill_safety owns the profanity scan,
-clue_writer owns the clue text, and mask_synth owns the mask; this module
-wires them together.
+clue_writer owns the clue text, and mask_synth_frame owns the mask library;
+this module wires them together.
 """
 
-import random
 import sys
+import time
+from dataclasses import dataclass, field
 from pathlib import Path
+from typing import TypedDict
 
 from pydantic import ValidationError
 
 from kelime_gen.clue_writer import write_clues
 from kelime_gen.csp_filler import CSPFiller, FillError
 from kelime_gen.difficulty import difficulty_score
-from kelime_gen.mask_synth import MaskSynthError, SynthParams, synthesize
+from kelime_gen.mask_synth_frame import FrameLibrary
 from kelime_gen.mask_template import MaskTemplate
 from kelime_gen.schema import (
     CellSpec,
     CellType,
     ClueSpec,
-    GridSize,
     PuzzleData,
     PuzzleSize,
     SafetyInfo,
@@ -120,6 +127,13 @@ def _build_words(
     return words
 
 
+class FillStats(TypedDict):
+    """Per-fill diagnostics surfaced to the pack loop for reporting."""
+
+    attempts: int
+    budget_hits: int
+
+
 def generate_puzzle(
     template: MaskTemplate,
     word_pool: list[PoolEntry],
@@ -131,11 +145,14 @@ def generate_puzzle(
     generator_version: str = "2.0.0",
     max_fill_attempts: int = 200,
     seed: int | None = None,
+    fill_stats: FillStats | None = None,
 ) -> PuzzleData | None:
     """Generate one validated PuzzleData, or None on any recoverable failure.
 
     Failures (fill, profanity, schema) are logged to stderr and surface as None
-    so the pack loop can skip and retry with another template/seed.
+    so the pack loop can skip and retry with another template/seed. When a
+    fill_stats dict is passed, the filler's attempt/budget diagnostics are
+    accumulated into it (also on failure).
     """
     word_strings = [p["word"] for p in word_pool]
     freq_map = {p["word"]: p["frequency_score"] for p in word_pool}
@@ -143,18 +160,23 @@ def generate_puzzle(
     # 1-2. CSP fill. The blacklist is passed so the filler avoids cross-slot
     # profanity at the word level; scan_grid below stays the authoritative net.
     # min_n=3 / max_n=8 match the profanity scanner window (architecture.md §6.4).
+    filler = CSPFiller(
+        word_strings,
+        blacklist=blacklist,
+        max_attempts=max_fill_attempts,
+        seed=seed,
+        min_n=3,
+        max_n=8,
+    )
     try:
-        fill = CSPFiller(
-            word_strings,
-            blacklist=blacklist,
-            max_attempts=max_fill_attempts,
-            seed=seed,
-            min_n=3,
-            max_n=8,
-        ).fill(template)
+        fill = filler.fill(template)
     except FillError as exc:
         print(f"[SKIP] puzzle {puzzle_id}: fill failed — {exc}", file=sys.stderr)
         return None
+    finally:
+        if fill_stats is not None:
+            fill_stats["attempts"] += filler.last_attempts
+            fill_stats["budget_hits"] += filler.last_budget_hits
     slot_assignments = fill.slot_assignments
 
     # 3. Render the grid and scan it for profanity (architecture.md §6.4).
@@ -181,9 +203,7 @@ def generate_puzzle(
     )
     slot_by_id = {s.slot_id: s for s in template.slots}
     clue_by_slot: dict[str, ClueSpec] = {
-        sid: clue.model_copy(
-            update={"word_id": sid, "arrow": slot_by_id[sid].direction}
-        )
+        sid: clue.model_copy(update={"word_id": sid, "arrow": slot_by_id[sid].direction})
         for (sid, _answer), clue in zip(items, raw_clues)
     }
 
@@ -209,10 +229,33 @@ def generate_puzzle(
     )
 
 
-# Grid dimensions per named size (architecture.md §5.3).
-_SIZE_DIMS: dict[PuzzleSize, tuple[int, int]] = {
-    PuzzleSize.MEDIUM: (8, 6),
-}
+class PuzzleStat(TypedDict):
+    """Per-puzzle runtime stats collected by generate_pack for the report."""
+
+    puzzle_id: int
+    template_id: str
+    k: int
+    library_index: int
+    fallbacks: int
+    fill_attempts: int
+    budget_hits: int
+    duration_s: float
+
+
+@dataclass
+class PackResult:
+    """Outcome of one generate_pack run."""
+
+    success: int = 0
+    failed: int = 0
+    stats: list[PuzzleStat] = field(default_factory=list)
+
+
+def _next_free(index: int, used: set[int], size: int) -> int:
+    """First library index >= index (cyclic) not yet used in this pack."""
+    while index in used:
+        index = (index + 1) % size
+    return index
 
 
 def generate_pack(
@@ -222,59 +265,76 @@ def generate_pack(
     count: int,
     category: str | None,
     output_dir: Path,
+    *,
+    library: FrameLibrary,
     size: PuzzleSize = PuzzleSize.MEDIUM,
     curated_clues: dict[str, str] | None = None,
     master_clues: dict[str, str] | None = None,
     generator_version: str = "2.0.0",
-    synth_params: SynthParams | None = None,
-) -> tuple[int, int]:
-    """Generate *count* puzzles into *output_dir*; return (success, failure).
+    fill_attempts_per_mask: int = 3,
+    max_mask_fallbacks: int = 200,
+) -> PackResult:
+    """Generate *count* puzzles into *output_dir* from the frame mask library.
 
-    Each puzzle synthesizes a fresh MaskTemplate deterministically from its
-    puzzle_id (seed=puzzle_id), then fills it from *word_pool*.  No pre-built
-    template files are required.
+    Mask choice is deterministic: library.pick_index(seed=puzzle_id). When the
+    CSP fill fails on a mask, the loop falls back to the *next* mask in library
+    order (mask-ordered fallback — never a seed restart), up to
+    max_mask_fallbacks masks per puzzle. A mask that produced a written puzzle
+    is never reused within the pack, so every puzzle gets a unique mask.
 
-    Only PuzzleSize.MEDIUM (8×6) is supported in this phase; other sizes raise
-    ValueError (architecture.md §5.3 — small/large deferred to Step 5).
+    fill_attempts_per_mask is deliberately small: measured on the 9x7 frame,
+    a mask that survives its first few budget-capped attempts almost never
+    fills on later shuffles, while the library holds tens of thousands of
+    fresh masks — cutting losses early and falling back is far cheaper.
     """
-    if size not in _SIZE_DIMS:
+    if count > len(library):
         raise ValueError(
-            f"generate_pack: size {size.value!r} not yet supported "
-            f"(supported: {[s.value for s in _SIZE_DIMS]})"
+            f"generate_pack: count {count} exceeds library size {len(library)} "
+            "(mask uniqueness cannot hold)"
         )
-    rows, cols = _SIZE_DIMS[size]
     output_dir.mkdir(parents=True, exist_ok=True)
-    success = 0
-    failed = 0
+    result = PackResult()
+    used: set[int] = set()
 
     for offset in range(count):
         puzzle_id = start_puzzle_id + offset
+        started = time.perf_counter()
+        index = _next_free(library.pick_index(seed=puzzle_id), used, len(library))
+        fill_stats: FillStats = {"attempts": 0, "budget_hits": 0}
+        puzzle: PuzzleData | None = None
+        fallbacks = 0
 
-        # Synthesize a fresh mask deterministically from puzzle_id.
-        try:
-            template = synthesize(rows, cols, size, seed=puzzle_id, params=synth_params)
-        except MaskSynthError as exc:
-            print(f"[SKIP] puzzle {puzzle_id}: mask synth failed — {exc}", file=sys.stderr)
-            failed += 1
-            continue
+        while fallbacks < max_mask_fallbacks:
+            template = library.template(index, size)
+            puzzle = generate_puzzle(
+                template=template,
+                word_pool=word_pool,
+                blacklist=blacklist,
+                puzzle_id=puzzle_id,
+                category=category,
+                curated_clues=curated_clues,
+                master_clues=master_clues,
+                generator_version=generator_version,
+                max_fill_attempts=fill_attempts_per_mask,
+                seed=puzzle_id,
+                fill_stats=fill_stats,
+            )
+            if puzzle is not None:
+                break
+            fallbacks += 1
+            index = _next_free((index + 1) % len(library), used, len(library))
 
-        puzzle = generate_puzzle(
-            template=template,
-            word_pool=word_pool,
-            blacklist=blacklist,
-            puzzle_id=puzzle_id,
-            category=category,
-            curated_clues=curated_clues,
-            master_clues=master_clues,
-            generator_version=generator_version,
-            seed=puzzle_id,
-        )
         if puzzle is None:
-            failed += 1
+            result.failed += 1
+            print(
+                f"[ERROR] puzzle {puzzle_id}: {max_mask_fallbacks} mask denendi, "
+                "hiçbiri dolmadı — atlanıyor.",
+                file=sys.stderr,
+            )
             continue
         # Defence in depth: never write an unscanned puzzle (coding-standards §8.7).
         if not puzzle.safety.post_fill_scanned:
-            failed += 1
+            result.failed += 1
             print(
                 f"[ERROR] puzzle {puzzle_id}: not scanned — refusing to write.",
                 file=sys.stderr,
@@ -282,6 +342,19 @@ def generate_pack(
             continue
         path = output_dir / f"puzzle_{puzzle_id:04d}.json"
         path.write_text(puzzle.model_dump_json(indent=2), encoding="utf-8")
-        success += 1
+        used.add(index)
+        result.success += 1
+        result.stats.append(
+            PuzzleStat(
+                puzzle_id=puzzle_id,
+                template_id=puzzle.template_id,
+                k=library.entries[index][0],
+                library_index=index,
+                fallbacks=fallbacks,
+                fill_attempts=fill_stats["attempts"],
+                budget_hits=fill_stats["budget_hits"],
+                duration_s=round(time.perf_counter() - started, 3),
+            )
+        )
 
-    return success, failed
+    return result

@@ -4,8 +4,10 @@
 import json
 from pathlib import Path
 
+import pytest
+
 from kelime_gen.generator import generate_pack, generate_puzzle
-from kelime_gen.mask_synth import SynthParams
+from kelime_gen.mask_synth_frame import FrameLibrary, FrameParams, build_library
 from kelime_gen.mask_template import MaskTemplate, SlotSpec, TemplateCellSpec
 from kelime_gen.pools import build_combined_pool_entries
 from kelime_gen.schema import (
@@ -81,31 +83,149 @@ def _pool() -> list[PoolEntry]:
 # file, which is generated and not committed to the repository.
 _FIXTURE_MAIN_WORDS: list[str] = [
     # len 3
-    "KAR", "ARI", "TOP", "SAP", "GÖL", "DAL", "TAŞ", "GÜN", "BAL", "YAZ",
-    "GEL", "ATA", "KOL", "TUZ", "VAR", "YOK", "TAN", "HAK", "DEV", "SOR",
-    "BAŞ", "YAY", "GEM", "BUZ", "NAR", "BAR", "KUŞ", "PUL", "SOL", "BOL",
-    "NEY", "KOR", "SEV", "GİT", "ZAN", "KUM", "GAZ", "GÖZ", "KAN", "YAŞ",
-    "ERK", "TOK", "KUL", "GER", "TAR", "SAN", "YAR", "DEL", "OKU", "MEY",
+    "KAR",
+    "ARI",
+    "TOP",
+    "SAP",
+    "GÖL",
+    "DAL",
+    "TAŞ",
+    "GÜN",
+    "BAL",
+    "YAZ",
+    "GEL",
+    "ATA",
+    "KOL",
+    "TUZ",
+    "VAR",
+    "YOK",
+    "TAN",
+    "HAK",
+    "DEV",
+    "SOR",
+    "BAŞ",
+    "YAY",
+    "GEM",
+    "BUZ",
+    "NAR",
+    "BAR",
+    "KUŞ",
+    "PUL",
+    "SOL",
+    "BOL",
+    "NEY",
+    "KOR",
+    "SEV",
+    "GİT",
+    "ZAN",
+    "KUM",
+    "GAZ",
+    "GÖZ",
+    "KAN",
+    "YAŞ",
+    "ERK",
+    "TOK",
+    "KUL",
+    "GER",
+    "TAR",
+    "SAN",
+    "YAR",
+    "DEL",
+    "OKU",
+    "MEY",
     # len 4
-    "KEDİ", "KALE", "KAMP", "DERE", "FARE", "GECE", "HAVA", "KAYA", "MASA",
-    "OKUL", "YAPI", "PARA", "SAAT", "ARKA", "YURT", "BABA", "DOST", "FARK",
-    "HALK", "KARA", "LALE", "NANE", "RÜYA", "TANE", "ÜLKE", "VADİ", "ŞIŞE",
-    "YÜZÜ", "ÖFKE", "SORU", "GÖRE", "YELE", "ÇÖRE", "GÜZE", "KIRI", "ELDE",
+    "KEDİ",
+    "KALE",
+    "KAMP",
+    "DERE",
+    "FARE",
+    "GECE",
+    "HAVA",
+    "KAYA",
+    "MASA",
+    "OKUL",
+    "YAPI",
+    "PARA",
+    "SAAT",
+    "ARKA",
+    "YURT",
+    "BABA",
+    "DOST",
+    "FARK",
+    "HALK",
+    "KARA",
+    "LALE",
+    "NANE",
+    "RÜYA",
+    "TANE",
+    "ÜLKE",
+    "VADİ",
+    "ŞIŞE",
+    "YÜZÜ",
+    "ÖFKE",
+    "SORU",
+    "GÖRE",
+    "YELE",
+    "ÇÖRE",
+    "GÜZE",
+    "KIRI",
+    "ELDE",
     # len 5
-    "KALEM", "OKUMA", "BAHÇE", "KADEH", "KÖPRÜ", "YAZAR", "ŞEKER", "ÇOCUK",
-    "DÜNYA", "İŞLEM", "KALIP", "MEYVE", "PASTA", "RESİM", "SALON", "TAHTA",
-    "YAŞAM", "ZEMİN", "NEHİR", "GÜZEL", "SEFER", "BEYAZ", "TAVAN", "ÖĞREN",
+    "KALEM",
+    "OKUMA",
+    "BAHÇE",
+    "KADEH",
+    "KÖPRÜ",
+    "YAZAR",
+    "ŞEKER",
+    "ÇOCUK",
+    "DÜNYA",
+    "İŞLEM",
+    "KALIP",
+    "MEYVE",
+    "PASTA",
+    "RESİM",
+    "SALON",
+    "TAHTA",
+    "YAŞAM",
+    "ZEMİN",
+    "NEHİR",
+    "GÜZEL",
+    "SEFER",
+    "BEYAZ",
+    "TAVAN",
+    "ÖĞREN",
     # len 6
-    "ÇEKMEK", "DENEME", "GÖZLEM", "SÖZLER", "KELİME", "GELMEK", "ÇIKMAK",
-    "YAZMAK", "BULMAK", "SEVMEK", "VERMEK", "BİLMEK",
+    "ÇEKMEK",
+    "DENEME",
+    "GÖZLEM",
+    "SÖZLER",
+    "KELİME",
+    "GELMEK",
+    "ÇIKMAK",
+    "YAZMAK",
+    "BULMAK",
+    "SEVMEK",
+    "VERMEK",
+    "BİLMEK",
     # len 7
-    "ÇALIŞMA", "OKUYUCU", "GÖRÜNCE", "YAŞAYAN", "ORMANDA", "SEVGİLİ",
+    "ÇALIŞMA",
+    "OKUYUCU",
+    "GÖRÜNCE",
+    "YAŞAYAN",
+    "ORMANDA",
+    "SEVGİLİ",
     # len 8
-    "DONDURMA", "ÇALIŞMAK", "BEKLEMEK", "DÜŞÜNMEK",
+    "DONDURMA",
+    "ÇALIŞMAK",
+    "BEKLEMEK",
+    "DÜŞÜNMEK",
 ]
 
-# Fast SynthParams: reduced restart/budget so pack tests stay under CI time budget.
-_FAST_SYNTH = SynthParams(max_restarts=300, fill_budget=80_000)
+# Small 5×5 full frame (interior 4×4, k∈[1,2]): exhaustively enumerable in
+# milliseconds, so pack tests stay far under the CI time budget.
+_FRAME_SMALL = FrameParams(rows=5, cols=5, k_min=1, k_max=2, per_k_cap=1000)
+_SMALL_LIBRARY = build_library(_FRAME_SMALL)
 
 
 _MAIN_POOL_PATH = _DATA_DIR / "processed" / "word_pool_cleaned.json"
@@ -119,6 +239,7 @@ def _combined_pool() -> tuple[list[PoolEntry], dict[str, str]]:
     """
     if _MAIN_POOL_PATH.exists():
         import json as _json
+
         raw = _json.loads(_MAIN_POOL_PATH.read_text(encoding="utf-8"))
         main_pool = [PoolEntry(word=e["word"], frequency_score=e["frequency_score"]) for e in raw]
     else:
@@ -164,33 +285,82 @@ def test_generate_puzzle_fill_error_returns_none() -> None:
     assert puzzle is None
 
 
-# ── 3: generate_pack uses synth mask and writes re-parseable JSON files ────────
+# ── 3: generate_pack uses the frame library and writes re-parseable JSON ──────
 
 
 def test_generate_pack_writes_json(tmp_path: Path) -> None:
     combined_pool, curated_clues = _combined_pool()
-    ok, fail = generate_pack(
+    result = generate_pack(
         word_pool=combined_pool,
         blacklist=set(),
         start_puzzle_id=1,
         count=2,
         category=None,
         output_dir=tmp_path,
-        size=PuzzleSize.MEDIUM,
+        library=_SMALL_LIBRARY,
+        size=PuzzleSize.SMALL,
         curated_clues=curated_clues,
-        synth_params=_FAST_SYNTH,
     )
-    assert ok == 2, f"Expected 2 successes, got ok={ok} fail={fail}"
-    assert fail == 0
+    assert result.success == 2, f"Expected 2 successes, got {result}"
+    assert result.failed == 0
+    assert len(result.stats) == 2
 
     files = sorted(tmp_path.glob("puzzle_*.json"))
     assert [f.name for f in files] == ["puzzle_0001.json", "puzzle_0002.json"]
     for f in files:
         parsed = PuzzleData.model_validate_json(f.read_text(encoding="utf-8"))
         assert parsed.safety.post_fill_scanned is True
-        assert parsed.size == PuzzleSize.MEDIUM
-        assert parsed.grid == GridSize(rows=8, cols=6)
+        assert parsed.size == PuzzleSize.SMALL
+        assert parsed.grid == GridSize(rows=5, cols=5)
         assert len(parsed.words) >= 1
+        # Full-frame invariant: a single BLANK cell, at the (0,0) corner.
+        blanks = [(c.row, c.col) for c in parsed.cells if c.type == CellType.BLANK]
+        assert blanks == [(0, 0)]
+
+
+# ── 3b: pack-level mask uniqueness + per-puzzle stats ─────────────────────────
+
+
+def test_generate_pack_unique_masks_and_stats(tmp_path: Path) -> None:
+    combined_pool, curated_clues = _combined_pool()
+    result = generate_pack(
+        word_pool=combined_pool,
+        blacklist=set(),
+        start_puzzle_id=1,
+        count=6,
+        category=None,
+        output_dir=tmp_path,
+        library=_SMALL_LIBRARY,
+        size=PuzzleSize.SMALL,
+        curated_clues=curated_clues,
+    )
+    assert result.success == 6
+    template_ids = [s["template_id"] for s in result.stats]
+    assert len(set(template_ids)) == 6  # no mask reused within the pack
+    assert len({s["library_index"] for s in result.stats}) == 6
+    for stat in result.stats:
+        assert stat["fill_attempts"] >= 1
+        assert stat["duration_s"] >= 0
+        assert stat["k"] in (1, 2)
+
+
+# ── 3c: count larger than the library is rejected up front ────────────────────
+
+
+def test_generate_pack_count_exceeding_library_raises(tmp_path: Path) -> None:
+    combined_pool, _ = _combined_pool()
+    tiny = FrameLibrary(params=_FRAME_SMALL, entries=_SMALL_LIBRARY.entries[:2])
+    with pytest.raises(ValueError, match="library size"):
+        generate_pack(
+            word_pool=combined_pool,
+            blacklist=set(),
+            start_puzzle_id=1,
+            count=3,
+            category=None,
+            output_dir=tmp_path,
+            library=tiny,
+            size=PuzzleSize.SMALL,
+        )
 
 
 # ── 4: a blacklisted crossing word is steered around by the CSP guard ─────────
@@ -228,27 +398,27 @@ def test_generate_puzzle_curated_clue_priority() -> None:
         assert word.clue.text == f"İpucu: {word.answer}"
 
 
-# ── 6: generate_pack + synth determinism (seeds 1–5 run twice, same output) ───
+# ── 6: generate_pack determinism (seeds 1–5 run twice, same output) ───────────
 
 
-def test_generate_pack_synth_determinism(tmp_path: Path) -> None:
-    """Same puzzle_id always produces the same output (synth + fill both seeded)."""
+def test_generate_pack_determinism(tmp_path: Path) -> None:
+    """Same puzzle_id always produces the same output (pick + fill both seeded)."""
     combined_pool, curated_clues = _combined_pool()
 
     def _run(outdir: Path) -> list[object]:
-        ok, fail = generate_pack(
+        result = generate_pack(
             word_pool=combined_pool,
             blacklist=set(),
             start_puzzle_id=1,
             count=5,
             category=None,
             output_dir=outdir,
-            size=PuzzleSize.MEDIUM,
+            library=_SMALL_LIBRARY,
+            size=PuzzleSize.SMALL,
             curated_clues=curated_clues,
-            synth_params=_FAST_SYNTH,
         )
-        assert fail == 0, f"Expected 0 failures, got {fail}"
-        assert ok == 5, f"Expected 5 successes, got {ok}"
+        assert result.failed == 0, f"Expected 0 failures, got {result.failed}"
+        assert result.success == 5, f"Expected 5 successes, got {result.success}"
         return [
             _strip_timestamp((outdir / f"puzzle_{i:04d}.json").read_text(encoding="utf-8"))
             for i in range(1, 6)
@@ -264,8 +434,8 @@ def test_generate_pack_synth_determinism(tmp_path: Path) -> None:
         raw = (raw_dir / f"puzzle_{i:04d}.json").read_text(encoding="utf-8")
         puzzle = PuzzleData.model_validate_json(raw)
         assert puzzle.safety.post_fill_scanned is True
-        assert puzzle.size == PuzzleSize.MEDIUM
-        assert puzzle.grid == GridSize(rows=8, cols=6)
+        assert puzzle.size == PuzzleSize.SMALL
+        assert puzzle.grid == GridSize(rows=5, cols=5)
         # Any len-1 or len-2 answer that appears in the curated map must use it.
         for word in puzzle.words:
             if len(word.answer) <= 2 and word.answer in curated_clues:
