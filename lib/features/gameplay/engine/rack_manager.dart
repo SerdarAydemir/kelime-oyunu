@@ -26,6 +26,11 @@ class RackTile extends Equatable {
 }
 
 /// Builds and refills the player's rack from the puzzle's unsolved cells.
+///
+/// Multiset invariant: after every rebuild (refill / ensurePlayable / swap)
+/// the rack never carries more copies of a letter than there are unsolved
+/// cells needing it. Every tile in hand therefore has its own target cell —
+/// the player can never be stuck holding an unplaceable letter.
 class RackManager {
   const RackManager();
 
@@ -48,7 +53,12 @@ class RackManager {
     required int seed,
   }) {
     final rng = Random(seed);
-    final letters = _drawFillLetters(count: rackSize, puzzle: puzzle, board: board, rng: rng);
+    final letters = _drawFromDemand(
+      demand: _letterDemand(puzzle, board),
+      count: rackSize,
+      rng: rng,
+      alphabetFallback: true,
+    );
     return [for (final letter in letters) RackTile(letter: letter)];
   }
 
@@ -59,9 +69,13 @@ class RackManager {
   /// (flagged [RackTile.isReturned]), and freshly drawn tiles topping the rack
   /// up to [targetSize] — 5, or 6 once the +1 letter joker is unlocked.
   ///
-  /// The top-up draws only from the unsolved-cell pool (no alphabet padding),
-  /// so near the end of the puzzle the rack naturally shrinks toward the
-  /// number of remaining cells instead of filling up with dead letters.
+  /// The whole rebuild is demand-checked (multiset invariant): carry-over and
+  /// returned tiles each consume one unit of their letter's demand, surplus
+  /// copies and dead tiles are dropped, and the top-up draws only from the
+  /// remaining demand (no alphabet padding). Near the end of the puzzle the
+  /// rack therefore shrinks toward the number of remaining cells, and a wrong
+  /// letter that no longer fits anywhere is replaced instead of returning as
+  /// guaranteed dead weight.
   List<RackTile> refill({
     required List<RackTile> currentRack,
     required PuzzleData puzzle,
@@ -71,23 +85,16 @@ class RackManager {
     int targetSize = baseRackSize,
   }) {
     final rng = Random(seed);
-    final kept = <RackTile>[
+    final demand = _letterDemand(puzzle, board);
+    final carryOver = <RackTile>[
       for (final tile in currentRack)
-        if (!tile.isPlaced) RackTile(letter: tile.letter),
+        if (!tile.isPlaced && _takeDemand(demand, tile.letter)) RackTile(letter: tile.letter),
+      for (final letter in returnedLetters)
+        if (_takeDemand(demand, letter)) RackTile(letter: letter, isReturned: true),
     ];
-    final returned = <RackTile>[
-      for (final letter in returnedLetters) RackTile(letter: letter, isReturned: true),
-    ];
-    final carryOver = [...kept, ...returned];
     final need = targetSize - carryOver.length;
     final fresh = need > 0
-        ? _drawFillLetters(
-            count: need,
-            puzzle: puzzle,
-            board: board,
-            rng: rng,
-            alphabetFallback: false,
-          )
+        ? _drawFromDemand(demand: demand, count: need, rng: rng)
         : const <String>[];
     return [...carryOver, for (final letter in fresh) RackTile(letter: letter)];
   }
@@ -111,12 +118,18 @@ class RackManager {
     final rng = Random(seed);
     final swapSet = swapIndices.toSet();
     final discarded = {for (final i in swapSet) currentRack[i].letter};
-    final fresh = _drawFillLetters(
+    final demand = _letterDemand(puzzle, board);
+    // Tiles the player keeps consume their letters' demand first, so the
+    // fresh draw cannot push any letter beyond the number of cells needing it.
+    for (var i = 0; i < currentRack.length; i++) {
+      if (!swapSet.contains(i)) _takeDemand(demand, currentRack[i].letter);
+    }
+    final fresh = _drawFromDemand(
+      demand: demand,
       count: swapSet.length,
-      puzzle: puzzle,
-      board: board,
       rng: rng,
       exclude: discarded,
+      alphabetFallback: true,
     );
     var freshIndex = 0;
     return [
@@ -138,19 +151,21 @@ class RackManager {
     return rack.any((tile) => needed.contains(tile.letter));
   }
 
-  /// Replaces every "dead" tile (letter not matching any unsolved cell) with a
-  /// board-aware draw; live tiles are kept untouched, in place.
+  /// Replaces every "dead" tile with a board-aware draw; live tiles are kept
+  /// untouched, in place.
   ///
-  /// Deadness is monotone: the board only ever fills up, so a dead letter can
-  /// never become useful again. Refreshing dead tiles on every call therefore
-  /// costs the player nothing strategically — only live letters are worth
-  /// holding. Design note (accepted trade-off): dead letters now refresh for
-  /// free, which repositions the ad-paid swap joker as a "live but unwanted
-  /// letter" tool. A refresh-highlight animation is deferred to F6.
+  /// A tile is live only while its letter still has unconsumed demand — so
+  /// surplus copies (a third 'A' against two unsolved A-cells) count as dead,
+  /// not just letters absent from the board (multiset invariant). Deadness is
+  /// monotone: the board only ever fills up, so a dead letter can never
+  /// become useful again, and refreshing it costs the player nothing
+  /// strategically. Design note (accepted trade-off): dead letters refresh
+  /// for free, which repositions the ad-paid swap joker as a "live but
+  /// unwanted letter" tool. A refresh-highlight animation is deferred to F6.
   ///
-  /// The draw skips the alphabet fallback; when fewer unsolved letters remain
-  /// than there are dead tiles, the surplus dead tiles are dropped and the
-  /// rack shrinks toward the remaining cell count (endgame behaviour, mirrors
+  /// The draw skips the alphabet fallback; when less demand remains than
+  /// there are dead tiles, the surplus dead tiles are dropped and the rack
+  /// shrinks toward the remaining cell count (endgame behaviour, mirrors
   /// [refill]).
   List<RackTile> ensurePlayable({
     required List<RackTile> currentRack,
@@ -158,24 +173,21 @@ class RackManager {
     required Map<WordCell, String> board,
     required int seed,
   }) {
-    final needed = _unsolvedLetters(puzzle, board).toSet();
-    final deadCount = currentRack.where((t) => !needed.contains(t.letter)).length;
-    if (deadCount == 0) return currentRack;
+    final demand = _letterDemand(puzzle, board);
+    final isLive = [
+      for (final tile in currentRack) _takeDemand(demand, tile.letter),
+    ];
+    if (!isLive.contains(false)) return currentRack;
     final rng = Random(seed);
-    final fresh = _drawFillLetters(
-      count: deadCount,
-      puzzle: puzzle,
-      board: board,
-      rng: rng,
-      alphabetFallback: false,
-    );
-    var i = 0;
+    final deadCount = isLive.where((live) => !live).length;
+    final fresh = _drawFromDemand(demand: demand, count: deadCount, rng: rng);
+    var fi = 0;
     return [
-      for (final tile in currentRack)
-        if (needed.contains(tile.letter))
-          tile
-        else if (i < fresh.length)
-          RackTile(letter: fresh[i++]),
+      for (var i = 0; i < currentRack.length; i++)
+        if (isLive[i])
+          currentRack[i]
+        else if (fi < fresh.length)
+          RackTile(letter: fresh[fi++]),
     ];
   }
 
@@ -192,32 +204,56 @@ class RackManager {
     return letters;
   }
 
-  // Draws [count] letters from the shuffled unsolved-cell pool (so the player
-  // can always make progress). When the pool runs short, [alphabetFallback]
-  // decides the behaviour: true pads with random alphabet letters (callers
-  // that must preserve the rack size, e.g. swap); false returns fewer letters
+  // Per-letter demand: how many unsolved cells still need each letter.
+  Map<String, int> _letterDemand(PuzzleData puzzle, Map<WordCell, String> board) {
+    final demand = <String, int>{};
+    for (final letter in _unsolvedLetters(puzzle, board)) {
+      demand.update(letter, (v) => v + 1, ifAbsent: () => 1);
+    }
+    return demand;
+  }
+
+  // Consumes one unit of [letter]'s demand; false when none remains.
+  static bool _takeDemand(Map<String, int> demand, String letter) {
+    final remaining = demand[letter] ?? 0;
+    if (remaining <= 0) return false;
+    demand[letter] = remaining - 1;
+    return true;
+  }
+
+  // Draws up to [count] letters from the remaining per-letter [demand]
+  // (mutated: every drawn letter consumes one unit, keeping the multiset
+  // invariant). When demand runs short, [alphabetFallback] decides the
+  // behaviour: true pads with random alphabet letters (callers that must
+  // preserve the rack size: initial draw, swap); false returns fewer letters
   // (refill/ensurePlayable — alphabet padding would mint dead-on-arrival
   // tiles, so those racks shrink instead). Letters in [exclude] are pushed to
   // the back of the queue so they are only drawn when no alternative remains
   // (used by swapLetters for discards).
-  List<String> _drawFillLetters({
+  List<String> _drawFromDemand({
+    required Map<String, int> demand,
     required int count,
-    required PuzzleData puzzle,
-    required Map<WordCell, String> board,
     required Random rng,
     Set<String> exclude = const {},
-    bool alphabetFallback = true,
+    bool alphabetFallback = false,
   }) {
-    final pool = _unsolvedLetters(puzzle, board)..shuffle(rng);
+    final pool = <String>[
+      for (final entry in demand.entries)
+        for (var i = 0; i < entry.value; i++) entry.key,
+    ]..shuffle(rng);
     final ordered = [...pool.where((l) => !exclude.contains(l)), ...pool.where(exclude.contains)];
     final alphabet = [
       for (final l in _turkishAlphabet)
         if (!exclude.contains(l)) l,
     ];
     final target = alphabetFallback ? count : min(count, ordered.length);
-    return [
+    final drawn = [
       for (var i = 0; i < target; i++)
         if (i < ordered.length) ordered[i] else alphabet[rng.nextInt(alphabet.length)],
     ];
+    for (final letter in drawn) {
+      _takeDemand(demand, letter);
+    }
+    return drawn;
   }
 }

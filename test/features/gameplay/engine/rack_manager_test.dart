@@ -97,6 +97,29 @@ void main() {
         RackTile(letter: 'E', isPlaced: true),
         RackTile(letter: 'M', isPlaced: true),
       ];
+      // 'A' is still demanded by an unsolved cell, so it returns flagged.
+      final rack = manager.refill(
+        currentRack: playedRack,
+        puzzle: wordPuzzle(),
+        board: const {},
+        returnedLetters: const ['A'],
+        seed: 5,
+      );
+      expect(rack.length, RackManager.baseRackSize);
+      expect(rack.any((t) => t.letter == 'A' && t.isReturned), isTrue);
+    });
+
+    // ── 4a (multiset): a dead returned letter is replaced, not handed back ───
+    test('drops a returned letter that no unsolved cell needs', () {
+      const playedRack = [
+        RackTile(letter: 'K', isPlaced: true),
+        RackTile(letter: 'A', isPlaced: true),
+        RackTile(letter: 'L', isPlaced: true),
+        RackTile(letter: 'E', isPlaced: true),
+        RackTile(letter: 'M', isPlaced: true),
+      ];
+      // 'Z' appears nowhere in KALEMOK: returning it would hand the player a
+      // guaranteed-dead tile, so the refill replaces it with a live draw.
       final rack = manager.refill(
         currentRack: playedRack,
         puzzle: wordPuzzle(),
@@ -105,7 +128,7 @@ void main() {
         seed: 5,
       );
       expect(rack.length, RackManager.baseRackSize);
-      expect(rack.any((t) => t.letter == 'Z' && t.isReturned), isTrue);
+      expect(rack.any((t) => t.letter == 'Z'), isFalse);
     });
 
     // ── 3a (endgame): the top-up never pads from the alphabet ────────────────
@@ -138,15 +161,16 @@ void main() {
     });
 
     // ── 9 (Karar 2) ─────────────────────────────────────────────────────────
-    test('unplayed tiles survive a refill as clean tiles', () {
-      // Puzzle letters {K, Ö, P, R, Ü} deliberately exclude A and B so freshly
-      // drawn tiles cannot collide with the unplayed letters under test.
+    test('unplayed live tiles survive a refill as clean tiles', () {
+      // Ö and R are live (each has an unsolved KÖPRÜ cell), so the refill must
+      // keep them; demand accounting also stops the top-up from drawing extra
+      // copies of either, which keeps the kept-count assertion exact.
       final puzzle = puzzleFromWords([
         buildWord(id: 'w1', answer: 'KÖPRÜ', startRow: 1, startCol: 1, direction: ClueArrow.right),
       ]);
       const currentRack = [
-        RackTile(letter: 'A'), // unplayed — must be kept
-        RackTile(letter: 'B'), // unplayed — must be kept
+        RackTile(letter: 'Ö'), // unplayed live — must be kept
+        RackTile(letter: 'R'), // unplayed live — must be kept
         RackTile(letter: 'C', isPlaced: true),
         RackTile(letter: 'D', isPlaced: true),
         RackTile(letter: 'E', isPlaced: true),
@@ -160,9 +184,65 @@ void main() {
       );
       expect(rack.length, RackManager.baseRackSize);
       // The two unplayed letters are still present and reset to clean state.
-      final kept = rack.where((t) => t.letter == 'A' || t.letter == 'B');
+      final kept = rack.where((t) => t.letter == 'Ö' || t.letter == 'R');
       expect(kept.length, 2);
       expect(kept.every((t) => !t.isPlaced && !t.isReturned), isTrue);
+    });
+
+    // ── 3b (multiset): the top-up never exceeds per-letter demand ────────────
+    test('does not draw more copies of a letter than cells needing it', () {
+      // ABA demands A twice and B once. The unplaced A consumes one unit of
+      // the A demand, so the top-up may only add one more A and the B — the
+      // rack tops out at 3 tiles instead of refilling to 5 with surplus A's.
+      final puzzle = puzzleFromWords([
+        buildWord(id: 'w1', answer: 'ABA', startRow: 1, startCol: 1, direction: ClueArrow.right),
+      ]);
+      const currentRack = [
+        RackTile(letter: 'A'), // unplayed live
+        RackTile(letter: 'K', isPlaced: true),
+        RackTile(letter: 'L', isPlaced: true),
+        RackTile(letter: 'M', isPlaced: true),
+        RackTile(letter: 'N', isPlaced: true),
+      ];
+      final rack = manager.refill(
+        currentRack: currentRack,
+        puzzle: puzzle,
+        board: const {},
+        returnedLetters: const [],
+        seed: 21,
+      );
+      expect(rack.length, 3);
+      expect(rack.map((t) => t.letter).toList()..sort(), ['A', 'A', 'B']);
+    });
+
+    // ── 3c (endgame regression): last cells map 1:1 onto the rack ────────────
+    test('last three empty cells yield exactly their three letters', () {
+      // The lived bug: with few cells left the rack must hold exactly the
+      // placeable tiles — never an unplaceable surplus copy. KANAT with A and
+      // N solved leaves K, A, T; the rack must be exactly those three.
+      final puzzle = puzzleFromWords([
+        buildWord(id: 'w1', answer: 'KANAT', startRow: 1, startCol: 1, direction: ClueArrow.right),
+      ]);
+      final board = {
+        const WordCell(row: 1, col: 2): 'A',
+        const WordCell(row: 1, col: 3): 'N',
+      };
+      const playedRack = [
+        RackTile(letter: 'B', isPlaced: true),
+        RackTile(letter: 'C', isPlaced: true),
+        RackTile(letter: 'D', isPlaced: true),
+        RackTile(letter: 'E', isPlaced: true),
+        RackTile(letter: 'F', isPlaced: true),
+      ];
+      final rack = manager.refill(
+        currentRack: playedRack,
+        puzzle: puzzle,
+        board: board,
+        returnedLetters: const [],
+        seed: 22,
+      );
+      expect(rack.length, 3);
+      expect(rack.map((t) => t.letter).toList()..sort(), ['A', 'K', 'T']);
     });
   });
 
@@ -251,6 +331,29 @@ void main() {
         seed: 15,
       );
       expect(rack[0].letter, 'C');
+    });
+
+    // ── 6d (multiset): kept tiles consume demand before the swap draw ────────
+    test('the swap draw accounts for letters already kept in the rack', () {
+      // ABA demands A twice and B once. The two kept A tiles exhaust the A
+      // demand, so swapping the first Z can only draw the remaining B.
+      final puzzle = puzzleFromWords([
+        buildWord(id: 'w1', answer: 'ABA', startRow: 1, startCol: 1, direction: ClueArrow.right),
+      ]);
+      final rack = manager.swapLetters(
+        currentRack: const [
+          RackTile(letter: 'A'),
+          RackTile(letter: 'A'),
+          RackTile(letter: 'Z'),
+          RackTile(letter: 'Z'),
+          RackTile(letter: 'Z'),
+        ],
+        swapIndices: const [2],
+        puzzle: puzzle,
+        board: const {},
+        seed: 25,
+      );
+      expect(rack[2].letter, 'B');
     });
 
     // ── 6c (swap joker): alphabet fallback is kept on the swap path ──────────
@@ -385,6 +488,31 @@ void main() {
         seed: 17,
       );
       expect(rack, equals(liveRack));
+    });
+
+    // ── 13c (multiset): surplus copies beyond demand count as dead ───────────
+    test('replaces surplus copies that exceed the per-letter demand', () {
+      // ABA demands A twice and B once. Three A tiles exceed the A demand by
+      // one; with B also in hand no demand remains for replacements, so the
+      // surplus A and the dead Z are dropped: the rack maps 1:1 onto demand.
+      final puzzle = puzzleFromWords([
+        buildWord(id: 'w1', answer: 'ABA', startRow: 1, startCol: 1, direction: ClueArrow.right),
+      ]);
+      const surplusRack = [
+        RackTile(letter: 'A'),
+        RackTile(letter: 'A'),
+        RackTile(letter: 'A'), // surplus — only two A-cells exist
+        RackTile(letter: 'B'),
+        RackTile(letter: 'Z'), // dead — no Z cell at all
+      ];
+      final rack = manager.ensurePlayable(
+        currentRack: surplusRack,
+        puzzle: puzzle,
+        board: const {},
+        seed: 24,
+      );
+      expect(rack.length, 3);
+      expect(rack.map((t) => t.letter).toList()..sort(), ['A', 'A', 'B']);
     });
 
     // ── 13b: endgame — surplus dead tiles are dropped, the rack shrinks ──────
