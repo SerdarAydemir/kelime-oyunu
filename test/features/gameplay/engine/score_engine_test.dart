@@ -212,6 +212,68 @@ void main() {
       expect(result.rackEmptyBonus, 6);
     });
 
+    // ── 7a (endgame): a shrunk rack still earns the emptied-rack bonus ───────
+    test('emptying a shrunk 3-tile endgame rack grants +3', () {
+      // Near the endgame RackManager stops padding the rack from the alphabet,
+      // so it can legitimately start a turn with fewer than 5 tiles.
+      final puzzle = puzzleFromWords([
+        buildWord(
+          id: 'w1',
+          answer: 'KALEM',
+          startRow: 1,
+          startCol: 1,
+          direction: ClueArrow.right,
+        ),
+      ]);
+
+      final result = engine.resolveMove(
+        placements: const [
+          Placement(cell: WordCell(row: 1, col: 3), letter: 'L', expected: 'L'),
+          Placement(cell: WordCell(row: 1, col: 4), letter: 'E', expected: 'E'),
+          Placement(cell: WordCell(row: 1, col: 5), letter: 'M', expected: 'M'),
+        ],
+        puzzle: puzzle,
+        board: {
+          const WordCell(row: 1, col: 1): 'K',
+          const WordCell(row: 1, col: 2): 'A',
+        },
+        rackStartCount: 3,
+      );
+
+      expect(result.rackEmptied, isTrue);
+      expect(result.rackEmptyBonus, 3);
+    });
+
+    // ── 7b (endgame): a single-tile rack is trivially emptied — no bonus ─────
+    test('emptying a 1-tile rack grants no bonus', () {
+      final puzzle = puzzleFromWords([
+        buildWord(
+          id: 'w1',
+          answer: 'KALEM',
+          startRow: 1,
+          startCol: 1,
+          direction: ClueArrow.right,
+        ),
+      ]);
+
+      final result = engine.resolveMove(
+        placements: const [
+          Placement(cell: WordCell(row: 1, col: 5), letter: 'M', expected: 'M'),
+        ],
+        puzzle: puzzle,
+        board: {
+          const WordCell(row: 1, col: 1): 'K',
+          const WordCell(row: 1, col: 2): 'A',
+          const WordCell(row: 1, col: 3): 'L',
+          const WordCell(row: 1, col: 4): 'E',
+        },
+        rackStartCount: 1,
+      );
+
+      expect(result.rackEmptied, isFalse);
+      expect(result.rackEmptyBonus, 0);
+    });
+
     // ── 8 ──────────────────────────────────────────────────────────────────
     test('a wrong letter in the move blocks the emptied-rack bonus', () {
       final puzzle = puzzleFromWords([

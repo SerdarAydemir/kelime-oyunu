@@ -58,6 +58,10 @@ class RackManager {
   /// (their strategic carry-over), the [returnedLetters] that came back wrong
   /// (flagged [RackTile.isReturned]), and freshly drawn tiles topping the rack
   /// up to [targetSize] — 5, or 6 once the +1 letter joker is unlocked.
+  ///
+  /// The top-up draws only from the unsolved-cell pool (no alphabet padding),
+  /// so near the end of the puzzle the rack naturally shrinks toward the
+  /// number of remaining cells instead of filling up with dead letters.
   List<RackTile> refill({
     required List<RackTile> currentRack,
     required PuzzleData puzzle,
@@ -77,7 +81,13 @@ class RackManager {
     final carryOver = [...kept, ...returned];
     final need = targetSize - carryOver.length;
     final fresh = need > 0
-        ? _drawFillLetters(count: need, puzzle: puzzle, board: board, rng: rng)
+        ? _drawFillLetters(
+            count: need,
+            puzzle: puzzle,
+            board: board,
+            rng: rng,
+            alphabetFallback: false,
+          )
         : const <String>[];
     return [...carryOver, for (final letter in fresh) RackTile(letter: letter)];
   }
@@ -87,6 +97,10 @@ class RackManager {
   /// The discarded letters are only re-drawn when the pool offers no
   /// alternative — swapping an 'X' away and immediately getting it back
   /// would make the joker feel broken.
+  ///
+  /// This is the one draw path that keeps the alphabet fallback: the result is
+  /// indexed positionally against [swapIndices], so the draw must return
+  /// exactly as many letters as were discarded even when the pool runs dry.
   List<RackTile> swapLetters({
     required List<RackTile> currentRack,
     required List<int> swapIndices,
@@ -113,8 +127,8 @@ class RackManager {
 
   /// Whether any rack tile is the correct solution for an unsolved letter cell.
   ///
-  /// When false the player has no scoring move and the rack must be refreshed
-  /// (see [ensurePlayable]); otherwise the game soft-locks (architecture.md §8.3).
+  /// Cheap query kept for callers and tests; the refresh policy itself lives in
+  /// [ensurePlayable], which no longer waits for the rack to be fully dead.
   bool hasPlayableMove({
     required List<RackTile> rack,
     required PuzzleData puzzle,
@@ -124,30 +138,44 @@ class RackManager {
     return rack.any((tile) => needed.contains(tile.letter));
   }
 
-  /// Returns [currentRack] unchanged when it already has a playable move;
-  /// otherwise replaces every "dead" tile (letter not matching any unsolved
-  /// cell) with a board-aware draw. This is a replace, not a top-up: it breaks
-  /// the soft-lock where a full rack of dead tiles can never be refilled because
-  /// returned tiles keep the rack at baseRackSize (need == 0). While the board
-  /// is incomplete the unsolved pool is non-empty, so the result always holds at
-  /// least one playable tile.
+  /// Replaces every "dead" tile (letter not matching any unsolved cell) with a
+  /// board-aware draw; live tiles are kept untouched, in place.
+  ///
+  /// Deadness is monotone: the board only ever fills up, so a dead letter can
+  /// never become useful again. Refreshing dead tiles on every call therefore
+  /// costs the player nothing strategically — only live letters are worth
+  /// holding. Design note (accepted trade-off): dead letters now refresh for
+  /// free, which repositions the ad-paid swap joker as a "live but unwanted
+  /// letter" tool. A refresh-highlight animation is deferred to F6.
+  ///
+  /// The draw skips the alphabet fallback; when fewer unsolved letters remain
+  /// than there are dead tiles, the surplus dead tiles are dropped and the
+  /// rack shrinks toward the remaining cell count (endgame behaviour, mirrors
+  /// [refill]).
   List<RackTile> ensurePlayable({
     required List<RackTile> currentRack,
     required PuzzleData puzzle,
     required Map<WordCell, String> board,
     required int seed,
   }) {
-    if (hasPlayableMove(rack: currentRack, puzzle: puzzle, board: board)) {
-      return currentRack;
-    }
-    final rng = Random(seed);
     final needed = _unsolvedLetters(puzzle, board).toSet();
     final deadCount = currentRack.where((t) => !needed.contains(t.letter)).length;
-    final fresh = _drawFillLetters(count: deadCount, puzzle: puzzle, board: board, rng: rng);
+    if (deadCount == 0) return currentRack;
+    final rng = Random(seed);
+    final fresh = _drawFillLetters(
+      count: deadCount,
+      puzzle: puzzle,
+      board: board,
+      rng: rng,
+      alphabetFallback: false,
+    );
     var i = 0;
     return [
       for (final tile in currentRack)
-        if (needed.contains(tile.letter)) tile else RackTile(letter: fresh[i++]),
+        if (needed.contains(tile.letter))
+          tile
+        else if (i < fresh.length)
+          RackTile(letter: fresh[i++]),
     ];
   }
 
@@ -164,16 +192,21 @@ class RackManager {
     return letters;
   }
 
-  // Draws [count] letters: first from the shuffled unsolved-cell pool (so the
-  // player can always make progress), then from the Turkish alphabet fallback.
-  // Letters in [exclude] are pushed to the back of the queue so they are only
-  // drawn when no alternative remains (used by swapLetters for discards).
+  // Draws [count] letters from the shuffled unsolved-cell pool (so the player
+  // can always make progress). When the pool runs short, [alphabetFallback]
+  // decides the behaviour: true pads with random alphabet letters (callers
+  // that must preserve the rack size, e.g. swap); false returns fewer letters
+  // (refill/ensurePlayable — alphabet padding would mint dead-on-arrival
+  // tiles, so those racks shrink instead). Letters in [exclude] are pushed to
+  // the back of the queue so they are only drawn when no alternative remains
+  // (used by swapLetters for discards).
   List<String> _drawFillLetters({
     required int count,
     required PuzzleData puzzle,
     required Map<WordCell, String> board,
     required Random rng,
     Set<String> exclude = const {},
+    bool alphabetFallback = true,
   }) {
     final pool = _unsolvedLetters(puzzle, board)..shuffle(rng);
     final ordered = [...pool.where((l) => !exclude.contains(l)), ...pool.where(exclude.contains)];
@@ -181,8 +214,9 @@ class RackManager {
       for (final l in _turkishAlphabet)
         if (!exclude.contains(l)) l,
     ];
+    final target = alphabetFallback ? count : min(count, ordered.length);
     return [
-      for (var i = 0; i < count; i++)
+      for (var i = 0; i < target; i++)
         if (i < ordered.length) ordered[i] else alphabet[rng.nextInt(alphabet.length)],
     ];
   }

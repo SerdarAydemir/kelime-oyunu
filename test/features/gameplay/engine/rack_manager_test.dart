@@ -108,6 +108,35 @@ void main() {
       expect(rack.any((t) => t.letter == 'Z' && t.isReturned), isTrue);
     });
 
+    // ── 3a (endgame): the top-up never pads from the alphabet ────────────────
+    test('shrinks to the remaining unsolved cells instead of padding', () {
+      // KÖPRÜ with K/Ö/P solved leaves two unsolved cells: 'R' and 'Ü'. A
+      // fully-played rack carries nothing over, so the refill can only draw
+      // those two letters — the rack shrinks to 2 instead of topping up to 5.
+      final puzzle = puzzleFromWords([
+        buildWord(id: 'w1', answer: 'KÖPRÜ', startRow: 1, startCol: 1, direction: ClueArrow.right),
+      ]);
+      final board = {
+        for (var i = 0; i < 3; i++) WordCell(row: 1, col: 1 + i): 'KÖP'[i],
+      };
+      const playedRack = [
+        RackTile(letter: 'K', isPlaced: true),
+        RackTile(letter: 'A', isPlaced: true),
+        RackTile(letter: 'L', isPlaced: true),
+        RackTile(letter: 'E', isPlaced: true),
+        RackTile(letter: 'M', isPlaced: true),
+      ];
+      final rack = manager.refill(
+        currentRack: playedRack,
+        puzzle: puzzle,
+        board: board,
+        returnedLetters: const [],
+        seed: 19,
+      );
+      expect(rack.length, 2);
+      expect(rack.map((t) => t.letter).toSet(), {'R', 'Ü'});
+    });
+
     // ── 9 (Karar 2) ─────────────────────────────────────────────────────────
     test('unplayed tiles survive a refill as clean tiles', () {
       // Puzzle letters {K, Ö, P, R, Ü} deliberately exclude A and B so freshly
@@ -224,6 +253,23 @@ void main() {
       expect(rack[0].letter, 'C');
     });
 
+    // ── 6c (swap joker): alphabet fallback is kept on the swap path ──────────
+    test('pads from the alphabet when the pool is exhausted (size preserved)', () {
+      // Every cell solved -> empty pool. Unlike refill/ensurePlayable, swap
+      // must keep the rack size (the result is indexed against swapIndices),
+      // so it pads from the alphabet, excluding the discarded 'A'.
+      final puzzle = allBPuzzle();
+      final rack = manager.swapLetters(
+        currentRack: aRack,
+        swapIndices: const [0],
+        puzzle: puzzle,
+        board: _fullBoard(puzzle),
+        seed: 20,
+      );
+      expect(rack.length, aRack.length);
+      expect(rack[0].letter, isNot('A'));
+    });
+
     // ── 6b (swap joker): falls back to the discard when nothing else remains ─
     test('re-draws the discarded letter when the pool has no alternative', () {
       // All-'B' pool: discarding 'B' can only yield 'B' again.
@@ -298,23 +344,67 @@ void main() {
       expect(manager.hasPlayableMove(rack: rack, puzzle: puzzle, board: const {}), isTrue);
     });
 
-    // ── 13 ─────────────────────────────────────────────────────────────────
-    test('leaves an already-playable rack untouched (carry-over preserved)', () {
-      // 'K' is live, so the rack is not stuck and must be returned as-is.
-      const liveRack = [
+    // ── 13 (revised): dead tiles refresh even when the rack is playable ──────
+    test('replaces dead tiles while keeping live ones, even when playable', () {
+      // 'K' is live; {Z, J, V, Y} are dead. The old policy kept dead tiles as
+      // long as one tile was playable — they must now refresh every call.
+      const mixedRack = [
         RackTile(letter: 'K'),
         RackTile(letter: 'Z'),
         RackTile(letter: 'J'),
         RackTile(letter: 'V'),
         RackTile(letter: 'Y'),
       ];
+      final puzzle = wordPuzzle();
+      final rack = manager.ensurePlayable(
+        currentRack: mixedRack,
+        puzzle: puzzle,
+        board: const {},
+        seed: 13,
+      );
+      expect(rack.length, mixedRack.length);
+      expect(rack[0].letter, 'K'); // live tile kept, in place
+      // Every tile is now live: no dead letter survives the refresh.
+      final solutionLetters = {'K', 'A', 'L', 'E', 'M', 'O'};
+      expect(rack.every((t) => solutionLetters.contains(t.letter)), isTrue);
+    });
+
+    // ── 13a: a fully-live rack is returned unchanged ─────────────────────────
+    test('returns an all-live rack as-is', () {
+      const liveRack = [
+        RackTile(letter: 'K'),
+        RackTile(letter: 'A'),
+        RackTile(letter: 'L'),
+        RackTile(letter: 'E'),
+        RackTile(letter: 'M'),
+      ];
       final rack = manager.ensurePlayable(
         currentRack: liveRack,
         puzzle: wordPuzzle(),
         board: const {},
-        seed: 13,
+        seed: 17,
       );
       expect(rack, equals(liveRack));
+    });
+
+    // ── 13b: endgame — surplus dead tiles are dropped, the rack shrinks ──────
+    test('shrinks an all-dead rack to the remaining unsolved cells', () {
+      // KÖPRÜ with K/Ö/P/R solved leaves a single unsolved cell: 'Ü'.
+      final puzzle = puzzleFromWords([
+        buildWord(id: 'w1', answer: 'KÖPRÜ', startRow: 1, startCol: 1, direction: ClueArrow.right),
+      ]);
+      final board = {
+        for (var i = 0; i < 4; i++) WordCell(row: 1, col: 1 + i): 'KÖPR'[i],
+      };
+      final rack = manager.ensurePlayable(
+        currentRack: deadRack,
+        puzzle: puzzle,
+        board: board,
+        seed: 18,
+      );
+      // One live letter exists, so the rack holds exactly that one tile.
+      expect(rack.length, 1);
+      expect(rack.single.letter, 'Ü');
     });
   });
 

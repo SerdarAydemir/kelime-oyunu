@@ -103,6 +103,12 @@ class GameBloc extends Bloc<GameEvent, GameState> {
       debugPrint('Rejected placement on invalid cell: ${event.cell}');
       return;
     }
+    // The rack can shrink between turns (endgame refill / dead-tile refresh),
+    // so a selection index captured before the rebuild may be stale.
+    if (event.rackIndex < 0 || event.rackIndex >= current.rack.length) {
+      debugPrint('Rejected placement from stale rack index: ${event.rackIndex}');
+      return;
+    }
     final tile = current.rack[event.rackIndex];
     final placement = Placement(
       cell: event.cell,
@@ -139,7 +145,9 @@ class GameBloc extends Bloc<GameEvent, GameState> {
       placements: current.pendingPlacements,
       puzzle: current.puzzle,
       board: current.board,
-      rackStartCount: current.rackSize,
+      // Real tile count, not the nominal capacity: the rack shrinks near the
+      // endgame and emptying it must still earn the bonus (ScoreEngine §1.4).
+      rackStartCount: current.rack.length,
     );
     final newBoard = result.updatedBoard;
     final afterMove = current.copyWith(
@@ -155,6 +163,7 @@ class GameBloc extends Bloc<GameEvent, GameState> {
       pendingPlacements: const [],
       playerScore: current.playerScore + result.scoreDelta,
       highlightedWordId: null, // a confirmed move clears any selection
+      selectedRackIndex: -1, // the refill may shrink the rack — drop the index
     );
     if (isBoardComplete(current.puzzle, newBoard)) {
       emit(_finish(afterMove));
@@ -181,8 +190,9 @@ class GameBloc extends Bloc<GameEvent, GameState> {
       rackStartCount: 0,
     );
     final newBoard = result.updatedBoard;
-    // Clear transient flags (Karar 2/3), then guarantee a playable rack so the
-    // player can always move when the turn returns — fixes the dead-tile lock.
+    // Clear transient flags (Karar 2/3), then refresh every tile the bot's
+    // move just killed: deadness is permanent (the board only fills up), so
+    // the player must never carry unplayable letters into their turn.
     final resetRack = [for (final t in current.rack) RackTile(letter: t.letter)];
     final playableRack = _rackManager.ensurePlayable(
       currentRack: resetRack,
@@ -191,7 +201,7 @@ class GameBloc extends Bloc<GameEvent, GameState> {
       seed: _nextSeed(),
     );
     if (!identical(playableRack, resetRack)) {
-      debugPrint('Rack stuck after bot move; refreshed to a playable rack.');
+      debugPrint('Dead rack tiles refreshed after bot move.');
     }
     final afterBot = current.copyWith(
       board: newBoard,
@@ -200,6 +210,7 @@ class GameBloc extends Bloc<GameEvent, GameState> {
       phase: TurnPhase.playerTurn,
       botThinking: false,
       botPlacedCells: {...current.botPlacedCells, ...event.botMove.placements.map((p) => p.cell)},
+      selectedRackIndex: -1, // tiles may have been replaced/dropped — drop the index
     );
     emit(isBoardComplete(current.puzzle, newBoard) ? _finish(afterBot) : afterBot);
   }

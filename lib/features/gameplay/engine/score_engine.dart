@@ -115,14 +115,18 @@ class MoveResult extends Equatable {
 class ScoreEngine {
   const ScoreEngine();
 
-  // Rack sizes that qualify for the "emptied rack" bonus (architecture.md §1.4).
-  static const int _baseRackSize = 5;
+  // Rack sizes that qualify for the "emptied rack" bonus (architecture.md §1.4):
+  // nominally 5/6, but the rack shrinks below 5 near the endgame (RackManager
+  // stops padding from the alphabet once unsolved cells run short), so any rack
+  // of 2..6 tiles qualifies. A 1-tile rack is excluded as trivially emptied.
+  static const int _minBonusRackSize = 2;
   static const int _powerUpRackSize = 6;
 
   /// Resolves [placements] against [puzzle] and the current [board].
   ///
-  /// [rackStartCount] is the rack size at the start of the turn (5 or 6); it is
-  /// used to detect an emptied rack. Scoring rules follow architecture.md §1.4.
+  /// [rackStartCount] is the rack size at the start of the turn (nominally 5
+  /// or 6, smaller near the endgame); it is used to detect an emptied rack.
+  /// Scoring rules follow architecture.md §1.4.
   MoveResult resolveMove({
     required List<Placement> placements,
     required PuzzleData puzzle,
@@ -168,12 +172,14 @@ class ScoreEngine {
     }
 
     // 3. Emptied-rack bonus: every placement correct and the whole rack played.
+    //    The bonus equals the rack size, so a shrunk endgame rack still rewards
+    //    emptying — just proportionally less (+2..+4 instead of +5/+6).
     var rackEmptied = false;
     var rackEmptyBonus = 0;
     final allCorrect = placements.isNotEmpty && returnedLetters.isEmpty;
     final playedWholeRack = rackStartCount == placements.length;
     final qualifyingSize =
-        rackStartCount == _baseRackSize || rackStartCount == _powerUpRackSize;
+        rackStartCount >= _minBonusRackSize && rackStartCount <= _powerUpRackSize;
     if (allCorrect && playedWholeRack && qualifyingSize) {
       rackEmptied = true;
       rackEmptyBonus = rackStartCount;
