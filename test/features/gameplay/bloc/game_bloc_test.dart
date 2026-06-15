@@ -356,7 +356,49 @@ void main() {
       ],
     );
 
-    // ── 8b (+1 joker): refill is asked for the unlocked 6-tile rack size ─────
+    // ── 8a (tie): equal scores finish as a draw, not a loss ──────────────────
+    blocTest<GameBloc, GameState>(
+      'finishes as tie when the filling move leaves the scores equal',
+      build: () {
+        stubResolveMove(_moveResult(scoreDelta: 0, updatedBoard: _completeBoard));
+        stubRefill();
+        return buildBloc();
+      },
+      seed: () => _activeState(
+        playerScore: 7,
+        botScore: 7,
+        pending: const [Placement(cell: _cell11, letter: 'K', expected: 'K')],
+      ),
+      act: (bloc) => bloc.add(const MoveConfirmed()),
+      expect: () => [
+        isA<GameActive>()
+            .having((s) => s.phase, 'phase', TurnPhase.finished)
+            .having((s) => s.status, 'status', GameStatus.tie),
+      ],
+    );
+
+    // ── 8b (loss): trailing player finishes as lost ──────────────────────────
+    blocTest<GameBloc, GameState>(
+      'finishes as lost when the bot is ahead at the filling move',
+      build: () {
+        stubResolveMove(_moveResult(scoreDelta: 0, updatedBoard: _completeBoard));
+        stubRefill();
+        return buildBloc();
+      },
+      seed: () => _activeState(
+        playerScore: 3,
+        botScore: 9,
+        pending: const [Placement(cell: _cell11, letter: 'K', expected: 'K')],
+      ),
+      act: (bloc) => bloc.add(const MoveConfirmed()),
+      expect: () => [
+        isA<GameActive>()
+            .having((s) => s.phase, 'phase', TurnPhase.finished)
+            .having((s) => s.status, 'status', GameStatus.lost),
+      ],
+    );
+
+    // ── 8c (+1 joker): refill is asked for the unlocked 6-tile rack size ─────
     blocTest<GameBloc, GameState>(
       'refills to the unlocked rack size after a move',
       build: () {

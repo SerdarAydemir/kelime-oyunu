@@ -292,7 +292,14 @@ class GameBloc extends Bloc<GameEvent, GameState> {
   }
 
   GameActive _finish(GameActive snapshot) {
-    final status = snapshot.playerScore > snapshot.botScore ? GameStatus.won : GameStatus.lost;
+    final GameStatus status;
+    if (snapshot.playerScore > snapshot.botScore) {
+      status = GameStatus.won;
+    } else if (snapshot.playerScore < snapshot.botScore) {
+      status = GameStatus.lost;
+    } else {
+      status = GameStatus.tie;
+    }
     return snapshot.copyWith(phase: TurnPhase.finished, botThinking: false, status: status);
   }
 }

@@ -9,8 +9,11 @@ import 'package:kelime_oyunu/features/gameplay/engine/score_engine.dart';
 /// Whose turn it is, or whether the game is over.
 enum TurnPhase { playerTurn, botThinking, finished }
 
-/// The terminal outcome of the match (a tie counts as a loss, per spec §1.4).
-enum GameStatus { playing, won, lost }
+/// The terminal outcome of the match. A tie is its own first-class outcome on
+/// the result screen (product decision). Any F7 progression rule that scores a
+/// tie differently (e.g. for win-rate) is a separate decision and does not
+/// change this enum.
+enum GameStatus { playing, won, lost, tie }
 
 /// Base type for every gameplay state.
 sealed class GameState extends Equatable {
