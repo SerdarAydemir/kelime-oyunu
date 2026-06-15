@@ -68,6 +68,7 @@ class RackManager {
   /// (their strategic carry-over), the [returnedLetters] that came back wrong
   /// (flagged [RackTile.isReturned]), and freshly drawn tiles topping the rack
   /// up to [targetSize] — 5, or 6 once the +1 letter joker is unlocked.
+<<<<<<< HEAD
   ///
   /// The whole rebuild is demand-checked (multiset invariant): carry-over and
   /// returned tiles each consume one unit of their letter's demand, surplus
@@ -76,6 +77,8 @@ class RackManager {
   /// rack therefore shrinks toward the number of remaining cells, and a wrong
   /// letter that no longer fits anywhere is replaced instead of returning as
   /// guaranteed dead weight.
+=======
+>>>>>>> origin/main
   List<RackTile> refill({
     required List<RackTile> currentRack,
     required PuzzleData puzzle,
@@ -92,6 +95,13 @@ class RackManager {
       for (final letter in returnedLetters)
         if (_takeDemand(demand, letter)) RackTile(letter: letter, isReturned: true),
     ];
+<<<<<<< HEAD
+=======
+    final returned = <RackTile>[
+      for (final letter in returnedLetters) RackTile(letter: letter, isReturned: true),
+    ];
+    final carryOver = [...kept, ...returned];
+>>>>>>> origin/main
     final need = targetSize - carryOver.length;
     final fresh = need > 0
         ? _drawFromDemand(demand: demand, count: need, rng: rng)
@@ -104,10 +114,13 @@ class RackManager {
   /// The discarded letters are only re-drawn when the pool offers no
   /// alternative — swapping an 'X' away and immediately getting it back
   /// would make the joker feel broken.
+<<<<<<< HEAD
   ///
   /// This is the one draw path that keeps the alphabet fallback: the result is
   /// indexed positionally against [swapIndices], so the draw must return
   /// exactly as many letters as were discarded even when the pool runs dry.
+=======
+>>>>>>> origin/main
   List<RackTile> swapLetters({
     required List<RackTile> currentRack,
     required List<int> swapIndices,
@@ -118,6 +131,7 @@ class RackManager {
     final rng = Random(seed);
     final swapSet = swapIndices.toSet();
     final discarded = {for (final i in swapSet) currentRack[i].letter};
+<<<<<<< HEAD
     final demand = _letterDemand(puzzle, board);
     // Tiles the player keeps consume their letters' demand first, so the
     // fresh draw cannot push any letter beyond the number of cells needing it.
@@ -130,6 +144,14 @@ class RackManager {
       rng: rng,
       exclude: discarded,
       alphabetFallback: true,
+=======
+    final fresh = _drawFillLetters(
+      count: swapSet.length,
+      puzzle: puzzle,
+      board: board,
+      rng: rng,
+      exclude: discarded,
+>>>>>>> origin/main
     );
     var freshIndex = 0;
     return [
@@ -204,6 +226,7 @@ class RackManager {
     return letters;
   }
 
+<<<<<<< HEAD
   // Per-letter demand: how many unsolved cells still need each letter.
   Map<String, int> _letterDemand(PuzzleData puzzle, Map<WordCell, String> board) {
     final demand = <String, int>{};
@@ -232,19 +255,38 @@ class RackManager {
   // (used by swapLetters for discards).
   List<String> _drawFromDemand({
     required Map<String, int> demand,
+=======
+  // Draws [count] letters: first from the shuffled unsolved-cell pool (so the
+  // player can always make progress), then from the Turkish alphabet fallback.
+  // Letters in [exclude] are pushed to the back of the queue so they are only
+  // drawn when no alternative remains (used by swapLetters for discards).
+  List<String> _drawFillLetters({
+>>>>>>> origin/main
     required int count,
     required Random rng,
     Set<String> exclude = const {},
+<<<<<<< HEAD
     bool alphabetFallback = false,
   }) {
     final pool = <String>[
       for (final entry in demand.entries)
         for (var i = 0; i < entry.value; i++) entry.key,
     ]..shuffle(rng);
+=======
+  }) {
+    final pool = _unsolvedLetters(puzzle, board)..shuffle(rng);
+>>>>>>> origin/main
     final ordered = [...pool.where((l) => !exclude.contains(l)), ...pool.where(exclude.contains)];
     final alphabet = [
       for (final l in _turkishAlphabet)
         if (!exclude.contains(l)) l,
+<<<<<<< HEAD
+=======
+    ];
+    return [
+      for (var i = 0; i < count; i++)
+        if (i < ordered.length) ordered[i] else alphabet[rng.nextInt(alphabet.length)],
+>>>>>>> origin/main
     ];
     final target = alphabetFallback ? count : min(count, ordered.length);
     final drawn = [

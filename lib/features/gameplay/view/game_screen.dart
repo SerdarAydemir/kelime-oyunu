@@ -66,6 +66,7 @@ class _GameBody extends StatelessWidget {
       // status change, so re-entering the screen after a restart re-arms it.
       listenWhen: (prev, curr) =>
           curr is GameError ||
+<<<<<<< HEAD
           (prev is GameActive &&
               curr is GameActive &&
               curr.phase == TurnPhase.finished &&
@@ -75,6 +76,16 @@ class _GameBody extends StatelessWidget {
           ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(state.message)));
         } else if (state is GameActive && state.phase == TurnPhase.finished) {
           _showResultDialog(context, state);
+=======
+          (prev is GameActive && curr is GameActive && prev.status != curr.status),
+      listener: (context, state) {
+        if (state is GameError) {
+          ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(state.message)));
+        } else if (state is GameActive && state.status != GameStatus.playing) {
+          // TODO: context.go('/result') — result route henüz tanımlı değil,
+          // GoRouter bilinmeyen route'a go() çağrısında crash eder.
+          debugPrint('Game finished with status: ${state.status}');
+>>>>>>> origin/main
         }
       },
       builder: (context, state) {
@@ -123,10 +134,29 @@ class _GameBody extends StatelessWidget {
 
 /// Full game UI rendered while a match is in progress.
 class _GameActiveBody extends StatefulWidget {
+<<<<<<< HEAD
   const _GameActiveBody({required this.state, required this.puzzleId});
+=======
+  const _GameActiveBody({required this.state});
+>>>>>>> origin/main
 
   final GameActive state;
   final int puzzleId;
+
+  @override
+  State<_GameActiveBody> createState() => _GameActiveBodyState();
+}
+
+class _GameActiveBodyState extends State<_GameActiveBody> {
+  /// Local interaction mode: the player is picking a clue cell to reveal.
+  /// Gameplay actions stay disabled until the mode closes (yes / toggle /
+  /// tapping a non-clue cell). Reveal itself is the existing WordRevealed.
+  bool _revealMode = false;
+
+  GameActive get state => widget.state;
+
+  /// The lamp only works on the player's turn while the game is running.
+  bool get _canReveal => state.phase == TurnPhase.playerTurn && state.status == GameStatus.playing;
 
   @override
   State<_GameActiveBody> createState() => _GameActiveBodyState();

@@ -356,6 +356,7 @@ void main() {
       ],
     );
 
+<<<<<<< HEAD
     // ── 8a (tie): equal scores finish as a draw, not a loss ──────────────────
     blocTest<GameBloc, GameState>(
       'finishes as tie when the filling move leaves the scores equal',
@@ -399,6 +400,9 @@ void main() {
     );
 
     // ── 8c (+1 joker): refill is asked for the unlocked 6-tile rack size ─────
+=======
+    // ── 8b (+1 joker): refill is asked for the unlocked 6-tile rack size ─────
+>>>>>>> origin/main
     blocTest<GameBloc, GameState>(
       'refills to the unlocked rack size after a move',
       build: () {
