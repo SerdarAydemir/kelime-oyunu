@@ -3,6 +3,10 @@
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
+import 'package:kelime_oyunu/core/constants/app_dimensions.dart';
+import 'package:kelime_oyunu/core/constants/app_typography.dart';
+import 'package:kelime_oyunu/core/constants/game_constants.dart';
 import 'package:kelime_oyunu/data/models/puzzle.dart';
 import 'package:kelime_oyunu/data/repositories/puzzle_repository.dart';
 import 'package:kelime_oyunu/features/gameplay/bloc/game_bloc.dart';
@@ -14,6 +18,7 @@ import 'package:kelime_oyunu/features/gameplay/engine/score_engine.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/action_bar.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/grid_painter.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/rack_widget.dart';
+import 'package:kelime_oyunu/features/gameplay/widgets/result_dialog.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/score_header.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/swap_sheet.dart';
 
@@ -43,28 +48,33 @@ class GameScreen extends StatelessWidget {
         botProfile: _kBotProfile,
         puzzleIndex: puzzleId - 1,
       )..add(PuzzleLoadRequested(puzzleId)),
-      child: const _GameBody(),
+      child: _GameBody(puzzleId: puzzleId),
     );
   }
 }
 
 /// Reads [GameBloc] from context; drives the [BlocConsumer] and routing.
 class _GameBody extends StatelessWidget {
-  const _GameBody();
+  const _GameBody({required this.puzzleId});
+
+  final int puzzleId;
 
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<GameBloc, GameState>(
+      // Fire once, on the transition into the finished phase — not on every
+      // status change, so re-entering the screen after a restart re-arms it.
       listenWhen: (prev, curr) =>
           curr is GameError ||
-          (prev is GameActive && curr is GameActive && prev.status != curr.status),
+          (prev is GameActive &&
+              curr is GameActive &&
+              curr.phase == TurnPhase.finished &&
+              prev.phase != TurnPhase.finished),
       listener: (context, state) {
         if (state is GameError) {
           ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(state.message)));
-        } else if (state is GameActive && state.status != GameStatus.playing) {
-          // TODO: context.go('/result') — result route henüz tanımlı değil,
-          // GoRouter bilinmeyen route'a go() çağrısında crash eder.
-          debugPrint('Game finished with status: ${state.status}');
+        } else if (state is GameActive && state.phase == TurnPhase.finished) {
+          _showResultDialog(context, state);
         }
       },
       builder: (context, state) {
@@ -72,19 +82,51 @@ class _GameBody extends StatelessWidget {
           body: switch (state) {
             GameInitial() || GameLoading() => const Center(child: CircularProgressIndicator()),
             GameError(:final message) => Center(child: Text(message)),
-            GameActive() => _GameActiveBody(state: state),
+            GameActive() => _GameActiveBody(state: state, puzzleId: puzzleId),
           },
         );
       },
+    );
+  }
+
+  /// Shows the end-of-match modal. The bloc and router are captured from
+  /// [context] *before* the dialog opens: showDialog pushes onto the root
+  /// navigator, whose context sits outside this screen's BlocProvider, so
+  /// reading the GameBloc from inside the dialog builder would fail.
+  Future<void> _showResultDialog(BuildContext context, GameActive state) {
+    final bloc = context.read<GameBloc>();
+    final router = GoRouter.of(context);
+    return showDialog<void>(
+      context: context,
+      barrierDismissible: false,
+      builder: (dialogContext) => ResultDialog(
+        status: state.status,
+        playerScore: state.playerScore,
+        botScore: state.botScore,
+        botName: _kBotProfile.name,
+        levelId: puzzleId,
+        // Restart the same level: reloading passes through GameLoading, which
+        // unmounts the grid and resets the InteractiveViewer zoom for free.
+        onReplay: () {
+          Navigator.of(dialogContext).pop();
+          bloc.add(PuzzleLoadRequested(puzzleId));
+        },
+        // Hard progression: only reachable after a win on a non-final level.
+        onNext: () {
+          Navigator.of(dialogContext).pop();
+          router.go('/gameplay/${puzzleId + 1}');
+        },
+      ),
     );
   }
 }
 
 /// Full game UI rendered while a match is in progress.
 class _GameActiveBody extends StatefulWidget {
-  const _GameActiveBody({required this.state});
+  const _GameActiveBody({required this.state, required this.puzzleId});
 
   final GameActive state;
+  final int puzzleId;
 
   @override
   State<_GameActiveBody> createState() => _GameActiveBodyState();
@@ -106,6 +148,12 @@ class _GameActiveBodyState extends State<_GameActiveBody> {
     return SafeArea(
       child: Column(
         children: [
+          // Lightweight progress label. Kept above ScoreHeader as its own
+          // centred child so it never disturbs the "VS" centring in the header.
+          Padding(
+            padding: const EdgeInsets.only(top: AppDimensions.spacingXs),
+            child: Text('Bölüm ${widget.puzzleId} / $kLastLevelId', style: AppTypography.caption),
+          ),
           ScoreHeader(
             playerScore: state.playerScore,
             botScore: state.botScore,
