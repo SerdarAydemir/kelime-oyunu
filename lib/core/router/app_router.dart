@@ -13,10 +13,7 @@ abstract final class AppRouter {
   static final GoRouter router = GoRouter(
     initialLocation: '/',
     routes: [
-      GoRoute(
-        path: '/',
-        builder: (context, state) => const _QuickStartScreen(),
-      ),
+      GoRoute(path: '/', builder: (context, state) => const _QuickStartScreen()),
       GoRoute(
         path: '/consent',
         builder: (context, state) => const _PlaceholderScreen(label: 'Consent'),
@@ -32,11 +29,12 @@ abstract final class AppRouter {
       GoRoute(
         path: '/gameplay/:levelId',
         builder: (context, state) {
-          final levelId = int.tryParse(
-                state.pathParameters['levelId'] ?? '1',
-              ) ??
-              1;
-          return GameScreen(puzzleId: levelId);
+          final levelId = int.tryParse(state.pathParameters['levelId'] ?? '1') ?? 1;
+          // Key by levelId so navigating between levels (same route pattern)
+          // forces a fresh Element — otherwise GoRouter reuses the GameScreen
+          // Element and its BlocProvider keeps the previous level's GameBloc,
+          // leaving the board stuck on the finished puzzle.
+          return GameScreen(key: ValueKey(levelId), puzzleId: levelId);
         },
       ),
       GoRoute(
@@ -96,7 +94,6 @@ class _QuickStartScreenState extends State<_QuickStartScreen> {
   }
 
   @override
-  Widget build(BuildContext context) => const Scaffold(
-        body: Center(child: CircularProgressIndicator()),
-      );
+  Widget build(BuildContext context) =>
+      const Scaffold(body: Center(child: CircularProgressIndicator()));
 }
