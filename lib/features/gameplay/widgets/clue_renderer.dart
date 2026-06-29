@@ -26,10 +26,15 @@ class ClueRenderer {
   /// Draws the full clue cell. [spec] must be a [CellType.clue] cell.
   void drawCell(Canvas canvas, Rect rect, CellSpec spec) {
     canvas.drawRect(rect, Paint()..color = AppColors.clueCellBg);
+    var truncated = false;
     if (spec.clues.length >= 2) {
       final half = rect.height / 2;
-      _drawClueText(canvas, Rect.fromLTWH(rect.left, rect.top, rect.width, half), spec.clues[0]);
-      _drawClueText(
+      truncated |= _drawClueText(
+        canvas,
+        Rect.fromLTWH(rect.left, rect.top, rect.width, half),
+        spec.clues[0],
+      );
+      truncated |= _drawClueText(
         canvas,
         Rect.fromLTWH(rect.left, rect.top + half, rect.width, half),
         spec.clues[1],
@@ -43,15 +48,18 @@ class ClueRenderer {
           ..strokeWidth = 1,
       );
     } else if (spec.clues.isNotEmpty) {
-      _drawClueText(canvas, rect, spec.clues[0]);
+      truncated = _drawClueText(canvas, rect, spec.clues[0]);
     }
+    // Signal that the full text is only a tap away (it does not fit the cell).
+    if (truncated) _drawTapIndicator(canvas, rect);
   }
 
   /// Auto-scales [clue].text to fit [rect] (minus padding and the badge band),
   /// then paints it centred on both axes. At the font floor it caps the line
   /// count to whatever fits and ellipsises the overflow, so text is never
-  /// vertically clipped.
-  void _drawClueText(Canvas canvas, Rect rect, ClueSpec clue) {
+  /// vertically clipped. Returns true when the text was ellipsised (i.e. some
+  /// text is hidden and the player should tap to read the full clue).
+  bool _drawClueText(Canvas canvas, Rect rect, ClueSpec clue) {
     final maxW = math.max(0.0, rect.width - _pad * 2);
     final maxH = math.max(0.0, rect.height - _pad * 2 - _badge);
     var fontSize = (rect.height * 0.26).clamp(_minFont, _maxFont);
@@ -78,6 +86,21 @@ class ClueRenderer {
     final dy = rect.top + _pad + (maxH - tp.height) / 2;
     tp.paint(canvas, Offset(dx, dy));
     _drawArrowBadge(canvas, rect, clue.arrow);
+    return tp.didExceedMaxLines;
+  }
+
+  // Three small dots in the top-left corner signalling that the clue is
+  // truncated and its full text opens on tap. Top-left keeps it clear of the
+  // arrow badge (bottom-right) and the divider (mid-height).
+  void _drawTapIndicator(Canvas canvas, Rect rect) {
+    const r = 0.9;
+    const gap = 2.6;
+    final cy = rect.top + 3.5;
+    final x0 = rect.left + 3.5;
+    final paint = Paint()..color = Colors.black54;
+    for (var i = 0; i < 3; i++) {
+      canvas.drawCircle(Offset(x0 + i * gap, cy), r, paint);
+    }
   }
 
   // Uniform arrow badge: white triangle on an orange rounded square for BOTH

@@ -16,6 +16,7 @@ import 'package:kelime_oyunu/features/gameplay/engine/bot_engine.dart';
 import 'package:kelime_oyunu/features/gameplay/engine/rack_manager.dart';
 import 'package:kelime_oyunu/features/gameplay/engine/score_engine.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/action_bar.dart';
+import 'package:kelime_oyunu/features/gameplay/widgets/clue_sheet.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/grid_painter.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/rack_widget.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/result_dialog.dart';
@@ -232,6 +233,15 @@ class _GameActiveBodyState extends State<_GameActiveBody> {
       }
       return;
     }
+    // A clue cell holds no rack action — tapping it opens the full clue text
+    // (free read). Works for single and double-clue cells alike.
+    final clueSpec = state.puzzle.cells.firstWhereOrNull(
+      (c) => c.type == CellType.clue && c.row == cell.row && c.col == cell.col,
+    );
+    if (clueSpec != null && clueSpec.clues.isNotEmpty) {
+      _showClueSheet(context, clueSpec.clues);
+      return;
+    }
     final bloc = context.read<GameBloc>();
     if (state.selectedRackIndex != -1) {
       // A rack tile is selected — place it only on a valid empty letter cell.
@@ -254,6 +264,14 @@ class _GameActiveBodyState extends State<_GameActiveBody> {
         if (tappedWord != null) bloc.add(WordSelected(tappedWord.id));
       }
     }
+  }
+
+  /// Opens the read-only clue sheet for [clues] (free; just reveals the text).
+  void _showClueSheet(BuildContext context, List<ClueSpec> clues) {
+    showModalBottomSheet<void>(
+      context: context,
+      builder: (_) => ClueSheet(clues: clues),
+    );
   }
 
   /// Asks for confirmation, then reveals the chosen clue's word as a ghost.
