@@ -136,6 +136,9 @@ class GridStaticPainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
+    // Clue cells whose direction arrows must be drawn last so they straddle the
+    // cell border on top of the neighbouring letter cell instead of under it.
+    final clueCells = <(Rect, CellSpec)>[];
     for (var row = 0; row < puzzle.grid.rows; row++) {
       for (var col = 0; col < puzzle.grid.cols; col++) {
         final cell = WordCell(row: row, col: col);
@@ -148,12 +151,17 @@ class GridStaticPainter extends CustomPainter {
           _drawBlankCell(canvas, rect);
         } else if (spec.type == CellType.clue) {
           _clueRenderer.drawCell(canvas, rect, spec);
+          clueCells.add((rect, spec));
         } else {
           _drawLetterCell(canvas, rect, cell);
         }
       }
     }
     _drawGridLines(canvas, size);
+    // Arrows last: on top of every cell and the grid lines, on the borders.
+    for (final (rect, spec) in clueCells) {
+      _clueRenderer.drawArrows(canvas, rect, spec);
+    }
   }
 
   void _drawBlankCell(Canvas canvas, Rect rect) {
