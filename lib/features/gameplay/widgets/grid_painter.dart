@@ -1,11 +1,16 @@
 // lib/features/gameplay/widgets/grid_painter.dart
 
+import 'dart:math' as math;
+
 import 'package:flutter/material.dart';
 import 'package:kelime_oyunu/core/constants/app_colors.dart';
 import 'package:kelime_oyunu/data/models/puzzle.dart';
 import 'package:kelime_oyunu/features/gameplay/engine/score_engine.dart';
+import 'package:kelime_oyunu/features/gameplay/widgets/clue_renderer.dart';
 
-const double cellSize = 48.0;
+/// Fallback cell size used only when the incoming constraints are unbounded
+/// (should not happen inside the bounded gameplay layout).
+const double _fallbackCell = 48.0;
 
 class GridPainter extends StatelessWidget {
   const GridPainter({
@@ -36,55 +41,71 @@ class GridPainter extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final width = puzzle.grid.cols * cellSize;
-    final height = puzzle.grid.rows * cellSize;
+    final cols = puzzle.grid.cols;
+    final rows = puzzle.grid.rows;
 
-    return InteractiveViewer(
-      minScale: 0.7,
-      maxScale: 2.0,
-      child: SizedBox(
-        width: width,
-        height: height,
-        child: Stack(
-          children: [
-            RepaintBoundary(
-              child: CustomPaint(
-                size: Size(width, height),
-                painter: GridStaticPainter(
-                  board: board,
-                  revealedWordIds: revealedWordIds,
-                  botPlacedCells: botPlacedCells,
-                  puzzle: puzzle,
-                  cellSize: cellSize,
-                ),
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        // Largest square cell that fits both axes, so the grid fills the
+        // available vertical space and stays centred instead of clinging to the
+        // top. Exact fit (not floored) keeps the SizedBox within the viewport,
+        // so there is no overflow even under extreme/degenerate constraints.
+        final raw = math.min(constraints.maxWidth / cols, constraints.maxHeight / rows);
+        final cell = raw.isFinite ? math.max(0.0, raw) : _fallbackCell;
+        final width = cell * cols;
+        final height = cell * rows;
+
+        return InteractiveViewer(
+          minScale: 1.0,
+          maxScale: 2.5,
+          child: Center(
+            child: SizedBox(
+              width: width,
+              height: height,
+              child: Stack(
+                children: [
+                  RepaintBoundary(
+                    child: CustomPaint(
+                      size: Size(width, height),
+                      painter: GridStaticPainter(
+                        board: board,
+                        revealedWordIds: revealedWordIds,
+                        botPlacedCells: botPlacedCells,
+                        puzzle: puzzle,
+                        cellSize: cell,
+                      ),
+                    ),
+                  ),
+                  RepaintBoundary(
+                    child: CustomPaint(
+                      size: Size(width, height),
+                      painter: GridDynamicPainter(
+                        pendingPlacements: pendingPlacements,
+                        highlightedWordId: highlightedWordId,
+                        revealMode: revealMode,
+                        puzzle: puzzle,
+                        cellSize: cell,
+                      ),
+                    ),
+                  ),
+                  GestureDetector(
+                    behavior: HitTestBehavior.translucent,
+                    onTapDown: (details) {
+                      if (cell <= 0) return;
+                      final col = (details.localPosition.dx / cell).floor();
+                      final row = (details.localPosition.dy / cell).floor();
+                      if (row >= 0 && col >= 0 && row < rows && col < cols) {
+                        final bottomHalf = details.localPosition.dy - row * cell > cell / 2;
+                        onCellTap(WordCell(row: row, col: col), bottomHalf);
+                      }
+                    },
+                  ),
+                ],
               ),
             ),
-            RepaintBoundary(
-              child: CustomPaint(
-                size: Size(width, height),
-                painter: GridDynamicPainter(
-                  pendingPlacements: pendingPlacements,
-                  highlightedWordId: highlightedWordId,
-                  revealMode: revealMode,
-                  puzzle: puzzle,
-                  cellSize: cellSize,
-                ),
-              ),
-            ),
-            GestureDetector(
-              behavior: HitTestBehavior.translucent,
-              onTapDown: (details) {
-                final col = (details.localPosition.dx / cellSize).floor();
-                final row = (details.localPosition.dy / cellSize).floor();
-                if (row >= 0 && col >= 0 && row < puzzle.grid.rows && col < puzzle.grid.cols) {
-                  final bottomHalf = details.localPosition.dy - row * cellSize > cellSize / 2;
-                  onCellTap(WordCell(row: row, col: col), bottomHalf);
-                }
-              },
-            ),
-          ],
-        ),
-      ),
+          ),
+        );
+      },
     );
   }
 }
@@ -111,6 +132,8 @@ class GridStaticPainter extends CustomPainter {
   final Map<WordCell, CellSpec> _cellMap;
   final Set<WordCell> _revealedCells;
 
+  static const ClueRenderer _clueRenderer = ClueRenderer();
+
   @override
   void paint(Canvas canvas, Size size) {
     for (var row = 0; row < puzzle.grid.rows; row++) {
@@ -118,10 +141,13 @@ class GridStaticPainter extends CustomPainter {
         final cell = WordCell(row: row, col: col);
         final spec = _cellMap[cell];
         final rect = Rect.fromLTWH(col * cellSize, row * cellSize, cellSize, cellSize);
-        if (spec == null || spec.type == CellType.blank) {
+        final isBlank = spec == null || spec.type == CellType.blank;
+        if (row == 0 && col == 0 && isBlank) {
+          _drawBrandCorner(canvas, rect);
+        } else if (isBlank) {
           _drawBlankCell(canvas, rect);
         } else if (spec.type == CellType.clue) {
-          _drawClueCell(canvas, rect, spec);
+          _clueRenderer.drawCell(canvas, rect, spec);
         } else {
           _drawLetterCell(canvas, rect, cell);
         }
@@ -134,58 +160,11 @@ class GridStaticPainter extends CustomPainter {
     canvas.drawRect(rect, Paint()..color = AppColors.gridCellLocked);
   }
 
-  void _drawClueCell(Canvas canvas, Rect rect, CellSpec spec) {
-    // TODO: add AppColors.clueCellBg token (0xFFE8F5E9)
-    canvas.drawRect(rect, Paint()..color = const Color(0xFFE8F5E9));
-    if (spec.clues.length >= 2) {
-      final half = rect.height / 2;
-      _drawSingleClue(canvas, Rect.fromLTWH(rect.left, rect.top, rect.width, half), spec.clues[0]);
-      _drawSingleClue(
-        canvas,
-        Rect.fromLTWH(rect.left, rect.top + half, rect.width, half),
-        spec.clues[1],
-      );
-      // Divider between the two clues; each half is its own reveal target.
-      canvas.drawLine(
-        Offset(rect.left, rect.top + half),
-        Offset(rect.right, rect.top + half),
-        Paint()
-          ..color = Colors.black
-          ..strokeWidth = 1,
-      );
-    } else if (spec.clues.isNotEmpty) {
-      _drawSingleClue(canvas, rect, spec.clues[0]);
-    }
-  }
-
-  void _drawSingleClue(Canvas canvas, Rect rect, ClueSpec clue) {
-    final textPainter = TextPainter(
-      text: TextSpan(
-        text: clue.text,
-        style: const TextStyle(fontSize: 9, color: Colors.black),
-      ),
-      textDirection: TextDirection.ltr,
-      maxLines: 2,
-    )..layout(maxWidth: rect.width - 4);
-    textPainter.paint(canvas, Offset(rect.left + 2, rect.top + 2));
-    _drawArrowBadge(canvas, rect, clue.arrow);
-  }
-
-  // Uniform arrow badge: white triangle on an orange rounded square for BOTH
-  // directions. The previous '▶' text glyph rendered as an emoji on Android
-  // (orange box) while '▼' stayed plain black; custom drawing keeps them equal.
-  void _drawArrowBadge(Canvas canvas, Rect rect, ClueArrow arrow) {
-    const s = 10.0;
-    final badge = Rect.fromLTWH(rect.right - s - 2, rect.bottom - s - 2, s, s);
-    canvas.drawRRect(
-      RRect.fromRectAndRadius(badge, const Radius.circular(2)),
-      Paint()..color = AppColors.accent,
-    );
-    final c = badge.center;
-    final pts = arrow == ClueArrow.right
-        ? [Offset(c.dx - 2, c.dy - 3), Offset(c.dx - 2, c.dy + 3), Offset(c.dx + 3, c.dy)]
-        : [Offset(c.dx - 3, c.dy - 2), Offset(c.dx + 3, c.dy - 2), Offset(c.dx, c.dy + 3)];
-    canvas.drawPath(Path()..addPolygon(pts, true), Paint()..color = Colors.white);
+  // Decorative top-left corner: a green brand tile with a centred "K".
+  // Painter-only placeholder for a real logo asset later.
+  void _drawBrandCorner(Canvas canvas, Rect rect) {
+    canvas.drawRect(rect, Paint()..color = AppColors.brandCorner);
+    _paintCenteredLetter(canvas, rect, 'K', Colors.white, fontSize: cellSize * 0.5);
   }
 
   void _drawLetterCell(Canvas canvas, Rect rect, WordCell cell) {
@@ -206,12 +185,19 @@ class GridStaticPainter extends CustomPainter {
     _paintCenteredLetter(canvas, rect, letter, color);
   }
 
-  // Draws [text] centred in [rect] using the standard cell letter style.
-  void _paintCenteredLetter(Canvas canvas, Rect rect, String text, Color color) {
+  // Draws [text] centred in [rect]. [fontSize] defaults to the standard cell
+  // letter size; the brand corner passes a larger value.
+  void _paintCenteredLetter(
+    Canvas canvas,
+    Rect rect,
+    String text,
+    Color color, {
+    double fontSize = 20,
+  }) {
     final tp = TextPainter(
       text: TextSpan(
         text: text,
-        style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: color),
+        style: TextStyle(fontSize: fontSize, fontWeight: FontWeight.bold, color: color),
       ),
       textDirection: TextDirection.ltr,
     )..layout();
@@ -222,9 +208,8 @@ class GridStaticPainter extends CustomPainter {
   }
 
   void _drawGridLines(Canvas canvas, Size size) {
-    // TODO: add AppColors.gridLine token
     final paint = Paint()
-      ..color = Colors.grey.shade300
+      ..color = AppColors.gridLine
       ..strokeWidth = 0.5;
     for (var col = 0; col <= puzzle.grid.cols; col++) {
       final x = col * cellSize;
@@ -240,7 +225,8 @@ class GridStaticPainter extends CustomPainter {
   bool shouldRepaint(covariant GridStaticPainter old) =>
       board != old.board ||
       revealedWordIds != old.revealedWordIds ||
-      botPlacedCells != old.botPlacedCells;
+      botPlacedCells != old.botPlacedCells ||
+      cellSize != old.cellSize;
 }
 
 class GridDynamicPainter extends CustomPainter {
@@ -316,5 +302,6 @@ class GridDynamicPainter extends CustomPainter {
   bool shouldRepaint(covariant GridDynamicPainter old) =>
       pendingPlacements != old.pendingPlacements ||
       highlightedWordId != old.highlightedWordId ||
-      revealMode != old.revealMode;
+      revealMode != old.revealMode ||
+      cellSize != old.cellSize;
 }

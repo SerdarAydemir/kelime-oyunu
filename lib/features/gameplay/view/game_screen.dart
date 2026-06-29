@@ -161,21 +161,19 @@ class _GameActiveBodyState extends State<_GameActiveBody> {
             botThinking: state.botThinking,
           ),
           Expanded(
-            child: SingleChildScrollView(
-              child: Center(
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 8),
-                  child: GridPainter(
-                    puzzle: state.puzzle,
-                    board: state.board,
-                    pendingPlacements: state.pendingPlacements,
-                    highlightedWordId: state.highlightedWordId,
-                    revealedWordIds: state.revealedWordIds,
-                    botPlacedCells: state.botPlacedCells,
-                    revealMode: _revealMode,
-                    onCellTap: (cell, bottomHalf) => _onCellTap(context, cell, bottomHalf),
-                  ),
-                ),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+              // GridPainter sizes itself to fill this bounded area (largest
+              // square cells that fit) and centres the grid — no scroll view.
+              child: GridPainter(
+                puzzle: state.puzzle,
+                board: state.board,
+                pendingPlacements: state.pendingPlacements,
+                highlightedWordId: state.highlightedWordId,
+                revealedWordIds: state.revealedWordIds,
+                botPlacedCells: state.botPlacedCells,
+                revealMode: _revealMode,
+                onCellTap: (cell, bottomHalf) => _onCellTap(context, cell, bottomHalf),
               ),
             ),
           ),

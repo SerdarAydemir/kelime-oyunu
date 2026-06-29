@@ -13,6 +13,10 @@ abstract final class AppColors {
   static const Color primaryDark = Color(0xFF0D47A1);
   static const Color accent = Color(0xFFFFA000);
 
+  /// Background of the decorative top-left corner cell (brand "K"). A deep
+  /// green tying into the clue-cell family; placeholder until a logo asset lands.
+  static const Color brandCorner = Color(0xFF2E7D32);
+
   // ── Semantic feedback ──────────────────────────────────────────────────────
   static const Color success = Color(0xFF2E7D32);
   static const Color error = Color(0xFFC62828);
@@ -23,6 +27,12 @@ abstract final class AppColors {
   static const Color gridCellSelected = Color(0xFFFFE082);
   static const Color gridCellFound = Color(0xFFA5D6A7);
   static const Color gridCellLocked = Color(0xFFB0BEC5);
+
+  /// Pale green background of a clue cell.
+  static const Color clueCellBg = Color(0xFFE8F5E9);
+
+  /// Hairline separating grid cells.
+  static const Color gridLine = Color(0xFFE0E0E0);
 
   // Faint solution letter drawn on a revealed-but-unplayed cell (joker ghost).
   // The grey family belongs exclusively to ghosts; bot letters are blue.
