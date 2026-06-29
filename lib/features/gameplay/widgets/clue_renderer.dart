@@ -7,21 +7,25 @@ import 'package:flutter/material.dart';
 import 'package:kelime_oyunu/core/constants/app_colors.dart';
 import 'package:kelime_oyunu/data/models/puzzle.dart';
 
-/// Paints clue cells onto the grid canvas: the pale background, the auto-scaled
-/// and centred clue text, the divider for double-clue cells, and the arrow
-/// badges. Isolated from GridPainter so clue typography (placeholder/font work)
-/// can evolve without touching grid geometry.
+/// Paints clue cells onto the grid canvas: the pale background, the clue text
+/// auto-scaled to show in full, the divider for double-clue cells, and a small
+/// direction arrow on the cell edge. Isolated from GridPainter so clue
+/// typography can evolve without touching grid geometry.
+///
+/// The arrow sits on the edge the word runs toward (right → right edge, down →
+/// bottom edge) and reserves only a thin strip there, so the text keeps almost
+/// the whole cell — the rest fills with wrapped text at the largest font that
+/// fits, mirroring how reference crosswords keep long clues fully readable.
 class ClueRenderer {
   const ClueRenderer();
 
-  // Readability bounds for auto-scaled clue text (logical px).
-  static const double _minFont = 8.0;
-  static const double _maxFont = 13.0;
+  // Readability bounds for the auto-scaled clue text (logical px).
+  static const double _minFont = 7.0;
+  static const double _maxFont = 14.0;
 
-  // Inner padding and the band reserved at the bottom for the arrow badge so
-  // centred text never collides with it.
-  static const double _pad = 2.0;
-  static const double _badge = 12.0;
+  // Inner padding and the strip reserved on the arrow's edge.
+  static const double _pad = 1.0;
+  static const double _strip = 7.0;
 
   /// Draws the full clue cell. [spec] must be a [CellType.clue] cell.
   void drawCell(Canvas canvas, Rect rect, CellSpec spec) {
@@ -50,48 +54,69 @@ class ClueRenderer {
     } else if (spec.clues.isNotEmpty) {
       truncated = _drawClueText(canvas, rect, spec.clues[0]);
     }
-    // Signal that the full text is only a tap away (it does not fit the cell).
+    // Only the rare clue that overflows even at the font floor still needs the
+    // "tap to read" hint.
     if (truncated) _drawTapIndicator(canvas, rect);
   }
 
-  /// Auto-scales [clue].text to fit [rect] (minus padding and the badge band),
-  /// then paints it centred on both axes. At the font floor it caps the line
-  /// count to whatever fits and ellipsises the overflow, so text is never
-  /// vertically clipped. Returns true when the text was ellipsised (i.e. some
-  /// text is hidden and the player should tap to read the full clue).
+  /// Picks the largest font (down to [_minFont]) at which [clue].text fits the
+  /// cell in full, wrapping across as many lines as needed, then paints it
+  /// centred. The direction arrow reserves only a thin strip on its own edge,
+  /// so the text keeps the rest of the cell. Returns true only if the text was
+  /// ellipsised (overflowed even at the floor) — those cells get the tap hint.
   bool _drawClueText(Canvas canvas, Rect rect, ClueSpec clue) {
-    final maxW = math.max(0.0, rect.width - _pad * 2);
-    final maxH = math.max(0.0, rect.height - _pad * 2 - _badge);
-    var fontSize = (rect.height * 0.26).clamp(_minFont, _maxFont);
+    final isDown = clue.arrow == ClueArrow.down;
+    final textW = math.max(0.0, rect.width - _pad * 2 - (isDown ? 0.0 : _strip));
+    final textH = math.max(0.0, rect.height - _pad * 2 - (isDown ? _strip : 0.0));
+    var fontSize = (rect.height * 0.30).clamp(_minFont, _maxFont);
 
     late TextPainter tp;
     while (true) {
       final atFloor = fontSize <= _minFont;
-      final maxLines = atFloor ? math.max(1, (maxH / (fontSize * 1.35)).floor()) : null;
+      // Tight line height so more lines fit; cap + ellipsise only at the floor.
+      final maxLines = atFloor ? math.max(1, (textH / (fontSize * 1.15)).floor()) : null;
       tp = TextPainter(
         text: TextSpan(
           text: clue.text,
-          style: TextStyle(fontSize: fontSize, color: Colors.black),
+          style: TextStyle(fontSize: fontSize, height: 1.05, color: Colors.black),
         ),
         textAlign: TextAlign.center,
         textDirection: TextDirection.ltr,
         maxLines: maxLines,
         ellipsis: atFloor ? '…' : null,
-      )..layout(maxWidth: maxW);
-      if (atFloor || tp.height <= maxH) break;
+      )..layout(maxWidth: textW);
+      if (atFloor || tp.height <= textH) break;
       fontSize -= 1;
     }
 
-    final dx = rect.left + _pad + (maxW - tp.width) / 2;
-    final dy = rect.top + _pad + (maxH - tp.height) / 2;
+    final dx = rect.left + _pad + (textW - tp.width) / 2;
+    final dy = rect.top + _pad + (textH - tp.height) / 2;
     tp.paint(canvas, Offset(dx, dy));
-    _drawArrowBadge(canvas, rect, clue.arrow);
+    _drawEdgeArrow(canvas, rect, clue.arrow);
     return tp.didExceedMaxLines;
   }
 
-  // Three small dots in the top-left corner signalling that the clue is
-  // truncated and its full text opens on tap. Top-left keeps it clear of the
-  // arrow badge (bottom-right) and the divider (mid-height).
+  // Small accent triangle on the edge the word runs toward: right arrow on the
+  // right edge (vertically centred), down arrow on the bottom edge (centred).
+  void _drawEdgeArrow(Canvas canvas, Rect rect, ClueArrow arrow) {
+    const a = 4.0; // half base / tip extent
+    final paint = Paint()..color = AppColors.accent;
+    final List<Offset> pts;
+    if (arrow == ClueArrow.right) {
+      final cy = rect.center.dy;
+      final base = rect.right - _strip + 1.5;
+      pts = [Offset(base, cy - a), Offset(base, cy + a), Offset(rect.right - 1.5, cy)];
+    } else {
+      final cx = rect.center.dx;
+      final base = rect.bottom - _strip + 1.5;
+      pts = [Offset(cx - a, base), Offset(cx + a, base), Offset(cx, rect.bottom - 1.5)];
+    }
+    canvas.drawPath(Path()..addPolygon(pts, true), paint);
+  }
+
+  // Three small dots in the top-left corner signalling that the clue overflowed
+  // and its full text opens on tap. Top-left stays clear of the edge arrow and
+  // the double-clue divider.
   void _drawTapIndicator(Canvas canvas, Rect rect) {
     const r = 0.9;
     const gap = 2.6;
@@ -101,22 +126,5 @@ class ClueRenderer {
     for (var i = 0; i < 3; i++) {
       canvas.drawCircle(Offset(x0 + i * gap, cy), r, paint);
     }
-  }
-
-  // Uniform arrow badge: white triangle on an orange rounded square for BOTH
-  // directions. Drawing both keeps them visually equal (a '▶' glyph rendered as
-  // an emoji on Android while '▼' stayed plain text).
-  void _drawArrowBadge(Canvas canvas, Rect rect, ClueArrow arrow) {
-    const s = 10.0;
-    final badge = Rect.fromLTWH(rect.right - s - 2, rect.bottom - s - 2, s, s);
-    canvas.drawRRect(
-      RRect.fromRectAndRadius(badge, const Radius.circular(2)),
-      Paint()..color = AppColors.accent,
-    );
-    final c = badge.center;
-    final pts = arrow == ClueArrow.right
-        ? [Offset(c.dx - 2, c.dy - 3), Offset(c.dx - 2, c.dy + 3), Offset(c.dx + 3, c.dy)]
-        : [Offset(c.dx - 3, c.dy - 2), Offset(c.dx + 3, c.dy - 2), Offset(c.dx, c.dy + 3)];
-    canvas.drawPath(Path()..addPolygon(pts, true), Paint()..color = Colors.white);
   }
 }

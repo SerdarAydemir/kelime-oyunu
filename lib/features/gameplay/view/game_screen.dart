@@ -151,8 +151,9 @@ class _GameActiveBodyState extends State<_GameActiveBody> {
         children: [
           // Lightweight progress label. Kept above ScoreHeader as its own
           // centred child so it never disturbs the "VS" centring in the header.
+          // Minimal top padding so the grid below claims the most vertical room.
           Padding(
-            padding: const EdgeInsets.only(top: AppDimensions.spacingXs),
+            padding: const EdgeInsets.only(top: AppDimensions.spacingXxs),
             child: Text('Bölüm ${widget.puzzleId} / $kLastLevelId', style: AppTypography.caption),
           ),
           ScoreHeader(
@@ -205,7 +206,6 @@ class _GameActiveBodyState extends State<_GameActiveBody> {
                 : null,
             onReveal: _canReveal ? () => setState(() => _revealMode = !_revealMode) : null,
           ),
-          const SizedBox(height: 50), // TODO: banner ad placeholder
         ],
       ),
     );
