@@ -13,7 +13,13 @@ import pytest
 
 from kelime_gen.csp_filler import CSPFiller
 from kelime_gen.mask_synth import synthesize
-from kelime_gen.pools import build_combined_pool, load_symbols, load_two_letter
+from kelime_gen.pools import (
+    build_combined_pool,
+    build_combined_pool_entries,
+    load_excluded_answers,
+    load_symbols,
+    load_two_letter,
+)
 from kelime_gen.schema import PuzzleSize, tr_upper
 from kelime_gen.validators.post_fill_safety import scan_grid, scan_segment
 from kelime_gen.word_pool import load_blacklist
@@ -66,6 +72,65 @@ def test_two_gram_inside_long_word_is_not_flagged() -> None:
     blacklist = {"XY"}
     assert scan_segment("AXYB", blacklist, min_n=3, max_n=8) == []  # 2-gram ignored
     assert scan_segment("XY", blacklist, min_n=3, max_n=8) == ["XY"]  # whole 2-letter caught
+
+
+# ── Answer-level exclusion (P2 pool cleanup) ─────────────────────────────────
+
+
+def test_load_excluded_answers_merges_txt_and_json(tmp_path: Path) -> None:
+    sensitive = tmp_path / "sensitive.txt"
+    sensitive.write_text(
+        "# category comment\nKÜRT\nşehit  # inline comment\n\n", encoding="utf-8"
+    )
+    rejected = tmp_path / "rejected.json"
+    rejected.write_text('["lük", "AMİRİİTA"]', encoding="utf-8")
+    excluded = load_excluded_answers(sensitive, rejected)
+    # tr_upper-normalised from both formats; comments and blanks dropped.
+    assert excluded == {"KÜRT", "ŞEHİT", "LÜK", "AMİRİİTA"}
+
+
+def test_load_excluded_answers_skips_missing_files(tmp_path: Path) -> None:
+    assert load_excluded_answers(tmp_path / "nope.txt", tmp_path / "nope.json") == frozenset()
+
+
+def test_excluded_words_never_enter_combined_entries() -> None:
+    main_pool = [
+        {"word": "KÜRT", "frequency_score": 80},
+        {"word": "ELMA", "frequency_score": 80},
+    ]
+    entries, _ = build_combined_pool_entries(
+        main_pool,  # type: ignore[arg-type]
+        _SYMBOLS,
+        _TWO_LETTER,
+        excluded=frozenset({"KÜRT", "AL"}),  # AL: also blocks a curated 2-letter word
+    )
+    words = {e["word"] for e in entries}
+    assert "KÜRT" not in words
+    assert "AL" not in words
+    assert "ELMA" in words  # non-excluded main-pool words are untouched
+
+
+def test_no_exclusion_keeps_pool_identical() -> None:
+    main_pool = [{"word": "ELMA", "frequency_score": 80}]
+    base, _ = build_combined_pool_entries(main_pool, _SYMBOLS, _TWO_LETTER)  # type: ignore[arg-type]
+    same, _ = build_combined_pool_entries(
+        main_pool,  # type: ignore[arg-type]
+        _SYMBOLS,
+        _TWO_LETTER,
+        excluded=frozenset(),
+    )
+    assert base == same
+
+
+def test_shipped_sensitive_answers_file_is_well_formed() -> None:
+    sensitive_path = _DATA / "raw" / "sensitive_answers.txt"
+    assert sensitive_path.exists()
+    excluded = load_excluded_answers(sensitive_path)
+    # Spot-check each approved category through one representative.
+    for word in ("KÜRT", "TANRI", "ŞEHİT", "İSHAL", "TECAVÜZ", "BUDALA", "TÜRK"):
+        assert word in excluded, f"{word} missing from sensitive_answers.txt"
+    # Everything normalises to Turkish uppercase (no lowercase leakage).
+    assert all(w == tr_upper(w) for w in excluded)
 
 
 @pytest.mark.parametrize("seed", range(3))

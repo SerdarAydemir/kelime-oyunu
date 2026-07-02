@@ -35,6 +35,33 @@ def _load_answer_clue(path: Path) -> dict[str, str]:
     return {tr_upper(item["answer"]): item["clue"] for item in raw}
 
 
+def load_excluded_answers(*paths: Path) -> frozenset[str]:
+    """Union of answer-level exclusions across data files, tr_upper-normalised.
+
+    Two formats by extension:
+      * ``.txt``  — one word per line; ``#`` starts a comment (sensitive list)
+      * ``.json`` — a JSON array of strings (rejected_words from the P2c audit)
+
+    Missing files are skipped so the generator still runs before the audit
+    data exists. Exclusion is ANSWER-level only: these words may still occur
+    as substrings of other fills (substring safety stays with the blacklist).
+    """
+    excluded: set[str] = set()
+    for path in paths:
+        if not path.exists():
+            continue
+        if path.suffix == ".json":
+            words = json.loads(path.read_text(encoding="utf-8"))
+        else:
+            words = [
+                stripped
+                for line in path.read_text(encoding="utf-8").splitlines()
+                if (stripped := line.split("#", 1)[0].strip())
+            ]
+        excluded.update(tr_upper(w) for w in words)
+    return frozenset(excluded)
+
+
 def load_symbols(path: Path) -> dict[str, str]:
     """Single-letter answer -> clue (e.g. 'N' -> 'Azotun simgesi')."""
     return _load_answer_clue(path)
@@ -71,6 +98,7 @@ def build_combined_pool_entries(
     symbols_path: Path,
     two_letter_path: Path,
     max_len: int = MAX_SLOT_LEN,
+    excluded: frozenset[str] = frozenset(),
 ) -> tuple[list[PoolEntry], dict[str, str]]:
     """Build (entries, curated_clues) for the min-1 combined pool.
 
@@ -84,6 +112,12 @@ def build_combined_pool_entries(
       answer -> clue text for every len-1 and len-2 entry.  The clue_writer
       gives these priority over TDK/placeholder so the player always sees a
       hand-crafted hint for single letters and common two-letter words.
+      Left unfiltered: the writer only ever looks up answers the fill placed.
+
+    excluded:
+      Answer-level exclusions (sensitive_answers.txt ∪ rejected_words.json,
+      see load_excluded_answers). Excluded words never enter the CSP pool, so
+      they cannot become puzzle answers.
 
     Both outputs are sorted by answer string for downstream determinism.
     """
@@ -92,7 +126,7 @@ def build_combined_pool_entries(
 
     curated_clues: dict[str, str] = {**symbols, **two_letter}
 
-    seen: set[str] = set()
+    seen: set[str] = set(excluded)
     entries: list[PoolEntry] = []
 
     for answer, _ in sorted(symbols.items()):

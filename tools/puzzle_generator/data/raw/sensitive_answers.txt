@@ -1,0 +1,72 @@
+# sensitive_answers.txt — words that must never appear as a puzzle ANSWER.
+#
+# Scope: answer-level exclusion only. These words may still occur as
+# substrings of other fills (e.g. KÜRTAJ); substring safety is the job of
+# profanity_blacklist.txt + post_fill_safety, NOT this file.
+#
+# LIVING FILE: extend it whenever the P2c usage-time audit flags a new
+# sensitive answer. Product owner (Serdar) approves category policy; see the
+# P2 cleanup decision log (2026-07). One word per line, '#' starts a comment.
+
+# ── 1. Ethnic / people / nationality names (full category, incl. TÜRK for a
+#      consistent "no ethnicity as answer" line; ROMAN/LAZ/ARAP may return
+#      later via approved_words with an innocent-sense clue) ────────────────
+KÜRT
+LAZ
+ÇERKEZ
+RUM
+ERMENİ
+ARAP
+ROMAN
+YAHUDİ
+ÇİNGENE
+ABHAZ
+TATAR
+BOŞNAK
+ALEVİ
+SÜNNİ
+TÜRK
+
+# ── 2. Religion / sacred (full category, no neutral-word exceptions) ───────
+TANRI
+İNCİL
+TEVRAT
+PEYGAMBER
+İSA
+CENNET
+CEHENNEM
+ŞEYTAN
+
+# ── 3. Political / recent-history sensitivities (full, incl. ŞEHİT) ────────
+SOYKIRIM
+TERÖR
+DARBE
+İDAM
+CUNTA
+MİLİS
+İSYAN
+ŞEHİT
+
+# ── 4. Medical / repulsive ──────────────────────────────────────────────────
+İSHAL
+KUSMUK
+BALGAM
+SÜMÜK
+DIŞKI
+İDRAR
+SİDİK
+APIŞ
+
+# ── 5. Death / violence / sexual ────────────────────────────────────────────
+TECAVÜZ
+TACİZ
+CİNAYET
+KATİL
+CESET
+İNTİHAR
+GENELEV
+
+# ── 6. Slang-borderline: only BUDALA is excluded. HIYAR / EŞEK / MAL stay in
+#      the pool (legitimate primary senses); the P1 re-clue criteria REQUIRE
+#      their clues to use the innocent sense (vegetable / animal / goods) ───
+BUDALA

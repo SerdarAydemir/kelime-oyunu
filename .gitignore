@@ -137,8 +137,15 @@ GoogleService-Info.plist[cite: 10]
 ios/Runner/Configs/Secrets.xcconfig[cite: 10]
 
 # --- Python İçerik Motoru (Puzzle Generator) ---
-tools/puzzle_generator/data/raw/
-tools/puzzle_generator/data/processed/
+# NOTE: `dir/*` (not `dir/`) so the `!` re-includes below can work — git never
+# descends into a fully-ignored directory.
+tools/puzzle_generator/data/raw/*
+tools/puzzle_generator/data/processed/*
+# Hand-curated / audit-accumulated label data is NOT derivable — keep in git
+# (unlike the downloaded tdk_words/blacklist and the derived pool/clue files).
+!tools/puzzle_generator/data/raw/sensitive_answers.txt
+!tools/puzzle_generator/data/processed/approved_words.json
+!tools/puzzle_generator/data/processed/rejected_words.json
 tools/puzzle_generator/data/cache/
 tools/puzzle_generator/reports/
 tools/puzzle_generator/.venv/
