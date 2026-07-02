@@ -111,7 +111,24 @@ Her yeni görev geldiğinde şu sırayı bozmadan uygula:
 
 ## Python Puzzle Generator Kuralları
 
-- Pipeline adımları (sırasıyla): CSP fill → mask template → clue_writer. (`architecture.md §7.1`)
+- **Geometri: 9×7 tam-çerçeve (Cross Up standardı).** Satır 0 + sütun 0 ipucu hücresi,
+  (0,0) tek BLANK; iç alan tamamen harf + k∈[5,7] iç ipucu. İç alanda blank yok.
+- **Mask kütüphanesi:** `mask_synth_frame.py` tüm geçerli mask'leri kapsamlı sayar
+  (~416k), `data/cache/frame_masks_9x7.json`'a deterministik cache'ler.
+  Mask seçimi seed=puzzle_id; fill başarısızlığında kütüphane sırasında bir
+  sonraki mask'e fallback (seed restart yok). Pack içinde mask tekrarı yasak.
+- Pipeline adımları (sırasıyla): mask (kütüphaneden) → CSP fill (attempt başına
+  node bütçesi) → post-fill güvenlik taraması → clue_writer → pydantic validate → JSON.
+- **Cevap-düzeyi dışlama:** `data/raw/sensitive_answers.txt` (elle bakım) +
+  `data/processed/rejected_words.json` (audit etiketi) havuza hiç girmez;
+  `approved_words.json` audit onay listesi. Bu listeleri onaysız genişletme.
+- **P0 placeholder gate (üç katman):** master clue'su olmayan kelime (1) havuza
+  alınmaz, (2) generator runtime'da fill'e girse bile atlanır, (3) `pack_report.py`
+  `source="placeholder"` tespit ederse pack BAŞARISIZ sayılır. Placeholder clue
+  ("N harfli kelime") oynanamaz — asla dosyaya yazılmaz.
+- **Üretim sonrası doğrulama:** `pack_report.py` her pack'i diskten bağımsız
+  yeniden okur (adet, köşe-blank, mask tekrarsızlığı, placeholder=0, kaynak/k
+  dağılımları) ve `reports/generation_report_*.json` yazar.
 - Post-fill küfür taraması zorunlu (`post_fill_safety.py`). `safety.post_fill_scanned = true` olmayan puzzle dosyaya yazılmaz. (`architecture.md §7.3`)
 - Hatalı puzzle: `SafetyGenerationError` fırlat, `sys.exit(1)` ile çık. Sessiz başarı yasak. (`coding-standards.md §8.7`)
 - Türkçe büyük/küçük harf: `tr_upper()` / `tr_lower()` helper'larını kullan, `str.upper()` değil. (`architecture.md §7.6`)
@@ -130,7 +147,7 @@ Her yeni görev geldiğinde şu sırayı bozmadan uygula:
 - [ ] Dark + light mode, telefon + tablet test edildi
 - [ ] Performans bütçesi aşılmadı (cold start < 2.5 sn, ≥ 60 fps)
 - [ ] `.arb`'a string eklendi, `package:` import kullanıldı
-- [ ] Commit mesajı Conventional Commits formatında
+- [ ] Commit mesajı Conventional Commits formatında ve **İngilizce** (başlık + gövde; UI stringleri Türkçe kalır)
 
 (`skills.md §12`, `coding-standards.md §6.2`)
 
@@ -147,8 +164,23 @@ Her yeni görev geldiğinde şu sırayı bozmadan uygula:
 
 
 ## Tamamlanan Adımlar
-- P1-P9: Python puzzle generator ✅ (200 puzzle üretildi)
+
+**Python generator:**
+- P1-P9: v1 pipeline ✅ (8×6 arşivi `assets/puzzles_v1/`, gitignored)
+- 9×7 tam-çerçeve üretim hattı ✅ — `mask_synth_frame` kütüphanesi, mask-sıralı
+  fallback, CSP node bütçesi, `pack_report` doğrulaması
+- P2a: cevap-düzeyi dışlama ✅ (sensitive + rejected/approved audit dosyaları)
+- P0: placeholder gate ✅ (havuz önleme + runtime skip + rapor tespiti)
+- Efektif havuz: ~30k master-clue'lu kelime ∖ sensitive ∖ rejected
+
+**Flutter:**
 - F1: Data layer (PuzzleData, repository) ✅
-- F2: Engines (ScoreEngine, RackManager, BotEngine) ✅  
+- F2: Engines (ScoreEngine, RackManager, BotEngine) ✅
 - F3: GameBloc ✅
-- F4: Başlıyor (GridPainter + GameScreen)
+- F4: GridPainter + GameScreen ✅ — fit-to-screen grid, ipucu render
+  (tam metin auto-fit, kenar okları, çift-ipucu okunabilirliği, dokun-oku)
+- Oyun sonu ekranı + sert ilerleme (kaybedince tekrar) ✅
+- Joker akışı ✅ — harf açma (reveal), harf değiştirme (kota + çift ödeme),
+  +1 harf slotu (mock reklam kapısı)
+- Talep-bilinçli rack ✅ — hedef hücresi olmayan taş verilmez, ölü taş
+  yenileme, oyun sonu rack küçülmesi
