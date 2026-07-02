@@ -5,6 +5,10 @@ assets/puzzles_backup/
 # full-frame production in assets/puzzles/ (reproducible: mask_synth.py kept)
 assets/puzzles_v1/
 
+# First 9x7 full-frame pack, archived before the answer-exclusion + placeholder
+# gate regeneration of assets/puzzles/ (reproducible from the generator)
+assets/puzzles_v2/
+
 # Miscellaneous
 *.class
 *.lock
