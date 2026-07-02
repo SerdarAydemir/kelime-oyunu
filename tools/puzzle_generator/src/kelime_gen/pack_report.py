@@ -26,11 +26,13 @@ def verify_pack(puzzles_dir: Path, expected_count: int) -> dict[str, Any]:
     """Re-read every written puzzle and verify the full-frame invariants.
 
     Returns a JSON-ready dict; verification["ok"] is True only when the file
-    count matches, every puzzle has exactly one BLANK cell at (0,0), and no
-    two puzzles share a mask (template_id).
+    count matches, every puzzle has exactly one BLANK cell at (0,0), no two
+    puzzles share a mask (template_id), and no clue has source="placeholder"
+    (detection half of the P0 gate — "N harfli kelime" is unplayable).
     """
     paths = [p for p in sorted(puzzles_dir.glob("*.json")) if p.name != MANIFEST_NAME]
     blank_violations: list[str] = []
+    placeholder_violations: list[str] = []
     sources: Counter[str] = Counter()
     k_distribution: Counter[int] = Counter()
     slot_counts: Counter[int] = Counter()
@@ -48,14 +50,22 @@ def verify_pack(puzzles_dir: Path, expected_count: int) -> dict[str, Any]:
         slot_counts[len(puzzle.words)] += 1
         for word in puzzle.words:
             sources[word.clue.source] += 1
+            if word.clue.source == "placeholder":
+                placeholder_violations.append(f"{path.name}: {word.answer}")
 
     duplicate_masks = [t for t, n in Counter(template_ids).items() if n > 1]
-    ok = len(paths) == expected_count and not blank_violations and not duplicate_masks
+    ok = (
+        len(paths) == expected_count
+        and not blank_violations
+        and not duplicate_masks
+        and not placeholder_violations
+    )
     return {
         "ok": ok,
         "expected_count": expected_count,
         "actual_count": len(paths),
         "blank_violations": blank_violations,
+        "placeholder_violations": placeholder_violations,
         "unique_masks": len(set(template_ids)),
         "duplicate_masks": duplicate_masks,
         "clue_sources": dict(sources),

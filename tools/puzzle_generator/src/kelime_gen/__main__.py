@@ -15,7 +15,7 @@ from kelime_gen.build_manifest import build_manifest
 from kelime_gen.generator import generate_pack
 from kelime_gen.mask_synth_frame import load_library
 from kelime_gen.pack_report import build_report, format_report, verify_pack, write_report
-from kelime_gen.pools import build_combined_pool_entries
+from kelime_gen.pools import build_combined_pool_entries, load_excluded_answers
 from kelime_gen.schema import PuzzleSize, tr_upper
 from kelime_gen.word_pool import PoolEntry, load_blacklist
 
@@ -30,6 +30,8 @@ _ROOT = Path(__file__).resolve().parents[2]
 _POOL_PATH = _ROOT / "data" / "processed" / "word_pool_cleaned.json"
 _MASTER_CLUES_PATH = _ROOT / "data" / "processed" / "master_clues.json"
 _BLACKLIST_PATH = _ROOT / "data" / "raw" / "profanity_blacklist.txt"
+_SENSITIVE_PATH = _ROOT / "data" / "raw" / "sensitive_answers.txt"
+_REJECTED_PATH = _ROOT / "data" / "processed" / "rejected_words.json"
 _SYMBOLS_PATH = _ROOT / "data" / "symbols.json"
 _TWO_LETTER_PATH = _ROOT / "data" / "two_letter.json"
 # Full-frame mask library cache (derived, reproducible -> not committed) and
@@ -37,8 +39,9 @@ _TWO_LETTER_PATH = _ROOT / "data" / "two_letter.json"
 _FRAME_CACHE_PATH = _ROOT / "data" / "cache" / "frame_masks_9x7.json"
 _REPORTS_DIR = _ROOT / "reports"
 
-# Words absent from master_clues.json fall back to the bare placeholder
-# ("N harfli kelime"); curated len-1/2 clues always take priority (§7).
+# Category hint for the clue writer's placeholder tier. Kept None: since the
+# P0 gate, pool words without a master clue never reach the writer, so the
+# placeholder tiers exist only as a guarded fallback (generator skips on them).
 _DEFAULT_CATEGORY: str | None = None
 
 # Only medium (9×7 full frame) is supported in this phase.
@@ -107,10 +110,18 @@ def generate(
             raise typer.Exit(code=1)
 
     main_pool = _load_main_pool(_POOL_PATH)
-    combined_pool, curated_clues = build_combined_pool_entries(
-        main_pool, _SYMBOLS_PATH, _TWO_LETTER_PATH
-    )
     master_clues = _load_master_clues(_MASTER_CLUES_PATH)
+    # P2/P0 pool hygiene: sensitive + audit-rejected answers never enter the
+    # pool, and main-pool words without a master clue are held back so the
+    # placeholder fallback cannot trigger (prevention half of the gate).
+    excluded = load_excluded_answers(_SENSITIVE_PATH, _REJECTED_PATH)
+    combined_pool, curated_clues = build_combined_pool_entries(
+        main_pool,
+        _SYMBOLS_PATH,
+        _TWO_LETTER_PATH,
+        excluded=excluded,
+        master_clue_answers=frozenset(master_clues),
+    )
     blacklist = load_blacklist(_BLACKLIST_PATH) if _BLACKLIST_PATH.exists() else set()
     puzzle_size = PuzzleSize(size)
 

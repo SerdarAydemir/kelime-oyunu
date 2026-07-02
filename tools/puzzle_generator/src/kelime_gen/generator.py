@@ -201,6 +201,14 @@ def generate_puzzle(
         curated_clues=curated_clues,
         master_clues=master_clues,
     )
+    # Placeholder gate (P0, runtime half): the pool pre-filter should make
+    # placeholders impossible, but if one slips through ("N harfli kelime" is
+    # unplayable) the puzzle is rejected here instead of being written to disk.
+    unclued = sorted({answer for (_, answer), c in zip(items, raw_clues) if c.source == "placeholder"})
+    if unclued:
+        print(f"[SKIP] puzzle {puzzle_id}: placeholder clue for {unclued}", file=sys.stderr)
+        return None
+
     slot_by_id = {s.slot_id: s for s in template.slots}
     clue_by_slot: dict[str, ClueSpec] = {
         sid: clue.model_copy(update={"word_id": sid, "arrow": slot_by_id[sid].direction})

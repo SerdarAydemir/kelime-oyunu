@@ -247,6 +247,16 @@ def _combined_pool() -> tuple[list[PoolEntry], dict[str, str]]:
     return build_combined_pool_entries(main_pool, _SYMBOLS_PATH, _TWO_LETTER_PATH)
 
 
+def _master_clues_for(pool: list[PoolEntry]) -> dict[str, str]:
+    """Blanket master clues for every len>=3 pool word.
+
+    Since the P0 placeholder gate, generate_puzzle rejects any puzzle whose
+    fill contains an unclued word — fixtures must therefore supply a master
+    clue for everything the CSP could place (len-1/2 stay curated).
+    """
+    return {p["word"]: f"İpucu: {p['word']}" for p in pool if len(p["word"]) >= 3}
+
+
 def _strip_timestamp(raw: str) -> object:
     """Remove the non-deterministic generated_at field before comparison."""
     d = json.loads(raw)
@@ -259,7 +269,13 @@ def _strip_timestamp(raw: str) -> object:
 
 def test_generate_puzzle_success() -> None:
     puzzle = generate_puzzle(
-        _crossing_template(), _pool(), set(), puzzle_id=1, category=None, seed=1
+        _crossing_template(),
+        _pool(),
+        set(),
+        puzzle_id=1,
+        category=None,
+        master_clues=_master_clues_for(_pool()),
+        seed=1,
     )
     assert puzzle is not None
     assert puzzle.safety.post_fill_scanned is True
@@ -285,6 +301,18 @@ def test_generate_puzzle_fill_error_returns_none() -> None:
     assert puzzle is None
 
 
+# ── 2b: the placeholder gate rejects a puzzle with an unclued answer ───────────
+
+
+def test_generate_puzzle_placeholder_gate_returns_none() -> None:
+    # No curated/master clues at all → every clue falls to the placeholder
+    # tier → the runtime gate must reject the puzzle instead of writing it.
+    puzzle = generate_puzzle(
+        _crossing_template(), _pool(), set(), puzzle_id=3, category=None, seed=1
+    )
+    assert puzzle is None
+
+
 # ── 3: generate_pack uses the frame library and writes re-parseable JSON ──────
 
 
@@ -300,6 +328,7 @@ def test_generate_pack_writes_json(tmp_path: Path) -> None:
         library=_SMALL_LIBRARY,
         size=PuzzleSize.SMALL,
         curated_clues=curated_clues,
+        master_clues=_master_clues_for(combined_pool),
     )
     assert result.success == 2, f"Expected 2 successes, got {result}"
     assert result.failed == 0
@@ -333,6 +362,7 @@ def test_generate_pack_unique_masks_and_stats(tmp_path: Path) -> None:
         library=_SMALL_LIBRARY,
         size=PuzzleSize.SMALL,
         curated_clues=curated_clues,
+        master_clues=_master_clues_for(combined_pool),
     )
     assert result.success == 6
     template_ids = [s["template_id"] for s in result.stats]
@@ -369,7 +399,13 @@ def test_generate_pack_count_exceeding_library_raises(tmp_path: Path) -> None:
 def test_generate_puzzle_blacklist_steers_fill() -> None:
     blacklist = {"KAR"}
     puzzle = generate_puzzle(
-        _crossing_template(), _pool(), blacklist, puzzle_id=1, category=None, seed=1
+        _crossing_template(),
+        _pool(),
+        blacklist,
+        puzzle_id=1,
+        category=None,
+        master_clues=_master_clues_for(_pool()),
+        seed=1,
     )
     assert puzzle is not None
     assert puzzle.safety.post_fill_scanned is True
@@ -416,6 +452,7 @@ def test_generate_pack_determinism(tmp_path: Path) -> None:
             library=_SMALL_LIBRARY,
             size=PuzzleSize.SMALL,
             curated_clues=curated_clues,
+            master_clues=_master_clues_for(combined_pool),
         )
         assert result.failed == 0, f"Expected 0 failures, got {result.failed}"
         assert result.success == 5, f"Expected 5 successes, got {result.success}"

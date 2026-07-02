@@ -20,7 +20,12 @@ from kelime_gen.schema import (
 # ── Minimal valid puzzle fixture (KEDİ crosses DAL at 'D') ────────────────────
 
 
-def _puzzle(puzzle_id: int, template_id: str, with_corner_blank: bool = True) -> PuzzleData:
+def _puzzle(
+    puzzle_id: int,
+    template_id: str,
+    with_corner_blank: bool = True,
+    w2_source: str = "curated",
+) -> PuzzleData:
     cells = [
         CellSpec(
             row=1,
@@ -69,7 +74,11 @@ def _puzzle(puzzle_id: int, template_id: str, with_corner_blank: bool = True) ->
                 clue_cell=WordCell(row=0, col=3),
                 start_cell=WordCell(row=1, col=3),
                 cells=[WordCell(row=r, col=3) for r in range(1, 4)],
-                clue=ClueSpec(text="Ağaç parçası", arrow=ClueArrow.DOWN, word_id="w2"),
+                # source left parametric: schema defaults to "placeholder", which
+                # verify_pack now rejects — the clean fixture must say so explicitly.
+                clue=ClueSpec(
+                    text="Ağaç parçası", arrow=ClueArrow.DOWN, word_id="w2", source=w2_source
+                ),
             ),
         ],
         template_id=template_id,
@@ -108,8 +117,9 @@ def test_verify_pack_accepts_clean_pack(tmp_path: Path) -> None:
     assert result["actual_count"] == 2
     assert result["unique_masks"] == 2
     assert result["blank_violations"] == []
-    # One llm + one placeholder clue per puzzle.
-    assert result["clue_sources"] == {"llm": 2, "placeholder": 2}
+    # One llm + one curated clue per puzzle (placeholder would fail the gate).
+    assert result["clue_sources"] == {"llm": 2, "curated": 2}
+    assert result["placeholder_violations"] == []
     # The fixture has one interior clue: (1,0) is frame, (0,3) is frame -> k counts
     # only clues with row>=1 AND col>=1; (1,0) has col=0 so k=0 for every puzzle.
     assert result["k_distribution"] == {"0": 2}
@@ -136,6 +146,15 @@ def test_verify_pack_flags_duplicate_masks(tmp_path: Path) -> None:
     assert result["ok"] is False
     assert result["duplicate_masks"] == ["same_mask"]
     assert result["unique_masks"] == 1
+
+
+def test_verify_pack_flags_placeholder_clue(tmp_path: Path) -> None:
+    # Detection half of the P0 gate: a written pack containing an unplayable
+    # "N harfli kelime" style clue must fail verification.
+    _write(tmp_path, [_puzzle(1, "small_frame_a", w2_source="placeholder")])
+    result = verify_pack(tmp_path, expected_count=1)
+    assert result["ok"] is False
+    assert result["placeholder_violations"] == ["puzzle_0001.json: DAL"]
 
 
 def test_verify_pack_skips_manifest(tmp_path: Path) -> None:

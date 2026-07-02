@@ -99,6 +99,7 @@ def build_combined_pool_entries(
     two_letter_path: Path,
     max_len: int = MAX_SLOT_LEN,
     excluded: frozenset[str] = frozenset(),
+    master_clue_answers: frozenset[str] | None = None,
 ) -> tuple[list[PoolEntry], dict[str, str]]:
     """Build (entries, curated_clues) for the min-1 combined pool.
 
@@ -118,6 +119,12 @@ def build_combined_pool_entries(
       Answer-level exclusions (sensitive_answers.txt ∪ rejected_words.json,
       see load_excluded_answers). Excluded words never enter the CSP pool, so
       they cannot become puzzle answers.
+
+    master_clue_answers:
+      Prevention half of the placeholder gate (P0): when given, a main-pool
+      word enters the CSP pool only if it has a master clue, so the writer's
+      placeholder fallback can never trigger. None disables the filter (unit
+      tests / legacy callers). Len-1/2 entries are exempt — always curated.
 
     Both outputs are sorted by answer string for downstream determinism.
     """
@@ -142,6 +149,8 @@ def build_combined_pool_entries(
     for entry in main_pool:
         upper = tr_upper(entry["word"])
         if 3 <= len(upper) <= max_len and upper not in seen:
+            if master_clue_answers is not None and upper not in master_clue_answers:
+                continue
             seen.add(upper)
             entries.append(PoolEntry(word=upper, frequency_score=entry["frequency_score"]))
 

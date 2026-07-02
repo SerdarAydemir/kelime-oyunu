@@ -110,6 +110,25 @@ def test_excluded_words_never_enter_combined_entries() -> None:
     assert "ELMA" in words  # non-excluded main-pool words are untouched
 
 
+def test_unclued_main_words_are_held_back_when_filter_active() -> None:
+    main_pool = [
+        {"word": "ELMA", "frequency_score": 80},  # has a master clue
+        {"word": "FOTA", "frequency_score": 80},  # no master clue → held back
+    ]
+    entries, _ = build_combined_pool_entries(
+        main_pool,  # type: ignore[arg-type]
+        _SYMBOLS,
+        _TWO_LETTER,
+        master_clue_answers=frozenset({"ELMA"}),
+    )
+    words = {e["word"] for e in entries}
+    assert "ELMA" in words
+    assert "FOTA" not in words
+    # Len-1/2 curated entries are exempt from the master-clue requirement.
+    assert any(len(w) == 1 for w in words)
+    assert any(len(w) == 2 for w in words)
+
+
 def test_no_exclusion_keeps_pool_identical() -> None:
     main_pool = [{"word": "ELMA", "frequency_score": 80}]
     base, _ = build_combined_pool_entries(main_pool, _SYMBOLS, _TWO_LETTER)  # type: ignore[arg-type]
