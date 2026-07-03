@@ -1,0 +1,1607 @@
+{
+  "schema_version": 2,
+  "generated_at": "2026-07-03T06:27:13.474599+00:00",
+  "total_puzzles": 200,
+  "puzzles": [
+    {
+      "puzzle_id": 1,
+      "file": "puzzle_0001.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_120400120000"
+    },
+    {
+      "puzzle_id": 2,
+      "file": "puzzle_0002.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_008018084000"
+    },
+    {
+      "puzzle_id": 3,
+      "file": "puzzle_0003.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_010106800100"
+    },
+    {
+      "puzzle_id": 4,
+      "file": "puzzle_0004.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_00c1200a0000"
+    },
+    {
+      "puzzle_id": 5,
+      "file": "puzzle_0005.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_080020600900"
+    },
+    {
+      "puzzle_id": 6,
+      "file": "puzzle_0006.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_020408180000"
+    },
+    {
+      "puzzle_id": 7,
+      "file": "puzzle_0007.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_200400102c00"
+    },
+    {
+      "puzzle_id": 8,
+      "file": "puzzle_0008.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_004810004c00"
+    },
+    {
+      "puzzle_id": 9,
+      "file": "puzzle_0009.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_100802614000"
+    },
+    {
+      "puzzle_id": 10,
+      "file": "puzzle_0010.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_504800182000"
+    },
+    {
+      "puzzle_id": 11,
+      "file": "puzzle_0011.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_100018182200"
+    },
+    {
+      "puzzle_id": 12,
+      "file": "puzzle_0012.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_104128020080"
+    },
+    {
+      "puzzle_id": 13,
+      "file": "puzzle_0013.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_080208880400"
+    },
+    {
+      "puzzle_id": 14,
+      "file": "puzzle_0014.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_0a0200c00000"
+    },
+    {
+      "puzzle_id": 15,
+      "file": "puzzle_0015.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_0005a0008200"
+    },
+    {
+      "puzzle_id": 16,
+      "file": "puzzle_0016.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_400604810000"
+    },
+    {
+      "puzzle_id": 17,
+      "file": "puzzle_0017.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_2080a0102080"
+    },
+    {
+      "puzzle_id": 18,
+      "file": "puzzle_0018.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_408080102000"
+    },
+    {
+      "puzzle_id": 19,
+      "file": "puzzle_0019.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_002808220000"
+    },
+    {
+      "puzzle_id": 20,
+      "file": "puzzle_0020.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_204000028400"
+    },
+    {
+      "puzzle_id": 21,
+      "file": "puzzle_0021.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 40,
+      "template_id": "medium_frame_280c00004000"
+    },
+    {
+      "puzzle_id": 22,
+      "file": "puzzle_0022.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_200020106000"
+    },
+    {
+      "puzzle_id": 23,
+      "file": "puzzle_0023.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_100808282000"
+    },
+    {
+      "puzzle_id": 24,
+      "file": "puzzle_0024.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_000012a0c100"
+    },
+    {
+      "puzzle_id": 25,
+      "file": "puzzle_0025.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_488010900000"
+    },
+    {
+      "puzzle_id": 26,
+      "file": "puzzle_0026.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_000184800180"
+    },
+    {
+      "puzzle_id": 27,
+      "file": "puzzle_0027.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_106080c08000"
+    },
+    {
+      "puzzle_id": 28,
+      "file": "puzzle_0028.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_100028080400"
+    },
+    {
+      "puzzle_id": 29,
+      "file": "puzzle_0029.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_400126100400"
+    },
+    {
+      "puzzle_id": 30,
+      "file": "puzzle_0030.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_28003c002000"
+    },
+    {
+      "puzzle_id": 31,
+      "file": "puzzle_0031.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_000082488000"
+    },
+    {
+      "puzzle_id": 32,
+      "file": "puzzle_0032.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_020100208080"
+    },
+    {
+      "puzzle_id": 33,
+      "file": "puzzle_0033.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_504008030400"
+    },
+    {
+      "puzzle_id": 34,
+      "file": "puzzle_0034.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_20ca00080800"
+    },
+    {
+      "puzzle_id": 35,
+      "file": "puzzle_0035.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_4001a0408200"
+    },
+    {
+      "puzzle_id": 36,
+      "file": "puzzle_0036.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_200c12080000"
+    },
+    {
+      "puzzle_id": 37,
+      "file": "puzzle_0037.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_080110002100"
+    },
+    {
+      "puzzle_id": 38,
+      "file": "puzzle_0038.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_020602320000"
+    },
+    {
+      "puzzle_id": 39,
+      "file": "puzzle_0039.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_000620190000"
+    },
+    {
+      "puzzle_id": 40,
+      "file": "puzzle_0040.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_100184980000"
+    },
+    {
+      "puzzle_id": 41,
+      "file": "puzzle_0041.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_506000808000"
+    },
+    {
+      "puzzle_id": 42,
+      "file": "puzzle_0042.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_100010102200"
+    },
+    {
+      "puzzle_id": 43,
+      "file": "puzzle_0043.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_002000312000"
+    },
+    {
+      "puzzle_id": 44,
+      "file": "puzzle_0044.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_008010704800"
+    },
+    {
+      "puzzle_id": 45,
+      "file": "puzzle_0045.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_088220204000"
+    },
+    {
+      "puzzle_id": 46,
+      "file": "puzzle_0046.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_020080114000"
+    },
+    {
+      "puzzle_id": 47,
+      "file": "puzzle_0047.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_282008004100"
+    },
+    {
+      "puzzle_id": 48,
+      "file": "puzzle_0048.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_400128220100"
+    },
+    {
+      "puzzle_id": 49,
+      "file": "puzzle_0049.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_010022120000"
+    },
+    {
+      "puzzle_id": 50,
+      "file": "puzzle_0050.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_20000cc00600"
+    },
+    {
+      "puzzle_id": 51,
+      "file": "puzzle_0051.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_020026200800"
+    },
+    {
+      "puzzle_id": 52,
+      "file": "puzzle_0052.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_084008422000"
+    },
+    {
+      "puzzle_id": 53,
+      "file": "puzzle_0053.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_000c0c002080"
+    },
+    {
+      "puzzle_id": 54,
+      "file": "puzzle_0054.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_200002030100"
+    },
+    {
+      "puzzle_id": 55,
+      "file": "puzzle_0055.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_080082120000"
+    },
+    {
+      "puzzle_id": 56,
+      "file": "puzzle_0056.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_41000e030000"
+    },
+    {
+      "puzzle_id": 57,
+      "file": "puzzle_0057.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_002600104000"
+    },
+    {
+      "puzzle_id": 58,
+      "file": "puzzle_0058.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_000038100880"
+    },
+    {
+      "puzzle_id": 59,
+      "file": "puzzle_0059.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_004120418000"
+    },
+    {
+      "puzzle_id": 60,
+      "file": "puzzle_0060.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_1200044a0000"
+    },
+    {
+      "puzzle_id": 61,
+      "file": "puzzle_0061.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_130008182000"
+    },
+    {
+      "puzzle_id": 62,
+      "file": "puzzle_0062.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_400204090000"
+    },
+    {
+      "puzzle_id": 63,
+      "file": "puzzle_0063.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_088c00180800"
+    },
+    {
+      "puzzle_id": 64,
+      "file": "puzzle_0064.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_104402c00100"
+    },
+    {
+      "puzzle_id": 65,
+      "file": "puzzle_0065.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_010106c10000"
+    },
+    {
+      "puzzle_id": 66,
+      "file": "puzzle_0066.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_010a00100200"
+    },
+    {
+      "puzzle_id": 67,
+      "file": "puzzle_0067.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_02000c002800"
+    },
+    {
+      "puzzle_id": 68,
+      "file": "puzzle_0068.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_100f00002080"
+    },
+    {
+      "puzzle_id": 69,
+      "file": "puzzle_0069.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_000c04088000"
+    },
+    {
+      "puzzle_id": 70,
+      "file": "puzzle_0070.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_100420000180"
+    },
+    {
+      "puzzle_id": 71,
+      "file": "puzzle_0071.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_200380400100"
+    },
+    {
+      "puzzle_id": 72,
+      "file": "puzzle_0072.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_020002300080"
+    },
+    {
+      "puzzle_id": 73,
+      "file": "puzzle_0073.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_10001080c100"
+    },
+    {
+      "puzzle_id": 74,
+      "file": "puzzle_0074.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_2041020a8000"
+    },
+    {
+      "puzzle_id": 75,
+      "file": "puzzle_0075.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_100002898200"
+    },
+    {
+      "puzzle_id": 76,
+      "file": "puzzle_0076.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_410000228100"
+    },
+    {
+      "puzzle_id": 77,
+      "file": "puzzle_0077.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_038180800000"
+    },
+    {
+      "puzzle_id": 78,
+      "file": "puzzle_0078.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_500000406000"
+    },
+    {
+      "puzzle_id": 79,
+      "file": "puzzle_0079.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_200302020000"
+    },
+    {
+      "puzzle_id": 80,
+      "file": "puzzle_0080.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_088200122000"
+    },
+    {
+      "puzzle_id": 81,
+      "file": "puzzle_0081.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_200306802000"
+    },
+    {
+      "puzzle_id": 82,
+      "file": "puzzle_0082.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_20020c400000"
+    },
+    {
+      "puzzle_id": 83,
+      "file": "puzzle_0083.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_200000d84800"
+    },
+    {
+      "puzzle_id": 84,
+      "file": "puzzle_0084.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_100100406100"
+    },
+    {
+      "puzzle_id": 85,
+      "file": "puzzle_0085.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_000100388200"
+    },
+    {
+      "puzzle_id": 86,
+      "file": "puzzle_0086.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_000802030100"
+    },
+    {
+      "puzzle_id": 87,
+      "file": "puzzle_0087.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_200402880000"
+    },
+    {
+      "puzzle_id": 88,
+      "file": "puzzle_0088.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_000c00710800"
+    },
+    {
+      "puzzle_id": 89,
+      "file": "puzzle_0089.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_020610004000"
+    },
+    {
+      "puzzle_id": 90,
+      "file": "puzzle_0090.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_000200c90100"
+    },
+    {
+      "puzzle_id": 91,
+      "file": "puzzle_0091.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_028102008000"
+    },
+    {
+      "puzzle_id": 92,
+      "file": "puzzle_0092.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_02041c030000"
+    },
+    {
+      "puzzle_id": 93,
+      "file": "puzzle_0093.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_130004210800"
+    },
+    {
+      "puzzle_id": 94,
+      "file": "puzzle_0094.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_4000a4200c00"
+    },
+    {
+      "puzzle_id": 95,
+      "file": "puzzle_0095.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_22000c022080"
+    },
+    {
+      "puzzle_id": 96,
+      "file": "puzzle_0096.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_410000608200"
+    },
+    {
+      "puzzle_id": 97,
+      "file": "puzzle_0097.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_00001c900400"
+    },
+    {
+      "puzzle_id": 98,
+      "file": "puzzle_0098.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_40002c100200"
+    },
+    {
+      "puzzle_id": 99,
+      "file": "puzzle_0099.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 38,
+      "template_id": "medium_frame_004102f00000"
+    },
+    {
+      "puzzle_id": 100,
+      "file": "puzzle_0100.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_200400288000"
+    },
+    {
+      "puzzle_id": 101,
+      "file": "puzzle_0101.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_00002020e080"
+    },
+    {
+      "puzzle_id": 102,
+      "file": "puzzle_0102.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_200808080100"
+    },
+    {
+      "puzzle_id": 103,
+      "file": "puzzle_0103.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 38,
+      "template_id": "medium_frame_1000a0704000"
+    },
+    {
+      "puzzle_id": 104,
+      "file": "puzzle_0104.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_0001b0000080"
+    },
+    {
+      "puzzle_id": 105,
+      "file": "puzzle_0105.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_228208002000"
+    },
+    {
+      "puzzle_id": 106,
+      "file": "puzzle_0106.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_106008800300"
+    },
+    {
+      "puzzle_id": 107,
+      "file": "puzzle_0107.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_020204090800"
+    },
+    {
+      "puzzle_id": 108,
+      "file": "puzzle_0108.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_110080004100"
+    },
+    {
+      "puzzle_id": 109,
+      "file": "puzzle_0109.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_100010204900"
+    },
+    {
+      "puzzle_id": 110,
+      "file": "puzzle_0110.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_000118808300"
+    },
+    {
+      "puzzle_id": 111,
+      "file": "puzzle_0111.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_000818082200"
+    },
+    {
+      "puzzle_id": 112,
+      "file": "puzzle_0112.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_106800c04000"
+    },
+    {
+      "puzzle_id": 113,
+      "file": "puzzle_0113.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_00080040a800"
+    },
+    {
+      "puzzle_id": 114,
+      "file": "puzzle_0114.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_018400308000"
+    },
+    {
+      "puzzle_id": 115,
+      "file": "puzzle_0115.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_1000a8010200"
+    },
+    {
+      "puzzle_id": 116,
+      "file": "puzzle_0116.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 38,
+      "template_id": "medium_frame_40003c104000"
+    },
+    {
+      "puzzle_id": 117,
+      "file": "puzzle_0117.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_010818120000"
+    },
+    {
+      "puzzle_id": 118,
+      "file": "puzzle_0118.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_410000088800"
+    },
+    {
+      "puzzle_id": 119,
+      "file": "puzzle_0119.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_100208c00400"
+    },
+    {
+      "puzzle_id": 120,
+      "file": "puzzle_0120.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_204080628000"
+    },
+    {
+      "puzzle_id": 121,
+      "file": "puzzle_0121.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_08000402a000"
+    },
+    {
+      "puzzle_id": 122,
+      "file": "puzzle_0122.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_200a08884000"
+    },
+    {
+      "puzzle_id": 123,
+      "file": "puzzle_0123.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_004818000080"
+    },
+    {
+      "puzzle_id": 124,
+      "file": "puzzle_0124.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_100000d10080"
+    },
+    {
+      "puzzle_id": 125,
+      "file": "puzzle_0125.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_0200100a4200"
+    },
+    {
+      "puzzle_id": 126,
+      "file": "puzzle_0126.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_008214080000"
+    },
+    {
+      "puzzle_id": 127,
+      "file": "puzzle_0127.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_004000808c00"
+    },
+    {
+      "puzzle_id": 128,
+      "file": "puzzle_0128.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_01000020cc00"
+    },
+    {
+      "puzzle_id": 129,
+      "file": "puzzle_0129.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_2080201a0200"
+    },
+    {
+      "puzzle_id": 130,
+      "file": "puzzle_0130.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_208010604080"
+    },
+    {
+      "puzzle_id": 131,
+      "file": "puzzle_0131.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_200006020300"
+    },
+    {
+      "puzzle_id": 132,
+      "file": "puzzle_0132.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_008804588000"
+    },
+    {
+      "puzzle_id": 133,
+      "file": "puzzle_0133.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_128200130000"
+    },
+    {
+      "puzzle_id": 134,
+      "file": "puzzle_0134.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_108210120080"
+    },
+    {
+      "puzzle_id": 135,
+      "file": "puzzle_0135.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_418022004000"
+    },
+    {
+      "puzzle_id": 136,
+      "file": "puzzle_0136.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_0800a0330000"
+    },
+    {
+      "puzzle_id": 137,
+      "file": "puzzle_0137.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 40,
+      "template_id": "medium_frame_02000001c080"
+    },
+    {
+      "puzzle_id": 138,
+      "file": "puzzle_0138.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_00000e400300"
+    },
+    {
+      "puzzle_id": 139,
+      "file": "puzzle_0139.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_000002030300"
+    },
+    {
+      "puzzle_id": 140,
+      "file": "puzzle_0140.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_080620000200"
+    },
+    {
+      "puzzle_id": 141,
+      "file": "puzzle_0141.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_204c06200000"
+    },
+    {
+      "puzzle_id": 142,
+      "file": "puzzle_0142.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_11080e200000"
+    },
+    {
+      "puzzle_id": 143,
+      "file": "puzzle_0143.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_410200082000"
+    },
+    {
+      "puzzle_id": 144,
+      "file": "puzzle_0144.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_0a0306000800"
+    },
+    {
+      "puzzle_id": 145,
+      "file": "puzzle_0145.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_030006030100"
+    },
+    {
+      "puzzle_id": 146,
+      "file": "puzzle_0146.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_120020080100"
+    },
+    {
+      "puzzle_id": 147,
+      "file": "puzzle_0147.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_200a00004400"
+    },
+    {
+      "puzzle_id": 148,
+      "file": "puzzle_0148.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_004084e08000"
+    },
+    {
+      "puzzle_id": 149,
+      "file": "puzzle_0149.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_012204800000"
+    },
+    {
+      "puzzle_id": 150,
+      "file": "puzzle_0150.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_200802102200"
+    },
+    {
+      "puzzle_id": 151,
+      "file": "puzzle_0151.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_0080bc020000"
+    },
+    {
+      "puzzle_id": 152,
+      "file": "puzzle_0152.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_000232006100"
+    },
+    {
+      "puzzle_id": 153,
+      "file": "puzzle_0153.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_120100604800"
+    },
+    {
+      "puzzle_id": 154,
+      "file": "puzzle_0154.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_00019a004000"
+    },
+    {
+      "puzzle_id": 155,
+      "file": "puzzle_0155.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_200110220180"
+    },
+    {
+      "puzzle_id": 156,
+      "file": "puzzle_0156.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_120000036100"
+    },
+    {
+      "puzzle_id": 157,
+      "file": "puzzle_0157.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_120130404000"
+    },
+    {
+      "puzzle_id": 158,
+      "file": "puzzle_0158.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_002c04008080"
+    },
+    {
+      "puzzle_id": 159,
+      "file": "puzzle_0159.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_000802708200"
+    },
+    {
+      "puzzle_id": 160,
+      "file": "puzzle_0160.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_102080108000"
+    },
+    {
+      "puzzle_id": 161,
+      "file": "puzzle_0161.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_208000b02400"
+    },
+    {
+      "puzzle_id": 162,
+      "file": "puzzle_0162.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 40,
+      "template_id": "medium_frame_006100004100"
+    },
+    {
+      "puzzle_id": 163,
+      "file": "puzzle_0163.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_288020118000"
+    },
+    {
+      "puzzle_id": 164,
+      "file": "puzzle_0164.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_080800122000"
+    },
+    {
+      "puzzle_id": 165,
+      "file": "puzzle_0165.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_00010a400800"
+    },
+    {
+      "puzzle_id": 166,
+      "file": "puzzle_0166.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_404008010200"
+    },
+    {
+      "puzzle_id": 167,
+      "file": "puzzle_0167.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_008002f00000"
+    },
+    {
+      "puzzle_id": 168,
+      "file": "puzzle_0168.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_100100880400"
+    },
+    {
+      "puzzle_id": 169,
+      "file": "puzzle_0169.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_080022214000"
+    },
+    {
+      "puzzle_id": 170,
+      "file": "puzzle_0170.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_220018420000"
+    },
+    {
+      "puzzle_id": 171,
+      "file": "puzzle_0171.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_410220206000"
+    },
+    {
+      "puzzle_id": 172,
+      "file": "puzzle_0172.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_288014800000"
+    },
+    {
+      "puzzle_id": 173,
+      "file": "puzzle_0173.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_200402284000"
+    },
+    {
+      "puzzle_id": 174,
+      "file": "puzzle_0174.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_000008980100"
+    },
+    {
+      "puzzle_id": 175,
+      "file": "puzzle_0175.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_088106100800"
+    },
+    {
+      "puzzle_id": 176,
+      "file": "puzzle_0176.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_000628200000"
+    },
+    {
+      "puzzle_id": 177,
+      "file": "puzzle_0177.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_000e00d00000"
+    },
+    {
+      "puzzle_id": 178,
+      "file": "puzzle_0178.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_100022020080"
+    },
+    {
+      "puzzle_id": 179,
+      "file": "puzzle_0179.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_000088d02000"
+    },
+    {
+      "puzzle_id": 180,
+      "file": "puzzle_0180.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_200200880400"
+    },
+    {
+      "puzzle_id": 181,
+      "file": "puzzle_0181.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_098800004000"
+    },
+    {
+      "puzzle_id": 182,
+      "file": "puzzle_0182.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_100010384200"
+    },
+    {
+      "puzzle_id": 183,
+      "file": "puzzle_0183.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_0b0020100000"
+    },
+    {
+      "puzzle_id": 184,
+      "file": "puzzle_0184.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_0a0708000000"
+    },
+    {
+      "puzzle_id": 185,
+      "file": "puzzle_0185.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_100030002800"
+    },
+    {
+      "puzzle_id": 186,
+      "file": "puzzle_0186.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_210020204100"
+    },
+    {
+      "puzzle_id": 187,
+      "file": "puzzle_0187.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_280420100200"
+    },
+    {
+      "puzzle_id": 188,
+      "file": "puzzle_0188.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_004008584000"
+    },
+    {
+      "puzzle_id": 189,
+      "file": "puzzle_0189.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_1080b0000c00"
+    },
+    {
+      "puzzle_id": 190,
+      "file": "puzzle_0190.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_020008410100"
+    },
+    {
+      "puzzle_id": 191,
+      "file": "puzzle_0191.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_20c0200b0000"
+    },
+    {
+      "puzzle_id": 192,
+      "file": "puzzle_0192.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_412020104000"
+    },
+    {
+      "puzzle_id": 193,
+      "file": "puzzle_0193.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_41020e800000"
+    },
+    {
+      "puzzle_id": 194,
+      "file": "puzzle_0194.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_010080118000"
+    },
+    {
+      "puzzle_id": 195,
+      "file": "puzzle_0195.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_000810188c00"
+    },
+    {
+      "puzzle_id": 196,
+      "file": "puzzle_0196.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_200520380000"
+    },
+    {
+      "puzzle_id": 197,
+      "file": "puzzle_0197.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_280804184000"
+    },
+    {
+      "puzzle_id": 198,
+      "file": "puzzle_0198.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_004c00004800"
+    },
+    {
+      "puzzle_id": 199,
+      "file": "puzzle_0199.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_220004204080"
+    },
+    {
+      "puzzle_id": 200,
+      "file": "puzzle_0200.json",
+      "size": "medium",
+      "difficulty": "medium",
+      "difficulty_score": 39,
+      "template_id": "medium_frame_004008208800"
+    }
+  ]
+}
