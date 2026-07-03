@@ -1,22 +1,12 @@
 # tools/puzzle_generator/scripts/reclue.py
 """Combined audit + re-clue workflow for the generated pack (P2c+P1).
 
-Subcommands:
-  next-batch  Emit the next 50 unaudited pack words (puzzle_count DESC,
-              alphabetical tie-break) as the batch input JSON. --curated
-              emits the curated (symbols/two_letter) words instead.
-  apply       Validate a completed batch JSON and fold it into the label
-              files: approved -> master_clues.json (+approved_words.json),
-              rejected -> rejected_words.json, sensitive -> candidate list
-              (reports/sensitive_candidates.json — NEVER sensitive_answers.txt,
-              that file is owner-approved only). --curated edits symbols/
-              two_letter clue text instead of master_clues.
-  write-pack  Rewrite clue text in the 200 puzzle JSONs in place from the
-              updated clue maps (geometry untouched), rebuild the manifest,
-              and re-run verify_pack.
-  status      Progress counters.
-
-Audit trail lives in data/processed/reclue_results.json (committed).
+next-batch emits the next 50 unaudited pack words (puzzle_count DESC, alpha
+tie-break; --curated for the symbols/two_letter batch). apply validates a batch
+all-or-nothing and folds it into master_clues + label files — sensitive verdicts
+land in reports/sensitive_candidates.json, NEVER in sensitive_answers.txt
+(owner-approved only). write-pack rewrites clue text in place (geometry
+untouched) and re-runs verify_pack. Audit trail: reclue_results.json.
 """
 
 from __future__ import annotations
@@ -302,8 +292,7 @@ def status() -> None:
 
 
 def main() -> None:
-    """Console entry point: apply the UTF-8 fix before Typer parses args."""
-    _force_utf8_stdout()
+    _force_utf8_stdout()  # must precede Typer's arg parsing (Windows console)
     app()
 
 
