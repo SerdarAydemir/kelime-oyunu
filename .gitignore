@@ -9,6 +9,10 @@ assets/puzzles_v1/
 # gate regeneration of assets/puzzles/ (reproducible from the generator)
 assets/puzzles_v2/
 
+# Second 9x7 pack (audited clues, pre sensitive/rejected purge), archived
+# before the final regeneration that drops the 175 rejected in-grid answers
+assets/puzzles_v3/
+
 # Miscellaneous
 *.class
 *.lock
