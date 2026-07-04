@@ -70,3 +70,6 @@ GENELEV
 #      the pool (legitimate primary senses); the P1 re-clue criteria REQUIRE
 #      their clues to use the innocent sense (vegetable / animal / goods) ───
 BUDALA
+
+# ── 7. P2c audit additions (owner-approved one by one) ──────────────────────
+LAN  # kaba seslenme (ulan) — batch 1, onay 2026-07-03

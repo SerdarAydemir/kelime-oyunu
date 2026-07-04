@@ -5,7 +5,7 @@
   },
   {
     "answer": "AH",
-    "clue": "Sızlanma, yakınma ünlemi"
+    "clue": "Yakınma ünlemi"
   },
   {
     "answer": "AK",
@@ -17,11 +17,11 @@
   },
   {
     "answer": "AN",
-    "clue": "Çok kısa zaman parçası"
+    "clue": "Kısacık zaman"
   },
   {
     "answer": "AS",
-    "clue": "İskambilde en değerli kâğıt"
+    "clue": "İskambilde birli"
   },
   {
     "answer": "AT",
@@ -29,7 +29,7 @@
   },
   {
     "answer": "AV",
-    "clue": "Avlanan hayvan"
+    "clue": "Yakalanan hayvan"
   },
   {
     "answer": "AY",
@@ -45,7 +45,7 @@
   },
   {
     "answer": "AĞ",
-    "clue": "Balıkçının veya örümceğin örgüsü"
+    "clue": "Örümcek örgüsü"
   },
   {
     "answer": "AŞ",
@@ -53,7 +53,7 @@
   },
   {
     "answer": "BU",
-    "clue": "En yakını gösteren işaret sözü"
+    "clue": "En yakın işaret sözü"
   },
   {
     "answer": "DO",
@@ -65,11 +65,11 @@
   },
   {
     "answer": "EL",
-    "clue": "Kolun bilekten sonrası"
+    "clue": "Avuç ve parmaklar"
   },
   {
     "answer": "EN",
-    "clue": "Bir yüzeyin genişliği"
+    "clue": "Genişlik"
   },
   {
     "answer": "ER",
@@ -117,11 +117,11 @@
   },
   {
     "answer": "ON",
-    "clue": "Dokuzdan sonra gelen sayı"
+    "clue": "Dokuzdan sonraki"
   },
   {
     "answer": "OT",
-    "clue": "Yeşil bitki örtüsü"
+    "clue": "Yeşil küçük bitki"
   },
   {
     "answer": "OY",
@@ -133,7 +133,7 @@
   },
   {
     "answer": "SU",
-    "clue": "İçtiğimiz berrak sıvı"
+    "clue": "İçilen berrak sıvı"
   },
   {
     "answer": "Sİ",
@@ -141,11 +141,11 @@
   },
   {
     "answer": "UN",
-    "clue": "Ekmek yapılan öğütülmüş tahıl"
+    "clue": "Öğütülmüş tahıl"
   },
   {
     "answer": "UÇ",
-    "clue": "Bir şeyin sivri kenarı"
+    "clue": "Sivri kenar"
   },
   {
     "answer": "VE",
@@ -153,7 +153,7 @@
   },
   {
     "answer": "YA",
-    "clue": "Seslenme, çağırma sözü"
+    "clue": "Seslenme sözü"
   },
   {
     "answer": "ÖN",
@@ -173,7 +173,7 @@
   },
   {
     "answer": "ÜÇ",
-    "clue": "İkiden sonra gelen sayı"
+    "clue": "İkiden sonraki"
   },
   {
     "answer": "İL",
@@ -185,11 +185,11 @@
   },
   {
     "answer": "İP",
-    "clue": "Bağlamaya yarayan ince halat"
+    "clue": "İnce halat"
   },
   {
     "answer": "İZ",
-    "clue": "Bırakılan eser, ayak izi"
+    "clue": "Geride kalan belirti"
   },
   {
     "answer": "İÇ",
@@ -201,6 +201,6 @@
   },
   {
     "answer": "ŞU",
-    "clue": "Az ötedekini gösteren işaret sözü"
+    "clue": "Ötedeki işaret sözü"
   }
 ]

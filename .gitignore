@@ -150,6 +150,10 @@ tools/puzzle_generator/data/processed/*
 !tools/puzzle_generator/data/raw/sensitive_answers.txt
 !tools/puzzle_generator/data/processed/approved_words.json
 !tools/puzzle_generator/data/processed/rejected_words.json
+# Since the P2c audit these two carry hand-written clues and verdicts (the
+# audit trail) — no longer derivable, so they are tracked too.
+!tools/puzzle_generator/data/processed/master_clues.json
+!tools/puzzle_generator/data/processed/reclue_results.json
 tools/puzzle_generator/data/cache/
 tools/puzzle_generator/reports/
 tools/puzzle_generator/.venv/
