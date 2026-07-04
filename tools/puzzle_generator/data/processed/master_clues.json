@@ -26131,10 +26131,10 @@
     "meaning_used": "erkek ismi"
   },
   "CEMRE": {
-    "text": "Baharın ilk sıcaklığı",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "İlkbahar sıcaklığı"
+    "text": "İlkbahar müjdecisi",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "SAHİP KARARI: kriptik eski clue değiştirildi; iki öneriden bu seçildi"
   },
   "CEMEVİ": {
     "text": "Dede ocağı",
@@ -28966,10 +28966,10 @@
     "meaning_used": "Az yer"
   },
   "DARP": {
-    "text": "Vurma, dövme",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "fiziksel saldırı"
+    "text": "Çarpma (eski mat.)",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "SAHİP KARARI: matematik-şartı — şiddet anlamı yazılmaz"
   },
   "DARILTMA": {
     "text": "Kalp kırma",
@@ -33733,10 +33733,10 @@
     "meaning_used": "etkileyici"
   },
   "DUA": {
-    "text": "Yakarış, niyaz",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "ibadet"
+    "text": "İçten dilek",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "şart: dini pratik vurgusu yapılmaz, nötr dilek anlamı"
   },
   "DOĞURTMA": {
     "text": "Ebe yardımı",
@@ -43282,10 +43282,10 @@
     "meaning_used": "cesaret"
   },
   "EROS": {
-    "text": "Aşk tanrısı",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "mitoloji"
+    "text": "Okçu mitoloji figürü",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "SAHİP KARARI: mitoloji/gezegen-şartı — cinsel çağrışım yazılmaz"
   },
   "ERMİN": {
     "text": "Saray köpeği",
@@ -112219,10 +112219,10 @@
     "meaning_used": "taşıma aracı"
   },
   "PURO": {
-    "text": "Küba'dan gelen duman",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "tütün ürünü"
+    "text": "Yaprak tütün sarması",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "şart: özendirmesiz nesne tanımı"
   },
   "PUSMAK": {
     "text": "Gizlice beklemek",
@@ -112873,10 +112873,10 @@
     "note": "dini tını ('manevi lider') yerine günlük anlam (işinin piri)"
   },
   "PİPO": {
-    "text": "Tütün içme aracı",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "içki aleti"
+    "text": "Tütün çubuğu",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "şart: özendirmesiz nesne tanımı; çengel klasiği"
   },
   "PİNTİLİK": {
     "text": "Cimri davranma",
@@ -114085,7 +114085,8 @@
     "text": "İki katlı yatak",
     "source": "gemini",
     "model": "gemini-2.5-flash-lite",
-    "meaning_used": "mobilya"
+    "meaning_used": "mobilya",
+    "note": "SAHİP KARARI: şartsız approved — mevcut clue ('İki katlı yatak') nötr, korundu"
   },
   "RASPACI": {
     "text": "Kötü niyetli kimse",
@@ -114442,10 +114443,10 @@
     "meaning_used": "giyim"
   },
   "REHİN": {
-    "text": "Teminat olarak bırakılan",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "güvence"
+    "text": "Borç güvencesi",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "SAHİP KARARI: finans-şartı — rehine (kişi) anlamı yazılmaz"
   },
   "REHA": {
     "text": "Kıvrak, çevik",
@@ -115257,9 +115258,9 @@
   },
   "ROM": {
     "text": "Şeker kamışı içkisi",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "alkollü içecek"
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "CİN emsali: içki tanımına izinli, özendirmesiz"
   },
   "ROMANTİK": {
     "text": "Aşk dolu, sevgi dolu",
@@ -116581,10 +116582,10 @@
     "meaning_used": "zaman dilimi"
   },
   "SADAKA": {
-    "text": "Yardım parası",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "bağış"
+    "text": "Karşılıksız yardım",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "şart: nötr bağış anlamı"
   },
   "SADAKAT": {
     "text": "Vefakarlık, bağlılık",
@@ -126475,7 +126476,8 @@
     "text": "Ordu görevlisi",
     "source": "gemini",
     "model": "gemini-2.5-flash-lite",
-    "meaning_used": "askeri rütbe"
+    "meaning_used": "askeri rütbe",
+    "note": "SAHİP KARARI: şartsız approved (nötr meslek) — mevcut clue korundu"
   },
   "STEP": {
     "text": "Bozkır, ova",
@@ -129254,10 +129256,10 @@
     "meaning_used": "sıfat"
   },
   "SİGARA": {
-    "text": "Tütün dumanı",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "tütün ürünü"
+    "text": "Tütün sarımı",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "şart: özendirmesiz nesne tanımı"
   },
   "SİKLAMEN": {
     "text": "Pembe, mor çiçek",
@@ -163428,10 +163430,10 @@
     "meaning_used": "meslek"
   },
   "ÇİLEHANE": {
-    "text": "Sıkıntı yeri",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "mecaz"
+    "text": "Dert dolu yer (mecaz)",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "şart: tasavvuf kurumu değil günlük mecaz"
   },
   "ÇİLSİZ": {
     "text": "Talihsiz, şanssız",

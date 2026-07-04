@@ -443,7 +443,7 @@
   "AVANAK": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "masum birincil anlamı yok, doğrudan hakaret (bön/alık) — BUDALA emsali; sensitive_answers.txt adayı",
+    "note": "masum birincil anlamı yok, doğrudan hakaret (bön/alık) — BUDALA emsali; sensitive_answers.txt adayı -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 2,
     "decided_at": "2026-07-03T18:11:37+00:00"
   },
@@ -646,7 +646,7 @@
   "ULA": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "kaba seslenme ailesi (LAN emsali ama daha hafif/folklorik); karar Serdar'ın — alternatifi ulamak emir kipi okuması da zayıf",
+    "note": "kaba seslenme ailesi (LAN emsali ama daha hafif/folklorik); karar Serdar'ın — alternatifi ulamak emir kipi okuması da zayıf -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 2,
     "decided_at": "2026-07-03T18:11:37+00:00"
   },
@@ -875,11 +875,11 @@
     "decided_at": "2026-07-03T18:13:57+00:00"
   },
   "DUA": {
-    "verdict": "sensitive",
-    "clue": null,
-    "note": "din alanı — kategori 2'de (TANRI, CENNET...) tam kategori politikası var ama DUA günlük dilde de yaygın; sınır kararı Serdar'ın",
-    "batch": 3,
-    "decided_at": "2026-07-03T18:13:57+00:00"
+    "verdict": "approved",
+    "clue": "İçten dilek",
+    "note": "din alanı — kategori 2'de (TANRI, CENNET...) tam kategori politikası var ama DUA günlük dilde de yaygın; sınır kararı Serdar'ın -> APPROVED (şart: dini pratik vurgusu yapılmaz, nötr dilek anlamı)",
+    "batch": 45,
+    "decided_at": "2026-07-04T10:09:03+00:00"
   },
   "DİFANA": {
     "verdict": "rejected",
@@ -1122,7 +1122,7 @@
   "NAAT": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "dini edebiyat terimi (peygamber övgü şiiri) — kategori 2 sınırı, DUA emsali; karar Serdar'ın",
+    "note": "dini edebiyat terimi (peygamber övgü şiiri) — kategori 2 sınırı, DUA emsali; karar Serdar'ın -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 4,
     "decided_at": "2026-07-03T18:16:10+00:00"
   },
@@ -1197,11 +1197,11 @@
     "decided_at": "2026-07-03T18:16:10+00:00"
   },
   "SADAKA": {
-    "verdict": "sensitive",
-    "clue": null,
-    "note": "dini pratik + yoksulluk çağrışımı — kategori 2 sınırı; karar Serdar'ın",
-    "batch": 4,
-    "decided_at": "2026-07-03T18:16:10+00:00"
+    "verdict": "approved",
+    "clue": "Karşılıksız yardım",
+    "note": "dini pratik + yoksulluk çağrışımı — kategori 2 sınırı; karar Serdar'ın -> APPROVED (şart: nötr bağış anlamı)",
+    "batch": 45,
+    "decided_at": "2026-07-04T10:09:03+00:00"
   },
   "SAKA": {
     "verdict": "approved",
@@ -1626,7 +1626,7 @@
   "ARASAT": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "ahiret coğrafyası (mahşer meydanı) — CENNET/CEHENNEM ile aynı küme, kategori 2 adayı",
+    "note": "ahiret coğrafyası (mahşer meydanı) — CENNET/CEHENNEM ile aynı küme, kategori 2 adayı -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 5,
     "decided_at": "2026-07-03T18:18:10+00:00"
   },
@@ -1759,7 +1759,7 @@
   "BABAİLİK": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "tarihsel mezhep/tarikat hareketi (Babai isyanı) — kategori 1'deki ALEVİ/SÜNNİ kümesine paralel; karar Serdar'ın",
+    "note": "tarihsel mezhep/tarikat hareketi (Babai isyanı) — kategori 1'deki ALEVİ/SÜNNİ kümesine paralel; karar Serdar'ın -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 6,
     "decided_at": "2026-07-03T18:20:41+00:00"
   },
@@ -2011,7 +2011,7 @@
   "EROTİK": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "cinsellik alanı — kategori 5 kümesi; aile-uygun pack için aday",
+    "note": "cinsellik alanı — kategori 5 kümesi; aile-uygun pack için aday -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 6,
     "decided_at": "2026-07-03T18:20:41+00:00"
   },
@@ -2123,7 +2123,7 @@
   "KAMİKAZE": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "intihar saldırısı kavramı — kategori 5'te İNTİHAR listede; aynı küme adayı",
+    "note": "intihar saldırısı kavramı — kategori 5'te İNTİHAR listede; aynı küme adayı -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 7,
     "decided_at": "2026-07-03T18:23:17+00:00"
   },
@@ -2242,7 +2242,7 @@
   "KATLETME": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "öldürme — kategori 5'te CİNAYET/KATİL listede; aynı küme adayı (eski clue da 'cinayet' diyordu)",
+    "note": "öldürme — kategori 5'te CİNAYET/KATİL listede; aynı küme adayı (eski clue da 'cinayet' diyordu) -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 7,
     "decided_at": "2026-07-03T18:23:17+00:00"
   },
@@ -2319,7 +2319,7 @@
   "KENEF": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "kaba tuvalet sözü — kategori 4 (itici) kümesi adayı",
+    "note": "kaba tuvalet sözü — kategori 4 (itici) kümesi adayı -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 7,
     "decided_at": "2026-07-03T18:23:17+00:00"
   },
@@ -2403,7 +2403,7 @@
   "KİLİSE": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "ibadethane adı — kategori 2 sınırı (İNCİL listede); CAMİ/HAVRA ile tutarlılık kararı Serdar'ın",
+    "note": "ibadethane adı — kategori 2 sınırı (İNCİL listede); CAMİ/HAVRA ile tutarlılık kararı Serdar'ın -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 7,
     "decided_at": "2026-07-03T18:23:17+00:00"
   },
@@ -2543,7 +2543,7 @@
   "MELAMİ": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "tarikat mensubu (Melamilik) — BABAİLİK emsali, kategori 1/2 sınırı",
+    "note": "tarikat mensubu (Melamilik) — BABAİLİK emsali, kategori 1/2 sınırı -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 8,
     "decided_at": "2026-07-03T18:25:32+00:00"
   },
@@ -2725,7 +2725,7 @@
   "RAB": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "TANRI eş anlamlısı — kategori 2'de TANRI zaten listede; aynı küme adayı",
+    "note": "TANRI eş anlamlısı — kategori 2'de TANRI zaten listede; aynı küme adayı -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 8,
     "decided_at": "2026-07-03T18:25:32+00:00"
   },
@@ -2914,7 +2914,7 @@
   "TALAK": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "dini hukuk terimi (boşama) — kategori 2 sınırı + hassas aile teması; karar Serdar'ın",
+    "note": "dini hukuk terimi (boşama) — kategori 2 sınırı + hassas aile teması; karar Serdar'ın -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 9,
     "decided_at": "2026-07-03T18:27:16+00:00"
   },
@@ -3054,7 +3054,7 @@
   "ULEMALIK": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "din bilginliği kurumu — kategori 2 sınırı, MELAMİ/BABAİLİK tutarlılığı; karar Serdar'ın",
+    "note": "din bilginliği kurumu — kategori 2 sınırı, MELAMİ/BABAİLİK tutarlılığı; karar Serdar'ın -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 9,
     "decided_at": "2026-07-03T18:27:16+00:00"
   },
@@ -3264,7 +3264,7 @@
   "İMAM": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "din görevlisi unvanı — kategori 2 sınırı, KİLİSE ile tutarlılık; karar Serdar'ın",
+    "note": "din görevlisi unvanı — kategori 2 sınırı, KİLİSE ile tutarlılık; karar Serdar'ın -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 10,
     "decided_at": "2026-07-03T18:29:17+00:00"
   },
@@ -3299,7 +3299,7 @@
   "İRİN": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "itici tıbbi içerik — kategori 4'te KUSMUK/BALGAM/SÜMÜK listede; aynı küme adayı",
+    "note": "itici tıbbi içerik — kategori 4'te KUSMUK/BALGAM/SÜMÜK listede; aynı küme adayı -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 10,
     "decided_at": "2026-07-03T18:29:17+00:00"
   },
@@ -3670,7 +3670,7 @@
   "AKAİT": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "İslam inanç esasları ilmi — kategori 2 adayı",
+    "note": "İslam inanç esasları ilmi — kategori 2 adayı -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 11,
     "decided_at": "2026-07-03T18:31:04+00:00"
   },
@@ -3950,7 +3950,7 @@
   "ALEVİLİK": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "kategori 1'de ALEVİ zaten listede — türevi de aynı küme; kesin aday",
+    "note": "kategori 1'de ALEVİ zaten listede — türevi de aynı küme; kesin aday -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 12,
     "decided_at": "2026-07-03T18:32:41+00:00"
   },
@@ -4223,7 +4223,7 @@
   "ANGLİKAN": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "Hristiyan mezhebi — din/mezhep kümesi tutarlılığı (KİLİSE emsali); karar Serdar'ın",
+    "note": "Hristiyan mezhebi — din/mezhep kümesi tutarlılığı (KİLİSE emsali); karar Serdar'ın -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 13,
     "decided_at": "2026-07-03T18:34:26+00:00"
   },
@@ -4342,7 +4342,7 @@
   "ARAF": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "ahiret coğrafyası — CENNET/CEHENNEM kümesi (ARASAT emsali)",
+    "note": "ahiret coğrafyası — CENNET/CEHENNEM kümesi (ARASAT emsali) -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 13,
     "decided_at": "2026-07-03T18:34:26+00:00"
   },
@@ -4909,7 +4909,7 @@
   "AZRAİL": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "din/ölüm meleği — kategori 2'de ŞEYTAN listede; aynı küme, kesin aday",
+    "note": "din/ölüm meleği — kategori 2'de ŞEYTAN listede; aynı küme, kesin aday -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 15,
     "decided_at": "2026-07-03T18:37:27+00:00"
   },
@@ -5504,7 +5504,7 @@
   "CEMAAT": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "dini topluluk — kategori 2 sınırı (İMAM/KİLİSE tutarlılığı)",
+    "note": "dini topluluk — kategori 2 sınırı (İMAM/KİLİSE tutarlılığı) -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 16,
     "decided_at": "2026-07-03T18:39:06+00:00"
   },
@@ -5579,11 +5579,11 @@
     "decided_at": "2026-07-03T18:39:06+00:00"
   },
   "DARP": {
-    "verdict": "sensitive",
-    "clue": null,
-    "note": "şiddet kelimesi (dövme) — kategori 5 sınırı, KATLETME emsali; karar Serdar'ın",
-    "batch": 16,
-    "decided_at": "2026-07-03T18:39:06+00:00"
+    "verdict": "approved",
+    "clue": "Çarpma (eski mat.)",
+    "note": "şiddet kelimesi (dövme) — kategori 5 sınırı, KATLETME emsali; karar Serdar'ın -> APPROVED (SAHİP KARARI: matematik-şartı — şiddet anlamı yazılmaz)",
+    "batch": 45,
+    "decided_at": "2026-07-04T10:09:03+00:00"
   },
   "DAYAMA": {
     "verdict": "approved",
@@ -5756,7 +5756,7 @@
   "DİKTA": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "siyasi küme — kategori 3'te DARBE/CUNTA listede; aynı küme adayı",
+    "note": "siyasi küme — kategori 3'te DARBE/CUNTA listede; aynı küme adayı -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 17,
     "decided_at": "2026-07-03T18:40:36+00:00"
   },
@@ -5931,14 +5931,14 @@
   "ECİNNİ": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "cin ailesi (folklorik ama dini/batıl küme) — ŞEYTAN emsali sınır; karar Serdar'ın",
+    "note": "cin ailesi (folklorik ama dini/batıl küme) — ŞEYTAN emsali sınır; karar Serdar'ın -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 17,
     "decided_at": "2026-07-03T18:40:36+00:00"
   },
   "ECİR": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "dini karşılık/sevap terimi — kategori 2 sınırı",
+    "note": "dini karşılık/sevap terimi — kategori 2 sınırı -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 17,
     "decided_at": "2026-07-03T18:40:36+00:00"
   },
@@ -6232,7 +6232,7 @@
   "ENAYİLİK": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "hakaret ailesi türevi (enayi) — AVANAK emsali; karar Serdar'ın",
+    "note": "hakaret ailesi türevi (enayi) — AVANAK emsali; karar Serdar'ın -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 18,
     "decided_at": "2026-07-03T18:42:12+00:00"
   },
@@ -6267,7 +6267,7 @@
   "ENSAR": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "dini tarih terimi (Medineli yardımcılar) — kategori 2 adayı",
+    "note": "dini tarih terimi (Medineli yardımcılar) — kategori 2 adayı -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 18,
     "decided_at": "2026-07-03T18:42:12+00:00"
   },
@@ -6321,23 +6321,23 @@
     "decided_at": "2026-07-03T18:44:06+00:00"
   },
   "EROS": {
-    "verdict": "sensitive",
-    "clue": null,
-    "note": "cinsellik çağrışımlı mitolojik figür — EROTİK emsali; karar Serdar'ın",
-    "batch": 19,
-    "decided_at": "2026-07-03T18:44:06+00:00"
+    "verdict": "approved",
+    "clue": "Okçu mitoloji figürü",
+    "note": "cinsellik çağrışımlı mitolojik figür — EROTİK emsali; karar Serdar'ın -> APPROVED (SAHİP KARARI: mitoloji/gezegen-şartı — cinsel çağrışım yazılmaz)",
+    "batch": 45,
+    "decided_at": "2026-07-04T10:09:03+00:00"
   },
   "EROSAL": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "cinsel içerik — EROTİK emsali, kesin aday",
+    "note": "cinsel içerik — EROTİK emsali, kesin aday -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 19,
     "decided_at": "2026-07-03T18:44:06+00:00"
   },
   "EROİN": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "uyuşturucu madde — aile-uygun pack için kesin aday (listede madde kategorisi yok, eklenmeli)",
+    "note": "uyuşturucu madde — aile-uygun pack için kesin aday (listede madde kategorisi yok, eklenmeli) -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 19,
     "decided_at": "2026-07-03T18:44:06+00:00"
   },
@@ -7163,14 +7163,14 @@
   "JENOSİT": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "SOYKIRIM kategori 3'te listede — eş anlamlısı, kesin aday",
+    "note": "SOYKIRIM kategori 3'te listede — eş anlamlısı, kesin aday -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 21,
     "decided_at": "2026-07-03T18:47:46+00:00"
   },
   "KABALA": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "dini mistisizm öğretisi — kategori 2 sınırı",
+    "note": "dini mistisizm öğretisi — kategori 2 sınırı -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 21,
     "decided_at": "2026-07-03T18:47:46+00:00"
   },
@@ -7212,7 +7212,7 @@
   "KADİRİ": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "tarikat adı — MELAMİ emsali; eski clue üstelik yanlıştı ('Mevlevi tarikatı')",
+    "note": "tarikat adı — MELAMİ emsali; eski clue üstelik yanlıştı ('Mevlevi tarikatı') -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 21,
     "decided_at": "2026-07-03T18:47:46+00:00"
   },
@@ -7387,7 +7387,7 @@
   "KANSER": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "ciddi hastalık — oyun bağlamında üzücü çağrışım; kategori 4 sınırı, karar Serdar'ın",
+    "note": "ciddi hastalık — oyun bağlamında üzücü çağrışım; kategori 4 sınırı, karar Serdar'ın -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 22,
     "decided_at": "2026-07-03T18:49:25+00:00"
   },
@@ -7954,7 +7954,7 @@
   "KERİZ": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "argo hakaret (kolay aldatılan) — AVANAK/ENAYİLİK emsali",
+    "note": "argo hakaret (kolay aldatılan) — AVANAK/ENAYİLİK emsali -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 23,
     "decided_at": "2026-07-03T18:51:10+00:00"
   },
@@ -8164,14 +8164,14 @@
   "KOKAİN": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "uyuşturucu madde — EROİN emsali, kesin aday",
+    "note": "uyuşturucu madde — EROİN emsali, kesin aday -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 24,
     "decided_at": "2026-07-03T18:52:47+00:00"
   },
   "KOKONA": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "alaycı + etnik köklü kullanım (yaşlı Rum kadını) — çifte hassasiyet",
+    "note": "alaycı + etnik köklü kullanım (yaşlı Rum kadını) — çifte hassasiyet -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 24,
     "decided_at": "2026-07-03T18:52:47+00:00"
   },
@@ -8353,7 +8353,7 @@
   "KUMAR": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "masum ikinci anlamı yok (bağımlılık teması) — BAR'ın aksine nötrlenemedi; karar Serdar'ın",
+    "note": "masum ikinci anlamı yok (bağımlılık teması) — BAR'ın aksine nötrlenemedi; karar Serdar'ın -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 24,
     "decided_at": "2026-07-03T18:52:47+00:00"
   },
@@ -8423,7 +8423,7 @@
   "KUTSAMAK": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "dini fiil — kategori 2 sınırı; karar Serdar'ın",
+    "note": "dini fiil — kategori 2 sınırı; karar Serdar'ın -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 25,
     "decided_at": "2026-07-03T18:54:30+00:00"
   },
@@ -8696,14 +8696,14 @@
   "LAİN": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "dini-negatif terim (lanetlenmiş) — kategori 2 sınırı; eski clue ayrıca HAİN karışmasıydı",
+    "note": "dini-negatif terim (lanetlenmiş) — kategori 2 sınırı; eski clue ayrıca HAİN karışmasıydı -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 25,
     "decided_at": "2026-07-03T18:54:30+00:00"
   },
   "LAŞE": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "leş — kategori 4/5 itici küme (CESET emsali); eski clue ayrıca yanlıştı",
+    "note": "leş — kategori 4/5 itici küme (CESET emsali); eski clue ayrıca yanlıştı -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 25,
     "decided_at": "2026-07-03T18:54:30+00:00"
   },
@@ -8759,7 +8759,7 @@
   "LEŞ": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "itici ölü hayvan — LAŞE ile aynı küme (kategori 4/5), tutarlılık",
+    "note": "itici ölü hayvan — LAŞE ile aynı küme (kategori 4/5), tutarlılık -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 26,
     "decided_at": "2026-07-03T18:56:14+00:00"
   },
@@ -9095,7 +9095,7 @@
   "MARUNİ": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "Hristiyan mezhebi (Maronit) — ANGLİKAN emsali; eski clue ayrıca çöptü",
+    "note": "Hristiyan mezhebi (Maronit) — ANGLİKAN emsali; eski clue ayrıca çöptü -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 26,
     "decided_at": "2026-07-03T18:56:14+00:00"
   },
@@ -9256,7 +9256,7 @@
   "MELUN": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "dini-negatif terim (lanetli) — LAİN emsali, tutarlılık",
+    "note": "dini-negatif terim (lanetli) — LAİN emsali, tutarlılık -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 27,
     "decided_at": "2026-07-03T18:57:49+00:00"
   },
@@ -9375,7 +9375,7 @@
   "MEVLA": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "TANRI eş anlamlısı — kategori 2, RAB emsali, kesin aday",
+    "note": "TANRI eş anlamlısı — kategori 2, RAB emsali, kesin aday -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 27,
     "decided_at": "2026-07-03T18:57:49+00:00"
   },
@@ -9457,16 +9457,16 @@
     "decided_at": "2026-07-03T18:59:31+00:00"
   },
   "MORTLAMA": {
-    "verdict": "sensitive",
+    "verdict": "rejected",
     "clue": null,
-    "note": "ölüm argosu (mortlamak) — argo + ölüm çifte gerekçe",
-    "batch": 28,
-    "decided_at": "2026-07-03T18:59:31+00:00"
+    "note": "ölüm argosu (mortlamak) — argo + ölüm çifte gerekçe -> REJECTED (obscure ölüm argosu)",
+    "batch": 45,
+    "decided_at": "2026-07-04T10:09:03+00:00"
   },
   "MOSKOF": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "etnik-pejoratif tarihsel ad — kategori 1 kesin aday",
+    "note": "etnik-pejoratif tarihsel ad — kategori 1 kesin aday -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 28,
     "decided_at": "2026-07-03T18:59:31+00:00"
   },
@@ -9732,7 +9732,7 @@
   "NAAŞ": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "ölü beden — kategori 5'te CESET listede; saygılı eş anlamlı olsa da aynı küme, karar Serdar'ın",
+    "note": "ölü beden — kategori 5'te CESET listede; saygılı eş anlamlı olsa da aynı küme, karar Serdar'ın -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 28,
     "decided_at": "2026-07-03T18:59:31+00:00"
   },
@@ -9753,7 +9753,7 @@
   "NAH": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "kaba ret ünlemi/el hareketi — LAN emsali kaba küme",
+    "note": "kaba ret ünlemi/el hareketi — LAN emsali kaba küme -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 28,
     "decided_at": "2026-07-03T18:59:31+00:00"
   },
@@ -9788,7 +9788,7 @@
   "NAPALM": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "yakıcı savaş silahı — kategori 3/5 sınırı",
+    "note": "yakıcı savaş silahı — kategori 3/5 sınırı -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 28,
     "decided_at": "2026-07-03T18:59:31+00:00"
   },
@@ -9872,7 +9872,7 @@
   "NEBİ": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "peygamber eş anlamlısı — kategori 2'de PEYGAMBER listede, kesin aday",
+    "note": "peygamber eş anlamlısı — kategori 2'de PEYGAMBER listede, kesin aday -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 29,
     "decided_at": "2026-07-03T19:01:01+00:00"
   },
@@ -10292,7 +10292,7 @@
   "PASKALYA": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "din bayramı — kategori 2 sınırı (KİLİSE/ANGLİKAN tutarlılığı)",
+    "note": "din bayramı — kategori 2 sınırı (KİLİSE/ANGLİKAN tutarlılığı) -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 30,
     "decided_at": "2026-07-03T19:02:25+00:00"
   },
@@ -10479,11 +10479,11 @@
     "decided_at": "2026-07-03T19:02:25+00:00"
   },
   "PURO": {
-    "verdict": "sensitive",
-    "clue": null,
-    "note": "tütün ürünü, masum ikinci anlamı yok — KUMAR emsali; karar Serdar'ın",
-    "batch": 30,
-    "decided_at": "2026-07-03T19:02:25+00:00"
+    "verdict": "approved",
+    "clue": "Yaprak tütün sarması",
+    "note": "tütün ürünü, masum ikinci anlamı yok — KUMAR emsali; karar Serdar'ın -> APPROVED (şart: özendirmesiz nesne tanımı)",
+    "batch": 45,
+    "decided_at": "2026-07-04T10:09:03+00:00"
   },
   "PUSU": {
     "verdict": "approved",
@@ -10507,11 +10507,11 @@
     "decided_at": "2026-07-03T19:04:14+00:00"
   },
   "PİPO": {
-    "verdict": "sensitive",
-    "clue": null,
-    "note": "tütün ürünü — PURO emsali, tutarlılık",
-    "batch": 31,
-    "decided_at": "2026-07-03T19:04:14+00:00"
+    "verdict": "approved",
+    "clue": "Tütün çubuğu",
+    "note": "tütün ürünü — PURO emsali, tutarlılık -> APPROVED (şart: özendirmesiz nesne tanımı; çengel klasiği)",
+    "batch": 45,
+    "decided_at": "2026-07-04T10:09:03+00:00"
   },
   "PİRELİ": {
     "verdict": "approved",
@@ -10696,11 +10696,11 @@
     "decided_at": "2026-07-03T19:04:14+00:00"
   },
   "ROM": {
-    "verdict": "sensitive",
-    "clue": null,
-    "note": "içki, masum ikinci anlamı yok — KUMAR/PURO çizgisi",
-    "batch": 31,
-    "decided_at": "2026-07-03T19:04:14+00:00"
+    "verdict": "approved",
+    "clue": "Şeker kamışı içkisi",
+    "note": "içki, masum ikinci anlamı yok — KUMAR/PURO çizgisi -> APPROVED (CİN emsali: içki tanımına izinli, özendirmesiz)",
+    "batch": 45,
+    "decided_at": "2026-07-04T10:09:03+00:00"
   },
   "ROMANESK": {
     "verdict": "approved",
@@ -10887,7 +10887,7 @@
   "SALAT": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "namaz anlamındaki dini terim — kategori 2 kesin aday; eski clue ayrıca SALATA karışmasıydı",
+    "note": "namaz anlamındaki dini terim — kategori 2 kesin aday; eski clue ayrıca SALATA karışmasıydı -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 32,
     "decided_at": "2026-07-03T19:05:44+00:00"
   },
@@ -11006,7 +11006,7 @@
   "SATANİST": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "kategori 2'de ŞEYTAN listede — kesin aday",
+    "note": "kategori 2'de ŞEYTAN listede — kesin aday -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 32,
     "decided_at": "2026-07-03T19:05:44+00:00"
   },
@@ -11111,7 +11111,7 @@
   "SEMAH": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "Alevi ritüeli — ALEVİLİK kümesiyle tutarlılık; karar Serdar'ın",
+    "note": "Alevi ritüeli — ALEVİLİK kümesiyle tutarlılık; karar Serdar'ın -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 32,
     "decided_at": "2026-07-03T19:05:44+00:00"
   },
@@ -11368,11 +11368,11 @@
     "decided_at": "2026-07-03T19:07:34+00:00"
   },
   "SİGARA": {
-    "verdict": "sensitive",
-    "clue": null,
-    "note": "tütün ürünü — PURO/PİPO emsali tutarlılık (börek anlamı bileşikte kalır, bağımsız değil)",
-    "batch": 33,
-    "decided_at": "2026-07-03T19:07:34+00:00"
+    "verdict": "approved",
+    "clue": "Tütün sarımı",
+    "note": "tütün ürünü — PURO/PİPO emsali tutarlılık (börek anlamı bileşikte kalır, bağımsız değil) -> APPROVED (şart: özendirmesiz nesne tanımı)",
+    "batch": 45,
+    "decided_at": "2026-07-04T10:09:03+00:00"
   },
   "SİLKİNME": {
     "verdict": "approved",
@@ -11433,14 +11433,14 @@
   "SİYMEK": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "işemek (kaba) — kategori 4'te İDRAR/SİDİK listede, aynı küme",
+    "note": "işemek (kaba) — kategori 4'te İDRAR/SİDİK listede, aynı küme -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 33,
     "decided_at": "2026-07-03T19:07:34+00:00"
   },
   "TAAT": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "ibadet anlamlı dini terim — kategori 2 sınırı (İTAAT genel olduğu için approve edilmişti)",
+    "note": "ibadet anlamlı dini terim — kategori 2 sınırı (İTAAT genel olduğu için approve edilmişti) -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 33,
     "decided_at": "2026-07-03T19:07:34+00:00"
   },
@@ -11454,7 +11454,7 @@
   "TABUTLUK": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "ölüm + tarihî işkence hücresi çağrışımı — karar Serdar'ın",
+    "note": "ölüm + tarihî işkence hücresi çağrışımı — karar Serdar'ın -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 33,
     "decided_at": "2026-07-03T19:07:34+00:00"
   },
@@ -11608,7 +11608,7 @@
   "TAPMAK": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "dini fiil — KUTSAMAK emsali, kategori 2 sınırı",
+    "note": "dini fiil — KUTSAMAK emsali, kategori 2 sınırı -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 34,
     "decided_at": "2026-07-03T19:08:58+00:00"
   },
@@ -11923,7 +11923,7 @@
   "TESTİS": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "üreme organı — kategori 4/5 sınırı (APIŞ listede); karar Serdar'ın",
+    "note": "üreme organı — kategori 4/5 sınırı (APIŞ listede); karar Serdar'ın -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 35,
     "decided_at": "2026-07-04T07:31:07+00:00"
   },
@@ -12280,7 +12280,7 @@
   "UZİ": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "silah adı (makineli tabanca) — NAPALM emsali",
+    "note": "silah adı (makineli tabanca) — NAPALM emsali -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 36,
     "decided_at": "2026-07-04T07:32:51+00:00"
   },
@@ -12301,7 +12301,7 @@
   "VAAZ": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "dini konuşma — kategori 2 kesin aday",
+    "note": "dini konuşma — kategori 2 kesin aday -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 36,
     "decided_at": "2026-07-04T07:32:51+00:00"
   },
@@ -12413,7 +12413,7 @@
   "YALAKA": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "hakaret-ağırlıklı kelime (dalkavuk) — AVANAK/KERİZ çizgisi; karar Serdar'ın",
+    "note": "hakaret-ağırlıklı kelime (dalkavuk) — AVANAK/KERİZ çizgisi; karar Serdar'ın -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 36,
     "decided_at": "2026-07-04T07:32:51+00:00"
   },
@@ -12630,7 +12630,7 @@
   "ZAZA": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "etnik grup adı — kategori 1 kesin aday (KÜRT/LAZ emsali)",
+    "note": "etnik grup adı — kategori 1 kesin aday (KÜRT/LAZ emsali) -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 37,
     "decided_at": "2026-07-04T07:34:30+00:00"
   },
@@ -12665,7 +12665,7 @@
   "ZEBANİ": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "cehennem bekçisi — kategori 2'de CEHENNEM listede, kesin aday",
+    "note": "cehennem bekçisi — kategori 2'de CEHENNEM listede, kesin aday -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 37,
     "decided_at": "2026-07-04T07:34:30+00:00"
   },
@@ -12707,7 +12707,7 @@
   "ZORBALIK": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "şiddet/akran zorbalığı teması — DARP emsali; karar Serdar'ın",
+    "note": "şiddet/akran zorbalığı teması — DARP emsali; karar Serdar'ın -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 37,
     "decided_at": "2026-07-04T07:34:30+00:00"
   },
@@ -12721,7 +12721,7 @@
   "ZİLKADE": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "hicri takvim ayı — kategori 2 sınırı",
+    "note": "hicri takvim ayı — kategori 2 sınırı -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 37,
     "decided_at": "2026-07-04T07:34:30+00:00"
   },
@@ -12735,7 +12735,7 @@
   "ZİNA": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "cinsellik/din kümesi — kategori 5 kesin aday",
+    "note": "cinsellik/din kümesi — kategori 5 kesin aday -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 37,
     "decided_at": "2026-07-04T07:34:30+00:00"
   },
@@ -12852,11 +12852,11 @@
     "decided_at": "2026-07-04T07:34:30+00:00"
   },
   "ÇİLEHANE": {
-    "verdict": "sensitive",
-    "clue": null,
-    "note": "tasavvuf mekanı — kategori 2 sınırı; karar Serdar'ın",
-    "batch": 37,
-    "decided_at": "2026-07-04T07:34:30+00:00"
+    "verdict": "approved",
+    "clue": "Dert dolu yer (mecaz)",
+    "note": "tasavvuf mekanı — kategori 2 sınırı; karar Serdar'ın -> APPROVED (şart: tasavvuf kurumu değil günlük mecaz)",
+    "batch": 45,
+    "decided_at": "2026-07-04T10:09:03+00:00"
   },
   "ÇİR": {
     "verdict": "approved",
@@ -12973,7 +12973,7 @@
   "İBLİSANE": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "İblis/şeytanca — kategori 2'de ŞEYTAN listede, kesin aday",
+    "note": "İblis/şeytanca — kategori 2'de ŞEYTAN listede, kesin aday -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 38,
     "decided_at": "2026-07-04T07:36:07+00:00"
   },
@@ -13050,7 +13050,7 @@
   "İKONA": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "dini resim (Ortodoks) — kategori 2 sınırı, KİLİSE emsali",
+    "note": "dini resim (Ortodoks) — kategori 2 sınırı, KİLİSE emsali -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 38,
     "decided_at": "2026-07-04T07:36:07+00:00"
   },
@@ -13176,14 +13176,14 @@
   "İMAMET": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "imamlık kurumu — İMAM emsali, kategori 2",
+    "note": "imamlık kurumu — İMAM emsali, kategori 2 -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 38,
     "decided_at": "2026-07-04T07:36:07+00:00"
   },
   "İMAN": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "dini inanç terimi — kategori 2 sınırı (İNANÇ geneldir, iman dinidir)",
+    "note": "dini inanç terimi — kategori 2 sınırı (İNANÇ geneldir, iman dinidir) -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 38,
     "decided_at": "2026-07-04T07:36:07+00:00"
   },
@@ -13337,7 +13337,7 @@
   "İRTİCA": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "siyasi-dini yüklü kavram — kategori 3 sınırı",
+    "note": "siyasi-dini yüklü kavram — kategori 3 sınırı -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 39,
     "decided_at": "2026-07-04T07:37:41+00:00"
   },
@@ -13351,7 +13351,7 @@
   "İRİNLİ": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "İRİN adayının türevi — aynı küme (kategori 4)",
+    "note": "İRİN adayının türevi — aynı küme (kategori 4) -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 39,
     "decided_at": "2026-07-04T07:37:41+00:00"
   },
@@ -13510,11 +13510,11 @@
     "decided_at": "2026-07-04T07:37:41+00:00"
   },
   "İŞRET": {
-    "verdict": "sensitive",
+    "verdict": "rejected",
     "clue": null,
-    "note": "içki alemi anlamı — ROM/KUMAR çizgisi; eski clue ayrıca İŞARET karışmasıydı",
-    "batch": 39,
-    "decided_at": "2026-07-04T07:37:41+00:00"
+    "note": "içki alemi anlamı — ROM/KUMAR çizgisi; eski clue ayrıca İŞARET karışmasıydı -> REJECTED (obscure + içki alemi teması)",
+    "batch": 45,
+    "decided_at": "2026-07-04T10:09:03+00:00"
   },
   "İŞİTİLME": {
     "verdict": "approved",
@@ -13652,14 +13652,14 @@
   "ŞEFAAT": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "dini aracılık kavramı — kategori 2 kesin aday",
+    "note": "dini aracılık kavramı — kategori 2 kesin aday -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 40,
     "decided_at": "2026-07-04T07:38:31+00:00"
   },
   "ŞEFAATLİ": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "ŞEFAAT türevi — aynı küme",
+    "note": "ŞEFAAT türevi — aynı küme -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 40,
     "decided_at": "2026-07-04T07:38:31+00:00"
   },
@@ -13694,7 +13694,7 @@
   "ŞERAN": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "dini hukuk zarfı (şer'an) — kategori 2 kesin aday",
+    "note": "dini hukuk zarfı (şer'an) — kategori 2 kesin aday -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 40,
     "decided_at": "2026-07-04T07:38:31+00:00"
   },
@@ -13778,7 +13778,7 @@
   "ŞİİLİK": {
     "verdict": "sensitive",
     "clue": null,
-    "note": "mezhep — kategori 1'de ALEVİ/SÜNNİ listede, kesin aday",
+    "note": "mezhep — kategori 1'de ALEVİ/SÜNNİ listede, kesin aday -> LISTEYE ALINDI (sahip onayi 2026-07-04)",
     "batch": 40,
     "decided_at": "2026-07-04T07:38:31+00:00"
   },
@@ -14236,5 +14236,68 @@
     "note": "SAHİP KARARI: kelime kendisi tarihsel olarak yüklü (1993 Sivas) — reject; masum bitki anlamı clue-disipliniyle kurtarılamaz. (Pack dışı, ön-denetimli; rejected_words'e eklendi.)",
     "batch": 44,
     "decided_at": "2026-07-04T08:53:37+00:00"
+  },
+  "MEHDİ": {
+    "verdict": "sensitive",
+    "clue": null,
+    "note": "SAHİP KARARI: listeye alındı — dini kurtarıcı figürü. (Pack dışı, ön-karar.)",
+    "batch": 45,
+    "decided_at": "2026-07-04T10:09:03+00:00"
+  },
+  "CELLAT": {
+    "verdict": "sensitive",
+    "clue": null,
+    "note": "SAHİP KARARI: listeye alındı — ölüm/infaz yüklü. (Pack dışı, ön-karar.)",
+    "batch": 45,
+    "decided_at": "2026-07-04T10:09:03+00:00"
+  },
+  "HAREM": {
+    "verdict": "sensitive",
+    "clue": null,
+    "note": "SAHİP KARARI: listeye alındı — modern çağrışım yükü clue ile yönetilemez (MADIMAK deseni). (Pack dışı, ön-karar.)",
+    "batch": 45,
+    "decided_at": "2026-07-04T10:09:03+00:00"
+  },
+  "MÜRİT": {
+    "verdict": "sensitive",
+    "clue": null,
+    "note": "SAHİP KARARI: listeye alındı — tarikat üyesi. (Pack dışı, ön-karar.)",
+    "batch": 45,
+    "decided_at": "2026-07-04T10:09:03+00:00"
+  },
+  "MAHKUM": {
+    "verdict": "sensitive",
+    "clue": null,
+    "note": "SAHİP KARARI: listeye alındı — ceza/hukuk yüklü. (Pack dışı, ön-karar.)",
+    "batch": 45,
+    "decided_at": "2026-07-04T10:09:03+00:00"
+  },
+  "CEMRE": {
+    "verdict": "approved",
+    "clue": "İlkbahar müjdecisi",
+    "note": "SAHİP KARARI: kriptik eski clue değiştirildi; iki öneriden bu seçildi (Pack dışı, ön-denetimli.)",
+    "batch": 45,
+    "decided_at": "2026-07-04T10:09:03+00:00"
+  },
+  "RANZA": {
+    "verdict": "approved",
+    "clue": "İki katlı yatak",
+    "note": "SAHİP KARARI: şartsız approved — mevcut clue ('İki katlı yatak') nötr, korundu (Pack dışı, ön-denetimli.)",
+    "batch": 45,
+    "decided_at": "2026-07-04T10:09:03+00:00"
+  },
+  "SUBAY": {
+    "verdict": "approved",
+    "clue": "Ordu görevlisi",
+    "note": "SAHİP KARARI: şartsız approved (nötr meslek) — mevcut clue korundu (Pack dışı, ön-denetimli.)",
+    "batch": 45,
+    "decided_at": "2026-07-04T10:09:03+00:00"
+  },
+  "REHİN": {
+    "verdict": "approved",
+    "clue": "Borç güvencesi",
+    "note": "SAHİP KARARI: finans-şartı — rehine (kişi) anlamı yazılmaz (Pack dışı, ön-denetimli.)",
+    "batch": 45,
+    "decided_at": "2026-07-04T10:09:03+00:00"
   }
 }

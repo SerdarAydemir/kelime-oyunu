@@ -73,3 +73,93 @@ BUDALA
 
 # ── 7. P2c audit additions (owner-approved one by one) ──────────────────────
 LAN  # kaba seslenme (ulan) — batch 1, onay 2026-07-03
+
+# -- 7b. P2c audit bulk approval (owner sign-off 2026-07-04) --------------
+# etnik/pejoratif
+MOSKOF
+ZAZA
+KOKONA
+# din/mezhep/tarikat
+NAAT
+ARASAT
+ARAF
+AZRAİL
+ZEBANİ
+İBLİSANE
+SATANİST
+LAİN
+MELUN
+ECİNNİ
+ECİR
+NEBİ
+RAB
+MEVLA
+ŞEFAAT
+ŞEFAATLİ
+ŞERAN
+SALAT
+TAAT
+VAAZ
+KUTSAMAK
+TAPMAK
+İMAMET
+İMAM
+İMAN
+AKAİT
+ULEMALIK
+ENSAR
+ZİLKADE
+KABALA
+TALAK
+ALEVİLİK
+ŞİİLİK
+ANGLİKAN
+MARUNİ
+KADİRİ
+MELAMİ
+BABAİLİK
+KİLİSE
+İKONA
+PASKALYA
+SEMAH
+CEMAAT
+MEHDİ
+MÜRİT
+# politik/şiddet/silah/ölüm
+KATLETME
+JENOSİT
+DİKTA
+İRTİCA
+NAPALM
+UZİ
+KAMİKAZE
+LAŞE
+LEŞ
+TABUTLUK
+ZORBALIK
+NAAŞ
+CELLAT
+MAHKUM
+HAREM
+# cinsellik
+EROTİK
+EROSAL
+ZİNA
+TESTİS
+# madde/bağımlılık
+EROİN
+KOKAİN
+KUMAR
+# tıbbi/itici
+İRİN
+İRİNLİ
+SİYMEK
+KANSER
+# kaba/hakaret
+AVANAK
+ENAYİLİK
+KERİZ
+YALAKA
+NAH
+KENEF
+ULA
