@@ -858,7 +858,7 @@
         }
       ],
       "clue": {
-        "text": "Makam vermek",
+        "text": "Göreve getirmek",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -906,7 +906,7 @@
         }
       ],
       "clue": {
-        "text": "Müzikte ara bölüm",
+        "text": "Ara, kesinti",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -1006,7 +1006,7 @@
         }
       ],
       "clue": {
-        "text": "Seslenme, çağırma sözü",
+        "text": "Seslenme sözü",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1146,7 +1146,7 @@
         }
       ],
       "clue": {
-        "text": "Şaşkın bakışlı",
+        "text": "Senette kefillik",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1194,7 +1194,7 @@
         }
       ],
       "clue": {
-        "text": "Tavşanın dişisi",
+        "text": "Bir deniz balığı",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1226,7 +1226,7 @@
         }
       ],
       "clue": {
-        "text": "Bir yüzeyin genişliği",
+        "text": "Genişlik",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1262,7 +1262,7 @@
         }
       ],
       "clue": {
-        "text": "Güneş lekesi",
+        "text": "Yüzdeki benek",
         "arrow": "right",
         "word_id": "A12",
         "image_id": null,
@@ -1318,7 +1318,7 @@
         }
       ],
       "clue": {
-        "text": "Yemeğe oturana",
+        "text": "Sağlıkla, iştahla",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1394,7 +1394,7 @@
         }
       ],
       "clue": {
-        "text": "İskambilde en değerli kâğıt",
+        "text": "İskambilde birli",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1430,7 +1430,7 @@
         }
       ],
       "clue": {
-        "text": "Çiviye benzer",
+        "text": "Çivi (halk)",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1466,7 +1466,7 @@
         }
       ],
       "clue": {
-        "text": "Farklı renklerde",
+        "text": "Karışık renkli",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1506,7 +1506,7 @@
         }
       ],
       "clue": {
-        "text": "Gelecek zaman kipi",
+        "text": "'Ona beş ...' kalıbı",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1542,7 +1542,7 @@
         }
       ],
       "clue": {
-        "text": "Çok yumuşak",
+        "text": "Yumuşak düşme sesi",
         "arrow": "down",
         "word_id": "D7",
         "image_id": null,
@@ -1582,7 +1582,7 @@
         }
       ],
       "clue": {
-        "text": "Kötü ruhlu varlık",
+        "text": "Bir müzik makamı",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,
@@ -1622,7 +1622,7 @@
         }
       ],
       "clue": {
-        "text": "Hece oyunu",
+        "text": "Halk dörtlüğü",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,
@@ -1658,7 +1658,7 @@
         }
       ],
       "clue": {
-        "text": "Kırmızı renk",
+        "text": "Dili tutulmuş",
         "arrow": "down",
         "word_id": "D10",
         "image_id": null,
@@ -1690,7 +1690,7 @@
         }
       ],
       "clue": {
-        "text": "Çok kısa zaman parçası",
+        "text": "Kısacık zaman",
         "arrow": "down",
         "word_id": "D11",
         "image_id": null,

@@ -846,7 +846,7 @@
         }
       ],
       "clue": {
-        "text": "Makam vermek",
+        "text": "Göreve getirmek",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -882,7 +882,7 @@
         }
       ],
       "clue": {
-        "text": "Çocuk bezi",
+        "text": "Dam düzleme taşı",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -914,7 +914,7 @@
         }
       ],
       "clue": {
-        "text": "En yakını gösteren işaret sözü",
+        "text": "En yakın işaret sözü",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -950,7 +950,7 @@
         }
       ],
       "clue": {
-        "text": "Geçmişten hatıra",
+        "text": "Hatıra",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1018,7 +1018,7 @@
         }
       ],
       "clue": {
-        "text": "Pislik, pis",
+        "text": "Leke, pislik",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1094,7 +1094,7 @@
         }
       ],
       "clue": {
-        "text": "Borçlu olunan",
+        "text": "Verecek karşıtı",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1182,7 +1182,7 @@
         }
       ],
       "clue": {
-        "text": "Ani çıkış",
+        "text": "Hücum, akın",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1334,7 +1334,7 @@
         }
       ],
       "clue": {
-        "text": "İlgisi olan",
+        "text": "İlgili",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1390,7 +1390,7 @@
         }
       ],
       "clue": {
-        "text": "İtalya'da bir yer",
+        "text": "Gemi hacim ölçüsü",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1446,7 +1446,7 @@
         }
       ],
       "clue": {
-        "text": "Tembel adımlı",
+        "text": "Doğumu yakın (gebe)",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1638,7 +1638,7 @@
         }
       ],
       "clue": {
-        "text": "Çok kısa zaman parçası",
+        "text": "Kısacık zaman",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,

@@ -862,7 +862,7 @@
         }
       ],
       "clue": {
-        "text": "At cinsinden bir tür",
+        "text": "Çankırı ilçesi",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -894,7 +894,7 @@
         }
       ],
       "clue": {
-        "text": "Çok kısa zaman parçası",
+        "text": "Kısacık zaman",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -930,7 +930,7 @@
         }
       ],
       "clue": {
-        "text": "Samimi hitap",
+        "text": "Rumeli'de seslenme",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -1046,7 +1046,7 @@
         }
       ],
       "clue": {
-        "text": "Uçak parçası",
+        "text": "Kulplu iri bardak",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1086,7 +1086,7 @@
         }
       ],
       "clue": {
-        "text": "Sert çıkış",
+        "text": "Paylama",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1182,7 +1182,7 @@
         }
       ],
       "clue": {
-        "text": "Satrançta yenilmez",
+        "text": "Şahı deviren hamle",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1298,7 +1298,7 @@
         }
       ],
       "clue": {
-        "text": "Tohum saçtı",
+        "text": "Asalak (halk)",
         "arrow": "right",
         "word_id": "A13",
         "image_id": null,
@@ -1354,7 +1354,7 @@
         }
       ],
       "clue": {
-        "text": "Dalgalandırmak",
+        "text": "Sallayıp karıştırmak",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1386,7 +1386,7 @@
         }
       ],
       "clue": {
-        "text": "Bir yüzeyin genişliği",
+        "text": "Genişlik",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1470,7 +1470,7 @@
         }
       ],
       "clue": {
-        "text": "Güneş batımı rengi",
+        "text": "Koyulaşmak",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1510,7 +1510,7 @@
         }
       ],
       "clue": {
-        "text": "En, boy, derinlik",
+        "text": "Boyutlar",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1602,7 +1602,7 @@
         }
       ],
       "clue": {
-        "text": "Çocuk doğuran",
+        "text": "Anne",
         "arrow": "down",
         "word_id": "D7",
         "image_id": null,
@@ -1642,7 +1642,7 @@
         }
       ],
       "clue": {
-        "text": "Kutsal kişi",
+        "text": "Sevgili, değerli",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,
@@ -1678,7 +1678,7 @@
         }
       ],
       "clue": {
-        "text": "Birine özgü",
+        "text": "İlişkin, özgü",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,

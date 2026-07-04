@@ -865,7 +865,7 @@
         }
       ],
       "clue": {
-        "text": "Eskimiş giysiyi onarma",
+        "text": "Yama vurma",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -913,7 +913,7 @@
         }
       ],
       "clue": {
-        "text": "Doğumda anneye destek",
+        "text": "Doğum uzmanlığı",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -949,7 +949,7 @@
         }
       ],
       "clue": {
-        "text": "Ağaç uzantısı",
+        "text": "Ağacın kolu",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -1013,7 +1013,7 @@
         }
       ],
       "clue": {
-        "text": "Hayvan yuvası",
+        "text": "Kocanın kardeşi",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1089,7 +1089,7 @@
         }
       ],
       "clue": {
-        "text": "Genç öğrenci",
+        "text": "Lise öğrencisi",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1225,7 +1225,7 @@
         }
       ],
       "clue": {
-        "text": "Lekesiz, duru",
+        "text": "Saf, temiz",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1261,7 +1261,7 @@
         }
       ],
       "clue": {
-        "text": "Göğüs kafesi",
+        "text": "Parça takımı, set",
         "arrow": "right",
         "word_id": "A12",
         "image_id": null,
@@ -1293,7 +1293,7 @@
         }
       ],
       "clue": {
-        "text": "Çok kısa zaman parçası",
+        "text": "Kısacık zaman",
         "arrow": "right",
         "word_id": "A13",
         "image_id": null,
@@ -1349,7 +1349,7 @@
         }
       ],
       "clue": {
-        "text": "Yenilmek, mağlup olmak",
+        "text": "Yedeğe alınmak",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1393,7 +1393,7 @@
         }
       ],
       "clue": {
-        "text": "İnce ipek kumaş",
+        "text": "Nakışlı sarık kumaşı",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1441,7 +1441,7 @@
         }
       ],
       "clue": {
-        "text": "Limon otu türü",
+        "text": "Limon otu",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1509,7 +1509,7 @@
         }
       ],
       "clue": {
-        "text": "Arapça'da prens",
+        "text": "Bey (eski dil)",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1621,7 +1621,7 @@
         }
       ],
       "clue": {
-        "text": "Sıkıntı, dert",
+        "text": "Eziyet, cefa",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,
@@ -1661,7 +1661,7 @@
         }
       ],
       "clue": {
-        "text": "Eski para birimi",
+        "text": "Para birimimiz",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,

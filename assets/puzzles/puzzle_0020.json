@@ -1083,7 +1083,7 @@
         }
       ],
       "clue": {
-        "text": "Darbe almış",
+        "text": "Darbe izli",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1131,7 +1131,7 @@
         }
       ],
       "clue": {
-        "text": "Birine yardım etme",
+        "text": "Dışlanma, kakılma",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1199,7 +1199,7 @@
         }
       ],
       "clue": {
-        "text": "Gelecek zaman",
+        "text": "Gelecek (eski)",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1235,7 +1235,7 @@
         }
       ],
       "clue": {
-        "text": "Namus sözü",
+        "text": "Yemin",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1519,7 +1519,7 @@
         }
       ],
       "clue": {
-        "text": "Çok kısa zaman parçası",
+        "text": "Kısacık zaman",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1567,7 +1567,7 @@
         }
       ],
       "clue": {
-        "text": "Üstünlük derecesi",
+        "text": "Nitelik",
         "arrow": "down",
         "word_id": "D7",
         "image_id": null,
@@ -1607,7 +1607,7 @@
         }
       ],
       "clue": {
-        "text": "Baş ağrısı",
+        "text": "Musibet",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,
@@ -1651,7 +1651,7 @@
         }
       ],
       "clue": {
-        "text": "Kabarmış, ödemli",
+        "text": "Kabarmış",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,

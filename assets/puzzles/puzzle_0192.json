@@ -853,7 +853,7 @@
         }
       ],
       "clue": {
-        "text": "Siyah, sert ağaç",
+        "text": "Sert siyah ağaç",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -969,7 +969,7 @@
         }
       ],
       "clue": {
-        "text": "Manevi lider",
+        "text": "Bir işin üstadı",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1037,7 +1037,7 @@
         }
       ],
       "clue": {
-        "text": "Düzlük, arazi",
+        "text": "Geniş düzlük",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1081,7 +1081,7 @@
         }
       ],
       "clue": {
-        "text": "Mesaj, haber",
+        "text": "Mesaj",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1257,7 +1257,7 @@
         }
       ],
       "clue": {
-        "text": "Kurnazca plan",
+        "text": "Hile, düzen",
         "arrow": "right",
         "word_id": "A12",
         "image_id": null,
@@ -1341,7 +1341,7 @@
         }
       ],
       "clue": {
-        "text": "Yemek öncesi içki",
+        "text": "Yemek öncesi içecek",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1389,7 +1389,7 @@
         }
       ],
       "clue": {
-        "text": "Darbe almış",
+        "text": "Darbe izli",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1565,7 +1565,7 @@
         }
       ],
       "clue": {
-        "text": "Çünkü, bununla",
+        "text": "Çünkü",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1605,7 +1605,7 @@
         }
       ],
       "clue": {
-        "text": "Derviş, ermiş",
+        "text": "Bir erkek adı",
         "arrow": "down",
         "word_id": "D7",
         "image_id": null,
@@ -1641,7 +1641,7 @@
         }
       ],
       "clue": {
-        "text": "Soğuk hava yağışı",
+        "text": "Beyaz yağış",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,

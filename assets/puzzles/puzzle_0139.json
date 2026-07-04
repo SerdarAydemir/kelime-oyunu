@@ -952,7 +952,7 @@
         }
       ],
       "clue": {
-        "text": "Kan grubu",
+        "text": "Su çekimi işareti",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1000,7 +1000,7 @@
         }
       ],
       "clue": {
-        "text": "Gömlek yakasına bağlanır",
+        "text": "Boyun bağı",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1068,7 +1068,7 @@
         }
       ],
       "clue": {
-        "text": "Gizli yer",
+        "text": "Gizli saklama yeri",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1116,7 +1116,7 @@
         }
       ],
       "clue": {
-        "text": "Sert, dayanıklı kaya",
+        "text": "Bir volkanik kayaç",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1268,7 +1268,7 @@
         }
       ],
       "clue": {
-        "text": "Layıklık, değer",
+        "text": "Kazıyarak işleme",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1568,7 +1568,7 @@
         }
       ],
       "clue": {
-        "text": "Tropik yel",
+        "text": "Tropikal rüzgar",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,
@@ -1612,7 +1612,7 @@
         }
       ],
       "clue": {
-        "text": "İşten, okuldan uzak",
+        "text": "Dinlenme dönemi",
         "arrow": "down",
         "word_id": "D10",
         "image_id": null,
@@ -1648,7 +1648,7 @@
         }
       ],
       "clue": {
-        "text": "Müzik türü",
+        "text": "Bir müzik türü",
         "arrow": "down",
         "word_id": "D11",
         "image_id": null,

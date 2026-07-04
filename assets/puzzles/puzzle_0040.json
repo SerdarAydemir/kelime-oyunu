@@ -851,7 +851,7 @@
         }
       ],
       "clue": {
-        "text": "Önyargı, görüş",
+        "text": "Görüş, inanış",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -947,7 +947,7 @@
         }
       ],
       "clue": {
-        "text": "İpek kumaş",
+        "text": "Sağlamlaştırma",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -1039,7 +1039,7 @@
         }
       ],
       "clue": {
-        "text": "Bir yüzeyin genişliği",
+        "text": "Genişlik",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1075,7 +1075,7 @@
         }
       ],
       "clue": {
-        "text": "Sırtın üst kısmı",
+        "text": "Bitki sapı",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1139,7 +1139,7 @@
         }
       ],
       "clue": {
-        "text": "Sıkıntı, dert",
+        "text": "Eziyet, cefa",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1255,7 +1255,7 @@
         }
       ],
       "clue": {
-        "text": "Sıvı devinimi",
+        "text": "Fizikte bir nicelik",
         "arrow": "right",
         "word_id": "A12",
         "image_id": null,
@@ -1439,7 +1439,7 @@
         }
       ],
       "clue": {
-        "text": "Geri dönen ses",
+        "text": "Yankı (eski)",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1531,7 +1531,7 @@
         }
       ],
       "clue": {
-        "text": "Bir ses yankısı",
+        "text": "Çınlama sesi",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1599,7 +1599,7 @@
         }
       ],
       "clue": {
-        "text": "Damarda dolaşan",
+        "text": "İnanç, görüş",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,
@@ -1631,7 +1631,7 @@
         }
       ],
       "clue": {
-        "text": "İskambilde en değerli kâğıt",
+        "text": "İskambilde birli",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,

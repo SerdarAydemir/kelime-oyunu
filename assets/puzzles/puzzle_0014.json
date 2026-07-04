@@ -937,7 +937,7 @@
         }
       ],
       "clue": {
-        "text": "Gözdeki beyaz leke",
+        "text": "Beyazlaşmış",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -977,7 +977,7 @@
         }
       ],
       "clue": {
-        "text": "Soğanımsı çiçek",
+        "text": "Soğanlı bir çiçek",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1093,7 +1093,7 @@
         }
       ],
       "clue": {
-        "text": "Bir yüzeyin genişliği",
+        "text": "Genişlik",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1137,7 +1137,7 @@
         }
       ],
       "clue": {
-        "text": "Eski tanrıça",
+        "text": "Halı tezgahı",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1205,7 +1205,7 @@
         }
       ],
       "clue": {
-        "text": "Ayın ilk hali",
+        "text": "Hilal",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1313,7 +1313,7 @@
         }
       ],
       "clue": {
-        "text": "Osmanlı paşası",
+        "text": "Bir doğan türü",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1413,7 +1413,7 @@
         }
       ],
       "clue": {
-        "text": "Buzul taşıma birikimi",
+        "text": "Buzul taş yığını",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1485,7 +1485,7 @@
         }
       ],
       "clue": {
-        "text": "İshal, sulu dışkı",
+        "text": "Kurutulmuş meyve",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1557,7 +1557,7 @@
         }
       ],
       "clue": {
-        "text": "Çok kısa zaman parçası",
+        "text": "Kısacık zaman",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,

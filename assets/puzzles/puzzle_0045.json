@@ -860,7 +860,7 @@
         }
       ],
       "clue": {
-        "text": "Sakin, duygusuz",
+        "text": "Stoa filozofu",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -908,7 +908,7 @@
         }
       ],
       "clue": {
-        "text": "Siyah kedi türü",
+        "text": "Kara leopar",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -1012,7 +1012,7 @@
         }
       ],
       "clue": {
-        "text": "Sıvı yağ",
+        "text": "Çöl yeli",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1124,7 +1124,7 @@
         }
       ],
       "clue": {
-        "text": "Müzikte nota",
+        "text": "Tavuğa örnek yumurta",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1192,7 +1192,7 @@
         }
       ],
       "clue": {
-        "text": "Devasa, büyükçe",
+        "text": "Büyük, yapılı",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1224,7 +1224,7 @@
         }
       ],
       "clue": {
-        "text": "Kolun bilekten sonrası",
+        "text": "Avuç ve parmaklar",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1292,7 +1292,7 @@
         }
       ],
       "clue": {
-        "text": "Kek türü",
+        "text": "Dili tutuk kimse",
         "arrow": "right",
         "word_id": "A13",
         "image_id": null,
@@ -1348,7 +1348,7 @@
         }
       ],
       "clue": {
-        "text": "Özge, ayrı",
+        "text": "Kendine özgü",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1432,7 +1432,7 @@
         }
       ],
       "clue": {
-        "text": "Dokuzdan sonra gelen sayı",
+        "text": "Dokuzdan sonraki",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1468,7 +1468,7 @@
         }
       ],
       "clue": {
-        "text": "Soyun başı",
+        "text": "Cet, soy büyüğü",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1524,7 +1524,7 @@
         }
       ],
       "clue": {
-        "text": "Kasa doldurma",
+        "text": "Toplamak (eski)",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1564,7 +1564,7 @@
         }
       ],
       "clue": {
-        "text": "Asya ülkesi",
+        "text": "Uzak (halk dili)",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1672,7 +1672,7 @@
         }
       ],
       "clue": {
-        "text": "Birlikte, beraber",
+        "text": "Beraberlik edatı",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,

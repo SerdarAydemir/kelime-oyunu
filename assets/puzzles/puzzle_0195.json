@@ -905,7 +905,7 @@
         }
       ],
       "clue": {
-        "text": "Soyut düşünce",
+        "text": "Düşünce, fikir",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -1037,7 +1037,7 @@
         }
       ],
       "clue": {
-        "text": "Farklı renklerde",
+        "text": "Karışık renkli",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1149,7 +1149,7 @@
         }
       ],
       "clue": {
-        "text": "Güçlü istek, azim",
+        "text": "İstenç",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1197,7 +1197,7 @@
         }
       ],
       "clue": {
-        "text": "Yazıt, taş yazı",
+        "text": "Yazıt",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1301,7 +1301,7 @@
         }
       ],
       "clue": {
-        "text": "Mekanik bilim dalı",
+        "text": "Düşünmeden, makinece",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1337,7 +1337,7 @@
         }
       ],
       "clue": {
-        "text": "Nazlı kadın tavrı",
+        "text": "Davranış, naz",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1529,7 +1529,7 @@
         }
       ],
       "clue": {
-        "text": "Soğuk hava yağışı",
+        "text": "Beyaz yağış",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,
@@ -1573,7 +1573,7 @@
         }
       ],
       "clue": {
-        "text": "Düzenli ödeme",
+        "text": "Üyelik ödentisi",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,
@@ -1613,7 +1613,7 @@
         }
       ],
       "clue": {
-        "text": "Sert çekirdekli meyve",
+        "text": "Ekşimsi bir meyve",
         "arrow": "down",
         "word_id": "D10",
         "image_id": null,
@@ -1653,7 +1653,7 @@
         }
       ],
       "clue": {
-        "text": "Gün batısı",
+        "text": "Ağır, yavaş (eski)",
         "arrow": "down",
         "word_id": "D11",
         "image_id": null,

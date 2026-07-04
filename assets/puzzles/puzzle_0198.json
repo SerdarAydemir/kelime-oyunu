@@ -848,7 +848,7 @@
         }
       ],
       "clue": {
-        "text": "Sirkeye özgü",
+        "text": "Sirkeye özgü (asit)",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -892,7 +892,7 @@
         }
       ],
       "clue": {
-        "text": "Her şeyi reddeden",
+        "text": "Diyojen'in okulundan",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -924,7 +924,7 @@
         }
       ],
       "clue": {
-        "text": "Avlanan hayvan",
+        "text": "Yakalanan hayvan",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -1096,7 +1096,7 @@
         }
       ],
       "clue": {
-        "text": "Uzak Doğu fermente sosu",
+        "text": "Fermente Japon sosu",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1128,7 +1128,7 @@
         }
       ],
       "clue": {
-        "text": "Bırakılan eser, ayak izi",
+        "text": "Geride kalan belirti",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1164,7 +1164,7 @@
         }
       ],
       "clue": {
-        "text": "Kırmızı renk",
+        "text": "Dili tutulmuş",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1212,7 +1212,7 @@
         }
       ],
       "clue": {
-        "text": "İnatçı, aksi kimse",
+        "text": "Ayakkabı çekeceği",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1268,7 +1268,7 @@
         }
       ],
       "clue": {
-        "text": "Üniversite dünyası",
+        "text": "Üniversiteye ilişkin",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1356,7 +1356,7 @@
         }
       ],
       "clue": {
-        "text": "Bir yüzeyin genişliği",
+        "text": "Genişlik",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1412,7 +1412,7 @@
         }
       ],
       "clue": {
-        "text": "Yelkenli seyri",
+        "text": "Yelkenlide dönüş",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1556,7 +1556,7 @@
         }
       ],
       "clue": {
-        "text": "Kavuk türü",
+        "text": "Püsküllü başlık",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,

@@ -858,7 +858,7 @@
         }
       ],
       "clue": {
-        "text": "Kaybın peşinde",
+        "text": "Bulmaya çalışmak",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -906,7 +906,7 @@
         }
       ],
       "clue": {
-        "text": "Yahudi İspanyolcası",
+        "text": "Sefarad dili",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -942,7 +942,7 @@
         }
       ],
       "clue": {
-        "text": "Sanatçı yorumu",
+        "text": "Yerine getirme",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -1038,7 +1038,7 @@
         }
       ],
       "clue": {
-        "text": "Namus sözü",
+        "text": "Yemin",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1082,7 +1082,7 @@
         }
       ],
       "clue": {
-        "text": "Bir beye",
+        "text": "Vakfetme",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1130,7 +1130,7 @@
         }
       ],
       "clue": {
-        "text": "Japon nehri",
+        "text": "Başa kakma (eski)",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1166,7 +1166,7 @@
         }
       ],
       "clue": {
-        "text": "Nazik, kibar",
+        "text": "2,54 cm'lik birim",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1494,7 +1494,7 @@
         }
       ],
       "clue": {
-        "text": "Çok kısa zaman parçası",
+        "text": "Kısacık zaman",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1614,7 +1614,7 @@
         }
       ],
       "clue": {
-        "text": "Burundan gelen ses",
+        "text": "Genizden gelen",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,
@@ -1654,7 +1654,7 @@
         }
       ],
       "clue": {
-        "text": "Madenî para",
+        "text": "Para (halk dili)",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,
@@ -1690,7 +1690,7 @@
         }
       ],
       "clue": {
-        "text": "Farklı renklerde",
+        "text": "Karışık renkli",
         "arrow": "down",
         "word_id": "D10",
         "image_id": null,

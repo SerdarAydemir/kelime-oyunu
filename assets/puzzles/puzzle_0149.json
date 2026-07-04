@@ -862,7 +862,7 @@
         }
       ],
       "clue": {
-        "text": "Kere, kez",
+        "text": "Birçok kez (eski)",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -910,7 +910,7 @@
         }
       ],
       "clue": {
-        "text": "Yapı ruhsatı veren",
+        "text": "İmar işleri uzmanı",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -1002,7 +1002,7 @@
         }
       ],
       "clue": {
-        "text": "Gönderilen şey",
+        "text": "Gönderme (eski)",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1070,7 +1070,7 @@
         }
       ],
       "clue": {
-        "text": "Çıkarılan, koparılan",
+        "text": "Engel",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1106,7 +1106,7 @@
         }
       ],
       "clue": {
-        "text": "Gelecek zaman",
+        "text": "Gelecek (eski)",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1378,7 +1378,7 @@
         }
       ],
       "clue": {
-        "text": "Yapı, inşa",
+        "text": "Beylik, emirlik",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1462,7 +1462,7 @@
         }
       ],
       "clue": {
-        "text": "Derme çatma kulübe",
+        "text": "İçi çürümüş ağaç",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1510,7 +1510,7 @@
         }
       ],
       "clue": {
-        "text": "Hemen şimdi",
+        "text": "İvedilikle",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,

@@ -860,7 +860,7 @@
         }
       ],
       "clue": {
-        "text": "Göçebe topluluk",
+        "text": "Boy, oymak",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -908,7 +908,7 @@
         }
       ],
       "clue": {
-        "text": "Torosların zirvesi",
+        "text": "Toroslarda zirve",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -948,7 +948,7 @@
         }
       ],
       "clue": {
-        "text": "At yavrusu",
+        "text": "Dadı",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -1040,7 +1040,7 @@
         }
       ],
       "clue": {
-        "text": "İskambil kartı",
+        "text": "Mavi (eski dil)",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1084,7 +1084,7 @@
         }
       ],
       "clue": {
-        "text": "Talih, şans, kader",
+        "text": "Talih, kader",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1120,7 +1120,7 @@
         }
       ],
       "clue": {
-        "text": "Birden bire",
+        "text": "Birdenbire olan",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1196,7 +1196,7 @@
         }
       ],
       "clue": {
-        "text": "Dil bilimi",
+        "text": "Dille ilgili",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1300,7 +1300,7 @@
         }
       ],
       "clue": {
-        "text": "Cenaze arabası",
+        "text": "Tabut sehpası",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1336,7 +1336,7 @@
         }
       ],
       "clue": {
-        "text": "Farklı renklerde",
+        "text": "Karışık renkli",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1416,7 +1416,7 @@
         }
       ],
       "clue": {
-        "text": "Ölüme mahkum etme",
+        "text": "Sürdürme",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1636,7 +1636,7 @@
         }
       ],
       "clue": {
-        "text": "İntikam duygusu",
+        "text": "Gizli düşmanlık",
         "arrow": "down",
         "word_id": "D10",
         "image_id": null,

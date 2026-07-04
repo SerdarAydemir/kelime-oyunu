@@ -895,7 +895,7 @@
         }
       ],
       "clue": {
-        "text": "Kürk hayvanı",
+        "text": "Beyaz kürklü hayvan",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -943,7 +943,7 @@
         }
       ],
       "clue": {
-        "text": "Jeolojik devir",
+        "text": "İlk dinozor devri",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -1055,7 +1055,7 @@
         }
       ],
       "clue": {
-        "text": "Rakı markası",
+        "text": "Gece (Farsça)",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1163,7 +1163,7 @@
         }
       ],
       "clue": {
-        "text": "Herkesin önünde",
+        "text": "Açık, ortada",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1231,7 +1231,7 @@
         }
       ],
       "clue": {
-        "text": "Pişirme kabı",
+        "text": "Sevinç ünlemi",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1287,7 +1287,7 @@
         }
       ],
       "clue": {
-        "text": "Nakil işlemi",
+        "text": "Nakletmek",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1327,7 +1327,7 @@
         }
       ],
       "clue": {
-        "text": "İran ulusu",
+        "text": "Kaba güldürü",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1367,7 +1367,7 @@
         }
       ],
       "clue": {
-        "text": "Yemen taşı",
+        "text": "Değerli bir süs taşı",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1411,7 +1411,7 @@
         }
       ],
       "clue": {
-        "text": "Deniz kenarı",
+        "text": "Göze alış",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1467,7 +1467,7 @@
         }
       ],
       "clue": {
-        "text": "Canı gönülden",
+        "text": "Hazır bulunma",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1535,7 +1535,7 @@
         }
       ],
       "clue": {
-        "text": "Bebeklerin ilk gıdası",
+        "text": "Klasik müzik makamı",
         "arrow": "down",
         "word_id": "D7",
         "image_id": null,

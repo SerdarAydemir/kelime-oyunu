@@ -896,7 +896,7 @@
         }
       ],
       "clue": {
-        "text": "Bir amaca tahsis",
+        "text": "Vakfetmek",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -960,7 +960,7 @@
         }
       ],
       "clue": {
-        "text": "Küpün bir yüzü",
+        "text": "Tavla küpü",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1076,7 +1076,7 @@
         }
       ],
       "clue": {
-        "text": "Miktar düşüşü",
+        "text": "Eksilme",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1292,7 +1292,7 @@
         }
       ],
       "clue": {
-        "text": "Boş laf etmek",
+        "text": "İki yana oynatmak",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1360,7 +1360,7 @@
         }
       ],
       "clue": {
-        "text": "Pürüzsüz baş",
+        "text": "Kel (halk)",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1416,7 +1416,7 @@
         }
       ],
       "clue": {
-        "text": "Hedefe yöneltme",
+        "text": "Hedefleme",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1576,7 +1576,7 @@
         }
       ],
       "clue": {
-        "text": "Seslenme, çağırma sözü",
+        "text": "Seslenme sözü",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,
@@ -1616,7 +1616,7 @@
         }
       ],
       "clue": {
-        "text": "Başkasına ait mal",
+        "text": "Ter (eski dil)",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,

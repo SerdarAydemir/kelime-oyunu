@@ -944,7 +944,7 @@
         }
       ],
       "clue": {
-        "text": "Soluksuz",
+        "text": "Kesintisiz",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -984,7 +984,7 @@
         }
       ],
       "clue": {
-        "text": "Milli piyango türü",
+        "text": "Bıyıklı göl balığı",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1044,7 +1044,7 @@
         }
       ],
       "clue": {
-        "text": "Çok kısa zaman parçası",
+        "text": "Kısacık zaman",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1112,7 +1112,7 @@
         }
       ],
       "clue": {
-        "text": "Duyulmuş hikaye",
+        "text": "Efsane, söylence",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1192,7 +1192,7 @@
         }
       ],
       "clue": {
-        "text": "Zeka sahibi",
+        "text": "Zeki",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1372,7 +1372,7 @@
         }
       ],
       "clue": {
-        "text": "Çiçek türü",
+        "text": "Bir kır çiçeği",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1412,7 +1412,7 @@
         }
       ],
       "clue": {
-        "text": "Doğal felaket",
+        "text": "Felaketler (eski)",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1452,7 +1452,7 @@
         }
       ],
       "clue": {
-        "text": "Kadınlar sûresi",
+        "text": "Kadınlar (eski)",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1488,7 +1488,7 @@
         }
       ],
       "clue": {
-        "text": "Sıvı devinimi",
+        "text": "Fizikte bir nicelik",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1544,7 +1544,7 @@
         }
       ],
       "clue": {
-        "text": "Sıcak tutan giysi",
+        "text": "Kazak olacak kumaş",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1620,7 +1620,7 @@
         }
       ],
       "clue": {
-        "text": "Sessizlik sesi",
+        "text": "En ufak ses",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,

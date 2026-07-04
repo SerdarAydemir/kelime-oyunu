@@ -906,7 +906,7 @@
         }
       ],
       "clue": {
-        "text": "Ceza yeri",
+        "text": "Ceza (eski)",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -1018,7 +1018,7 @@
         }
       ],
       "clue": {
-        "text": "Karşılıklı verme",
+        "text": "Görüş alışverişi",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1194,7 +1194,7 @@
         }
       ],
       "clue": {
-        "text": "Donanımlı iş",
+        "text": "Aygıtlı (jimnastik)",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1230,7 +1230,7 @@
         }
       ],
       "clue": {
-        "text": "Çok az, pek değil",
+        "text": "Ekmek (eski)",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1318,7 +1318,7 @@
         }
       ],
       "clue": {
-        "text": "Tren istasyonu",
+        "text": "Siirt'in ilçesi",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1390,7 +1390,7 @@
         }
       ],
       "clue": {
-        "text": "Göl kuşu",
+        "text": "Erkek ördek",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1434,7 +1434,7 @@
         }
       ],
       "clue": {
-        "text": "Suda yaşayan canlı",
+        "text": "Barındırma (eski)",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1526,7 +1526,7 @@
         }
       ],
       "clue": {
-        "text": "Hayvan parçası",
+        "text": "Hitit",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1630,7 +1630,7 @@
         }
       ],
       "clue": {
-        "text": "Farklı renklerde",
+        "text": "Karışık renkli",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,
@@ -1662,7 +1662,7 @@
         }
       ],
       "clue": {
-        "text": "Bir yüzeyin genişliği",
+        "text": "Genişlik",
         "arrow": "down",
         "word_id": "D10",
         "image_id": null,

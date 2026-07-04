@@ -901,7 +901,7 @@
         }
       ],
       "clue": {
-        "text": "Farklı renklerde",
+        "text": "Karışık renkli",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -1001,7 +1001,7 @@
         }
       ],
       "clue": {
-        "text": "Saç teli",
+        "text": "İnce tüy",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1225,7 +1225,7 @@
         }
       ],
       "clue": {
-        "text": "Tesirli, gücü olan",
+        "text": "Tesirli",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1349,7 +1349,7 @@
         }
       ],
       "clue": {
-        "text": "Üzülerek belirtme",
+        "text": "Ne yazık ki",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1385,7 +1385,7 @@
         }
       ],
       "clue": {
-        "text": "Üstün zıttı",
+        "text": "Üst karşıtı",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1417,7 +1417,7 @@
         }
       ],
       "clue": {
-        "text": "Seslenme, çağırma sözü",
+        "text": "Seslenme sözü",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1485,7 +1485,7 @@
         }
       ],
       "clue": {
-        "text": "İz, basamak",
+        "text": "Yürüyüş birimi",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1609,7 +1609,7 @@
         }
       ],
       "clue": {
-        "text": "Uçak sesi",
+        "text": "Kış (eski)",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,
@@ -1645,7 +1645,7 @@
         }
       ],
       "clue": {
-        "text": "Söz hakkı, nüfuz",
+        "text": "Güç, iktidar",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,
@@ -1685,7 +1685,7 @@
         }
       ],
       "clue": {
-        "text": "Ani ve tehlikeli durum",
+        "text": "Buhran",
         "arrow": "down",
         "word_id": "D10",
         "image_id": null,

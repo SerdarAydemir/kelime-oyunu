@@ -867,7 +867,7 @@
         }
       ],
       "clue": {
-        "text": "Çocuk oyunu",
+        "text": "Kutulu zıplama oyunu",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -911,7 +911,7 @@
         }
       ],
       "clue": {
-        "text": "Miktar düşüklüğü",
+        "text": "Çokluk karşıtı",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -1115,7 +1115,7 @@
         }
       ],
       "clue": {
-        "text": "Mızrak gibi",
+        "text": "Şaman",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1151,7 +1151,7 @@
         }
       ],
       "clue": {
-        "text": "Satrançta yenilmez",
+        "text": "Şahı deviren hamle",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1227,7 +1227,7 @@
         }
       ],
       "clue": {
-        "text": "Havada duran",
+        "text": "Sarkıtılmış",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1275,7 +1275,7 @@
         }
       ],
       "clue": {
-        "text": "Yük taşıyan binek",
+        "text": "Kara çalma, yerme",
         "arrow": "right",
         "word_id": "A12",
         "image_id": null,
@@ -1367,7 +1367,7 @@
         }
       ],
       "clue": {
-        "text": "Sıkıntı, dert",
+        "text": "Eziyet, cefa",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1407,7 +1407,7 @@
         }
       ],
       "clue": {
-        "text": "Grup, topluluk",
+        "text": "Çıkar grubu",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1451,7 +1451,7 @@
         }
       ],
       "clue": {
-        "text": "Sıcak, ılık",
+        "text": "Kırmak (eski)",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1595,7 +1595,7 @@
         }
       ],
       "clue": {
-        "text": "Sarmak fiili",
+        "text": "Dolama işi",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,

@@ -855,7 +855,7 @@
         }
       ],
       "clue": {
-        "text": "Ses algılama duyusu",
+        "text": "Duyma yetisi",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -903,7 +903,7 @@
         }
       ],
       "clue": {
-        "text": "Zirvesi sivri",
+        "text": "İbikli (kuş)",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -1107,7 +1107,7 @@
         }
       ],
       "clue": {
-        "text": "Kaygı, tasa, telaş",
+        "text": "Kaygı, tasa",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1175,7 +1175,7 @@
         }
       ],
       "clue": {
-        "text": "Israrcı, söz dinlemez",
+        "text": "Ayak direme",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1267,7 +1267,7 @@
         }
       ],
       "clue": {
-        "text": "Kaya kuşu",
+        "text": "Bir av kuşu",
         "arrow": "right",
         "word_id": "A12",
         "image_id": null,
@@ -1323,7 +1323,7 @@
         }
       ],
       "clue": {
-        "text": "İleri doğru itmek",
+        "text": "İtip durmak",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1399,7 +1399,7 @@
         }
       ],
       "clue": {
-        "text": "Bağlamaya yarayan ince halat",
+        "text": "İnce halat",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1535,7 +1535,7 @@
         }
       ],
       "clue": {
-        "text": "Büyük topluluk",
+        "text": "Ulus",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1579,7 +1579,7 @@
         }
       ],
       "clue": {
-        "text": "İslam kelam ekolü",
+        "text": "Ondalık (eski)",
         "arrow": "down",
         "word_id": "D7",
         "image_id": null,

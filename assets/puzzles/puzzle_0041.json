@@ -846,7 +846,7 @@
         }
       ],
       "clue": {
-        "text": "Hesapta duran",
+        "text": "Kalan miktar",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -930,7 +930,7 @@
         }
       ],
       "clue": {
-        "text": "Kötülük, şeytan",
+        "text": "Kurnaz",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -1006,7 +1006,7 @@
         }
       ],
       "clue": {
-        "text": "Pantolon altı giysi",
+        "text": "Kısa çorap",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1054,7 +1054,7 @@
         }
       ],
       "clue": {
-        "text": "Çok üzgün",
+        "text": "Üzüntülü",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1102,7 +1102,7 @@
         }
       ],
       "clue": {
-        "text": "Kıvırcık saçlı",
+        "text": "Toy, acemi (halk)",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1166,7 +1166,7 @@
         }
       ],
       "clue": {
-        "text": "Dönme çizgisi",
+        "text": "Dingil",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1198,7 +1198,7 @@
         }
       ],
       "clue": {
-        "text": "Bir yüzeyin genişliği",
+        "text": "Genişlik",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1310,7 +1310,7 @@
         }
       ],
       "clue": {
-        "text": "Birine lütuf",
+        "text": "Lütfedip verme",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1490,7 +1490,7 @@
         }
       ],
       "clue": {
-        "text": "Müzik aleti",
+        "text": "Yırtık gibi açık",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1526,7 +1526,7 @@
         }
       ],
       "clue": {
-        "text": "İşin ehli kişi",
+        "text": "Usta, deneyimli",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,

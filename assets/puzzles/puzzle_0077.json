@@ -942,7 +942,7 @@
         }
       ],
       "clue": {
-        "text": "Sıralı dizi",
+        "text": "Film bölümü",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -986,7 +986,7 @@
         }
       ],
       "clue": {
-        "text": "Uzakdoğu çizimi",
+        "text": "Japon çizgi filmi",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1098,7 +1098,7 @@
         }
       ],
       "clue": {
-        "text": "Göğüs kafesi",
+        "text": "Parça takımı, set",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1182,7 +1182,7 @@
         }
       ],
       "clue": {
-        "text": "Kaya kuşu",
+        "text": "Bir av kuşu",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1238,7 +1238,7 @@
         }
       ],
       "clue": {
-        "text": "Ritim kaçırmak",
+        "text": "Sekteye uğratmak",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1282,7 +1282,7 @@
         }
       ],
       "clue": {
-        "text": "Sıvı yakıt",
+        "text": "Kırmızı süs taşı",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1326,7 +1326,7 @@
         }
       ],
       "clue": {
-        "text": "Cebinde taşınan para",
+        "text": "Peşin para",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1374,7 +1374,7 @@
         }
       ],
       "clue": {
-        "text": "Samanı biçmek",
+        "text": "Sağaltmak (eski)",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1422,7 +1422,7 @@
         }
       ],
       "clue": {
-        "text": "Büyük, yuvarlak, yassı",
+        "text": "Yıllık (eski)",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1458,7 +1458,7 @@
         }
       ],
       "clue": {
-        "text": "Miras kalan",
+        "text": "Kalıtım",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,

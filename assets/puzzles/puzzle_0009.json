@@ -865,7 +865,7 @@
         }
       ],
       "clue": {
-        "text": "Mutluluk, bahtiyarlık",
+        "text": "Mutluluk",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -913,7 +913,7 @@
         }
       ],
       "clue": {
-        "text": "Reçeteli şifa",
+        "text": "İlaç satılan yer",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -1133,7 +1133,7 @@
         }
       ],
       "clue": {
-        "text": "Emek karşılığı alınan",
+        "text": "Aylık ücret",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1177,7 +1177,7 @@
         }
       ],
       "clue": {
-        "text": "Dans figürü",
+        "text": "Bir dans türü",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1293,7 +1293,7 @@
         }
       ],
       "clue": {
-        "text": "Arı vızıltısı",
+        "text": "Hafif damla sesi",
         "arrow": "right",
         "word_id": "A13",
         "image_id": null,
@@ -1349,7 +1349,7 @@
         }
       ],
       "clue": {
-        "text": "Yazgı, kader",
+        "text": "Yok etme (eski)",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1489,7 +1489,7 @@
         }
       ],
       "clue": {
-        "text": "Bir yüzeyin genişliği",
+        "text": "Genişlik",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1533,7 +1533,7 @@
         }
       ],
       "clue": {
-        "text": "Aceleci durum",
+        "text": "Kaygılı acele",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1613,7 +1613,7 @@
         }
       ],
       "clue": {
-        "text": "Hemen şimdi",
+        "text": "Sinirler",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,

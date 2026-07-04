@@ -855,7 +855,7 @@
         }
       ],
       "clue": {
-        "text": "Netice yok",
+        "text": "Sonuçsuzluk",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -971,7 +971,7 @@
         }
       ],
       "clue": {
-        "text": "Dudak, kenar",
+        "text": "Dudak (eski)",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1039,7 +1039,7 @@
         }
       ],
       "clue": {
-        "text": "İstenen şey",
+        "text": "Beklenti",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1087,7 +1087,7 @@
         }
       ],
       "clue": {
-        "text": "Ödünç alınan eşya",
+        "text": "Saklanması istenen",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1123,7 +1123,7 @@
         }
       ],
       "clue": {
-        "text": "Kırmızı renk",
+        "text": "Dili tutulmuş",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1323,7 +1323,7 @@
         }
       ],
       "clue": {
-        "text": "Ağır vasıfsız iş",
+        "text": "Irgatlık",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1491,7 +1491,7 @@
         }
       ],
       "clue": {
-        "text": "Ağaçtan düşen",
+        "text": "İğdiş etme",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1619,7 +1619,7 @@
         }
       ],
       "clue": {
-        "text": "Bir şeyin sivri kenarı",
+        "text": "Sivri kenar",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,
@@ -1651,7 +1651,7 @@
         }
       ],
       "clue": {
-        "text": "İçtiğimiz berrak sıvı",
+        "text": "İçilen berrak sıvı",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,

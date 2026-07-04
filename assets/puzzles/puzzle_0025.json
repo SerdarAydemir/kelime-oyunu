@@ -860,7 +860,7 @@
         }
       ],
       "clue": {
-        "text": "Netice yok",
+        "text": "Sonuçsuzluk",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -908,7 +908,7 @@
         }
       ],
       "clue": {
-        "text": "Ebegümecigillerden",
+        "text": "Yenen yabani ot",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -1060,7 +1060,7 @@
         }
       ],
       "clue": {
-        "text": "Patron, şef",
+        "text": "Üst, yönetici",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1136,7 +1136,7 @@
         }
       ],
       "clue": {
-        "text": "İpi saran makine",
+        "text": "İplik sargısı",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1172,7 +1172,7 @@
         }
       ],
       "clue": {
-        "text": "Namus sözü",
+        "text": "Yemin",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1264,7 +1264,7 @@
         }
       ],
       "clue": {
-        "text": "Çok kısa zaman parçası",
+        "text": "Kısacık zaman",
         "arrow": "right",
         "word_id": "A12",
         "image_id": null,
@@ -1348,7 +1348,7 @@
         }
       ],
       "clue": {
-        "text": "Rengarenk yapmak",
+        "text": "Çok renkli yapmak",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1524,7 +1524,7 @@
         }
       ],
       "clue": {
-        "text": "Sözcük bağlayıcı",
+        "text": "İlgeç",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1560,7 +1560,7 @@
         }
       ],
       "clue": {
-        "text": "Dilin aldığı lezzet",
+        "text": "Lezzet",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1600,7 +1600,7 @@
         }
       ],
       "clue": {
-        "text": "Osmanlı'da toprak geliri",
+        "text": "Selçuklu'da dirlik",
         "arrow": "down",
         "word_id": "D7",
         "image_id": null,
@@ -1640,7 +1640,7 @@
         }
       ],
       "clue": {
-        "text": "Kuş türü, şakacı",
+        "text": "Bir ötücü kuş",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,

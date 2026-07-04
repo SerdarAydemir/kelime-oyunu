@@ -862,7 +862,7 @@
         }
       ],
       "clue": {
-        "text": "Yazılı eser",
+        "text": "Gazete yazısı",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -1046,7 +1046,7 @@
         }
       ],
       "clue": {
-        "text": "Yüksek vücut ısısı",
+        "text": "Harareti olan",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1114,7 +1114,7 @@
         }
       ],
       "clue": {
-        "text": "Bağlamaya yarayan ince halat",
+        "text": "İnce halat",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1230,7 +1230,7 @@
         }
       ],
       "clue": {
-        "text": "Gelecek zaman",
+        "text": "Gelecek (eski)",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1270,7 +1270,7 @@
         }
       ],
       "clue": {
-        "text": "Moda akımı",
+        "text": "Biçim, üslup",
         "arrow": "right",
         "word_id": "A12",
         "image_id": null,
@@ -1410,7 +1410,7 @@
         }
       ],
       "clue": {
-        "text": "Geleneksel Türk stili",
+        "text": "Eski Doğu usulü",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1458,7 +1458,7 @@
         }
       ],
       "clue": {
-        "text": "Mühürlenmiş damga",
+        "text": "Damgalı, mühürlü",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1646,7 +1646,7 @@
         }
       ],
       "clue": {
-        "text": "İskandinav tanrısı",
+        "text": "Alman sanat şarkısı",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,
@@ -1682,7 +1682,7 @@
         }
       ],
       "clue": {
-        "text": "Kışın donan su",
+        "text": "Bir kümes hayvanı",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,

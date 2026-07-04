@@ -862,7 +862,7 @@
         }
       ],
       "clue": {
-        "text": "Osmanlı'da padişah hocası",
+        "text": "Padişah gözdesi",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -978,7 +978,7 @@
         }
       ],
       "clue": {
-        "text": "Kadınlar sûresi",
+        "text": "Kadınlar (eski)",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1010,7 +1010,7 @@
         }
       ],
       "clue": {
-        "text": "İskambilde en değerli kâğıt",
+        "text": "İskambilde birli",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1046,7 +1046,7 @@
         }
       ],
       "clue": {
-        "text": "Çok az, pek değil",
+        "text": "Ekmek (eski)",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1094,7 +1094,7 @@
         }
       ],
       "clue": {
-        "text": "Çizgili, desenli",
+        "text": "Benekli (kumaş)",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1198,7 +1198,7 @@
         }
       ],
       "clue": {
-        "text": "Sıcaklık derecesi",
+        "text": "Sıcaklık enerjisi",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1270,7 +1270,7 @@
         }
       ],
       "clue": {
-        "text": "Ödeme borcu",
+        "text": "Oturma bedeli",
         "arrow": "right",
         "word_id": "A12",
         "image_id": null,
@@ -1354,7 +1354,7 @@
         }
       ],
       "clue": {
-        "text": "Yıkık dökük yer",
+        "text": "Viranelik",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1386,7 +1386,7 @@
         }
       ],
       "clue": {
-        "text": "Çok kısa zaman parçası",
+        "text": "Kısacık zaman",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1422,7 +1422,7 @@
         }
       ],
       "clue": {
-        "text": "Sırtı dönük",
+        "text": "Unvan",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1522,7 +1522,7 @@
         }
       ],
       "clue": {
-        "text": "Uzunluğun azalması",
+        "text": "Boyca azalma",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1578,7 +1578,7 @@
         }
       ],
       "clue": {
-        "text": "Aşkını duyurmak",
+        "text": "Aşkını açıklama",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1610,7 +1610,7 @@
         }
       ],
       "clue": {
-        "text": "İçtiğimiz berrak sıvı",
+        "text": "İçilen berrak sıvı",
         "arrow": "down",
         "word_id": "D7",
         "image_id": null,
@@ -1650,7 +1650,7 @@
         }
       ],
       "clue": {
-        "text": "Yüz yıllık zaman",
+        "text": "Yüzyıl",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,

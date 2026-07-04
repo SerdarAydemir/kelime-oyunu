@@ -855,7 +855,7 @@
         }
       ],
       "clue": {
-        "text": "Savaşçı atlı",
+        "text": "Osmanlı atlı askeri",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -923,7 +923,7 @@
         }
       ],
       "clue": {
-        "text": "Seçkin zümre",
+        "text": "Seçkin",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -971,7 +971,7 @@
         }
       ],
       "clue": {
-        "text": "Matematiksel",
+        "text": "Matematiksel (eski)",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1019,7 +1019,7 @@
         }
       ],
       "clue": {
-        "text": "Kızıl, kırmızıya çalan",
+        "text": "Çınlayan (eski)",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1055,7 +1055,7 @@
         }
       ],
       "clue": {
-        "text": "Kötü niyetli",
+        "text": "Bayağı, sıradan",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1127,7 +1127,7 @@
         }
       ],
       "clue": {
-        "text": "Osmanlı resmi belgesi",
+        "text": "Ayrıcalık belgesi",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1195,7 +1195,7 @@
         }
       ],
       "clue": {
-        "text": "Kırmızı renk",
+        "text": "Dili tutulmuş",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1243,7 +1243,7 @@
         }
       ],
       "clue": {
-        "text": "Etçil tatlı su balığı",
+        "text": "Etobur nehir balığı",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1299,7 +1299,7 @@
         }
       ],
       "clue": {
-        "text": "İnatçı doktor",
+        "text": "Başhekim",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1375,7 +1375,7 @@
         }
       ],
       "clue": {
-        "text": "Süt ürünü, kahvaltı",
+        "text": "Mayalı süt ürünü",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1415,7 +1415,7 @@
         }
       ],
       "clue": {
-        "text": "Geniş saha",
+        "text": "Saha, meydan",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1455,7 +1455,7 @@
         }
       ],
       "clue": {
-        "text": "Aynı seviyede olma",
+        "text": "Doğrultu, sıra",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1547,7 +1547,7 @@
         }
       ],
       "clue": {
-        "text": "Kargolu gönderi",
+        "text": "Alındı onaylı posta",
         "arrow": "down",
         "word_id": "D7",
         "image_id": null,
@@ -1583,7 +1583,7 @@
         }
       ],
       "clue": {
-        "text": "Farklı renklerde",
+        "text": "Karışık renkli",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,

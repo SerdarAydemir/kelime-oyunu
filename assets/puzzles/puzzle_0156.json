@@ -883,7 +883,7 @@
         }
       ],
       "clue": {
-        "text": "Çok kısa zaman parçası",
+        "text": "Kısacık zaman",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -1023,7 +1023,7 @@
         }
       ],
       "clue": {
-        "text": "Artı kutup",
+        "text": "Ekin taşıma çatalı",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1071,7 +1071,7 @@
         }
       ],
       "clue": {
-        "text": "Zeytinli pide türü",
+        "text": "Piresi olan",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1231,7 +1231,7 @@
         }
       ],
       "clue": {
-        "text": "Rusya lideri",
+        "text": "Rus hükümdarı",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1319,7 +1319,7 @@
         }
       ],
       "clue": {
-        "text": "Bir yüzeyin genişliği",
+        "text": "Genişlik",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1403,7 +1403,7 @@
         }
       ],
       "clue": {
-        "text": "Kapsayan, içine alan",
+        "text": "İçinde yer alan",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1551,7 +1551,7 @@
         }
       ],
       "clue": {
-        "text": "Cılız beden",
+        "text": "Cılız, zayıf",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,
@@ -1595,7 +1595,7 @@
         }
       ],
       "clue": {
-        "text": "Şiirde ses tekrarı",
+        "text": "Sesleri bağlayış",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,
@@ -1631,7 +1631,7 @@
         }
       ],
       "clue": {
-        "text": "Ruh, nefes",
+        "text": "Ruh (felsefe)",
         "arrow": "down",
         "word_id": "D10",
         "image_id": null,

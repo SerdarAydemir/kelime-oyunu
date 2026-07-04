@@ -851,7 +851,7 @@
         }
       ],
       "clue": {
-        "text": "Göçebe, çingene",
+        "text": "Barış dönemine ait",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -899,7 +899,7 @@
         }
       ],
       "clue": {
-        "text": "Efsanevi kişi",
+        "text": "Mitoloji (eski)",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -947,7 +947,7 @@
         }
       ],
       "clue": {
-        "text": "Matematiksel",
+        "text": "Matematiksel (eski)",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -1087,7 +1087,7 @@
         }
       ],
       "clue": {
-        "text": "Kayak sporu",
+        "text": "Kayak",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1159,7 +1159,7 @@
         }
       ],
       "clue": {
-        "text": "Hızlı kara memelisi",
+        "text": "En hızlı kara hayvanı",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1227,7 +1227,7 @@
         }
       ],
       "clue": {
-        "text": "Vatan bekçisi",
+        "text": "Erler topluluğu",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1311,7 +1311,7 @@
         }
       ],
       "clue": {
-        "text": "Tüm insanlar",
+        "text": "Tüm insanlarca",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1351,7 +1351,7 @@
         }
       ],
       "clue": {
-        "text": "Soylu, yüksek ruhlu",
+        "text": "Soylu",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1391,7 +1391,7 @@
         }
       ],
       "clue": {
-        "text": "Kayıp, bulunamayan",
+        "text": "Yitik, kayıp",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1431,7 +1431,7 @@
         }
       ],
       "clue": {
-        "text": "Evrak düzenleyici",
+        "text": "Kağıt tutturucusu",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1479,7 +1479,7 @@
         }
       ],
       "clue": {
-        "text": "Karadenizli hemşeri",
+        "text": "Rize'nin yerlisi",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1515,7 +1515,7 @@
         }
       ],
       "clue": {
-        "text": "Devasa, büyükçe",
+        "text": "Büyük, yapılı",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1591,7 +1591,7 @@
         }
       ],
       "clue": {
-        "text": "Pislik, pis",
+        "text": "Leke, pislik",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,
@@ -1627,7 +1627,7 @@
         }
       ],
       "clue": {
-        "text": "Emir dinleyen",
+        "text": "Verme, ödeme",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,

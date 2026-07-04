@@ -865,7 +865,7 @@
         }
       ],
       "clue": {
-        "text": "Etçil tatlı su balığı",
+        "text": "Etobur nehir balığı",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -933,7 +933,7 @@
         }
       ],
       "clue": {
-        "text": "Müzikte nota",
+        "text": "Baskı, basma (eski)",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -1033,7 +1033,7 @@
         }
       ],
       "clue": {
-        "text": "Zıplamak, sıçramak",
+        "text": "Katkısız, saf",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1389,7 +1389,7 @@
         }
       ],
       "clue": {
-        "text": "Besleme, yiyecek sağlama",
+        "text": "Yedirip içirme",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1489,7 +1489,7 @@
         }
       ],
       "clue": {
-        "text": "Nar ağacı meyvesi",
+        "text": "Gür bağırış",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1525,7 +1525,7 @@
         }
       ],
       "clue": {
-        "text": "Samimi hitap",
+        "text": "Rumeli'de seslenme",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1569,7 +1569,7 @@
         }
       ],
       "clue": {
-        "text": "Nefesle çalınan",
+        "text": "Çoban düdüğü",
         "arrow": "down",
         "word_id": "D7",
         "image_id": null,
@@ -1609,7 +1609,7 @@
         }
       ],
       "clue": {
-        "text": "Başın üst kısmı",
+        "text": "Baş",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,
@@ -1649,7 +1649,7 @@
         }
       ],
       "clue": {
-        "text": "Pişirme kabı",
+        "text": "Sevinç ünlemi",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,
@@ -1685,7 +1685,7 @@
         }
       ],
       "clue": {
-        "text": "Söz hakkı, nüfuz",
+        "text": "Güç, iktidar",
         "arrow": "down",
         "word_id": "D10",
         "image_id": null,

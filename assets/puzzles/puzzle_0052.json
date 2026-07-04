@@ -867,7 +867,7 @@
         }
       ],
       "clue": {
-        "text": "Helvaya katılan",
+        "text": "Bundan sonra (eski)",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -915,7 +915,7 @@
         }
       ],
       "clue": {
-        "text": "Sirkeye özgü",
+        "text": "Sirkeye özgü (asit)",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -1231,7 +1231,7 @@
         }
       ],
       "clue": {
-        "text": "Arap harfi",
+        "text": "Bir Arap harfi",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1355,7 +1355,7 @@
         }
       ],
       "clue": {
-        "text": "Dolgun ağız kenarı",
+        "text": "Tatlı dilli kimse",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1387,7 +1387,7 @@
         }
       ],
       "clue": {
-        "text": "İskambilde en değerli kâğıt",
+        "text": "İskambilde birli",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1475,7 +1475,7 @@
         }
       ],
       "clue": {
-        "text": "Yolculuk bölümü",
+        "text": "Aşama, evre",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1511,7 +1511,7 @@
         }
       ],
       "clue": {
-        "text": "Arapça'da prens",
+        "text": "Bey (eski dil)",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1703,7 +1703,7 @@
         }
       ],
       "clue": {
-        "text": "Asit karşıtı",
+        "text": "Temel; alkali",
         "arrow": "down",
         "word_id": "D10",
         "image_id": null,

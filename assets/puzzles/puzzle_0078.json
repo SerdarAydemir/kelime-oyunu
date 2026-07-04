@@ -848,7 +848,7 @@
         }
       ],
       "clue": {
-        "text": "Çember, halka",
+        "text": "Nakış çemberi",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -896,7 +896,7 @@
         }
       ],
       "clue": {
-        "text": "Rafineri şehri",
+        "text": "İzmir'in ilçesi",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -1000,7 +1000,7 @@
         }
       ],
       "clue": {
-        "text": "Sonuç doğuran",
+        "text": "Etken (eski)",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1076,7 +1076,7 @@
         }
       ],
       "clue": {
-        "text": "Sade ayak giysisi",
+        "text": "Osmanlı'da başlık",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1436,7 +1436,7 @@
         }
       ],
       "clue": {
-        "text": "İlgi çekmek için cilve yapmak",
+        "text": "Naz yapmak",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1528,7 +1528,7 @@
         }
       ],
       "clue": {
-        "text": "Kağıdı ikiye böl",
+        "text": "Büktürme",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1572,7 +1572,7 @@
         }
       ],
       "clue": {
-        "text": "Ankara'nın bir ilçesi",
+        "text": "Ankara'nın ilçesi",
         "arrow": "down",
         "word_id": "D7",
         "image_id": null,
@@ -1612,7 +1612,7 @@
         }
       ],
       "clue": {
-        "text": "Vergi borcu",
+        "text": "Söz sonu çekimi",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,
@@ -1648,7 +1648,7 @@
         }
       ],
       "clue": {
-        "text": "İletken metal",
+        "text": "İnce metal iplik",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,

@@ -989,7 +989,7 @@
         }
       ],
       "clue": {
-        "text": "Kolay kırılmaz",
+        "text": "Yumuşak karşıtı",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1037,7 +1037,7 @@
         }
       ],
       "clue": {
-        "text": "Temiz kanlı",
+        "text": "Kökenli",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1101,7 +1101,7 @@
         }
       ],
       "clue": {
-        "text": "Çok kısa zaman parçası",
+        "text": "Kısacık zaman",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1141,7 +1141,7 @@
         }
       ],
       "clue": {
-        "text": "Parlak alev",
+        "text": "Alev, yalım",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1189,7 +1189,7 @@
         }
       ],
       "clue": {
-        "text": "Yük taşıyan binek",
+        "text": "Kara çalma, yerme",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1237,7 +1237,7 @@
         }
       ],
       "clue": {
-        "text": "Durağan, hareket etmeyen",
+        "text": "Durağan",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1361,7 +1361,7 @@
         }
       ],
       "clue": {
-        "text": "Keskin, acı koku",
+        "text": "Küf kokulu",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1401,7 +1401,7 @@
         }
       ],
       "clue": {
-        "text": "Son nefes",
+        "text": "Ömrün son anı",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,

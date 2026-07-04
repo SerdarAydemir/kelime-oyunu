@@ -1052,7 +1052,7 @@
         }
       ],
       "clue": {
-        "text": "Duyuru, reklâm",
+        "text": "Duyuru",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1116,7 +1116,7 @@
         }
       ],
       "clue": {
-        "text": "Evlilik çağına gelmiş",
+        "text": "Dişi evlat",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1188,7 +1188,7 @@
         }
       ],
       "clue": {
-        "text": "Batum'un yurdu",
+        "text": "Batum'un bölgesi",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1236,7 +1236,7 @@
         }
       ],
       "clue": {
-        "text": "Sakız tadı",
+        "text": "Nane katkılı",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1380,7 +1380,7 @@
         }
       ],
       "clue": {
-        "text": "Çok kısa zaman parçası",
+        "text": "Kısacık zaman",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1464,7 +1464,7 @@
         }
       ],
       "clue": {
-        "text": "Gece devriye gezen",
+        "text": "Osmanlı gece bekçisi",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1512,7 +1512,7 @@
         }
       ],
       "clue": {
-        "text": "İşten kaçan",
+        "text": "Dönek (halk)",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,

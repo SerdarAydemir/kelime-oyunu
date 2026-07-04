@@ -841,7 +841,7 @@
         }
       ],
       "clue": {
-        "text": "Kadeh, kase",
+        "text": "Sallanarak yürüyen",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -885,7 +885,7 @@
         }
       ],
       "clue": {
-        "text": "Uyarı sesi",
+        "text": "Tehlike uyarısı",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -953,7 +953,7 @@
         }
       ],
       "clue": {
-        "text": "İlçe adı",
+        "text": "Diyarbakır'da ilçe",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1001,7 +1001,7 @@
         }
       ],
       "clue": {
-        "text": "Akarsu yatağı",
+        "text": "Uzaklaşmak",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1041,7 +1041,7 @@
         }
       ],
       "clue": {
-        "text": "Ekonomik, parayla ilgili",
+        "text": "Parayla ilgili",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1137,7 +1137,7 @@
         }
       ],
       "clue": {
-        "text": "Dimdik ayakta",
+        "text": "İzmir'in ilçesi",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1205,7 +1205,7 @@
         }
       ],
       "clue": {
-        "text": "Araçların aydınlatması",
+        "text": "Araç lambası",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1345,7 +1345,7 @@
         }
       ],
       "clue": {
-        "text": "Kızıl, kırmızı",
+        "text": "Şehzade eğitmenliği",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1401,7 +1401,7 @@
         }
       ],
       "clue": {
-        "text": "İlkel, geri kalmış",
+        "text": "İlkel",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1441,7 +1441,7 @@
         }
       ],
       "clue": {
-        "text": "Baba biraderi",
+        "text": "Babanın kardeşi",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1581,7 +1581,7 @@
         }
       ],
       "clue": {
-        "text": "Farklı renklerde",
+        "text": "Karışık renkli",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,
@@ -1617,7 +1617,7 @@
         }
       ],
       "clue": {
-        "text": "Çamur, balçık",
+        "text": "Kuru kayısı (halk)",
         "arrow": "down",
         "word_id": "D10",
         "image_id": null,

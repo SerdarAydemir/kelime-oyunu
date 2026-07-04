@@ -858,7 +858,7 @@
         }
       ],
       "clue": {
-        "text": "Dini, resmi",
+        "text": "Kitaba dayalı",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -906,7 +906,7 @@
         }
       ],
       "clue": {
-        "text": "Mali destek, tahsis",
+        "text": "Tahsisat",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -1054,7 +1054,7 @@
         }
       ],
       "clue": {
-        "text": "Üzümün sarıldığı",
+        "text": "Üzüm veren bitki",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1122,7 +1122,7 @@
         }
       ],
       "clue": {
-        "text": "Zaman dilimi",
+        "text": "Telli bir Doğu sazı",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1154,7 +1154,7 @@
         }
       ],
       "clue": {
-        "text": "Bırakılan eser, ayak izi",
+        "text": "Geride kalan belirti",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1190,7 +1190,7 @@
         }
       ],
       "clue": {
-        "text": "Birine özgü",
+        "text": "İlişkin, özgü",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1294,7 +1294,7 @@
         }
       ],
       "clue": {
-        "text": "Bir yere yerleşme",
+        "text": "Yerleşip tutunma",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1334,7 +1334,7 @@
         }
       ],
       "clue": {
-        "text": "Soyut düşünce",
+        "text": "Düşünce, fikir",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1406,7 +1406,7 @@
         }
       ],
       "clue": {
-        "text": "Namus sözü",
+        "text": "Yemin",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1478,7 +1478,7 @@
         }
       ],
       "clue": {
-        "text": "Bir tekten sonra",
+        "text": "Çift sayıların ilki",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1546,7 +1546,7 @@
         }
       ],
       "clue": {
-        "text": "Kısa süreli durum",
+        "text": "Stadyum",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,
@@ -1586,7 +1586,7 @@
         }
       ],
       "clue": {
-        "text": "Elektronik posta",
+        "text": "Eğik, eğimli",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,
@@ -1662,7 +1662,7 @@
         }
       ],
       "clue": {
-        "text": "Sıkıntı, dert",
+        "text": "Eziyet, cefa",
         "arrow": "down",
         "word_id": "D11",
         "image_id": null,

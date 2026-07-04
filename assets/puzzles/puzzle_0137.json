@@ -848,7 +848,7 @@
         }
       ],
       "clue": {
-        "text": "Suçsuzluk ilanı",
+        "text": "Aklanma",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -916,7 +916,7 @@
         }
       ],
       "clue": {
-        "text": "Başarı, zafer",
+        "text": "Toplamada taşan sayı",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -1024,7 +1024,7 @@
         }
       ],
       "clue": {
-        "text": "Akarsu yatağı",
+        "text": "Uzaklaşmak",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1072,7 +1072,7 @@
         }
       ],
       "clue": {
-        "text": "İçgüdüsel tepki",
+        "text": "Saz örme sepet",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1120,7 +1120,7 @@
         }
       ],
       "clue": {
-        "text": "Bir elementin temel parçası",
+        "text": "Bıkkınlık ünlemi",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1268,7 +1268,7 @@
         }
       ],
       "clue": {
-        "text": "Dolgun, yuvarlak hatlı",
+        "text": "Ne şişman ne zayıf",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1440,7 +1440,7 @@
         }
       ],
       "clue": {
-        "text": "Bir şeyden vazgeçme",
+        "text": "Kayıt silme (eski)",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1532,7 +1532,7 @@
         }
       ],
       "clue": {
-        "text": "En üst sınır",
+        "text": "En çok, maksimum",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,
@@ -1576,7 +1576,7 @@
         }
       ],
       "clue": {
-        "text": "Ölüm, ölüm hali",
+        "text": "Ölüm (eski)",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,

@@ -860,7 +860,7 @@
         }
       ],
       "clue": {
-        "text": "Kesilmiş parça",
+        "text": "Süt pıhtısı",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -896,7 +896,7 @@
         }
       ],
       "clue": {
-        "text": "Birden bire",
+        "text": "Birdenbire olan",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -996,7 +996,7 @@
         }
       ],
       "clue": {
-        "text": "Nar ağacı meyvesi",
+        "text": "Gür bağırış",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1064,7 +1064,7 @@
         }
       ],
       "clue": {
-        "text": "Görgü kuralı",
+        "text": "İncelik, terbiye",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1172,7 +1172,7 @@
         }
       ],
       "clue": {
-        "text": "İstanbul'da semt",
+        "text": "Trabzon'da ilçe",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1220,7 +1220,7 @@
         }
       ],
       "clue": {
-        "text": "Rafineri şehri",
+        "text": "İzmir'in ilçesi",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1324,7 +1324,7 @@
         }
       ],
       "clue": {
-        "text": "Yere beyaz örtü",
+        "text": "Kar yağmak (halk)",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1356,7 +1356,7 @@
         }
       ],
       "clue": {
-        "text": "Bir yüzeyin genişliği",
+        "text": "Genişlik",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1412,7 +1412,7 @@
         }
       ],
       "clue": {
-        "text": "Gözlüklü böcek",
+        "text": "Sinek yiyen kuş",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1480,7 +1480,7 @@
         }
       ],
       "clue": {
-        "text": "Ödünç alınan",
+        "text": "Ödünç verme (eski)",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1524,7 +1524,7 @@
         }
       ],
       "clue": {
-        "text": "Gemi parçası",
+        "text": "Devrik yaka parçası",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1632,7 +1632,7 @@
         }
       ],
       "clue": {
-        "text": "Saymakta geri kalma",
+        "text": "Sayı soran söz",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,
@@ -1668,7 +1668,7 @@
         }
       ],
       "clue": {
-        "text": "Örümcek işi",
+        "text": "Zehir (öz Türkçe)",
         "arrow": "down",
         "word_id": "D10",
         "image_id": null,

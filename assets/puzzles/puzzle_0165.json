@@ -1110,7 +1110,7 @@
         }
       ],
       "clue": {
-        "text": "Çok kısa zaman parçası",
+        "text": "Kısacık zaman",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1178,7 +1178,7 @@
         }
       ],
       "clue": {
-        "text": "Üstün zıttı",
+        "text": "Üst karşıtı",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1370,7 +1370,7 @@
         }
       ],
       "clue": {
-        "text": "Boşta duran",
+        "text": "İşlemez, boşta",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1490,7 +1490,7 @@
         }
       ],
       "clue": {
-        "text": "Soyun başı",
+        "text": "Cet, soy büyüğü",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1566,7 +1566,7 @@
         }
       ],
       "clue": {
-        "text": "Şehir kurmak",
+        "text": "Beşli müzik grubu",
         "arrow": "down",
         "word_id": "D7",
         "image_id": null,
@@ -1678,7 +1678,7 @@
         }
       ],
       "clue": {
-        "text": "Birine özgü",
+        "text": "İlişkin, özgü",
         "arrow": "down",
         "word_id": "D10",
         "image_id": null,

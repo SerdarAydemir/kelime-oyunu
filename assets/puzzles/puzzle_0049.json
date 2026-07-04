@@ -903,7 +903,7 @@
         }
       ],
       "clue": {
-        "text": "Bir amaca tahsis",
+        "text": "Vakfetmek",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -947,7 +947,7 @@
         }
       ],
       "clue": {
-        "text": "Karışık tür",
+        "text": "İki türün karışımı",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -1015,7 +1015,7 @@
         }
       ],
       "clue": {
-        "text": "Müzik aleti",
+        "text": "Antik telli çalgı",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1079,7 +1079,7 @@
         }
       ],
       "clue": {
-        "text": "Manevi lider",
+        "text": "Bir işin üstadı",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1167,7 +1167,7 @@
         }
       ],
       "clue": {
-        "text": "Malt yapılan",
+        "text": "Bir tahıl",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1299,7 +1299,7 @@
         }
       ],
       "clue": {
-        "text": "Musluktan gelen",
+        "text": "Azar azar akmak",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1339,7 +1339,7 @@
         }
       ],
       "clue": {
-        "text": "Soyut düşünce",
+        "text": "Düşünce, fikir",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1431,7 +1431,7 @@
         }
       ],
       "clue": {
-        "text": "Bıçak altı",
+        "text": "Cerrahi girişim",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1479,7 +1479,7 @@
         }
       ],
       "clue": {
-        "text": "Şiirde benzer konu",
+        "text": "Karşılık şiiri",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1651,7 +1651,7 @@
         }
       ],
       "clue": {
-        "text": "Eşsiz, biricik",
+        "text": "Çift karşıtı",
         "arrow": "down",
         "word_id": "D10",
         "image_id": null,

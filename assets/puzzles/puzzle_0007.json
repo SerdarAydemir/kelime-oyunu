@@ -900,7 +900,7 @@
         }
       ],
       "clue": {
-        "text": "Gitar aksesuarı",
+        "text": "Gitar mızrabı",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -1200,7 +1200,7 @@
         }
       ],
       "clue": {
-        "text": "Kemik ek yeri",
+        "text": "Oynak, eklem yeri",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1236,7 +1236,7 @@
         }
       ],
       "clue": {
-        "text": "Çok uzun zaman",
+        "text": "Eskrim kılıcı",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1392,7 +1392,7 @@
         }
       ],
       "clue": {
-        "text": "Çocuk doğuran",
+        "text": "Anne",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1584,7 +1584,7 @@
         }
       ],
       "clue": {
-        "text": "Pes etmeyen",
+        "text": "Kararlı",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,
@@ -1628,7 +1628,7 @@
         }
       ],
       "clue": {
-        "text": "Sıcak çikolata",
+        "text": "Giresun'da ilçe",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,
@@ -1668,7 +1668,7 @@
         }
       ],
       "clue": {
-        "text": "Kuş yakalama aleti",
+        "text": "Terazi gözü",
         "arrow": "down",
         "word_id": "D10",
         "image_id": null,
@@ -1700,7 +1700,7 @@
         }
       ],
       "clue": {
-        "text": "İskambilde en değerli kâğıt",
+        "text": "İskambilde birli",
         "arrow": "down",
         "word_id": "D11",
         "image_id": null,

@@ -998,7 +998,7 @@
         }
       ],
       "clue": {
-        "text": "İğne ucu",
+        "text": "Odak (eski)",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1098,7 +1098,7 @@
         }
       ],
       "clue": {
-        "text": "Gemi önü",
+        "text": "Karadeniz teknesi",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1134,7 +1134,7 @@
         }
       ],
       "clue": {
-        "text": "Müzikte bir nota",
+        "text": "-den -e kadar",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1270,7 +1270,7 @@
         }
       ],
       "clue": {
-        "text": "Kıyılmış ot",
+        "text": "Kesime uygun (taş)",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1354,7 +1354,7 @@
         }
       ],
       "clue": {
-        "text": "Eskiden kullanılan bir yazı",
+        "text": "Tiksinme (eski)",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1394,7 +1394,7 @@
         }
       ],
       "clue": {
-        "text": "Sırt direği",
+        "text": "Belkemiği halkası",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1434,7 +1434,7 @@
         }
       ],
       "clue": {
-        "text": "Sıfır, hiçlik",
+        "text": "Faiz getirisi",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1530,7 +1530,7 @@
         }
       ],
       "clue": {
-        "text": "Zaman dilimi",
+        "text": "Telli bir Doğu sazı",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,
@@ -1594,7 +1594,7 @@
         }
       ],
       "clue": {
-        "text": "Saymakta geri kalma",
+        "text": "Sayı soran söz",
         "arrow": "down",
         "word_id": "D10",
         "image_id": null,
@@ -1630,7 +1630,7 @@
         }
       ],
       "clue": {
-        "text": "Farklı renklerde",
+        "text": "Karışık renkli",
         "arrow": "down",
         "word_id": "D11",
         "image_id": null,

@@ -901,7 +901,7 @@
         }
       ],
       "clue": {
-        "text": "Ölçülü olma hali",
+        "text": "Ölçülülük, denge",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -993,7 +993,7 @@
         }
       ],
       "clue": {
-        "text": "Müzik notası dizisi",
+        "text": "Ölçek, gam",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1025,7 +1025,7 @@
         }
       ],
       "clue": {
-        "text": "Kolun bilekten sonrası",
+        "text": "Avuç ve parmaklar",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1165,7 +1165,7 @@
         }
       ],
       "clue": {
-        "text": "Bir tekten sonra",
+        "text": "Çift sayıların ilki",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1341,7 +1341,7 @@
         }
       ],
       "clue": {
-        "text": "Tek başına kalan",
+        "text": "Hiç kimse",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1393,7 +1393,7 @@
         }
       ],
       "clue": {
-        "text": "Seri hareket",
+        "text": "Çeviklik",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1481,7 +1481,7 @@
         }
       ],
       "clue": {
-        "text": "Hak ve hukuk",
+        "text": "Hakka uygunluk",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1557,7 +1557,7 @@
         }
       ],
       "clue": {
-        "text": "Peygamber damadı",
+        "text": "Yüce, yüksek (eski)",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1633,7 +1633,7 @@
         }
       ],
       "clue": {
-        "text": "Müzik aleti",
+        "text": "Antik telli çalgı",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,

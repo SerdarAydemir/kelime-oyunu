@@ -908,7 +908,7 @@
         }
       ],
       "clue": {
-        "text": "Borçlu olunan",
+        "text": "Verecek karşıtı",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -972,7 +972,7 @@
         }
       ],
       "clue": {
-        "text": "Işığa yarayan",
+        "text": "Mikroskop camı",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1088,7 +1088,7 @@
         }
       ],
       "clue": {
-        "text": "Tıkandı kaldı",
+        "text": "Afallamış",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1124,7 +1124,7 @@
         }
       ],
       "clue": {
-        "text": "İskambil kartı",
+        "text": "Mavi (eski dil)",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1156,7 +1156,7 @@
         }
       ],
       "clue": {
-        "text": "Sızlanma, yakınma ünlemi",
+        "text": "Yakınma ünlemi",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1192,7 +1192,7 @@
         }
       ],
       "clue": {
-        "text": "Çocuk doğuran",
+        "text": "Anne",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1292,7 +1292,7 @@
         }
       ],
       "clue": {
-        "text": "Yemek, aş",
+        "text": "Yemek (eski)",
         "arrow": "right",
         "word_id": "A13",
         "image_id": null,
@@ -1348,7 +1348,7 @@
         }
       ],
       "clue": {
-        "text": "Boş laf etmek",
+        "text": "İki yana oynatmak",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1416,7 +1416,7 @@
         }
       ],
       "clue": {
-        "text": "Ağaç uzantısı",
+        "text": "Ağacın kolu",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1516,7 +1516,7 @@
         }
       ],
       "clue": {
-        "text": "Tekneyi sabitleme",
+        "text": "Takozla sıkıştırma",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1632,7 +1632,7 @@
         }
       ],
       "clue": {
-        "text": "Okun sivri ucu",
+        "text": "Pay, hisse (eski)",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,
@@ -1672,7 +1672,7 @@
         }
       ],
       "clue": {
-        "text": "Boyun eğme",
+        "text": "Bağlılık bildirme",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,

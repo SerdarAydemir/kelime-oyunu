@@ -858,7 +858,7 @@
         }
       ],
       "clue": {
-        "text": "Selamlaşma sözü",
+        "text": "Ortakçı çiftçi",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -906,7 +906,7 @@
         }
       ],
       "clue": {
-        "text": "Karaktersiz hareket",
+        "text": "Bayağılık",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -954,7 +954,7 @@
         }
       ],
       "clue": {
-        "text": "Böcek türü, dua eden",
+        "text": "Avcı bir böcek",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -1126,7 +1126,7 @@
         }
       ],
       "clue": {
-        "text": "Güven duyulan şey",
+        "text": "Kanaat, güven",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1166,7 +1166,7 @@
         }
       ],
       "clue": {
-        "text": "Sanat eğlencesi",
+        "text": "Açılış gecesi",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1226,7 +1226,7 @@
         }
       ],
       "clue": {
-        "text": "Çok kısa zaman parçası",
+        "text": "Kısacık zaman",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1262,7 +1262,7 @@
         }
       ],
       "clue": {
-        "text": "Hayır cevabı",
+        "text": "Kabul karşıtı",
         "arrow": "right",
         "word_id": "A12",
         "image_id": null,
@@ -1318,7 +1318,7 @@
         }
       ],
       "clue": {
-        "text": "Sıvı yağlı hamur işi",
+        "text": "Mısır unu lapası",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1358,7 +1358,7 @@
         }
       ],
       "clue": {
-        "text": "Makam talibi",
+        "text": "Namzet",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1398,7 +1398,7 @@
         }
       ],
       "clue": {
-        "text": "Meyve suyu",
+        "text": "Tırpana balığı",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1434,7 +1434,7 @@
         }
       ],
       "clue": {
-        "text": "Üstün zıttı",
+        "text": "Üst karşıtı",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1526,7 +1526,7 @@
         }
       ],
       "clue": {
-        "text": "Topal",
+        "text": "Düzgün yürüyemeyen",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1562,7 +1562,7 @@
         }
       ],
       "clue": {
-        "text": "Çok az, pek değil",
+        "text": "Ekmek (eski)",
         "arrow": "down",
         "word_id": "D7",
         "image_id": null,

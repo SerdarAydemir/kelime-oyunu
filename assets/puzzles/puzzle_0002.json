@@ -978,7 +978,7 @@
         }
       ],
       "clue": {
-        "text": "Telefonu açma",
+        "text": "Telefon ünlemi",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1046,7 +1046,7 @@
         }
       ],
       "clue": {
-        "text": "Hatıra yapısı",
+        "text": "Abide",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1082,7 +1082,7 @@
         }
       ],
       "clue": {
-        "text": "Çekiliş hakkı",
+        "text": "Borsada işlem birimi",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1158,7 +1158,7 @@
         }
       ],
       "clue": {
-        "text": "İstanbul'un incileri",
+        "text": "İstanbul'un ilçesi",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1194,7 +1194,7 @@
         }
       ],
       "clue": {
-        "text": "Doğu'da bir il",
+        "text": "Bir Doğu ilimiz",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1274,7 +1274,7 @@
         }
       ],
       "clue": {
-        "text": "Soluk benizli",
+        "text": "Kansız",
         "arrow": "right",
         "word_id": "A12",
         "image_id": null,
@@ -1330,7 +1330,7 @@
         }
       ],
       "clue": {
-        "text": "Yapışkan sıvı",
+        "text": "Gömleği sertleştirme",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1366,7 +1366,7 @@
         }
       ],
       "clue": {
-        "text": "Farklı renklerde",
+        "text": "Karışık renkli",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1534,7 +1534,7 @@
         }
       ],
       "clue": {
-        "text": "Sadece seçkinlere",
+        "text": "Gizli bilgiye dayalı",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1618,7 +1618,7 @@
         }
       ],
       "clue": {
-        "text": "Ağaç gövdesi",
+        "text": "Yakacak ağaç parçası",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,
@@ -1682,7 +1682,7 @@
         }
       ],
       "clue": {
-        "text": "Başkaldıran ruh",
+        "text": "Başkaldıran",
         "arrow": "down",
         "word_id": "D10",
         "image_id": null,

@@ -851,7 +851,7 @@
         }
       ],
       "clue": {
-        "text": "Alay konusu etmek",
+        "text": "Rezil etme (argo)",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -899,7 +899,7 @@
         }
       ],
       "clue": {
-        "text": "Çok yaramaz çocuk",
+        "text": "Elmanın yenmeyen içi",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -1159,7 +1159,7 @@
         }
       ],
       "clue": {
-        "text": "Romen dili",
+        "text": "Roma kökenli",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1263,7 +1263,7 @@
         }
       ],
       "clue": {
-        "text": "Sorunlu, dertli",
+        "text": "Sorunlu",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1319,7 +1319,7 @@
         }
       ],
       "clue": {
-        "text": "Hastalığa karşı koruma",
+        "text": "Fidana kalem takmak",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1399,7 +1399,7 @@
         }
       ],
       "clue": {
-        "text": "Mal edinme",
+        "text": "Satın alma",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1527,7 +1527,7 @@
         }
       ],
       "clue": {
-        "text": "Soğuk hava yağışı",
+        "text": "Beyaz yağış",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,
@@ -1563,7 +1563,7 @@
         }
       ],
       "clue": {
-        "text": "Hayvan parçası",
+        "text": "Hitit",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,
@@ -1599,7 +1599,7 @@
         }
       ],
       "clue": {
-        "text": "Göğüs kafesi",
+        "text": "Parça takımı, set",
         "arrow": "down",
         "word_id": "D10",
         "image_id": null,

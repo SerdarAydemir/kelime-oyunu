@@ -867,7 +867,7 @@
         }
       ],
       "clue": {
-        "text": "Üstünlük derecesi",
+        "text": "Nitelik",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -915,7 +915,7 @@
         }
       ],
       "clue": {
-        "text": "Torosların zirvesi",
+        "text": "Toroslarda zirve",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -983,7 +983,7 @@
         }
       ],
       "clue": {
-        "text": "Mekke'deki kutsal yapı",
+        "text": "Kalın keçe yaygı",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1015,7 +1015,7 @@
         }
       ],
       "clue": {
-        "text": "İskambilde en değerli kâğıt",
+        "text": "İskambilde birli",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1079,7 +1079,7 @@
         }
       ],
       "clue": {
-        "text": "Gülün dikeni",
+        "text": "Duvar oyuğu",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1179,7 +1179,7 @@
         }
       ],
       "clue": {
-        "text": "Ödünç alınan",
+        "text": "Ödünç verme (eski)",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1227,7 +1227,7 @@
         }
       ],
       "clue": {
-        "text": "Akarsu yatağı",
+        "text": "Uzaklaşmak",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1275,7 +1275,7 @@
         }
       ],
       "clue": {
-        "text": "İnatçı, aksi kimse",
+        "text": "Ayakkabı çekeceği",
         "arrow": "right",
         "word_id": "A12",
         "image_id": null,
@@ -1439,7 +1439,7 @@
         }
       ],
       "clue": {
-        "text": "Soyut düşünce",
+        "text": "Düşünce, fikir",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1475,7 +1475,7 @@
         }
       ],
       "clue": {
-        "text": "Müzikte nota",
+        "text": "Baskı, basma (eski)",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1583,7 +1583,7 @@
         }
       ],
       "clue": {
-        "text": "Slogan, parola",
+        "text": "İlke, düstur",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,
@@ -1623,7 +1623,7 @@
         }
       ],
       "clue": {
-        "text": "Vatan bekçisi",
+        "text": "Erler topluluğu",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,
@@ -1663,7 +1663,7 @@
         }
       ],
       "clue": {
-        "text": "Pişirme kabı",
+        "text": "Sevinç ünlemi",
         "arrow": "down",
         "word_id": "D10",
         "image_id": null,

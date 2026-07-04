@@ -865,7 +865,7 @@
         }
       ],
       "clue": {
-        "text": "Sözcük, laf",
+        "text": "Sözcük",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -897,7 +897,7 @@
         }
       ],
       "clue": {
-        "text": "Çok kısa zaman parçası",
+        "text": "Kısacık zaman",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -933,7 +933,7 @@
         }
       ],
       "clue": {
-        "text": "Çizim, taslak",
+        "text": "Mum (eski)",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -1141,7 +1141,7 @@
         }
       ],
       "clue": {
-        "text": "İp, tel",
+        "text": "Güzel koku",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1325,7 +1325,7 @@
         }
       ],
       "clue": {
-        "text": "Yere beyaz örtü",
+        "text": "Kar yağmak (halk)",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1357,7 +1357,7 @@
         }
       ],
       "clue": {
-        "text": "Bir yüzeyin genişliği",
+        "text": "Genişlik",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1469,7 +1469,7 @@
         }
       ],
       "clue": {
-        "text": "Yemek tarifi",
+        "text": "Anlam, kavram",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1509,7 +1509,7 @@
         }
       ],
       "clue": {
-        "text": "Baba bir kardeş",
+        "text": "Amca (halk dili)",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1617,7 +1617,7 @@
         }
       ],
       "clue": {
-        "text": "Müzikte bir nota",
+        "text": "-den -e kadar",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,
@@ -1653,7 +1653,7 @@
         }
       ],
       "clue": {
-        "text": "Peygamber damadı",
+        "text": "Yüce, yüksek (eski)",
         "arrow": "down",
         "word_id": "D10",
         "image_id": null,
@@ -1689,7 +1689,7 @@
         }
       ],
       "clue": {
-        "text": "İntikam duygusu",
+        "text": "Gizli düşmanlık",
         "arrow": "down",
         "word_id": "D11",
         "image_id": null,

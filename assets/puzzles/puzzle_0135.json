@@ -853,7 +853,7 @@
         }
       ],
       "clue": {
-        "text": "Selamlaşma sözü",
+        "text": "Ortakçı çiftçi",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -969,7 +969,7 @@
         }
       ],
       "clue": {
-        "text": "Samimi hitap",
+        "text": "Rumeli'de seslenme",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1017,7 +1017,7 @@
         }
       ],
       "clue": {
-        "text": "Gömlek yakasına bağlanır",
+        "text": "Boyun bağı",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1165,7 +1165,7 @@
         }
       ],
       "clue": {
-        "text": "Emir dinleyen",
+        "text": "Verme, ödeme",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1357,7 +1357,7 @@
         }
       ],
       "clue": {
-        "text": "Patron, şef",
+        "text": "Üst, yönetici",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1525,7 +1525,7 @@
         }
       ],
       "clue": {
-        "text": "İş yapma aracı",
+        "text": "Araç, avadanlık",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1569,7 +1569,7 @@
         }
       ],
       "clue": {
-        "text": "Yaşça denk",
+        "text": "Yaşıt",
         "arrow": "down",
         "word_id": "D7",
         "image_id": null,
@@ -1605,7 +1605,7 @@
         }
       ],
       "clue": {
-        "text": "Gelecek zaman",
+        "text": "Gelecek (eski)",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,
@@ -1641,7 +1641,7 @@
         }
       ],
       "clue": {
-        "text": "Yanmış odun közü",
+        "text": "Kızıl ateş parçası",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,

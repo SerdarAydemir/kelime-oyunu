@@ -858,7 +858,7 @@
         }
       ],
       "clue": {
-        "text": "Yüreği buruk",
+        "text": "Sıkıntısı olan",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -926,7 +926,7 @@
         }
       ],
       "clue": {
-        "text": "Müzik türü",
+        "text": "Bir müzik türü",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -1014,7 +1014,7 @@
         }
       ],
       "clue": {
-        "text": "Ateşli hasta",
+        "text": "Gribe yakalanmış",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1166,7 +1166,7 @@
         }
       ],
       "clue": {
-        "text": "İnatçı,ילה",
+        "text": "Dogma (öz Türkçe)",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1214,7 +1214,7 @@
         }
       ],
       "clue": {
-        "text": "Kışın yağan kristal",
+        "text": "Bozkır tilkisi",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1310,7 +1310,7 @@
         }
       ],
       "clue": {
-        "text": "Kokusuyla bilinen gaz",
+        "text": "Bayıltıcı sıvı",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1458,7 +1458,7 @@
         }
       ],
       "clue": {
-        "text": "Bağlamaya yarayan ince halat",
+        "text": "İnce halat",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1562,7 +1562,7 @@
         }
       ],
       "clue": {
-        "text": "Miras kalan",
+        "text": "Kalıtım",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,
@@ -1598,7 +1598,7 @@
         }
       ],
       "clue": {
-        "text": "Çocuk doğuran",
+        "text": "Anne",
         "arrow": "down",
         "word_id": "D10",
         "image_id": null,
@@ -1634,7 +1634,7 @@
         }
       ],
       "clue": {
-        "text": "Zaman dilimi",
+        "text": "Telli bir Doğu sazı",
         "arrow": "down",
         "word_id": "D11",
         "image_id": null,

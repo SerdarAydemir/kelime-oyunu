@@ -853,7 +853,7 @@
         }
       ],
       "clue": {
-        "text": "Gökova'nın incisi",
+        "text": "Muğla'da belde",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -897,7 +897,7 @@
         }
       ],
       "clue": {
-        "text": "Avustralya'nın ağaç ayısı",
+        "text": "Keseli ağaç ayısı",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -945,7 +945,7 @@
         }
       ],
       "clue": {
-        "text": "Türkiye'nin kalbi",
+        "text": "Başkentimiz",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -1013,7 +1013,7 @@
         }
       ],
       "clue": {
-        "text": "Bir yüzeyin genişliği",
+        "text": "Genişlik",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1121,7 +1121,7 @@
         }
       ],
       "clue": {
-        "text": "Anlamı aktaran",
+        "text": "Anlamca, özetle",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1165,7 +1165,7 @@
         }
       ],
       "clue": {
-        "text": "Hava durumu ortalaması",
+        "text": "Yörenin hava düzeni",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1213,7 +1213,7 @@
         }
       ],
       "clue": {
-        "text": "Kötü şans getirir",
+        "text": "Çökmek (halk)",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1269,7 +1269,7 @@
         }
       ],
       "clue": {
-        "text": "Üniversite dünyası",
+        "text": "Üniversiteye ilişkin",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1309,7 +1309,7 @@
         }
       ],
       "clue": {
-        "text": "Tartışma bahsi",
+        "text": "Bahis, mevzu",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1385,7 +1385,7 @@
         }
       ],
       "clue": {
-        "text": "Farklı renklerde",
+        "text": "Karışık renkli",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1441,7 +1441,7 @@
         }
       ],
       "clue": {
-        "text": "Çizgilerle doldurma",
+        "text": "Dama deseni çizme",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1501,7 +1501,7 @@
         }
       ],
       "clue": {
-        "text": "Çok kısa zaman parçası",
+        "text": "Kısacık zaman",
         "arrow": "down",
         "word_id": "D7",
         "image_id": null,
@@ -1541,7 +1541,7 @@
         }
       ],
       "clue": {
-        "text": "Çok bilen kişi",
+        "text": "Bilgin",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,
@@ -1577,7 +1577,7 @@
         }
       ],
       "clue": {
-        "text": "İşin ehli kişi",
+        "text": "Usta, deneyimli",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,
@@ -1613,7 +1613,7 @@
         }
       ],
       "clue": {
-        "text": "Yüksek zirve",
+        "text": "Yiğit, kahraman",
         "arrow": "down",
         "word_id": "D10",
         "image_id": null,

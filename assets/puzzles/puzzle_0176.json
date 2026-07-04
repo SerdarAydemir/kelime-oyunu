@@ -889,7 +889,7 @@
         }
       ],
       "clue": {
-        "text": "Araba idare eden",
+        "text": "Japon süs ağacı",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -973,7 +973,7 @@
         }
       ],
       "clue": {
-        "text": "Futbol defansı",
+        "text": "Savunma oyuncusu",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1041,7 +1041,7 @@
         }
       ],
       "clue": {
-        "text": "Devasa, büyükçe",
+        "text": "Büyük, yapılı",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1105,7 +1105,7 @@
         }
       ],
       "clue": {
-        "text": "Kırmızı renk",
+        "text": "Dili tutulmuş",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1181,7 +1181,7 @@
         }
       ],
       "clue": {
-        "text": "İleri doğru itme",
+        "text": "Kakılma",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1285,7 +1285,7 @@
         }
       ],
       "clue": {
-        "text": "Gergin ruh hali",
+        "text": "Sinirlilik",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1397,7 +1397,7 @@
         }
       ],
       "clue": {
-        "text": "Ayakları yere basmazlık",
+        "text": "Boş söz söyleme",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1433,7 +1433,7 @@
         }
       ],
       "clue": {
-        "text": "Müzikte ses işareti",
+        "text": "Hatırlatma yazısı",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1477,7 +1477,7 @@
         }
       ],
       "clue": {
-        "text": "Akarsu yatağı",
+        "text": "Büyük akarsu",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,

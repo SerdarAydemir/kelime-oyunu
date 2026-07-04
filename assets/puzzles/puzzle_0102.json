@@ -855,7 +855,7 @@
         }
       ],
       "clue": {
-        "text": "Selamlaşma sözü",
+        "text": "Ortakçı çiftçi",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -971,7 +971,7 @@
         }
       ],
       "clue": {
-        "text": "Karın ağrısı",
+        "text": "Kramp",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1039,7 +1039,7 @@
         }
       ],
       "clue": {
-        "text": "İzmir'in ilçesi",
+        "text": "Enginar diyarı ilçe",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1075,7 +1075,7 @@
         }
       ],
       "clue": {
-        "text": "Kayak sporu",
+        "text": "Kayak",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1151,7 +1151,7 @@
         }
       ],
       "clue": {
-        "text": "Toz haline gelmiş",
+        "text": "Toz zerresi",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1199,7 +1199,7 @@
         }
       ],
       "clue": {
-        "text": "Özlem uyandırma",
+        "text": "Özletme",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1267,7 +1267,7 @@
         }
       ],
       "clue": {
-        "text": "Bir yüzeyin genişliği",
+        "text": "Genişlik",
         "arrow": "right",
         "word_id": "A12",
         "image_id": null,
@@ -1323,7 +1323,7 @@
         }
       ],
       "clue": {
-        "text": "Keskin alet",
+        "text": "Kumaş kesim ustası",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1359,7 +1359,7 @@
         }
       ],
       "clue": {
-        "text": "Farklı renklerde",
+        "text": "Karışık renkli",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1427,7 +1427,7 @@
         }
       ],
       "clue": {
-        "text": "Yüz yıllık zaman",
+        "text": "Yüzyıl",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1483,7 +1483,7 @@
         }
       ],
       "clue": {
-        "text": "Deride iz belirme",
+        "text": "Deride ben çıkması",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1527,7 +1527,7 @@
         }
       ],
       "clue": {
-        "text": "Ahlaksız tutum",
+        "text": "Yüksek olmayan",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1575,7 +1575,7 @@
         }
       ],
       "clue": {
-        "text": "İsviçre'nin bir parçası",
+        "text": "Kötü sanı",
         "arrow": "down",
         "word_id": "D7",
         "image_id": null,
@@ -1615,7 +1615,7 @@
         }
       ],
       "clue": {
-        "text": "Ağaçlı alan",
+        "text": "Küçük orman",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,
@@ -1679,7 +1679,7 @@
         }
       ],
       "clue": {
-        "text": "Çok kısa zaman parçası",
+        "text": "Kısacık zaman",
         "arrow": "down",
         "word_id": "D10",
         "image_id": null,

@@ -894,7 +894,7 @@
         }
       ],
       "clue": {
-        "text": "Ters 'lat'",
+        "text": "İlkel bitki gövdesi",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -1010,7 +1010,7 @@
         }
       ],
       "clue": {
-        "text": "Spor müsabakasında hile",
+        "text": "Danışıklı dövüş",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1074,7 +1074,7 @@
         }
       ],
       "clue": {
-        "text": "İskambilde en değerli kâğıt",
+        "text": "İskambilde birli",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1170,7 +1170,7 @@
         }
       ],
       "clue": {
-        "text": "Güvenmek, itimat etmek",
+        "text": "Güvence, teminat",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1206,7 +1206,7 @@
         }
       ],
       "clue": {
-        "text": "Çıkarılan, koparılan",
+        "text": "Engel",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1350,7 +1350,7 @@
         }
       ],
       "clue": {
-        "text": "Saf, katıksız",
+        "text": "İçtenlikle",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1390,7 +1390,7 @@
         }
       ],
       "clue": {
-        "text": "Sürüden ayrılan",
+        "text": "Erkek incir",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1582,7 +1582,7 @@
         }
       ],
       "clue": {
-        "text": "Kıl payı",
+        "text": "Güçbela (halk)",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,
@@ -1658,7 +1658,7 @@
         }
       ],
       "clue": {
-        "text": "Çizgi, sınır",
+        "text": "Çizgi; güzel yazı",
         "arrow": "down",
         "word_id": "D11",
         "image_id": null,
@@ -1690,7 +1690,7 @@
         }
       ],
       "clue": {
-        "text": "Çok kısa zaman parçası",
+        "text": "Kısacık zaman",
         "arrow": "down",
         "word_id": "D12",
         "image_id": null,

@@ -902,7 +902,7 @@
         }
       ],
       "clue": {
-        "text": "Hata arama",
+        "text": "Kontrol, teftiş",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -1070,7 +1070,7 @@
         }
       ],
       "clue": {
-        "text": "Eski para birimi",
+        "text": "Bulgar parası",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1146,7 +1146,7 @@
         }
       ],
       "clue": {
-        "text": "Üretim, yapım",
+        "text": "Seri üretim",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1182,7 +1182,7 @@
         }
       ],
       "clue": {
-        "text": "Kapı çalma sesi",
+        "text": "Çıngırak",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1214,7 +1214,7 @@
         }
       ],
       "clue": {
-        "text": "İçtiğimiz berrak sıvı",
+        "text": "İçilen berrak sıvı",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1262,7 +1262,7 @@
         }
       ],
       "clue": {
-        "text": "Zulüm altında kalma",
+        "text": "Baskı altında kalış",
         "arrow": "right",
         "word_id": "A12",
         "image_id": null,
@@ -1318,7 +1318,7 @@
         }
       ],
       "clue": {
-        "text": "Kusursuzlaştırma",
+        "text": "Ülküleştirme",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1374,7 +1374,7 @@
         }
       ],
       "clue": {
-        "text": "Zerre kir yok",
+        "text": "Zerre kiri olmayan",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1406,7 +1406,7 @@
         }
       ],
       "clue": {
-        "text": "Çok kısa zaman parçası",
+        "text": "Kısacık zaman",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1478,7 +1478,7 @@
         }
       ],
       "clue": {
-        "text": "Emir dinleyen",
+        "text": "Verme, ödeme",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1662,7 +1662,7 @@
         }
       ],
       "clue": {
-        "text": "Başkaldıran ruh",
+        "text": "Başkaldıran",
         "arrow": "down",
         "word_id": "D10",
         "image_id": null,

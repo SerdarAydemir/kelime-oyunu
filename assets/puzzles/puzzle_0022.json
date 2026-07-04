@@ -841,7 +841,7 @@
         }
       ],
       "clue": {
-        "text": "Herkesçe duyurulur",
+        "text": "Duyuru yoluyla",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -889,7 +889,7 @@
         }
       ],
       "clue": {
-        "text": "Üstünlük derecesi",
+        "text": "Nitelik",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -953,7 +953,7 @@
         }
       ],
       "clue": {
-        "text": "Mektup zarfı üstü",
+        "text": "Zehir (eski)",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1285,7 +1285,7 @@
         }
       ],
       "clue": {
-        "text": "Ek kazanç",
+        "text": "Piyango kazancı",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1401,7 +1401,7 @@
         }
       ],
       "clue": {
-        "text": "Kadın hastalıkları",
+        "text": "Jinekoloji (eski)",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1457,7 +1457,7 @@
         }
       ],
       "clue": {
-        "text": "Anestezi ile uyutma",
+        "text": "Eterle uyutma",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1497,7 +1497,7 @@
         }
       ],
       "clue": {
-        "text": "Sıfır, hiçlik",
+        "text": "Faiz getirisi",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1581,7 +1581,7 @@
         }
       ],
       "clue": {
-        "text": "Eski durum, önceki vaziyet",
+        "text": "Ay çevresi ışığı",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,
@@ -1617,7 +1617,7 @@
         }
       ],
       "clue": {
-        "text": "Vücut sıvısı",
+        "text": "Deri salgısı",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,

@@ -855,7 +855,7 @@
         }
       ],
       "clue": {
-        "text": "Zulüm altında kalma",
+        "text": "Baskı altında kalış",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -895,7 +895,7 @@
         }
       ],
       "clue": {
-        "text": "Osmanlı'da şehzade hocası",
+        "text": "Şehzade eğitmeni",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -1087,7 +1087,7 @@
         }
       ],
       "clue": {
-        "text": "Keman ailesinden yaylı",
+        "text": "Mercan benzeri balık",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1123,7 +1123,7 @@
         }
       ],
       "clue": {
-        "text": "Mekke'ye giden yol",
+        "text": "Yazı kurutma kumu",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1235,7 +1235,7 @@
         }
       ],
       "clue": {
-        "text": "Dur, bekleme",
+        "text": "Maden arıtma işlemi",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1323,7 +1323,7 @@
         }
       ],
       "clue": {
-        "text": "Akım, voltaj",
+        "text": "Akım enerjisi",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1455,7 +1455,7 @@
         }
       ],
       "clue": {
-        "text": "Ağaç reçinesi veren",
+        "text": "Reçineli bir bitki",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1679,7 +1679,7 @@
         }
       ],
       "clue": {
-        "text": "Çok kısa zaman parçası",
+        "text": "Kısacık zaman",
         "arrow": "down",
         "word_id": "D10",
         "image_id": null,

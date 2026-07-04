@@ -853,7 +853,7 @@
         }
       ],
       "clue": {
-        "text": "Sade ayak giysisi",
+        "text": "Osmanlı'da başlık",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -917,7 +917,7 @@
         }
       ],
       "clue": {
-        "text": "Bir yüzeyin genişliği",
+        "text": "Genişlik",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -961,7 +961,7 @@
         }
       ],
       "clue": {
-        "text": "Yerin su gözü",
+        "text": "Kaynak, pınar",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1009,7 +1009,7 @@
         }
       ],
       "clue": {
-        "text": "Hareket etmeme isteği",
+        "text": "Uyuşukluk",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1073,7 +1073,7 @@
         }
       ],
       "clue": {
-        "text": "Hükümdar sopası",
+        "text": "Hükümdar değneği",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1121,7 +1121,7 @@
         }
       ],
       "clue": {
-        "text": "Maç anlatıcısı",
+        "text": "Haber sunucusu",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1169,7 +1169,7 @@
         }
       ],
       "clue": {
-        "text": "Beğenmeme, ayıp bulma",
+        "text": "Ayıplama",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1205,7 +1205,7 @@
         }
       ],
       "clue": {
-        "text": "Devasa, büyükçe",
+        "text": "Büyük, yapılı",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1293,7 +1293,7 @@
         }
       ],
       "clue": {
-        "text": "Kırklareli'ne bağlı",
+        "text": "Kırklareli ilçesi",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1333,7 +1333,7 @@
         }
       ],
       "clue": {
-        "text": "Ani, şiddetli",
+        "text": "Ani gelişen",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1477,7 +1477,7 @@
         }
       ],
       "clue": {
-        "text": "Çok kısa zaman parçası",
+        "text": "Kısacık zaman",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1633,7 +1633,7 @@
         }
       ],
       "clue": {
-        "text": "Kısa ve net",
+        "text": "Kanat çırpma sesi",
         "arrow": "down",
         "word_id": "D10",
         "image_id": null,
@@ -1669,7 +1669,7 @@
         }
       ],
       "clue": {
-        "text": "Hayvan yuvası",
+        "text": "Kocanın kardeşi",
         "arrow": "down",
         "word_id": "D11",
         "image_id": null,

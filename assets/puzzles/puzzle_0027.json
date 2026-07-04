@@ -851,7 +851,7 @@
         }
       ],
       "clue": {
-        "text": "Gürültülü telaş",
+        "text": "Yaygara",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -935,7 +935,7 @@
         }
       ],
       "clue": {
-        "text": "Çok az, pek değil",
+        "text": "Ekmek (eski)",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -1007,7 +1007,7 @@
         }
       ],
       "clue": {
-        "text": "Kırşehir ilçesi",
+        "text": "Kütahya ilçesi",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1055,7 +1055,7 @@
         }
       ],
       "clue": {
-        "text": "Şarkı sözü, şiir",
+        "text": "İstanbul'da semt",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1123,7 +1123,7 @@
         }
       ],
       "clue": {
-        "text": "Güven duyulan",
+        "text": "Emanet (eski)",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1187,7 +1187,7 @@
         }
       ],
       "clue": {
-        "text": "Müzikte bir nota",
+        "text": "-den -e kadar",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1219,7 +1219,7 @@
         }
       ],
       "clue": {
-        "text": "Bir yüzeyin genişliği",
+        "text": "Genişlik",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1255,7 +1255,7 @@
         }
       ],
       "clue": {
-        "text": "Kaygan yüzey",
+        "text": "Kütükten su aracı",
         "arrow": "right",
         "word_id": "A12",
         "image_id": null,
@@ -1311,7 +1311,7 @@
         }
       ],
       "clue": {
-        "text": "Neşeli hale getirme",
+        "text": "Bayındır kılma",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1355,7 +1355,7 @@
         }
       ],
       "clue": {
-        "text": "Kayıp peşinde",
+        "text": "Bulmaya çalışma",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1403,7 +1403,7 @@
         }
       ],
       "clue": {
-        "text": "Üzeri camlı",
+        "text": "Mine işlemeli",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1471,7 +1471,7 @@
         }
       ],
       "clue": {
-        "text": "İletken metal",
+        "text": "İnce metal iplik",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1507,7 +1507,7 @@
         }
       ],
       "clue": {
-        "text": "Çocuk doğuran",
+        "text": "Anne",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1591,7 +1591,7 @@
         }
       ],
       "clue": {
-        "text": "Osmanlı'da şehzade hocası",
+        "text": "Şehzade eğitmeni",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,

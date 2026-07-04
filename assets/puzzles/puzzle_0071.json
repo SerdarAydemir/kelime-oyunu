@@ -1016,7 +1016,7 @@
         }
       ],
       "clue": {
-        "text": "Güven duyulan",
+        "text": "Emanet (eski)",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1092,7 +1092,7 @@
         }
       ],
       "clue": {
-        "text": "Sıralı, ardışık",
+        "text": "Art arda gelme",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1200,7 +1200,7 @@
         }
       ],
       "clue": {
-        "text": "Enerji veya ısıyı geçirir",
+        "text": "Açıölçer",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1440,7 +1440,7 @@
         }
       ],
       "clue": {
-        "text": "Hayvan bağlama yeri",
+        "text": "Başıboş (hayvan)",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1476,7 +1476,7 @@
         }
       ],
       "clue": {
-        "text": "İşin ehli kişi",
+        "text": "Usta, deneyimli",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1532,7 +1532,7 @@
         }
       ],
       "clue": {
-        "text": "Sahte dindarlık",
+        "text": "İkiyüzlülük",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1568,7 +1568,7 @@
         }
       ],
       "clue": {
-        "text": "Kuşun kanadı",
+        "text": "Uygun kıvam, an",
         "arrow": "down",
         "word_id": "D7",
         "image_id": null,
@@ -1608,7 +1608,7 @@
         }
       ],
       "clue": {
-        "text": "Cila, vernik",
+        "text": "Bir tür cila",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,
@@ -1672,7 +1672,7 @@
         }
       ],
       "clue": {
-        "text": "Bir yüzeyin genişliği",
+        "text": "Genişlik",
         "arrow": "down",
         "word_id": "D10",
         "image_id": null,

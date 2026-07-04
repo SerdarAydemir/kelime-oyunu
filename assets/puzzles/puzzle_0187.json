@@ -860,7 +860,7 @@
         }
       ],
       "clue": {
-        "text": "Suyu içine çekme",
+        "text": "İçine çekilme",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -976,7 +976,7 @@
         }
       ],
       "clue": {
-        "text": "Tökezleterek",
+        "text": "Alışveriş (halk)",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1008,7 +1008,7 @@
         }
       ],
       "clue": {
-        "text": "Seslenme, çağırma sözü",
+        "text": "Seslenme sözü",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1204,7 +1204,7 @@
         }
       ],
       "clue": {
-        "text": "Otoğrafta olur",
+        "text": "İmzası atılmış",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1292,7 +1292,7 @@
         }
       ],
       "clue": {
-        "text": "Çok kısa zaman parçası",
+        "text": "Kısacık zaman",
         "arrow": "right",
         "word_id": "A13",
         "image_id": null,
@@ -1400,7 +1400,7 @@
         }
       ],
       "clue": {
-        "text": "Asfalt türü",
+        "text": "Kırma taş yol",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1436,7 +1436,7 @@
         }
       ],
       "clue": {
-        "text": "Miras kalan",
+        "text": "Kalıtım",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1508,7 +1508,7 @@
         }
       ],
       "clue": {
-        "text": "Doğal gazın ana maddesi",
+        "text": "Bataklık gazı",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1548,7 +1548,7 @@
         }
       ],
       "clue": {
-        "text": "Vatan bekçisi",
+        "text": "Erler topluluğu",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1632,7 +1632,7 @@
         }
       ],
       "clue": {
-        "text": "Burun, yanak, alın",
+        "text": "Oyunda ortaya konan",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,
@@ -1668,7 +1668,7 @@
         }
       ],
       "clue": {
-        "text": "Bir ses yankısı",
+        "text": "Çınlama sesi",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,

@@ -860,7 +860,7 @@
         }
       ],
       "clue": {
-        "text": "Takvim başlangıcı",
+        "text": "Bir takvim sistemi",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -1152,7 +1152,7 @@
         }
       ],
       "clue": {
-        "text": "Grup bireyi",
+        "text": "Üye",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1324,7 +1324,7 @@
         }
       ],
       "clue": {
-        "text": "Periyodik tabloda Mn",
+        "text": "Mn simgeli element",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1364,7 +1364,7 @@
         }
       ],
       "clue": {
-        "text": "Soyut düşünce",
+        "text": "Düşünce, fikir",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1448,7 +1448,7 @@
         }
       ],
       "clue": {
-        "text": "Boğaz kontrol aleti",
+        "text": "Dil basacağı",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1532,7 +1532,7 @@
         }
       ],
       "clue": {
-        "text": "Devasa, büyükçe",
+        "text": "Büyük, yapılı",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1564,7 +1564,7 @@
         }
       ],
       "clue": {
-        "text": "Az ötedekini gösteren işaret sözü",
+        "text": "Ötedeki işaret sözü",
         "arrow": "down",
         "word_id": "D7",
         "image_id": null,
@@ -1604,7 +1604,7 @@
         }
       ],
       "clue": {
-        "text": "Yırtıcı balık türü",
+        "text": "Kireçli kil",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,
@@ -1640,7 +1640,7 @@
         }
       ],
       "clue": {
-        "text": "İşin ehli kişi",
+        "text": "Usta, deneyimli",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,

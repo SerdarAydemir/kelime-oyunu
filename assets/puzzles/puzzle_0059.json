@@ -853,7 +853,7 @@
         }
       ],
       "clue": {
-        "text": "Ahenksizlik, uyumsuzluk",
+        "text": "Bölünmüşlük",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -901,7 +901,7 @@
         }
       ],
       "clue": {
-        "text": "Utanç verici durum",
+        "text": "Rezil, gülünç",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -937,7 +937,7 @@
         }
       ],
       "clue": {
-        "text": "Alman nehrinin adı",
+        "text": "Düşünce (felsefe)",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -1005,7 +1005,7 @@
         }
       ],
       "clue": {
-        "text": "İşaret parmağıyla",
+        "text": "Hokkadaki ipek lif",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1077,7 +1077,7 @@
         }
       ],
       "clue": {
-        "text": "Alımlı, cilveli",
+        "text": "Nazlı, işveli",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1145,7 +1145,7 @@
         }
       ],
       "clue": {
-        "text": "Hükümdar sopası",
+        "text": "Hükümdar değneği",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1177,7 +1177,7 @@
         }
       ],
       "clue": {
-        "text": "Kolun bilekten sonrası",
+        "text": "Avuç ve parmaklar",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1213,7 +1213,7 @@
         }
       ],
       "clue": {
-        "text": "Toprak rengi",
+        "text": "Beyaza çalan renk",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1261,7 +1261,7 @@
         }
       ],
       "clue": {
-        "text": "Ödeme karşılığı kullanılan",
+        "text": "Bedelle tutulmuş",
         "arrow": "right",
         "word_id": "A12",
         "image_id": null,
@@ -1373,7 +1373,7 @@
         }
       ],
       "clue": {
-        "text": "Kıvrık tatlı",
+        "text": "İnce uzun bisküvi",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1417,7 +1417,7 @@
         }
       ],
       "clue": {
-        "text": "Çin'den gelen",
+        "text": "Şifalı altın kök",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1481,7 +1481,7 @@
         }
       ],
       "clue": {
-        "text": "Bırakılan eser, ayak izi",
+        "text": "Geride kalan belirti",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1521,7 +1521,7 @@
         }
       ],
       "clue": {
-        "text": "Pişirme kabı",
+        "text": "Sevinç ünlemi",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1605,7 +1605,7 @@
         }
       ],
       "clue": {
-        "text": "Sıcaklık birimi",
+        "text": "Termal",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,
@@ -1641,7 +1641,7 @@
         }
       ],
       "clue": {
-        "text": "Bal yapar böcek",
+        "text": "Bal yapan böcek",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,

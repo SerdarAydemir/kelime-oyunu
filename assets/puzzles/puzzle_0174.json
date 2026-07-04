@@ -855,7 +855,7 @@
         }
       ],
       "clue": {
-        "text": "Kışın yağan kristal",
+        "text": "Bozkır tilkisi",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -887,7 +887,7 @@
         }
       ],
       "clue": {
-        "text": "Çok kısa zaman parçası",
+        "text": "Kısacık zaman",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -1195,7 +1195,7 @@
         }
       ],
       "clue": {
-        "text": "Koku yayan cisim",
+        "text": "Eski ağırlık ölçüsü",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1299,7 +1299,7 @@
         }
       ],
       "clue": {
-        "text": "Tekneyi sabitleme",
+        "text": "Takozla sıkıştırma",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1335,7 +1335,7 @@
         }
       ],
       "clue": {
-        "text": "Çocuk doğuran",
+        "text": "Anne",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1403,7 +1403,7 @@
         }
       ],
       "clue": {
-        "text": "Kuş türü, şakacı",
+        "text": "Bir ötücü kuş",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1495,7 +1495,7 @@
         }
       ],
       "clue": {
-        "text": "Soğuk hava yağışı",
+        "text": "Beyaz yağış",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1643,7 +1643,7 @@
         }
       ],
       "clue": {
-        "text": "Gelecek zaman kipi",
+        "text": "'Ona beş ...' kalıbı",
         "arrow": "down",
         "word_id": "D10",
         "image_id": null,
@@ -1679,7 +1679,7 @@
         }
       ],
       "clue": {
-        "text": "Kayak sporu",
+        "text": "Kayak",
         "arrow": "down",
         "word_id": "D11",
         "image_id": null,

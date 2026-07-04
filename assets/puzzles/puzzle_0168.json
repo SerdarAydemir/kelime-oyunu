@@ -855,7 +855,7 @@
         }
       ],
       "clue": {
-        "text": "Tesadüfen, rastgele",
+        "text": "Yanlışlıkla",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -971,7 +971,7 @@
         }
       ],
       "clue": {
-        "text": "Ağırlık ölçümü",
+        "text": "Tartma işi",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1035,7 +1035,7 @@
         }
       ],
       "clue": {
-        "text": "Birine özgü",
+        "text": "İlişkin, özgü",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1083,7 +1083,7 @@
         }
       ],
       "clue": {
-        "text": "Öğrenim sonucu",
+        "text": "Kazanım",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1151,7 +1151,7 @@
         }
       ],
       "clue": {
-        "text": "Takvim birimi",
+        "text": "365 gün",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1323,7 +1323,7 @@
         }
       ],
       "clue": {
-        "text": "Çok büyük, devasa",
+        "text": "Kütleye ilişkin",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1359,7 +1359,7 @@
         }
       ],
       "clue": {
-        "text": "Çocuk doğuran",
+        "text": "Anne",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1403,7 +1403,7 @@
         }
       ],
       "clue": {
-        "text": "Tarım ile ilgili",
+        "text": "Tarımsal",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1459,7 +1459,7 @@
         }
       ],
       "clue": {
-        "text": "Radyoaktif metal",
+        "text": "Ac simgeli element",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1523,7 +1523,7 @@
         }
       ],
       "clue": {
-        "text": "Şöhret, itibar",
+        "text": "Ün, şöhret",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1571,7 +1571,7 @@
         }
       ],
       "clue": {
-        "text": "İtme eylemi",
+        "text": "Haberdar olma (eski)",
         "arrow": "down",
         "word_id": "D7",
         "image_id": null,
@@ -1651,7 +1651,7 @@
         }
       ],
       "clue": {
-        "text": "Sarı meyve",
+        "text": "Erzincan'ın ilçesi",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,

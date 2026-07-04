@@ -853,7 +853,7 @@
         }
       ],
       "clue": {
-        "text": "Soy bağı olan",
+        "text": "Hısım",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -921,7 +921,7 @@
         }
       ],
       "clue": {
-        "text": "Dur, bekleme",
+        "text": "Maden arıtma işlemi",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -1145,7 +1145,7 @@
         }
       ],
       "clue": {
-        "text": "Yapı, inşa",
+        "text": "Beylik, emirlik",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1261,7 +1261,7 @@
         }
       ],
       "clue": {
-        "text": "Tatlı, hamur işi",
+        "text": "Şüphe (eski)",
         "arrow": "right",
         "word_id": "A12",
         "image_id": null,
@@ -1317,7 +1317,7 @@
         }
       ],
       "clue": {
-        "text": "Yıkım mağduru",
+        "text": "Felaket mağduru",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1509,7 +1509,7 @@
         }
       ],
       "clue": {
-        "text": "Farklı renklerde",
+        "text": "Karışık renkli",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1549,7 +1549,7 @@
         }
       ],
       "clue": {
-        "text": "Sert çıkış",
+        "text": "Paylama",
         "arrow": "down",
         "word_id": "D7",
         "image_id": null,
@@ -1593,7 +1593,7 @@
         }
       ],
       "clue": {
-        "text": "Buzlu hava",
+        "text": "Açık elin ölçüsü",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,
@@ -1633,7 +1633,7 @@
         }
       ],
       "clue": {
-        "text": "Ani çıkış",
+        "text": "Hücum, akın",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,
@@ -1669,7 +1669,7 @@
         }
       ],
       "clue": {
-        "text": "Güzellerin başı",
+        "text": "Kraliçe",
         "arrow": "down",
         "word_id": "D10",
         "image_id": null,

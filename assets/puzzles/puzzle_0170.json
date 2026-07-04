@@ -938,7 +938,7 @@
         }
       ],
       "clue": {
-        "text": "Üzüm türü",
+        "text": "Gümüşhane'de ilçe",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -1042,7 +1042,7 @@
         }
       ],
       "clue": {
-        "text": "Dudak, kenar",
+        "text": "Dudak (eski)",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1118,7 +1118,7 @@
         }
       ],
       "clue": {
-        "text": "Makam vermek",
+        "text": "Göreve getirmek",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1198,7 +1198,7 @@
         }
       ],
       "clue": {
-        "text": "Birden bire",
+        "text": "Birdenbire olan",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1230,7 +1230,7 @@
         }
       ],
       "clue": {
-        "text": "Çok kısa zaman parçası",
+        "text": "Kısacık zaman",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1286,7 +1286,7 @@
         }
       ],
       "clue": {
-        "text": "Gereksiz süs",
+        "text": "Bocalama",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1342,7 +1342,7 @@
         }
       ],
       "clue": {
-        "text": "Geri verilmek üzere",
+        "text": "Ödünç olarak (eski)",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1398,7 +1398,7 @@
         }
       ],
       "clue": {
-        "text": "Eski yapı kalıntısı",
+        "text": "Derbeder, kalender",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1438,7 +1438,7 @@
         }
       ],
       "clue": {
-        "text": "Duyuru, reklâm",
+        "text": "Duyuru",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1474,7 +1474,7 @@
         }
       ],
       "clue": {
-        "text": "Öfke, hiddet",
+        "text": "Bıçak kılıfı",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1542,7 +1542,7 @@
         }
       ],
       "clue": {
-        "text": "İshal, sulu dışkı",
+        "text": "Kurutulmuş meyve",
         "arrow": "down",
         "word_id": "D7",
         "image_id": null,
@@ -1610,7 +1610,7 @@
         }
       ],
       "clue": {
-        "text": "Çocuk doğuran",
+        "text": "Anne",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,

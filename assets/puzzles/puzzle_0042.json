@@ -898,7 +898,7 @@
         }
       ],
       "clue": {
-        "text": "Çocuk doğuran",
+        "text": "Anne",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -930,7 +930,7 @@
         }
       ],
       "clue": {
-        "text": "Seslenme, çağırma sözü",
+        "text": "Seslenme sözü",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -998,7 +998,7 @@
         }
       ],
       "clue": {
-        "text": "Şehir, metropol",
+        "text": "Şehir",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1030,7 +1030,7 @@
         }
       ],
       "clue": {
-        "text": "İskambilde en değerli kâğıt",
+        "text": "İskambilde birli",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1066,7 +1066,7 @@
         }
       ],
       "clue": {
-        "text": "Ağaç uzantısı",
+        "text": "Ağacın kolu",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1182,7 +1182,7 @@
         }
       ],
       "clue": {
-        "text": "Ljubljana'nın vatandaşı",
+        "text": "Ljubljana halkından",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1230,7 +1230,7 @@
         }
       ],
       "clue": {
-        "text": "Çok parlak",
+        "text": "Mika içeren",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1386,7 +1386,7 @@
         }
       ],
       "clue": {
-        "text": "Ekmek yapılan öğütülmüş tahıl",
+        "text": "Öğütülmüş tahıl",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1422,7 +1422,7 @@
         }
       ],
       "clue": {
-        "text": "Mizah, espri",
+        "text": "Tokat sesi",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1490,7 +1490,7 @@
         }
       ],
       "clue": {
-        "text": "Yüzünü gösteren",
+        "text": "Yansıtan cam",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1546,7 +1546,7 @@
         }
       ],
       "clue": {
-        "text": "Burkulma, kıvrılma",
+        "text": "Tahammül ediş",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1710,7 +1710,7 @@
         }
       ],
       "clue": {
-        "text": "Göz rengi",
+        "text": "Bir göz rengi",
         "arrow": "down",
         "word_id": "D10",
         "image_id": null,

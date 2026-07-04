@@ -851,7 +851,7 @@
         }
       ],
       "clue": {
-        "text": "Kere, kez",
+        "text": "Birçok kez (eski)",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -899,7 +899,7 @@
         }
       ],
       "clue": {
-        "text": "İğneleyici söz",
+        "text": "İğneleyici",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -967,7 +967,7 @@
         }
       ],
       "clue": {
-        "text": "Saç aksesuarı",
+        "text": "Müzik videosu",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1015,7 +1015,7 @@
         }
       ],
       "clue": {
-        "text": "Tökezleterek",
+        "text": "Alışveriş (halk)",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1143,7 +1143,7 @@
         }
       ],
       "clue": {
-        "text": "Temiz kanlı",
+        "text": "Kökenli",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1287,7 +1287,7 @@
         }
       ],
       "clue": {
-        "text": "Genişten aza",
+        "text": "Genişliği azalmak",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1319,7 +1319,7 @@
         }
       ],
       "clue": {
-        "text": "Kolun bilekten sonrası",
+        "text": "Avuç ve parmaklar",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1399,7 +1399,7 @@
         }
       ],
       "clue": {
-        "text": "Ay ışık halesi",
+        "text": "Işık halesi, ağıl",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1479,7 +1479,7 @@
         }
       ],
       "clue": {
-        "text": "Şişeyi kapatan",
+        "text": "Şişe mantarı",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1519,7 +1519,7 @@
         }
       ],
       "clue": {
-        "text": "Düzensizlik hali",
+        "text": "Kargaşa",
         "arrow": "down",
         "word_id": "D7",
         "image_id": null,
@@ -1623,7 +1623,7 @@
         }
       ],
       "clue": {
-        "text": "Müzikte bir nota",
+        "text": "-den -e kadar",
         "arrow": "down",
         "word_id": "D10",
         "image_id": null,
@@ -1659,7 +1659,7 @@
         }
       ],
       "clue": {
-        "text": "Kısa, öz",
+        "text": "Az bulunur",
         "arrow": "down",
         "word_id": "D11",
         "image_id": null,

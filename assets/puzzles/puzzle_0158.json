@@ -935,7 +935,7 @@
         }
       ],
       "clue": {
-        "text": "Zihinsel, düşünsel",
+        "text": "Usa dayalı",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -971,7 +971,7 @@
         }
       ],
       "clue": {
-        "text": "Şöhret, ün",
+        "text": "Ses eğitimi (müzik)",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1051,7 +1051,7 @@
         }
       ],
       "clue": {
-        "text": "Kadın oyuncu",
+        "text": "Ahlak",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1119,7 +1119,7 @@
         }
       ],
       "clue": {
-        "text": "Kapı çalma sesi",
+        "text": "Çıngırak",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1227,7 +1227,7 @@
         }
       ],
       "clue": {
-        "text": "Bir erkek ismi",
+        "text": "Bir erkek adı",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1275,7 +1275,7 @@
         }
       ],
       "clue": {
-        "text": "Değerli taş",
+        "text": "Elmas taklidi taş",
         "arrow": "right",
         "word_id": "A12",
         "image_id": null,
@@ -1399,7 +1399,7 @@
         }
       ],
       "clue": {
-        "text": "Haksız kazanç",
+        "text": "Emeksiz gelir",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1475,7 +1475,7 @@
         }
       ],
       "clue": {
-        "text": "Öne doğru hareket",
+        "text": "Geri karşıtı",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1519,7 +1519,7 @@
         }
       ],
       "clue": {
-        "text": "Tekil, hususi",
+        "text": "Tümel karşıtı",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1603,7 +1603,7 @@
         }
       ],
       "clue": {
-        "text": "Bağımsız hareket eden",
+        "text": "Muhtar, otonom",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,
@@ -1703,7 +1703,7 @@
         }
       ],
       "clue": {
-        "text": "Çok kısa zaman parçası",
+        "text": "Kısacık zaman",
         "arrow": "down",
         "word_id": "D11",
         "image_id": null,

@@ -855,7 +855,7 @@
         }
       ],
       "clue": {
-        "text": "At yemi",
+        "text": "Açık sarı renk",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -939,7 +939,7 @@
         }
       ],
       "clue": {
-        "text": "Bardak benzeri kap",
+        "text": "Derin metal kap",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -1195,7 +1195,7 @@
         }
       ],
       "clue": {
-        "text": "Güven duyulan",
+        "text": "Emanet (eski)",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1243,7 +1243,7 @@
         }
       ],
       "clue": {
-        "text": "At, eşek gibi binek",
+        "text": "Oturanlar (eski)",
         "arrow": "right",
         "word_id": "A12",
         "image_id": null,
@@ -1383,7 +1383,7 @@
         }
       ],
       "clue": {
-        "text": "Soyun başı",
+        "text": "Cet, soy büyüğü",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1471,7 +1471,7 @@
         }
       ],
       "clue": {
-        "text": "Avlanan hayvan",
+        "text": "Yakalanan hayvan",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1507,7 +1507,7 @@
         }
       ],
       "clue": {
-        "text": "Meyveli tatlı",
+        "text": "Yarım (eski)",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1647,7 +1647,7 @@
         }
       ],
       "clue": {
-        "text": "Bunun anlamı",
+        "text": "Şu demek ki",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,

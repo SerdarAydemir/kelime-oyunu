@@ -945,7 +945,7 @@
         }
       ],
       "clue": {
-        "text": "Tren durağı",
+        "text": "İstasyon rıhtımı",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -1125,7 +1125,7 @@
         }
       ],
       "clue": {
-        "text": "Kötü söz",
+        "text": "Kötü, fena (eski)",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1237,7 +1237,7 @@
         }
       ],
       "clue": {
-        "text": "Büyük yaban arısı",
+        "text": "Akbaba (eski)",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1329,7 +1329,7 @@
         }
       ],
       "clue": {
-        "text": "Birlikte, beraber",
+        "text": "Beraberlik edatı",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1421,7 +1421,7 @@
         }
       ],
       "clue": {
-        "text": "Kutup giysisi",
+        "text": "Kapüşonlu mont",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1477,7 +1477,7 @@
         }
       ],
       "clue": {
-        "text": "Boyayla çizme",
+        "text": "Renk verme",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1613,7 +1613,7 @@
         }
       ],
       "clue": {
-        "text": "İp, tel",
+        "text": "Güzel koku",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,

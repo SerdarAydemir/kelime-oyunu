@@ -865,7 +865,7 @@
         }
       ],
       "clue": {
-        "text": "Gövde, göğüs",
+        "text": "Çalımlı, kabadayı",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -1021,7 +1021,7 @@
         }
       ],
       "clue": {
-        "text": "Bir yüzeyin genişliği",
+        "text": "Genişlik",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1153,7 +1153,7 @@
         }
       ],
       "clue": {
-        "text": "Mutlaka, mecburen",
+        "text": "Mutlaka",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1201,7 +1201,7 @@
         }
       ],
       "clue": {
-        "text": "Böcek türü, dua eden",
+        "text": "Avcı bir böcek",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1241,7 +1241,7 @@
         }
       ],
       "clue": {
-        "text": "Hipodrom insanı",
+        "text": "At yetiştiricisi",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1325,7 +1325,7 @@
         }
       ],
       "clue": {
-        "text": "Yırtıcı kuş",
+        "text": "Tazeliğini yitirme",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1445,7 +1445,7 @@
         }
       ],
       "clue": {
-        "text": "Nezaketle selam",
+        "text": "Kafa vuruşu",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1577,7 +1577,7 @@
         }
       ],
       "clue": {
-        "text": "Çok kısa zaman parçası",
+        "text": "Kısacık zaman",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,
@@ -1653,7 +1653,7 @@
         }
       ],
       "clue": {
-        "text": "Nazik, kibar",
+        "text": "2,54 cm'lik birim",
         "arrow": "down",
         "word_id": "D10",
         "image_id": null,
@@ -1689,7 +1689,7 @@
         }
       ],
       "clue": {
-        "text": "Üstü olan",
+        "text": "Alt konumdaki",
         "arrow": "down",
         "word_id": "D11",
         "image_id": null,

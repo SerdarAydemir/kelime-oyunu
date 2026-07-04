@@ -862,7 +862,7 @@
         }
       ],
       "clue": {
-        "text": "Gürbüz, tombul",
+        "text": "Semiz",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -950,7 +950,7 @@
         }
       ],
       "clue": {
-        "text": "Açıklama, izah",
+        "text": "Açıklamalı not",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -1046,7 +1046,7 @@
         }
       ],
       "clue": {
-        "text": "Böyle bir durum",
+        "text": "Oyunda beraberlik",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1150,7 +1150,7 @@
         }
       ],
       "clue": {
-        "text": "İşlemci parçası",
+        "text": "Boru ekleme parçası",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1230,7 +1230,7 @@
         }
       ],
       "clue": {
-        "text": "Gözyaşı döktüren",
+        "text": "Trajedi",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1270,7 +1270,7 @@
         }
       ],
       "clue": {
-        "text": "Geceleri gökte parlar",
+        "text": "Oturma (eski)",
         "arrow": "right",
         "word_id": "A12",
         "image_id": null,
@@ -1354,7 +1354,7 @@
         }
       ],
       "clue": {
-        "text": "İlk adım",
+        "text": "İlk adımı atmak",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1390,7 +1390,7 @@
         }
       ],
       "clue": {
-        "text": "Çok uzun zaman",
+        "text": "Eskrim kılıcı",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1474,7 +1474,7 @@
         }
       ],
       "clue": {
-        "text": "Orta Asya'da hükümdar",
+        "text": "Moğol hükümdarı",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1642,7 +1642,7 @@
         }
       ],
       "clue": {
-        "text": "Beyaz zarif su kuşu",
+        "text": "Zarif su kuşu",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,
@@ -1678,7 +1678,7 @@
         }
       ],
       "clue": {
-        "text": "Belirsiz, net olmayan",
+        "text": "Bulanık",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,

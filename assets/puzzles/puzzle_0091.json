@@ -862,7 +862,7 @@
         }
       ],
       "clue": {
-        "text": "Erzurum'da bir ilçe",
+        "text": "Erzurum'un ilçesi",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -910,7 +910,7 @@
         }
       ],
       "clue": {
-        "text": "Tokat",
+        "text": "Tokat'ın ilçesi",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -1026,7 +1026,7 @@
         }
       ],
       "clue": {
-        "text": "Mum yeri",
+        "text": "Mumluk",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1094,7 +1094,7 @@
         }
       ],
       "clue": {
-        "text": "Gemi dümeni",
+        "text": "Uygun fırsat (halk)",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1162,7 +1162,7 @@
         }
       ],
       "clue": {
-        "text": "Gelecek zaman",
+        "text": "Gelecek (eski)",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1198,7 +1198,7 @@
         }
       ],
       "clue": {
-        "text": "Bir tekten sonra",
+        "text": "Çift sayıların ilki",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1274,7 +1274,7 @@
         }
       ],
       "clue": {
-        "text": "Osmanlı'da bir tür kılıç",
+        "text": "Taşçı kazması",
         "arrow": "right",
         "word_id": "A12",
         "image_id": null,
@@ -1446,7 +1446,7 @@
         }
       ],
       "clue": {
-        "text": "Sızlanma, yakınma ünlemi",
+        "text": "Yakınma ünlemi",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1550,7 +1550,7 @@
         }
       ],
       "clue": {
-        "text": "Süzgeçten geçirme",
+        "text": "Eleme kalıntısı",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,

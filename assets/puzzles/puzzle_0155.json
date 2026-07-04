@@ -872,7 +872,7 @@
         }
       ],
       "clue": {
-        "text": "İğneleyici söz",
+        "text": "Dokundurma",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -980,7 +980,7 @@
         }
       ],
       "clue": {
-        "text": "Ankara'nın bir ilçesi",
+        "text": "Ankara'nın ilçesi",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1088,7 +1088,7 @@
         }
       ],
       "clue": {
-        "text": "Oyun, ulaşım",
+        "text": "Taze karşıtı",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1184,7 +1184,7 @@
         }
       ],
       "clue": {
-        "text": "Yüksek zirve",
+        "text": "Yiğit, kahraman",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1232,7 +1232,7 @@
         }
       ],
       "clue": {
-        "text": "Kavgacı, huysuz",
+        "text": "Sürekli ağlayan",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1268,7 +1268,7 @@
         }
       ],
       "clue": {
-        "text": "İşin ehli kişi",
+        "text": "Usta, deneyimli",
         "arrow": "right",
         "word_id": "A12",
         "image_id": null,
@@ -1448,7 +1448,7 @@
         }
       ],
       "clue": {
-        "text": "Çocuk doğuran",
+        "text": "Anne",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1568,7 +1568,7 @@
         }
       ],
       "clue": {
-        "text": "Soydan gelen",
+        "text": "Ata olma durumu",
         "arrow": "down",
         "word_id": "D7",
         "image_id": null,
@@ -1604,7 +1604,7 @@
         }
       ],
       "clue": {
-        "text": "Arapça'da prens",
+        "text": "Bey (eski dil)",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,
@@ -1648,7 +1648,7 @@
         }
       ],
       "clue": {
-        "text": "Ani hareket",
+        "text": "Karşı davranış",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,
@@ -1684,7 +1684,7 @@
         }
       ],
       "clue": {
-        "text": "Ters 'lat'",
+        "text": "İlkel bitki gövdesi",
         "arrow": "down",
         "word_id": "D10",
         "image_id": null,
@@ -1720,7 +1720,7 @@
         }
       ],
       "clue": {
-        "text": "Işığa yarayan",
+        "text": "Mikroskop camı",
         "arrow": "down",
         "word_id": "D11",
         "image_id": null,
