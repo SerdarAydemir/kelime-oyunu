@@ -23,7 +23,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Sırtını dayamak",
+          "text": "İki yana oynatmak",
           "arrow": "down",
           "word_id": "D1",
           "image_id": null,
@@ -39,7 +39,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Üst karşıtı",
+          "text": "Karışık renkli",
           "arrow": "down",
           "word_id": "D2",
           "image_id": null,
@@ -71,7 +71,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Bir erkek adı",
+          "text": "Yalıtkan mineral",
           "arrow": "down",
           "word_id": "D4",
           "image_id": null,
@@ -87,7 +87,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Nadiren, ara sıra",
+          "text": "Uzağa savurma gücü",
           "arrow": "down",
           "word_id": "D5",
           "image_id": null,
@@ -103,7 +103,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Oturur vaziyette değil",
+          "text": "İstanbul'da semt",
           "arrow": "down",
           "word_id": "D6",
           "image_id": null,
@@ -119,7 +119,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Uçan memeli",
+          "text": "Burgu şeklinde",
           "arrow": "right",
           "word_id": "A1",
           "image_id": null,
@@ -151,7 +151,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Antik Yunan ölçü",
+          "text": "En az, hiç değilse",
           "arrow": "right",
           "word_id": "A4",
           "image_id": null,
@@ -199,7 +199,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Sevilen kadın (eski)",
+          "text": "Yardımcı, destekçi",
           "arrow": "right",
           "word_id": "A9",
           "image_id": null,
@@ -215,7 +215,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Teselli, rahatlama",
+          "text": "Kurnazca iş",
           "arrow": "right",
           "word_id": "A10",
           "image_id": null,
@@ -231,7 +231,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Parça takımı, set",
+          "text": "Fırında pişen tatlı",
           "arrow": "right",
           "word_id": "A11",
           "image_id": null,
@@ -247,7 +247,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Oy (eski)",
+          "text": "Verme, ödeme",
           "arrow": "right",
           "word_id": "A3",
           "image_id": null,
@@ -270,7 +270,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Müzikte bir durak",
+          "text": "Yüksek yapı",
           "arrow": "down",
           "word_id": "D8",
           "image_id": null,
@@ -286,7 +286,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Sulama kanalı",
+          "text": "Rumeli'de seslenme",
           "arrow": "right",
           "word_id": "A6",
           "image_id": null,
@@ -302,7 +302,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Topa vurmak",
+          "text": "Başlangıç, birinci",
           "arrow": "down",
           "word_id": "D9",
           "image_id": null,
@@ -318,14 +318,14 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Kasaptan alınan gıda",
+          "text": "Vilayet",
           "arrow": "right",
           "word_id": "A8",
           "image_id": null,
           "source": "curated"
         },
         {
-          "text": "Öğütülmüş tahıl",
+          "text": "Soru sözcüğü",
           "arrow": "down",
           "word_id": "D10",
           "image_id": null,
@@ -369,7 +369,7 @@
       "row": 1,
       "col": 1,
       "type": "letter",
-      "solution": "Y",
+      "solution": "S",
       "word_ids": [
         "A1",
         "D1"
@@ -402,7 +402,7 @@
       "row": 1,
       "col": 4,
       "type": "letter",
-      "solution": "A",
+      "solution": "M",
       "word_ids": [
         "A1",
         "D4"
@@ -413,7 +413,7 @@
       "row": 1,
       "col": 5,
       "type": "letter",
-      "solution": "S",
+      "solution": "A",
       "word_ids": [
         "A1",
         "D5"
@@ -424,7 +424,7 @@
       "row": 1,
       "col": 6,
       "type": "letter",
-      "solution": "A",
+      "solution": "L",
       "word_ids": [
         "A1",
         "D6"
@@ -457,7 +457,7 @@
       "row": 2,
       "col": 4,
       "type": "letter",
-      "solution": "R",
+      "solution": "İ",
       "word_ids": [
         "A3",
         "D4"
@@ -468,7 +468,7 @@
       "row": 2,
       "col": 5,
       "type": "letter",
-      "solution": "E",
+      "solution": "T",
       "word_ids": [
         "A3",
         "D5"
@@ -479,7 +479,7 @@
       "row": 2,
       "col": 6,
       "type": "letter",
-      "solution": "Y",
+      "solution": "A",
       "word_ids": [
         "A3",
         "D6"
@@ -490,7 +490,7 @@
       "row": 3,
       "col": 1,
       "type": "letter",
-      "solution": "S",
+      "solution": "L",
       "word_ids": [
         "A4",
         "D1"
@@ -501,7 +501,7 @@
       "row": 3,
       "col": 2,
       "type": "letter",
-      "solution": "T",
+      "solution": "A",
       "word_ids": [
         "A4",
         "D2"
@@ -523,7 +523,7 @@
       "row": 3,
       "col": 4,
       "type": "letter",
-      "solution": "D",
+      "solution": "K",
       "word_ids": [
         "A4",
         "D4"
@@ -534,7 +534,7 @@
       "row": 3,
       "col": 5,
       "type": "letter",
-      "solution": "Y",
+      "solution": "A",
       "word_ids": [
         "A4",
         "D5"
@@ -545,7 +545,7 @@
       "row": 3,
       "col": 6,
       "type": "letter",
-      "solution": "A",
+      "solution": "L",
       "word_ids": [
         "A4",
         "D6"
@@ -578,7 +578,7 @@
       "row": 4,
       "col": 5,
       "type": "letter",
-      "solution": "R",
+      "solution": "B",
       "word_ids": [
         "A6",
         "D5"
@@ -589,7 +589,7 @@
       "row": 4,
       "col": 6,
       "type": "letter",
-      "solution": "K",
+      "solution": "E",
       "word_ids": [
         "A6",
         "D6"
@@ -622,7 +622,7 @@
       "row": 5,
       "col": 5,
       "type": "letter",
-      "solution": "E",
+      "solution": "İ",
       "word_ids": [
         "A8",
         "D5"
@@ -633,7 +633,7 @@
       "row": 5,
       "col": 6,
       "type": "letter",
-      "solution": "T",
+      "solution": "L",
       "word_ids": [
         "A8",
         "D6"
@@ -655,7 +655,7 @@
       "row": 6,
       "col": 2,
       "type": "letter",
-      "solution": "A",
+      "solution": "U",
       "word_ids": [
         "A9",
         "D8"
@@ -666,7 +666,7 @@
       "row": 6,
       "col": 3,
       "type": "letter",
-      "solution": "Ş",
+      "solution": "İ",
       "word_ids": [
         "A9",
         "D9"
@@ -677,7 +677,7 @@
       "row": 6,
       "col": 4,
       "type": "letter",
-      "solution": "U",
+      "solution": "N",
       "word_ids": [
         "A9",
         "D10"
@@ -688,7 +688,7 @@
       "row": 6,
       "col": 5,
       "type": "letter",
-      "solution": "K",
+      "solution": "L",
       "word_ids": [
         "A9",
         "D5"
@@ -699,7 +699,7 @@
       "row": 6,
       "col": 6,
       "type": "letter",
-      "solution": "A",
+      "solution": "İ",
       "word_ids": [
         "A9",
         "D6"
@@ -721,7 +721,7 @@
       "row": 7,
       "col": 2,
       "type": "letter",
-      "solution": "V",
+      "solution": "L",
       "word_ids": [
         "A10",
         "D8"
@@ -732,7 +732,7 @@
       "row": 7,
       "col": 3,
       "type": "letter",
-      "solution": "U",
+      "solution": "L",
       "word_ids": [
         "A10",
         "D9"
@@ -743,7 +743,7 @@
       "row": 7,
       "col": 4,
       "type": "letter",
-      "solution": "N",
+      "solution": "E",
       "word_ids": [
         "A10",
         "D10"
@@ -754,7 +754,7 @@
       "row": 7,
       "col": 5,
       "type": "letter",
-      "solution": "Ç",
+      "solution": "M",
       "word_ids": [
         "A10",
         "D5"
@@ -776,7 +776,7 @@
       "row": 8,
       "col": 2,
       "type": "letter",
-      "solution": "İ",
+      "solution": "E",
       "word_ids": [
         "A11",
         "D8"
@@ -787,7 +787,7 @@
       "row": 8,
       "col": 3,
       "type": "letter",
-      "solution": "T",
+      "solution": "K",
       "word_ids": [
         "A11",
         "D9"
@@ -820,7 +820,7 @@
   "words": [
     {
       "id": "A1",
-      "answer": "YARASA",
+      "answer": "SARMAL",
       "length": 6,
       "direction": "right",
       "clue_cell": {
@@ -858,7 +858,7 @@
         }
       ],
       "clue": {
-        "text": "Uçan memeli",
+        "text": "Burgu şeklinde",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -900,7 +900,7 @@
     },
     {
       "id": "A3",
-      "answer": "REY",
+      "answer": "İTA",
       "length": 3,
       "direction": "right",
       "clue_cell": {
@@ -926,7 +926,7 @@
         }
       ],
       "clue": {
-        "text": "Oy (eski)",
+        "text": "Verme, ödeme",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -936,7 +936,7 @@
     },
     {
       "id": "A4",
-      "answer": "STADYA",
+      "answer": "LAAKAL",
       "length": 6,
       "direction": "right",
       "clue_cell": {
@@ -974,7 +974,7 @@
         }
       ],
       "clue": {
-        "text": "Antik Yunan ölçü",
+        "text": "En az, hiç değilse",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1012,7 +1012,7 @@
     },
     {
       "id": "A6",
-      "answer": "ARK",
+      "answer": "ABE",
       "length": 3,
       "direction": "right",
       "clue_cell": {
@@ -1038,7 +1038,7 @@
         }
       ],
       "clue": {
-        "text": "Sulama kanalı",
+        "text": "Rumeli'de seslenme",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1080,7 +1080,7 @@
     },
     {
       "id": "A8",
-      "answer": "ET",
+      "answer": "İL",
       "length": 2,
       "direction": "right",
       "clue_cell": {
@@ -1102,7 +1102,7 @@
         }
       ],
       "clue": {
-        "text": "Kasaptan alınan gıda",
+        "text": "Vilayet",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1112,7 +1112,7 @@
     },
     {
       "id": "A9",
-      "answer": "MAŞUKA",
+      "answer": "MUİNLİ",
       "length": 6,
       "direction": "right",
       "clue_cell": {
@@ -1150,7 +1150,7 @@
         }
       ],
       "clue": {
-        "text": "Sevilen kadın (eski)",
+        "text": "Yardımcı, destekçi",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1160,7 +1160,7 @@
     },
     {
       "id": "A10",
-      "answer": "AVUNÇ",
+      "answer": "ALLEM",
       "length": 5,
       "direction": "right",
       "clue_cell": {
@@ -1194,7 +1194,7 @@
         }
       ],
       "clue": {
-        "text": "Teselli",
+        "text": "Kurnazca iş",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1204,7 +1204,7 @@
     },
     {
       "id": "A11",
-      "answer": "KİT",
+      "answer": "KEK",
       "length": 3,
       "direction": "right",
       "clue_cell": {
@@ -1230,7 +1230,7 @@
         }
       ],
       "clue": {
-        "text": "Parça takımı, set",
+        "text": "Fırında pişen tatlı",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1272,7 +1272,7 @@
     },
     {
       "id": "D1",
-      "answer": "YASLAMAK",
+      "answer": "SALLAMAK",
       "length": 8,
       "direction": "down",
       "clue_cell": {
@@ -1318,7 +1318,7 @@
         }
       ],
       "clue": {
-        "text": "Bir yere dayamak",
+        "text": "İki yana oynatmak",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1328,7 +1328,7 @@
     },
     {
       "id": "D2",
-      "answer": "ALT",
+      "answer": "ALA",
       "length": 3,
       "direction": "down",
       "clue_cell": {
@@ -1354,7 +1354,7 @@
         }
       ],
       "clue": {
-        "text": "Üst karşıtı",
+        "text": "Karışık renkli",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1392,7 +1392,7 @@
     },
     {
       "id": "D4",
-      "answer": "ARDA",
+      "answer": "MİKA",
       "length": 4,
       "direction": "down",
       "clue_cell": {
@@ -1422,7 +1422,7 @@
         }
       ],
       "clue": {
-        "text": "Bir erkek adı",
+        "text": "Yalıtkan mineral",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1432,7 +1432,7 @@
     },
     {
       "id": "D5",
-      "answer": "SEYREKÇE",
+      "answer": "ATABİLME",
       "length": 8,
       "direction": "down",
       "clue_cell": {
@@ -1478,7 +1478,7 @@
         }
       ],
       "clue": {
-        "text": "Ara sıra",
+        "text": "Uzağa savurma gücü",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1488,7 +1488,7 @@
     },
     {
       "id": "D6",
-      "answer": "AYAKTA",
+      "answer": "LALELİ",
       "length": 6,
       "direction": "down",
       "clue_cell": {
@@ -1526,7 +1526,7 @@
         }
       ],
       "clue": {
-        "text": "Dikilir halde",
+        "text": "İstanbul'da semt",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1564,7 +1564,7 @@
     },
     {
       "id": "D8",
-      "answer": "KAVİ",
+      "answer": "KULE",
       "length": 4,
       "direction": "down",
       "clue_cell": {
@@ -1594,7 +1594,7 @@
         }
       ],
       "clue": {
-        "text": "Güçlü, sağlam",
+        "text": "Yüksek yapı",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,
@@ -1604,7 +1604,7 @@
     },
     {
       "id": "D9",
-      "answer": "ŞUT",
+      "answer": "İLK",
       "length": 3,
       "direction": "down",
       "clue_cell": {
@@ -1630,7 +1630,7 @@
         }
       ],
       "clue": {
-        "text": "Kaleye vuruş",
+        "text": "Başlangıç, birinci",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,
@@ -1640,7 +1640,7 @@
     },
     {
       "id": "D10",
-      "answer": "UN",
+      "answer": "NE",
       "length": 2,
       "direction": "down",
       "clue_cell": {
@@ -1662,7 +1662,7 @@
         }
       ],
       "clue": {
-        "text": "Öğütülmüş tahıl",
+        "text": "Soru sözcüğü",
         "arrow": "down",
         "word_id": "D10",
         "image_id": null,
@@ -1706,6 +1706,6 @@
     "post_fill_scanned": true,
     "scanner_version": "2.0.0"
   },
-  "generated_at": "2026-07-05T09:24:55.233011+00:00",
+  "generated_at": "2026-07-05T15:15:56.614736+00:00",
   "generator_version": "2.0.0"
 }

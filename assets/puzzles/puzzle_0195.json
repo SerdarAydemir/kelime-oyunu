@@ -183,7 +183,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Resmi tavan fiyat",
+          "text": "Vekil, temsilci",
           "arrow": "right",
           "word_id": "A7",
           "image_id": null,
@@ -199,7 +199,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Sıradaki, sonraki",
+          "text": "Yönetimle ilgili",
           "arrow": "right",
           "word_id": "A9",
           "image_id": null,
@@ -215,7 +215,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "İstemeden, tesadüfen",
+          "text": "Gemi altı",
           "arrow": "right",
           "word_id": "A10",
           "image_id": null,
@@ -231,7 +231,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Kapsanan şeyler",
+          "text": "Sahiplik belirten ek",
           "arrow": "right",
           "word_id": "A11",
           "image_id": null,
@@ -286,7 +286,7 @@
           "source": "curated"
         },
         {
-          "text": "Sert kütleler",
+          "text": "Dördüncü ay",
           "arrow": "down",
           "word_id": "D9",
           "image_id": null,
@@ -302,7 +302,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Su gideri",
+          "text": "Namzet",
           "arrow": "down",
           "word_id": "D10",
           "image_id": null,
@@ -325,7 +325,7 @@
           "source": "llm"
         },
         {
-          "text": "Çay diyarı ilimiz",
+          "text": "Ödünç verme (eski)",
           "arrow": "down",
           "word_id": "D11",
           "image_id": null,
@@ -348,7 +348,7 @@
           "source": "curated"
         },
         {
-          "text": "Büyük, yapılı",
+          "text": "Kocanın kardeşi",
           "arrow": "down",
           "word_id": "D12",
           "image_id": null,
@@ -607,7 +607,7 @@
       "row": 5,
       "col": 3,
       "type": "letter",
-      "solution": "R",
+      "solution": "İ",
       "word_ids": [
         "A7",
         "D11"
@@ -618,7 +618,7 @@
       "row": 5,
       "col": 4,
       "type": "letter",
-      "solution": "H",
+      "solution": "P",
       "word_ids": [
         "A7",
         "D9"
@@ -651,7 +651,7 @@
       "row": 6,
       "col": 2,
       "type": "letter",
-      "solution": "K",
+      "solution": "D",
       "word_ids": [
         "A9",
         "D10"
@@ -662,7 +662,7 @@
       "row": 6,
       "col": 3,
       "type": "letter",
-      "solution": "İ",
+      "solution": "A",
       "word_ids": [
         "A9",
         "D11"
@@ -673,7 +673,7 @@
       "row": 6,
       "col": 4,
       "type": "letter",
-      "solution": "C",
+      "solution": "R",
       "word_ids": [
         "A9",
         "D9"
@@ -717,7 +717,7 @@
       "row": 7,
       "col": 3,
       "type": "letter",
-      "solution": "Z",
+      "solution": "R",
       "word_ids": [
         "A10",
         "D11"
@@ -728,7 +728,7 @@
       "row": 7,
       "col": 4,
       "type": "letter",
-      "solution": "A",
+      "solution": "İ",
       "word_ids": [
         "A10",
         "D9"
@@ -739,7 +739,7 @@
       "row": 7,
       "col": 5,
       "type": "letter",
-      "solution": "R",
+      "solution": "N",
       "word_ids": [
         "A10",
         "D12"
@@ -772,7 +772,7 @@
       "row": 8,
       "col": 2,
       "type": "letter",
-      "solution": "Ç",
+      "solution": "Y",
       "word_ids": [
         "A11",
         "D10"
@@ -794,7 +794,7 @@
       "row": 8,
       "col": 4,
       "type": "letter",
-      "solution": "R",
+      "solution": "L",
       "word_ids": [
         "A11",
         "D9"
@@ -1047,7 +1047,7 @@
     },
     {
       "id": "A7",
-      "answer": "NARH",
+      "answer": "NAİP",
       "length": 4,
       "direction": "right",
       "clue_cell": {
@@ -1077,7 +1077,7 @@
         }
       ],
       "clue": {
-        "text": "Resmi tavan fiyat",
+        "text": "Vekil, temsilci",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1115,7 +1115,7 @@
     },
     {
       "id": "A9",
-      "answer": "İKİCİ",
+      "answer": "İDARİ",
       "length": 5,
       "direction": "right",
       "clue_cell": {
@@ -1149,7 +1149,7 @@
         }
       ],
       "clue": {
-        "text": "Sıradaki, sonraki",
+        "text": "Yönetimle ilgili",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1159,7 +1159,7 @@
     },
     {
       "id": "A10",
-      "answer": "KAZARA",
+      "answer": "KARİNA",
       "length": 6,
       "direction": "right",
       "clue_cell": {
@@ -1197,7 +1197,7 @@
         }
       ],
       "clue": {
-        "text": "Yanlışlıkla",
+        "text": "Gemi altı",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1207,7 +1207,7 @@
     },
     {
       "id": "A11",
-      "answer": "İÇERİK",
+      "answer": "İYELİK",
       "length": 6,
       "direction": "right",
       "clue_cell": {
@@ -1245,7 +1245,7 @@
         }
       ],
       "clue": {
-        "text": "Kapsanan şeyler",
+        "text": "Sahiplik belirten ek",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1539,7 +1539,7 @@
     },
     {
       "id": "D9",
-      "answer": "AHCAR",
+      "answer": "APRİL",
       "length": 5,
       "direction": "down",
       "clue_cell": {
@@ -1573,7 +1573,7 @@
         }
       ],
       "clue": {
-        "text": "Taşlar (eski)",
+        "text": "Dördüncü ay",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,
@@ -1583,7 +1583,7 @@
     },
     {
       "id": "D10",
-      "answer": "AKAÇ",
+      "answer": "ADAY",
       "length": 4,
       "direction": "down",
       "clue_cell": {
@@ -1613,7 +1613,7 @@
         }
       ],
       "clue": {
-        "text": "Su gideri",
+        "text": "Namzet",
         "arrow": "down",
         "word_id": "D10",
         "image_id": null,
@@ -1623,7 +1623,7 @@
     },
     {
       "id": "D11",
-      "answer": "RİZE",
+      "answer": "İARE",
       "length": 4,
       "direction": "down",
       "clue_cell": {
@@ -1653,7 +1653,7 @@
         }
       ],
       "clue": {
-        "text": "Çay diyarı ilimiz",
+        "text": "Ödünç verme (eski)",
         "arrow": "down",
         "word_id": "D11",
         "image_id": null,
@@ -1663,7 +1663,7 @@
     },
     {
       "id": "D12",
-      "answer": "İRİ",
+      "answer": "İNİ",
       "length": 3,
       "direction": "down",
       "clue_cell": {
@@ -1689,7 +1689,7 @@
         }
       ],
       "clue": {
-        "text": "Büyük, yapılı",
+        "text": "Kocanın kardeşi",
         "arrow": "down",
         "word_id": "D12",
         "image_id": null,
@@ -1737,6 +1737,6 @@
     "post_fill_scanned": true,
     "scanner_version": "2.0.0"
   },
-  "generated_at": "2026-07-05T11:12:46.544329+00:00",
+  "generated_at": "2026-07-05T15:47:37.441806+00:00",
   "generator_version": "2.0.0"
 }

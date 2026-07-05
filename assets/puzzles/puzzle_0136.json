@@ -39,7 +39,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Sivrisinek türü",
+          "text": "Arı evi",
           "arrow": "down",
           "word_id": "D2",
           "image_id": null,
@@ -151,7 +151,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Kütahya ilçesi",
+          "text": "Olumlu yanıt",
           "arrow": "right",
           "word_id": "A3",
           "image_id": null,
@@ -183,7 +183,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Bir amaca ulaşmak",
+          "text": "Nadiren görülen",
           "arrow": "right",
           "word_id": "A6",
           "image_id": null,
@@ -247,7 +247,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Bir pamuk türü",
+          "text": "Kısmen açık",
           "arrow": "down",
           "word_id": "D7",
           "image_id": null,
@@ -279,7 +279,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Güncel akım",
+          "text": "Taya",
           "arrow": "down",
           "word_id": "D9",
           "image_id": null,
@@ -302,7 +302,7 @@
           "source": "curated"
         },
         {
-          "text": "İncelik, terbiye",
+          "text": "Büyük istek",
           "arrow": "down",
           "word_id": "D10",
           "image_id": null,
@@ -318,7 +318,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Dar yarış sandalı",
+          "text": "Bahçe yeşil örtüsü",
           "arrow": "down",
           "word_id": "D11",
           "image_id": null,
@@ -334,7 +334,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Dikkatini toplama",
+          "text": "Varılacak yer",
           "arrow": "right",
           "word_id": "A8",
           "image_id": null,
@@ -357,7 +357,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Bembeyaz",
+          "text": "Hoşgörü, tolerans",
           "arrow": "right",
           "word_id": "A11",
           "image_id": null,
@@ -512,7 +512,7 @@
       "row": 3,
       "col": 2,
       "type": "letter",
-      "solution": "M",
+      "solution": "V",
       "word_ids": [
         "A3",
         "D2"
@@ -600,7 +600,7 @@
       "row": 5,
       "col": 2,
       "type": "letter",
-      "solution": "R",
+      "solution": "N",
       "word_ids": [
         "A6",
         "D2"
@@ -611,7 +611,7 @@
       "row": 5,
       "col": 3,
       "type": "letter",
-      "solution": "M",
+      "solution": "D",
       "word_ids": [
         "A6",
         "D9"
@@ -633,7 +633,7 @@
       "row": 5,
       "col": 5,
       "type": "letter",
-      "solution": "K",
+      "solution": "R",
       "word_ids": [
         "A6",
         "D7"
@@ -655,7 +655,7 @@
       "row": 6,
       "col": 3,
       "type": "letter",
-      "solution": "O",
+      "solution": "A",
       "word_ids": [
         "A8",
         "D9"
@@ -666,7 +666,7 @@
       "row": 6,
       "col": 4,
       "type": "letter",
-      "solution": "D",
+      "solution": "M",
       "word_ids": [
         "A8",
         "D10"
@@ -688,7 +688,7 @@
       "row": 6,
       "col": 6,
       "type": "letter",
-      "solution": "K",
+      "solution": "Ç",
       "word_ids": [
         "A8",
         "D11"
@@ -776,7 +776,7 @@
       "row": 8,
       "col": 3,
       "type": "letter",
-      "solution": "A",
+      "solution": "I",
       "word_ids": [
         "A11",
         "D9"
@@ -787,7 +787,7 @@
       "row": 8,
       "col": 4,
       "type": "letter",
-      "solution": "P",
+      "solution": "L",
       "word_ids": [
         "A11",
         "D10"
@@ -798,7 +798,7 @@
       "row": 8,
       "col": 5,
       "type": "letter",
-      "solution": "A",
+      "solution": "I",
       "word_ids": [
         "A11",
         "D7"
@@ -809,7 +809,7 @@
       "row": 8,
       "col": 6,
       "type": "letter",
-      "solution": "K",
+      "solution": "M",
       "word_ids": [
         "A11",
         "D11"
@@ -916,7 +916,7 @@
     },
     {
       "id": "A3",
-      "answer": "EMET",
+      "answer": "EVET",
       "length": 4,
       "direction": "right",
       "clue_cell": {
@@ -946,7 +946,7 @@
         }
       ],
       "clue": {
-        "text": "Kütahya ilçesi",
+        "text": "Olumlu yanıt",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -1020,7 +1020,7 @@
     },
     {
       "id": "A6",
-      "answer": "ERMEK",
+      "answer": "ENDER",
       "length": 5,
       "direction": "right",
       "clue_cell": {
@@ -1054,7 +1054,7 @@
         }
       ],
       "clue": {
-        "text": "Amaca ulaşmak",
+        "text": "Nadiren görülen",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1092,7 +1092,7 @@
     },
     {
       "id": "A8",
-      "answer": "ODAK",
+      "answer": "AMAÇ",
       "length": 4,
       "direction": "right",
       "clue_cell": {
@@ -1122,7 +1122,7 @@
         }
       ],
       "clue": {
-        "text": "Dikkat merkezi",
+        "text": "Varılacak yer",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1208,7 +1208,7 @@
     },
     {
       "id": "A11",
-      "answer": "APAK",
+      "answer": "ILIM",
       "length": 4,
       "direction": "right",
       "clue_cell": {
@@ -1238,7 +1238,7 @@
         }
       ],
       "clue": {
-        "text": "Bembeyaz",
+        "text": "Hoşgörü, tolerans",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1304,7 +1304,7 @@
     },
     {
       "id": "D2",
-      "answer": "KOMAR",
+      "answer": "KOVAN",
       "length": 5,
       "direction": "down",
       "clue_cell": {
@@ -1338,7 +1338,7 @@
         }
       ],
       "clue": {
-        "text": "Sivrisinek türü",
+        "text": "Arı evi",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1484,7 +1484,7 @@
     },
     {
       "id": "D7",
-      "answer": "AKALA",
+      "answer": "ARALI",
       "length": 5,
       "direction": "down",
       "clue_cell": {
@@ -1518,7 +1518,7 @@
         }
       ],
       "clue": {
-        "text": "Bir pamuk türü",
+        "text": "Kısmen açık",
         "arrow": "down",
         "word_id": "D7",
         "image_id": null,
@@ -1556,7 +1556,7 @@
     },
     {
       "id": "D9",
-      "answer": "MODA",
+      "answer": "DADI",
       "length": 4,
       "direction": "down",
       "clue_cell": {
@@ -1586,7 +1586,7 @@
         }
       ],
       "clue": {
-        "text": "Güncel akım",
+        "text": "Taya",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,
@@ -1596,7 +1596,7 @@
     },
     {
       "id": "D10",
-      "answer": "EDEP",
+      "answer": "EMEL",
       "length": 4,
       "direction": "down",
       "clue_cell": {
@@ -1626,7 +1626,7 @@
         }
       ],
       "clue": {
-        "text": "İncelik, terbiye",
+        "text": "Büyük istek",
         "arrow": "down",
         "word_id": "D10",
         "image_id": null,
@@ -1636,7 +1636,7 @@
     },
     {
       "id": "D11",
-      "answer": "KİK",
+      "answer": "ÇİM",
       "length": 3,
       "direction": "down",
       "clue_cell": {
@@ -1662,7 +1662,7 @@
         }
       ],
       "clue": {
-        "text": "Dar yarış sandalı",
+        "text": "Bahçe yeşil örtüsü",
         "arrow": "down",
         "word_id": "D11",
         "image_id": null,
@@ -1706,6 +1706,6 @@
     "post_fill_scanned": true,
     "scanner_version": "2.0.0"
   },
-  "generated_at": "2026-07-05T10:11:51.289773+00:00",
+  "generated_at": "2026-07-05T15:23:00.967130+00:00",
   "generator_version": "2.0.0"
 }

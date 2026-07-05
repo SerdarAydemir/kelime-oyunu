@@ -23,7 +23,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Donakalma hali",
+          "text": "Şaşırıp kalma",
           "arrow": "down",
           "word_id": "D1",
           "image_id": null,
@@ -55,7 +55,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "İki yüzlülük, ikiyüzlülük",
+          "text": "İki yüzlülük",
           "arrow": "down",
           "word_id": "D3",
           "image_id": null,
@@ -135,7 +135,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Gerçekte, aslında",
+          "text": "Gerçekte",
           "arrow": "right",
           "word_id": "A2",
           "image_id": null,
@@ -199,7 +199,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Gelecekten haber",
+          "text": "Belirti, iz",
           "arrow": "right",
           "word_id": "A9",
           "image_id": null,
@@ -215,7 +215,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Ölü gömülen yer",
+          "text": "Tatlı kök bitkisi",
           "arrow": "right",
           "word_id": "A10",
           "image_id": null,
@@ -293,7 +293,7 @@
           "source": "curated"
         },
         {
-          "text": "Cam ev",
+          "text": "Övgü (eski)",
           "arrow": "down",
           "word_id": "D9",
           "image_id": null,
@@ -316,7 +316,7 @@
           "source": "llm"
         },
         {
-          "text": "Çok karşıtı",
+          "text": "Gökyüzündeki uydumuz",
           "arrow": "down",
           "word_id": "D10",
           "image_id": null,
@@ -734,7 +734,7 @@
       "row": 7,
       "col": 3,
       "type": "letter",
-      "solution": "Z",
+      "solution": "Y",
       "word_ids": [
         "A10",
         "D10"
@@ -756,7 +756,7 @@
       "row": 7,
       "col": 5,
       "type": "letter",
-      "solution": "R",
+      "solution": "N",
       "word_ids": [
         "A10",
         "D9"
@@ -1166,7 +1166,7 @@
     },
     {
       "id": "A10",
-      "answer": "MEZAR",
+      "answer": "MEYAN",
       "length": 5,
       "direction": "right",
       "clue_cell": {
@@ -1200,7 +1200,7 @@
         }
       ],
       "clue": {
-        "text": "Ölü gömülen yer",
+        "text": "Tatlı kök bitkisi",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1610,7 +1610,7 @@
     },
     {
       "id": "D9",
-      "answer": "SERA",
+      "answer": "SENA",
       "length": 4,
       "direction": "down",
       "clue_cell": {
@@ -1640,7 +1640,7 @@
         }
       ],
       "clue": {
-        "text": "Cam ev",
+        "text": "Övgü (eski)",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,
@@ -1650,7 +1650,7 @@
     },
     {
       "id": "D10",
-      "answer": "AZ",
+      "answer": "AY",
       "length": 2,
       "direction": "down",
       "clue_cell": {
@@ -1672,7 +1672,7 @@
         }
       ],
       "clue": {
-        "text": "Çok karşıtı",
+        "text": "Gökyüzündeki uydumuz",
         "arrow": "down",
         "word_id": "D10",
         "image_id": null,
@@ -1716,6 +1716,6 @@
     "post_fill_scanned": true,
     "scanner_version": "2.0.0"
   },
-  "generated_at": "2026-07-05T08:07:41.085577+00:00",
+  "generated_at": "2026-07-05T14:06:54.330373+00:00",
   "generator_version": "2.0.0"
 }

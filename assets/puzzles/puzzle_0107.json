@@ -23,7 +23,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Erişimi kesmek",
+          "text": "Kızgınlık belirtisi",
           "arrow": "down",
           "word_id": "D1",
           "image_id": null,
@@ -39,7 +39,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Sahip, malik",
+          "text": "Hitit",
           "arrow": "down",
           "word_id": "D2",
           "image_id": null,
@@ -55,7 +55,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Koyun sürüsü",
+          "text": "Dönerek çalan",
           "arrow": "down",
           "word_id": "D3",
           "image_id": null,
@@ -71,7 +71,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Şahitlik eden",
+          "text": "Derin çizik, yırtık",
           "arrow": "down",
           "word_id": "D4",
           "image_id": null,
@@ -119,7 +119,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Dana dilimi",
+          "text": "Tavlada 1-1",
           "arrow": "right",
           "word_id": "A1",
           "image_id": null,
@@ -135,7 +135,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "İşsiz güçsüz",
+          "text": "Geri çekme eylemi",
           "arrow": "right",
           "word_id": "A2",
           "image_id": null,
@@ -151,7 +151,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Soy gaz",
+          "text": "İlke, düstur",
           "arrow": "right",
           "word_id": "A3",
           "image_id": null,
@@ -215,7 +215,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Kısmen açık",
+          "text": "Sarkıtılmış",
           "arrow": "right",
           "word_id": "A11",
           "image_id": null,
@@ -270,7 +270,7 @@
           "source": "curated"
         },
         {
-          "text": "Ürün yetiştirme",
+          "text": "Ziraat",
           "arrow": "down",
           "word_id": "D8",
           "image_id": null,
@@ -293,7 +293,7 @@
           "source": "llm"
         },
         {
-          "text": "Toprak, yer",
+          "text": "Para saklanan yer",
           "arrow": "down",
           "word_id": "D9",
           "image_id": null,
@@ -316,7 +316,7 @@
           "source": "llm"
         },
         {
-          "text": "Telli bir Doğu sazı",
+          "text": "Kamyon türü",
           "arrow": "down",
           "word_id": "D10",
           "image_id": null,
@@ -367,7 +367,7 @@
       "row": 1,
       "col": 1,
       "type": "letter",
-      "solution": "B",
+      "solution": "H",
       "word_ids": [
         "A1",
         "D1"
@@ -378,7 +378,7 @@
       "row": 1,
       "col": 2,
       "type": "letter",
-      "solution": "İ",
+      "solution": "E",
       "word_ids": [
         "A1",
         "D2"
@@ -389,7 +389,7 @@
       "row": 1,
       "col": 3,
       "type": "letter",
-      "solution": "F",
+      "solution": "P",
       "word_ids": [
         "A1",
         "D3"
@@ -400,7 +400,7 @@
       "row": 1,
       "col": 4,
       "type": "letter",
-      "solution": "T",
+      "solution": "Y",
       "word_ids": [
         "A1",
         "D4"
@@ -433,7 +433,7 @@
       "row": 2,
       "col": 1,
       "type": "letter",
-      "solution": "A",
+      "solution": "I",
       "word_ids": [
         "A2",
         "D1"
@@ -444,7 +444,7 @@
       "row": 2,
       "col": 2,
       "type": "letter",
-      "solution": "Y",
+      "solution": "T",
       "word_ids": [
         "A2",
         "D2"
@@ -488,7 +488,7 @@
       "row": 3,
       "col": 1,
       "type": "letter",
-      "solution": "N",
+      "solution": "Ş",
       "word_ids": [
         "A3",
         "D1"
@@ -499,7 +499,7 @@
       "row": 3,
       "col": 2,
       "type": "letter",
-      "solution": "E",
+      "solution": "İ",
       "word_ids": [
         "A3",
         "D2"
@@ -510,7 +510,7 @@
       "row": 3,
       "col": 3,
       "type": "letter",
-      "solution": "O",
+      "solution": "A",
       "word_ids": [
         "A3",
         "D3"
@@ -521,7 +521,7 @@
       "row": 3,
       "col": 4,
       "type": "letter",
-      "solution": "N",
+      "solution": "R",
       "word_ids": [
         "A3",
         "D4"
@@ -719,7 +719,7 @@
       "row": 7,
       "col": 2,
       "type": "letter",
-      "solution": "R",
+      "solution": "S",
       "word_ids": [
         "A11",
         "D9"
@@ -730,7 +730,7 @@
       "row": 7,
       "col": 3,
       "type": "letter",
-      "solution": "A",
+      "solution": "I",
       "word_ids": [
         "A11",
         "D10"
@@ -829,7 +829,7 @@
   "words": [
     {
       "id": "A1",
-      "answer": "BİFTEK",
+      "answer": "HEPYEK",
       "length": 6,
       "direction": "right",
       "clue_cell": {
@@ -867,7 +867,7 @@
         }
       ],
       "clue": {
-        "text": "Izgara et dilimi",
+        "text": "Tavlada 1-1",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -877,7 +877,7 @@
     },
     {
       "id": "A2",
-      "answer": "AYLAK",
+      "answer": "ITLAK",
       "length": 5,
       "direction": "right",
       "clue_cell": {
@@ -911,7 +911,7 @@
         }
       ],
       "clue": {
-        "text": "Boş gezen",
+        "text": "Geri çekme eylemi",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -921,7 +921,7 @@
     },
     {
       "id": "A3",
-      "answer": "NEON",
+      "answer": "ŞİAR",
       "length": 4,
       "direction": "right",
       "clue_cell": {
@@ -951,7 +951,7 @@
         }
       ],
       "clue": {
-        "text": "Bir soy gaz",
+        "text": "İlke, düstur",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -1193,7 +1193,7 @@
     },
     {
       "id": "A11",
-      "answer": "ARALI",
+      "answer": "ASILI",
       "length": 5,
       "direction": "right",
       "clue_cell": {
@@ -1227,7 +1227,7 @@
         }
       ],
       "clue": {
-        "text": "Kısmen açık",
+        "text": "Sarkıtılmış",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1285,7 +1285,7 @@
     },
     {
       "id": "D1",
-      "answer": "BANLAMAK",
+      "answer": "HIŞLAMAK",
       "length": 8,
       "direction": "down",
       "clue_cell": {
@@ -1331,7 +1331,7 @@
         }
       ],
       "clue": {
-        "text": "Erişimi kesmek",
+        "text": "Kızgınlık belirtisi",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1341,7 +1341,7 @@
     },
     {
       "id": "D2",
-      "answer": "İYE",
+      "answer": "ETİ",
       "length": 3,
       "direction": "down",
       "clue_cell": {
@@ -1367,7 +1367,7 @@
         }
       ],
       "clue": {
-        "text": "Sahip, malik",
+        "text": "Hitit",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1377,7 +1377,7 @@
     },
     {
       "id": "D3",
-      "answer": "FLOK",
+      "answer": "PLAK",
       "length": 4,
       "direction": "down",
       "clue_cell": {
@@ -1407,7 +1407,7 @@
         }
       ],
       "clue": {
-        "text": "Üçgen ön yelken",
+        "text": "Dönerek çalan",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1417,7 +1417,7 @@
     },
     {
       "id": "D4",
-      "answer": "TANIK",
+      "answer": "YARIK",
       "length": 5,
       "direction": "down",
       "clue_cell": {
@@ -1451,7 +1451,7 @@
         }
       ],
       "clue": {
-        "text": "Şahit",
+        "text": "Derin çizik, yırtık",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1605,7 +1605,7 @@
     },
     {
       "id": "D9",
-      "answer": "KARA",
+      "answer": "KASA",
       "length": 4,
       "direction": "down",
       "clue_cell": {
@@ -1635,7 +1635,7 @@
         }
       ],
       "clue": {
-        "text": "Toprak, yer",
+        "text": "Para saklanan yer",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,
@@ -1645,7 +1645,7 @@
     },
     {
       "id": "D10",
-      "answer": "TAR",
+      "answer": "TIR",
       "length": 3,
       "direction": "down",
       "clue_cell": {
@@ -1671,7 +1671,7 @@
         }
       ],
       "clue": {
-        "text": "Telli bir Doğu sazı",
+        "text": "Kamyon türü",
         "arrow": "down",
         "word_id": "D10",
         "image_id": null,
@@ -1747,6 +1747,6 @@
     "post_fill_scanned": true,
     "scanner_version": "2.0.0"
   },
-  "generated_at": "2026-07-05T09:31:43.316000+00:00",
+  "generated_at": "2026-07-05T15:21:47.793910+00:00",
   "generator_version": "2.0.0"
 }

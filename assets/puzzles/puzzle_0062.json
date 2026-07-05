@@ -55,7 +55,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Çan sesi",
+          "text": "Vurmalı çan",
           "arrow": "down",
           "word_id": "D3",
           "image_id": null,
@@ -71,7 +71,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Feldspatlı kayaç",
+          "text": "Bir kumtaşı türü",
           "arrow": "down",
           "word_id": "D4",
           "image_id": null,
@@ -119,7 +119,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Susamaz",
+          "text": "Bir reçineli ağaç",
           "arrow": "right",
           "word_id": "A1",
           "image_id": null,
@@ -151,7 +151,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Bağlantı, irtibat",
+          "text": "İnternet bağlantısı",
           "arrow": "right",
           "word_id": "A3",
           "image_id": null,
@@ -254,7 +254,7 @@
           "source": "curated"
         },
         {
-          "text": "Zaman ölçer",
+          "text": "Verilen söz",
           "arrow": "down",
           "word_id": "D7",
           "image_id": null,
@@ -270,7 +270,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Çingene, Roman",
+          "text": "Burçlardan biri",
           "arrow": "right",
           "word_id": "A6",
           "image_id": null,
@@ -571,7 +571,7 @@
       "row": 4,
       "col": 5,
       "type": "letter",
-      "solution": "S",
+      "solution": "V",
       "word_ids": [
         "A6",
         "D7"
@@ -1016,7 +1016,7 @@
     },
     {
       "id": "A6",
-      "answer": "KOSA",
+      "answer": "KOVA",
       "length": 4,
       "direction": "right",
       "clue_cell": {
@@ -1046,7 +1046,7 @@
         }
       ],
       "clue": {
-        "text": "Çingene, Roman",
+        "text": "Burçlardan biri",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1572,7 +1572,7 @@
     },
     {
       "id": "D7",
-      "answer": "SAAT",
+      "answer": "VAAT",
       "length": 4,
       "direction": "down",
       "clue_cell": {
@@ -1602,7 +1602,7 @@
         }
       ],
       "clue": {
-        "text": "Zaman ölçer",
+        "text": "Verilen söz",
         "arrow": "down",
         "word_id": "D7",
         "image_id": null,
@@ -1726,6 +1726,6 @@
     "post_fill_scanned": true,
     "scanner_version": "2.0.0"
   },
-  "generated_at": "2026-07-05T08:08:10.490973+00:00",
+  "generated_at": "2026-07-05T14:07:21.501524+00:00",
   "generator_version": "2.0.0"
 }

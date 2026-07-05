@@ -55,7 +55,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Gür (bıyık)",
+          "text": "Kumaş türü",
           "arrow": "down",
           "word_id": "D3",
           "image_id": null,
@@ -87,7 +87,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "AB ortak parası",
+          "text": "Evin ortası",
           "arrow": "down",
           "word_id": "D5",
           "image_id": null,
@@ -103,7 +103,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Akrabalık derecesi",
+          "text": "Islanmış, rutubetli",
           "arrow": "down",
           "word_id": "D6",
           "image_id": null,
@@ -119,7 +119,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Ormanların yırtıcısı",
+          "text": "Çizgili yırtıcı",
           "arrow": "right",
           "word_id": "A1",
           "image_id": null,
@@ -183,7 +183,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Güzel koku",
+          "text": "Efsane, söylence",
           "arrow": "right",
           "word_id": "A8",
           "image_id": null,
@@ -199,7 +199,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Sarmal, burgu",
+          "text": "Ljubljana halkından",
           "arrow": "right",
           "word_id": "A10",
           "image_id": null,
@@ -215,7 +215,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Antalya ilçesi",
+          "text": "Asit karşıtı",
           "arrow": "right",
           "word_id": "A11",
           "image_id": null,
@@ -254,7 +254,7 @@
           "source": "curated"
         },
         {
-          "text": "Geride kalan belirti",
+          "text": "İnce halat",
           "arrow": "down",
           "word_id": "D7",
           "image_id": null,
@@ -270,7 +270,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Hayvan gösterisi",
+          "text": "Sinema perdesi",
           "arrow": "right",
           "word_id": "A5",
           "image_id": null,
@@ -286,7 +286,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Miras bırakma",
+          "text": "Mutlaka",
           "arrow": "down",
           "word_id": "D8",
           "image_id": null,
@@ -302,14 +302,14 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Kolay olmayan",
+          "text": "Kuş tüyü, zırh parçası",
           "arrow": "right",
           "word_id": "A7",
           "image_id": null,
           "source": "llm"
         },
         {
-          "text": "Yoğun buğu",
+          "text": "Doymuş, aç olmayan",
           "arrow": "down",
           "word_id": "D9",
           "image_id": null,
@@ -325,7 +325,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Kabul karşıtı",
+          "text": "Elektrik güç birimi",
           "arrow": "down",
           "word_id": "D10",
           "image_id": null,
@@ -348,7 +348,7 @@
           "source": "curated"
         },
         {
-          "text": "Fizikte bir nicelik",
+          "text": "Bir göz rengi",
           "arrow": "down",
           "word_id": "D11",
           "image_id": null,
@@ -364,7 +364,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Saat sesi",
+          "text": "Sert mineral kütlesi",
           "arrow": "right",
           "word_id": "A13",
           "image_id": null,
@@ -508,7 +508,7 @@
       "row": 3,
       "col": 3,
       "type": "letter",
-      "solution": "S",
+      "solution": "F",
       "word_ids": [
         "A5",
         "D3"
@@ -530,7 +530,7 @@
       "row": 3,
       "col": 5,
       "type": "letter",
-      "solution": "R",
+      "solution": "L",
       "word_ids": [
         "A5",
         "D5"
@@ -541,7 +541,7 @@
       "row": 3,
       "col": 6,
       "type": "letter",
-      "solution": "K",
+      "solution": "M",
       "word_ids": [
         "A5",
         "D6"
@@ -563,7 +563,7 @@
       "row": 4,
       "col": 4,
       "type": "letter",
-      "solution": "Z",
+      "solution": "P",
       "word_ids": [
         "A7",
         "D7"
@@ -574,7 +574,7 @@
       "row": 4,
       "col": 5,
       "type": "letter",
-      "solution": "O",
+      "solution": "U",
       "word_ids": [
         "A7",
         "D5"
@@ -585,7 +585,7 @@
       "row": 4,
       "col": 6,
       "type": "letter",
-      "solution": "R",
+      "solution": "L",
       "word_ids": [
         "A7",
         "D6"
@@ -618,7 +618,7 @@
       "row": 5,
       "col": 3,
       "type": "letter",
-      "solution": "S",
+      "solution": "T",
       "word_ids": [
         "A8",
         "D9"
@@ -651,7 +651,7 @@
       "row": 6,
       "col": 2,
       "type": "letter",
-      "solution": "P",
+      "solution": "L",
       "word_ids": [
         "A10",
         "D8"
@@ -662,7 +662,7 @@
       "row": 6,
       "col": 3,
       "type": "letter",
-      "solution": "İ",
+      "solution": "O",
       "word_ids": [
         "A10",
         "D9"
@@ -673,7 +673,7 @@
       "row": 6,
       "col": 4,
       "type": "letter",
-      "solution": "R",
+      "solution": "V",
       "word_ids": [
         "A10",
         "D10"
@@ -684,7 +684,7 @@
       "row": 6,
       "col": 5,
       "type": "letter",
-      "solution": "A",
+      "solution": "E",
       "word_ids": [
         "A10",
         "D11"
@@ -695,7 +695,7 @@
       "row": 6,
       "col": 6,
       "type": "letter",
-      "solution": "L",
+      "solution": "N",
       "word_ids": [
         "A10",
         "D6"
@@ -717,7 +717,7 @@
       "row": 7,
       "col": 2,
       "type": "letter",
-      "solution": "K",
+      "solution": "L",
       "word_ids": [
         "A11",
         "D8"
@@ -728,7 +728,7 @@
       "row": 7,
       "col": 3,
       "type": "letter",
-      "solution": "S",
+      "solution": "K",
       "word_ids": [
         "A11",
         "D9"
@@ -739,7 +739,7 @@
       "row": 7,
       "col": 4,
       "type": "letter",
-      "solution": "E",
+      "solution": "A",
       "word_ids": [
         "A11",
         "D10"
@@ -750,7 +750,7 @@
       "row": 7,
       "col": 5,
       "type": "letter",
-      "solution": "K",
+      "solution": "L",
       "word_ids": [
         "A11",
         "D11"
@@ -805,7 +805,7 @@
       "row": 8,
       "col": 5,
       "type": "letter",
-      "solution": "I",
+      "solution": "A",
       "word_ids": [
         "A13",
         "D11"
@@ -816,7 +816,7 @@
       "row": 8,
       "col": 6,
       "type": "letter",
-      "solution": "K",
+      "solution": "Ş",
       "word_ids": [
         "A13",
         "D6"
@@ -971,7 +971,7 @@
     },
     {
       "id": "A5",
-      "answer": "SİRK",
+      "answer": "FİLM",
       "length": 4,
       "direction": "right",
       "clue_cell": {
@@ -1001,7 +1001,7 @@
         }
       ],
       "clue": {
-        "text": "Gösteri çadırı",
+        "text": "Sinema perdesi",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1039,7 +1039,7 @@
     },
     {
       "id": "A7",
-      "answer": "ZOR",
+      "answer": "PUL",
       "length": 3,
       "direction": "right",
       "clue_cell": {
@@ -1065,7 +1065,7 @@
         }
       ],
       "clue": {
-        "text": "Kolay olmayan",
+        "text": "Kuş tüyü, zırh parçası",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1075,7 +1075,7 @@
     },
     {
       "id": "A8",
-      "answer": "MİS",
+      "answer": "MİT",
       "length": 3,
       "direction": "right",
       "clue_cell": {
@@ -1101,7 +1101,7 @@
         }
       ],
       "clue": {
-        "text": "Güzel koku",
+        "text": "Efsane, söylence",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1139,7 +1139,7 @@
     },
     {
       "id": "A10",
-      "answer": "SPİRAL",
+      "answer": "SLOVEN",
       "length": 6,
       "direction": "right",
       "clue_cell": {
@@ -1177,7 +1177,7 @@
         }
       ],
       "clue": {
-        "text": "Sarmal, burgu",
+        "text": "Ljubljana halkından",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1187,7 +1187,7 @@
     },
     {
       "id": "A11",
-      "answer": "AKSEKİ",
+      "answer": "ALKALİ",
       "length": 6,
       "direction": "right",
       "clue_cell": {
@@ -1225,7 +1225,7 @@
         }
       ],
       "clue": {
-        "text": "Antalya ilçesi",
+        "text": "Asit karşıtı",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1267,7 +1267,7 @@
     },
     {
       "id": "A13",
-      "answer": "TIK",
+      "answer": "TAŞ",
       "length": 3,
       "direction": "right",
       "clue_cell": {
@@ -1293,7 +1293,7 @@
         }
       ],
       "clue": {
-        "text": "Saat sesi",
+        "text": "Sert mineral kütlesi",
         "arrow": "right",
         "word_id": "A13",
         "image_id": null,
@@ -1391,7 +1391,7 @@
     },
     {
       "id": "D3",
-      "answer": "POS",
+      "answer": "POF",
       "length": 3,
       "direction": "down",
       "clue_cell": {
@@ -1417,7 +1417,7 @@
         }
       ],
       "clue": {
-        "text": "Gür (bıyık)",
+        "text": "Kumaş türü",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1455,7 +1455,7 @@
     },
     {
       "id": "D5",
-      "answer": "AVRO",
+      "answer": "AVLU",
       "length": 4,
       "direction": "down",
       "clue_cell": {
@@ -1485,7 +1485,7 @@
         }
       ],
       "clue": {
-        "text": "Avrupa parası",
+        "text": "Evin ortası",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1495,7 +1495,7 @@
     },
     {
       "id": "D6",
-      "answer": "NEKRELİK",
+      "answer": "NEMLENİŞ",
       "length": 8,
       "direction": "down",
       "clue_cell": {
@@ -1541,7 +1541,7 @@
         }
       ],
       "clue": {
-        "text": "Akrabalık derecesi",
+        "text": "Islanmış, rutubetli",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1551,7 +1551,7 @@
     },
     {
       "id": "D7",
-      "answer": "İZ",
+      "answer": "İP",
       "length": 2,
       "direction": "down",
       "clue_cell": {
@@ -1573,7 +1573,7 @@
         }
       ],
       "clue": {
-        "text": "Geride kalan belirti",
+        "text": "İnce halat",
         "arrow": "down",
         "word_id": "D7",
         "image_id": null,
@@ -1583,7 +1583,7 @@
     },
     {
       "id": "D8",
-      "answer": "İPKA",
+      "answer": "İLLA",
       "length": 4,
       "direction": "down",
       "clue_cell": {
@@ -1613,7 +1613,7 @@
         }
       ],
       "clue": {
-        "text": "Görevde bırakma",
+        "text": "Mutlaka",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,
@@ -1623,7 +1623,7 @@
     },
     {
       "id": "D9",
-      "answer": "SİS",
+      "answer": "TOK",
       "length": 3,
       "direction": "down",
       "clue_cell": {
@@ -1649,7 +1649,7 @@
         }
       ],
       "clue": {
-        "text": "Yoğun buğu",
+        "text": "Doymuş, aç olmayan",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,
@@ -1659,7 +1659,7 @@
     },
     {
       "id": "D10",
-      "answer": "RET",
+      "answer": "VAT",
       "length": 3,
       "direction": "down",
       "clue_cell": {
@@ -1685,7 +1685,7 @@
         }
       ],
       "clue": {
-        "text": "Kabul karşıtı",
+        "text": "Elektrik güç birimi",
         "arrow": "down",
         "word_id": "D10",
         "image_id": null,
@@ -1695,7 +1695,7 @@
     },
     {
       "id": "D11",
-      "answer": "AKI",
+      "answer": "ELA",
       "length": 3,
       "direction": "down",
       "clue_cell": {
@@ -1721,7 +1721,7 @@
         }
       ],
       "clue": {
-        "text": "Fizikte bir nicelik",
+        "text": "Bir göz rengi",
         "arrow": "down",
         "word_id": "D11",
         "image_id": null,
@@ -1737,6 +1737,6 @@
     "post_fill_scanned": true,
     "scanner_version": "2.0.0"
   },
-  "generated_at": "2026-07-05T07:37:15.793256+00:00",
+  "generated_at": "2026-07-05T13:58:52.482545+00:00",
   "generator_version": "2.0.0"
 }

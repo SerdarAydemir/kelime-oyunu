@@ -23,7 +23,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Seyrek nakış kumaşı",
+          "text": "Sıcaklık ölçer",
           "arrow": "down",
           "word_id": "D1",
           "image_id": null,
@@ -151,7 +151,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Müzik aleti",
+          "text": "Hayvan ayağı",
           "arrow": "right",
           "word_id": "A4",
           "image_id": null,
@@ -183,7 +183,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Mevcut, olan",
+          "text": "Kırmızı taneli meyve",
           "arrow": "right",
           "word_id": "A8",
           "image_id": null,
@@ -199,7 +199,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Bağlantı, münasebet",
+          "text": "Açıölçer",
           "arrow": "right",
           "word_id": "A10",
           "image_id": null,
@@ -215,7 +215,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Çok bacaklı böcek",
+          "text": "Dürülecek bohça",
           "arrow": "right",
           "word_id": "A11",
           "image_id": null,
@@ -254,7 +254,7 @@
           "source": "llm"
         },
         {
-          "text": "İslam hukuku",
+          "text": "Ölenin bıraktığı mal",
           "arrow": "down",
           "word_id": "D7",
           "image_id": null,
@@ -316,7 +316,7 @@
           "source": "curated"
         },
         {
-          "text": "Ses eğitimi (müzik)",
+          "text": "Çınlama sesi",
           "arrow": "down",
           "word_id": "D9",
           "image_id": null,
@@ -465,7 +465,7 @@
       "row": 3,
       "col": 1,
       "type": "letter",
-      "solution": "N",
+      "solution": "P",
       "word_ids": [
         "A4",
         "D1"
@@ -487,7 +487,7 @@
       "row": 3,
       "col": 3,
       "type": "letter",
-      "solution": "Ş",
+      "solution": "T",
       "word_ids": [
         "A4",
         "D7"
@@ -575,7 +575,7 @@
       "row": 5,
       "col": 1,
       "type": "letter",
-      "solution": "V",
+      "solution": "N",
       "word_ids": [
         "A8",
         "D1"
@@ -652,7 +652,7 @@
       "row": 6,
       "col": 3,
       "type": "letter",
-      "solution": "İ",
+      "solution": "E",
       "word_ids": [
         "A10",
         "D7"
@@ -663,7 +663,7 @@
       "row": 6,
       "col": 4,
       "type": "letter",
-      "solution": "Ş",
+      "solution": "T",
       "word_ids": [
         "A10",
         "D9"
@@ -718,7 +718,7 @@
       "row": 7,
       "col": 3,
       "type": "letter",
-      "solution": "Y",
+      "solution": "K",
       "word_ids": [
         "A11",
         "D7"
@@ -729,7 +729,7 @@
       "row": 7,
       "col": 4,
       "type": "letter",
-      "solution": "A",
+      "solution": "I",
       "word_ids": [
         "A11",
         "D9"
@@ -933,7 +933,7 @@
     },
     {
       "id": "A4",
-      "answer": "NAŞİ",
+      "answer": "PATİ",
       "length": 4,
       "direction": "right",
       "clue_cell": {
@@ -963,7 +963,7 @@
         }
       ],
       "clue": {
-        "text": "Müzik aleti",
+        "text": "Hayvan ayağı",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1069,7 +1069,7 @@
     },
     {
       "id": "A8",
-      "answer": "VAR",
+      "answer": "NAR",
       "length": 3,
       "direction": "right",
       "clue_cell": {
@@ -1095,7 +1095,7 @@
         }
       ],
       "clue": {
-        "text": "Mevcut, olan",
+        "text": "Kırmızı taneli meyve",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1137,7 +1137,7 @@
     },
     {
       "id": "A10",
-      "answer": "İLİŞKİ",
+      "answer": "İLETKİ",
       "length": 6,
       "direction": "right",
       "clue_cell": {
@@ -1175,7 +1175,7 @@
         }
       ],
       "clue": {
-        "text": "Bağlantı, münasebet",
+        "text": "Açıölçer",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1185,7 +1185,7 @@
     },
     {
       "id": "A11",
-      "answer": "ÇIYAN",
+      "answer": "ÇIKIN",
       "length": 5,
       "direction": "right",
       "clue_cell": {
@@ -1219,7 +1219,7 @@
         }
       ],
       "clue": {
-        "text": "Çok ayaklı böcek",
+        "text": "Dürülecek bohça",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1277,7 +1277,7 @@
     },
     {
       "id": "D1",
-      "answer": "KANAVİÇE",
+      "answer": "KAPANİÇE",
       "length": 8,
       "direction": "down",
       "clue_cell": {
@@ -1323,7 +1323,7 @@
         }
       ],
       "clue": {
-        "text": "Seyrek nakış kumaşı",
+        "text": "Sıcaklık ölçer",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1537,7 +1537,7 @@
     },
     {
       "id": "D7",
-      "answer": "ŞERİYE",
+      "answer": "TEREKE",
       "length": 6,
       "direction": "down",
       "clue_cell": {
@@ -1575,7 +1575,7 @@
         }
       ],
       "clue": {
-        "text": "İslam hukuku",
+        "text": "Ölenin bıraktığı mal",
         "arrow": "down",
         "word_id": "D7",
         "image_id": null,
@@ -1625,7 +1625,7 @@
     },
     {
       "id": "D9",
-      "answer": "ŞAN",
+      "answer": "TIN",
       "length": 3,
       "direction": "down",
       "clue_cell": {
@@ -1651,7 +1651,7 @@
         }
       ],
       "clue": {
-        "text": "Ses eğitimi (müzik)",
+        "text": "Çınlama sesi",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,
@@ -1695,6 +1695,6 @@
     "post_fill_scanned": true,
     "scanner_version": "2.0.0"
   },
-  "generated_at": "2026-07-05T10:55:06.150708+00:00",
+  "generated_at": "2026-07-05T15:46:06.561209+00:00",
   "generator_version": "2.0.0"
 }

@@ -23,7 +23,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Yıldız kümesi",
+          "text": "Benekli geyik türü",
           "arrow": "down",
           "word_id": "D1",
           "image_id": null,
@@ -39,7 +39,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Ölümcül sonuç",
+          "text": "Kakao tatlısı",
           "arrow": "down",
           "word_id": "D2",
           "image_id": null,
@@ -55,7 +55,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Bir erkek adı",
+          "text": "Yüzyıl",
           "arrow": "down",
           "word_id": "D3",
           "image_id": null,
@@ -71,7 +71,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Anlık zaman dilimi",
+          "text": "Orta Karadeniz dağları",
           "arrow": "down",
           "word_id": "D4",
           "image_id": null,
@@ -87,7 +87,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Geride kalan belirti",
+          "text": "Kısacık zaman",
           "arrow": "down",
           "word_id": "D5",
           "image_id": null,
@@ -119,7 +119,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Zeybek tavrı",
+          "text": "Şişe kapağı aleti",
           "arrow": "right",
           "word_id": "A1",
           "image_id": null,
@@ -135,7 +135,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Hastalıkla ilgili",
+          "text": "Dille ilgili",
           "arrow": "right",
           "word_id": "A2",
           "image_id": null,
@@ -151,7 +151,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Dalgınlık hali",
+          "text": "Ani hücum",
           "arrow": "right",
           "word_id": "A3",
           "image_id": null,
@@ -167,7 +167,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "İki katlı yatak",
+          "text": "Afrika'nın iri maymunu",
           "arrow": "right",
           "word_id": "A5",
           "image_id": null,
@@ -199,7 +199,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Arapça bir harf",
+          "text": "Lüks deniz taşıtı",
           "arrow": "right",
           "word_id": "A8",
           "image_id": null,
@@ -231,7 +231,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Kuzeydoğu lezzeti",
+          "text": "Savaşçı prenses",
           "arrow": "right",
           "word_id": "A11",
           "image_id": null,
@@ -254,7 +254,7 @@
           "source": "curated"
         },
         {
-          "text": "Kısacık zaman",
+          "text": "Altıncı nota",
           "arrow": "down",
           "word_id": "D7",
           "image_id": null,
@@ -270,7 +270,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Saç aksesuarı",
+          "text": "Kahve türü",
           "arrow": "down",
           "word_id": "D8",
           "image_id": null,
@@ -286,14 +286,14 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Yemin",
+          "text": "Şaman",
           "arrow": "right",
           "word_id": "A7",
           "image_id": null,
           "source": "llm"
         },
         {
-          "text": "Gelgitte kabarma",
+          "text": "İşlenen ana konu",
           "arrow": "down",
           "word_id": "D9",
           "image_id": null,
@@ -360,7 +360,7 @@
       "row": 1,
       "col": 1,
       "type": "letter",
-      "solution": "E",
+      "solution": "A",
       "word_ids": [
         "A1",
         "D1"
@@ -371,7 +371,7 @@
       "row": 1,
       "col": 2,
       "type": "letter",
-      "solution": "F",
+      "solution": "Ç",
       "word_ids": [
         "A1",
         "D2"
@@ -382,7 +382,7 @@
       "row": 1,
       "col": 3,
       "type": "letter",
-      "solution": "E",
+      "solution": "A",
       "word_ids": [
         "A1",
         "D3"
@@ -393,7 +393,7 @@
       "row": 1,
       "col": 4,
       "type": "letter",
-      "solution": "L",
+      "solution": "C",
       "word_ids": [
         "A1",
         "D4"
@@ -404,7 +404,7 @@
       "row": 1,
       "col": 5,
       "type": "letter",
-      "solution": "İ",
+      "solution": "A",
       "word_ids": [
         "A1",
         "D5"
@@ -426,7 +426,7 @@
       "row": 2,
       "col": 1,
       "type": "letter",
-      "solution": "M",
+      "solution": "L",
       "word_ids": [
         "A2",
         "D1"
@@ -437,7 +437,7 @@
       "row": 2,
       "col": 2,
       "type": "letter",
-      "solution": "A",
+      "solution": "İ",
       "word_ids": [
         "A2",
         "D2"
@@ -448,7 +448,7 @@
       "row": 2,
       "col": 3,
       "type": "letter",
-      "solution": "R",
+      "solution": "S",
       "word_ids": [
         "A2",
         "D3"
@@ -470,7 +470,7 @@
       "row": 2,
       "col": 5,
       "type": "letter",
-      "solution": "Z",
+      "solution": "N",
       "word_ids": [
         "A2",
         "D5"
@@ -503,7 +503,7 @@
       "row": 3,
       "col": 2,
       "type": "letter",
-      "solution": "T",
+      "solution": "K",
       "word_ids": [
         "A3",
         "D2"
@@ -514,7 +514,7 @@
       "row": 3,
       "col": 3,
       "type": "letter",
-      "solution": "E",
+      "solution": "I",
       "word_ids": [
         "A3",
         "D3"
@@ -525,7 +525,7 @@
       "row": 3,
       "col": 4,
       "type": "letter",
-      "solution": "H",
+      "solution": "N",
       "word_ids": [
         "A3",
         "D4"
@@ -547,7 +547,7 @@
       "row": 4,
       "col": 1,
       "type": "letter",
-      "solution": "R",
+      "solution": "G",
       "word_ids": [
         "A5",
         "D1"
@@ -558,7 +558,7 @@
       "row": 4,
       "col": 2,
       "type": "letter",
-      "solution": "A",
+      "solution": "O",
       "word_ids": [
         "A5",
         "D2"
@@ -569,7 +569,7 @@
       "row": 4,
       "col": 3,
       "type": "letter",
-      "solution": "N",
+      "solution": "R",
       "word_ids": [
         "A5",
         "D3"
@@ -580,7 +580,7 @@
       "row": 4,
       "col": 4,
       "type": "letter",
-      "solution": "Z",
+      "solution": "İ",
       "word_ids": [
         "A5",
         "D4"
@@ -591,7 +591,7 @@
       "row": 4,
       "col": 5,
       "type": "letter",
-      "solution": "A",
+      "solution": "L",
       "word_ids": [
         "A5",
         "D7"
@@ -624,7 +624,7 @@
       "row": 5,
       "col": 4,
       "type": "letter",
-      "solution": "A",
+      "solution": "K",
       "word_ids": [
         "A7",
         "D4"
@@ -635,7 +635,7 @@
       "row": 5,
       "col": 5,
       "type": "letter",
-      "solution": "N",
+      "solution": "A",
       "word_ids": [
         "A7",
         "D7"
@@ -646,7 +646,7 @@
       "row": 5,
       "col": 6,
       "type": "letter",
-      "solution": "T",
+      "solution": "M",
       "word_ids": [
         "A7",
         "D8"
@@ -657,7 +657,7 @@
       "row": 6,
       "col": 1,
       "type": "letter",
-      "solution": "C",
+      "solution": "Y",
       "word_ids": [
         "A8",
         "D1"
@@ -668,7 +668,7 @@
       "row": 6,
       "col": 2,
       "type": "letter",
-      "solution": "İ",
+      "solution": "A",
       "word_ids": [
         "A8",
         "D2"
@@ -679,7 +679,7 @@
       "row": 6,
       "col": 3,
       "type": "letter",
-      "solution": "M",
+      "solution": "T",
       "word_ids": [
         "A8",
         "D9"
@@ -778,7 +778,7 @@
       "row": 8,
       "col": 2,
       "type": "letter",
-      "solution": "E",
+      "solution": "A",
       "word_ids": [
         "A11",
         "D2"
@@ -789,7 +789,7 @@
       "row": 8,
       "col": 3,
       "type": "letter",
-      "solution": "T",
+      "solution": "M",
       "word_ids": [
         "A11",
         "D9"
@@ -822,7 +822,7 @@
   "words": [
     {
       "id": "A1",
-      "answer": "EFELİK",
+      "answer": "AÇACAK",
       "length": 6,
       "direction": "right",
       "clue_cell": {
@@ -860,7 +860,7 @@
         }
       ],
       "clue": {
-        "text": "Zeybek tavrı",
+        "text": "Şişe kapağı aleti",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -870,7 +870,7 @@
     },
     {
       "id": "A2",
-      "answer": "MARAZİ",
+      "answer": "LİSANİ",
       "length": 6,
       "direction": "right",
       "clue_cell": {
@@ -908,7 +908,7 @@
         }
       ],
       "clue": {
-        "text": "Hastalıkla ilgili",
+        "text": "Dille ilgili",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -918,7 +918,7 @@
     },
     {
       "id": "A3",
-      "answer": "ATEH",
+      "answer": "AKIN",
       "length": 4,
       "direction": "right",
       "clue_cell": {
@@ -948,7 +948,7 @@
         }
       ],
       "clue": {
-        "text": "Bunama (eski)",
+        "text": "Ani hücum",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -986,7 +986,7 @@
     },
     {
       "id": "A5",
-      "answer": "RANZA",
+      "answer": "GORİL",
       "length": 5,
       "direction": "right",
       "clue_cell": {
@@ -1020,7 +1020,7 @@
         }
       ],
       "clue": {
-        "text": "İki katlı yatak",
+        "text": "Afrika'nın iri maymunu",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1062,7 +1062,7 @@
     },
     {
       "id": "A7",
-      "answer": "ANT",
+      "answer": "KAM",
       "length": 3,
       "direction": "right",
       "clue_cell": {
@@ -1088,7 +1088,7 @@
         }
       ],
       "clue": {
-        "text": "Yemin",
+        "text": "Şaman",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1098,7 +1098,7 @@
     },
     {
       "id": "A8",
-      "answer": "CİM",
+      "answer": "YAT",
       "length": 3,
       "direction": "right",
       "clue_cell": {
@@ -1124,7 +1124,7 @@
         }
       ],
       "clue": {
-        "text": "Arapça bir harf",
+        "text": "Lüks deniz taşıtı",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1210,7 +1210,7 @@
     },
     {
       "id": "A11",
-      "answer": "KETE",
+      "answer": "KAME",
       "length": 4,
       "direction": "right",
       "clue_cell": {
@@ -1240,7 +1240,7 @@
         }
       ],
       "clue": {
-        "text": "Bir börek türü",
+        "text": "Savaşçı prenses",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1278,7 +1278,7 @@
     },
     {
       "id": "D1",
-      "answer": "EMARECİK",
+      "answer": "ALAGEYİK",
       "length": 8,
       "direction": "down",
       "clue_cell": {
@@ -1324,7 +1324,7 @@
         }
       ],
       "clue": {
-        "text": "Yıldız kümesi",
+        "text": "Benekli geyik türü",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1334,7 +1334,7 @@
     },
     {
       "id": "D2",
-      "answer": "FATALİTE",
+      "answer": "ÇİKOLATA",
       "length": 8,
       "direction": "down",
       "clue_cell": {
@@ -1380,7 +1380,7 @@
         }
       ],
       "clue": {
-        "text": "Kadercilik",
+        "text": "Kakao tatlısı",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1390,7 +1390,7 @@
     },
     {
       "id": "D3",
-      "answer": "EREN",
+      "answer": "ASIR",
       "length": 4,
       "direction": "down",
       "clue_cell": {
@@ -1420,7 +1420,7 @@
         }
       ],
       "clue": {
-        "text": "Bir erkek adı",
+        "text": "Yüzyıl",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1430,7 +1430,7 @@
     },
     {
       "id": "D4",
-      "answer": "LAHZA",
+      "answer": "CANİK",
       "length": 5,
       "direction": "down",
       "clue_cell": {
@@ -1464,7 +1464,7 @@
         }
       ],
       "clue": {
-        "text": "An, kısa süre",
+        "text": "Orta Karadeniz dağları",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1474,7 +1474,7 @@
     },
     {
       "id": "D5",
-      "answer": "İZ",
+      "answer": "AN",
       "length": 2,
       "direction": "down",
       "clue_cell": {
@@ -1496,7 +1496,7 @@
         }
       ],
       "clue": {
-        "text": "Geride kalan belirti",
+        "text": "Kısacık zaman",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1542,7 +1542,7 @@
     },
     {
       "id": "D7",
-      "answer": "AN",
+      "answer": "LA",
       "length": 2,
       "direction": "down",
       "clue_cell": {
@@ -1564,7 +1564,7 @@
         }
       ],
       "clue": {
-        "text": "Kısacık zaman",
+        "text": "Altıncı nota",
         "arrow": "down",
         "word_id": "D7",
         "image_id": null,
@@ -1574,7 +1574,7 @@
     },
     {
       "id": "D8",
-      "answer": "TOKA",
+      "answer": "MOKA",
       "length": 4,
       "direction": "down",
       "clue_cell": {
@@ -1604,7 +1604,7 @@
         }
       ],
       "clue": {
-        "text": "Saç aksesuarı",
+        "text": "Kahve türü",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,
@@ -1614,7 +1614,7 @@
     },
     {
       "id": "D9",
-      "answer": "MET",
+      "answer": "TEM",
       "length": 3,
       "direction": "down",
       "clue_cell": {
@@ -1640,7 +1640,7 @@
         }
       ],
       "clue": {
-        "text": "Gelgitte kabarma",
+        "text": "İşlenen ana konu",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,
@@ -1716,6 +1716,6 @@
     "post_fill_scanned": true,
     "scanner_version": "2.0.0"
   },
-  "generated_at": "2026-07-05T07:42:00.502294+00:00",
+  "generated_at": "2026-07-05T14:02:44.118251+00:00",
   "generator_version": "2.0.0"
 }

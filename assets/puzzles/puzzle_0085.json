@@ -23,7 +23,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Bir müzik türü",
+          "text": "Dağda konaklama yeri",
           "arrow": "down",
           "word_id": "D1",
           "image_id": null,
@@ -39,7 +39,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "İki şeyin ortası",
+          "text": "Rumeli'de seslenme",
           "arrow": "down",
           "word_id": "D2",
           "image_id": null,
@@ -55,7 +55,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Bir mineral tuz",
+          "text": "Kedisiyle ünlü il",
           "arrow": "down",
           "word_id": "D3",
           "image_id": null,
@@ -87,7 +87,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Sekili ayaklı at",
+          "text": "Benekli dere balığı",
           "arrow": "down",
           "word_id": "D5",
           "image_id": null,
@@ -119,7 +119,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Kaynar su",
+          "text": "Kabuğu soyulmuş",
           "arrow": "right",
           "word_id": "A1",
           "image_id": null,
@@ -135,7 +135,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "O yer",
+          "text": "Çoban giysisi",
           "arrow": "right",
           "word_id": "A2",
           "image_id": null,
@@ -151,7 +151,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Bir müzik türü",
+          "text": "Giysi kol ağzı",
           "arrow": "right",
           "word_id": "A4",
           "image_id": null,
@@ -183,7 +183,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Burgu şeklinde",
+          "text": "Yırtıcı kuş",
           "arrow": "right",
           "word_id": "A8",
           "image_id": null,
@@ -199,7 +199,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Gökyüzündeki uydumuz",
+          "text": "Müzikte susma, durak",
           "arrow": "right",
           "word_id": "A9",
           "image_id": null,
@@ -215,7 +215,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Tek boynuzlu balina",
+          "text": "Zengin, servetli",
           "arrow": "right",
           "word_id": "A11",
           "image_id": null,
@@ -279,7 +279,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Eş, karı (eski)",
+          "text": "1 ve kendine bölünen",
           "arrow": "down",
           "word_id": "D7",
           "image_id": null,
@@ -318,7 +318,7 @@
           "source": "curated"
         },
         {
-          "text": "Ölüm, vefat",
+          "text": "Ekmek arası eritilmiş peynir",
           "arrow": "down",
           "word_id": "D9",
           "image_id": null,
@@ -334,7 +334,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Kraliçe",
+          "text": "İspanyol nidası",
           "arrow": "right",
           "word_id": "A10",
           "image_id": null,
@@ -353,7 +353,7 @@
       "row": 1,
       "col": 1,
       "type": "letter",
-      "solution": "H",
+      "solution": "K",
       "word_ids": [
         "A1",
         "D1"
@@ -375,7 +375,7 @@
       "row": 1,
       "col": 3,
       "type": "letter",
-      "solution": "Ş",
+      "solution": "V",
       "word_ids": [
         "A1",
         "D3"
@@ -419,7 +419,7 @@
       "row": 2,
       "col": 1,
       "type": "letter",
-      "solution": "O",
+      "solution": "A",
       "word_ids": [
         "A2",
         "D1"
@@ -430,7 +430,7 @@
       "row": 2,
       "col": 2,
       "type": "letter",
-      "solution": "R",
+      "solution": "B",
       "word_ids": [
         "A2",
         "D2"
@@ -474,7 +474,7 @@
       "row": 3,
       "col": 1,
       "type": "letter",
-      "solution": "R",
+      "solution": "Y",
       "word_ids": [
         "A4",
         "D1"
@@ -485,7 +485,7 @@
       "row": 3,
       "col": 2,
       "type": "letter",
-      "solution": "A",
+      "solution": "E",
       "word_ids": [
         "A4",
         "D2"
@@ -496,7 +496,7 @@
       "row": 3,
       "col": 3,
       "type": "letter",
-      "solution": "P",
+      "solution": "N",
       "word_ids": [
         "A4",
         "D3"
@@ -562,7 +562,7 @@
       "row": 5,
       "col": 1,
       "type": "letter",
-      "solution": "S",
+      "solution": "K",
       "word_ids": [
         "A8",
         "D1"
@@ -595,7 +595,7 @@
       "row": 5,
       "col": 4,
       "type": "letter",
-      "solution": "M",
+      "solution": "T",
       "word_ids": [
         "A8",
         "D9"
@@ -628,7 +628,7 @@
       "row": 6,
       "col": 1,
       "type": "letter",
-      "solution": "A",
+      "solution": "E",
       "word_ids": [
         "A9",
         "D1"
@@ -639,7 +639,7 @@
       "row": 6,
       "col": 2,
       "type": "letter",
-      "solution": "Y",
+      "solution": "S",
       "word_ids": [
         "A9",
         "D7"
@@ -650,7 +650,7 @@
       "row": 6,
       "col": 4,
       "type": "letter",
-      "solution": "E",
+      "solution": "O",
       "word_ids": [
         "A10",
         "D9"
@@ -661,7 +661,7 @@
       "row": 6,
       "col": 5,
       "type": "letter",
-      "solution": "C",
+      "solution": "L",
       "word_ids": [
         "A10",
         "D5"
@@ -683,7 +683,7 @@
       "row": 7,
       "col": 1,
       "type": "letter",
-      "solution": "N",
+      "solution": "V",
       "word_ids": [
         "A11",
         "D1"
@@ -716,7 +716,7 @@
       "row": 7,
       "col": 4,
       "type": "letter",
-      "solution": "V",
+      "solution": "S",
       "word_ids": [
         "A11",
         "D9"
@@ -727,7 +727,7 @@
       "row": 7,
       "col": 5,
       "type": "letter",
-      "solution": "A",
+      "solution": "I",
       "word_ids": [
         "A11",
         "D5"
@@ -815,7 +815,7 @@
   "words": [
     {
       "id": "A1",
-      "answer": "HAŞLAK",
+      "answer": "KAVLAK",
       "length": 6,
       "direction": "right",
       "clue_cell": {
@@ -853,7 +853,7 @@
         }
       ],
       "clue": {
-        "text": "Çok sıcak (su)",
+        "text": "Kabuğu soyulmuş",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -863,7 +863,7 @@
     },
     {
       "id": "A2",
-      "answer": "ORA",
+      "answer": "ABA",
       "length": 3,
       "direction": "right",
       "clue_cell": {
@@ -889,7 +889,7 @@
         }
       ],
       "clue": {
-        "text": "O yer",
+        "text": "Çoban giysisi",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -931,7 +931,7 @@
     },
     {
       "id": "A4",
-      "answer": "RAP",
+      "answer": "YEN",
       "length": 3,
       "direction": "right",
       "clue_cell": {
@@ -957,7 +957,7 @@
         }
       ],
       "clue": {
-        "text": "Bir müzik türü",
+        "text": "Giysi kol ağzı",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1059,7 +1059,7 @@
     },
     {
       "id": "A8",
-      "answer": "SARMAL",
+      "answer": "KARTAL",
       "length": 6,
       "direction": "right",
       "clue_cell": {
@@ -1097,7 +1097,7 @@
         }
       ],
       "clue": {
-        "text": "Burgu şeklinde",
+        "text": "Yırtıcı kuş",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1107,7 +1107,7 @@
     },
     {
       "id": "A9",
-      "answer": "AY",
+      "answer": "ES",
       "length": 2,
       "direction": "right",
       "clue_cell": {
@@ -1129,7 +1129,7 @@
         }
       ],
       "clue": {
-        "text": "Gökyüzündeki uydumuz",
+        "text": "Müzikte susma, durak",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1139,7 +1139,7 @@
     },
     {
       "id": "A10",
-      "answer": "ECE",
+      "answer": "OLE",
       "length": 3,
       "direction": "right",
       "clue_cell": {
@@ -1165,7 +1165,7 @@
         }
       ],
       "clue": {
-        "text": "Kraliçe",
+        "text": "İspanyol nidası",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1175,7 +1175,7 @@
     },
     {
       "id": "A11",
-      "answer": "NARVAL",
+      "answer": "VARSIL",
       "length": 6,
       "direction": "right",
       "clue_cell": {
@@ -1213,7 +1213,7 @@
         }
       ],
       "clue": {
-        "text": "Bir kutup balinası",
+        "text": "Zengin, servetli",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1271,7 +1271,7 @@
     },
     {
       "id": "D1",
-      "answer": "HORASANİ",
+      "answer": "KAYAKEVİ",
       "length": 8,
       "direction": "down",
       "clue_cell": {
@@ -1317,7 +1317,7 @@
         }
       ],
       "clue": {
-        "text": "Bir müzik türü",
+        "text": "Dağda konaklama yeri",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1327,7 +1327,7 @@
     },
     {
       "id": "D2",
-      "answer": "ARA",
+      "answer": "ABE",
       "length": 3,
       "direction": "down",
       "clue_cell": {
@@ -1353,7 +1353,7 @@
         }
       ],
       "clue": {
-        "text": "İki şeyin ortası",
+        "text": "Rumeli'de seslenme",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1363,7 +1363,7 @@
     },
     {
       "id": "D3",
-      "answer": "ŞAP",
+      "answer": "VAN",
       "length": 3,
       "direction": "down",
       "clue_cell": {
@@ -1389,7 +1389,7 @@
         }
       ],
       "clue": {
-        "text": "Bir mineral tuz",
+        "text": "Kedisiyle ünlü il",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1427,7 +1427,7 @@
     },
     {
       "id": "D5",
-      "answer": "ALABACAK",
+      "answer": "ALABALIK",
       "length": 8,
       "direction": "down",
       "clue_cell": {
@@ -1473,7 +1473,7 @@
         }
       ],
       "clue": {
-        "text": "Sekili ayaklı at",
+        "text": "Benekli dere balığı",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1539,7 +1539,7 @@
     },
     {
       "id": "D7",
-      "answer": "AYAL",
+      "answer": "ASAL",
       "length": 4,
       "direction": "down",
       "clue_cell": {
@@ -1569,7 +1569,7 @@
         }
       ],
       "clue": {
-        "text": "Eş, karı (eski)",
+        "text": "1 ve kendine bölünen",
         "arrow": "down",
         "word_id": "D7",
         "image_id": null,
@@ -1607,7 +1607,7 @@
     },
     {
       "id": "D9",
-      "answer": "MEVT",
+      "answer": "TOST",
       "length": 4,
       "direction": "down",
       "clue_cell": {
@@ -1637,7 +1637,7 @@
         }
       ],
       "clue": {
-        "text": "Ölüm (eski)",
+        "text": "Ekmek arası eritilmiş peynir",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,
@@ -1685,6 +1685,6 @@
     "post_fill_scanned": true,
     "scanner_version": "2.0.0"
   },
-  "generated_at": "2026-07-05T08:40:29.384617+00:00",
+  "generated_at": "2026-07-05T15:12:42.637774+00:00",
   "generator_version": "2.0.0"
 }

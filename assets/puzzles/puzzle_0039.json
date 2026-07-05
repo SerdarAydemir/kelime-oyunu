@@ -23,7 +23,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Tuzlu suyla saklanan",
+          "text": "Bektaşi lideri",
           "arrow": "down",
           "word_id": "D1",
           "image_id": null,
@@ -39,7 +39,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Geniş düzlük",
+          "text": "Bağışıklık iğnesi",
           "arrow": "down",
           "word_id": "D2",
           "image_id": null,
@@ -55,7 +55,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Eşini yitiren",
+          "text": "Kötülük",
           "arrow": "down",
           "word_id": "D3",
           "image_id": null,
@@ -71,7 +71,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Japon kadın adı",
+          "text": "Antik Ortadoğu dili",
           "arrow": "down",
           "word_id": "D4",
           "image_id": null,
@@ -119,7 +119,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Maden suyu gibi",
+          "text": "Devlet büyüklerine özgü",
           "arrow": "right",
           "word_id": "A1",
           "image_id": null,
@@ -135,7 +135,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Dava vekili",
+          "text": "Onar onar",
           "arrow": "right",
           "word_id": "A2",
           "image_id": null,
@@ -151,7 +151,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Soğanlı bir çiçek",
+          "text": "Üzüm suyu",
           "arrow": "right",
           "word_id": "A3",
           "image_id": null,
@@ -183,7 +183,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Hükümdar (eski)",
+          "text": "Omuzda hafif vuruş",
           "arrow": "right",
           "word_id": "A7",
           "image_id": null,
@@ -199,7 +199,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Kuyruk sokumu",
+          "text": "Avuç içi",
           "arrow": "right",
           "word_id": "A8",
           "image_id": null,
@@ -215,7 +215,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "İrmik tatlısı",
+          "text": "Yoğurtlu ıspanak aşı",
           "arrow": "right",
           "word_id": "A10",
           "image_id": null,
@@ -270,7 +270,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Ömrün son anı",
+          "text": "Teklifsiz seslenme",
           "arrow": "down",
           "word_id": "D8",
           "image_id": null,
@@ -293,7 +293,7 @@
           "source": "llm"
         },
         {
-          "text": "Halat çekme komutu",
+          "text": "Boş ağırlık",
           "arrow": "down",
           "word_id": "D9",
           "image_id": null,
@@ -360,7 +360,7 @@
       "row": 1,
       "col": 1,
       "type": "letter",
-      "solution": "S",
+      "solution": "P",
       "word_ids": [
         "A1",
         "D1"
@@ -371,7 +371,7 @@
       "row": 1,
       "col": 2,
       "type": "letter",
-      "solution": "O",
+      "solution": "A",
       "word_ids": [
         "A1",
         "D2"
@@ -382,7 +382,7 @@
       "row": 1,
       "col": 3,
       "type": "letter",
-      "solution": "D",
+      "solution": "Ş",
       "word_ids": [
         "A1",
         "D3"
@@ -437,7 +437,7 @@
       "row": 2,
       "col": 2,
       "type": "letter",
-      "solution": "V",
+      "solution": "Ş",
       "word_ids": [
         "A2",
         "D2"
@@ -448,7 +448,7 @@
       "row": 2,
       "col": 3,
       "type": "letter",
-      "solution": "U",
+      "solution": "E",
       "word_ids": [
         "A2",
         "D3"
@@ -459,7 +459,7 @@
       "row": 2,
       "col": 4,
       "type": "letter",
-      "solution": "K",
+      "solution": "R",
       "word_ids": [
         "A2",
         "D4"
@@ -492,7 +492,7 @@
       "row": 3,
       "col": 1,
       "type": "letter",
-      "solution": "L",
+      "solution": "Ş",
       "word_ids": [
         "A3",
         "D1"
@@ -503,7 +503,7 @@
       "row": 3,
       "col": 2,
       "type": "letter",
-      "solution": "A",
+      "solution": "I",
       "word_ids": [
         "A3",
         "D2"
@@ -514,7 +514,7 @@
       "row": 3,
       "col": 3,
       "type": "letter",
-      "solution": "L",
+      "solution": "R",
       "word_ids": [
         "A3",
         "D3"
@@ -525,7 +525,7 @@
       "row": 3,
       "col": 4,
       "type": "letter",
-      "solution": "E",
+      "solution": "A",
       "word_ids": [
         "A3",
         "D4"
@@ -591,7 +591,7 @@
       "row": 5,
       "col": 1,
       "type": "letter",
-      "solution": "M",
+      "solution": "B",
       "word_ids": [
         "A7",
         "D1"
@@ -602,7 +602,7 @@
       "row": 5,
       "col": 2,
       "type": "letter",
-      "solution": "E",
+      "solution": "A",
       "word_ids": [
         "A7",
         "D8"
@@ -613,7 +613,7 @@
       "row": 5,
       "col": 3,
       "type": "letter",
-      "solution": "L",
+      "solution": "D",
       "word_ids": [
         "A7",
         "D9"
@@ -646,7 +646,7 @@
       "row": 6,
       "col": 1,
       "type": "letter",
-      "solution": "U",
+      "solution": "A",
       "word_ids": [
         "A8",
         "D1"
@@ -657,7 +657,7 @@
       "row": 6,
       "col": 2,
       "type": "letter",
-      "solution": "C",
+      "solution": "Y",
       "word_ids": [
         "A8",
         "D8"
@@ -690,7 +690,7 @@
       "row": 7,
       "col": 1,
       "type": "letter",
-      "solution": "R",
+      "solution": "B",
       "word_ids": [
         "A10",
         "D1"
@@ -701,7 +701,7 @@
       "row": 7,
       "col": 2,
       "type": "letter",
-      "solution": "E",
+      "solution": "O",
       "word_ids": [
         "A10",
         "D8"
@@ -712,7 +712,7 @@
       "row": 7,
       "col": 3,
       "type": "letter",
-      "solution": "V",
+      "solution": "R",
       "word_ids": [
         "A10",
         "D9"
@@ -822,7 +822,7 @@
   "words": [
     {
       "id": "A1",
-      "answer": "SODALI",
+      "answer": "PAŞALI",
       "length": 6,
       "direction": "right",
       "clue_cell": {
@@ -860,7 +860,7 @@
         }
       ],
       "clue": {
-        "text": "Sodası olan",
+        "text": "Devlet büyüklerine özgü",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -870,7 +870,7 @@
     },
     {
       "id": "A2",
-      "answer": "AVUKAT",
+      "answer": "AŞERAT",
       "length": 6,
       "direction": "right",
       "clue_cell": {
@@ -908,7 +908,7 @@
         }
       ],
       "clue": {
-        "text": "Dava vekili",
+        "text": "Onar onar",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -918,7 +918,7 @@
     },
     {
       "id": "A3",
-      "answer": "LALE",
+      "answer": "ŞIRA",
       "length": 4,
       "direction": "right",
       "clue_cell": {
@@ -948,7 +948,7 @@
         }
       ],
       "clue": {
-        "text": "Soğanlı bir çiçek",
+        "text": "Üzüm suyu",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -1050,7 +1050,7 @@
     },
     {
       "id": "A7",
-      "answer": "MELİK",
+      "answer": "BADİK",
       "length": 5,
       "direction": "right",
       "clue_cell": {
@@ -1084,7 +1084,7 @@
         }
       ],
       "clue": {
-        "text": "Hükümdar (eski)",
+        "text": "Omuzda hafif vuruş",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1094,7 +1094,7 @@
     },
     {
       "id": "A8",
-      "answer": "UCA",
+      "answer": "AYA",
       "length": 3,
       "direction": "right",
       "clue_cell": {
@@ -1120,7 +1120,7 @@
         }
       ],
       "clue": {
-        "text": "Kuyruk sokumu",
+        "text": "Avuç içi",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1158,7 +1158,7 @@
     },
     {
       "id": "A10",
-      "answer": "REVANİ",
+      "answer": "BORANİ",
       "length": 6,
       "direction": "right",
       "clue_cell": {
@@ -1196,7 +1196,7 @@
         }
       ],
       "clue": {
-        "text": "İrmik tatlısı",
+        "text": "Yoğurtlu ıspanak aşı",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1254,7 +1254,7 @@
     },
     {
       "id": "D1",
-      "answer": "SALAMURA",
+      "answer": "PAŞABABA",
       "length": 8,
       "direction": "down",
       "clue_cell": {
@@ -1300,7 +1300,7 @@
         }
       ],
       "clue": {
-        "text": "Tuzlu suyla saklanan",
+        "text": "Bektaşi lideri",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1310,7 +1310,7 @@
     },
     {
       "id": "D2",
-      "answer": "OVA",
+      "answer": "AŞI",
       "length": 3,
       "direction": "down",
       "clue_cell": {
@@ -1336,7 +1336,7 @@
         }
       ],
       "clue": {
-        "text": "Geniş düzlük",
+        "text": "Bağışıklık iğnesi",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1346,7 +1346,7 @@
     },
     {
       "id": "D3",
-      "answer": "DUL",
+      "answer": "ŞER",
       "length": 3,
       "direction": "down",
       "clue_cell": {
@@ -1372,7 +1372,7 @@
         }
       ],
       "clue": {
-        "text": "Eşini yitiren",
+        "text": "Kötülük",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1382,7 +1382,7 @@
     },
     {
       "id": "D4",
-      "answer": "AKEMİ",
+      "answer": "ARAMİ",
       "length": 5,
       "direction": "down",
       "clue_cell": {
@@ -1416,7 +1416,7 @@
         }
       ],
       "clue": {
-        "text": "Japon kadın adı",
+        "text": "Antik Ortadoğu dili",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1530,7 +1530,7 @@
     },
     {
       "id": "D8",
-      "answer": "ECEL",
+      "answer": "AYOL",
       "length": 4,
       "direction": "down",
       "clue_cell": {
@@ -1560,7 +1560,7 @@
         }
       ],
       "clue": {
-        "text": "Ömrün son anı",
+        "text": "Teklifsiz seslenme",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,
@@ -1570,7 +1570,7 @@
     },
     {
       "id": "D9",
-      "answer": "LAVA",
+      "answer": "DARA",
       "length": 4,
       "direction": "down",
       "clue_cell": {
@@ -1600,7 +1600,7 @@
         }
       ],
       "clue": {
-        "text": "Halat çekme komutu",
+        "text": "Boş ağırlık",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,
@@ -1716,6 +1716,6 @@
     "post_fill_scanned": true,
     "scanner_version": "2.0.0"
   },
-  "generated_at": "2026-07-05T07:56:19.613629+00:00",
+  "generated_at": "2026-07-05T14:04:15.101368+00:00",
   "generator_version": "2.0.0"
 }

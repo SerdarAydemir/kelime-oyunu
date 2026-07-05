@@ -23,7 +23,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Otomobil sığar",
+          "text": "Araba konan yer",
           "arrow": "down",
           "word_id": "D1",
           "image_id": null,
@@ -87,7 +87,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Tek bir bütün",
+          "text": "Merkeziyetçi",
           "arrow": "down",
           "word_id": "D5",
           "image_id": null,
@@ -119,7 +119,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Boncuklu sayma",
+          "text": "Sayı boncuğu",
           "arrow": "right",
           "word_id": "A1",
           "image_id": null,
@@ -135,7 +135,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Anason kokulu bitki",
+          "text": "Anason kokulu ot",
           "arrow": "right",
           "word_id": "A2",
           "image_id": null,
@@ -167,7 +167,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "İstanbul semti",
+          "text": "İstanbul'da semt",
           "arrow": "right",
           "word_id": "A5",
           "image_id": null,
@@ -231,7 +231,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Arapça gramer terimi",
+          "text": "Kurallar (eski)",
           "arrow": "right",
           "word_id": "A12",
           "image_id": null,
@@ -270,7 +270,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Çok aç, obur",
+          "text": "Şiddetli rüzgar",
           "arrow": "down",
           "word_id": "D8",
           "image_id": null,
@@ -302,7 +302,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Polonya başkenti",
+          "text": "Zarfa ekleme (eski)",
           "arrow": "right",
           "word_id": "A7",
           "image_id": null,
@@ -635,7 +635,7 @@
       "row": 5,
       "col": 6,
       "type": "letter",
-      "solution": "H",
+      "solution": "F",
       "word_ids": [
         "A7",
         "D8"
@@ -1058,7 +1058,7 @@
     },
     {
       "id": "A7",
-      "answer": "LEH",
+      "answer": "LEF",
       "length": 3,
       "direction": "right",
       "clue_cell": {
@@ -1084,7 +1084,7 @@
         }
       ],
       "clue": {
-        "text": "Aleyh karşıtı",
+        "text": "Zarfa ekleme (eski)",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1574,7 +1574,7 @@
     },
     {
       "id": "D8",
-      "answer": "HIRT",
+      "answer": "FIRT",
       "length": 4,
       "direction": "down",
       "clue_cell": {
@@ -1604,7 +1604,7 @@
         }
       ],
       "clue": {
-        "text": "Çok aç, obur",
+        "text": "Şiddetli rüzgar",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,
@@ -1716,6 +1716,6 @@
     "post_fill_scanned": true,
     "scanner_version": "2.0.0"
   },
-  "generated_at": "2026-07-05T07:32:41.958573+00:00",
+  "generated_at": "2026-07-05T13:58:29.981726+00:00",
   "generator_version": "2.0.0"
 }

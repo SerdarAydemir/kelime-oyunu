@@ -23,7 +23,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Zarar verme eylemi",
+          "text": "Zarar verme",
           "arrow": "down",
           "word_id": "D1",
           "image_id": null,
@@ -71,7 +71,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Dikdörtgen prizma",
+          "text": "Sürekli şikayet eden",
           "arrow": "down",
           "word_id": "D4",
           "image_id": null,
@@ -87,7 +87,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Eziyet, cefa",
+          "text": "Kraliçe",
           "arrow": "down",
           "word_id": "D5",
           "image_id": null,
@@ -103,7 +103,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Yaşlandırmak",
+          "text": "Yarayı açmak",
           "arrow": "down",
           "word_id": "D6",
           "image_id": null,
@@ -167,7 +167,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Kur'an dizesi",
+          "text": "Tane, sayı",
           "arrow": "right",
           "word_id": "A6",
           "image_id": null,
@@ -183,7 +183,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "İşyerinin kapanması",
+          "text": "İş yeri kapatma",
           "arrow": "right",
           "word_id": "A8",
           "image_id": null,
@@ -215,7 +215,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Demet, deste",
+          "text": "Ege'de bir ilimiz",
           "arrow": "right",
           "word_id": "A11",
           "image_id": null,
@@ -247,7 +247,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Yunan anason içkisi",
+          "text": "Kuyruk sokumu",
           "arrow": "right",
           "word_id": "A3",
           "image_id": null,
@@ -263,7 +263,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Patika",
+          "text": "Baldır sargısı",
           "arrow": "down",
           "word_id": "D7",
           "image_id": null,
@@ -279,7 +279,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "İnce metal levha",
+          "text": "Cilt, deri",
           "arrow": "right",
           "word_id": "A5",
           "image_id": null,
@@ -309,7 +309,7 @@
           "source": "curated"
         },
         {
-          "text": "Olay, durum",
+          "text": "Yasal koruyucu",
           "arrow": "down",
           "word_id": "D9",
           "image_id": null,
@@ -325,7 +325,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Eksiksiz, bütün",
+          "text": "Bilgisayar belleği",
           "arrow": "right",
           "word_id": "A10",
           "image_id": null,
@@ -348,7 +348,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Vernik, cila",
+          "text": "İstem dışı hareket",
           "arrow": "right",
           "word_id": "A13",
           "image_id": null,
@@ -459,7 +459,7 @@
       "row": 2,
       "col": 5,
       "type": "letter",
-      "solution": "Z",
+      "solution": "C",
       "word_ids": [
         "A3",
         "D5"
@@ -470,7 +470,7 @@
       "row": 2,
       "col": 6,
       "type": "letter",
-      "solution": "O",
+      "solution": "A",
       "word_ids": [
         "A3",
         "D6"
@@ -492,7 +492,7 @@
       "row": 3,
       "col": 4,
       "type": "letter",
-      "solution": "S",
+      "solution": "T",
       "word_ids": [
         "A5",
         "D4"
@@ -503,7 +503,7 @@
       "row": 3,
       "col": 5,
       "type": "letter",
-      "solution": "A",
+      "solution": "E",
       "word_ids": [
         "A5",
         "D5"
@@ -514,7 +514,7 @@
       "row": 3,
       "col": 6,
       "type": "letter",
-      "solution": "C",
+      "solution": "N",
       "word_ids": [
         "A5",
         "D6"
@@ -536,7 +536,7 @@
       "row": 4,
       "col": 2,
       "type": "letter",
-      "solution": "Y",
+      "solution": "D",
       "word_ids": [
         "A6",
         "D7"
@@ -668,7 +668,7 @@
       "row": 6,
       "col": 4,
       "type": "letter",
-      "solution": "T",
+      "solution": "R",
       "word_ids": [
         "A10",
         "D4"
@@ -745,7 +745,7 @@
       "row": 7,
       "col": 5,
       "type": "letter",
-      "solution": "K",
+      "solution": "S",
       "word_ids": [
         "A11",
         "D9"
@@ -789,7 +789,7 @@
       "row": 8,
       "col": 4,
       "type": "letter",
-      "solution": "L",
+      "solution": "T",
       "word_ids": [
         "A13",
         "D4"
@@ -800,7 +800,7 @@
       "row": 8,
       "col": 5,
       "type": "letter",
-      "solution": "A",
+      "solution": "İ",
       "word_ids": [
         "A13",
         "D9"
@@ -902,7 +902,7 @@
     },
     {
       "id": "A3",
-      "answer": "UZO",
+      "answer": "UCA",
       "length": 3,
       "direction": "right",
       "clue_cell": {
@@ -928,7 +928,7 @@
         }
       ],
       "clue": {
-        "text": "Yunan anason içkisi",
+        "text": "Kuyruk sokumu",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -966,7 +966,7 @@
     },
     {
       "id": "A5",
-      "answer": "SAC",
+      "answer": "TEN",
       "length": 3,
       "direction": "right",
       "clue_cell": {
@@ -992,7 +992,7 @@
         }
       ],
       "clue": {
-        "text": "İnce metal levha",
+        "text": "Cilt, deri",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1002,7 +1002,7 @@
     },
     {
       "id": "A6",
-      "answer": "AYET",
+      "answer": "ADET",
       "length": 4,
       "direction": "right",
       "clue_cell": {
@@ -1032,7 +1032,7 @@
         }
       ],
       "clue": {
-        "text": "Kur'an dizesi",
+        "text": "Tane, sayı",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1150,7 +1150,7 @@
     },
     {
       "id": "A10",
-      "answer": "TAM",
+      "answer": "RAM",
       "length": 3,
       "direction": "right",
       "clue_cell": {
@@ -1176,7 +1176,7 @@
         }
       ],
       "clue": {
-        "text": "Eksiksiz, bütün",
+        "text": "Bilgisayar belleği",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1186,7 +1186,7 @@
     },
     {
       "id": "A11",
-      "answer": "MANİKA",
+      "answer": "MANİSA",
       "length": 6,
       "direction": "right",
       "clue_cell": {
@@ -1224,7 +1224,7 @@
         }
       ],
       "clue": {
-        "text": "Demet, deste",
+        "text": "Ege'de bir ilimiz",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1266,7 +1266,7 @@
     },
     {
       "id": "A13",
-      "answer": "LAK",
+      "answer": "TİK",
       "length": 3,
       "direction": "right",
       "clue_cell": {
@@ -1292,7 +1292,7 @@
         }
       ],
       "clue": {
-        "text": "Vernik, cila",
+        "text": "İstem dışı hareket",
         "arrow": "right",
         "word_id": "A13",
         "image_id": null,
@@ -1418,7 +1418,7 @@
     },
     {
       "id": "D4",
-      "answer": "MUSTATİL",
+      "answer": "MUTTARİT",
       "length": 8,
       "direction": "down",
       "clue_cell": {
@@ -1464,7 +1464,7 @@
         }
       ],
       "clue": {
-        "text": "Dikdörtgen (eski)",
+        "text": "Sürekli şikayet eden",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1474,7 +1474,7 @@
     },
     {
       "id": "D5",
-      "answer": "EZA",
+      "answer": "ECE",
       "length": 3,
       "direction": "down",
       "clue_cell": {
@@ -1500,7 +1500,7 @@
         }
       ],
       "clue": {
-        "text": "Eziyet, cefa",
+        "text": "Kraliçe",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1510,7 +1510,7 @@
     },
     {
       "id": "D6",
-      "answer": "KOCATMAK",
+      "answer": "KANATMAK",
       "length": 8,
       "direction": "down",
       "clue_cell": {
@@ -1556,7 +1556,7 @@
         }
       ],
       "clue": {
-        "text": "Yaşlandırmak",
+        "text": "Yarayı açmak",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1566,7 +1566,7 @@
     },
     {
       "id": "D7",
-      "answer": "YOLAK",
+      "answer": "DOLAK",
       "length": 5,
       "direction": "down",
       "clue_cell": {
@@ -1600,7 +1600,7 @@
         }
       ],
       "clue": {
-        "text": "Patika",
+        "text": "Baldır sargısı",
         "arrow": "down",
         "word_id": "D7",
         "image_id": null,
@@ -1642,7 +1642,7 @@
     },
     {
       "id": "D9",
-      "answer": "VAKA",
+      "answer": "VASİ",
       "length": 4,
       "direction": "down",
       "clue_cell": {
@@ -1672,7 +1672,7 @@
         }
       ],
       "clue": {
-        "text": "Olay, durum",
+        "text": "Yasal koruyucu",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,
@@ -1716,6 +1716,6 @@
     "post_fill_scanned": true,
     "scanner_version": "2.0.0"
   },
-  "generated_at": "2026-07-05T08:39:05.862400+00:00",
+  "generated_at": "2026-07-05T15:11:24.464454+00:00",
   "generator_version": "2.0.0"
 }
