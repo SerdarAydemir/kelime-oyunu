@@ -18376,8 +18376,8 @@
   },
   "NİFAK": {
     "verdict": "approved",
-    "clue": "Ara bozuculuk",
-    "note": "günlük deyim anlamı (nifak sokmak); nötr tanım",
+    "clue": "Geçimsizlik",
+    "note": "SAHİP KARARI: geçimsizlik anlamı; dini bağlam yazılmaz.",
     "batch": 57,
     "decided_at": "2026-07-05T07:16:49+00:00"
   },
@@ -21586,5 +21586,2686 @@
     "note": "mevcut clue doğruydu, korundu",
     "batch": 69,
     "decided_at": "2026-07-05T07:17:37+00:00"
+  },
+  "ANUT": {
+    "verdict": "approved",
+    "clue": "İnatçı",
+    "note": null,
+    "batch": 70,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "AHİREN": {
+    "verdict": "approved",
+    "clue": "Son zamanlarda",
+    "note": null,
+    "batch": 70,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "CİM": {
+    "verdict": "approved",
+    "clue": "Arapça bir harf",
+    "note": "AYN/ELİF emsali kültürel-nötr harf",
+    "batch": 70,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "EKİCİLİK": {
+    "verdict": "approved",
+    "clue": "Tarımcılık",
+    "note": null,
+    "batch": 70,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "EKİLİŞ": {
+    "verdict": "approved",
+    "clue": "Ekilme biçimi",
+    "note": null,
+    "batch": 70,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "HAVAİLİK": {
+    "verdict": "approved",
+    "clue": "Hoppalık",
+    "note": "eski clue AKTİF YANLIŞ: 'insanın uçması'",
+    "batch": 70,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "KAZARA": {
+    "verdict": "approved",
+    "clue": "Yanlışlıkla",
+    "note": null,
+    "batch": 70,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "MALALAMA": {
+    "verdict": "approved",
+    "clue": "Mala ile sıvama",
+    "note": "eski clue ÇÖPTÜ ('ağızdan çıkan ses')",
+    "batch": 70,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "MARMELAT": {
+    "verdict": "approved",
+    "clue": "Meyve ezmesi",
+    "note": null,
+    "batch": 70,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "SERA": {
+    "verdict": "approved",
+    "clue": "Cam ev",
+    "note": null,
+    "batch": 70,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "TİRAT": {
+    "verdict": "approved",
+    "clue": "Tiyatro söylevi",
+    "note": null,
+    "batch": 70,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "İMAR": {
+    "verdict": "approved",
+    "clue": "Bayındırlık",
+    "note": null,
+    "batch": 70,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "ABAKÜS": {
+    "verdict": "approved",
+    "clue": "Sayı boncuğu",
+    "note": null,
+    "batch": 70,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "ABUKÇA": {
+    "verdict": "rejected",
+    "clue": null,
+    "note": "-ça zarf çekimi (ERCE emsali)",
+    "batch": 70,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "AFAL": {
+    "verdict": "approved",
+    "clue": "Şaşkın",
+    "note": null,
+    "batch": 70,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "AFALLAMA": {
+    "verdict": "approved",
+    "clue": "Şaşırıp kalma",
+    "note": null,
+    "batch": 70,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "AFİŞ": {
+    "verdict": "approved",
+    "clue": "Duvar ilanı",
+    "note": null,
+    "batch": 70,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "AHCAR": {
+    "verdict": "approved",
+    "clue": "Taşlar (eski)",
+    "note": null,
+    "batch": 70,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "AHENK": {
+    "verdict": "approved",
+    "clue": "Uyum",
+    "note": null,
+    "batch": 70,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "AKABİLME": {
+    "verdict": "rejected",
+    "clue": null,
+    "note": "-ebilme yeterlik ismi (ALABİLME emsali)",
+    "batch": 70,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "AKAMBER": {
+    "verdict": "approved",
+    "clue": "Amber, güzel koku",
+    "note": "ispermeçet balmumu; obscure ama gerçek — orta güven",
+    "batch": 70,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "AKEMİ": {
+    "verdict": "rejected",
+    "clue": null,
+    "note": "Japon özel adı, TDK'da yok (EDNA emsali)",
+    "batch": 70,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "AKSON": {
+    "verdict": "approved",
+    "clue": "Sinir uzantısı",
+    "note": null,
+    "batch": 70,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "AKİDE": {
+    "verdict": "approved",
+    "clue": "Bir sert şeker",
+    "note": "çift-anlamlı; şeker anlamı (dini akide değil)",
+    "batch": 70,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "ALAKASIZ": {
+    "verdict": "approved",
+    "clue": "İlgisiz",
+    "note": null,
+    "batch": 70,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "ALAMET": {
+    "verdict": "approved",
+    "clue": "Belirti, iz",
+    "note": null,
+    "batch": 70,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "ALAYCI": {
+    "verdict": "approved",
+    "clue": "İğneleyen",
+    "note": null,
+    "batch": 70,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "ALEMCİ": {
+    "verdict": "approved",
+    "clue": "Eğlence düşkünü",
+    "note": null,
+    "batch": 70,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "ALKİL": {
+    "verdict": "rejected",
+    "clue": null,
+    "note": "kimya jargonu (ALKAN emsali)",
+    "batch": 70,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "ALMAK": {
+    "verdict": "approved",
+    "clue": "Edinmek",
+    "note": null,
+    "batch": 70,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "ALYAN": {
+    "verdict": "approved",
+    "clue": "Altıgen anahtar",
+    "note": null,
+    "batch": 70,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "AMEL": {
+    "verdict": "approved",
+    "clue": "İş, edim",
+    "note": "temel anlam iş/eylem; dini salih amel vurgusu yapılmadı",
+    "batch": 70,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "AMORTİ": {
+    "verdict": "approved",
+    "clue": "Piyango ikramiyesi",
+    "note": null,
+    "batch": 70,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "AMİP": {
+    "verdict": "approved",
+    "clue": "Tek hücreli",
+    "note": null,
+    "batch": 70,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "ANAHTAR": {
+    "verdict": "approved",
+    "clue": "Kilit açan",
+    "note": null,
+    "batch": 70,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "ANARŞİ": {
+    "verdict": "approved",
+    "clue": "Kuralsızlık",
+    "note": null,
+    "batch": 70,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "ANATOMİK": {
+    "verdict": "approved",
+    "clue": "Bedene ilişkin",
+    "note": null,
+    "batch": 70,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "ANIK": {
+    "verdict": "approved",
+    "clue": "Hazır (öz T)",
+    "note": null,
+    "batch": 70,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "ANONİM": {
+    "verdict": "approved",
+    "clue": "Adı gizli",
+    "note": null,
+    "batch": 70,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "APAYRI": {
+    "verdict": "approved",
+    "clue": "Bambaşka",
+    "note": null,
+    "batch": 70,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "ARABA": {
+    "verdict": "approved",
+    "clue": "Dört tekerli taşıt",
+    "note": null,
+    "batch": 70,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "ARABALIK": {
+    "verdict": "approved",
+    "clue": "Araba konan yer",
+    "note": "eski clue kırıktı",
+    "batch": 70,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "ARAYIŞ": {
+    "verdict": "approved",
+    "clue": "Arama çabası",
+    "note": null,
+    "batch": 70,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "ARILIK": {
+    "verdict": "approved",
+    "clue": "Saflık, temizlik",
+    "note": "eski clue jokeydi ('vızvızların evi')",
+    "batch": 70,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "ARKOZ": {
+    "verdict": "approved",
+    "clue": "Bir kumtaşı türü",
+    "note": "kayaç adı (BREŞ/MARN emsali)",
+    "batch": 70,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "ARMA": {
+    "verdict": "approved",
+    "clue": "Kulüp simgesi",
+    "note": null,
+    "batch": 70,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "ARZ": {
+    "verdict": "approved",
+    "clue": "Yeryüzü (eski)",
+    "note": null,
+    "batch": 70,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "ASIL": {
+    "verdict": "approved",
+    "clue": "Ana, temel",
+    "note": null,
+    "batch": 70,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "ASMAK": {
+    "verdict": "approved",
+    "clue": "Yükseğe tutturmak",
+    "note": null,
+    "batch": 70,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "ASURCA": {
+    "verdict": "approved",
+    "clue": "Eski bir dil",
+    "note": "dil adları nötr (ARAMİ/İBRANİCE emsali)",
+    "batch": 70,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "ASİLZADE": {
+    "verdict": "approved",
+    "clue": "Soylu kişi",
+    "note": null,
+    "batch": 71,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "ATAKUM": {
+    "verdict": "approved",
+    "clue": "Samsun'un ilçesi",
+    "note": null,
+    "batch": 71,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "ATEH": {
+    "verdict": "approved",
+    "clue": "Bunama (eski)",
+    "note": null,
+    "batch": 71,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "ATLAS": {
+    "verdict": "approved",
+    "clue": "Harita kitabı",
+    "note": null,
+    "batch": 71,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "ATOMİK": {
+    "verdict": "approved",
+    "clue": "Atomla ilgili",
+    "note": null,
+    "batch": 71,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "ATİK": {
+    "verdict": "approved",
+    "clue": "Çevik, hızlı",
+    "note": null,
+    "batch": 71,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "AVARIZ": {
+    "verdict": "approved",
+    "clue": "Engeller, arızalar",
+    "note": null,
+    "batch": 71,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "AVERAJ": {
+    "verdict": "approved",
+    "clue": "Gol farkı",
+    "note": null,
+    "batch": 71,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "AVRO": {
+    "verdict": "approved",
+    "clue": "Avrupa parası",
+    "note": null,
+    "batch": 71,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "AVUNÇ": {
+    "verdict": "approved",
+    "clue": "Teselli",
+    "note": null,
+    "batch": 71,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "AYAKTA": {
+    "verdict": "approved",
+    "clue": "Dikilir halde",
+    "note": "eski clue TERSTİ ('oturur vaziyette')",
+    "batch": 71,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "AYARTMAK": {
+    "verdict": "approved",
+    "clue": "Baştan çıkarmak",
+    "note": null,
+    "batch": 71,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "AYEVİ": {
+    "verdict": "approved",
+    "clue": "Ay ışık halkası",
+    "note": "hâle",
+    "batch": 71,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "AYLAK": {
+    "verdict": "approved",
+    "clue": "Boş gezen",
+    "note": null,
+    "batch": 71,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "AZOTLU": {
+    "verdict": "approved",
+    "clue": "Azot içeren",
+    "note": null,
+    "batch": 71,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "AZİL": {
+    "verdict": "approved",
+    "clue": "Görevden alma",
+    "note": null,
+    "batch": 71,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "AĞLAK": {
+    "verdict": "approved",
+    "clue": "Sulugöz",
+    "note": null,
+    "batch": 71,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "AŞAMA": {
+    "verdict": "approved",
+    "clue": "Evre, merhale",
+    "note": null,
+    "batch": 71,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "AŞİNA": {
+    "verdict": "approved",
+    "clue": "Tanıdık, bildik",
+    "note": null,
+    "batch": 71,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "BADANA": {
+    "verdict": "approved",
+    "clue": "Duvar boyası",
+    "note": null,
+    "batch": 71,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "BADAS": {
+    "verdict": "rejected",
+    "clue": null,
+    "note": "TDK'da güvenle doğrulanamadı",
+    "batch": 71,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "BADE": {
+    "verdict": "approved",
+    "clue": "Kadeh, şarap (eski)",
+    "note": "divan klasiği; özendirmesiz betimleme",
+    "batch": 71,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "BALAMA": {
+    "verdict": "rejected",
+    "clue": null,
+    "note": "TDK'da doğrulanamadı",
+    "batch": 71,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "BALAT": {
+    "verdict": "approved",
+    "clue": "İstanbul'da semt",
+    "note": null,
+    "batch": 71,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "BALERİN": {
+    "verdict": "approved",
+    "clue": "Kadın dansçı",
+    "note": null,
+    "batch": 71,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "BANAK": {
+    "verdict": "rejected",
+    "clue": null,
+    "note": "TDK'da güvenle doğrulanamadı (halk ağzı)",
+    "batch": 71,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "BANLAMAK": {
+    "verdict": "rejected",
+    "clue": null,
+    "note": "İng. 'ban' — TDK'da yok",
+    "batch": 71,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "BASARİ": {
+    "verdict": "rejected",
+    "clue": null,
+    "note": "başarı'nın bozuk yazımı — TDK'da yok",
+    "batch": 71,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "BELAHET": {
+    "verdict": "approved",
+    "clue": "Ahmaklık (eski)",
+    "note": "soyut kavram (BUDALA'nın aksine yönlü hakaret değil)",
+    "batch": 71,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "BEY": {
+    "verdict": "approved",
+    "clue": "Erkek unvanı",
+    "note": null,
+    "batch": 71,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "BOLİÇE": {
+    "verdict": "approved",
+    "clue": "Kıyı balık ağı",
+    "note": "orta güven; denizcilik",
+    "batch": 71,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "BOYAHANE": {
+    "verdict": "approved",
+    "clue": "Boya işliği",
+    "note": null,
+    "batch": 71,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "BOZLAK": {
+    "verdict": "approved",
+    "clue": "Bir Anadolu ezgisi",
+    "note": null,
+    "batch": 71,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "BOŞATMAK": {
+    "verdict": "approved",
+    "clue": "İçini döktürmek",
+    "note": null,
+    "batch": 71,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "BREZİL": {
+    "verdict": "approved",
+    "clue": "Kırmızı boya ağacı",
+    "note": "eski clue Brezilya'ya kaymıştı; brezil=bakkam ağacı — orta güven",
+    "batch": 71,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "BİFTEK": {
+    "verdict": "approved",
+    "clue": "Izgara et dilimi",
+    "note": null,
+    "batch": 71,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "BİLMİŞ": {
+    "verdict": "approved",
+    "clue": "Ukala",
+    "note": null,
+    "batch": 71,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "BİRLİK": {
+    "verdict": "approved",
+    "clue": "Beraberlik",
+    "note": null,
+    "batch": 71,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "BİS": {
+    "verdict": "approved",
+    "clue": "Tekrar! (alkış)",
+    "note": null,
+    "batch": 71,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "CAM": {
+    "verdict": "approved",
+    "clue": "Pencere maddesi",
+    "note": null,
+    "batch": 71,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "CAMEVİ": {
+    "verdict": "approved",
+    "clue": "Cam işliği",
+    "note": "camlı; cemevi ile karışmasın diye 'işlik'",
+    "batch": 71,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "CEMİ": {
+    "verdict": "approved",
+    "clue": "Tümü, toplamı",
+    "note": null,
+    "batch": 71,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "CEMİL": {
+    "verdict": "approved",
+    "clue": "Güzel (eski)",
+    "note": null,
+    "batch": 71,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "CESURANE": {
+    "verdict": "approved",
+    "clue": "Yiğitçe",
+    "note": null,
+    "batch": 71,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "CÜHELA": {
+    "verdict": "approved",
+    "clue": "Cahiller (eski)",
+    "note": null,
+    "batch": 71,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "DAMACANA": {
+    "verdict": "approved",
+    "clue": "İri su kabı",
+    "note": null,
+    "batch": 71,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "DATA": {
+    "verdict": "approved",
+    "clue": "Ham veri",
+    "note": null,
+    "batch": 71,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "DAVYA": {
+    "verdict": "approved",
+    "clue": "Diş çekme kıskacı",
+    "note": null,
+    "batch": 71,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "DEBİ": {
+    "verdict": "approved",
+    "clue": "Akış miktarı",
+    "note": null,
+    "batch": 71,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "DENK": {
+    "verdict": "approved",
+    "clue": "Eşit, muadil",
+    "note": null,
+    "batch": 71,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "DOLAR": {
+    "verdict": "approved",
+    "clue": "ABD parası",
+    "note": null,
+    "batch": 72,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "DOST": {
+    "verdict": "approved",
+    "clue": "Yakın arkadaş",
+    "note": null,
+    "batch": 72,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "DUL": {
+    "verdict": "approved",
+    "clue": "Eşini yitiren",
+    "note": null,
+    "batch": 72,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "DÜŞ": {
+    "verdict": "approved",
+    "clue": "Rüya",
+    "note": null,
+    "batch": 72,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "DİLENMEK": {
+    "verdict": "approved",
+    "clue": "El açıp istemek",
+    "note": null,
+    "batch": 72,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "DİRİLMEK": {
+    "verdict": "approved",
+    "clue": "Yeniden canlanmak",
+    "note": null,
+    "batch": 72,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "DİVAN": {
+    "verdict": "approved",
+    "clue": "Sedir, kanepe",
+    "note": null,
+    "batch": 72,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "DİYATOME": {
+    "verdict": "rejected",
+    "clue": null,
+    "note": "biyoloji jargonu (FİLUM emsali)",
+    "batch": 72,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "DİZ": {
+    "verdict": "approved",
+    "clue": "Bacak eklemi",
+    "note": null,
+    "batch": 72,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "EDNA": {
+    "verdict": "rejected",
+    "clue": null,
+    "note": "özel ad — TDK'da yok",
+    "batch": 72,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "EDİMLİ": {
+    "verdict": "approved",
+    "clue": "Gerçekleşmiş",
+    "note": null,
+    "batch": 72,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "EDİTÖR": {
+    "verdict": "approved",
+    "clue": "Yayın hazırlayan",
+    "note": null,
+    "batch": 72,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "EFEMİNE": {
+    "verdict": "sensitive",
+    "clue": null,
+    "note": "kadınsı (erkek) — pejoratif kullanım riski; karar Serdar'ın",
+    "batch": 72,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "EKSER": {
+    "verdict": "approved",
+    "clue": "Çoğunlukla",
+    "note": null,
+    "batch": 72,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "EKSTRA": {
+    "verdict": "approved",
+    "clue": "Fazladan",
+    "note": null,
+    "batch": 72,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "EKİNOKOK": {
+    "verdict": "rejected",
+    "clue": null,
+    "note": "parazitoloji jargonu (TRİŞİN emsali)",
+    "batch": 72,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "ELVEDA": {
+    "verdict": "approved",
+    "clue": "Son veda",
+    "note": null,
+    "batch": 72,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "EMARE": {
+    "verdict": "approved",
+    "clue": "Belirti, iz",
+    "note": null,
+    "batch": 72,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "EMARECİK": {
+    "verdict": "rejected",
+    "clue": null,
+    "note": "uydurma küçültme (EMARE var, -cik türevi doğrulanamadı)",
+    "batch": 72,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "ENTELEKT": {
+    "verdict": "approved",
+    "clue": "Anlık, us",
+    "note": null,
+    "batch": 72,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "ENİŞTE": {
+    "verdict": "approved",
+    "clue": "Kız kardeşin eşi",
+    "note": "eski clue 'teyze eşi' dar/yanlıştı",
+    "batch": 72,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "ERMEK": {
+    "verdict": "approved",
+    "clue": "Amaca ulaşmak",
+    "note": null,
+    "batch": 72,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "ERİM": {
+    "verdict": "approved",
+    "clue": "Menzil, erişim",
+    "note": "eski clue AKTİF YANLIŞ: 'kocanın kardeşi' (o İNİ)",
+    "batch": 72,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "ERİŞME": {
+    "verdict": "approved",
+    "clue": "Ulaşma, varma",
+    "note": null,
+    "batch": 72,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "ESARET": {
+    "verdict": "approved",
+    "clue": "Tutsaklık",
+    "note": null,
+    "batch": 72,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "ESEME": {
+    "verdict": "approved",
+    "clue": "Akıl, mantık",
+    "note": "öz Türkçe; eski clue çöptü — orta güven",
+    "batch": 72,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "ETANOL": {
+    "verdict": "approved",
+    "clue": "Bir alkol türü",
+    "note": "okul kimyası, nötr",
+    "batch": 72,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "ETKEN": {
+    "verdict": "approved",
+    "clue": "Etmen, faktör",
+    "note": null,
+    "batch": 72,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "ETKENLİK": {
+    "verdict": "approved",
+    "clue": "Faaliyet, iş",
+    "note": null,
+    "batch": 72,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "ETLİ": {
+    "verdict": "approved",
+    "clue": "Eti bol",
+    "note": "eski clue kaymıştı ('karnı tok şişman')",
+    "batch": 72,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "ETRİYE": {
+    "verdict": "approved",
+    "clue": "Beton demir bağı",
+    "note": null,
+    "batch": 72,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "EVRİLMEK": {
+    "verdict": "approved",
+    "clue": "Değişime uğramak",
+    "note": null,
+    "batch": 72,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "EVSAF": {
+    "verdict": "approved",
+    "clue": "Nitelikler",
+    "note": null,
+    "batch": 72,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "EYTAM": {
+    "verdict": "approved",
+    "clue": "Yetimler (eski)",
+    "note": "eski clue ÇÖPTÜ ('büyük topluluk')",
+    "batch": 72,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "EZİNÇ": {
+    "verdict": "approved",
+    "clue": "Üzünç, sıkıntı",
+    "note": "eski clue 'darbe izi' EZİK karışmasıydı",
+    "batch": 72,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "EŞEKSİ": {
+    "verdict": "approved",
+    "clue": "Eşek gibi",
+    "note": null,
+    "batch": 72,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "FATALİTE": {
+    "verdict": "approved",
+    "clue": "Kadercilik",
+    "note": null,
+    "batch": 72,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "FESAT": {
+    "verdict": "approved",
+    "clue": "Ara bozan, entrika",
+    "note": null,
+    "batch": 72,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "FLANEL": {
+    "verdict": "approved",
+    "clue": "Yumuşak pamuklu",
+    "note": null,
+    "batch": 72,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "FLOK": {
+    "verdict": "approved",
+    "clue": "Üçgen ön yelken",
+    "note": "eski clue İng. flock karışmasıydı ('koyun sürüsü')",
+    "batch": 72,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "FON": {
+    "verdict": "approved",
+    "clue": "Mali kaynak",
+    "note": null,
+    "batch": 72,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "FUT": {
+    "verdict": "rejected",
+    "clue": null,
+    "note": "İng. foot — TDK'da yok",
+    "batch": 72,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "FÖTR": {
+    "verdict": "approved",
+    "clue": "Keçe şapka",
+    "note": null,
+    "batch": 72,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "FİRAR": {
+    "verdict": "approved",
+    "clue": "Kaçış",
+    "note": null,
+    "batch": 72,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "FİİLEN": {
+    "verdict": "approved",
+    "clue": "Gerçekte",
+    "note": null,
+    "batch": 72,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "FİŞE": {
+    "verdict": "rejected",
+    "clue": null,
+    "note": "TDK'da doğrulanamadı (fişek karışması)",
+    "batch": 72,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "GONK": {
+    "verdict": "approved",
+    "clue": "Vurmalı çan",
+    "note": null,
+    "batch": 72,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "HAD": {
+    "verdict": "approved",
+    "clue": "Sınır, derece",
+    "note": null,
+    "batch": 72,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "HAKİKİ": {
+    "verdict": "approved",
+    "clue": "Gerçek, sahici",
+    "note": null,
+    "batch": 72,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "HALI": {
+    "verdict": "approved",
+    "clue": "Yer döşemesi",
+    "note": null,
+    "batch": 72,
+    "decided_at": "2026-07-05T13:54:24+00:00"
+  },
+  "HAŞLAK": {
+    "verdict": "approved",
+    "clue": "Çok sıcak (su)",
+    "note": null,
+    "batch": 73,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "HELAL": {
+    "verdict": "sensitive",
+    "clue": null,
+    "note": "dini kavram (helal/haram); nötr 'hak edilmiş, layık' seçeneği var — DUA/SADAKA emsali, karar Serdar'ın",
+    "batch": 73,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "HIRT": {
+    "verdict": "rejected",
+    "clue": null,
+    "note": "argo/kaba, TDK başlığı doğrulanamadı",
+    "batch": 73,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "HORASANİ": {
+    "verdict": "rejected",
+    "clue": null,
+    "note": "TDK'da güvenle doğrulanamadı",
+    "batch": 73,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "JEL": {
+    "verdict": "approved",
+    "clue": "Kaygan madde",
+    "note": null,
+    "batch": 73,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "KABİNE": {
+    "verdict": "approved",
+    "clue": "Bakanlar kurulu",
+    "note": null,
+    "batch": 73,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "KALEM": {
+    "verdict": "approved",
+    "clue": "Yazı aracı",
+    "note": null,
+    "batch": 73,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "KALUBELA": {
+    "verdict": "approved",
+    "clue": "Çok eski zaman",
+    "note": "günlük deyim (kalubeladan kalma); dini köken vurgulanmadı",
+    "batch": 73,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "KANKA": {
+    "verdict": "approved",
+    "clue": "Yakın arkadaş",
+    "note": null,
+    "batch": 73,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "KANUN": {
+    "verdict": "approved",
+    "clue": "Yürürlükteki kural",
+    "note": null,
+    "batch": 73,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "KAPLAN": {
+    "verdict": "approved",
+    "clue": "Çizgili yırtıcı",
+    "note": null,
+    "batch": 73,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "KARACA": {
+    "verdict": "approved",
+    "clue": "Bir geyik türü",
+    "note": null,
+    "batch": 73,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "KARACASU": {
+    "verdict": "approved",
+    "clue": "Aydın'ın ilçesi",
+    "note": "eski clue ÇÖPTÜ ('mürekkepli mürekkep')",
+    "batch": 73,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "KARAİMCE": {
+    "verdict": "approved",
+    "clue": "Bir Kıpçak dili",
+    "note": "clue'da etnik/dini kelime kullanılmadı (LADİNO emsali)",
+    "batch": 73,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "KARDİNAL": {
+    "verdict": "approved",
+    "clue": "Kızıl bir kuş",
+    "note": "çift-anlamlı; kuş anlamı (Katolik rütbesi değil)",
+    "batch": 73,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "KAVAİT": {
+    "verdict": "approved",
+    "clue": "Kurallar (eski)",
+    "note": null,
+    "batch": 73,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "KAVİ": {
+    "verdict": "approved",
+    "clue": "Güçlü, sağlam",
+    "note": "eski clue ÇÖPTÜ ('müzikte durak')",
+    "batch": 73,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "KAVİM": {
+    "verdict": "approved",
+    "clue": "Soy, boy",
+    "note": "tarihsel-nötr (KABİLE emsali)",
+    "batch": 73,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "KAZAYAĞI": {
+    "verdict": "approved",
+    "clue": "Maydanozsu ot",
+    "note": "eski clue ÇÖPTÜ ('kışın yere düşen') — orta güven",
+    "batch": 73,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "KEFELİ": {
+    "verdict": "approved",
+    "clue": "Bir kefal balığı",
+    "note": "eski clue ÇÖPTÜ ('kulağa benzer') — orta güven",
+    "batch": 73,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "KEMANE": {
+    "verdict": "approved",
+    "clue": "Yaylı halk çalgısı",
+    "note": null,
+    "batch": 73,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "KESE": {
+    "verdict": "approved",
+    "clue": "Para torbası",
+    "note": null,
+    "batch": 73,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "KETE": {
+    "verdict": "approved",
+    "clue": "Bir börek türü",
+    "note": null,
+    "batch": 73,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "KETEN": {
+    "verdict": "approved",
+    "clue": "Bitkisel lif",
+    "note": null,
+    "batch": 73,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "KIRAÇLIK": {
+    "verdict": "approved",
+    "clue": "Verimsiz toprak",
+    "note": null,
+    "batch": 73,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "KIRMAK": {
+    "verdict": "approved",
+    "clue": "Parçalara ayırmak",
+    "note": null,
+    "batch": 73,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "KIZAK": {
+    "verdict": "approved",
+    "clue": "Kar aracı",
+    "note": null,
+    "batch": 73,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "KOCATMAK": {
+    "verdict": "approved",
+    "clue": "Yaşlandırmak",
+    "note": null,
+    "batch": 73,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "KOM": {
+    "verdict": "approved",
+    "clue": "Dağ ağılı",
+    "note": "eski clue 'rütbe' yanlıştı; kom=hayvan barınağı — orta güven",
+    "batch": 73,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "KOMAR": {
+    "verdict": "rejected",
+    "clue": null,
+    "note": "TDK'da güvenle doğrulanamadı",
+    "batch": 73,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "KONAK": {
+    "verdict": "approved",
+    "clue": "Büyük gösterişli ev",
+    "note": null,
+    "batch": 73,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "KOPARAN": {
+    "verdict": "rejected",
+    "clue": null,
+    "note": "sıfat-fiil formu (AYIRAN emsali)",
+    "batch": 73,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "KORAL": {
+    "verdict": "approved",
+    "clue": "Mercan (deniz)",
+    "note": null,
+    "batch": 73,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "KOSA": {
+    "verdict": "rejected",
+    "clue": null,
+    "note": "TDK'da doğrulanamadı; eski clue etnik terim içeriyordu",
+    "batch": 73,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "KREP": {
+    "verdict": "approved",
+    "clue": "İnce gözleme",
+    "note": null,
+    "batch": 73,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "KULA": {
+    "verdict": "approved",
+    "clue": "Manisa'nın ilçesi",
+    "note": null,
+    "batch": 73,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "KÖZ": {
+    "verdict": "approved",
+    "clue": "Yanan odun kalıntısı",
+    "note": null,
+    "batch": 73,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "KÖŞK": {
+    "verdict": "approved",
+    "clue": "Bahçeli ev",
+    "note": null,
+    "batch": 73,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "KİLİT": {
+    "verdict": "approved",
+    "clue": "Kapı emniyeti",
+    "note": null,
+    "batch": 73,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "KİRVELİK": {
+    "verdict": "approved",
+    "clue": "Bir akrabalık bağı",
+    "note": "eski clue YANLIŞTI ('vaftiz'=Hristiyan); kirve=sünnet — nötr genel tanım, karar edilebilir",
+    "batch": 73,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "KİRİŞ": {
+    "verdict": "approved",
+    "clue": "Yayın gergi ipi",
+    "note": null,
+    "batch": 73,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "LAF": {
+    "verdict": "approved",
+    "clue": "Boş söz",
+    "note": null,
+    "batch": 73,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "LAHZA": {
+    "verdict": "approved",
+    "clue": "An, kısa süre",
+    "note": null,
+    "batch": 73,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "LAKİN": {
+    "verdict": "approved",
+    "clue": "Ama, fakat",
+    "note": null,
+    "batch": 73,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "LAMBA": {
+    "verdict": "approved",
+    "clue": "Işık aracı",
+    "note": null,
+    "batch": 73,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "LAYİHA": {
+    "verdict": "approved",
+    "clue": "Yasa taslağı",
+    "note": null,
+    "batch": 73,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "LEBALEP": {
+    "verdict": "approved",
+    "clue": "Ağzına dek dolu",
+    "note": null,
+    "batch": 73,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "LEH": {
+    "verdict": "approved",
+    "clue": "Aleyh karşıtı",
+    "note": "eski clue AKTİF YANLIŞ ('Polonya başkenti')",
+    "batch": 73,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "LOKAVT": {
+    "verdict": "approved",
+    "clue": "İş yeri kapatma",
+    "note": null,
+    "batch": 73,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "LÖS": {
+    "verdict": "sensitive",
+    "clue": null,
+    "note": "kan kanseri (lösemi kısaltması) — KANSER emsali, karar Serdar'ın",
+    "batch": 73,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "OĞULLU": {
+    "verdict": "approved",
+    "clue": "Oğlu olan",
+    "note": null,
+    "batch": 74,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "PANO": {
+    "verdict": "approved",
+    "clue": "İlan tahtası",
+    "note": null,
+    "batch": 74,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "PARKA": {
+    "verdict": "approved",
+    "clue": "Kapüşonlu mont",
+    "note": null,
+    "batch": 74,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "PARLAK": {
+    "verdict": "approved",
+    "clue": "Işıltılı",
+    "note": null,
+    "batch": 74,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "PAŞA": {
+    "verdict": "approved",
+    "clue": "Osmanlı rütbesi",
+    "note": null,
+    "batch": 74,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "PAŞABABA": {
+    "verdict": "sensitive",
+    "clue": null,
+    "note": "Bektaşi/tarikat lideri — MELAMİ/MOLLA kümesi",
+    "batch": 74,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "PEDERANE": {
+    "verdict": "approved",
+    "clue": "Babaca",
+    "note": null,
+    "batch": 74,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "PENTAN": {
+    "verdict": "rejected",
+    "clue": null,
+    "note": "kimya jargonu (alkan)",
+    "batch": 74,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "PERESE": {
+    "verdict": "rejected",
+    "clue": null,
+    "note": "TDK anlamı güvenle doğrulanamadı",
+    "batch": 74,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "PERİLİ": {
+    "verdict": "approved",
+    "clue": "Ürkütücü, tekinsiz",
+    "note": "cin/doğaüstü kelimesinden kaçınıldı",
+    "batch": 74,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "PLAK": {
+    "verdict": "approved",
+    "clue": "Dönerek çalan",
+    "note": null,
+    "batch": 74,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "PLATİN": {
+    "verdict": "approved",
+    "clue": "Değerli beyaz metal",
+    "note": null,
+    "batch": 74,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "PUT": {
+    "verdict": "sensitive",
+    "clue": null,
+    "note": "tapılan nesne (putperest) — kategori 2 sınırı; 'put gibi durmak' nötr seçeneği var, karar Serdar'ın",
+    "batch": 74,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "PİRELER": {
+    "verdict": "rejected",
+    "clue": null,
+    "note": "çoğul çekim — sözlük birimi değil",
+    "batch": 74,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "RAKİPLİK": {
+    "verdict": "approved",
+    "clue": "Çekişme, hasımlık",
+    "note": null,
+    "batch": 74,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "REVANİCİ": {
+    "verdict": "approved",
+    "clue": "Revani satan",
+    "note": null,
+    "batch": 74,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "REZENE": {
+    "verdict": "approved",
+    "clue": "Anason kokulu ot",
+    "note": null,
+    "batch": 74,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "ROZE": {
+    "verdict": "approved",
+    "clue": "Pembe şarap",
+    "note": "ROM/SAKE emsali: özendirmesiz içki tanımı",
+    "batch": 74,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "RİCAT": {
+    "verdict": "approved",
+    "clue": "Geri çekilme",
+    "note": null,
+    "batch": 74,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "RİYA": {
+    "verdict": "approved",
+    "clue": "İki yüzlülük",
+    "note": null,
+    "batch": 74,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "SAHRE": {
+    "verdict": "rejected",
+    "clue": null,
+    "note": "TDK'da güvenle doğrulanamadı (sahra karışması)",
+    "batch": 74,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "SARI": {
+    "verdict": "approved",
+    "clue": "Limon rengi",
+    "note": null,
+    "batch": 74,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "SARMAŞAN": {
+    "verdict": "rejected",
+    "clue": null,
+    "note": "sıfat-fiil formu (SARMAŞIK ayrı)",
+    "batch": 74,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "SAVAK": {
+    "verdict": "approved",
+    "clue": "Baraj su kanalı",
+    "note": null,
+    "batch": 74,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "SELA": {
+    "verdict": "sensitive",
+    "clue": null,
+    "note": "cenaze/ibadet duyurusu — din + ölüm kümesi, kesin",
+    "batch": 74,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "SENOZOİK": {
+    "verdict": "approved",
+    "clue": "Memeliler çağı",
+    "note": "popüler bilim (TRİYAS/NEOLİTİK emsali)",
+    "batch": 74,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "SERDAR": {
+    "verdict": "approved",
+    "clue": "Komutan (eski)",
+    "note": null,
+    "batch": 74,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "SESLİLİK": {
+    "verdict": "rejected",
+    "clue": null,
+    "note": "dilbilgisi jargonu (ötümlülük)",
+    "batch": 74,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "SEYREKÇE": {
+    "verdict": "approved",
+    "clue": "Ara sıra",
+    "note": null,
+    "batch": 74,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "SKİF": {
+    "verdict": "approved",
+    "clue": "Yarış kayığı",
+    "note": "KİK emsali",
+    "batch": 74,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "SODALI": {
+    "verdict": "approved",
+    "clue": "Sodası olan",
+    "note": null,
+    "batch": 74,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "SPOT": {
+    "verdict": "approved",
+    "clue": "Sahne ışığı",
+    "note": null,
+    "batch": 74,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "SPİRAL": {
+    "verdict": "approved",
+    "clue": "Sarmal, burgu",
+    "note": null,
+    "batch": 74,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "STADYA": {
+    "verdict": "rejected",
+    "clue": null,
+    "note": "ölçü aleti jargonu",
+    "batch": 74,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "SİF": {
+    "verdict": "rejected",
+    "clue": null,
+    "note": "TDK'da güvenle doğrulanamadı",
+    "batch": 74,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "SİGALA": {
+    "verdict": "approved",
+    "clue": "Bir reçineli ağaç",
+    "note": "sığla ağacı; eski clue ÇÖPTÜ",
+    "batch": 74,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "SİLKİNİŞ": {
+    "verdict": "approved",
+    "clue": "Silkinme anı",
+    "note": null,
+    "batch": 74,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "SİRK": {
+    "verdict": "approved",
+    "clue": "Gösteri çadırı",
+    "note": null,
+    "batch": 74,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "TABELALI": {
+    "verdict": "approved",
+    "clue": "Levhası olan",
+    "note": null,
+    "batch": 74,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "TAKTİ": {
+    "verdict": "rejected",
+    "clue": null,
+    "note": "aruz/kesme jargonu; TDK genel başlık olarak zayıf",
+    "batch": 74,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "TANIK": {
+    "verdict": "approved",
+    "clue": "Şahit",
+    "note": null,
+    "batch": 74,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "TARAMAK": {
+    "verdict": "approved",
+    "clue": "Tarakla düzeltmek",
+    "note": null,
+    "batch": 74,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "TARIM": {
+    "verdict": "approved",
+    "clue": "Ziraat",
+    "note": null,
+    "batch": 74,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "TASALI": {
+    "verdict": "approved",
+    "clue": "Kaygılı, üzgün",
+    "note": null,
+    "batch": 74,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "TEHDİT": {
+    "verdict": "approved",
+    "clue": "Gözdağı",
+    "note": null,
+    "batch": 74,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "TEKEL": {
+    "verdict": "approved",
+    "clue": "Tek elde satış",
+    "note": null,
+    "batch": 74,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "TEKİL": {
+    "verdict": "approved",
+    "clue": "Çoğul karşıtı",
+    "note": null,
+    "batch": 74,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "TEKİLA": {
+    "verdict": "approved",
+    "clue": "Meksika içkisi",
+    "note": "ROM/SAKE emsali",
+    "batch": 74,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "TEPİ": {
+    "verdict": "approved",
+    "clue": "İçgüdüsel dürtü",
+    "note": null,
+    "batch": 74,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "TEPİK": {
+    "verdict": "approved",
+    "clue": "Tekme (halk)",
+    "note": null,
+    "batch": 74,
+    "decided_at": "2026-07-05T13:54:25+00:00"
+  },
+  "TERSLEME": {
+    "verdict": "approved",
+    "clue": "Azarlama",
+    "note": null,
+    "batch": 75,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "TEŞVİK": {
+    "verdict": "approved",
+    "clue": "Özendirme",
+    "note": null,
+    "batch": 75,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "TIRT": {
+    "verdict": "rejected",
+    "clue": null,
+    "note": "argo/uncertain, TDK başlığı doğrulanamadı",
+    "batch": 75,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "TRAS": {
+    "verdict": "approved",
+    "clue": "Volkanik tüf tozu",
+    "note": "tras çimentosu katkısı; tıraş ile karışmasın",
+    "batch": 75,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "TRAVMA": {
+    "verdict": "approved",
+    "clue": "Ruhsal örselenme",
+    "note": null,
+    "batch": 75,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "TRİTON": {
+    "verdict": "approved",
+    "clue": "Deniz tanrısı",
+    "note": "mitoloji (EROS emsali)",
+    "batch": 75,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "TULUAT": {
+    "verdict": "approved",
+    "clue": "Doğaçlama oyun",
+    "note": null,
+    "batch": 75,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "TİRELEME": {
+    "verdict": "rejected",
+    "clue": null,
+    "note": "TDK'da güvenle doğrulanamadı",
+    "batch": 75,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "UFUL": {
+    "verdict": "approved",
+    "clue": "Batış (eski)",
+    "note": "yıldızın batışı; eski clue çöptü",
+    "batch": 75,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "UNSU": {
+    "verdict": "approved",
+    "clue": "Un kıvamlı",
+    "note": null,
+    "batch": 75,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "UÇAK": {
+    "verdict": "approved",
+    "clue": "Hava taşıtı",
+    "note": null,
+    "batch": 75,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "UŞAK": {
+    "verdict": "approved",
+    "clue": "Hizmetkar; bir il",
+    "note": null,
+    "batch": 75,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "VAH": {
+    "verdict": "approved",
+    "clue": "Acıma ünlemi",
+    "note": "eski clue ÇÖPTÜ ('hayvan sesi')",
+    "batch": 75,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "VAKA": {
+    "verdict": "approved",
+    "clue": "Olay, durum",
+    "note": null,
+    "batch": 75,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "VAKAR": {
+    "verdict": "approved",
+    "clue": "Ağırbaşlılık",
+    "note": null,
+    "batch": 75,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "VANA": {
+    "verdict": "approved",
+    "clue": "Boru musluğu",
+    "note": null,
+    "batch": 75,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "VATANİ": {
+    "verdict": "approved",
+    "clue": "Yurtla ilgili",
+    "note": null,
+    "batch": 75,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "VEREV": {
+    "verdict": "approved",
+    "clue": "Meyilli, çapraz",
+    "note": null,
+    "batch": 75,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "VETO": {
+    "verdict": "approved",
+    "clue": "Reddetme hakkı",
+    "note": null,
+    "batch": 75,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "VİDA": {
+    "verdict": "approved",
+    "clue": "Burgulu çivi",
+    "note": null,
+    "batch": 75,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "YABA": {
+    "verdict": "approved",
+    "clue": "Ekin savuran çatal",
+    "note": "eski clue kırıktı",
+    "batch": 75,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "YABANİ": {
+    "verdict": "approved",
+    "clue": "Vahşi, evcilsiz",
+    "note": null,
+    "batch": 75,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "YANSIMAK": {
+    "verdict": "approved",
+    "clue": "Aynada görünmek",
+    "note": null,
+    "batch": 75,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "YARALAMA": {
+    "verdict": "approved",
+    "clue": "Zarar verme",
+    "note": null,
+    "batch": 75,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "YARASA": {
+    "verdict": "approved",
+    "clue": "Uçan memeli",
+    "note": null,
+    "batch": 75,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "YASLAMAK": {
+    "verdict": "approved",
+    "clue": "Bir yere dayamak",
+    "note": null,
+    "batch": 75,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "YASLI": {
+    "verdict": "approved",
+    "clue": "Matemli",
+    "note": null,
+    "batch": 75,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "YILIK": {
+    "verdict": "rejected",
+    "clue": null,
+    "note": "TDK'da güvenle doğrulanamadı",
+    "batch": 75,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "YOMA": {
+    "verdict": "approved",
+    "clue": "Kalın halat",
+    "note": "eski clue ÇÖPTÜ ('sırt üstü düşüş')",
+    "batch": 75,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "ÇAPMAK": {
+    "verdict": "approved",
+    "clue": "Saldırmak (halk)",
+    "note": null,
+    "batch": 75,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "ÇARŞAFLI": {
+    "verdict": "approved",
+    "clue": "Çarşaf giymiş",
+    "note": "ÇARŞAF (giysi) emsali nötr",
+    "batch": 75,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "ÇAYAN": {
+    "verdict": "approved",
+    "clue": "Akrep (halk)",
+    "note": "eski clue ÇÖPTÜ ('sırt üstü düşüş')",
+    "batch": 75,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "ÇEKMEK": {
+    "verdict": "approved",
+    "clue": "İtme karşıtı",
+    "note": null,
+    "batch": 75,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "ÇENELİ": {
+    "verdict": "approved",
+    "clue": "Çok konuşan",
+    "note": null,
+    "batch": 75,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "ÇIRAK": {
+    "verdict": "approved",
+    "clue": "Usta yardımcısı",
+    "note": null,
+    "batch": 75,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "ÇIYAN": {
+    "verdict": "approved",
+    "clue": "Çok ayaklı böcek",
+    "note": null,
+    "batch": 75,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "ÇİŞ": {
+    "verdict": "sensitive",
+    "clue": null,
+    "note": "idrar (çocuk dili) — kategori 4 (İDRAR/SİDİK listede)",
+    "batch": 75,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "ÖNEL": {
+    "verdict": "approved",
+    "clue": "Süre, mühlet",
+    "note": "eski clue ÇÖPTÜ ('öne eğilme')",
+    "batch": 75,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "ÜNİTER": {
+    "verdict": "approved",
+    "clue": "Merkeziyetçi",
+    "note": null,
+    "batch": 75,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "ÜTÜLETME": {
+    "verdict": "approved",
+    "clue": "Ütü yaptırma",
+    "note": null,
+    "batch": 75,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "İBRANİ": {
+    "verdict": "sensitive",
+    "clue": null,
+    "note": "etnik/dini halk adı — kategori 1 sınırı; İBRANİCE dil olarak approved, ama halk adı ayrı — karar Serdar'ın",
+    "batch": 75,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "İBRE": {
+    "verdict": "approved",
+    "clue": "Ölçek oku",
+    "note": null,
+    "batch": 75,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "İBİKLİ": {
+    "verdict": "approved",
+    "clue": "İbiği olan",
+    "note": null,
+    "batch": 75,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "İDARE": {
+    "verdict": "approved",
+    "clue": "Yönetim",
+    "note": null,
+    "batch": 75,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "İKAME": {
+    "verdict": "approved",
+    "clue": "Yerine koyma",
+    "note": null,
+    "batch": 75,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "İKİCİ": {
+    "verdict": "rejected",
+    "clue": null,
+    "note": "felsefe jargonu (düalist) — MONADİST/İSİMCİ emsali",
+    "batch": 75,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "İLAM": {
+    "verdict": "approved",
+    "clue": "Mahkeme belgesi",
+    "note": null,
+    "batch": 75,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "İLETİŞME": {
+    "verdict": "approved",
+    "clue": "Haberleşme",
+    "note": null,
+    "batch": 75,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "İLKAH": {
+    "verdict": "approved",
+    "clue": "Döllenme",
+    "note": "klinik-nötr (MESANE/RAHİM emsali)",
+    "batch": 75,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "İLKİN": {
+    "verdict": "approved",
+    "clue": "İlk olarak",
+    "note": null,
+    "batch": 75,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "İNEKLEME": {
+    "verdict": "rejected",
+    "clue": null,
+    "note": "argo/uncertain, TDK başlığı doğrulanamadı",
+    "batch": 76,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "İNFAK": {
+    "verdict": "sensitive",
+    "clue": null,
+    "note": "dini yardım kavramı — SADAKA emsali; nötr 'mal harcama' seçeneği var, karar Serdar'ın",
+    "batch": 76,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "İNTANİYE": {
+    "verdict": "rejected",
+    "clue": null,
+    "note": "tıp jargonu (enfeksiyon); eski clue ayrıca yanlıştı",
+    "batch": 76,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "İNŞA": {
+    "verdict": "approved",
+    "clue": "Yapı kurma",
+    "note": null,
+    "batch": 76,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "İPKA": {
+    "verdict": "approved",
+    "clue": "Görevde bırakma",
+    "note": "eski clue AKTİF YANLIŞ ('miras bırakma')",
+    "batch": 76,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "İPOTEK": {
+    "verdict": "approved",
+    "clue": "Tapu teminatı",
+    "note": null,
+    "batch": 76,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "İRKMEK": {
+    "verdict": "approved",
+    "clue": "Ürküp sıçramak",
+    "note": null,
+    "batch": 76,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "İRİTE": {
+    "verdict": "rejected",
+    "clue": null,
+    "note": "TDK'da bağımsız isim olarak doğrulanamadı",
+    "batch": 76,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "İRŞAT": {
+    "verdict": "approved",
+    "clue": "Doğru yolu gösterme",
+    "note": null,
+    "batch": 76,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "İSTİKA": {
+    "verdict": "rejected",
+    "clue": null,
+    "note": "TDK'da güvenle doğrulanamadı",
+    "batch": 76,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "İTEKLEME": {
+    "verdict": "approved",
+    "clue": "Hafifçe itme",
+    "note": null,
+    "batch": 76,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "İTİDALLİ": {
+    "verdict": "approved",
+    "clue": "Ölçülü",
+    "note": null,
+    "batch": 76,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "İTİLAFÇI": {
+    "verdict": "approved",
+    "clue": "Uzlaşmacı",
+    "note": null,
+    "batch": 76,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "İVİNTİ": {
+    "verdict": "approved",
+    "clue": "Su akıntısı",
+    "note": "suyun hızlandığı yer; eski clue çöptü — orta güven",
+    "batch": 76,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "İZAM": {
+    "verdict": "approved",
+    "clue": "Abartma (eski)",
+    "note": "eski clue ÇÖPTÜ ('emir verme') — orta güven",
+    "batch": 76,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "İŞKİNE": {
+    "verdict": "rejected",
+    "clue": null,
+    "note": "TDK'da güvenle doğrulanamadı",
+    "batch": 76,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "ŞAMAMA": {
+    "verdict": "approved",
+    "clue": "Kokulu küçük kavun",
+    "note": "eski clue ÇÖPTÜ ('ibadet yeri')",
+    "batch": 76,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "ŞAPLAK": {
+    "verdict": "approved",
+    "clue": "Şamar, tokat",
+    "note": null,
+    "batch": 76,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "ŞAPŞALAK": {
+    "verdict": "approved",
+    "clue": "Sakar, dağınık",
+    "note": null,
+    "batch": 76,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "ŞARLAMAK": {
+    "verdict": "approved",
+    "clue": "Şarıl şarıl akmak",
+    "note": "eski clue ÇÖPTÜ ('ağzı açık kalmak')",
+    "batch": 76,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "ŞART": {
+    "verdict": "approved",
+    "clue": "Koşul",
+    "note": null,
+    "batch": 76,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "ŞAZ": {
+    "verdict": "approved",
+    "clue": "Kural dışı",
+    "note": "eski clue ÇÖPTÜ ('kısa keskin ses')",
+    "batch": 76,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "ŞAİBE": {
+    "verdict": "approved",
+    "clue": "Kuşku, leke",
+    "note": null,
+    "batch": 76,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "ŞEAMET": {
+    "verdict": "approved",
+    "clue": "Uğursuzluk",
+    "note": null,
+    "batch": 76,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "ŞEMAİL": {
+    "verdict": "sensitive",
+    "clue": null,
+    "note": "peygamber/kutsal yüz betimi — kategori 2; eski clue 'İsa'nın yüzü' de dini",
+    "batch": 76,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "ŞENLENİŞ": {
+    "verdict": "approved",
+    "clue": "Neşelenme",
+    "note": null,
+    "batch": 76,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "ŞERİYE": {
+    "verdict": "sensitive",
+    "clue": null,
+    "note": "İslam hukuku — ŞERAN emsali, kesin",
+    "batch": 76,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "ŞEŞÜSE": {
+    "verdict": "rejected",
+    "clue": null,
+    "note": "TDK'da güvenle doğrulanamadı",
+    "batch": 76,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "ŞUT": {
+    "verdict": "approved",
+    "clue": "Kaleye vuruş",
+    "note": null,
+    "batch": 76,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "ŞİRRET": {
+    "verdict": "approved",
+    "clue": "Huysuz, kavgacı",
+    "note": null,
+    "batch": 76,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "Şİİ": {
+    "verdict": "sensitive",
+    "clue": null,
+    "note": "mezhep — ŞİA/ŞİİLİK listede; eski clue AKTİF YANLIŞ ('aruz ölçüsü')",
+    "batch": 76,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "CEHALET": {
+    "verdict": "approved",
+    "clue": "Bilgisizlik",
+    "note": "SAHİP KARARI: şartsız approved.",
+    "batch": 70,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "AFET": {
+    "verdict": "approved",
+    "clue": "Doğal felaket",
+    "note": "SAHİP KARARI: şartsız approved.",
+    "batch": 70,
+    "decided_at": "2026-07-05T13:54:26+00:00"
+  },
+  "LÖSEMİ": {
+    "verdict": "sensitive",
+    "clue": null,
+    "note": "kan kanseri — KANSER emsali, karar Serdar'ın",
+    "batch": 77,
+    "decided_at": "2026-07-05T13:55:10+00:00"
+  },
+  "LİNK": {
+    "verdict": "approved",
+    "clue": "İnternet bağlantısı",
+    "note": null,
+    "batch": 77,
+    "decided_at": "2026-07-05T13:55:10+00:00"
+  },
+  "LİRİZM": {
+    "verdict": "approved",
+    "clue": "Coşkulu anlatım",
+    "note": null,
+    "batch": 77,
+    "decided_at": "2026-07-05T13:55:10+00:00"
+  },
+  "LİSANS": {
+    "verdict": "approved",
+    "clue": "Yetki belgesi",
+    "note": null,
+    "batch": 77,
+    "decided_at": "2026-07-05T13:55:10+00:00"
+  },
+  "MANGANİN": {
+    "verdict": "rejected",
+    "clue": null,
+    "note": "alaşım jargonu; eski clue ayrıca yanlıştı ('boya')",
+    "batch": 77,
+    "decided_at": "2026-07-05T13:55:10+00:00"
+  },
+  "MANTAR": {
+    "verdict": "approved",
+    "clue": "Şapkalı bitki",
+    "note": null,
+    "batch": 77,
+    "decided_at": "2026-07-05T13:55:10+00:00"
+  },
+  "MANİKA": {
+    "verdict": "rejected",
+    "clue": null,
+    "note": "TDK'da güvenle doğrulanamadı",
+    "batch": 77,
+    "decided_at": "2026-07-05T13:55:10+00:00"
+  },
+  "MARKETÇİ": {
+    "verdict": "approved",
+    "clue": "Market işleten",
+    "note": null,
+    "batch": 77,
+    "decided_at": "2026-07-05T13:55:10+00:00"
+  },
+  "MARİNE": {
+    "verdict": "approved",
+    "clue": "Terbiyeye yatırılmış",
+    "note": "yemek anlamı; denizcilik anlamı değil — orta güven",
+    "batch": 77,
+    "decided_at": "2026-07-05T13:55:10+00:00"
+  },
+  "MASÖR": {
+    "verdict": "approved",
+    "clue": "Masaj yapan",
+    "note": null,
+    "batch": 77,
+    "decided_at": "2026-07-05T13:55:10+00:00"
+  },
+  "MATEM": {
+    "verdict": "approved",
+    "clue": "Yas tutma",
+    "note": "eski clue AKTİF YANLIŞ: 'satrançta yenme' (o mat)",
+    "batch": 77,
+    "decided_at": "2026-07-05T13:55:10+00:00"
+  },
+  "MAZI": {
+    "verdict": "approved",
+    "clue": "Geçmiş zaman",
+    "note": null,
+    "batch": 77,
+    "decided_at": "2026-07-05T13:55:10+00:00"
+  },
+  "MECLİS": {
+    "verdict": "approved",
+    "clue": "Toplantı yeri",
+    "note": null,
+    "batch": 77,
+    "decided_at": "2026-07-05T13:55:10+00:00"
+  },
+  "MELEK": {
+    "verdict": "sensitive",
+    "clue": null,
+    "note": "dini varlık — kategori 2 (ŞEYTAN listede); 'melek gibi' veya kadın adı nötr seçenekleri var, karar Serdar'ın",
+    "batch": 77,
+    "decided_at": "2026-07-05T13:55:10+00:00"
+  },
+  "MESCİT": {
+    "verdict": "sensitive",
+    "clue": null,
+    "note": "ibadethane — KİLİSE/MİNARE kümesi, kesin aday",
+    "batch": 77,
+    "decided_at": "2026-07-05T13:55:10+00:00"
+  },
+  "MESELE": {
+    "verdict": "approved",
+    "clue": "Sorun, iş",
+    "note": null,
+    "batch": 77,
+    "decided_at": "2026-07-05T13:55:10+00:00"
+  },
+  "METALOİT": {
+    "verdict": "approved",
+    "clue": "Yarı metal",
+    "note": "okul kimyası (AMETAL emsali)",
+    "batch": 77,
+    "decided_at": "2026-07-05T13:55:10+00:00"
+  },
+  "METBU": {
+    "verdict": "rejected",
+    "clue": null,
+    "note": "TDK'da güvenle doğrulanamadı (matbu karışması)",
+    "batch": 77,
+    "decided_at": "2026-07-05T13:55:10+00:00"
+  },
+  "MEVT": {
+    "verdict": "approved",
+    "clue": "Ölüm (eski)",
+    "note": "MEMAT/ECEL emsali nötr",
+    "batch": 77,
+    "decided_at": "2026-07-05T13:55:10+00:00"
+  },
+  "MEZAR": {
+    "verdict": "sensitive",
+    "clue": null,
+    "note": "SAHİP KARARI (2026-07-05): sensitive listeye alındı",
+    "batch": 77,
+    "decided_at": "2026-07-05T13:55:10+00:00"
+  },
+  "MEZURA": {
+    "verdict": "approved",
+    "clue": "Şerit metre",
+    "note": null,
+    "batch": 77,
+    "decided_at": "2026-07-05T13:55:10+00:00"
+  },
+  "MODEM": {
+    "verdict": "approved",
+    "clue": "İnternet aygıtı",
+    "note": null,
+    "batch": 77,
+    "decided_at": "2026-07-05T13:55:10+00:00"
+  },
+  "MORİNA": {
+    "verdict": "approved",
+    "clue": "Kuzey denizi balığı",
+    "note": null,
+    "batch": 77,
+    "decided_at": "2026-07-05T13:55:10+00:00"
+  },
+  "MUSTATİL": {
+    "verdict": "approved",
+    "clue": "Dikdörtgen (eski)",
+    "note": null,
+    "batch": 77,
+    "decided_at": "2026-07-05T13:55:10+00:00"
+  },
+  "MUTA": {
+    "verdict": "sensitive",
+    "clue": null,
+    "note": "dini + cinsel yüklü kavram (muta nikahı) — karar Serdar'ın",
+    "batch": 77,
+    "decided_at": "2026-07-05T13:55:10+00:00"
+  },
+  "MÜDİRE": {
+    "verdict": "approved",
+    "clue": "Kadın müdür (eski)",
+    "note": null,
+    "batch": 77,
+    "decided_at": "2026-07-05T13:55:10+00:00"
+  },
+  "MÜKEMMEL": {
+    "verdict": "approved",
+    "clue": "Kusursuz",
+    "note": null,
+    "batch": 77,
+    "decided_at": "2026-07-05T13:55:10+00:00"
+  },
+  "MÜNADİ": {
+    "verdict": "approved",
+    "clue": "Tellal, çağırıcı",
+    "note": null,
+    "batch": 77,
+    "decided_at": "2026-07-05T13:55:10+00:00"
+  },
+  "NADİR": {
+    "verdict": "approved",
+    "clue": "Seyrek, az",
+    "note": null,
+    "batch": 77,
+    "decided_at": "2026-07-05T13:55:10+00:00"
+  },
+  "NALLAMAK": {
+    "verdict": "approved",
+    "clue": "Nal çakmak",
+    "note": null,
+    "batch": 77,
+    "decided_at": "2026-07-05T13:55:10+00:00"
+  },
+  "NARVAL": {
+    "verdict": "approved",
+    "clue": "Bir kutup balinası",
+    "note": null,
+    "batch": 77,
+    "decided_at": "2026-07-05T13:55:10+00:00"
+  },
+  "NAZİ": {
+    "verdict": "sensitive",
+    "clue": null,
+    "note": "Nazizm/soykırım yükü — kategori 3, kesin aday",
+    "batch": 77,
+    "decided_at": "2026-07-05T13:55:10+00:00"
+  },
+  "NAZİL": {
+    "verdict": "sensitive",
+    "clue": null,
+    "note": "baskın anlam dini (Kur'an nazil olmak); nötr 'inen' zayıf — karar Serdar'ın",
+    "batch": 77,
+    "decided_at": "2026-07-05T13:55:10+00:00"
+  },
+  "NAZİZM": {
+    "verdict": "sensitive",
+    "clue": null,
+    "note": "ırkçı ideoloji — NAZİ emsali, kesin",
+    "batch": 77,
+    "decided_at": "2026-07-05T13:55:10+00:00"
+  },
+  "NAŞİ": {
+    "verdict": "rejected",
+    "clue": null,
+    "note": "TDK'da güvenle doğrulanamadı; eski clue çöptü",
+    "batch": 77,
+    "decided_at": "2026-07-05T13:55:10+00:00"
+  },
+  "NECE": {
+    "verdict": "approved",
+    "clue": "Nasıl, ne dilde",
+    "note": null,
+    "batch": 77,
+    "decided_at": "2026-07-05T13:55:10+00:00"
+  },
+  "NEHARİ": {
+    "verdict": "rejected",
+    "clue": null,
+    "note": "TDK'da güvenle doğrulanamadı",
+    "batch": 77,
+    "decided_at": "2026-07-05T13:55:10+00:00"
+  },
+  "NEKRELİK": {
+    "verdict": "rejected",
+    "clue": null,
+    "note": "TDK'da güvenle doğrulanamadı",
+    "batch": 77,
+    "decided_at": "2026-07-05T13:55:10+00:00"
+  },
+  "NEON": {
+    "verdict": "approved",
+    "clue": "Bir soy gaz",
+    "note": null,
+    "batch": 77,
+    "decided_at": "2026-07-05T13:55:10+00:00"
+  },
+  "NEŞİDE": {
+    "verdict": "approved",
+    "clue": "Ezgi, şiir",
+    "note": null,
+    "batch": 77,
+    "decided_at": "2026-07-05T13:55:10+00:00"
+  },
+  "NOEL": {
+    "verdict": "sensitive",
+    "clue": null,
+    "note": "dini bayram — kategori 2 (PASKALYA emsali), kesin",
+    "batch": 77,
+    "decided_at": "2026-07-05T13:55:10+00:00"
+  },
+  "NİKBET": {
+    "verdict": "approved",
+    "clue": "Talihsizlik",
+    "note": "eski clue ÇÖPTÜ ('mizahi taklit')",
+    "batch": 77,
+    "decided_at": "2026-07-05T13:55:10+00:00"
+  },
+  "NİSAN": {
+    "verdict": "approved",
+    "clue": "Bir bahar ayı",
+    "note": "eski clue AKTİF YANLIŞ ('ikinci ay')",
+    "batch": 77,
+    "decided_at": "2026-07-05T13:55:10+00:00"
+  },
+  "ODAK": {
+    "verdict": "approved",
+    "clue": "Dikkat merkezi",
+    "note": null,
+    "batch": 77,
+    "decided_at": "2026-07-05T13:55:10+00:00"
+  },
+  "OKKA": {
+    "verdict": "approved",
+    "clue": "Eski ağırlık ölçüsü",
+    "note": null,
+    "batch": 77,
+    "decided_at": "2026-07-05T13:55:10+00:00"
+  },
+  "OLAYLI": {
+    "verdict": "approved",
+    "clue": "Olay dolu",
+    "note": null,
+    "batch": 77,
+    "decided_at": "2026-07-05T13:55:10+00:00"
+  },
+  "OLEFİN": {
+    "verdict": "rejected",
+    "clue": null,
+    "note": "kimya jargonu",
+    "batch": 77,
+    "decided_at": "2026-07-05T13:55:10+00:00"
+  },
+  "OTOBAN": {
+    "verdict": "approved",
+    "clue": "Hızlı yol",
+    "note": null,
+    "batch": 77,
+    "decided_at": "2026-07-05T13:55:10+00:00"
+  },
+  "OVALIK": {
+    "verdict": "approved",
+    "clue": "Düz geniş arazi",
+    "note": null,
+    "batch": 77,
+    "decided_at": "2026-07-05T13:55:10+00:00"
+  },
+  "OY": {
+    "verdict": "approved",
+    "clue": "Seçim tercihi",
+    "note": null,
+    "batch": 78,
+    "decided_at": "2026-07-05T13:55:10+00:00"
   }
 }

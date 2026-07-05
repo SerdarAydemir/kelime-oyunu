@@ -163,3 +163,6 @@ YALAKA
 NAH
 KENEF
 ULA
+
+# -- 7c. P2c delta audit (owner sign-off 2026-07-05) --
+MEZAR  # olum temasi, sahip karari

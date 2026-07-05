@@ -114,10 +114,9 @@
     "meaning_used": "Lamba örtüsü"
   },
   "ABAKÜS": {
-    "text": "Boncuklu sayma",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "Hesap aleti"
+    "text": "Sayı boncuğu",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "ABANOZ": {
     "text": "Sert siyah ağaç",
@@ -1257,10 +1256,9 @@
     "meaning_used": "dilbilgisel değişim"
   },
   "AFAL": {
-    "text": "Donakalma",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "şaşkınlık"
+    "text": "Şaşkın",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "AFAKİLİK": {
     "text": "Boş söz söyleme",
@@ -1294,9 +1292,9 @@
   },
   "AFET": {
     "text": "Doğal felaket",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "felaket"
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "SAHİP KARARI (2026-07-05): şartsız approved, nötr anlam. (Pack dışı, ön-denetimli.)"
   },
   "AFFETMEK": {
     "text": "Hata silmek",
@@ -1305,10 +1303,9 @@
     "meaning_used": "Bağışlama eylemi"
   },
   "AFALLAMA": {
-    "text": "Donakalma hali",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "şaşkınlık, bocalama"
+    "text": "Şaşırıp kalma",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "AFFETME": {
     "text": "Kusuru hoş görme",
@@ -1465,10 +1462,9 @@
     "meaning_used": "sağlık, iyi olma"
   },
   "AFİŞ": {
-    "text": "Büyük ilan",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "duyuru panosu"
+    "text": "Duvar ilanı",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "AFYONLU": {
     "text": "Kaymak şehri insanı",
@@ -1641,16 +1637,14 @@
     "meaning_used": "ahırı bulunan"
   },
   "AHCAR": {
-    "text": "Sert kütleler",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "Taşlar"
+    "text": "Taşlar (eski)",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "AHENK": {
-    "text": "Tatlı uyum",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "uyum"
+    "text": "Uyum",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "AHDETME": {
     "text": "Ant içme",
@@ -1860,10 +1854,9 @@
     "meaning_used": "telefon alıcısı"
   },
   "AHİREN": {
-    "text": "Bitiminde",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "sonunda, nihayet"
+    "text": "Son zamanlarda",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "AHŞA": {
     "text": "Ağaç işi",
@@ -2030,10 +2023,10 @@
     "meaning_used": "Bilim kurumu"
   },
   "AKAMBER": {
-    "text": "İspermeçet salgısı",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "Balina salgısı"
+    "text": "Amber, güzel koku",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "ispermeçet balmumu; obscure ama gerçek — orta güven"
   },
   "AKASYA": {
     "text": "Bir süs ağacı",
@@ -2788,10 +2781,9 @@
     "meaning_used": "yansıma"
   },
   "AKSON": {
-    "text": "Sinir lifi",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "biyoloji"
+    "text": "Sinir uzantısı",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "AKSIRIŞ": {
     "text": "Hapşuu!",
@@ -3167,10 +3159,10 @@
     "note": "mevcut clue doğruydu, korundu"
   },
   "AKİDE": {
-    "text": "Geleneksel sert şeker",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "şekerleme"
+    "text": "Bir sert şeker",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "çift-anlamlı; şeker anlamı (dini akide değil)"
   },
   "AKÇE": {
     "text": "Osmanlı parası",
@@ -3429,10 +3421,9 @@
     "meaning_used": "Açıkta durma"
   },
   "ALAKASIZ": {
-    "text": "Konu dışı",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "İlgisiz"
+    "text": "İlgisiz",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "ALARM": {
     "text": "Tehlike uyarısı",
@@ -3463,10 +3454,9 @@
     "meaning_used": "dolandırıcılık"
   },
   "ALAMET": {
-    "text": "Gelecekten haber",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "İşaret, belirti"
+    "text": "Belirti, iz",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "ALAKADAR": {
     "text": "İlgili",
@@ -3480,10 +3470,9 @@
     "note": "eski clue ALARM okumasıydı ('irkilmek'); al renk almak"
   },
   "ALAYCI": {
-    "text": "İğneleyici sözler",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "Müstehzi tavır"
+    "text": "İğneleyen",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "ALATURKA": {
     "text": "Eski Doğu usulü",
@@ -3748,9 +3737,8 @@
   },
   "ALEMCİ": {
     "text": "Eğlence düşkünü",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "eğlence sever"
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "ALELUMUM": {
     "text": "Çoğu zaman",
@@ -4455,10 +4443,9 @@
     "meaning_used": "Ankara semti"
   },
   "ALMAK": {
-    "text": "Edinme",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "Sahip olma"
+    "text": "Edinmek",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "ALTINCI": {
     "text": "Beşin ardılı",
@@ -4600,9 +4587,8 @@
   },
   "ALYAN": {
     "text": "Altıgen anahtar",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "el aleti"
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "ALUCRA": {
     "text": "Giresun'a bağlı ilçe",
@@ -4993,10 +4979,10 @@
     "note": "eski clue argo tınılıydı ('bıçak altı')"
   },
   "AMEL": {
-    "text": "İyi ya da kötü iş",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "Yapılan fiil"
+    "text": "İş, edim",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "temel anlam iş/eylem; dini salih amel vurgusu yapılmadı"
   },
   "AMELİYE": {
     "text": "Cerrah işi",
@@ -5166,10 +5152,9 @@
     "meaning_used": "aydınlatma aracı"
   },
   "AMORTİ": {
-    "text": "Piyango tesellisi",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "piyango geri ödeme"
+    "text": "Piyango ikramiyesi",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "AMPİRİK": {
     "text": "Gözleme dayalı",
@@ -5267,10 +5252,9 @@
     "meaning_used": "Sanat akımı"
   },
   "AMİP": {
-    "text": "Şekilsiz canlı",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "tek hücreli organizma"
+    "text": "Tek hücreli",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "AMİRLİK": {
     "text": "Komuta makamı",
@@ -5389,10 +5373,9 @@
     "model": "claude-fable-5"
   },
   "ANAHTAR": {
-    "text": "Kilit açar",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "kilit açma"
+    "text": "Kilit açan",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "ANAGRAM": {
     "text": "Harf değiştirmece",
@@ -5544,10 +5527,9 @@
     "meaning_used": "Kaotik durum"
   },
   "ANARŞİ": {
-    "text": "Başıboşluk",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "Otoritesizlik"
+    "text": "Kuralsızlık",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "ANALOJİ": {
     "text": "Benzetme",
@@ -5574,10 +5556,9 @@
     "meaning_used": "Vücut yapısı"
   },
   "ANATOMİK": {
-    "text": "Bedenle ilgili",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "vücut yapısı"
+    "text": "Bedene ilişkin",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "ANARŞİZM": {
     "text": "Otorite karşıtlığı",
@@ -5776,10 +5757,9 @@
     "meaning_used": "basınç ölçer"
   },
   "ANIK": {
-    "text": "Elde mevcut",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "Hazır durum"
+    "text": "Hazır (öz T)",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "ANIKLAMA": {
     "text": "Geçmişi canlandırma",
@@ -6204,10 +6184,9 @@
     "note": "mevcut clue doğruydu, korundu"
   },
   "ANONİM": {
-    "text": "Kimliği belirsiz",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "adı bilinmeyen"
+    "text": "Adı gizli",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "ANMALIK": {
     "text": "Geçmişten iz",
@@ -6451,10 +6430,9 @@
     "meaning_used": "Felsefi çelişki"
   },
   "ANUT": {
-    "text": "Dik kafalı",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "İnatçı"
+    "text": "İnatçı",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "ANYON": {
     "text": "Katyonun karşıtı",
@@ -6867,10 +6845,9 @@
     "meaning_used": "Yılın ayı"
   },
   "ARABA": {
-    "text": "Kara taşıtı",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "ulaşım aracı"
+    "text": "Dört tekerli taşıt",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "ARABACI": {
     "text": "Faytonu süren",
@@ -6986,10 +6963,10 @@
     "note": "mevcut clue doğruydu, korundu"
   },
   "ARABALIK": {
-    "text": "Otomobil sığar",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "Otomobil için yer"
+    "text": "Araba konan yer",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "eski clue kırıktı"
   },
   "ARALAMA": {
     "text": "Azıcık açma",
@@ -7191,10 +7168,9 @@
     "meaning_used": "yokluk hissi"
   },
   "ARAYIŞ": {
-    "text": "Peşine düşme",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "bulma çabası"
+    "text": "Arama çabası",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "ARAYÜZ": {
     "text": "Kullanıcı ekranı",
@@ -7516,10 +7492,10 @@
     "meaning_used": "temizlenme"
   },
   "ARILIK": {
-    "text": "Vızvızların evi",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "arı kovanı yeri"
+    "text": "Saflık, temizlik",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "eski clue jokeydi ('vızvızların evi')"
   },
   "ARGONOT": {
     "text": "Altın Post arayıcısı",
@@ -7689,10 +7665,10 @@
     "meaning_used": "İlk örnek"
   },
   "ARKOZ": {
-    "text": "Feldspatlı kayaç",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "kayaç türü"
+    "text": "Bir kumtaşı türü",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "kayaç adı (BREŞ/MARN emsali)"
   },
   "ARKTİK": {
     "text": "Buzlar ülkesi",
@@ -7732,9 +7708,8 @@
   },
   "ARMA": {
     "text": "Kulüp simgesi",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "amblem, nişan"
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "ARMADURA": {
     "text": "Zırhlı giysi",
@@ -8222,10 +8197,9 @@
     "meaning_used": "eklem iltihabı"
   },
   "ARZ": {
-    "text": "Gök karşıtı",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "Yeryüzü"
+    "text": "Yeryüzü (eski)",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "ARZANİ": {
     "text": "Göksel karşıtı",
@@ -8565,9 +8539,8 @@
   },
   "ASIL": {
     "text": "Ana, temel",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "Temel, esas"
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "ASI": {
     "text": "Afiş, poster",
@@ -8907,10 +8880,9 @@
     "meaning_used": "modernlik"
   },
   "ASMAK": {
-    "text": "Yukarıya sabitlemek",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "Bir şeyi yukarıya tutturmak"
+    "text": "Yükseğe tutturmak",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "ASTAR": {
     "text": "Giysi içi kumaş",
@@ -9025,10 +8997,10 @@
     "meaning_used": "uzay gezgini"
   },
   "ASURCA": {
-    "text": "Çivi yazısı dili",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "Antik dil"
+    "text": "Eski bir dil",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "dil adları nötr (ARAMİ/İBRANİCE emsali)"
   },
   "ASTIRMAK": {
     "text": "İpe çekmek",
@@ -9154,10 +9126,9 @@
     "note": "LALA (Osmanlı) ile dönem ayrımı yapıldı"
   },
   "ATAKUM": {
-    "text": "Samsun'da sahil ilçesi",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "coğrafi yer"
+    "text": "Samsun'un ilçesi",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "ATAK": {
     "text": "Hücum, akın",
@@ -9325,10 +9296,9 @@
     "meaning_used": "Ateş göstericisi"
   },
   "ATEH": {
-    "text": "Dalgınlık hali",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "dalgınlık"
+    "text": "Bunama (eski)",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "ATEL": {
     "text": "Kırık sabitleyici",
@@ -9548,10 +9518,9 @@
     "meaning_used": "pist sporları"
   },
   "ATLAS": {
-    "text": "Dünya elinde",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "Harita kitabı"
+    "text": "Harita kitabı",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "ATLATIŞ": {
     "text": "Tehlikeden kurtulma",
@@ -9643,10 +9612,9 @@
     "model": "claude-fable-5"
   },
   "ATOMİK": {
-    "text": "Çekirdek enerjisiyle",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "çekirdek enerjisi"
+    "text": "Atomla ilgili",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "ATROPİN": {
     "text": "Göz bebeği büyütücü",
@@ -9666,10 +9634,9 @@
     "model": "claude-fable-5"
   },
   "ATİK": {
-    "text": "Hızlı, çevik",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "çevik"
+    "text": "Çevik, hızlı",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "ATMA": {
     "text": "Savurup bırakma",
@@ -9844,10 +9811,9 @@
     "meaning_used": "gizli ilişki"
   },
   "AVARIZ": {
-    "text": "Ani sorun",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "beklenmedik durum"
+    "text": "Engeller, arızalar",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "AVARYA": {
     "text": "Gemide hasar",
@@ -9868,9 +9834,8 @@
   },
   "AVERAJ": {
     "text": "Gol farkı",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "spor skor farkı"
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "AVCILAR": {
     "text": "İstanbul'da bir ilçe",
@@ -9927,10 +9892,9 @@
     "meaning_used": "Avlanma alanı"
   },
   "AVRO": {
-    "text": "AB ortak parası",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "para birimi"
+    "text": "Avrupa parası",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "AVLU": {
     "text": "Evin ortası",
@@ -10077,10 +10041,10 @@
     "meaning_used": "tavan aydınlatması"
   },
   "AYAKTA": {
-    "text": "Oturur vaziyette değil",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "dikey konumda"
+    "text": "Dikilir halde",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "eski clue TERSTİ ('oturur vaziyette')"
   },
   "AYAK": {
     "text": "Yere basan uzuv",
@@ -10185,10 +10149,9 @@
     "meaning_used": "ayak dinlendirme"
   },
   "AYARTMAK": {
-    "text": "Yoldan çıkarmak",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "baştan çıkarmak"
+    "text": "Baştan çıkarmak",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "AYAZ": {
     "text": "Keskin soğuk",
@@ -10316,10 +10279,10 @@
     "meaning_used": "Açık, net biçimde"
   },
   "AYEVİ": {
-    "text": "Ay çevresi ışık çemberi",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "Ay halesi"
+    "text": "Ay ışık halkası",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "hâle"
   },
   "AYDINLIK": {
     "text": "Işık dolu ortam",
@@ -10566,10 +10529,9 @@
     "note": "KINAMA ile simetrik çapraz tanım"
   },
   "AYLAK": {
-    "text": "İşsiz güçsüz",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "avare"
+    "text": "Boş gezen",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "AYIRTMAK": {
     "text": "Yer tutmak",
@@ -11402,10 +11364,9 @@
     "meaning_used": "metal işleme"
   },
   "AZİL": {
-    "text": "Makamdan indirme",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "Görevden alma"
+    "text": "Görevden alma",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "AZİM": {
     "text": "İrade gücü",
@@ -11414,10 +11375,9 @@
     "note": "mevcut clue doğruydu, korundu"
   },
   "AZOTLU": {
-    "text": "Toprak besini",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "gübre, besin"
+    "text": "Azot içeren",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "AZONAL": {
     "text": "Zonları olmayan",
@@ -12133,10 +12093,9 @@
     "meaning_used": "gözyaşı dökme"
   },
   "AĞLAK": {
-    "text": "Gözü sulu, hüzünlü",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "Kolay ağlayan"
+    "text": "Sulugöz",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "AĞIŞ": {
     "text": "Meyilli iniş",
@@ -12455,10 +12414,9 @@
     "meaning_used": "toplu yemek yeri"
   },
   "AŞAMA": {
-    "text": "Bir süreçteki evre",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "evre, basamak"
+    "text": "Evre, merhale",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "AİLELİK": {
     "text": "Yuva sıcaklığı",
@@ -12774,10 +12732,9 @@
     "meaning_used": "geçmesini sağlama"
   },
   "AŞİNA": {
-    "text": "Tanıdık sima",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "Bilindik olma"
+    "text": "Tanıdık, bildik",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "AŞİNALIK": {
     "text": "Tanışıklık",
@@ -13028,10 +12985,10 @@
     "meaning_used": "Kaba kumaş"
   },
   "BADE": {
-    "text": "Kadeh yoldaşı",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "şarap, içki"
+    "text": "Kadeh, şarap (eski)",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "divan klasiği; özendirmesiz betimleme"
   },
   "BADEM": {
     "text": "Kabuklu kuruyemiş",
@@ -13040,10 +12997,9 @@
     "meaning_used": "yemiş"
   },
   "BADANA": {
-    "text": "Duvarlara yeni yüz",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "Duvar yenileme"
+    "text": "Duvar boyası",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "BADERNA": {
     "text": "Halatın giysisi",
@@ -13706,10 +13662,9 @@
     "meaning_used": "anıt heykel"
   },
   "BALAT": {
-    "text": "İstanbul semti",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "semt adı"
+    "text": "İstanbul'da semt",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "BALATA": {
     "text": "Fren parçası",
@@ -13766,10 +13721,9 @@
     "meaning_used": "cinsel deneyimsizlik"
   },
   "BALERİN": {
-    "text": "Parmak ucunda dans",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "bale dansçısı"
+    "text": "Kadın dansçı",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "BALE": {
     "text": "Parmak ucunda dans",
@@ -17185,10 +17139,10 @@
     "model": "claude-fable-5"
   },
   "BELAHET": {
-    "text": "Kafa basmazlık",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "aptallık"
+    "text": "Ahmaklık (eski)",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "soyut kavram (BUDALA'nın aksine yönlü hakaret değil)"
   },
   "BELEDİ": {
     "text": "Şehir idaresi",
@@ -18407,10 +18361,9 @@
     "meaning_used": "Puta sahip"
   },
   "BEY": {
-    "text": "Erkeklere saygı",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "hitap unvanı"
+    "text": "Erkek unvanı",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "BEYAZLI": {
     "text": "Ak renkli olma",
@@ -19542,10 +19495,10 @@
     "meaning_used": "harap durum"
   },
   "BOLİÇE": {
-    "text": "Sığ su av aracı",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "Balık ağı"
+    "text": "Kıyı balık ağı",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "orta güven; denizcilik"
   },
   "BOMBOŞ": {
     "text": "Tamamen ıssız",
@@ -19866,10 +19819,9 @@
     "meaning_used": "ilçe, coğrafya"
   },
   "BOYAHANE": {
-    "text": "Renk verilen mekan",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "renklendirme tesisi"
+    "text": "Boya işliği",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "BOVLİNG": {
     "text": "Lobutları devir",
@@ -20283,10 +20235,9 @@
     "meaning_used": "para değişimi"
   },
   "BOZLAK": {
-    "text": "Orta Anadolu ezgisi",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "Halk müziği formu"
+    "text": "Bir Anadolu ezgisi",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "BOZOVA": {
     "text": "Urfa'da bir ilçe",
@@ -20685,10 +20636,9 @@
     "meaning_used": "Çok konuşan"
   },
   "BOŞATMAK": {
-    "text": "İçindekini çıkarmak",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "tahliye etmek"
+    "text": "İçini döktürmek",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "BOŞLAMA": {
     "text": "Umursamama",
@@ -20823,10 +20773,10 @@
     "meaning_used": "solunum organı"
   },
   "BREZİL": {
-    "text": "Samba ülkesi",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "Brezilya ülkesi"
+    "text": "Kırmızı boya ağacı",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "eski clue Brezilya'ya kaymıştı; brezil=bakkam ağacı — orta güven"
   },
   "BRE": {
     "text": "Sitemli sesleniş",
@@ -23443,10 +23393,9 @@
     "meaning_used": "haklı olarak"
   },
   "BİFTEK": {
-    "text": "Dana dilimi",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "dana eti"
+    "text": "Izgara et dilimi",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "BİGÜNAH": {
     "text": "Masum, suçsuz",
@@ -23862,10 +23811,9 @@
     "meaning_used": "uydu"
   },
   "BİLMİŞ": {
-    "text": "Ukala tavırlı",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "Ukala davranışlı"
+    "text": "Ukala",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "BİLYON": {
     "text": "Dev sayı",
@@ -24414,10 +24362,9 @@
     "meaning_used": "birlikte"
   },
   "BİRLİK": {
-    "text": "Tek vücut olma",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "Ortaklık, uyum"
+    "text": "Beraberlik",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "BİRLİKTE": {
     "text": "Eşlik ederek",
@@ -24497,10 +24444,9 @@
     "model": "claude-fable-5"
   },
   "BİS": {
-    "text": "Bir daha!",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "Tekrar isteği"
+    "text": "Tekrar! (alkış)",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "BİRİNCİL": {
     "text": "En önemli",
@@ -25234,10 +25180,9 @@
     "meaning_used": "Deve yavrusu"
   },
   "CAM": {
-    "text": "Şeffaf malzeme",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "madde"
+    "text": "Pencere maddesi",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "CAMIZ": {
     "text": "Su sığırı",
@@ -25258,10 +25203,10 @@
     "meaning_used": "çekici"
   },
   "CAMEVİ": {
-    "text": "Saydam eşya atölyesi",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "cam üretimi"
+    "text": "Cam işliği",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "camlı; cemevi ile karışmasın diye 'işlik'"
   },
   "CAMLATMA": {
     "text": "Şeffaf kaplama",
@@ -25887,10 +25832,10 @@
     "meaning_used": "dinî azap yeri"
   },
   "CEHALET": {
-    "text": "Karanlık zihin",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "bilgisizlik"
+    "text": "Bilgisizlik",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "SAHİP KARARI (2026-07-05): şartsız approved, nötr anlam. (Pack dışı, ön-denetimli.)"
   },
   "CEDRE": {
     "text": "Şekerlemesi yapılan turunçgil",
@@ -26072,10 +26017,9 @@
     "meaning_used": "özel isim"
   },
   "CEMİ": {
-    "text": "Hepsi birden",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "Toplam, bütün"
+    "text": "Tümü, toplamı",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "CEMŞAT": {
     "text": "Bir erkek adı",
@@ -26102,10 +26046,9 @@
     "meaning_used": "Toplum"
   },
   "CEMİL": {
-    "text": "Hoş görünümlü",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "yakışıklı"
+    "text": "Güzel (eski)",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "CENAH": {
     "text": "Parti kolu",
@@ -26360,10 +26303,9 @@
     "meaning_used": "büyük, iri"
   },
   "CESURANE": {
-    "text": "Yüreklice",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "Cesurca"
+    "text": "Yiğitçe",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "CESURLUK": {
     "text": "Gözü pek olma",
@@ -27206,10 +27148,9 @@
     "meaning_used": "Kısa boylu insan"
   },
   "CÜHELA": {
-    "text": "İlimden yoksun",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "cahil insanlar"
+    "text": "Cahiller (eski)",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "CÜLUS": {
     "text": "Padişah tahta çıkışı",
@@ -27657,9 +27598,9 @@
   },
   "CİM": {
     "text": "Arapça bir harf",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "Arap alfabesi"
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "AYN/ELİF emsali kültürel-nötr harf"
   },
   "CİMCİME": {
     "text": "Şirin kız çocuğu",
@@ -28386,10 +28327,9 @@
     "meaning_used": "anatomi"
   },
   "DAMACANA": {
-    "text": "Su sebili deposu",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "su deposu"
+    "text": "İri su kabı",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "DAMAKSIL": {
     "text": "Ağız tavanı sesi",
@@ -28965,10 +28905,9 @@
     "meaning_used": "Gücenmek, kırılmak"
   },
   "DATA": {
-    "text": "Ham gerçekler",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "İşlenmemiş bilgi"
+    "text": "Ham veri",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "DARLAŞMA": {
     "text": "Ensizleşme",
@@ -29102,10 +29041,9 @@
     "meaning_used": "resmi davet"
   },
   "DAVYA": {
-    "text": "Ucu sivri pense",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "Pense çeşidi"
+    "text": "Diş çekme kıskacı",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "DAVUDİ": {
     "text": "Güzel, gür ses",
@@ -29564,9 +29502,8 @@
   },
   "DEBİ": {
     "text": "Akış miktarı",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "akış hızı"
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "DEBİL": {
     "text": "Kavraması yavaş",
@@ -30638,10 +30575,9 @@
     "meaning_used": "istikrar, denge"
   },
   "DENK": {
-    "text": "Eşit veya uygun",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "eşit, muadil"
+    "text": "Eşit, muadil",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "DENGECİ": {
     "text": "Sirk cambazı",
@@ -32572,10 +32508,9 @@
     "meaning_used": "Çevrim, devir"
   },
   "DOLAR": {
-    "text": "ABD para birimi",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "para birimi"
+    "text": "ABD parası",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "DOLAPLI": {
     "text": "Sinsi düzenbaz",
@@ -33100,10 +33035,9 @@
     "meaning_used": "samimi"
   },
   "DOST": {
-    "text": "Sırdaş, yoldaş",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "yakın arkadaş"
+    "text": "Yakın arkadaş",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "DONÖR": {
     "text": "Hayat kurtaran",
@@ -33784,9 +33718,8 @@
   },
   "DUL": {
     "text": "Eşini yitiren",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "eşini kaybetmiş"
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "DUDU": {
     "text": "Konuşan kuş",
@@ -35978,10 +35911,9 @@
     "meaning_used": "Asalet unvanı"
   },
   "DÜŞ": {
-    "text": "Uyku hayali",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "rüya"
+    "text": "Rüya",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "DÜŞEŞ": {
     "text": "Tavla'da en yüksek",
@@ -36772,10 +36704,9 @@
     "meaning_used": "sadaka isteyen"
   },
   "DİLENMEK": {
-    "text": "El açmak",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "yardım isteme"
+    "text": "El açıp istemek",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "DİLEMMA": {
     "text": "İki yol ayrımı",
@@ -37611,10 +37542,9 @@
     "meaning_used": "parçalara ayırma"
   },
   "DİRİLMEK": {
-    "text": "Can bulmak",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "Hayata dönmek"
+    "text": "Yeniden canlanmak",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "DİTMEK": {
     "text": "Tel tel ayırmak",
@@ -37665,10 +37595,9 @@
     "meaning_used": "Hat sanatı"
   },
   "DİVAN": {
-    "text": "Şark köşesi",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "sedir, oturma yeri"
+    "text": "Sedir, kanepe",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "DİVRİĞİ": {
     "text": "Sivas'ın tarihi ilçesi",
@@ -37839,9 +37768,8 @@
   },
   "DİZ": {
     "text": "Bacak eklemi",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "Anatomi eklem"
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "DİZDAR": {
     "text": "Kale komutanı",
@@ -38549,10 +38477,9 @@
     "meaning_used": "pasif durum"
   },
   "EDİMLİ": {
-    "text": "İşlevsel olan",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "işlevsel"
+    "text": "Gerçekleşmiş",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "EDİNMEK": {
     "text": "Sahip olmak",
@@ -38655,10 +38582,9 @@
     "meaning_used": "etki, tesir"
   },
   "EDİTÖR": {
-    "text": "Yayına hazırlayan",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "yayın hazırlama"
+    "text": "Yayın hazırlayan",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "EFECE": {
     "text": "Zeybek tavrı",
@@ -39248,16 +39174,14 @@
     "meaning_used": "uzman bilirkişi"
   },
   "EKSER": {
-    "text": "Daha çok, genellikle",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "çoğunlukla"
+    "text": "Çoğunlukla",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "EKSTRA": {
-    "text": "Fazladan, ilave",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "ilave, fazlalık"
+    "text": "Fazladan",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "EKONOMİ": {
     "text": "Para yönetimi",
@@ -39434,10 +39358,9 @@
     "note": "sıfat biçimi düzeltildi"
   },
   "EKİCİLİK": {
-    "text": "Tohum atma işi",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "tarım, tohum ekme"
+    "text": "Tarımcılık",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "EKİNCİ": {
     "text": "Toprak işleyen",
@@ -39535,10 +39458,10 @@
     "meaning_used": "özlü ifade"
   },
   "ENİŞTE": {
-    "text": "Teyze eşi",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "akrabalık"
+    "text": "Kız kardeşin eşi",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "eski clue 'teyze eşi' dar/yanlıştı"
   },
   "ERAT": {
     "text": "Erler topluluğu",
@@ -39581,10 +39504,10 @@
     "model": "claude-fable-5"
   },
   "EZİNÇ": {
-    "text": "Darbe izi",
-    "source": "gemini",
-    "model": "gemini-2.5-flash",
-    "meaning_used": "bere, morluk"
+    "text": "Üzünç, sıkıntı",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "eski clue 'darbe izi' EZİK karışmasıydı"
   },
   "EĞRİTMEK": {
     "text": "İplik oluşturma",
@@ -39957,10 +39880,9 @@
     "model": "claude-fable-5"
   },
   "APAYRI": {
-    "text": "Tamamen benzersiz",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "farklılık"
+    "text": "Bambaşka",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "ANGSTRÖM": {
     "text": "Uzunluk birimi",
@@ -40116,10 +40038,9 @@
     "meaning_used": "genetik miras"
   },
   "ASİLZADE": {
-    "text": "Soylu, aristokrat",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "soyluluk"
+    "text": "Soylu kişi",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "ATALET": {
     "text": "Uyuşukluk",
@@ -40284,10 +40205,9 @@
     "meaning_used": "fizik"
   },
   "AVUNÇ": {
-    "text": "Teselli, rahatlama",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "duygusal destek"
+    "text": "Teselli",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "AÇILMA": {
     "text": "Yelkenleri germek",
@@ -40925,10 +40845,9 @@
     "meaning_used": "saç nakli"
   },
   "EKİLİŞ": {
-    "text": "Tohum ekme eylemi",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "tarım"
+    "text": "Ekilme biçimi",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "EKİLME": {
     "text": "Tohum bırakma",
@@ -41616,10 +41535,9 @@
     "meaning_used": "zorunlu"
   },
   "ELVEDA": {
-    "text": "Hoşça kal deme",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "veda sözü"
+    "text": "Son veda",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "ELİT": {
     "text": "Seçkin",
@@ -41798,9 +41716,8 @@
   },
   "EMARE": {
     "text": "Belirti, iz",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "işaret ipucu"
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "EMAYLAMA": {
     "text": "Metal kaplama",
@@ -42490,10 +42407,9 @@
     "meaning_used": "tıbbi alet"
   },
   "ENTELEKT": {
-    "text": "Zihin gücü",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "akıl zeka"
+    "text": "Anlık, us",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "ENTERNE": {
     "text": "Eğlence yeri",
@@ -43203,10 +43119,9 @@
     "note": "eski clue AKTİF YANLIŞ: 'dişi olmayan' erkeksiz okumasıydı; ERK ailesiyle tutarlı"
   },
   "ERMEK": {
-    "text": "Bir amaca ulaşmak",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "varmak ulaşmak"
+    "text": "Amaca ulaşmak",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "ERME": {
     "text": "Meyve olgunlaşması",
@@ -43394,10 +43309,10 @@
     "model": "claude-fable-5"
   },
   "ERİM": {
-    "text": "Kocanın kardeşi",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "aile akrabalık"
+    "text": "Menzil, erişim",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "eski clue AKTİF YANLIŞ: 'kocanın kardeşi' (o İNİ)"
   },
   "ERTESİ": {
     "text": "Sonraki gün",
@@ -43555,10 +43470,9 @@
     "meaning_used": "koku"
   },
   "ESARET": {
-    "text": "Zincir, pranga",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "bağlılık"
+    "text": "Tutsaklık",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "ERİNÇLİ": {
     "text": "Huzurlu, sakin",
@@ -43721,10 +43635,10 @@
     "meaning_used": "yardımcı kişi"
   },
   "ESEME": {
-    "text": "Kötü talih, uğursuzluk",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "şanssızlık"
+    "text": "Akıl, mantık",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "öz Türkçe; eski clue çöptü — orta güven"
   },
   "ESER": {
     "text": "Sanat ürünü",
@@ -43852,10 +43766,9 @@
     "meaning_used": "halk"
   },
   "ERİŞME": {
-    "text": "Ulaşmak, varmak",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "fiil"
+    "text": "Ulaşma, varma",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "ESLEMEK": {
     "text": "Gülümseme belirtisi",
@@ -44224,10 +44137,10 @@
     "note": "eski clue AKTİF YANLIŞ: 'ilaç hammaddesi' değil; kanaviçe kumaşı"
   },
   "ETANOL": {
-    "text": "Alkol türü",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "kimya içki"
+    "text": "Bir alkol türü",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "okul kimyası, nötr"
   },
   "ESVAPSIZ": {
     "text": "Giysisiz, çıplak",
@@ -44325,10 +44238,9 @@
     "meaning_used": "giyim"
   },
   "ETKEN": {
-    "text": "Sebep olan, müessir",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "sıfat sebep"
+    "text": "Etmen, faktör",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "ETKİ": {
     "text": "Tesir, sonuç",
@@ -44338,9 +44250,8 @@
   },
   "ETKENLİK": {
     "text": "Faaliyet, iş",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "aktivite"
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "ETKİLİ": {
     "text": "Tesirli",
@@ -44503,10 +44414,10 @@
     "meaning_used": "giyim aksesuarı"
   },
   "ETLİ": {
-    "text": "Karnı tok, şişman",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "görünüş"
+    "text": "Eti bol",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "eski clue kaymıştı ('karnı tok şişman')"
   },
   "ETYARAN": {
     "text": "Yüzü yaralı",
@@ -44527,10 +44438,9 @@
     "meaning_used": "geniş anlam"
   },
   "ETRİYE": {
-    "text": "Tel bükme aleti",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "alet"
+    "text": "Beton demir bağı",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "ETÇİK": {
     "text": "Yüz kası",
@@ -44868,10 +44778,9 @@
     "meaning_used": "matematik geometri"
   },
   "EVSAF": {
-    "text": "Özellikler, nitelikler",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "vasıflar"
+    "text": "Nitelikler",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "EVSEME": {
     "text": "Evcil hayvan edinme",
@@ -44964,10 +44873,9 @@
     "meaning_used": "oluşum süreç"
   },
   "EVRİLMEK": {
-    "text": "Türlerin değişimi",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "biyoloji evrim"
+    "text": "Değişime uğramak",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "EVİNLİ": {
     "text": "Tavan arası",
@@ -45249,10 +45157,10 @@
     "meaning_used": "din çağrı"
   },
   "EYTAM": {
-    "text": "Büyük topluluk",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "halk yığını"
+    "text": "Yetimler (eski)",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "eski clue ÇÖPTÜ ('büyük topluluk')"
   },
   "EZDİRME": {
     "text": "Hakimiyet kurma",
@@ -45979,10 +45887,9 @@
     "meaning_used": "geometri"
   },
   "EŞEKSİ": {
-    "text": "Sırtında yük taşıyan",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "hayvan"
+    "text": "Eşek gibi",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "EŞKIYA": {
     "text": "Haydut, harami",
@@ -47407,10 +47314,9 @@
     "meaning_used": "siyaset devlet"
   },
   "FATALİTE": {
-    "text": "Ölümcül sonuç",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "ölümcüllük"
+    "text": "Kadercilik",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "FELSEFİ": {
     "text": "Düşünsel akım",
@@ -47872,10 +47778,9 @@
     "meaning_used": "kadın özelliği"
   },
   "FESAT": {
-    "text": "Entrika, hile",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "kötü niyet"
+    "text": "Ara bozan, entrika",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "FETHEDİŞ": {
     "text": "Bir yeri ele geçirme",
@@ -48447,10 +48352,9 @@
     "meaning_used": "coğrafya şehir"
   },
   "FLANEL": {
-    "text": "Yumuşak pamuklu kumaş",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "kumaş türü"
+    "text": "Yumuşak pamuklu",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "FLAMENKO": {
     "text": "İspanyol dansı",
@@ -48603,10 +48507,10 @@
     "meaning_used": "olta takımı"
   },
   "FLOK": {
-    "text": "Koyun sürüsü",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "hayvan topluluğu"
+    "text": "Üçgen ön yelken",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "eski clue İng. flock karışmasıydı ('koyun sürüsü')"
   },
   "FLORÜR": {
     "text": "Diş macununda olur",
@@ -48832,9 +48736,8 @@
   },
   "FON": {
     "text": "Mali kaynak",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "para destek"
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "FORMEL": {
     "text": "Resmi, ciddi",
@@ -49484,10 +49387,9 @@
     "meaning_used": "din"
   },
   "FÖTR": {
-    "text": "Şapka türü",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "giysi aksesuar"
+    "text": "Keçe şapka",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "FÜSUNLU": {
     "text": "Büyülü, sihirli",
@@ -50036,10 +49938,9 @@
     "meaning_used": "hareket"
   },
   "FİRAR": {
-    "text": "Kaçış, kurtulma",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "hukuk eylem"
+    "text": "Kaçış",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "FİNİKE": {
     "text": "Portakal diyarı ilçe",
@@ -50342,10 +50243,9 @@
     "meaning_used": "zıt soyut"
   },
   "FİİLEN": {
-    "text": "Gerçekte, aslında",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "zarf durum"
+    "text": "Gerçekte",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "FİYORT": {
     "text": "Norveç kıyıları",
@@ -53526,10 +53426,9 @@
     "meaning_used": "kimya"
   },
   "GONK": {
-    "text": "Çan sesi",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "ses alet"
+    "text": "Vurmalı çan",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "GONDOL": {
     "text": "Venedik'te kayık",
@@ -57615,10 +57514,9 @@
     "meaning_used": "masum"
   },
   "HAD": {
-    "text": "Sınır, limit",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "sınır"
+    "text": "Sınır, derece",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "HACİR": {
     "text": "Taşlaşmış insan",
@@ -58041,9 +57939,8 @@
   },
   "HAKİKİ": {
     "text": "Gerçek, sahici",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "doğruluk nitelik"
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "HALAT": {
     "text": "Gemi bağlama ipi",
@@ -58208,9 +58105,8 @@
   },
   "HALI": {
     "text": "Yer döşemesi",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "ev eşyası"
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "HALKASIZ": {
     "text": "Kravat, boyun bağı",
@@ -59994,10 +59890,10 @@
     "note": "eski clue 'eğlence fişeği' bileşik okumaydı"
   },
   "HAVAİLİK": {
-    "text": "İnsanın uçması",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "uçma isteği"
+    "text": "Hoppalık",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "eski clue AKTİF YANLIŞ: 'insanın uçması'"
   },
   "HAVALİ": {
     "text": "Uçak mürettebatı",
@@ -60898,10 +60794,9 @@
     "meaning_used": "metin kenarı"
   },
   "HAŞLAK": {
-    "text": "Kaynar su",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "sıcaklık"
+    "text": "Çok sıcak (su)",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "HAÇLAMAK": {
     "text": "Çarmıha germek",
@@ -65417,9 +65312,8 @@
   },
   "JEL": {
     "text": "Kaygan madde",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "kozmetik madde"
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "JOKEYLİ": {
     "text": "At üzerinde yarışan",
@@ -65961,10 +65855,9 @@
     "meaning_used": "töre kader"
   },
   "KABİNE": {
-    "text": "Devlet işleri meclisi",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "yönetim kurulu"
+    "text": "Bakanlar kurulu",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "KADAR": {
     "text": "Sınır belirten edat",
@@ -66746,9 +66639,8 @@
   },
   "KALEM": {
     "text": "Yazı aracı",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "yazı gereci"
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "KALBURCU": {
     "text": "Süzgeç yapan",
@@ -67133,10 +67025,10 @@
     "meaning_used": "fotoğrafçılık"
   },
   "KALUBELA": {
-    "text": "İnsanlar aleminden önce",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "ezeli zaman"
+    "text": "Çok eski zaman",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "günlük deyim (kalubeladan kalma); dini köken vurgulanmadı"
   },
   "KALPLIK": {
     "text": "Sevgi dolu, şefkatli",
@@ -67960,9 +67852,8 @@
   },
   "KANKA": {
     "text": "Yakın arkadaş",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "dost"
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "KANCA": {
     "text": "Balıkçının oltası",
@@ -68295,9 +68186,8 @@
   },
   "KANUN": {
     "text": "Yürürlükteki kural",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "hukuk"
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "KAPAMAK": {
     "text": "Gözleri örtmek",
@@ -68496,10 +68386,9 @@
     "meaning_used": "renk"
   },
   "KAPLAN": {
-    "text": "Ormanların yırtıcısı",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "vahşi hayvan"
+    "text": "Çizgili yırtıcı",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "KAPLAM": {
     "text": "Üzerini örtmek",
@@ -68849,10 +68738,9 @@
     "meaning_used": "spor"
   },
   "KARACA": {
-    "text": "Geyik türü",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "hayvan"
+    "text": "Bir geyik türü",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "KAPUTLUK": {
     "text": "Araba motor örtüsü",
@@ -69003,10 +68891,10 @@
     "meaning_used": "tatlı"
   },
   "KARACASU": {
-    "text": "Mürekkepli mürekkep",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "hayvan mürekkebi"
+    "text": "Aydın'ın ilçesi",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "eski clue ÇÖPTÜ ('mürekkepli mürekkep')"
   },
   "KARAMUK": {
     "text": "Siyah renkli üzüm",
@@ -69168,10 +69056,10 @@
     "meaning_used": "bitki türü"
   },
   "KARAİMCE": {
-    "text": "Kırım Yahudilerinin dili",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "dil, din"
+    "text": "Bir Kıpçak dili",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "clue'da etnik/dini kelime kullanılmadı (LADİNO emsali)"
   },
   "KARAĞI": {
     "text": "Koyu renkli at",
@@ -69270,10 +69158,10 @@
     "note": "mevcut clue doğruydu, korundu"
   },
   "KARDİNAL": {
-    "text": "Kızıl kuş türü",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "kuş türü"
+    "text": "Kızıl bir kuş",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "çift-anlamlı; kuş anlamı (Katolik rütbesi değil)"
   },
   "KARASU": {
     "text": "Sakarya'nın ilçesi",
@@ -71085,10 +70973,9 @@
     "meaning_used": "hukuk"
   },
   "KAVAİT": {
-    "text": "Arapça gramer terimi",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "dilbilgisi"
+    "text": "Kurallar (eski)",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "KAVLAMA": {
     "text": "Anlama, idrak etme",
@@ -71311,10 +71198,10 @@
     "meaning_used": "yemek et"
   },
   "KAVİM": {
-    "text": "Soy, uruk",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "topluluk"
+    "text": "Soy, boy",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "tarihsel-nötr (KABİLE emsali)"
   },
   "KAVİSLİ": {
     "text": "Eğri büğrü",
@@ -71329,10 +71216,10 @@
     "meaning_used": "yemek"
   },
   "KAVİ": {
-    "text": "Müzikte bir durak",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "müzik notası"
+    "text": "Güçlü, sağlam",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "eski clue ÇÖPTÜ ('müzikte durak')"
   },
   "KAVUNSU": {
     "text": "Karpuzgillerden",
@@ -72051,10 +71938,10 @@
     "meaning_used": "sanat zanaat"
   },
   "KAZAYAĞI": {
-    "text": "Kışın yerlere düşen",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "hava olayı"
+    "text": "Maydanozsu ot",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "eski clue ÇÖPTÜ ('kışın yere düşen') — orta güven"
   },
   "KAZAZ": {
     "text": "İpek işleyicisi",
@@ -72099,10 +71986,9 @@
     "meaning_used": "inşaat kazı"
   },
   "KAZARA": {
-    "text": "İstemeden, tesadüfen",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "zarf"
+    "text": "Yanlışlıkla",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "KAZIKÇI": {
     "text": "Dolandırıcı, sahtekar",
@@ -72880,10 +72766,10 @@
     "meaning_used": "yaralama"
   },
   "KEFELİ": {
-    "text": "Kulağa benzer",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "kulak zarı"
+    "text": "Bir kefal balığı",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "eski clue ÇÖPTÜ ('kulağa benzer') — orta güven"
   },
   "KEFEN": {
     "text": "Ölü giysisi",
@@ -73295,10 +73181,9 @@
     "meaning_used": "kelebek"
   },
   "KEMANE": {
-    "text": "Telli çalgı",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "müzik aleti"
+    "text": "Yaylı halk çalgısı",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "KEMANCI": {
     "text": "Telli çalgı çalan",
@@ -74176,10 +74061,9 @@
     "meaning_used": "evcil hayvan"
   },
   "KESE": {
-    "text": "Para taşır",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "cep eşyası"
+    "text": "Para torbası",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "KESTERE": {
     "text": "Denizden çıkan istiridye",
@@ -74397,9 +74281,8 @@
   },
   "KETEN": {
     "text": "Bitkisel lif",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "kumaş bitki"
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "KESİRSİZ": {
     "text": "Sonsuzluk işareti",
@@ -74468,10 +74351,9 @@
     "meaning_used": "mutfak gereci"
   },
   "KETE": {
-    "text": "Kuzeydoğu lezzeti",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "yöresel yiyecek"
+    "text": "Bir börek türü",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "KETUMLUK": {
     "text": "Cimri, hasis",
@@ -75282,9 +75164,8 @@
   },
   "KIRAÇLIK": {
     "text": "Verimsiz toprak",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "arazi tarım"
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "KIPTİCE": {
     "text": "Roman dili",
@@ -75701,10 +75582,9 @@
     "meaning_used": "ifade"
   },
   "KIRMAK": {
-    "text": "Parçalamak, dağıtmak",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "eylem fiil"
+    "text": "Parçalara ayırmak",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "KIRNAK": {
     "text": "Bilezik, halka",
@@ -76595,10 +76475,9 @@
     "meaning_used": "kış sporu"
   },
   "KIZAK": {
-    "text": "Kış sporu aracı",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "spor taşıt"
+    "text": "Kar aracı",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "KIYTIRIK": {
     "text": "Basit, kalitesiz",
@@ -77241,9 +77120,8 @@
   },
   "KOCATMAK": {
     "text": "Yaşlandırmak",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "yaş vermek"
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "KOCAMAN": {
     "text": "Çok büyük, devasa",
@@ -78083,10 +77961,10 @@
     "meaning_used": "tamlık bütünlük"
   },
   "KOM": {
-    "text": "Askeri rütbe",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "askeriye"
+    "text": "Dağ ağılı",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "eski clue 'rütbe' yanlıştı; kom=hayvan barınağı — orta güven"
   },
   "KOMPLO": {
     "text": "Gizli anlaşma",
@@ -78580,10 +78458,9 @@
     "meaning_used": "misafir"
   },
   "KONAK": {
-    "text": "Büyük ev, apartman",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "bina konut"
+    "text": "Büyük gösterişli ev",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "KONU": {
     "text": "Bahis, mevzu",
@@ -78944,10 +78821,9 @@
     "meaning_used": "eylem"
   },
   "KORAL": {
-    "text": "Deniz çiçeği",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "canlı resif"
+    "text": "Mercan (deniz)",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "KORE": {
     "text": "Uzak Doğu ülkesi",
@@ -80274,10 +80150,9 @@
     "meaning_used": "gereklilik"
   },
   "KREP": {
-    "text": "İnce hamur işi",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "yemek tatlı"
+    "text": "İnce gözleme",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "KRAVATLI": {
     "text": "Ceketle giyilen",
@@ -80782,10 +80657,9 @@
     "meaning_used": "tarihi terim"
   },
   "KULA": {
-    "text": "İzmir'in bir ilçesi",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "yerleşim yeri"
+    "text": "Manisa'nın ilçesi",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "KULUNLUK": {
     "text": "Köle yeri",
@@ -83358,10 +83232,9 @@
     "meaning_used": "uyku pozisyonu"
   },
   "KÖZ": {
-    "text": "Yanmış odun parçası",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "ateş"
+    "text": "Yanan odun kalıntısı",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "KÖZLEME": {
     "text": "Ateşte pişirme",
@@ -83436,10 +83309,9 @@
     "meaning_used": "mantar küf"
   },
   "KÖŞK": {
-    "text": "Gösterişli ev",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "konut"
+    "text": "Bahçeli ev",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "KÖYLÜ": {
     "text": "Kırda yaşayan insan",
@@ -84720,10 +84592,9 @@
     "meaning_used": "yüzey durumu"
   },
   "KİLİT": {
-    "text": "Kapı mandalı",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "eşya"
+    "text": "Kapı emniyeti",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "KİMLİK": {
     "text": "Tanıtım belgesi",
@@ -85211,10 +85082,10 @@
     "meaning_used": "yapı elemanı"
   },
   "KİRVELİK": {
-    "text": "Vaftiz babalığı",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "aile bağı"
+    "text": "Bir akrabalık bağı",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "eski clue YANLIŞTI ('vaftiz'=Hristiyan); kirve=sünnet — nötr genel tanım, karar edilebilir"
   },
   "KİRPİKLİ": {
     "text": "Göz kapağı uzantısı",
@@ -85259,10 +85130,9 @@
     "meaning_used": "kalabalık"
   },
   "KİRİŞ": {
-    "text": "Yay ipi",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "silah yayı"
+    "text": "Yayın gergi ipi",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "KİTAPLIK": {
     "text": "Okunanlar rafı",
@@ -85480,10 +85350,9 @@
     "meaning_used": "bitki türü"
   },
   "LAF": {
-    "text": "Boş söz, gevezelik",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "konuşma"
+    "text": "Boş söz",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "LADİNO": {
     "text": "Sefarad dili",
@@ -85630,10 +85499,9 @@
     "note": "mevcut clue doğruydu, korundu; arkeoloji bağlamı nötr"
   },
   "LAHZA": {
-    "text": "Anlık zaman dilimi",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "zaman"
+    "text": "An, kısa süre",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "KİTRE": {
     "text": "Kış uykusundaki hayvan",
@@ -85757,9 +85625,8 @@
   },
   "LAKİN": {
     "text": "Ama, fakat",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "bağlaç"
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "LAL": {
     "text": "Dili tutulmuş",
@@ -85834,10 +85701,9 @@
     "note": "lale kökü türevde kaçınılmaz"
   },
   "LAMBA": {
-    "text": "Işık veren araç",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "aydınlatma"
+    "text": "Işık aracı",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "LAHUT": {
     "text": "Manevi, uhrevi",
@@ -86399,10 +86265,9 @@
     "note": "eski clue AKTİF YANLIŞ: LAV+a okumasıydı; denizcilik komutu"
   },
   "LAYİHA": {
-    "text": "Proje taslağı",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "plan belge"
+    "text": "Yasa taslağı",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "LAUBALİ": {
     "text": "Rahat, samimi",
@@ -86523,10 +86388,10 @@
     "meaning_used": "müzik terimi"
   },
   "LEH": {
-    "text": "Polonya başkenti",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "şehir ülke"
+    "text": "Aleyh karşıtı",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "eski clue AKTİF YANLIŞ ('Polonya başkenti')"
   },
   "LEHTAR": {
     "text": "Mutfak eşyası",
@@ -86625,10 +86490,9 @@
     "meaning_used": "toprak coğrafya"
   },
   "LEBALEP": {
-    "text": "Ağzına kadar dolu",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "kapasite"
+    "text": "Ağzına dek dolu",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "LEMİS": {
     "text": "Dokunma (eski)",
@@ -87111,10 +86975,9 @@
     "note": "mevcut clue doğruydu, korundu"
   },
   "LOKAVT": {
-    "text": "İşyerinin kapanması",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "ekonomi grev"
+    "text": "İş yeri kapatma",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "LOJMAN": {
     "text": "Askeri konut",
@@ -88033,9 +87896,8 @@
   },
   "LİSANS": {
     "text": "Yetki belgesi",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "resmi izin"
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "LİRİK": {
     "text": "Şiirsel, duygusal",
@@ -88044,10 +87906,9 @@
     "meaning_used": "edebiyat"
   },
   "LİRİZM": {
-    "text": "Duygusal anlatım",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "edebiyat sanat"
+    "text": "Coşkulu anlatım",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "LİRET": {
     "text": "Kılıç türü",
@@ -88080,10 +87941,9 @@
     "note": "eski clue dayanaksızdı; hat sanatında mürekkep emdirilen lif"
   },
   "LİNK": {
-    "text": "Bağlantı, irtibat",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "internet"
+    "text": "İnternet bağlantısı",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "LİBERAL": {
     "text": "Özgürlükçü düşünce",
@@ -89430,10 +89290,10 @@
     "meaning_used": "hastalık"
   },
   "MALALAMA": {
-    "text": "Ağızdan çıkan ses",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "konuşma"
+    "text": "Mala ile sıvama",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "eski clue ÇÖPTÜ ('ağızdan çıkan ses')"
   },
   "MALAMA": {
     "text": "Samanlı tahıl",
@@ -89897,10 +89757,9 @@
     "meaning_used": "el ayası"
   },
   "MANTAR": {
-    "text": "Şapkalı, topraklı",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "bitki"
+    "text": "Şapkalı bitki",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "MANGİZ": {
     "text": "Tuzlu su balığı",
@@ -90416,10 +90275,9 @@
     "meaning_used": "giyim"
   },
   "MARKETÇİ": {
-    "text": "Tüccar, satıcı",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "meslek"
+    "text": "Market işleten",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "MARKA": {
     "text": "Ticari isim",
@@ -90488,10 +90346,9 @@
     "meaning_used": "ülke"
   },
   "MARMELAT": {
-    "text": "Meyveden yapılan reçel",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "kahvaltılık tatlı"
+    "text": "Meyve ezmesi",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "MARKAJ": {
     "text": "Futbolda rakibi engelleme",
@@ -90637,10 +90494,10 @@
     "meaning_used": "yazı gereci"
   },
   "MARİNE": {
-    "text": "Denizci, denizle ilgili",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "denizci deniz"
+    "text": "Terbiyeye yatırılmış",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "yemek anlamı; denizcilik anlamı değil — orta güven"
   },
   "MARİNAT": {
     "text": "Sirk cambazı",
@@ -90983,10 +90840,10 @@
     "meaning_used": "yayıncılık"
   },
   "MATEM": {
-    "text": "Satrançta yenme",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "oyun"
+    "text": "Yas tutma",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "eski clue AKTİF YANLIŞ: 'satrançta yenme' (o mat)"
   },
   "MATAFORA": {
     "text": "Büyük gemi",
@@ -91199,10 +91056,9 @@
     "meaning_used": "renk"
   },
   "MASÖR": {
-    "text": "Masaj yapan kişi",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "meslek"
+    "text": "Masaj yapan",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "MAVİMSİ": {
     "text": "Soluk gök rengi",
@@ -91433,10 +91289,9 @@
     "meaning_used": "yapı yüzey"
   },
   "MAZI": {
-    "text": "Geçmişte kalan şey",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "mazi anı"
+    "text": "Geçmiş zaman",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "MAZLUM": {
     "text": "Zulüm gören",
@@ -91929,9 +91784,8 @@
   },
   "MECLİS": {
     "text": "Toplantı yeri",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "kurum yer"
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "MAŞALLAH": {
     "text": "Beğeni, takdir sözü",
@@ -93345,10 +93199,9 @@
     "model": "claude-fable-5"
   },
   "MESELE": {
-    "text": "Çözülmesi gereken",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "sorun dert"
+    "text": "Sorun, iş",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "MESAHA": {
     "text": "Arazi ölçümü",
@@ -93503,10 +93356,10 @@
     "meaning_used": "edebiyat sanatı"
   },
   "METALOİT": {
-    "text": "Yarı iletken element",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "kimya element"
+    "text": "Yarı metal",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "okul kimyası (AMETAL emsali)"
   },
   "MESUDİYE": {
     "text": "Tarihi kruvazör",
@@ -93941,10 +93794,10 @@
     "meaning_used": "zaman takvim"
   },
   "MEVT": {
-    "text": "Ölüm, vefat",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "ölüm"
+    "text": "Ölüm (eski)",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "MEMAT/ECEL emsali nötr"
   },
   "MEVLEVİ": {
     "text": "Semazen elbisesi",
@@ -94259,10 +94112,9 @@
     "meaning_used": "eğitim"
   },
   "MEZURA": {
-    "text": "Ölçü aleti",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "alet"
+    "text": "Şerit metre",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "MEYİL": {
     "text": "Eğilim, yatkınlık",
@@ -94992,10 +94844,9 @@
     "note": "sıfat biçimi düzeltildi"
   },
   "MODEM": {
-    "text": "Veri dönüştürücü",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "iletişim cihazı"
+    "text": "İnternet aygıtı",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "MONAT": {
     "text": "Alman ayı",
@@ -95314,9 +95165,8 @@
   },
   "MORİNA": {
     "text": "Kuzey denizi balığı",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "balık türü"
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "MOTAMOT": {
     "text": "Aynısı, tıpkı",
@@ -96795,10 +96645,9 @@
     "meaning_used": "bitki"
   },
   "MUSTATİL": {
-    "text": "Dikdörtgen prizma",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "geometri"
+    "text": "Dikdörtgen (eski)",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "MUSANNA": {
     "text": "Aynadaki yansıma",
@@ -97782,10 +97631,9 @@
     "meaning_used": "talihsiz"
   },
   "MÜDİRE": {
-    "text": "Okulun başı",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "yönetici kadın"
+    "text": "Kadın müdür (eski)",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "MÜFTEHİR": {
     "text": "Ağır küfür",
@@ -97962,10 +97810,9 @@
     "meaning_used": "misafirperver"
   },
   "MÜKEMMEL": {
-    "text": "Kusursuz, şahane",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "sıfat nitelik"
+    "text": "Kusursuz",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "MÜHRELİ": {
     "text": "Mantarda halka izi",
@@ -98225,10 +98072,9 @@
     "meaning_used": "sıra nöbet"
   },
   "MÜNADİ": {
-    "text": "Bağıran kimse",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "seslenen kişi"
+    "text": "Tellal, çağırıcı",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "MÜLKİ": {
     "text": "Devlete ait",
@@ -100440,10 +100286,9 @@
     "note": "eski clue VAHİM YANLIŞ: 'çiftleşme dönemi' değil!"
   },
   "NADİR": {
-    "text": "Az bulunan, seyrek",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "nitelik"
+    "text": "Seyrek, az",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "NAFAKA": {
     "text": "Boşanmada ödenen",
@@ -100842,10 +100687,9 @@
     "meaning_used": "din ibadet"
   },
   "NALLAMAK": {
-    "text": "Atlara nal çakmak",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "zooloji"
+    "text": "Nal çakmak",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "NALAN": {
     "text": "Ağlayan, inleyen",
@@ -101181,10 +101025,9 @@
     "meaning_used": "cilt sorunu"
   },
   "NARVAL": {
-    "text": "Tek boynuzlu balina",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "deniz memelisi"
+    "text": "Bir kutup balinası",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "NARA": {
     "text": "Gür bağırış",
@@ -101698,10 +101541,9 @@
     "meaning_used": "eğilim"
   },
   "NECE": {
-    "text": "Nasıl, ne şekilde",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "soru zarfı"
+    "text": "Nasıl, ne dilde",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "NAÇİZLİK": {
     "text": "Alçakgönüllü ifade",
@@ -102169,10 +102011,9 @@
     "meaning_used": "felsefe"
   },
   "NEON": {
-    "text": "Soy gaz",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "kimya element"
+    "text": "Bir soy gaz",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "NERVÜRLÜ": {
     "text": "Gergin, telaşlı",
@@ -102528,10 +102369,9 @@
     "meaning_used": "hastalık"
   },
   "NEŞİDE": {
-    "text": "Şarkı, ezgi",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "müzik"
+    "text": "Ezgi, şiir",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "NEŞELİ": {
     "text": "Keyifli, sevinçli",
@@ -103169,10 +103009,10 @@
     "meaning_used": "felsefe akım"
   },
   "NİFAK": {
-    "text": "Ara bozuculuk",
+    "text": "Geçimsizlik",
     "source": "claude_audit",
     "model": "claude-fable-5",
-    "note": "günlük deyim anlamı (nifak sokmak); nötr tanım"
+    "note": "SAHİP KARARI (2026-07-05): geçimsizlik anlamı; dini bağlam yazılmaz."
   },
   "NİCELİK": {
     "text": "Miktar, adet",
@@ -103199,10 +103039,10 @@
     "meaning_used": "ruh hali"
   },
   "NİKBET": {
-    "text": "Mizahi taklit",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "edebiyat taklit"
+    "text": "Talihsizlik",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "eski clue ÇÖPTÜ ('mizahi taklit')"
   },
   "NİCEL": {
     "text": "Miktar belirten",
@@ -103389,10 +103229,10 @@
     "meaning_used": "kavram"
   },
   "NİSAN": {
-    "text": "Yılın ikinci ayı",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "takvim zaman"
+    "text": "Bir bahar ayı",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "eski clue AKTİF YANLIŞ ('ikinci ay')"
   },
   "NİSPET": {
     "text": "Karşılaştırma, oran",
@@ -103796,10 +103636,9 @@
     "meaning_used": "anatomi"
   },
   "ODAK": {
-    "text": "Dikkatini toplama",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "zihin eylem"
+    "text": "Dikkat merkezi",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "ODALI": {
     "text": "Mekanı olan",
@@ -104000,10 +103839,9 @@
     "meaning_used": "devlet memuru"
   },
   "OKKA": {
-    "text": "Ağırlık ölçüsü",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "eski ölçü"
+    "text": "Eski ağırlık ölçüsü",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "OKEY": {
     "text": "Taş kağıt makas oyunu",
@@ -104425,10 +104263,9 @@
     "meaning_used": "genel durum"
   },
   "OLAYLI": {
-    "text": "Gürültülü, şatafatlı",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "tören"
+    "text": "Olay dolu",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "OLDU": {
     "text": "Gerçekleşti, bitti",
@@ -106298,10 +106135,9 @@
     "meaning_used": "biyoloji beslenme"
   },
   "OTOBAN": {
-    "text": "Hızlı ulaşım yolu",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "yolculuk"
+    "text": "Hızlı yol",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "OTARMA": {
     "text": "Hayvanı otlatma",
@@ -106453,10 +106289,9 @@
     "meaning_used": "fiziksel eylem"
   },
   "OVALIK": {
-    "text": "Düz arazi",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "coğrafya"
+    "text": "Düz geniş arazi",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "OVASIZ": {
     "text": "Dağsız, tepesiz",
@@ -107112,10 +106947,9 @@
     "meaning_used": "yerleşim yeri"
   },
   "OĞULLU": {
-    "text": "Evlat, evlatlık",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "aile soy"
+    "text": "Oğlu olan",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "OYUVERME": {
     "text": "Oyunu kullanma",
@@ -107615,10 +107449,9 @@
     "meaning_used": "yapı elemanı"
   },
   "PANO": {
-    "text": "Duyuru tahtası",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "duyuru yeri"
+    "text": "İlan tahtası",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "PANDA": {
     "text": "Büyük Çin ayısı",
@@ -108073,10 +107906,9 @@
     "meaning_used": "tıbbi"
   },
   "PARKA": {
-    "text": "Kışlık, kapüşonlu",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "giysi"
+    "text": "Kapüşonlu mont",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "PARMAKLI": {
     "text": "El uzvu",
@@ -108151,10 +107983,9 @@
     "meaning_used": "ikili"
   },
   "PARLAK": {
-    "text": "Işıltılı, göz alıcı",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "görünüş"
+    "text": "Işıltılı",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "PARSELLİ": {
     "text": "Bölümlere ayrılmış",
@@ -109050,9 +108881,8 @@
   },
   "PAŞA": {
     "text": "Osmanlı rütbesi",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "askeri unvan"
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "PAZVANT": {
     "text": "Kolluk, manşet",
@@ -109343,10 +109173,9 @@
     "meaning_used": "sağlık hastalığı"
   },
   "PEDERANE": {
-    "text": "Baba gibi davranan",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "aile babalık"
+    "text": "Babaca",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "PEMBE": {
     "text": "Gül rengi",
@@ -109987,10 +109816,10 @@
     "meaning_used": "yapı"
   },
   "PERİLİ": {
-    "text": "Korku dolu, ürkütücü",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "korkunç"
+    "text": "Ürkütücü, tekinsiz",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "cin/doğaüstü kelimesinden kaçınıldı"
   },
   "PESÜS": {
     "text": "Ayaklı giysi",
@@ -110479,9 +110308,8 @@
   },
   "PLAK": {
     "text": "Dönerek çalan",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "müzik aleti"
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "PLAKA": {
     "text": "Araçların kimliği",
@@ -110761,9 +110589,8 @@
   },
   "PLATİN": {
     "text": "Değerli beyaz metal",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "element"
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "POHPOH": {
     "text": "İnkar etmek, yalanlamak",
@@ -113736,10 +113563,9 @@
     "meaning_used": "inşaat eğim"
   },
   "RAKİPLİK": {
-    "text": "Husumet, çekişme",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "düşmanlık"
+    "text": "Çekişme, hasımlık",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "RANT": {
     "text": "Emeksiz gelir",
@@ -114854,10 +114680,9 @@
     "meaning_used": "hasar"
   },
   "REZENE": {
-    "text": "Anason kokulu bitki",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "baharat ot"
+    "text": "Anason kokulu ot",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "REZERV": {
     "text": "Saklanan, biriktirilen",
@@ -114925,10 +114750,9 @@
     "meaning_used": "tavır"
   },
   "REVANİCİ": {
-    "text": "Tatlı türü",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "yiyecek tatlı"
+    "text": "Revani satan",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "REZONANS": {
     "text": "Titreşim etkisi",
@@ -115254,9 +115078,9 @@
   },
   "ROZE": {
     "text": "Pembe şarap",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "içecek"
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "ROM/SAKE emsali: özendirmesiz içki tanımı"
   },
   "ROP": {
     "text": "Hukuki terim",
@@ -115952,10 +115776,9 @@
     "meaning_used": "fiziksel özellik"
   },
   "RİCAT": {
-    "text": "Geri çekilme eylemi",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "geri dönme"
+    "text": "Geri çekilme",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "RİMEL": {
     "text": "Kirpik boyası",
@@ -116113,10 +115936,9 @@
     "meaning_used": "karakter özelliği"
   },
   "RİYA": {
-    "text": "İki yüzlülük, ikiyüzlülük",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "ahlak"
+    "text": "İki yüzlülük",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "RİZİKO": {
     "text": "Tehlikeli durum",
@@ -118716,10 +118538,9 @@
     "note": "bileşik kelimede kök paylaşımı kaçınılmaz"
   },
   "SARI": {
-    "text": "Güneş rengi",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "renk"
+    "text": "Limon rengi",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "SARARTI": {
     "text": "Solgunlaştıran",
@@ -119265,10 +119086,9 @@
     "meaning_used": "ticaret"
   },
   "SAVAK": {
-    "text": "Su yolu",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "nehir"
+    "text": "Baraj su kanalı",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "SATSUMA": {
     "text": "Japon mandalinası",
@@ -121493,10 +121313,10 @@
     "meaning_used": "ırkçılık nefret"
   },
   "SENOZOİK": {
-    "text": "Üçüncü jeolojik zaman",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "jeolojik devir"
+    "text": "Memeliler çağı",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "popüler bilim (TRİYAS/NEOLİTİK emsali)"
   },
   "SENEYE": {
     "text": "Gelecek yıl",
@@ -121722,9 +121542,8 @@
   },
   "SERA": {
     "text": "Cam ev",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "tarım"
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "SERBEST": {
     "text": "Özgür, bağımsız",
@@ -121918,10 +121737,9 @@
     "meaning_used": "dağıtmak para"
   },
   "SERDAR": {
-    "text": "Komutan, baş",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "rütbe unvan"
+    "text": "Komutan (eski)",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "SERPİLME": {
     "text": "Saça yağ damlatma",
@@ -122570,10 +122388,9 @@
     "meaning_used": "fiil geçmiş zaman"
   },
   "SEYREKÇE": {
-    "text": "Nadiren, ara sıra",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "zarf zaman"
+    "text": "Ara sıra",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "SEYFİYE": {
     "text": "Kılıç kalkan ehli",
@@ -124467,10 +124284,10 @@
     "meaning_used": "reklamcı ikna"
   },
   "SKİF": {
-    "text": "Tek kürekli sandal",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "küçük tekne"
+    "text": "Yarış kayığı",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "KİK emsali"
   },
   "SMOKİNLİ": {
     "text": "Kravatlı resmi giysi",
@@ -124515,10 +124332,9 @@
     "meaning_used": "çocuk oyunu"
   },
   "SODALI": {
-    "text": "Maden suyu gibi",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "içecek gazlı"
+    "text": "Sodası olan",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "SNOBİZM": {
     "text": "Kendini beğenmişlik",
@@ -126001,9 +125817,8 @@
   },
   "SPİRAL": {
     "text": "Sarmal, burgu",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "şekil"
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "SPİKER": {
     "text": "Haber sunucusu",
@@ -126113,9 +125928,8 @@
   },
   "SPOT": {
     "text": "Sahne ışığı",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "aydınlatma"
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "STAT": {
     "text": "Stadyum",
@@ -129061,10 +128875,10 @@
     "meaning_used": "matematik"
   },
   "SİGALA": {
-    "text": "Susamaz",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "susuzluk"
+    "text": "Bir reçineli ağaç",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "sığla ağacı; eski clue ÇÖPTÜ"
   },
   "SÜZÜŞ": {
     "text": "Uçakla yapılan iniş",
@@ -129295,10 +129109,9 @@
     "meaning_used": "okul araç"
   },
   "SİLKİNİŞ": {
-    "text": "Vücuttan atılan",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "hareket"
+    "text": "Silkinme anı",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "SİLO": {
     "text": "Tahıl deposu",
@@ -129885,10 +129698,9 @@
     "meaning_used": "elektrik"
   },
   "SİRK": {
-    "text": "Hayvan gösterisi",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "eğlence"
+    "text": "Gösteri çadırı",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "SİNİRSİZ": {
     "text": "Aceleci, telaşlı",
@@ -130506,10 +130318,9 @@
     "meaning_used": "ayakkabı parçası"
   },
   "TABELALI": {
-    "text": "İşaretli, isimli",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "levhalı"
+    "text": "Levhası olan",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "TABETME": {
     "text": "Hükmetme, yönetme",
@@ -132313,10 +132124,9 @@
     "model": "claude-fable-5"
   },
   "TANIK": {
-    "text": "Şahitlik eden",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "hukuk"
+    "text": "Şahit",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "TANIŞIK": {
     "text": "Bildik, aşina",
@@ -132769,10 +132579,9 @@
     "meaning_used": "saç bakımı"
   },
   "TARAMAK": {
-    "text": "Saçı düzeltmek",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "saç bakımı"
+    "text": "Tarakla düzeltmek",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "TARAKÇI": {
     "text": "Saç düzeltir",
@@ -132948,10 +132757,9 @@
     "note": "eski clue 'ağırlık ölçüsü' TARTI karışmasıydı"
   },
   "TARIM": {
-    "text": "Ürün yetiştirme",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "ziraat"
+    "text": "Ziraat",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "TARATMAK": {
     "text": "Tarakla açtırmak",
@@ -133143,10 +132951,9 @@
     "meaning_used": "takvim tarih"
   },
   "TASALI": {
-    "text": "Üzgün, dertli",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "duygusal durum"
+    "text": "Kaygılı, üzgün",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "TARİK": {
     "text": "Sufi yol",
@@ -135218,10 +135025,9 @@
     "meaning_used": "korkutucu"
   },
   "TEHDİT": {
-    "text": "Tehlike, korkutma",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "korku tehlike"
+    "text": "Gözdağı",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "TEKEFFÜL": {
     "text": "Söyleniş biçimi",
@@ -135553,10 +135359,9 @@
     "meaning_used": "siyasi görüş"
   },
   "TEKEL": {
-    "text": "Tek satıcı",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "ekonomi tekelci"
+    "text": "Tek elde satış",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "TEFAHHUS": {
     "text": "Hava alma yeri",
@@ -135571,10 +135376,9 @@
     "meaning_used": "felsefe soyut"
   },
   "TEKİL": {
-    "text": "Tek başına olan",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "sayı dilbilgisi"
+    "text": "Çoğul karşıtı",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "TEKİDEN": {
     "text": "Tek başına olan",
@@ -135613,9 +135417,9 @@
   },
   "TEKİLA": {
     "text": "Meksika içkisi",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "alkol"
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "ROM/SAKE emsali"
   },
   "TEKİN": {
     "text": "Uğursuz olmayan",
@@ -136720,10 +136524,9 @@
     "meaning_used": "hareket kuvvet"
   },
   "TEPİ": {
-    "text": "Atın hareketi",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "hayvan"
+    "text": "İçgüdüsel dürtü",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "TEPKİN": {
     "text": "Ani hareket, sıçrama",
@@ -136774,10 +136577,9 @@
     "meaning_used": "sinirli hareket"
   },
   "TEPİK": {
-    "text": "Tekme, tekmelemek",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "hareket"
+    "text": "Tekme (halk)",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "TEPİR": {
     "text": "Yumuşak zemin",
@@ -137159,10 +136961,9 @@
     "meaning_used": "davranış tutum"
   },
   "TERSLEME": {
-    "text": "Azarlama, paylama",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "kaba konuşma"
+    "text": "Azarlama",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "TERSİNME": {
     "text": "Geriye akış",
@@ -138285,10 +138086,9 @@
     "meaning_used": "tıp bilim"
   },
   "TEŞVİK": {
-    "text": "Cesaretlendirme, özendirme",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "motive etme"
+    "text": "Özendirme",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "TIFIL": {
     "text": "Ufak tefek, ufaklık",
@@ -140307,10 +140107,9 @@
     "meaning_used": "geçiş yönü"
   },
   "TRAVMA": {
-    "text": "Ruhsal yaralanma",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "psikoloji"
+    "text": "Ruhsal örselenme",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "TRAMPLEN": {
     "text": "Zıplama yeri",
@@ -140331,10 +140130,10 @@
     "meaning_used": "taşıma"
   },
   "TRAS": {
-    "text": "Sakal giderme",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "bakım tıraş"
+    "text": "Volkanik tüf tozu",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "tras çimentosu katkısı; tıraş ile karışmasın"
   },
   "TRETUVAR": {
     "text": "Sokak kenarı kaldırım",
@@ -140577,10 +140376,10 @@
     "meaning_used": "ordu"
   },
   "TRİTON": {
-    "text": "Deniz tanrısı mızrağı",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "mitoloji"
+    "text": "Deniz tanrısı",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "mitoloji (EROS emsali)"
   },
   "TRİKO": {
     "text": "Örgü giysi",
@@ -140661,10 +140460,9 @@
     "meaning_used": "eşya taşıma"
   },
   "TULUAT": {
-    "text": "Sahne eseri",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "tiyatro eseri"
+    "text": "Doğaçlama oyun",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "TULUMCU": {
     "text": "Deriden giysi yapan",
@@ -142901,10 +142699,9 @@
     "meaning_used": "bağımlı"
   },
   "TİRAT": {
-    "text": "Sahne oyunu repliği",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "tiyatro"
+    "text": "Tiyatro söylevi",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "TİRİT": {
     "text": "Tavuklu börek",
@@ -143298,10 +143095,10 @@
     "meaning_used": "sıfat"
   },
   "UFUL": {
-    "text": "Batık gemi",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "gemi enkazı"
+    "text": "Batış (eski)",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "yıldızın batışı; eski clue çöptü"
   },
   "UKNUM": {
     "text": "Sayısal değer",
@@ -143996,10 +143793,9 @@
     "meaning_used": "şehir ile ilgili"
   },
   "UNSU": {
-    "text": "Sıvı olmayan",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "katı madde"
+    "text": "Un kıvamlı",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "USANIŞ": {
     "text": "Bıkkınlık, bezginlik",
@@ -145221,9 +145017,8 @@
   },
   "UÇAK": {
     "text": "Hava taşıtı",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "ulaşım aracı"
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "UÇKURLUK": {
     "text": "Gemi güvertesi",
@@ -145603,10 +145398,9 @@
     "meaning_used": "bankacılık"
   },
   "UŞAK": {
-    "text": "Efendi yardımcısı",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "hizmetkar"
+    "text": "Hizmetkar; bir il",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "VADETME": {
     "text": "Söz vermek",
@@ -145681,10 +145475,10 @@
     "meaning_used": "sebep bağlaç"
   },
   "VAH": {
-    "text": "Hayvan sesi",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "ünlem ses"
+    "text": "Acıma ünlemi",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "eski clue ÇÖPTÜ ('hayvan sesi')"
   },
   "VAGON": {
     "text": "Trenin taşıma bölümü",
@@ -145855,10 +145649,9 @@
     "meaning_used": "kötülük"
   },
   "VAKAR": {
-    "text": "Ciddiyet, ağırbaşlılık",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "tutum tavır"
+    "text": "Ağırbaşlılık",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "VAKİT": {
     "text": "Zaman, an",
@@ -145904,9 +145697,8 @@
   },
   "VAKA": {
     "text": "Olay, durum",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "olay durum"
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "VAKVAK": {
     "text": "Karga sesi",
@@ -145993,10 +145785,9 @@
     "meaning_used": "element sembolü"
   },
   "VANA": {
-    "text": "Sıvı akışını kesen",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "tesisat"
+    "text": "Boru musluğu",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "VAKIF": {
     "text": "Hayır kurumu",
@@ -146394,10 +146185,9 @@
     "meaning_used": "memleket"
   },
   "VATANİ": {
-    "text": "Memleketle ilgili",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "ulusal aidiyet"
+    "text": "Yurtla ilgili",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "VASİYET": {
     "text": "Son istekler",
@@ -146915,10 +146705,9 @@
     "meaning_used": "alkol içecek"
   },
   "VEREV": {
-    "text": "Çapraz, meyilli",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "yönelim"
+    "text": "Meyilli, çapraz",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "VEKİLLİK": {
     "text": "Temsilcilik makamı",
@@ -147226,9 +147015,8 @@
   },
   "VETO": {
     "text": "Reddetme hakkı",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "siyasi yetki"
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "VIRLAMA": {
     "text": "Motor sesi",
@@ -147771,10 +147559,9 @@
     "meaning_used": "sağlık"
   },
   "VİDA": {
-    "text": "Döndürerek geçen",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "alet"
+    "text": "Burgulu çivi",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "VİGLACI": {
     "text": "Sırt çantası",
@@ -148089,10 +147876,10 @@
     "meaning_used": "sağlık"
   },
   "YABA": {
-    "text": "Buğday başağı taşıyan",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "tarım aleti"
+    "text": "Ekin savuran çatal",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "eski clue kırıktı"
   },
   "VİTİR": {
     "text": "Namazda tek rekat",
@@ -148149,10 +147936,9 @@
     "meaning_used": "vahşi hayvan"
   },
   "YABANİ": {
-    "text": "Evcil olmayan",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "doğa hayvan"
+    "text": "Vahşi, evcilsiz",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "YAD": {
     "text": "Yabancı, el",
@@ -149361,9 +149147,8 @@
   },
   "YANSIMAK": {
     "text": "Aynada görünmek",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "görüntü belirmek"
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "YANSI": {
     "text": "Aynadaki görüntü",
@@ -149792,9 +149577,8 @@
   },
   "YARASA": {
     "text": "Uçan memeli",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "hayvan"
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "YAPTIRIM": {
     "text": "Mecburi ceza",
@@ -149815,10 +149599,9 @@
     "meaning_used": "varlık"
   },
   "YARALAMA": {
-    "text": "Zarar verme eylemi",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "hasar verme"
+    "text": "Zarar verme",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "YARATIŞ": {
     "text": "İlahi icra",
@@ -150241,10 +150024,9 @@
     "meaning_used": "yer şekli"
   },
   "YASLAMAK": {
-    "text": "Sırtını dayamak",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "hareket"
+    "text": "Bir yere dayamak",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "YASAKSIZ": {
     "text": "Serbest, kanunsuz",
@@ -150271,10 +150053,9 @@
     "meaning_used": "eşya"
   },
   "YASLI": {
-    "text": "Üzgün, matemde",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "duygusal durum"
+    "text": "Matemli",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "YASLANIŞ": {
     "text": "Sırtını dayama",
@@ -153672,10 +153453,10 @@
     "meaning_used": "lezzet"
   },
   "YOMA": {
-    "text": "Sırt üstü düşüş",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "güreş"
+    "text": "Kalın halat",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "eski clue ÇÖPTÜ ('sırt üstü düşüş')"
   },
   "YOLMAK": {
     "text": "Tüyleri çekmek",
@@ -158762,10 +158543,9 @@
     "meaning_used": "ünlü"
   },
   "ÇAPMAK": {
-    "text": "Saldırgan hareket",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "saldırı"
+    "text": "Saldırmak (halk)",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "ÇAPKIMAK": {
     "text": "Gözle oynamak",
@@ -159151,10 +158931,10 @@
     "meaning_used": "işlem türü"
   },
   "ÇARŞAFLI": {
-    "text": "Kadın örtüsü",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "giyim"
+    "text": "Çarşaf giymiş",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "ÇARŞAF (giysi) emsali nötr"
   },
   "ÇARŞAMBA": {
     "text": "Haftanın ortası",
@@ -159683,10 +159463,10 @@
     "meaning_used": "kuş türü"
   },
   "ÇAYAN": {
-    "text": "Sırt üstü düşüş",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "spor takla"
+    "text": "Akrep (halk)",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "eski clue ÇÖPTÜ ('sırt üstü düşüş')"
   },
   "ÇAYELİ": {
     "text": "Çay bitkisi yeri",
@@ -159941,10 +159721,9 @@
     "meaning_used": "sima"
   },
   "ÇEKMEK": {
-    "text": "İçe doğru hareket",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "fiil"
+    "text": "İtme karşıtı",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "ÇEKEMEZ": {
     "text": "Haset, hasetçi",
@@ -160530,9 +160309,8 @@
   },
   "ÇENELİ": {
     "text": "Çok konuşan",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "geveze"
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "ÇEMİŞ": {
     "text": "Taze peynir türü",
@@ -161567,10 +161345,9 @@
     "meaning_used": "ses yankı"
   },
   "ÇIRAK": {
-    "text": "Usta yanındaki",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "meslek öğrenen"
+    "text": "Usta yardımcısı",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "ÇINLAK": {
     "text": "Ses, tını",
@@ -161807,10 +161584,9 @@
     "meaning_used": "hava olayı"
   },
   "ÇIYAN": {
-    "text": "Çok bacaklı böcek",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "haşere"
+    "text": "Çok ayaklı böcek",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "ÇITLAYIŞ": {
     "text": "Kuş sesi",
@@ -164970,10 +164746,10 @@
     "meaning_used": "zaman zarfı"
   },
   "ÖNEL": {
-    "text": "Öne doğru eğilme",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "selamlama"
+    "text": "Süre, mühlet",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "eski clue ÇÖPTÜ ('öne eğilme')"
   },
   "ÖNEM": {
     "text": "Kıymet, ehemmiyet",
@@ -167333,10 +167109,9 @@
     "meaning_used": "duygu ünlemi"
   },
   "ÜNİTER": {
-    "text": "Tek bir bütün",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "tek parça"
+    "text": "Merkeziyetçi",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "ÜNİFORMA": {
     "text": "Tek tip giysi",
@@ -167998,10 +167773,9 @@
     "meaning_used": "meslek"
   },
   "ÜTÜLETME": {
-    "text": "Kumaş düzeltme işi",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "ütüleme"
+    "text": "Ütü yaptırma",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "ÜTÜLMEK": {
     "text": "Kırışıklık giderme",
@@ -168603,10 +168377,9 @@
     "meaning_used": "topluluk"
   },
   "İBRE": {
-    "text": "Saat göstergesi",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "zaman ölçer"
+    "text": "Ölçek oku",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "İBRAZ": {
     "text": "Sunma, gösterme",
@@ -168650,10 +168423,9 @@
     "meaning_used": "dokuma materyali"
   },
   "İBİKLİ": {
-    "text": "Horoz başı",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "hayvan ibiği"
+    "text": "İbiği olan",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "İBRANAME": {
     "text": "Borçtan kurtuluş belgesi",
@@ -168787,10 +168559,9 @@
     "meaning_used": "zorlama eylem"
   },
   "İDARE": {
-    "text": "Yönetim, sevk",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "yönetme işi"
+    "text": "Yönetim",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "İCAZET": {
     "text": "İzin, ruhsat",
@@ -169536,10 +169307,9 @@
     "meaning_used": "tıbbi ihtiyaç"
   },
   "İKAME": {
-    "text": "Yerine geçme",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "değiştirme"
+    "text": "Yerine koyma",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "İKRAH": {
     "text": "Tiksinti, nefret",
@@ -169992,10 +169762,9 @@
     "meaning_used": "tarih unvan"
   },
   "İLAM": {
-    "text": "Mahkeme kararı",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "hukuk"
+    "text": "Mahkeme belgesi",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "İLENÇ": {
     "text": "Lanet, beddua",
@@ -170259,16 +170028,15 @@
     "meaning_used": "alakalı"
   },
   "İLETİŞME": {
-    "text": "Haberleşme biçimi",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "iletişim"
+    "text": "Haberleşme",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "İLKAH": {
-    "text": "İlk kez yapılan",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "başlangıç"
+    "text": "Döllenme",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "klinik-nötr (MESANE/RAHİM emsali)"
   },
   "İLKTEN": {
     "text": "Başlangıçtan beri",
@@ -170342,10 +170110,9 @@
     "note": "eski clue İLİM karışmasıydı ('bilgi')"
   },
   "İLKİN": {
-    "text": "Başlangıçta, evvela",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "zaman sıralaması"
+    "text": "İlk olarak",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "İLLAKİ": {
     "text": "Ne olursa olsun",
@@ -170766,10 +170533,9 @@
     "meaning_used": "din inanç"
   },
   "İMAR": {
-    "text": "Yapılaşma izni",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "belediye inşaat"
+    "text": "Bayındırlık",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "İMGELEM": {
     "text": "Zihinde canlandırma",
@@ -171952,10 +171718,9 @@
     "note": "eski clue İN+iyelik okumasıydı ('hayvan yuvası'); TDK: kocanın erkek kardeşi — çengel klasiği"
   },
   "İNŞA": {
-    "text": "Yapı kurma işi",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "yapı işleri"
+    "text": "Yapı kurma",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "İNSİRAFİ": {
     "text": "Tek başına kalma",
@@ -172042,10 +171807,10 @@
     "meaning_used": "ses ağrı"
   },
   "İPKA": {
-    "text": "Miras bırakma",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "hukuk vasiyet"
+    "text": "Görevde bırakma",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "eski clue AKTİF YANLIŞ ('miras bırakma')"
   },
   "İPLEMEK": {
     "text": "İplik yapmak",
@@ -172162,10 +171927,9 @@
     "meaning_used": "zanaat ip yapımı"
   },
   "İPOTEK": {
-    "text": "Teminat gösterilen",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "mülk rehin"
+    "text": "Tapu teminatı",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "İPTİLA": {
     "text": "Zoraki bağımlılık",
@@ -172316,10 +172080,9 @@
     "meaning_used": "duygu tepki"
   },
   "İRKMEK": {
-    "text": "Birden irkilmek",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "ani tepki"
+    "text": "Ürküp sıçramak",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "İRKİLTEÇ": {
     "text": "Korkutan şey",
@@ -172512,9 +172275,8 @@
   },
   "İRŞAT": {
     "text": "Doğru yolu gösterme",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "rehberlik"
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "İRİLEŞME": {
     "text": "Büyüme, gelişme",
@@ -173632,9 +173394,8 @@
   },
   "İTEKLEME": {
     "text": "Hafifçe itme",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "hareket"
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "İSİMLİ": {
     "text": "Adı olan",
@@ -173900,10 +173661,9 @@
     "meaning_used": "din iman"
   },
   "İTİLAFÇI": {
-    "text": "Anlaşmaya yanaşan",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "diplomasi"
+    "text": "Uzlaşmacı",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "İTİ": {
     "text": "İtme eylemi",
@@ -173942,10 +173702,9 @@
     "note": "eski clue AKTİF YANLIŞ: 'yardım etme' tersiydi; mecaz dışlanma anlamı"
   },
   "İTİDALLİ": {
-    "text": "Ölçülü, kararında",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "tutum"
+    "text": "Ölçülü",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "İTİNA": {
     "text": "Özen, dikkat",
@@ -174108,10 +173867,10 @@
     "note": "mevcut clue doğruydu, korundu"
   },
   "İVİNTİ": {
-    "text": "Sıvı madde",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "akışkan"
+    "text": "Su akıntısı",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "suyun hızlandığı yer; eski clue çöptü — orta güven"
   },
   "İTRİYUM": {
     "text": "Yapay element",
@@ -174320,10 +174079,10 @@
     "meaning_used": "belirsiz"
   },
   "İZAM": {
-    "text": "Emir verme",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "komut"
+    "text": "Abartma (eski)",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "eski clue ÇÖPTÜ ('emir verme') — orta güven"
   },
   "İZAFE": {
     "text": "Bağlaç görevi",
@@ -176270,10 +176029,10 @@
     "note": "mevcut clue doğruydu, korundu"
   },
   "ŞAMAMA": {
-    "text": "İbadet yeri",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "ibadethane"
+    "text": "Kokulu küçük kavun",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "eski clue ÇÖPTÜ ('ibadet yeri')"
   },
   "ŞANSIZ": {
     "text": "Talihsiz, bahtsız",
@@ -176402,10 +176161,9 @@
     "meaning_used": "ünlü şöhretli"
   },
   "ŞAPLAK": {
-    "text": "Tokat, şamar",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "vuruş türü"
+    "text": "Şamar, tokat",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "ŞAPKASIZ": {
     "text": "Başı açık kalan",
@@ -176480,10 +176238,9 @@
     "meaning_used": "inşaat aracı"
   },
   "ŞAPŞALAK": {
-    "text": "Aptalca davranış",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "akılsızlık"
+    "text": "Sakar, dağınık",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "ŞAPŞAL": {
     "text": "Aptalca, salakça",
@@ -176617,10 +176374,9 @@
     "meaning_used": "müzisyen"
   },
   "ŞART": {
-    "text": "Gereklilik, koşul",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "durum"
+    "text": "Koşul",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "ŞARKILI": {
     "text": "Ezgi dolu, türkülü",
@@ -176784,10 +176540,10 @@
     "meaning_used": "gemi türü"
   },
   "ŞAZ": {
-    "text": "Kısa, keskin ses",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "hayvan sesi"
+    "text": "Kural dışı",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "eski clue ÇÖPTÜ ('kısa keskin ses')"
   },
   "ŞAVUL": {
     "text": "Yırtık, sökük",
@@ -176844,10 +176600,9 @@
     "meaning_used": "edebiyat sanatı"
   },
   "ŞAİBE": {
-    "text": "Leke, kusur",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "kusur leke"
+    "text": "Kuşku, leke",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "ŞASİ": {
     "text": "Araba iskeleti",
@@ -176898,10 +176653,10 @@
     "note": "eski clue AKTİF YANLIŞ: ŞAŞAA (gösteriş) karışmasıydı; şaşırıp bocalamak"
   },
   "ŞARLAMAK": {
-    "text": "Ağzı açık kalmak",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "şaşırmak"
+    "text": "Şarıl şarıl akmak",
+    "source": "claude_audit",
+    "model": "claude-fable-5",
+    "note": "eski clue ÇÖPTÜ ('ağzı açık kalmak')"
   },
   "ŞAŞIRTI": {
     "text": "Beklenmedik durum",
@@ -177006,10 +176761,9 @@
     "meaning_used": "bitki"
   },
   "ŞEAMET": {
-    "text": "Uğursuzluk, felaket",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "kötü talih"
+    "text": "Uğursuzluk",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "ŞEBEKÇİ": {
     "text": "Sinsi, kurnaz kimse",
@@ -177540,10 +177294,9 @@
     "meaning_used": "tatlılık"
   },
   "ŞENLENİŞ": {
-    "text": "Neşelenme, sevinç",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "duygu durum"
+    "text": "Neşelenme",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "ŞEHİR": {
     "text": "Büyük yerleşim yeri",
@@ -178367,10 +178120,9 @@
     "meaning_used": "yer zarfı"
   },
   "ŞUT": {
-    "text": "Topa vurmak",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "spor vuruş"
+    "text": "Kaleye vuruş",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "ŞOROLOP": {
     "text": "Çikolata lezzeti",
@@ -178881,10 +178633,9 @@
     "meaning_used": "gıda enzimi"
   },
   "ŞİRRET": {
-    "text": "Huysuz, geçimsiz",
-    "source": "gemini",
-    "model": "gemini-2.5-flash-lite",
-    "meaning_used": "karakter"
+    "text": "Huysuz, kavgacı",
+    "source": "claude_audit",
+    "model": "claude-fable-5"
   },
   "ŞİNANAY": {
     "text": "Meşhur şarkı",
