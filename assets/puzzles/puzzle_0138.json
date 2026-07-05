@@ -1012,7 +1012,7 @@
         }
       ],
       "clue": {
-        "text": "Kraliyet ailesi",
+        "text": "Ürperti (eski)",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1196,7 +1196,7 @@
         }
       ],
       "clue": {
-        "text": "Zararsız, sakin",
+        "text": "İyilik yanlısı",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1244,7 +1244,7 @@
         }
       ],
       "clue": {
-        "text": "Para saklanan yer",
+        "text": "Kasası olan",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1300,7 +1300,7 @@
         }
       ],
       "clue": {
-        "text": "Acımsı tat",
+        "text": "Burukluk",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1628,7 +1628,7 @@
         }
       ],
       "clue": {
-        "text": "İğneyle işlenen",
+        "text": "İğne işi kenar süsü",
         "arrow": "down",
         "word_id": "D10",
         "image_id": null,

@@ -853,7 +853,7 @@
         }
       ],
       "clue": {
-        "text": "İstanbul'da semt",
+        "text": "Su yalağı; semt",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -957,7 +957,7 @@
         }
       ],
       "clue": {
-        "text": "İşaret, alamet",
+        "text": "Hızla geçme sesi",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1317,7 +1317,7 @@
         }
       ],
       "clue": {
-        "text": "İletişim, irtibat",
+        "text": "Ulaşım (eski)",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1529,7 +1529,7 @@
         }
       ],
       "clue": {
-        "text": "Baharatlı içecek",
+        "text": "Kakule katılmış",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,

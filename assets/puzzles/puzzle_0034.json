@@ -943,7 +943,7 @@
         }
       ],
       "clue": {
-        "text": "Eleştiri, kusur bulma",
+        "text": "Eleştiri",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -1311,7 +1311,7 @@
         }
       ],
       "clue": {
-        "text": "Pantolon kumaşına işlemek",
+        "text": "Yükseklik işaretleme",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1439,7 +1439,7 @@
         }
       ],
       "clue": {
-        "text": "Tatlı, yumuşak şeker",
+        "text": "Bayram şekerlemesi",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1495,7 +1495,7 @@
         }
       ],
       "clue": {
-        "text": "Herkesin giydiği aynı giysi",
+        "text": "Tek tip giysi",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,

@@ -902,7 +902,7 @@
         }
       ],
       "clue": {
-        "text": "Çok az kalmış",
+        "text": "Çok az (kaldı)",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -1318,7 +1318,7 @@
         }
       ],
       "clue": {
-        "text": "Hafifçe ayırma",
+        "text": "Azıcık açtırma",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1358,7 +1358,7 @@
         }
       ],
       "clue": {
-        "text": "Yanardağdan akan",
+        "text": "Halat çekme komutu",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1430,7 +1430,7 @@
         }
       ],
       "clue": {
-        "text": "Güncel durum",
+        "text": "Kadın çarşafı (halk)",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1538,7 +1538,7 @@
         }
       ],
       "clue": {
-        "text": "İdrar torbası",
+        "text": "Boşaltım kesesi",
         "arrow": "down",
         "word_id": "D7",
         "image_id": null,
@@ -1614,7 +1614,7 @@
         }
       ],
       "clue": {
-        "text": "Japon içkisi",
+        "text": "Japon pirinç içkisi",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,

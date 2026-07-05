@@ -1019,7 +1019,7 @@
         }
       ],
       "clue": {
-        "text": "Cezadan kurtulmuş",
+        "text": "Yükümlülük dışı",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1475,7 +1475,7 @@
         }
       ],
       "clue": {
-        "text": "Arapça ilk harf",
+        "text": "İlk Arap harfi",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1511,7 +1511,7 @@
         }
       ],
       "clue": {
-        "text": "Grup, topluluk",
+        "text": "Özel görev ekibi",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,

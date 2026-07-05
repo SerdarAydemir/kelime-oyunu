@@ -908,7 +908,7 @@
         }
       ],
       "clue": {
-        "text": "Göçebe topluluk",
+        "text": "Sömürge; topluluk",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -948,7 +948,7 @@
         }
       ],
       "clue": {
-        "text": "Güvenmek, itimat etmek",
+        "text": "Güven duygusu",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -1020,7 +1020,7 @@
         }
       ],
       "clue": {
-        "text": "Karadeniz şivesi",
+        "text": "Bir Kafkas dili",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1124,7 +1124,7 @@
         }
       ],
       "clue": {
-        "text": "Hızlı hareket",
+        "text": "Bir mersin balığı",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1240,7 +1240,7 @@
         }
       ],
       "clue": {
-        "text": "Dokunmamış kumaş",
+        "text": "Tepilmiş yün kumaş",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1380,7 +1380,7 @@
         }
       ],
       "clue": {
-        "text": "Müzikte gam",
+        "text": "Müzikte ton düzeni",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1640,7 +1640,7 @@
         }
       ],
       "clue": {
-        "text": "İskambil kağıdı",
+        "text": "Tuğladan oda sobası",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,

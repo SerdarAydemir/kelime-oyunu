@@ -971,7 +971,7 @@
         }
       ],
       "clue": {
-        "text": "Mutlaka, mecburen",
+        "text": "Ne olursa olsun",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1039,7 +1039,7 @@
         }
       ],
       "clue": {
-        "text": "Arı ürünü tatlı",
+        "text": "Arının ürünü",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1363,7 +1363,7 @@
         }
       ],
       "clue": {
-        "text": "Hayvan yavrusu",
+        "text": "Çocuk, yavru (halk)",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1447,7 +1447,7 @@
         }
       ],
       "clue": {
-        "text": "Çabuk öfke",
+        "text": "Sinir hali",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1503,7 +1503,7 @@
         }
       ],
       "clue": {
-        "text": "İp ve urgan yumağı",
+        "text": "Makarası olan",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1679,7 +1679,7 @@
         }
       ],
       "clue": {
-        "text": "Görüşü engelleyen buğu",
+        "text": "Yoğun buğu",
         "arrow": "down",
         "word_id": "D10",
         "image_id": null,

@@ -867,7 +867,7 @@
         }
       ],
       "clue": {
-        "text": "Denge durumu",
+        "text": "Denge ayarı",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -903,7 +903,7 @@
         }
       ],
       "clue": {
-        "text": "Yunan rakısı",
+        "text": "Yunan anason içkisi",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -1071,7 +1071,7 @@
         }
       ],
       "clue": {
-        "text": "Oy pusulası",
+        "text": "Oy (eski)",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1139,7 +1139,7 @@
         }
       ],
       "clue": {
-        "text": "Elektrik birimi",
+        "text": "Gerilim birimi",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1423,7 +1423,7 @@
         }
       ],
       "clue": {
-        "text": "Sarkık, gevşek",
+        "text": "Yumuşak ve dolgun",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,

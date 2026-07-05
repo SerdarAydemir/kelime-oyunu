@@ -900,7 +900,7 @@
         }
       ],
       "clue": {
-        "text": "Isıya dayanıklı levha",
+        "text": "Yalıtkan mineral",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -1244,7 +1244,7 @@
         }
       ],
       "clue": {
-        "text": "Geniş alana bakma",
+        "text": "Baştan sona inceleme",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1568,7 +1568,7 @@
         }
       ],
       "clue": {
-        "text": "Kale, hisar",
+        "text": "Büyük ırmak kolu",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,

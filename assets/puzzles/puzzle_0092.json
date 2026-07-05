@@ -899,7 +899,7 @@
         }
       ],
       "clue": {
-        "text": "Ufak tefek",
+        "text": "Küçükçe",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -1183,7 +1183,7 @@
         }
       ],
       "clue": {
-        "text": "Huzur dolu, dingin",
+        "text": "'Yapma!' uyarısı",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1343,7 +1343,7 @@
         }
       ],
       "clue": {
-        "text": "Küçültmek, dağıtmak",
+        "text": "Kırıntılara ayırmak",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1459,7 +1459,7 @@
         }
       ],
       "clue": {
-        "text": "Kişiye özel",
+        "text": "Kendine özgü (eski)",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,

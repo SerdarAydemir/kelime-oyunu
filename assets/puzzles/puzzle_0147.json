@@ -923,7 +923,7 @@
         }
       ],
       "clue": {
-        "text": "Meyve suyu",
+        "text": "Zarfa ekleme (eski)",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -963,7 +963,7 @@
         }
       ],
       "clue": {
-        "text": "Yunan alfabesi 2.",
+        "text": "İkinci Yunan harfi",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1323,7 +1323,7 @@
         }
       ],
       "clue": {
-        "text": "Tartışma, fikir ayrılığı",
+        "text": "Söyleşme (eski)",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1527,7 +1527,7 @@
         }
       ],
       "clue": {
-        "text": "Erler, neferler",
+        "text": "Bireyler (eski)",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1619,7 +1619,7 @@
         }
       ],
       "clue": {
-        "text": "Yargı toplantısı",
+        "text": "Duruşma oturumu",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,

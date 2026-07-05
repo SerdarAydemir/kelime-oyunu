@@ -885,7 +885,7 @@
         }
       ],
       "clue": {
-        "text": "Can damarı",
+        "text": "Atardamar",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -1137,7 +1137,7 @@
         }
       ],
       "clue": {
-        "text": "Tokat",
+        "text": "Kalesiyle ünlü ilçe",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1401,7 +1401,7 @@
         }
       ],
       "clue": {
-        "text": "Büyüten cam",
+        "text": "Mercek biçimli",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1441,7 +1441,7 @@
         }
       ],
       "clue": {
-        "text": "Geri dönme eylemi",
+        "text": "Geri çevirme (eski)",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,

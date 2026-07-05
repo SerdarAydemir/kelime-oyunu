@@ -855,7 +855,7 @@
         }
       ],
       "clue": {
-        "text": "Bitki gövdesi",
+        "text": "Köke ilişkin",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -971,7 +971,7 @@
         }
       ],
       "clue": {
-        "text": "Çoğaldı, yayıldı",
+        "text": "Sonradan görme",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1039,7 +1039,7 @@
         }
       ],
       "clue": {
-        "text": "Eski Türkler",
+        "text": "Sahne hilesi",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1151,7 +1151,7 @@
         }
       ],
       "clue": {
-        "text": "Nadasa bırakmamak",
+        "text": "Bitkiye su verme",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1359,7 +1359,7 @@
         }
       ],
       "clue": {
-        "text": "Saç örgüsü",
+        "text": "Örme işi",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1451,7 +1451,7 @@
         }
       ],
       "clue": {
-        "text": "Para birimi",
+        "text": "Odun hacim ölçüsü",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1607,7 +1607,7 @@
         }
       ],
       "clue": {
-        "text": "Çölün tanesi",
+        "text": "İkinci eş",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,

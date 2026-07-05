@@ -906,7 +906,7 @@
         }
       ],
       "clue": {
-        "text": "Olayları aktarma",
+        "text": "Öyküleme",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -1018,7 +1018,7 @@
         }
       ],
       "clue": {
-        "text": "Benzersiz, emsalsiz",
+        "text": "Uğursuz olmayan",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1434,7 +1434,7 @@
         }
       ],
       "clue": {
-        "text": "Eskimiş yazı türü",
+        "text": "Bir hat yazısı",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1526,7 +1526,7 @@
         }
       ],
       "clue": {
-        "text": "Gemi güvertesi arkası",
+        "text": "Geminin arka bölümü",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,

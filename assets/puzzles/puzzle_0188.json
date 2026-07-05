@@ -915,7 +915,7 @@
         }
       ],
       "clue": {
-        "text": "Çürümüş, bozulmuş",
+        "text": "Rüşvet işi (eski)",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -983,7 +983,7 @@
         }
       ],
       "clue": {
-        "text": "Ses yokluğu",
+        "text": "En küçük itiraz sesi",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1555,7 +1555,7 @@
         }
       ],
       "clue": {
-        "text": "Paket yapmak",
+        "text": "Temizlemek",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,

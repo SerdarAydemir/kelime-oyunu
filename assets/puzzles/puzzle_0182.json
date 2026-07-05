@@ -865,7 +865,7 @@
         }
       ],
       "clue": {
-        "text": "Gizemli, uhrevi",
+        "text": "Gizemci",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -1101,7 +1101,7 @@
         }
       ],
       "clue": {
-        "text": "Evli olduğum erkek",
+        "text": "Rüzgarın esmesi",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1177,7 +1177,7 @@
         }
       ],
       "clue": {
-        "text": "Sanat dalı",
+        "text": "Zanaat (eski)",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1225,7 +1225,7 @@
         }
       ],
       "clue": {
-        "text": "Meğil, yatkınlık",
+        "text": "Meyil, yatkınlık",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1541,7 +1541,7 @@
         }
       ],
       "clue": {
-        "text": "Burundan hissettirme",
+        "text": "Koku duyurma",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1609,7 +1609,7 @@
         }
       ],
       "clue": {
-        "text": "Geminin yanaştığı yer",
+        "text": "Kapasite (fizik)",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,

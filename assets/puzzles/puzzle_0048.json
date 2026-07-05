@@ -1265,7 +1265,7 @@
         }
       ],
       "clue": {
-        "text": "Kırık kemik destek",
+        "text": "Kırık sabitleyici",
         "arrow": "right",
         "word_id": "A12",
         "image_id": null,
@@ -1349,7 +1349,7 @@
         }
       ],
       "clue": {
-        "text": "Tartışma, kavga",
+        "text": "Eksiltme ihalesi",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1405,7 +1405,7 @@
         }
       ],
       "clue": {
-        "text": "Çabuk öfke",
+        "text": "Sinir hali",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1521,7 +1521,7 @@
         }
       ],
       "clue": {
-        "text": "Utanç verici durum",
+        "text": "Kepazelik",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1689,7 +1689,7 @@
         }
       ],
       "clue": {
-        "text": "Renk, ton",
+        "text": "Menekşe rengi",
         "arrow": "down",
         "word_id": "D10",
         "image_id": null,

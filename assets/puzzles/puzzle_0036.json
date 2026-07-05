@@ -846,7 +846,7 @@
         }
       ],
       "clue": {
-        "text": "Yaylı çalgı sanatçısı",
+        "text": "Keman sanatçısı",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -1138,7 +1138,7 @@
         }
       ],
       "clue": {
-        "text": "Kuşların yemi",
+        "text": "Boza tahılı",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1186,7 +1186,7 @@
         }
       ],
       "clue": {
-        "text": "İtibar kaybı",
+        "text": "Özür dileme (eski)",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1402,7 +1402,7 @@
         }
       ],
       "clue": {
-        "text": "Sıvı yağdan katı yağ",
+        "text": "Bitkisel katı yağ",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1454,7 +1454,7 @@
         }
       ],
       "clue": {
-        "text": "Sınırı aşan",
+        "text": "Ölçüsüz",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1494,7 +1494,7 @@
         }
       ],
       "clue": {
-        "text": "Büyükannelik ünvanı",
+        "text": "Büyükanne",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,

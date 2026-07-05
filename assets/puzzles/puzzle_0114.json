@@ -853,7 +853,7 @@
         }
       ],
       "clue": {
-        "text": "Doğru davranış",
+        "text": "Törel",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -1057,7 +1057,7 @@
         }
       ],
       "clue": {
-        "text": "Kararsızlık hali",
+        "text": "İki seçenek açmazı",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1613,7 +1613,7 @@
         }
       ],
       "clue": {
-        "text": "Ticari isim",
+        "text": "Eski Alman parası",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,

@@ -860,7 +860,7 @@
         }
       ],
       "clue": {
-        "text": "Ödem sonucu kabarıklık",
+        "text": "Kabarıklık",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -976,7 +976,7 @@
         }
       ],
       "clue": {
-        "text": "Hızlı gitmek",
+        "text": "Acele koşturmak",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1268,7 +1268,7 @@
         }
       ],
       "clue": {
-        "text": "Eleştiri, kusur bulma",
+        "text": "Eleştiri",
         "arrow": "right",
         "word_id": "A12",
         "image_id": null,

@@ -865,7 +865,7 @@
         }
       ],
       "clue": {
-        "text": "Yün eğirme",
+        "text": "Yoğunlaştırma (eski)",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -1193,7 +1193,7 @@
         }
       ],
       "clue": {
-        "text": "Meyve suyu",
+        "text": "Zarfa ekleme (eski)",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1609,7 +1609,7 @@
         }
       ],
       "clue": {
-        "text": "Sürüngen, yılan gibi",
+        "text": "Kertenkele türü",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,

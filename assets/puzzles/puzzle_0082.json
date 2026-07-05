@@ -899,7 +899,7 @@
         }
       ],
       "clue": {
-        "text": "Sırt çantası",
+        "text": "Çekmeceli dolap",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -967,7 +967,7 @@
         }
       ],
       "clue": {
-        "text": "Koca parça",
+        "text": "Yekpare parça",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1015,7 +1015,7 @@
         }
       ],
       "clue": {
-        "text": "Sağlık bulma",
+        "text": "İyileşme (eski)",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1055,7 +1055,7 @@
         }
       ],
       "clue": {
-        "text": "Hayvan yavrusu",
+        "text": "Çocuk, yavru (halk)",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1199,7 +1199,7 @@
         }
       ],
       "clue": {
-        "text": "Sanat dalı",
+        "text": "Zanaat (eski)",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1323,7 +1323,7 @@
         }
       ],
       "clue": {
-        "text": "Sirk gösterisi",
+        "text": "Cambazlık",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1615,7 +1615,7 @@
         }
       ],
       "clue": {
-        "text": "Nâdir görülen",
+        "text": "Kadınlar hamamcısı",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,

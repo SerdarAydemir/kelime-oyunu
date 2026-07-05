@@ -855,7 +855,7 @@
         }
       ],
       "clue": {
-        "text": "Hedefe ulaşma",
+        "text": "Hedefi tutturma",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -1059,7 +1059,7 @@
         }
       ],
       "clue": {
-        "text": "Türk-Yunan denizi",
+        "text": "Bir denizimiz",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1219,7 +1219,7 @@
         }
       ],
       "clue": {
-        "text": "Katıdan sıvıya geçiş",
+        "text": "Sıvılaşma",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1619,7 +1619,7 @@
         }
       ],
       "clue": {
-        "text": "Söz ustası",
+        "text": "Yazar (eski)",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,

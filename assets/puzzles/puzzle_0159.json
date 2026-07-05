@@ -858,7 +858,7 @@
         }
       ],
       "clue": {
-        "text": "Veriyi yok et",
+        "text": "Bezle temizlemek",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -1502,7 +1502,7 @@
         }
       ],
       "clue": {
-        "text": "Artık mevcut değil",
+        "text": "Geriye artan",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,

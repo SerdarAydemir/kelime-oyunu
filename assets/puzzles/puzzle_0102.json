@@ -892,7 +892,7 @@
         }
       ],
       "clue": {
-        "text": "Örülü saç",
+        "text": "Saç örgüsü (halk)",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -1008,7 +1008,7 @@
         }
       ],
       "clue": {
-        "text": "Özet, netice",
+        "text": "Özet (eski)",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1348,7 +1348,7 @@
         }
       ],
       "clue": {
-        "text": "Taze, yeni",
+        "text": "Çok taze",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1444,7 +1444,7 @@
         }
       ],
       "clue": {
-        "text": "Isıya dayanıklı levha",
+        "text": "Yalıtkan mineral",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1584,7 +1584,7 @@
         }
       ],
       "clue": {
-        "text": "Saklan, gizlen",
+        "text": "Korkuyla büzülme",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,

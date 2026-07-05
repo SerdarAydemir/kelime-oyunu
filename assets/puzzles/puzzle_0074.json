@@ -913,7 +913,7 @@
         }
       ],
       "clue": {
-        "text": "Açıklama, beyan",
+        "text": "Ayrıntılı açıklama",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -1045,7 +1045,7 @@
         }
       ],
       "clue": {
-        "text": "Yangın söndürenler",
+        "text": "Borç söndürme",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1113,7 +1113,7 @@
         }
       ],
       "clue": {
-        "text": "Tek başına",
+        "text": "Yalnızca, sırf",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1453,7 +1453,7 @@
         }
       ],
       "clue": {
-        "text": "Yay şeklinde",
+        "text": "Yay biçimi eğrilik",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1541,7 +1541,7 @@
         }
       ],
       "clue": {
-        "text": "Mektuba ek gelir",
+        "text": "Zarfa koyma",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,

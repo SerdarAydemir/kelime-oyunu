@@ -855,7 +855,7 @@
         }
       ],
       "clue": {
-        "text": "Bazıları, bir kısım",
+        "text": "Bazıları",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -1087,7 +1087,7 @@
         }
       ],
       "clue": {
-        "text": "Tesir, reaksiyon",
+        "text": "Etki yapma",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1291,7 +1291,7 @@
         }
       ],
       "clue": {
-        "text": "Çatalın ucu",
+        "text": "Dökme demir",
         "arrow": "right",
         "word_id": "A13",
         "image_id": null,
@@ -1347,7 +1347,7 @@
         }
       ],
       "clue": {
-        "text": "Sözle ikna",
+        "text": "Söz kesişme",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,

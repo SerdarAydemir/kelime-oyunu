@@ -1041,7 +1041,7 @@
         }
       ],
       "clue": {
-        "text": "Lens eğriliği",
+        "text": "İri palamut",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1269,7 +1269,7 @@
         }
       ],
       "clue": {
-        "text": "Paralel, yan yana",
+        "text": "Koşut, paralel",
         "arrow": "right",
         "word_id": "A12",
         "image_id": null,
@@ -1325,7 +1325,7 @@
         }
       ],
       "clue": {
-        "text": "Çok görkemli, harika",
+        "text": "Çok görkemli",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1617,7 +1617,7 @@
         }
       ],
       "clue": {
-        "text": "Çağdaş yaşam",
+        "text": "Çağdaş, modern",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,
@@ -1689,7 +1689,7 @@
         }
       ],
       "clue": {
-        "text": "Bir defa, bir kere",
+        "text": "Defa, kere",
         "arrow": "down",
         "word_id": "D11",
         "image_id": null,

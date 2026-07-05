@@ -964,7 +964,7 @@
         }
       ],
       "clue": {
-        "text": "Gidilecek yer",
+        "text": "Ulaşım şeridi",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1124,7 +1124,7 @@
         }
       ],
       "clue": {
-        "text": "Ateşin dili",
+        "text": "Alev (halk)",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1236,7 +1236,7 @@
         }
       ],
       "clue": {
-        "text": "At yavrusu",
+        "text": "Deve yavrusu",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1348,7 +1348,7 @@
         }
       ],
       "clue": {
-        "text": "Kıyma, doğrama",
+        "text": "Parçalayıp yırtma",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1428,7 +1428,7 @@
         }
       ],
       "clue": {
-        "text": "Hoş koku, güzel koku",
+        "text": "Hoş koku",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1484,7 +1484,7 @@
         }
       ],
       "clue": {
-        "text": "Kısa bilgece ifade",
+        "text": "Özdeyiş",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1524,7 +1524,7 @@
         }
       ],
       "clue": {
-        "text": "Şanslı, bahtlı",
+        "text": "İkincil (yol)",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,

@@ -961,7 +961,7 @@
         }
       ],
       "clue": {
-        "text": "Çiftleşme dönemi",
+        "text": "Tarla dinlendirme",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1121,7 +1121,7 @@
         }
       ],
       "clue": {
-        "text": "Keskin metal alet",
+        "text": "Cila (eski)",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1169,7 +1169,7 @@
         }
       ],
       "clue": {
-        "text": "Sürüngen, kertenkele",
+        "text": "İri tropik kertenkele",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1293,7 +1293,7 @@
         }
       ],
       "clue": {
-        "text": "Kırık, dağılmış",
+        "text": "Kırılmış (eski)",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1445,7 +1445,7 @@
         }
       ],
       "clue": {
-        "text": "Kasaplık hayvan yeri",
+        "text": "Hayvan besi çiftliği",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1553,7 +1553,7 @@
         }
       ],
       "clue": {
-        "text": "Bezelye",
+        "text": "İri bezelye",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,

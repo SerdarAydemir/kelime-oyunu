@@ -860,7 +860,7 @@
         }
       ],
       "clue": {
-        "text": "Kumaş kıvırımı",
+        "text": "Kumaş kıvrımı",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -952,7 +952,7 @@
         }
       ],
       "clue": {
-        "text": "Sıvı yağ türü",
+        "text": "İpekli eski kumaş",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -1300,7 +1300,7 @@
         }
       ],
       "clue": {
-        "text": "Paket yapmak",
+        "text": "Temizlemek",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1432,7 +1432,7 @@
         }
       ],
       "clue": {
-        "text": "Yok etme, ortadan kaldırma",
+        "text": "Yok etme",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,

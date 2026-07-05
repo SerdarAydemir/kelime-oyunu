@@ -853,7 +853,7 @@
         }
       ],
       "clue": {
-        "text": "Tarlada yetişen",
+        "text": "Ekini olan (tarla)",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -901,7 +901,7 @@
         }
       ],
       "clue": {
-        "text": "İş, zanaat",
+        "text": "Alçakça iş (eski)",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -993,7 +993,7 @@
         }
       ],
       "clue": {
-        "text": "Damarlardaki sıvı",
+        "text": "Akkan",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1129,7 +1129,7 @@
         }
       ],
       "clue": {
-        "text": "Sarhoş edici",
+        "text": "Mest diken usta",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1393,7 +1393,7 @@
         }
       ],
       "clue": {
-        "text": "Kesme aleti",
+        "text": "Maaştan kesilen pay",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1433,7 +1433,7 @@
         }
       ],
       "clue": {
-        "text": "Güvenmek, itimat etmek",
+        "text": "Güven duygusu",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1481,7 +1481,7 @@
         }
       ],
       "clue": {
-        "text": "İyi huylu tümör",
+        "text": "İnsaf (eski)",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1633,7 +1633,7 @@
         }
       ],
       "clue": {
-        "text": "Soğuk, ayaz",
+        "text": "Baş (eski)",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,

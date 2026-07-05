@@ -960,7 +960,7 @@
         }
       ],
       "clue": {
-        "text": "İğneyle işlenen",
+        "text": "İğne işi kenar süsü",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1028,7 +1028,7 @@
         }
       ],
       "clue": {
-        "text": "Telgraf direği",
+        "text": "Bağlama; kamış",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1156,7 +1156,7 @@
         }
       ],
       "clue": {
-        "text": "At üstünde",
+        "text": "Eyeri vurulmuş",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1336,7 +1336,7 @@
         }
       ],
       "clue": {
-        "text": "Kuşkucu akıl hastalığı",
+        "text": "Aşırı kuşkuculuk",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1408,7 +1408,7 @@
         }
       ],
       "clue": {
-        "text": "Koşulan pist",
+        "text": "Kır koşusu",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1448,7 +1448,7 @@
         }
       ],
       "clue": {
-        "text": "Mavi tonu",
+        "text": "Kürekte geri manevra",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1488,7 +1488,7 @@
         }
       ],
       "clue": {
-        "text": "Emir verme, buyurma",
+        "text": "Ağırlama (eski)",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1524,7 +1524,7 @@
         }
       ],
       "clue": {
-        "text": "Zeytinyağı, tereyağı",
+        "text": "Altın (eski)",
         "arrow": "down",
         "word_id": "D7",
         "image_id": null,

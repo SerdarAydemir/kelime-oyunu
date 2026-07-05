@@ -1230,7 +1230,7 @@
         }
       ],
       "clue": {
-        "text": "Sütte bulunan protein",
+        "text": "Süt proteini",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1286,7 +1286,7 @@
         }
       ],
       "clue": {
-        "text": "Saçı düzeltme",
+        "text": "Tarakla açtırmak",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1562,7 +1562,7 @@
         }
       ],
       "clue": {
-        "text": "Yüzü kızarmaz",
+        "text": "Utanması olmayan",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,
@@ -1602,7 +1602,7 @@
         }
       ],
       "clue": {
-        "text": "Tohumları toprağa",
+        "text": "Tohum serpme",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,

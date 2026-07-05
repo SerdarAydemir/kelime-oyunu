@@ -860,7 +860,7 @@
         }
       ],
       "clue": {
-        "text": "Tepki uyandıran",
+        "text": "Tepki doğuran etken",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -908,7 +908,7 @@
         }
       ],
       "clue": {
-        "text": "Aralık, ara",
+        "text": "Bitki familyası",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -956,7 +956,7 @@
         }
       ],
       "clue": {
-        "text": "Emanet mal",
+        "text": "Eğreti, ödünç şey",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -1060,7 +1060,7 @@
         }
       ],
       "clue": {
-        "text": "Hakka uygun",
+        "text": "Hakça davranan",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1348,7 +1348,7 @@
         }
       ],
       "clue": {
-        "text": "Küçültmek, dağıtmak",
+        "text": "Kırıntılara ayırmak",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,

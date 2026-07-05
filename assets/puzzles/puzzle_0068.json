@@ -858,7 +858,7 @@
         }
       ],
       "clue": {
-        "text": "Ayakkabı önü",
+        "text": "Öncülük eden",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -1078,7 +1078,7 @@
         }
       ],
       "clue": {
-        "text": "Bilgi aktarımı",
+        "text": "Enerji aktarımı",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1318,7 +1318,7 @@
         }
       ],
       "clue": {
-        "text": "Teklif, tavsiye",
+        "text": "Teklif edilme",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1434,7 +1434,7 @@
         }
       ],
       "clue": {
-        "text": "Isıtan nesne",
+        "text": "Tibet öküzü",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1538,7 +1538,7 @@
         }
       ],
       "clue": {
-        "text": "Denizci paşası",
+        "text": "Donanma komutanı",
         "arrow": "down",
         "word_id": "D7",
         "image_id": null,
@@ -1586,7 +1586,7 @@
         }
       ],
       "clue": {
-        "text": "Bazıları, bir kısım",
+        "text": "Bazıları",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,

@@ -1150,7 +1150,7 @@
         }
       ],
       "clue": {
-        "text": "Denizci paşası",
+        "text": "Donanma komutanı",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1194,7 +1194,7 @@
         }
       ],
       "clue": {
-        "text": "Mutlu son, başarı",
+        "text": "Utku",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1386,7 +1386,7 @@
         }
       ],
       "clue": {
-        "text": "Japon içkisi",
+        "text": "Japon pirinç içkisi",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,

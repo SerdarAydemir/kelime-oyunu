@@ -848,7 +848,7 @@
         }
       ],
       "clue": {
-        "text": "Acayip, tuhaf",
+        "text": "Tuhaflıklar (eski)",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -896,7 +896,7 @@
         }
       ],
       "clue": {
-        "text": "Denizci hazır ol",
+        "text": "Hazır ol (denizcilik)",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -960,7 +960,7 @@
         }
       ],
       "clue": {
-        "text": "Bir defa, bir kere",
+        "text": "Defa, kere",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1008,7 +1008,7 @@
         }
       ],
       "clue": {
-        "text": "Mahkemelik kişi",
+        "text": "Aleyhine dava açılan",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1292,7 +1292,7 @@
         }
       ],
       "clue": {
-        "text": "Mahkum gözcüsü",
+        "text": "Cezaevi görevlisi",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,

@@ -862,7 +862,7 @@
         }
       ],
       "clue": {
-        "text": "Biriktirme",
+        "text": "Toplamak, devşirmek",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -1046,7 +1046,7 @@
         }
       ],
       "clue": {
-        "text": "Evlilik simgesi",
+        "text": "Nikah yüzüğü",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1354,7 +1354,7 @@
         }
       ],
       "clue": {
-        "text": "Sözlü atışma",
+        "text": "Ağız kavgası etmek",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1510,7 +1510,7 @@
         }
       ],
       "clue": {
-        "text": "Eski Türklerde haberci",
+        "text": "Hâlâ, şimdi (eski)",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1566,7 +1566,7 @@
         }
       ],
       "clue": {
-        "text": "Koç gibi vurmak",
+        "text": "Koyunun koç istemesi",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,

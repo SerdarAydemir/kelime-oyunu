@@ -902,7 +902,7 @@
         }
       ],
       "clue": {
-        "text": "Laboratuvar işi",
+        "text": "Bilimsel sınama",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -1442,7 +1442,7 @@
         }
       ],
       "clue": {
-        "text": "Meyve suyu",
+        "text": "Zarfa ekleme (eski)",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,

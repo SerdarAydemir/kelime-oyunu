@@ -889,7 +889,7 @@
         }
       ],
       "clue": {
-        "text": "Denizci paşası",
+        "text": "Donanma komutanı",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -937,7 +937,7 @@
         }
       ],
       "clue": {
-        "text": "Alım satım yeri",
+        "text": "Alım satım ortamı",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -977,7 +977,7 @@
         }
       ],
       "clue": {
-        "text": "Müzikte ritim birimi",
+        "text": "Takas (ekonomi)",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1413,7 +1413,7 @@
         }
       ],
       "clue": {
-        "text": "Bezelye",
+        "text": "İri bezelye",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,

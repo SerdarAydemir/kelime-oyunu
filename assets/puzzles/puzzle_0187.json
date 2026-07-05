@@ -908,7 +908,7 @@
         }
       ],
       "clue": {
-        "text": "Rakibi yenme",
+        "text": "Güreşte ense çekme",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -1128,7 +1128,7 @@
         }
       ],
       "clue": {
-        "text": "Zırh altı koruyucu",
+        "text": "Zırh (eski)",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1204,7 +1204,7 @@
         }
       ],
       "clue": {
-        "text": "Karşılık, bedel",
+        "text": "Karşılığı olan",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1388,7 +1388,7 @@
         }
       ],
       "clue": {
-        "text": "Eski Türklerde haberci",
+        "text": "Hâlâ, şimdi (eski)",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1516,7 +1516,7 @@
         }
       ],
       "clue": {
-        "text": "Kolayca parlayan",
+        "text": "Sinirli",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1556,7 +1556,7 @@
         }
       ],
       "clue": {
-        "text": "İşlemeli kumaş",
+        "text": "Yaka içi sert astar",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,

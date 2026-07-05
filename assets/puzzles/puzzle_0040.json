@@ -1139,7 +1139,7 @@
         }
       ],
       "clue": {
-        "text": "Altın-kalay alaşımı",
+        "text": "Gümüş (eski)",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1255,7 +1255,7 @@
         }
       ],
       "clue": {
-        "text": "Şüphe, kuşku",
+        "text": "Sanı",
         "arrow": "right",
         "word_id": "A12",
         "image_id": null,
@@ -1383,7 +1383,7 @@
         }
       ],
       "clue": {
-        "text": "Sıcak hava akımı",
+        "text": "Serinletme pervanesi",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1599,7 +1599,7 @@
         }
       ],
       "clue": {
-        "text": "Güvenilen, teslim edilen",
+        "text": "Güvence dileme (eski)",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,

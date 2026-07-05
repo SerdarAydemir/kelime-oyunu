@@ -891,7 +891,7 @@
         }
       ],
       "clue": {
-        "text": "Koç, koç yumurtası",
+        "text": "Genç erkek koyun",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -1007,7 +1007,7 @@
         }
       ],
       "clue": {
-        "text": "Ulaşma, erişme",
+        "text": "Eritme biçimi",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1123,7 +1123,7 @@
         }
       ],
       "clue": {
-        "text": "Adayların seçimi",
+        "text": "Yarıştan çıkarılış",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1391,7 +1391,7 @@
         }
       ],
       "clue": {
-        "text": "İşsiz güçsüz olma",
+        "text": "Aylaklık",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1439,7 +1439,7 @@
         }
       ],
       "clue": {
-        "text": "Arap baş örtüsü",
+        "text": "Poşu benzeri örtü",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1479,7 +1479,7 @@
         }
       ],
       "clue": {
-        "text": "İçki ısmarlamak",
+        "text": "İçecek (öz Türkçe)",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,

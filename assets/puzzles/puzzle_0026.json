@@ -965,7 +965,7 @@
         }
       ],
       "clue": {
-        "text": "Eski eğitim bakanlığı",
+        "text": "Eğitim (eski)",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1009,7 +1009,7 @@
         }
       ],
       "clue": {
-        "text": "Mideye giden",
+        "text": "Padişah kaftanı",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1293,7 +1293,7 @@
         }
       ],
       "clue": {
-        "text": "Aceleci, telaşlı",
+        "text": "Kaba saba (halk)",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1605,7 +1605,7 @@
         }
       ],
       "clue": {
-        "text": "Japon içkisi",
+        "text": "Japon pirinç içkisi",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,

@@ -1354,7 +1354,7 @@
         }
       ],
       "clue": {
-        "text": "Perde türü",
+        "text": "Sarılan perde",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1530,7 +1530,7 @@
         }
       ],
       "clue": {
-        "text": "Görüşü engelleyen buğu",
+        "text": "Yoğun buğu",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,

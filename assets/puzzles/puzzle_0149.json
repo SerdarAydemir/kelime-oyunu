@@ -862,7 +862,7 @@
         }
       ],
       "clue": {
-        "text": "İlk çağ, başlangıç",
+        "text": "Başlangıç (eski)",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -1274,7 +1274,7 @@
         }
       ],
       "clue": {
-        "text": "Terk edilmiş yapı",
+        "text": "Terk edilmiş",
         "arrow": "right",
         "word_id": "A12",
         "image_id": null,
@@ -1494,7 +1494,7 @@
         }
       ],
       "clue": {
-        "text": "Aşk sarhoşu",
+        "text": "Deli, çılgın",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1622,7 +1622,7 @@
         }
       ],
       "clue": {
-        "text": "Siyah, yapışkan madde",
+        "text": "Kara yapışkan katran",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,

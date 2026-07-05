@@ -1034,7 +1034,7 @@
         }
       ],
       "clue": {
-        "text": "Elden bırakış",
+        "text": "Savurup bırakma",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1102,7 +1102,7 @@
         }
       ],
       "clue": {
-        "text": "Dış alem",
+        "text": "Ufuklar (eski)",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1338,7 +1338,7 @@
         }
       ],
       "clue": {
-        "text": "Tenis topuna vurur",
+        "text": "Tenis vurma aracı",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1390,7 +1390,7 @@
         }
       ],
       "clue": {
-        "text": "Birden irkilmek",
+        "text": "Kızıllaşmak",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,

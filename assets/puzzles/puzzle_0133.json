@@ -858,7 +858,7 @@
         }
       ],
       "clue": {
-        "text": "Gemi türü",
+        "text": "Küçük buharlı tekne",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -1374,7 +1374,7 @@
         }
       ],
       "clue": {
-        "text": "Tanıdık hissi",
+        "text": "Tanışıklık",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,

@@ -1195,7 +1195,7 @@
         }
       ],
       "clue": {
-        "text": "Ticari işletme",
+        "text": "Kuruluş; baca isi",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1363,7 +1363,7 @@
         }
       ],
       "clue": {
-        "text": "Sadık, vefalı kimse",
+        "text": "Köle, bağımlı",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1615,7 +1615,7 @@
         }
       ],
       "clue": {
-        "text": "Genel, herkesi kapsayan",
+        "text": "Genel (eski)",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,

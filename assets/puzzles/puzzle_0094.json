@@ -905,7 +905,7 @@
         }
       ],
       "clue": {
-        "text": "Sayısal sıra",
+        "text": "Altıdan sonraki",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -1201,7 +1201,7 @@
         }
       ],
       "clue": {
-        "text": "Kasım ayı",
+        "text": "Eski sonbahar ayı",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1241,7 +1241,7 @@
         }
       ],
       "clue": {
-        "text": "Kökeni, soyu",
+        "text": "Soya ilişkin",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1369,7 +1369,7 @@
         }
       ],
       "clue": {
-        "text": "Gezgin, göçebe",
+        "text": "Raf (halk)",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1617,7 +1617,7 @@
         }
       ],
       "clue": {
-        "text": "Çağdaş yaşam",
+        "text": "Çağdaş, modern",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,

@@ -928,7 +928,7 @@
         }
       ],
       "clue": {
-        "text": "Oyun kağıdı",
+        "text": "Tür, çeşit (eski)",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -1316,7 +1316,7 @@
         }
       ],
       "clue": {
-        "text": "İntikam duygusu",
+        "text": "Kin gütme hali",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1488,7 +1488,7 @@
         }
       ],
       "clue": {
-        "text": "Geniş alana bakma",
+        "text": "Baştan sona inceleme",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1608,7 +1608,7 @@
         }
       ],
       "clue": {
-        "text": "Doyumsuz istek",
+        "text": "Açgözlü istek",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,

@@ -985,7 +985,7 @@
         }
       ],
       "clue": {
-        "text": "Gereken, muhtaç",
+        "text": "Gereklilik (eski)",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1337,7 +1337,7 @@
         }
       ],
       "clue": {
-        "text": "Mısır'ın üçgen yapısı",
+        "text": "Firavun mezar yapısı",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1381,7 +1381,7 @@
         }
       ],
       "clue": {
-        "text": "Gür sesli duyuru",
+        "text": "Yüksek ses (eski)",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1529,7 +1529,7 @@
         }
       ],
       "clue": {
-        "text": "Ufalamak, ayırmak",
+        "text": "Tanelere ayırma",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,

@@ -977,7 +977,7 @@
         }
       ],
       "clue": {
-        "text": "Koyun yünü parçası",
+        "text": "Et parçası (halk)",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1205,7 +1205,7 @@
         }
       ],
       "clue": {
-        "text": "Turunçgillerden",
+        "text": "Turunç (eski)",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1305,7 +1305,7 @@
         }
       ],
       "clue": {
-        "text": "Kavun karpuz gibi",
+        "text": "Dokunma (eski)",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1349,7 +1349,7 @@
         }
       ],
       "clue": {
-        "text": "Bezelye",
+        "text": "İri bezelye",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1405,7 +1405,7 @@
         }
       ],
       "clue": {
-        "text": "Tekrarlanan eylem",
+        "text": "Tekrarlama",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,

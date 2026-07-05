@@ -895,7 +895,7 @@
         }
       ],
       "clue": {
-        "text": "Darıdan yapılan içki",
+        "text": "Darıdan kış içeceği",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -1039,7 +1039,7 @@
         }
       ],
       "clue": {
-        "text": "İnce, uzun hamur",
+        "text": "Çıtalı",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1355,7 +1355,7 @@
         }
       ],
       "clue": {
-        "text": "Müzikte gam",
+        "text": "Müzikte ton düzeni",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,

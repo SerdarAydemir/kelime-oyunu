@@ -910,7 +910,7 @@
         }
       ],
       "clue": {
-        "text": "Ulaşma, erişme",
+        "text": "Eritme biçimi",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -1046,7 +1046,7 @@
         }
       ],
       "clue": {
-        "text": "Ulusların sesi",
+        "text": "Tat alma organı",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1162,7 +1162,7 @@
         }
       ],
       "clue": {
-        "text": "Bağlantı, ilişki",
+        "text": "Öbek, kategori",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1354,7 +1354,7 @@
         }
       ],
       "clue": {
-        "text": "Cömertlik, asillik",
+        "text": "Cömertlik (eski)",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1422,7 +1422,7 @@
         }
       ],
       "clue": {
-        "text": "Bitki veya hayvan dokusu",
+        "text": "İnce iplikçik",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1650,7 +1650,7 @@
         }
       ],
       "clue": {
-        "text": "Soru, mesele",
+        "text": "Soru (eski)",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,

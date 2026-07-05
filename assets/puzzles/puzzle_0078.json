@@ -896,7 +896,7 @@
         }
       ],
       "clue": {
-        "text": "İnce, uzun kumaş",
+        "text": "Ter döküntüsü",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -1128,7 +1128,7 @@
         }
       ],
       "clue": {
-        "text": "Hamur kabartan",
+        "text": "Mayası katılmış",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1340,7 +1340,7 @@
         }
       ],
       "clue": {
-        "text": "Tüm vücudu etkileyen",
+        "text": "Bütün sistemi saran",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1392,7 +1392,7 @@
         }
       ],
       "clue": {
-        "text": "Isı yayan yüzey",
+        "text": "Isı emen (kimya)",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,

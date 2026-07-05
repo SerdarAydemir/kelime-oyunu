@@ -860,7 +860,7 @@
         }
       ],
       "clue": {
-        "text": "Taşıma aracı",
+        "text": "Sesli (harf)",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -1084,7 +1084,7 @@
         }
       ],
       "clue": {
-        "text": "Arap hükümdarı",
+        "text": "Hükümdar (eski)",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1196,7 +1196,7 @@
         }
       ],
       "clue": {
-        "text": "İrmikli şerbetli tatlı",
+        "text": "İrmik tatlısı",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1416,7 +1416,7 @@
         }
       ],
       "clue": {
-        "text": "İsa'nın dili",
+        "text": "Antik Ortadoğu dili",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1488,7 +1488,7 @@
         }
       ],
       "clue": {
-        "text": "Gül kokusu",
+        "text": "Güzel kokulu (eski)",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1600,7 +1600,7 @@
         }
       ],
       "clue": {
-        "text": "Yanardağdan akan",
+        "text": "Halat çekme komutu",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,

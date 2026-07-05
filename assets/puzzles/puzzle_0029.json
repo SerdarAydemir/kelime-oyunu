@@ -858,7 +858,7 @@
         }
       ],
       "clue": {
-        "text": "Sıvılaşmış metal",
+        "text": "Çözelti",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -898,7 +898,7 @@
         }
       ],
       "clue": {
-        "text": "Gemici düğümü",
+        "text": "Yelken aç komutu",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -1042,7 +1042,7 @@
         }
       ],
       "clue": {
-        "text": "Gözbebeği",
+        "text": "İşlenen ana konu",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1218,7 +1218,7 @@
         }
       ],
       "clue": {
-        "text": "Tıbbi müdahale",
+        "text": "İlaç katılmış",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1382,7 +1382,7 @@
         }
       ],
       "clue": {
-        "text": "Geminin demirlediği yer",
+        "text": "Halat kangalı",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,

@@ -940,7 +940,7 @@
         }
       ],
       "clue": {
-        "text": "Çocuk dilinde",
+        "text": "Burunla alay işareti",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -1120,7 +1120,7 @@
         }
       ],
       "clue": {
-        "text": "Sürüngen, zehirli",
+        "text": "Ayaksız sürüngen",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1340,7 +1340,7 @@
         }
       ],
       "clue": {
-        "text": "Kalem kaydıran",
+        "text": "Cilalı (hat kağıdı)",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1396,7 +1396,7 @@
         }
       ],
       "clue": {
-        "text": "Pencereye takılan",
+        "text": "Pencere tel örgüsü",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,

@@ -1007,7 +1007,7 @@
         }
       ],
       "clue": {
-        "text": "Isıya dayanıklı levha",
+        "text": "Yalıtkan mineral",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1051,7 +1051,7 @@
         }
       ],
       "clue": {
-        "text": "Karasız yurt insanı",
+        "text": "Adada yaşayan",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1371,7 +1371,7 @@
         }
       ],
       "clue": {
-        "text": "Bitkinliğe son",
+        "text": "Güç, ilaç",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,

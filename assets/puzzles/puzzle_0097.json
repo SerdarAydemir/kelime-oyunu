@@ -969,7 +969,7 @@
         }
       ],
       "clue": {
-        "text": "Beklenmeden",
+        "text": "Birdenbire",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1189,7 +1189,7 @@
         }
       ],
       "clue": {
-        "text": "Müzikte uyumsuz",
+        "text": "Tonsuz (müzik)",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1293,7 +1293,7 @@
         }
       ],
       "clue": {
-        "text": "Küçültmek, dağıtmak",
+        "text": "Kırıntılara ayırmak",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1349,7 +1349,7 @@
         }
       ],
       "clue": {
-        "text": "Müzikte gam",
+        "text": "Müzikte ton düzeni",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1425,7 +1425,7 @@
         }
       ],
       "clue": {
-        "text": "Geminin demirlediği yer",
+        "text": "Halat kangalı",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,

@@ -1430,7 +1430,7 @@
         }
       ],
       "clue": {
-        "text": "Elektrik birimi",
+        "text": "Gerilim birimi",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1474,7 +1474,7 @@
         }
       ],
       "clue": {
-        "text": "Yapıya destek",
+        "text": "Dokumada enine ip",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1562,7 +1562,7 @@
         }
       ],
       "clue": {
-        "text": "Yaşıt olma durumu",
+        "text": "Yaşıtlık",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,

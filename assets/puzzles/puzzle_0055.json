@@ -1008,7 +1008,7 @@
         }
       ],
       "clue": {
-        "text": "Yenilgi, mağlubiyet",
+        "text": "Yenilgi sözü",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1448,7 +1448,7 @@
         }
       ],
       "clue": {
-        "text": "Yanlış bulma",
+        "text": "Kınama",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1504,7 +1504,7 @@
         }
       ],
       "clue": {
-        "text": "Sıcak kanlı hayvan",
+        "text": "Kokulu öd ağacı",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1620,7 +1620,7 @@
         }
       ],
       "clue": {
-        "text": "Hafif rüzgar",
+        "text": "Esme biçimi",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,

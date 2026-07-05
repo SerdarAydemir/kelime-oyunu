@@ -860,7 +860,7 @@
         }
       ],
       "clue": {
-        "text": "Ayakkabı tamiri",
+        "text": "Yöresel hafif pabuç",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -908,7 +908,7 @@
         }
       ],
       "clue": {
-        "text": "Az pişmiş et",
+        "text": "Kabukta az haşlanmış",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -1400,7 +1400,7 @@
         }
       ],
       "clue": {
-        "text": "Maddi değer",
+        "text": "Alışveriş aracı",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1640,7 +1640,7 @@
         }
       ],
       "clue": {
-        "text": "Kapı çalma sesi",
+        "text": "Tokat'ta ilçe",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,

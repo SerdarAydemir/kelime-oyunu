@@ -1078,7 +1078,7 @@
         }
       ],
       "clue": {
-        "text": "Örnek, örneklem",
+        "text": "Atasözü (eski)",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1162,7 +1162,7 @@
         }
       ],
       "clue": {
-        "text": "Meyve suyu",
+        "text": "Zarfa ekleme (eski)",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1614,7 +1614,7 @@
         }
       ],
       "clue": {
-        "text": "Cinsiyet, zevat",
+        "text": "Cinsiyet (biyoloji)",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,
