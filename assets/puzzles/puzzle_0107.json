@@ -23,7 +23,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Kaz sesi",
+          "text": "Erişimi kesmek",
           "arrow": "down",
           "word_id": "D1",
           "image_id": null,
@@ -39,7 +39,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Eziyet, cefa",
+          "text": "Sahip, malik",
           "arrow": "down",
           "word_id": "D2",
           "image_id": null,
@@ -55,7 +55,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "İngiliz soyluluk unvanı",
+          "text": "Koyun sürüsü",
           "arrow": "down",
           "word_id": "D3",
           "image_id": null,
@@ -71,7 +71,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Antlaşma, ahit",
+          "text": "Şahitlik eden",
           "arrow": "down",
           "word_id": "D4",
           "image_id": null,
@@ -119,7 +119,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Varmak, ulaşmak",
+          "text": "Dana dilimi",
           "arrow": "right",
           "word_id": "A1",
           "image_id": null,
@@ -135,7 +135,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Canlısız dönem",
+          "text": "İşsiz güçsüz",
           "arrow": "right",
           "word_id": "A2",
           "image_id": null,
@@ -151,7 +151,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Doğu'da bir ilimiz",
+          "text": "Soy gaz",
           "arrow": "right",
           "word_id": "A3",
           "image_id": null,
@@ -199,7 +199,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Spor müsabakası",
+          "text": "Şahı deviren hamle",
           "arrow": "right",
           "word_id": "A9",
           "image_id": null,
@@ -215,7 +215,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Göz alıcı, havalı",
+          "text": "Kısmen açık",
           "arrow": "right",
           "word_id": "A11",
           "image_id": null,
@@ -231,7 +231,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Japon kılıcı",
+          "text": "Kara çalma, yerme",
           "arrow": "right",
           "word_id": "A12",
           "image_id": null,
@@ -247,7 +247,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Tohumları toprağa",
+          "text": "Japon pirinç içkisi",
           "arrow": "down",
           "word_id": "D7",
           "image_id": null,
@@ -263,14 +263,14 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Enerjinin simgesi",
+          "text": "Kükürdün simgesi",
           "arrow": "right",
           "word_id": "A4",
           "image_id": null,
           "source": "curated"
         },
         {
-          "text": "Hassas, ince",
+          "text": "Ürün yetiştirme",
           "arrow": "down",
           "word_id": "D8",
           "image_id": null,
@@ -286,14 +286,14 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Zırhlı savaş aracı",
+          "text": "Büyük kara parçası",
           "arrow": "right",
           "word_id": "A6",
           "image_id": null,
           "source": "llm"
         },
         {
-          "text": "Baş",
+          "text": "Toprak, yer",
           "arrow": "down",
           "word_id": "D9",
           "image_id": null,
@@ -309,14 +309,14 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Şaman",
+          "text": "Kurutulmuş meyve",
           "arrow": "right",
           "word_id": "A8",
           "image_id": null,
           "source": "llm"
         },
         {
-          "text": "Bahçe sınırı",
+          "text": "Telli bir Doğu sazı",
           "arrow": "down",
           "word_id": "D10",
           "image_id": null,
@@ -367,7 +367,7 @@
       "row": 1,
       "col": 1,
       "type": "letter",
-      "solution": "G",
+      "solution": "B",
       "word_ids": [
         "A1",
         "D1"
@@ -378,7 +378,7 @@
       "row": 1,
       "col": 2,
       "type": "letter",
-      "solution": "E",
+      "solution": "İ",
       "word_ids": [
         "A1",
         "D2"
@@ -389,7 +389,7 @@
       "row": 1,
       "col": 3,
       "type": "letter",
-      "solution": "L",
+      "solution": "F",
       "word_ids": [
         "A1",
         "D3"
@@ -400,7 +400,7 @@
       "row": 1,
       "col": 4,
       "type": "letter",
-      "solution": "M",
+      "solution": "T",
       "word_ids": [
         "A1",
         "D4"
@@ -444,7 +444,7 @@
       "row": 2,
       "col": 2,
       "type": "letter",
-      "solution": "Z",
+      "solution": "Y",
       "word_ids": [
         "A2",
         "D2"
@@ -455,7 +455,7 @@
       "row": 2,
       "col": 3,
       "type": "letter",
-      "solution": "O",
+      "solution": "L",
       "word_ids": [
         "A2",
         "D3"
@@ -466,7 +466,7 @@
       "row": 2,
       "col": 4,
       "type": "letter",
-      "solution": "İ",
+      "solution": "A",
       "word_ids": [
         "A2",
         "D4"
@@ -488,7 +488,7 @@
       "row": 3,
       "col": 1,
       "type": "letter",
-      "solution": "K",
+      "solution": "N",
       "word_ids": [
         "A3",
         "D1"
@@ -499,7 +499,7 @@
       "row": 3,
       "col": 2,
       "type": "letter",
-      "solution": "A",
+      "solution": "E",
       "word_ids": [
         "A3",
         "D2"
@@ -510,7 +510,7 @@
       "row": 3,
       "col": 3,
       "type": "letter",
-      "solution": "R",
+      "solution": "O",
       "word_ids": [
         "A3",
         "D3"
@@ -521,7 +521,7 @@
       "row": 3,
       "col": 4,
       "type": "letter",
-      "solution": "S",
+      "solution": "N",
       "word_ids": [
         "A3",
         "D4"
@@ -532,7 +532,7 @@
       "row": 3,
       "col": 6,
       "type": "letter",
-      "solution": "E",
+      "solution": "S",
       "word_ids": [
         "A4",
         "D7"
@@ -554,7 +554,7 @@
       "row": 4,
       "col": 3,
       "type": "letter",
-      "solution": "T",
+      "solution": "K",
       "word_ids": [
         "A6",
         "D3"
@@ -565,7 +565,7 @@
       "row": 4,
       "col": 4,
       "type": "letter",
-      "solution": "A",
+      "solution": "I",
       "word_ids": [
         "A6",
         "D4"
@@ -576,7 +576,7 @@
       "row": 4,
       "col": 5,
       "type": "letter",
-      "solution": "N",
+      "solution": "T",
       "word_ids": [
         "A6",
         "D8"
@@ -587,7 +587,7 @@
       "row": 4,
       "col": 6,
       "type": "letter",
-      "solution": "K",
+      "solution": "A",
       "word_ids": [
         "A6",
         "D7"
@@ -642,7 +642,7 @@
       "row": 5,
       "col": 6,
       "type": "letter",
-      "solution": "M",
+      "solution": "K",
       "word_ids": [
         "A8",
         "D7"
@@ -675,7 +675,7 @@
       "row": 6,
       "col": 3,
       "type": "letter",
-      "solution": "Ç",
+      "solution": "T",
       "word_ids": [
         "A9",
         "D10"
@@ -719,7 +719,7 @@
       "row": 7,
       "col": 2,
       "type": "letter",
-      "solution": "F",
+      "solution": "R",
       "word_ids": [
         "A11",
         "D9"
@@ -730,7 +730,7 @@
       "row": 7,
       "col": 3,
       "type": "letter",
-      "solution": "İ",
+      "solution": "A",
       "word_ids": [
         "A11",
         "D10"
@@ -752,7 +752,7 @@
       "row": 7,
       "col": 5,
       "type": "letter",
-      "solution": "İ",
+      "solution": "I",
       "word_ids": [
         "A11",
         "D8"
@@ -785,7 +785,7 @@
       "row": 8,
       "col": 3,
       "type": "letter",
-      "solution": "T",
+      "solution": "R",
       "word_ids": [
         "A12",
         "D10"
@@ -807,7 +807,7 @@
       "row": 8,
       "col": 5,
       "type": "letter",
-      "solution": "N",
+      "solution": "M",
       "word_ids": [
         "A12",
         "D8"
@@ -829,7 +829,7 @@
   "words": [
     {
       "id": "A1",
-      "answer": "GELMEK",
+      "answer": "BİFTEK",
       "length": 6,
       "direction": "right",
       "clue_cell": {
@@ -867,7 +867,7 @@
         }
       ],
       "clue": {
-        "text": "Varmak, ulaşmak",
+        "text": "Dana dilimi",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -877,7 +877,7 @@
     },
     {
       "id": "A2",
-      "answer": "AZOİK",
+      "answer": "AYLAK",
       "length": 5,
       "direction": "right",
       "clue_cell": {
@@ -911,7 +911,7 @@
         }
       ],
       "clue": {
-        "text": "Canlısız dönem",
+        "text": "İşsiz güçsüz",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -921,7 +921,7 @@
     },
     {
       "id": "A3",
-      "answer": "KARS",
+      "answer": "NEON",
       "length": 4,
       "direction": "right",
       "clue_cell": {
@@ -951,7 +951,7 @@
         }
       ],
       "clue": {
-        "text": "Doğu'da bir ilimiz",
+        "text": "Soy gaz",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -961,7 +961,7 @@
     },
     {
       "id": "A4",
-      "answer": "E",
+      "answer": "S",
       "length": 1,
       "direction": "right",
       "clue_cell": {
@@ -979,7 +979,7 @@
         }
       ],
       "clue": {
-        "text": "Enerjinin simgesi",
+        "text": "Kükürdün simgesi",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1017,7 +1017,7 @@
     },
     {
       "id": "A6",
-      "answer": "TANK",
+      "answer": "KITA",
       "length": 4,
       "direction": "right",
       "clue_cell": {
@@ -1047,7 +1047,7 @@
         }
       ],
       "clue": {
-        "text": "Büyük su deposu",
+        "text": "Büyük kara parçası",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1089,7 +1089,7 @@
     },
     {
       "id": "A8",
-      "answer": "KAM",
+      "answer": "KAK",
       "length": 3,
       "direction": "right",
       "clue_cell": {
@@ -1115,7 +1115,7 @@
         }
       ],
       "clue": {
-        "text": "Şaman",
+        "text": "Kurutulmuş meyve",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1125,7 +1125,7 @@
     },
     {
       "id": "A9",
-      "answer": "MAÇ",
+      "answer": "MAT",
       "length": 3,
       "direction": "right",
       "clue_cell": {
@@ -1151,7 +1151,7 @@
         }
       ],
       "clue": {
-        "text": "Spor müsabakası",
+        "text": "Şahı deviren hamle",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1193,7 +1193,7 @@
     },
     {
       "id": "A11",
-      "answer": "AFİLİ",
+      "answer": "ARALI",
       "length": 5,
       "direction": "right",
       "clue_cell": {
@@ -1227,7 +1227,7 @@
         }
       ],
       "clue": {
-        "text": "Göz alıcı, havalı",
+        "text": "Kısmen açık",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1237,7 +1237,7 @@
     },
     {
       "id": "A12",
-      "answer": "KATANA",
+      "answer": "KARAMA",
       "length": 6,
       "direction": "right",
       "clue_cell": {
@@ -1275,7 +1275,7 @@
         }
       ],
       "clue": {
-        "text": "Japon kılıcı",
+        "text": "Kara çalma, yerme",
         "arrow": "right",
         "word_id": "A12",
         "image_id": null,
@@ -1285,7 +1285,7 @@
     },
     {
       "id": "D1",
-      "answer": "GAKLAMAK",
+      "answer": "BANLAMAK",
       "length": 8,
       "direction": "down",
       "clue_cell": {
@@ -1331,7 +1331,7 @@
         }
       ],
       "clue": {
-        "text": "Karga sesi çıkarmak",
+        "text": "Erişimi kesmek",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1341,7 +1341,7 @@
     },
     {
       "id": "D2",
-      "answer": "EZA",
+      "answer": "İYE",
       "length": 3,
       "direction": "down",
       "clue_cell": {
@@ -1367,7 +1367,7 @@
         }
       ],
       "clue": {
-        "text": "Eziyet, cefa",
+        "text": "Sahip, malik",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1377,7 +1377,7 @@
     },
     {
       "id": "D3",
-      "answer": "LORT",
+      "answer": "FLOK",
       "length": 4,
       "direction": "down",
       "clue_cell": {
@@ -1407,7 +1407,7 @@
         }
       ],
       "clue": {
-        "text": "İngiliz soylusu",
+        "text": "Koyun sürüsü",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1417,7 +1417,7 @@
     },
     {
       "id": "D4",
-      "answer": "MİSAK",
+      "answer": "TANIK",
       "length": 5,
       "direction": "down",
       "clue_cell": {
@@ -1451,7 +1451,7 @@
         }
       ],
       "clue": {
-        "text": "Antlaşma, ahit",
+        "text": "Şahitlik eden",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1521,7 +1521,7 @@
     },
     {
       "id": "D7",
-      "answer": "EKME",
+      "answer": "SAKE",
       "length": 4,
       "direction": "down",
       "clue_cell": {
@@ -1551,7 +1551,7 @@
         }
       ],
       "clue": {
-        "text": "Tohum serpme",
+        "text": "Japon pirinç içkisi",
         "arrow": "down",
         "word_id": "D7",
         "image_id": null,
@@ -1561,7 +1561,7 @@
     },
     {
       "id": "D8",
-      "answer": "NARİN",
+      "answer": "TARIM",
       "length": 5,
       "direction": "down",
       "clue_cell": {
@@ -1595,7 +1595,7 @@
         }
       ],
       "clue": {
-        "text": "Hassas, ince",
+        "text": "Ürün yetiştirme",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,
@@ -1605,7 +1605,7 @@
     },
     {
       "id": "D9",
-      "answer": "KAFA",
+      "answer": "KARA",
       "length": 4,
       "direction": "down",
       "clue_cell": {
@@ -1635,7 +1635,7 @@
         }
       ],
       "clue": {
-        "text": "Baş",
+        "text": "Toprak, yer",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,
@@ -1645,7 +1645,7 @@
     },
     {
       "id": "D10",
-      "answer": "ÇİT",
+      "answer": "TAR",
       "length": 3,
       "direction": "down",
       "clue_cell": {
@@ -1671,7 +1671,7 @@
         }
       ],
       "clue": {
-        "text": "Bahçe sınırı",
+        "text": "Telli bir Doğu sazı",
         "arrow": "down",
         "word_id": "D10",
         "image_id": null,
@@ -1747,6 +1747,6 @@
     "post_fill_scanned": true,
     "scanner_version": "2.0.0"
   },
-  "generated_at": "2026-07-04T22:43:02.467064+00:00",
+  "generated_at": "2026-07-05T09:31:43.316000+00:00",
   "generator_version": "2.0.0"
 }

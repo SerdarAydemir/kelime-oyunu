@@ -23,7 +23,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Saçı düzeltme",
+          "text": "Meyveden yapılan reçel",
           "arrow": "down",
           "word_id": "D1",
           "image_id": null,
@@ -87,7 +87,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Karate sporcusu",
+          "text": "Verimsiz toprak",
           "arrow": "down",
           "word_id": "D5",
           "image_id": null,
@@ -119,7 +119,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Yüzü olmayan",
+          "text": "Yetenek, beceri",
           "arrow": "right",
           "word_id": "A1",
           "image_id": null,
@@ -167,7 +167,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Hükümdar değneği",
+          "text": "Yasaklama",
           "arrow": "right",
           "word_id": "A6",
           "image_id": null,
@@ -183,7 +183,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Döner top kulesi",
+          "text": "Darbe izi",
           "arrow": "right",
           "word_id": "A8",
           "image_id": null,
@@ -199,7 +199,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Yuvarlak cam oyuncak",
+          "text": "Lise öğrencisi",
           "arrow": "right",
           "word_id": "A9",
           "image_id": null,
@@ -215,7 +215,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Ekol yandaşı",
+          "text": "Anneye düşkün",
           "arrow": "right",
           "word_id": "A10",
           "image_id": null,
@@ -231,7 +231,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Sütte bulunan protein",
+          "text": "Kutu malzemesi",
           "arrow": "right",
           "word_id": "A11",
           "image_id": null,
@@ -247,7 +247,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "1 ve kendine bölünen",
+          "text": "Ana, temel",
           "arrow": "right",
           "word_id": "A3",
           "image_id": null,
@@ -263,7 +263,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Yıldırım (eski)",
+          "text": "Peyniriyle ünlü ilçe",
           "arrow": "down",
           "word_id": "D7",
           "image_id": null,
@@ -279,7 +279,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Yüzü kızarmaz",
+          "text": "Yılın ikinci ayı",
           "arrow": "down",
           "word_id": "D8",
           "image_id": null,
@@ -318,7 +318,7 @@
           "source": "curated"
         },
         {
-          "text": "Tohumları toprağa",
+          "text": "Nasıl, ne şekilde",
           "arrow": "down",
           "word_id": "D9",
           "image_id": null,
@@ -334,7 +334,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Çınlama sesi",
+          "text": "Beraberlik edatı",
           "arrow": "down",
           "word_id": "D10",
           "image_id": null,
@@ -346,7 +346,7 @@
       "row": 1,
       "col": 1,
       "type": "letter",
-      "solution": "T",
+      "solution": "M",
       "word_ids": [
         "A1",
         "D1"
@@ -445,7 +445,7 @@
       "row": 2,
       "col": 5,
       "type": "letter",
-      "solution": "A",
+      "solution": "I",
       "word_ids": [
         "A3",
         "D5"
@@ -500,7 +500,7 @@
       "row": 4,
       "col": 1,
       "type": "letter",
-      "solution": "A",
+      "solution": "M",
       "word_ids": [
         "A6",
         "D1"
@@ -511,7 +511,7 @@
       "row": 4,
       "col": 2,
       "type": "letter",
-      "solution": "S",
+      "solution": "E",
       "word_ids": [
         "A6",
         "D7"
@@ -522,7 +522,7 @@
       "row": 4,
       "col": 3,
       "type": "letter",
-      "solution": "A",
+      "solution": "N",
       "word_ids": [
         "A6",
         "D8"
@@ -555,7 +555,7 @@
       "row": 5,
       "col": 1,
       "type": "letter",
-      "solution": "T",
+      "solution": "E",
       "word_ids": [
         "A8",
         "D1"
@@ -566,7 +566,7 @@
       "row": 5,
       "col": 2,
       "type": "letter",
-      "solution": "A",
+      "solution": "Z",
       "word_ids": [
         "A8",
         "D7"
@@ -577,7 +577,7 @@
       "row": 5,
       "col": 3,
       "type": "letter",
-      "solution": "R",
+      "solution": "İ",
       "word_ids": [
         "A8",
         "D8"
@@ -588,7 +588,7 @@
       "row": 5,
       "col": 4,
       "type": "letter",
-      "solution": "E",
+      "solution": "N",
       "word_ids": [
         "A8",
         "D9"
@@ -599,7 +599,7 @@
       "row": 5,
       "col": 5,
       "type": "letter",
-      "solution": "T",
+      "solution": "Ç",
       "word_ids": [
         "A8",
         "D5"
@@ -610,7 +610,7 @@
       "row": 6,
       "col": 1,
       "type": "letter",
-      "solution": "M",
+      "solution": "L",
       "word_ids": [
         "A9",
         "D1"
@@ -643,7 +643,7 @@
       "row": 6,
       "col": 4,
       "type": "letter",
-      "solution": "K",
+      "solution": "E",
       "word_ids": [
         "A9",
         "D9"
@@ -654,7 +654,7 @@
       "row": 6,
       "col": 5,
       "type": "letter",
-      "solution": "E",
+      "solution": "L",
       "word_ids": [
         "A9",
         "D5"
@@ -665,7 +665,7 @@
       "row": 6,
       "col": 6,
       "type": "letter",
-      "solution": "T",
+      "solution": "İ",
       "word_ids": [
         "A9",
         "D10"
@@ -687,7 +687,7 @@
       "row": 7,
       "col": 2,
       "type": "letter",
-      "solution": "K",
+      "solution": "N",
       "word_ids": [
         "A10",
         "D7"
@@ -698,7 +698,7 @@
       "row": 7,
       "col": 3,
       "type": "letter",
-      "solution": "I",
+      "solution": "A",
       "word_ids": [
         "A10",
         "D8"
@@ -708,21 +708,21 @@
     {
       "row": 7,
       "col": 4,
-      "type": "letter",
-      "solution": "M",
-      "word_ids": [
-        "A10",
-        "D9"
-      ],
-      "clues": []
-    },
-    {
-      "row": 7,
-      "col": 5,
       "type": "letter",
       "solution": "C",
       "word_ids": [
         "A10",
+        "D9"
+      ],
+      "clues": []
+    },
+    {
+      "row": 7,
+      "col": 5,
+      "type": "letter",
+      "solution": "I",
+      "word_ids": [
+        "A10",
         "D5"
       ],
       "clues": []
@@ -731,7 +731,7 @@
       "row": 7,
       "col": 6,
       "type": "letter",
-      "solution": "I",
+      "solution": "L",
       "word_ids": [
         "A10",
         "D10"
@@ -742,7 +742,7 @@
       "row": 8,
       "col": 1,
       "type": "letter",
-      "solution": "K",
+      "solution": "T",
       "word_ids": [
         "A11",
         "D1"
@@ -753,7 +753,7 @@
       "row": 8,
       "col": 2,
       "type": "letter",
-      "solution": "A",
+      "solution": "E",
       "word_ids": [
         "A11",
         "D7"
@@ -764,7 +764,7 @@
       "row": 8,
       "col": 3,
       "type": "letter",
-      "solution": "Z",
+      "solution": "N",
       "word_ids": [
         "A11",
         "D8"
@@ -786,7 +786,7 @@
       "row": 8,
       "col": 5,
       "type": "letter",
-      "solution": "İ",
+      "solution": "K",
       "word_ids": [
         "A11",
         "D5"
@@ -797,7 +797,7 @@
       "row": 8,
       "col": 6,
       "type": "letter",
-      "solution": "N",
+      "solution": "E",
       "word_ids": [
         "A11",
         "D10"
@@ -808,7 +808,7 @@
   "words": [
     {
       "id": "A1",
-      "answer": "TELEKE",
+      "answer": "MELEKE",
       "length": 6,
       "direction": "right",
       "clue_cell": {
@@ -846,7 +846,7 @@
         }
       ],
       "clue": {
-        "text": "Yüzü olmayan",
+        "text": "Yetenek, beceri",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -884,7 +884,7 @@
     },
     {
       "id": "A3",
-      "answer": "ASAL",
+      "answer": "ASIL",
       "length": 4,
       "direction": "right",
       "clue_cell": {
@@ -914,7 +914,7 @@
         }
       ],
       "clue": {
-        "text": "1 ve kendine bölünen",
+        "text": "Ana, temel",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -984,7 +984,7 @@
     },
     {
       "id": "A6",
-      "answer": "ASA",
+      "answer": "MEN",
       "length": 3,
       "direction": "right",
       "clue_cell": {
@@ -1010,7 +1010,7 @@
         }
       ],
       "clue": {
-        "text": "Hükümdar değneği",
+        "text": "Yasaklama",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1052,7 +1052,7 @@
     },
     {
       "id": "A8",
-      "answer": "TARET",
+      "answer": "EZİNÇ",
       "length": 5,
       "direction": "right",
       "clue_cell": {
@@ -1086,7 +1086,7 @@
         }
       ],
       "clue": {
-        "text": "Döner top kulesi",
+        "text": "Darbe izi",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1096,7 +1096,7 @@
     },
     {
       "id": "A9",
-      "answer": "MİSKET",
+      "answer": "LİSELİ",
       "length": 6,
       "direction": "right",
       "clue_cell": {
@@ -1134,7 +1134,7 @@
         }
       ],
       "clue": {
-        "text": "Yuvarlak cam oyuncak",
+        "text": "Lise öğrencisi",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1144,7 +1144,7 @@
     },
     {
       "id": "A10",
-      "answer": "AKIMCI",
+      "answer": "ANACIL",
       "length": 6,
       "direction": "right",
       "clue_cell": {
@@ -1182,7 +1182,7 @@
         }
       ],
       "clue": {
-        "text": "Ekol yandaşı",
+        "text": "Anneye düşkün",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1192,7 +1192,7 @@
     },
     {
       "id": "A11",
-      "answer": "KAZEİN",
+      "answer": "TENEKE",
       "length": 6,
       "direction": "right",
       "clue_cell": {
@@ -1230,7 +1230,7 @@
         }
       ],
       "clue": {
-        "text": "Süt proteini",
+        "text": "Kutu malzemesi",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1240,7 +1240,7 @@
     },
     {
       "id": "D1",
-      "answer": "TARATMAK",
+      "answer": "MARMELAT",
       "length": 8,
       "direction": "down",
       "clue_cell": {
@@ -1286,7 +1286,7 @@
         }
       ],
       "clue": {
-        "text": "Tarakla açtırmak",
+        "text": "Meyveden yapılan reçel",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1388,7 +1388,7 @@
     },
     {
       "id": "D5",
-      "answer": "KARATECİ",
+      "answer": "KIRAÇLIK",
       "length": 8,
       "direction": "down",
       "clue_cell": {
@@ -1434,7 +1434,7 @@
         }
       ],
       "clue": {
-        "text": "Karate sporcusu",
+        "text": "Verimsiz toprak",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1484,7 +1484,7 @@
     },
     {
       "id": "D7",
-      "answer": "SAİKA",
+      "answer": "EZİNE",
       "length": 5,
       "direction": "down",
       "clue_cell": {
@@ -1518,7 +1518,7 @@
         }
       ],
       "clue": {
-        "text": "Yıldırım (eski)",
+        "text": "Peyniriyle ünlü ilçe",
         "arrow": "down",
         "word_id": "D7",
         "image_id": null,
@@ -1528,7 +1528,7 @@
     },
     {
       "id": "D8",
-      "answer": "ARSIZ",
+      "answer": "NİSAN",
       "length": 5,
       "direction": "down",
       "clue_cell": {
@@ -1562,7 +1562,7 @@
         }
       ],
       "clue": {
-        "text": "Utanması olmayan",
+        "text": "Yılın ikinci ayı",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,
@@ -1572,7 +1572,7 @@
     },
     {
       "id": "D9",
-      "answer": "EKME",
+      "answer": "NECE",
       "length": 4,
       "direction": "down",
       "clue_cell": {
@@ -1602,7 +1602,7 @@
         }
       ],
       "clue": {
-        "text": "Tohum serpme",
+        "text": "Nasıl, ne şekilde",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,
@@ -1612,7 +1612,7 @@
     },
     {
       "id": "D10",
-      "answer": "TIN",
+      "answer": "İLE",
       "length": 3,
       "direction": "down",
       "clue_cell": {
@@ -1638,7 +1638,7 @@
         }
       ],
       "clue": {
-        "text": "Çınlama sesi",
+        "text": "Beraberlik edatı",
         "arrow": "down",
         "word_id": "D10",
         "image_id": null,
@@ -1654,6 +1654,6 @@
     "post_fill_scanned": true,
     "scanner_version": "2.0.0"
   },
-  "generated_at": "2026-07-04T22:34:52.084106+00:00",
+  "generated_at": "2026-07-05T09:25:29.399902+00:00",
   "generator_version": "2.0.0"
 }

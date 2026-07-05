@@ -23,7 +23,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Sığa, alabilirlik",
+          "text": "Müsvedde",
           "arrow": "down",
           "word_id": "D1",
           "image_id": null,
@@ -39,7 +39,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Karışık renkli",
+          "text": "Cet, soy büyüğü",
           "arrow": "down",
           "word_id": "D2",
           "image_id": null,
@@ -71,7 +71,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Akşam namazı",
+          "text": "Üzgün, matemde",
           "arrow": "down",
           "word_id": "D4",
           "image_id": null,
@@ -119,7 +119,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Üzümden yapılan içki",
+          "text": "Üzüm damıtma içkisi",
           "arrow": "right",
           "word_id": "A1",
           "image_id": null,
@@ -135,7 +135,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Kırmızı renk",
+          "text": "Binek hayvanı",
           "arrow": "right",
           "word_id": "A2",
           "image_id": null,
@@ -151,7 +151,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Anlaşma, antlaşma",
+          "text": "Dans (eski)",
           "arrow": "right",
           "word_id": "A4",
           "image_id": null,
@@ -183,7 +183,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Adli sicil kaydı",
+          "text": "Gereklilik (eski)",
           "arrow": "right",
           "word_id": "A8",
           "image_id": null,
@@ -199,7 +199,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Verme, ödeme",
+          "text": "Avuç içi",
           "arrow": "right",
           "word_id": "A9",
           "image_id": null,
@@ -215,7 +215,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "İyileştirme yöntemi",
+          "text": "Hastalıkla ilgili",
           "arrow": "right",
           "word_id": "A11",
           "image_id": null,
@@ -231,7 +231,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Un eleği",
+          "text": "Peşine düşme",
           "arrow": "right",
           "word_id": "A12",
           "image_id": null,
@@ -254,7 +254,7 @@
           "source": "llm"
         },
         {
-          "text": "Sahne şovu",
+          "text": "İstemeden, tesadüfen",
           "arrow": "down",
           "word_id": "D7",
           "image_id": null,
@@ -286,14 +286,14 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "İskambilde birli",
+          "text": "Kırmızı renk",
           "arrow": "right",
           "word_id": "A7",
           "image_id": null,
           "source": "curated"
         },
         {
-          "text": "Kırık kemik destek",
+          "text": "Altın saflığı",
           "arrow": "down",
           "word_id": "D8",
           "image_id": null,
@@ -309,7 +309,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Yahudi başörtüsü",
+          "text": "Geçmişte kalan şey",
           "arrow": "down",
           "word_id": "D9",
           "image_id": null,
@@ -325,7 +325,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Cenaze Kur'anı",
+          "text": "Esme biçimi",
           "arrow": "down",
           "word_id": "D10",
           "image_id": null,
@@ -341,14 +341,14 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Çalışma, meşguliyet",
+          "text": "İskambilde birli",
           "arrow": "right",
           "word_id": "A10",
           "image_id": null,
           "source": "curated"
         },
         {
-          "text": "Çok karşıtı",
+          "text": "Gökyüzündeki uydumuz",
           "arrow": "down",
           "word_id": "D11",
           "image_id": null,
@@ -437,7 +437,7 @@
       "row": 2,
       "col": 2,
       "type": "letter",
-      "solution": "L",
+      "solution": "T",
       "word_ids": [
         "A2",
         "D2"
@@ -481,7 +481,7 @@
       "row": 3,
       "col": 1,
       "type": "letter",
-      "solution": "P",
+      "solution": "R",
       "word_ids": [
         "A4",
         "D1"
@@ -514,7 +514,7 @@
       "row": 3,
       "col": 4,
       "type": "letter",
-      "solution": "T",
+      "solution": "S",
       "word_ids": [
         "A4",
         "D4"
@@ -558,7 +558,7 @@
       "row": 4,
       "col": 4,
       "type": "letter",
-      "solution": "S",
+      "solution": "L",
       "word_ids": [
         "A7",
         "D4"
@@ -569,7 +569,7 @@
       "row": 5,
       "col": 1,
       "type": "letter",
-      "solution": "S",
+      "solution": "L",
       "word_ids": [
         "A8",
         "D1"
@@ -591,7 +591,7 @@
       "row": 5,
       "col": 3,
       "type": "letter",
-      "solution": "B",
+      "solution": "Z",
       "word_ids": [
         "A8",
         "D7"
@@ -613,7 +613,7 @@
       "row": 5,
       "col": 5,
       "type": "letter",
-      "solution": "K",
+      "solution": "M",
       "word_ids": [
         "A8",
         "D9"
@@ -624,7 +624,7 @@
       "row": 5,
       "col": 6,
       "type": "letter",
-      "solution": "A",
+      "solution": "E",
       "word_ids": [
         "A8",
         "D10"
@@ -635,7 +635,7 @@
       "row": 6,
       "col": 1,
       "type": "letter",
-      "solution": "İ",
+      "solution": "A",
       "word_ids": [
         "A9",
         "D1"
@@ -646,7 +646,7 @@
       "row": 6,
       "col": 2,
       "type": "letter",
-      "solution": "T",
+      "solution": "Y",
       "word_ids": [
         "A9",
         "D8"
@@ -668,7 +668,7 @@
       "row": 6,
       "col": 5,
       "type": "letter",
-      "solution": "İ",
+      "solution": "A",
       "word_ids": [
         "A10",
         "D9"
@@ -679,7 +679,7 @@
       "row": 6,
       "col": 6,
       "type": "letter",
-      "solution": "Ş",
+      "solution": "S",
       "word_ids": [
         "A10",
         "D10"
@@ -690,7 +690,7 @@
       "row": 7,
       "col": 1,
       "type": "letter",
-      "solution": "T",
+      "solution": "M",
       "word_ids": [
         "A11",
         "D1"
@@ -701,7 +701,7 @@
       "row": 7,
       "col": 2,
       "type": "letter",
-      "solution": "E",
+      "solution": "A",
       "word_ids": [
         "A11",
         "D8"
@@ -733,64 +733,64 @@
     {
       "row": 7,
       "col": 5,
-      "type": "letter",
-      "solution": "P",
-      "word_ids": [
-        "A11",
-        "D9"
-      ],
-      "clues": []
-    },
-    {
-      "row": 7,
-      "col": 6,
-      "type": "letter",
-      "solution": "İ",
-      "word_ids": [
-        "A11",
-        "D10"
-      ],
-      "clues": []
-    },
-    {
-      "row": 8,
-      "col": 1,
-      "type": "letter",
-      "solution": "E",
-      "word_ids": [
-        "A12",
-        "D1"
-      ],
-      "clues": []
-    },
-    {
-      "row": 8,
-      "col": 2,
-      "type": "letter",
-      "solution": "L",
-      "word_ids": [
-        "A12",
-        "D8"
-      ],
-      "clues": []
-    },
-    {
-      "row": 8,
-      "col": 3,
-      "type": "letter",
-      "solution": "E",
-      "word_ids": [
-        "A12",
-        "D7"
-      ],
-      "clues": []
-    },
-    {
-      "row": 8,
-      "col": 4,
       "type": "letter",
       "solution": "Z",
       "word_ids": [
+        "A11",
+        "D9"
+      ],
+      "clues": []
+    },
+    {
+      "row": 7,
+      "col": 6,
+      "type": "letter",
+      "solution": "İ",
+      "word_ids": [
+        "A11",
+        "D10"
+      ],
+      "clues": []
+    },
+    {
+      "row": 8,
+      "col": 1,
+      "type": "letter",
+      "solution": "A",
+      "word_ids": [
+        "A12",
+        "D1"
+      ],
+      "clues": []
+    },
+    {
+      "row": 8,
+      "col": 2,
+      "type": "letter",
+      "solution": "R",
+      "word_ids": [
+        "A12",
+        "D8"
+      ],
+      "clues": []
+    },
+    {
+      "row": 8,
+      "col": 3,
+      "type": "letter",
+      "solution": "A",
+      "word_ids": [
+        "A12",
+        "D7"
+      ],
+      "clues": []
+    },
+    {
+      "row": 8,
+      "col": 4,
+      "type": "letter",
+      "solution": "Y",
+      "word_ids": [
         "A12",
         "D11"
       ],
@@ -800,7 +800,7 @@
       "row": 8,
       "col": 5,
       "type": "letter",
-      "solution": "E",
+      "solution": "I",
       "word_ids": [
         "A12",
         "D9"
@@ -811,7 +811,7 @@
       "row": 8,
       "col": 6,
       "type": "letter",
-      "solution": "R",
+      "solution": "Ş",
       "word_ids": [
         "A12",
         "D10"
@@ -870,7 +870,7 @@
     },
     {
       "id": "A2",
-      "answer": "AL",
+      "answer": "AT",
       "length": 2,
       "direction": "right",
       "clue_cell": {
@@ -892,7 +892,7 @@
         }
       ],
       "clue": {
-        "text": "Kırmızı renk",
+        "text": "Binek hayvanı",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -938,7 +938,7 @@
     },
     {
       "id": "A4",
-      "answer": "PAKT",
+      "answer": "RAKS",
       "length": 4,
       "direction": "right",
       "clue_cell": {
@@ -968,7 +968,7 @@
         }
       ],
       "clue": {
-        "text": "Anlaşma, antlaşma",
+        "text": "Dans (eski)",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1034,7 +1034,7 @@
     },
     {
       "id": "A7",
-      "answer": "AS",
+      "answer": "AL",
       "length": 2,
       "direction": "right",
       "clue_cell": {
@@ -1056,7 +1056,7 @@
         }
       ],
       "clue": {
-        "text": "İskambilde birli",
+        "text": "Kırmızı renk",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1066,7 +1066,7 @@
     },
     {
       "id": "A8",
-      "answer": "SABIKA",
+      "answer": "LAZIME",
       "length": 6,
       "direction": "right",
       "clue_cell": {
@@ -1104,7 +1104,7 @@
         }
       ],
       "clue": {
-        "text": "Adli sicil kaydı",
+        "text": "Gereklilik (eski)",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1114,7 +1114,7 @@
     },
     {
       "id": "A9",
-      "answer": "İTA",
+      "answer": "AYA",
       "length": 3,
       "direction": "right",
       "clue_cell": {
@@ -1140,7 +1140,7 @@
         }
       ],
       "clue": {
-        "text": "Verme, ödeme",
+        "text": "Avuç içi",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1150,7 +1150,7 @@
     },
     {
       "id": "A10",
-      "answer": "İŞ",
+      "answer": "AS",
       "length": 2,
       "direction": "right",
       "clue_cell": {
@@ -1172,7 +1172,7 @@
         }
       ],
       "clue": {
-        "text": "Çalışma, meşguliyet",
+        "text": "İskambilde birli",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1182,7 +1182,7 @@
     },
     {
       "id": "A11",
-      "answer": "TERAPİ",
+      "answer": "MARAZİ",
       "length": 6,
       "direction": "right",
       "clue_cell": {
@@ -1220,7 +1220,7 @@
         }
       ],
       "clue": {
-        "text": "İyileştirme yöntemi",
+        "text": "Hastalıkla ilgili",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1230,7 +1230,7 @@
     },
     {
       "id": "A12",
-      "answer": "ELEZER",
+      "answer": "ARAYIŞ",
       "length": 6,
       "direction": "right",
       "clue_cell": {
@@ -1268,7 +1268,7 @@
         }
       ],
       "clue": {
-        "text": "Un eleği",
+        "text": "Peşine düşme",
         "arrow": "right",
         "word_id": "A12",
         "image_id": null,
@@ -1278,7 +1278,7 @@
     },
     {
       "id": "D1",
-      "answer": "KAPASİTE",
+      "answer": "KARALAMA",
       "length": 8,
       "direction": "down",
       "clue_cell": {
@@ -1324,7 +1324,7 @@
         }
       ],
       "clue": {
-        "text": "Sığa, alabilirlik",
+        "text": "Müsvedde",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1334,7 +1334,7 @@
     },
     {
       "id": "D2",
-      "answer": "ALA",
+      "answer": "ATA",
       "length": 3,
       "direction": "down",
       "clue_cell": {
@@ -1360,7 +1360,7 @@
         }
       ],
       "clue": {
-        "text": "Karışık renkli",
+        "text": "Cet, soy büyüğü",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1398,7 +1398,7 @@
     },
     {
       "id": "D4",
-      "answer": "YATSI",
+      "answer": "YASLI",
       "length": 5,
       "direction": "down",
       "clue_cell": {
@@ -1432,7 +1432,7 @@
         }
       ],
       "clue": {
-        "text": "Akşam namazı",
+        "text": "Üzgün, matemde",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1510,7 +1510,7 @@
     },
     {
       "id": "D7",
-      "answer": "KABARE",
+      "answer": "KAZARA",
       "length": 6,
       "direction": "down",
       "clue_cell": {
@@ -1548,7 +1548,7 @@
         }
       ],
       "clue": {
-        "text": "Sahne şovu",
+        "text": "İstemeden, tesadüfen",
         "arrow": "down",
         "word_id": "D7",
         "image_id": null,
@@ -1558,7 +1558,7 @@
     },
     {
       "id": "D8",
-      "answer": "ATEL",
+      "answer": "AYAR",
       "length": 4,
       "direction": "down",
       "clue_cell": {
@@ -1588,7 +1588,7 @@
         }
       ],
       "clue": {
-        "text": "Kırık sabitleyici",
+        "text": "Altın saflığı",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,
@@ -1598,7 +1598,7 @@
     },
     {
       "id": "D9",
-      "answer": "KİPE",
+      "answer": "MAZI",
       "length": 4,
       "direction": "down",
       "clue_cell": {
@@ -1628,7 +1628,7 @@
         }
       ],
       "clue": {
-        "text": "Yahudi başörtüsü",
+        "text": "Geçmişte kalan şey",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,
@@ -1638,7 +1638,7 @@
     },
     {
       "id": "D10",
-      "answer": "AŞİR",
+      "answer": "ESİŞ",
       "length": 4,
       "direction": "down",
       "clue_cell": {
@@ -1668,7 +1668,7 @@
         }
       ],
       "clue": {
-        "text": "Cenaze Kur'anı",
+        "text": "Esme biçimi",
         "arrow": "down",
         "word_id": "D10",
         "image_id": null,
@@ -1678,7 +1678,7 @@
     },
     {
       "id": "D11",
-      "answer": "AZ",
+      "answer": "AY",
       "length": 2,
       "direction": "down",
       "clue_cell": {
@@ -1700,7 +1700,7 @@
         }
       ],
       "clue": {
-        "text": "Çok karşıtı",
+        "text": "Gökyüzündeki uydumuz",
         "arrow": "down",
         "word_id": "D11",
         "image_id": null,
@@ -1716,6 +1716,6 @@
     "post_fill_scanned": true,
     "scanner_version": "2.0.0"
   },
-  "generated_at": "2026-07-04T22:28:21.371313+00:00",
+  "generated_at": "2026-07-05T08:53:29.307774+00:00",
   "generator_version": "2.0.0"
 }

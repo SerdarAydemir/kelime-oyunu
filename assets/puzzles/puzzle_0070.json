@@ -87,7 +87,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Bağırsak iltihabı",
+          "text": "Kapı mandalı",
           "arrow": "down",
           "word_id": "D5",
           "image_id": null,
@@ -103,7 +103,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Cılız, zayıf",
+          "text": "Elde mevcut",
           "arrow": "down",
           "word_id": "D6",
           "image_id": null,
@@ -263,7 +263,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Kızıl ateş parçası",
+          "text": "Gizli düşmanlık",
           "arrow": "right",
           "word_id": "A3",
           "image_id": null,
@@ -425,7 +425,7 @@
       "row": 2,
       "col": 5,
       "type": "letter",
-      "solution": "O",
+      "solution": "İ",
       "word_ids": [
         "A3",
         "D5"
@@ -436,7 +436,7 @@
       "row": 2,
       "col": 6,
       "type": "letter",
-      "solution": "R",
+      "solution": "N",
       "word_ids": [
         "A3",
         "D6"
@@ -886,7 +886,7 @@
     },
     {
       "id": "A3",
-      "answer": "KOR",
+      "answer": "KİN",
       "length": 3,
       "direction": "right",
       "clue_cell": {
@@ -912,7 +912,7 @@
         }
       ],
       "clue": {
-        "text": "Kızıl ateş parçası",
+        "text": "Gizli düşmanlık",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -1414,7 +1414,7 @@
     },
     {
       "id": "D5",
-      "answer": "KOLİT",
+      "answer": "KİLİT",
       "length": 5,
       "direction": "down",
       "clue_cell": {
@@ -1448,7 +1448,7 @@
         }
       ],
       "clue": {
-        "text": "Bağırsak iltihabı",
+        "text": "Kapı mandalı",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1458,7 +1458,7 @@
     },
     {
       "id": "D6",
-      "answer": "ARIK",
+      "answer": "ANIK",
       "length": 4,
       "direction": "down",
       "clue_cell": {
@@ -1488,7 +1488,7 @@
         }
       ],
       "clue": {
-        "text": "Cılız, zayıf",
+        "text": "Elde mevcut",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1664,6 +1664,6 @@
     "post_fill_scanned": true,
     "scanner_version": "2.0.0"
   },
-  "generated_at": "2026-07-04T21:31:09.500256+00:00",
+  "generated_at": "2026-07-05T08:21:36.064364+00:00",
   "generator_version": "2.0.0"
 }

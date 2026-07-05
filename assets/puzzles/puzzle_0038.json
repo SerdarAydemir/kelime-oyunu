@@ -39,7 +39,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "İdrar, sidik",
+          "text": "Hava taşıtı",
           "arrow": "down",
           "word_id": "D2",
           "image_id": null,
@@ -55,7 +55,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "İri yarı",
+          "text": "Bilgisayar belleği",
           "arrow": "down",
           "word_id": "D3",
           "image_id": null,
@@ -71,7 +71,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Zıtlık bağlacı",
+          "text": "Avuç içi",
           "arrow": "down",
           "word_id": "D4",
           "image_id": null,
@@ -87,7 +87,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Ayrılık, düşmanlık",
+          "text": "Haksız yere",
           "arrow": "down",
           "word_id": "D5",
           "image_id": null,
@@ -119,7 +119,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Hoşgörü, anlayış",
+          "text": "Yılan balığı türü",
           "arrow": "right",
           "word_id": "A1",
           "image_id": null,
@@ -135,7 +135,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Böbrek yetmezliği",
+          "text": "Sacayağı benzeri",
           "arrow": "right",
           "word_id": "A2",
           "image_id": null,
@@ -151,7 +151,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Kabe etrafında dönme",
+          "text": "Açgözlü istek",
           "arrow": "right",
           "word_id": "A3",
           "image_id": null,
@@ -167,7 +167,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Kasaptan alınan gıda",
+          "text": "Sona eklenen parça",
           "arrow": "right",
           "word_id": "A4",
           "image_id": null,
@@ -231,7 +231,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Sırtına binen",
+          "text": "Kaplan (eski)",
           "arrow": "right",
           "word_id": "A11",
           "image_id": null,
@@ -247,7 +247,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Zeytinyağı, tereyağı",
+          "text": "Altın (eski)",
           "arrow": "down",
           "word_id": "D7",
           "image_id": null,
@@ -387,7 +387,7 @@
       "row": 1,
       "col": 2,
       "type": "letter",
-      "solution": "Ü",
+      "solution": "U",
       "word_ids": [
         "A1",
         "D2"
@@ -398,7 +398,7 @@
       "row": 1,
       "col": 3,
       "type": "letter",
-      "solution": "D",
+      "solution": "R",
       "word_ids": [
         "A1",
         "D3"
@@ -453,7 +453,7 @@
       "row": 2,
       "col": 2,
       "type": "letter",
-      "solution": "R",
+      "solution": "Ç",
       "word_ids": [
         "A2",
         "D2"
@@ -464,7 +464,7 @@
       "row": 2,
       "col": 3,
       "type": "letter",
-      "solution": "E",
+      "solution": "A",
       "word_ids": [
         "A2",
         "D3"
@@ -475,7 +475,7 @@
       "row": 2,
       "col": 4,
       "type": "letter",
-      "solution": "M",
+      "solution": "Y",
       "word_ids": [
         "A2",
         "D4"
@@ -486,7 +486,7 @@
       "row": 2,
       "col": 5,
       "type": "letter",
-      "solution": "İ",
+      "solution": "A",
       "word_ids": [
         "A2",
         "D5"
@@ -530,7 +530,7 @@
       "row": 3,
       "col": 3,
       "type": "letter",
-      "solution": "V",
+      "solution": "M",
       "word_ids": [
         "A3",
         "D3"
@@ -552,7 +552,7 @@
       "row": 3,
       "col": 5,
       "type": "letter",
-      "solution": "F",
+      "solution": "H",
       "word_ids": [
         "A3",
         "D5"
@@ -574,7 +574,7 @@
       "row": 4,
       "col": 2,
       "type": "letter",
-      "solution": "T",
+      "solution": "K",
       "word_ids": [
         "A4",
         "D2"
@@ -827,7 +827,7 @@
   "words": [
     {
       "id": "A1",
-      "answer": "MÜDANA",
+      "answer": "MURANA",
       "length": 6,
       "direction": "right",
       "clue_cell": {
@@ -865,7 +865,7 @@
         }
       ],
       "clue": {
-        "text": "Minnet etme",
+        "text": "Yılan balığı türü",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -875,7 +875,7 @@
     },
     {
       "id": "A2",
-      "answer": "ÜREMİK",
+      "answer": "ÜÇAYAK",
       "length": 6,
       "direction": "right",
       "clue_cell": {
@@ -913,7 +913,7 @@
         }
       ],
       "clue": {
-        "text": "Böbrek yetmezliği",
+        "text": "Sacayağı benzeri",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -923,7 +923,7 @@
     },
     {
       "id": "A3",
-      "answer": "TAVAF",
+      "answer": "TAMAH",
       "length": 5,
       "direction": "right",
       "clue_cell": {
@@ -957,7 +957,7 @@
         }
       ],
       "clue": {
-        "text": "Kabe etrafında dönme",
+        "text": "Açgözlü istek",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -967,7 +967,7 @@
     },
     {
       "id": "A4",
-      "answer": "ET",
+      "answer": "EK",
       "length": 2,
       "direction": "right",
       "clue_cell": {
@@ -989,7 +989,7 @@
         }
       ],
       "clue": {
-        "text": "Kasaptan alınan gıda",
+        "text": "Sona eklenen parça",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1311,7 +1311,7 @@
     },
     {
       "id": "D2",
-      "answer": "ÜRAT",
+      "answer": "UÇAK",
       "length": 4,
       "direction": "down",
       "clue_cell": {
@@ -1341,7 +1341,7 @@
         }
       ],
       "clue": {
-        "text": "İdrar, sidik",
+        "text": "Hava taşıtı",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1351,7 +1351,7 @@
     },
     {
       "id": "D3",
-      "answer": "DEV",
+      "answer": "RAM",
       "length": 3,
       "direction": "down",
       "clue_cell": {
@@ -1377,7 +1377,7 @@
         }
       ],
       "clue": {
-        "text": "Masal iriyarısı",
+        "text": "Bilgisayar belleği",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1387,7 +1387,7 @@
     },
     {
       "id": "D4",
-      "answer": "AMA",
+      "answer": "AYA",
       "length": 3,
       "direction": "down",
       "clue_cell": {
@@ -1413,7 +1413,7 @@
         }
       ],
       "clue": {
-        "text": "Zıtlık bağlacı",
+        "text": "Avuç içi",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1423,7 +1423,7 @@
     },
     {
       "id": "D5",
-      "answer": "NİFAK",
+      "answer": "NAHAK",
       "length": 5,
       "direction": "down",
       "clue_cell": {
@@ -1457,7 +1457,7 @@
         }
       ],
       "clue": {
-        "text": "Ara bozuculuk",
+        "text": "Haksız yere",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1737,6 +1737,6 @@
     "post_fill_scanned": true,
     "scanner_version": "2.0.0"
   },
-  "generated_at": "2026-07-04T20:07:04.651732+00:00",
+  "generated_at": "2026-07-05T07:55:46.047659+00:00",
   "generator_version": "2.0.0"
 }

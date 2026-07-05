@@ -199,7 +199,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Yunan mitolojisinde",
+          "text": "Söz söyleme gücü",
           "arrow": "right",
           "word_id": "A11",
           "image_id": null,
@@ -215,7 +215,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "İlk dinozor devri",
+          "text": "Deniz tanrısı mızrağı",
           "arrow": "right",
           "word_id": "A12",
           "image_id": null,
@@ -302,7 +302,7 @@
           "source": "curated"
         },
         {
-          "text": "Yüzün ön kısmı",
+          "text": "Büyük kara parçası",
           "arrow": "down",
           "word_id": "D8",
           "image_id": null,
@@ -318,7 +318,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Para saklanan yer",
+          "text": "Su çekimi işareti",
           "arrow": "down",
           "word_id": "D9",
           "image_id": null,
@@ -341,7 +341,7 @@
           "source": "curated"
         },
         {
-          "text": "Tufan gemisi",
+          "text": "Sulama kanalı",
           "arrow": "down",
           "word_id": "D10",
           "image_id": null,
@@ -364,7 +364,7 @@
           "source": "curated"
         },
         {
-          "text": "Şaman",
+          "text": "Askeri rütbe",
           "arrow": "down",
           "word_id": "D11",
           "image_id": null,
@@ -728,7 +728,7 @@
       "row": 7,
       "col": 4,
       "type": "letter",
-      "solution": "Y",
+      "solution": "T",
       "word_ids": [
         "A12",
         "D8"
@@ -739,7 +739,7 @@
       "row": 7,
       "col": 5,
       "type": "letter",
-      "solution": "A",
+      "solution": "O",
       "word_ids": [
         "A12",
         "D11"
@@ -750,7 +750,7 @@
       "row": 7,
       "col": 6,
       "type": "letter",
-      "solution": "S",
+      "solution": "N",
       "word_ids": [
         "A12",
         "D9"
@@ -1207,7 +1207,7 @@
     },
     {
       "id": "A12",
-      "answer": "TRİYAS",
+      "answer": "TRİTON",
       "length": 6,
       "direction": "right",
       "clue_cell": {
@@ -1245,7 +1245,7 @@
         }
       ],
       "clue": {
-        "text": "İlk dinozor devri",
+        "text": "Deniz tanrısı mızrağı",
         "arrow": "right",
         "word_id": "A12",
         "image_id": null,
@@ -1579,7 +1579,7 @@
     },
     {
       "id": "D8",
-      "answer": "KIYA",
+      "answer": "KITA",
       "length": 4,
       "direction": "down",
       "clue_cell": {
@@ -1609,7 +1609,7 @@
         }
       ],
       "clue": {
-        "text": "Yüzün ön kısmı",
+        "text": "Büyük kara parçası",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,
@@ -1619,7 +1619,7 @@
     },
     {
       "id": "D9",
-      "answer": "KASA",
+      "answer": "KANA",
       "length": 4,
       "direction": "down",
       "clue_cell": {
@@ -1649,7 +1649,7 @@
         }
       ],
       "clue": {
-        "text": "Para saklanan yer",
+        "text": "Su çekimi işareti",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,
@@ -1695,7 +1695,7 @@
     },
     {
       "id": "D11",
-      "answer": "KAM",
+      "answer": "KOM",
       "length": 3,
       "direction": "down",
       "clue_cell": {
@@ -1721,7 +1721,7 @@
         }
       ],
       "clue": {
-        "text": "Şaman",
+        "text": "Askeri rütbe",
         "arrow": "down",
         "word_id": "D11",
         "image_id": null,
@@ -1737,6 +1737,6 @@
     "post_fill_scanned": true,
     "scanner_version": "2.0.0"
   },
-  "generated_at": "2026-07-04T19:52:29.169531+00:00",
+  "generated_at": "2026-07-05T07:44:27.820692+00:00",
   "generator_version": "2.0.0"
 }

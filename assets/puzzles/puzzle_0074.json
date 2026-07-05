@@ -23,7 +23,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Teklik, benzersizlik",
+          "text": "Faaliyet, iş",
           "arrow": "down",
           "word_id": "D1",
           "image_id": null,
@@ -39,7 +39,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Üye",
+          "text": "İskambilde papaz",
           "arrow": "down",
           "word_id": "D2",
           "image_id": null,
@@ -55,7 +55,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Yay şeklinde",
+          "text": "İlk kez yapılan",
           "arrow": "down",
           "word_id": "D3",
           "image_id": null,
@@ -71,7 +71,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Yakınma ünlemi",
+          "text": "Ötedeki işaret sözü",
           "arrow": "down",
           "word_id": "D4",
           "image_id": null,
@@ -87,7 +87,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Mektuba ek gelir",
+          "text": "Ağızdan çıkan ses",
           "arrow": "down",
           "word_id": "D5",
           "image_id": null,
@@ -103,7 +103,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Binek hayvanı",
+          "text": "Kasaptan alınan gıda",
           "arrow": "down",
           "word_id": "D6",
           "image_id": null,
@@ -119,7 +119,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Başa kakma (eski)",
+          "text": "Ulaşmak, varmak",
           "arrow": "right",
           "word_id": "A1",
           "image_id": null,
@@ -135,7 +135,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Açıklama, beyan",
+          "text": "Sahne eseri",
           "arrow": "right",
           "word_id": "A2",
           "image_id": null,
@@ -151,7 +151,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Çabuk tutuşan madde",
+          "text": "Kurutulmuş meyve",
           "arrow": "right",
           "word_id": "A3",
           "image_id": null,
@@ -183,7 +183,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Romen rakamıyla elli",
+          "text": "Azotun simgesi",
           "arrow": "right",
           "word_id": "A7",
           "image_id": null,
@@ -231,7 +231,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Parça takımı, set",
+          "text": "Beyaz yağış",
           "arrow": "right",
           "word_id": "A13",
           "image_id": null,
@@ -247,14 +247,14 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Yarıçap simgesi",
+          "text": "Romen rakamıyla elli",
           "arrow": "right",
           "word_id": "A4",
           "image_id": null,
           "source": "curated"
         },
         {
-          "text": "Kaygı, endişe",
+          "text": "Osmanlı rütbesi",
           "arrow": "down",
           "word_id": "D7",
           "image_id": null,
@@ -270,7 +270,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Uzağa göndermek",
+          "text": "Kış sporu aracı",
           "arrow": "down",
           "word_id": "D8",
           "image_id": null,
@@ -286,7 +286,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Yangın söndürenler",
+          "text": "Bembeyaz",
           "arrow": "right",
           "word_id": "A6",
           "image_id": null,
@@ -302,14 +302,14 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Tek başına",
+          "text": "Yer döşemesi",
           "arrow": "right",
           "word_id": "A8",
           "image_id": null,
           "source": "llm"
         },
         {
-          "text": "Birdenbire olan",
+          "text": "Anne",
           "arrow": "down",
           "word_id": "D9",
           "image_id": null,
@@ -325,7 +325,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Çöl yeli",
+          "text": "Kısa, keskin ses",
           "arrow": "right",
           "word_id": "A10",
           "image_id": null,
@@ -348,7 +348,7 @@
           "source": "llm"
         },
         {
-          "text": "Zamanın simgesi",
+          "text": "Yarıçap simgesi",
           "arrow": "down",
           "word_id": "D10",
           "image_id": null,
@@ -376,7 +376,7 @@
       "row": 1,
       "col": 1,
       "type": "letter",
-      "solution": "T",
+      "solution": "E",
       "word_ids": [
         "A1",
         "D1"
@@ -387,7 +387,7 @@
       "row": 1,
       "col": 2,
       "type": "letter",
-      "solution": "A",
+      "solution": "R",
       "word_ids": [
         "A1",
         "D2"
@@ -397,53 +397,53 @@
     {
       "row": 1,
       "col": 3,
-      "type": "letter",
-      "solution": "K",
-      "word_ids": [
-        "A1",
-        "D3"
-      ],
-      "clues": []
-    },
-    {
-      "row": 1,
-      "col": 4,
-      "type": "letter",
-      "solution": "A",
-      "word_ids": [
-        "A1",
-        "D4"
-      ],
-      "clues": []
-    },
-    {
-      "row": 1,
-      "col": 5,
-      "type": "letter",
-      "solution": "Z",
-      "word_ids": [
-        "A1",
-        "D5"
-      ],
-      "clues": []
-    },
-    {
-      "row": 1,
-      "col": 6,
-      "type": "letter",
-      "solution": "A",
-      "word_ids": [
-        "A1",
-        "D6"
-      ],
-      "clues": []
-    },
-    {
-      "row": 2,
-      "col": 1,
       "type": "letter",
       "solution": "İ",
       "word_ids": [
+        "A1",
+        "D3"
+      ],
+      "clues": []
+    },
+    {
+      "row": 1,
+      "col": 4,
+      "type": "letter",
+      "solution": "Ş",
+      "word_ids": [
+        "A1",
+        "D4"
+      ],
+      "clues": []
+    },
+    {
+      "row": 1,
+      "col": 5,
+      "type": "letter",
+      "solution": "M",
+      "word_ids": [
+        "A1",
+        "D5"
+      ],
+      "clues": []
+    },
+    {
+      "row": 1,
+      "col": 6,
+      "type": "letter",
+      "solution": "E",
+      "word_ids": [
+        "A1",
+        "D6"
+      ],
+      "clues": []
+    },
+    {
+      "row": 2,
+      "col": 1,
+      "type": "letter",
+      "solution": "T",
+      "word_ids": [
         "A2",
         "D1"
       ],
@@ -453,7 +453,7 @@
       "row": 2,
       "col": 2,
       "type": "letter",
-      "solution": "Z",
+      "solution": "U",
       "word_ids": [
         "A2",
         "D2"
@@ -464,7 +464,7 @@
       "row": 2,
       "col": 3,
       "type": "letter",
-      "solution": "A",
+      "solution": "L",
       "word_ids": [
         "A2",
         "D3"
@@ -475,7 +475,7 @@
       "row": 2,
       "col": 4,
       "type": "letter",
-      "solution": "H",
+      "solution": "U",
       "word_ids": [
         "A2",
         "D4"
@@ -530,7 +530,7 @@
       "row": 3,
       "col": 3,
       "type": "letter",
-      "solution": "V",
+      "solution": "K",
       "word_ids": [
         "A3",
         "D3"
@@ -541,7 +541,7 @@
       "row": 3,
       "col": 5,
       "type": "letter",
-      "solution": "R",
+      "solution": "L",
       "word_ids": [
         "A4",
         "D5"
@@ -563,7 +563,7 @@
       "row": 4,
       "col": 3,
       "type": "letter",
-      "solution": "İ",
+      "solution": "A",
       "word_ids": [
         "A6",
         "D3"
@@ -574,7 +574,7 @@
       "row": 4,
       "col": 4,
       "type": "letter",
-      "solution": "T",
+      "solution": "P",
       "word_ids": [
         "A6",
         "D7"
@@ -585,7 +585,7 @@
       "row": 4,
       "col": 5,
       "type": "letter",
-      "solution": "F",
+      "solution": "A",
       "word_ids": [
         "A6",
         "D5"
@@ -596,7 +596,7 @@
       "row": 4,
       "col": 6,
       "type": "letter",
-      "solution": "A",
+      "solution": "K",
       "word_ids": [
         "A6",
         "D8"
@@ -607,7 +607,7 @@
       "row": 5,
       "col": 1,
       "type": "letter",
-      "solution": "L",
+      "solution": "N",
       "word_ids": [
         "A7",
         "D1"
@@ -618,7 +618,7 @@
       "row": 5,
       "col": 3,
       "type": "letter",
-      "solution": "S",
+      "solution": "H",
       "word_ids": [
         "A8",
         "D3"
@@ -651,7 +651,7 @@
       "row": 5,
       "col": 6,
       "type": "letter",
-      "solution": "T",
+      "solution": "I",
       "word_ids": [
         "A8",
         "D8"
@@ -684,7 +684,7 @@
       "row": 6,
       "col": 4,
       "type": "letter",
-      "solution": "S",
+      "solution": "Ş",
       "word_ids": [
         "A10",
         "D7"
@@ -706,7 +706,7 @@
       "row": 6,
       "col": 6,
       "type": "letter",
-      "solution": "M",
+      "solution": "Z",
       "word_ids": [
         "A10",
         "D8"
@@ -783,7 +783,7 @@
       "row": 8,
       "col": 2,
       "type": "letter",
-      "solution": "İ",
+      "solution": "A",
       "word_ids": [
         "A13",
         "D9"
@@ -794,7 +794,7 @@
       "row": 8,
       "col": 3,
       "type": "letter",
-      "solution": "T",
+      "solution": "R",
       "word_ids": [
         "A13",
         "D10"
@@ -827,7 +827,7 @@
   "words": [
     {
       "id": "A1",
-      "answer": "TAKAZA",
+      "answer": "ERİŞME",
       "length": 6,
       "direction": "right",
       "clue_cell": {
@@ -865,7 +865,7 @@
         }
       ],
       "clue": {
-        "text": "Başa kakma (eski)",
+        "text": "Ulaşmak, varmak",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -875,7 +875,7 @@
     },
     {
       "id": "A2",
-      "answer": "İZAHAT",
+      "answer": "TULUAT",
       "length": 6,
       "direction": "right",
       "clue_cell": {
@@ -913,7 +913,7 @@
         }
       ],
       "clue": {
-        "text": "Ayrıntılı açıklama",
+        "text": "Sahne eseri",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -923,7 +923,7 @@
     },
     {
       "id": "A3",
-      "answer": "KAV",
+      "answer": "KAK",
       "length": 3,
       "direction": "right",
       "clue_cell": {
@@ -949,7 +949,7 @@
         }
       ],
       "clue": {
-        "text": "Çabuk tutuşan madde",
+        "text": "Kurutulmuş meyve",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -959,7 +959,7 @@
     },
     {
       "id": "A4",
-      "answer": "R",
+      "answer": "L",
       "length": 1,
       "direction": "right",
       "clue_cell": {
@@ -977,7 +977,7 @@
         }
       ],
       "clue": {
-        "text": "Yarıçap simgesi",
+        "text": "Romen rakamıyla elli",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1015,7 +1015,7 @@
     },
     {
       "id": "A6",
-      "answer": "İTFA",
+      "answer": "APAK",
       "length": 4,
       "direction": "right",
       "clue_cell": {
@@ -1045,7 +1045,7 @@
         }
       ],
       "clue": {
-        "text": "Borç söndürme",
+        "text": "Bembeyaz",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1055,7 +1055,7 @@
     },
     {
       "id": "A7",
-      "answer": "L",
+      "answer": "N",
       "length": 1,
       "direction": "right",
       "clue_cell": {
@@ -1073,7 +1073,7 @@
         }
       ],
       "clue": {
-        "text": "Romen rakamıyla elli",
+        "text": "Azotun simgesi",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1083,7 +1083,7 @@
     },
     {
       "id": "A8",
-      "answer": "SALT",
+      "answer": "HALI",
       "length": 4,
       "direction": "right",
       "clue_cell": {
@@ -1113,7 +1113,7 @@
         }
       ],
       "clue": {
-        "text": "Yalnızca, sırf",
+        "text": "Yer döşemesi",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1155,7 +1155,7 @@
     },
     {
       "id": "A10",
-      "answer": "SAM",
+      "answer": "ŞAZ",
       "length": 3,
       "direction": "right",
       "clue_cell": {
@@ -1181,7 +1181,7 @@
         }
       ],
       "clue": {
-        "text": "Çöl yeli",
+        "text": "Kısa, keskin ses",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1259,7 +1259,7 @@
     },
     {
       "id": "A13",
-      "answer": "KİT",
+      "answer": "KAR",
       "length": 3,
       "direction": "right",
       "clue_cell": {
@@ -1285,7 +1285,7 @@
         }
       ],
       "clue": {
-        "text": "Parça takımı, set",
+        "text": "Beyaz yağış",
         "arrow": "right",
         "word_id": "A13",
         "image_id": null,
@@ -1327,7 +1327,7 @@
     },
     {
       "id": "D1",
-      "answer": "TİKELLİK",
+      "answer": "ETKENLİK",
       "length": 8,
       "direction": "down",
       "clue_cell": {
@@ -1373,7 +1373,7 @@
         }
       ],
       "clue": {
-        "text": "Teklik, benzersizlik",
+        "text": "Faaliyet, iş",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1383,7 +1383,7 @@
     },
     {
       "id": "D2",
-      "answer": "AZA",
+      "answer": "RUA",
       "length": 3,
       "direction": "down",
       "clue_cell": {
@@ -1409,7 +1409,7 @@
         }
       ],
       "clue": {
-        "text": "Üye",
+        "text": "İskambilde papaz",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1419,7 +1419,7 @@
     },
     {
       "id": "D3",
-      "answer": "KAVİS",
+      "answer": "İLKAH",
       "length": 5,
       "direction": "down",
       "clue_cell": {
@@ -1453,7 +1453,7 @@
         }
       ],
       "clue": {
-        "text": "Yay biçimi eğrilik",
+        "text": "İlk kez yapılan",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1463,7 +1463,7 @@
     },
     {
       "id": "D4",
-      "answer": "AH",
+      "answer": "ŞU",
       "length": 2,
       "direction": "down",
       "clue_cell": {
@@ -1485,7 +1485,7 @@
         }
       ],
       "clue": {
-        "text": "Yakınma ünlemi",
+        "text": "Ötedeki işaret sözü",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1495,7 +1495,7 @@
     },
     {
       "id": "D5",
-      "answer": "ZARFLAMA",
+      "answer": "MALALAMA",
       "length": 8,
       "direction": "down",
       "clue_cell": {
@@ -1541,7 +1541,7 @@
         }
       ],
       "clue": {
-        "text": "Zarfa koyma",
+        "text": "Ağızdan çıkan ses",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1551,7 +1551,7 @@
     },
     {
       "id": "D6",
-      "answer": "AT",
+      "answer": "ET",
       "length": 2,
       "direction": "down",
       "clue_cell": {
@@ -1573,7 +1573,7 @@
         }
       ],
       "clue": {
-        "text": "Binek hayvanı",
+        "text": "Kasaptan alınan gıda",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1583,7 +1583,7 @@
     },
     {
       "id": "D7",
-      "answer": "TASA",
+      "answer": "PAŞA",
       "length": 4,
       "direction": "down",
       "clue_cell": {
@@ -1613,7 +1613,7 @@
         }
       ],
       "clue": {
-        "text": "Kaygı, endişe",
+        "text": "Osmanlı rütbesi",
         "arrow": "down",
         "word_id": "D7",
         "image_id": null,
@@ -1623,7 +1623,7 @@
     },
     {
       "id": "D8",
-      "answer": "ATMAK",
+      "answer": "KIZAK",
       "length": 5,
       "direction": "down",
       "clue_cell": {
@@ -1657,7 +1657,7 @@
         }
       ],
       "clue": {
-        "text": "Uzağa göndermek",
+        "text": "Kış sporu aracı",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,
@@ -1667,7 +1667,7 @@
     },
     {
       "id": "D9",
-      "answer": "ANİ",
+      "answer": "ANA",
       "length": 3,
       "direction": "down",
       "clue_cell": {
@@ -1693,7 +1693,7 @@
         }
       ],
       "clue": {
-        "text": "Birdenbire olan",
+        "text": "Anne",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,
@@ -1703,7 +1703,7 @@
     },
     {
       "id": "D10",
-      "answer": "T",
+      "answer": "R",
       "length": 1,
       "direction": "down",
       "clue_cell": {
@@ -1721,7 +1721,7 @@
         }
       ],
       "clue": {
-        "text": "Zamanın simgesi",
+        "text": "Yarıçap simgesi",
         "arrow": "down",
         "word_id": "D10",
         "image_id": null,
@@ -1737,6 +1737,6 @@
     "post_fill_scanned": true,
     "scanner_version": "2.0.0"
   },
-  "generated_at": "2026-07-04T21:33:54.461223+00:00",
+  "generated_at": "2026-07-05T08:24:29.095261+00:00",
   "generator_version": "2.0.0"
 }

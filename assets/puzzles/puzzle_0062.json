@@ -23,7 +23,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "İkiye bükmek",
+          "text": "İki yana oynatmak",
           "arrow": "down",
           "word_id": "D1",
           "image_id": null,
@@ -39,7 +39,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Anne",
+          "text": "Kocanın kardeşi",
           "arrow": "down",
           "word_id": "D2",
           "image_id": null,
@@ -55,7 +55,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Elektrik birimi",
+          "text": "Çan sesi",
           "arrow": "down",
           "word_id": "D3",
           "image_id": null,
@@ -71,7 +71,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Yapıya destek",
+          "text": "Feldspatlı kayaç",
           "arrow": "down",
           "word_id": "D4",
           "image_id": null,
@@ -103,7 +103,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Yaşıt olma durumu",
+          "text": "Yaşıtlık",
           "arrow": "down",
           "word_id": "D6",
           "image_id": null,
@@ -119,7 +119,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Üflemeli çalgı",
+          "text": "Susamaz",
           "arrow": "right",
           "word_id": "A1",
           "image_id": null,
@@ -151,7 +151,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Pudra minerali",
+          "text": "Bağlantı, irtibat",
           "arrow": "right",
           "word_id": "A3",
           "image_id": null,
@@ -270,7 +270,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Kaygı, endişe",
+          "text": "Çingene, Roman",
           "arrow": "right",
           "word_id": "A6",
           "image_id": null,
@@ -293,7 +293,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Çınlayan metal",
+          "text": "Sanı",
           "arrow": "right",
           "word_id": "A8",
           "image_id": null,
@@ -351,7 +351,7 @@
       "row": 1,
       "col": 1,
       "type": "letter",
-      "solution": "K",
+      "solution": "S",
       "word_ids": [
         "A1",
         "D1"
@@ -362,7 +362,7 @@
       "row": 1,
       "col": 2,
       "type": "letter",
-      "solution": "A",
+      "solution": "İ",
       "word_ids": [
         "A1",
         "D2"
@@ -373,7 +373,7 @@
       "row": 1,
       "col": 3,
       "type": "letter",
-      "solution": "V",
+      "solution": "G",
       "word_ids": [
         "A1",
         "D3"
@@ -483,7 +483,7 @@
       "row": 3,
       "col": 1,
       "type": "letter",
-      "solution": "T",
+      "solution": "L",
       "word_ids": [
         "A3",
         "D1"
@@ -494,7 +494,7 @@
       "row": 3,
       "col": 2,
       "type": "letter",
-      "solution": "A",
+      "solution": "İ",
       "word_ids": [
         "A3",
         "D2"
@@ -505,7 +505,7 @@
       "row": 3,
       "col": 3,
       "type": "letter",
-      "solution": "L",
+      "solution": "N",
       "word_ids": [
         "A3",
         "D3"
@@ -549,7 +549,7 @@
       "row": 4,
       "col": 3,
       "type": "letter",
-      "solution": "T",
+      "solution": "K",
       "word_ids": [
         "A6",
         "D3"
@@ -560,7 +560,7 @@
       "row": 4,
       "col": 4,
       "type": "letter",
-      "solution": "A",
+      "solution": "O",
       "word_ids": [
         "A6",
         "D4"
@@ -615,7 +615,7 @@
       "row": 5,
       "col": 4,
       "type": "letter",
-      "solution": "Ç",
+      "solution": "Z",
       "word_ids": [
         "A8",
         "D4"
@@ -824,7 +824,7 @@
   "words": [
     {
       "id": "A1",
-      "answer": "KAVALA",
+      "answer": "SİGALA",
       "length": 6,
       "direction": "right",
       "clue_cell": {
@@ -862,7 +862,7 @@
         }
       ],
       "clue": {
-        "text": "Üflemeli çalgı",
+        "text": "Susamaz",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -920,7 +920,7 @@
     },
     {
       "id": "A3",
-      "answer": "TALK",
+      "answer": "LİNK",
       "length": 4,
       "direction": "right",
       "clue_cell": {
@@ -950,7 +950,7 @@
         }
       ],
       "clue": {
-        "text": "Pudra minerali",
+        "text": "Bağlantı, irtibat",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -1016,7 +1016,7 @@
     },
     {
       "id": "A6",
-      "answer": "TASA",
+      "answer": "KOSA",
       "length": 4,
       "direction": "right",
       "clue_cell": {
@@ -1046,7 +1046,7 @@
         }
       ],
       "clue": {
-        "text": "Kaygı, endişe",
+        "text": "Çingene, Roman",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1088,7 +1088,7 @@
     },
     {
       "id": "A8",
-      "answer": "ÇAN",
+      "answer": "ZAN",
       "length": 3,
       "direction": "right",
       "clue_cell": {
@@ -1114,7 +1114,7 @@
         }
       ],
       "clue": {
-        "text": "Çınlayan metal",
+        "text": "Sanı",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1308,7 +1308,7 @@
     },
     {
       "id": "D1",
-      "answer": "KATLAMAK",
+      "answer": "SALLAMAK",
       "length": 8,
       "direction": "down",
       "clue_cell": {
@@ -1354,7 +1354,7 @@
         }
       ],
       "clue": {
-        "text": "İkiye bükmek",
+        "text": "İki yana oynatmak",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1364,7 +1364,7 @@
     },
     {
       "id": "D2",
-      "answer": "ANA",
+      "answer": "İNİ",
       "length": 3,
       "direction": "down",
       "clue_cell": {
@@ -1390,7 +1390,7 @@
         }
       ],
       "clue": {
-        "text": "Anne",
+        "text": "Kocanın kardeşi",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1400,7 +1400,7 @@
     },
     {
       "id": "D3",
-      "answer": "VOLT",
+      "answer": "GONK",
       "length": 4,
       "direction": "down",
       "clue_cell": {
@@ -1430,7 +1430,7 @@
         }
       ],
       "clue": {
-        "text": "Gerilim birimi",
+        "text": "Çan sesi",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1440,7 +1440,7 @@
     },
     {
       "id": "D4",
-      "answer": "ARKAÇ",
+      "answer": "ARKOZ",
       "length": 5,
       "direction": "down",
       "clue_cell": {
@@ -1474,7 +1474,7 @@
         }
       ],
       "clue": {
-        "text": "Dokumada enine ip",
+        "text": "Feldspatlı kayaç",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1726,6 +1726,6 @@
     "post_fill_scanned": true,
     "scanner_version": "2.0.0"
   },
-  "generated_at": "2026-07-04T21:02:49.910270+00:00",
+  "generated_at": "2026-07-05T08:08:10.490973+00:00",
   "generator_version": "2.0.0"
 }

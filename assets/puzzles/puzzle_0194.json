@@ -39,7 +39,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "İpek işleyicisi",
+          "text": "Deniz çiçeği",
           "arrow": "down",
           "word_id": "D2",
           "image_id": null,
@@ -55,7 +55,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "İki şeyin ortası",
+          "text": "Sulama kanalı",
           "arrow": "down",
           "word_id": "D3",
           "image_id": null,
@@ -135,7 +135,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Tekne park yeri",
+          "text": "Kuzey denizi balığı",
           "arrow": "right",
           "word_id": "A2",
           "image_id": null,
@@ -151,7 +151,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Eziyet, cefa",
+          "text": "Güç, iktidar",
           "arrow": "right",
           "word_id": "A3",
           "image_id": null,
@@ -183,7 +183,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Rastlantıyla",
+          "text": "Hoşça kal deme",
           "arrow": "right",
           "word_id": "A7",
           "image_id": null,
@@ -215,7 +215,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Tüketip bitirme",
+          "text": "Yangın söndürme aracı",
           "arrow": "right",
           "word_id": "A10",
           "image_id": null,
@@ -247,7 +247,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Temel düzey",
+          "text": "Dini kurallara uygun",
           "arrow": "down",
           "word_id": "D7",
           "image_id": null,
@@ -270,7 +270,7 @@
           "source": "curated"
         },
         {
-          "text": "Üye",
+          "text": "Bayağı, sıradan",
           "arrow": "down",
           "word_id": "D8",
           "image_id": null,
@@ -286,14 +286,14 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Arı ürünü tatlı",
+          "text": "Durum, vaziyet",
           "arrow": "right",
           "word_id": "A6",
           "image_id": null,
           "source": "llm"
         },
         {
-          "text": "İnce uzun tekne",
+          "text": "Reddetme hakkı",
           "arrow": "down",
           "word_id": "D9",
           "image_id": null,
@@ -309,7 +309,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Salıverme",
+          "text": "Seçkin",
           "arrow": "right",
           "word_id": "A9",
           "image_id": null,
@@ -428,7 +428,7 @@
       "row": 2,
       "col": 2,
       "type": "letter",
-      "solution": "A",
+      "solution": "O",
       "word_ids": [
         "A2",
         "D2"
@@ -494,7 +494,7 @@
       "row": 3,
       "col": 2,
       "type": "letter",
-      "solution": "Z",
+      "solution": "R",
       "word_ids": [
         "A3",
         "D2"
@@ -505,7 +505,7 @@
       "row": 3,
       "col": 3,
       "type": "letter",
-      "solution": "A",
+      "solution": "K",
       "word_ids": [
         "A3",
         "D3"
@@ -549,7 +549,7 @@
       "row": 4,
       "col": 4,
       "type": "letter",
-      "solution": "B",
+      "solution": "H",
       "word_ids": [
         "A6",
         "D7"
@@ -593,7 +593,7 @@
       "row": 5,
       "col": 2,
       "type": "letter",
-      "solution": "Z",
+      "solution": "L",
       "word_ids": [
         "A7",
         "D2"
@@ -604,7 +604,7 @@
       "row": 5,
       "col": 3,
       "type": "letter",
-      "solution": "K",
+      "solution": "V",
       "word_ids": [
         "A7",
         "D9"
@@ -615,7 +615,7 @@
       "row": 5,
       "col": 4,
       "type": "letter",
-      "solution": "A",
+      "solution": "E",
       "word_ids": [
         "A7",
         "D7"
@@ -626,7 +626,7 @@
       "row": 5,
       "col": 5,
       "type": "letter",
-      "solution": "Z",
+      "solution": "D",
       "word_ids": [
         "A7",
         "D8"
@@ -659,7 +659,7 @@
       "row": 6,
       "col": 3,
       "type": "letter",
-      "solution": "A",
+      "solution": "E",
       "word_ids": [
         "A9",
         "D9"
@@ -670,7 +670,7 @@
       "row": 6,
       "col": 4,
       "type": "letter",
-      "solution": "Z",
+      "solution": "L",
       "word_ids": [
         "A9",
         "D7"
@@ -681,7 +681,7 @@
       "row": 6,
       "col": 5,
       "type": "letter",
-      "solution": "A",
+      "solution": "İ",
       "word_ids": [
         "A9",
         "D8"
@@ -725,7 +725,7 @@
       "row": 7,
       "col": 3,
       "type": "letter",
-      "solution": "N",
+      "solution": "T",
       "word_ids": [
         "A10",
         "D9"
@@ -872,7 +872,7 @@
     },
     {
       "id": "A2",
-      "answer": "MARİNA",
+      "answer": "MORİNA",
       "length": 6,
       "direction": "right",
       "clue_cell": {
@@ -910,7 +910,7 @@
         }
       ],
       "clue": {
-        "text": "Tekne park yeri",
+        "text": "Kuzey denizi balığı",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -920,7 +920,7 @@
     },
     {
       "id": "A3",
-      "answer": "EZA",
+      "answer": "ERK",
       "length": 3,
       "direction": "right",
       "clue_cell": {
@@ -946,7 +946,7 @@
         }
       ],
       "clue": {
-        "text": "Eziyet, cefa",
+        "text": "Güç, iktidar",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -1016,7 +1016,7 @@
     },
     {
       "id": "A6",
-      "answer": "BAL",
+      "answer": "HAL",
       "length": 3,
       "direction": "right",
       "clue_cell": {
@@ -1042,7 +1042,7 @@
         }
       ],
       "clue": {
-        "text": "Arının ürünü",
+        "text": "Durum, vaziyet",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1052,7 +1052,7 @@
     },
     {
       "id": "A7",
-      "answer": "EZKAZA",
+      "answer": "ELVEDA",
       "length": 6,
       "direction": "right",
       "clue_cell": {
@@ -1090,7 +1090,7 @@
         }
       ],
       "clue": {
-        "text": "Rastlantıyla",
+        "text": "Hoşça kal deme",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1128,7 +1128,7 @@
     },
     {
       "id": "A9",
-      "answer": "AZAT",
+      "answer": "ELİT",
       "length": 4,
       "direction": "right",
       "clue_cell": {
@@ -1158,7 +1158,7 @@
         }
       ],
       "clue": {
-        "text": "Salıverme",
+        "text": "Seçkin",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1168,7 +1168,7 @@
     },
     {
       "id": "A10",
-      "answer": "İFNA",
+      "answer": "İFTA",
       "length": 4,
       "direction": "right",
       "clue_cell": {
@@ -1198,7 +1198,7 @@
         }
       ],
       "clue": {
-        "text": "Tüketip bitirme",
+        "text": "Yangın söndürme aracı",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1340,7 +1340,7 @@
     },
     {
       "id": "D2",
-      "answer": "KAZAZ",
+      "answer": "KORAL",
       "length": 5,
       "direction": "down",
       "clue_cell": {
@@ -1374,7 +1374,7 @@
         }
       ],
       "clue": {
-        "text": "İpek işleyicisi",
+        "text": "Deniz çiçeği",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1384,7 +1384,7 @@
     },
     {
       "id": "D3",
-      "answer": "ARA",
+      "answer": "ARK",
       "length": 3,
       "direction": "down",
       "clue_cell": {
@@ -1410,7 +1410,7 @@
         }
       ],
       "clue": {
-        "text": "İki şeyin ortası",
+        "text": "Sulama kanalı",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1540,7 +1540,7 @@
     },
     {
       "id": "D7",
-      "answer": "BAZAL",
+      "answer": "HELAL",
       "length": 5,
       "direction": "down",
       "clue_cell": {
@@ -1574,7 +1574,7 @@
         }
       ],
       "clue": {
-        "text": "Temel düzey",
+        "text": "Dini kurallara uygun",
         "arrow": "down",
         "word_id": "D7",
         "image_id": null,
@@ -1584,7 +1584,7 @@
     },
     {
       "id": "D8",
-      "answer": "AZA",
+      "answer": "ADİ",
       "length": 3,
       "direction": "down",
       "clue_cell": {
@@ -1610,7 +1610,7 @@
         }
       ],
       "clue": {
-        "text": "Üye",
+        "text": "Bayağı, sıradan",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,
@@ -1620,7 +1620,7 @@
     },
     {
       "id": "D9",
-      "answer": "KANO",
+      "answer": "VETO",
       "length": 4,
       "direction": "down",
       "clue_cell": {
@@ -1650,7 +1650,7 @@
         }
       ],
       "clue": {
-        "text": "İnce uzun tekne",
+        "text": "Reddetme hakkı",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,
@@ -1726,6 +1726,6 @@
     "post_fill_scanned": true,
     "scanner_version": "2.0.0"
   },
-  "generated_at": "2026-07-05T02:23:58.413987+00:00",
+  "generated_at": "2026-07-05T11:11:38.940923+00:00",
   "generator_version": "2.0.0"
 }

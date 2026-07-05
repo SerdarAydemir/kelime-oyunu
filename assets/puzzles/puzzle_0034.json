@@ -23,7 +23,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Pantolon kumaşına işlemek",
+          "text": "Kırıntılara ayırmak",
           "arrow": "down",
           "word_id": "D1",
           "image_id": null,
@@ -39,7 +39,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Canlıda azotlu atık",
+          "text": "Antik telli çalgı",
           "arrow": "down",
           "word_id": "D2",
           "image_id": null,
@@ -55,7 +55,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Ruhsal, manevi",
+          "text": "Hac mekanı",
           "arrow": "down",
           "word_id": "D3",
           "image_id": null,
@@ -71,7 +71,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Tatlı, yumuşak şeker",
+          "text": "Masaj yapan kişi",
           "arrow": "down",
           "word_id": "D4",
           "image_id": null,
@@ -87,7 +87,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Herkesin giydiği aynı giysi",
+          "text": "Çoğaltma",
           "arrow": "down",
           "word_id": "D5",
           "image_id": null,
@@ -119,7 +119,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Sıralı, düzenli",
+          "text": "Birbirine eklemek",
           "arrow": "right",
           "word_id": "A1",
           "image_id": null,
@@ -135,7 +135,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Avcı takımyıldızı",
+          "text": "Kaçış, kurtulma",
           "arrow": "right",
           "word_id": "A2",
           "image_id": null,
@@ -151,7 +151,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Eleştiri, kusur bulma",
+          "text": "Esnaf sokağı",
           "arrow": "right",
           "word_id": "A3",
           "image_id": null,
@@ -183,7 +183,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Dağ lalesi",
+          "text": "Ani sorun",
           "arrow": "right",
           "word_id": "A6",
           "image_id": null,
@@ -199,7 +199,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Mülk, eşya",
+          "text": "Şahı deviren hamle",
           "arrow": "right",
           "word_id": "A7",
           "image_id": null,
@@ -247,7 +247,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Ruh (felsefe)",
+          "text": "Gök karşıtı",
           "arrow": "down",
           "word_id": "D7",
           "image_id": null,
@@ -263,14 +263,14 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Mistik derviş",
+          "text": "Şapka türü",
           "arrow": "right",
           "word_id": "A5",
           "image_id": null,
           "source": "llm"
         },
         {
-          "text": "İnilti, feryat",
+          "text": "Otopark görevlisi",
           "arrow": "down",
           "word_id": "D8",
           "image_id": null,
@@ -362,7 +362,7 @@
       "row": 1,
       "col": 1,
       "type": "letter",
-      "solution": "K",
+      "solution": "U",
       "word_ids": [
         "A1",
         "D1"
@@ -373,7 +373,7 @@
       "row": 1,
       "col": 2,
       "type": "letter",
-      "solution": "Ü",
+      "solution": "L",
       "word_ids": [
         "A1",
         "D2"
@@ -384,7 +384,7 @@
       "row": 1,
       "col": 3,
       "type": "letter",
-      "solution": "T",
+      "solution": "A",
       "word_ids": [
         "A1",
         "D3"
@@ -395,7 +395,7 @@
       "row": 1,
       "col": 4,
       "type": "letter",
-      "solution": "L",
+      "solution": "M",
       "word_ids": [
         "A1",
         "D4"
@@ -406,7 +406,7 @@
       "row": 1,
       "col": 5,
       "type": "letter",
-      "solution": "Ü",
+      "solution": "A",
       "word_ids": [
         "A1",
         "D5"
@@ -428,7 +428,7 @@
       "row": 2,
       "col": 1,
       "type": "letter",
-      "solution": "O",
+      "solution": "F",
       "word_ids": [
         "A2",
         "D1"
@@ -439,7 +439,7 @@
       "row": 2,
       "col": 2,
       "type": "letter",
-      "solution": "R",
+      "solution": "İ",
       "word_ids": [
         "A2",
         "D2"
@@ -450,7 +450,7 @@
       "row": 2,
       "col": 3,
       "type": "letter",
-      "solution": "İ",
+      "solution": "R",
       "word_ids": [
         "A2",
         "D3"
@@ -461,7 +461,7 @@
       "row": 2,
       "col": 4,
       "type": "letter",
-      "solution": "O",
+      "solution": "A",
       "word_ids": [
         "A2",
         "D4"
@@ -472,7 +472,7 @@
       "row": 2,
       "col": 5,
       "type": "letter",
-      "solution": "N",
+      "solution": "R",
       "word_ids": [
         "A2",
         "D5"
@@ -483,7 +483,7 @@
       "row": 3,
       "col": 1,
       "type": "letter",
-      "solution": "T",
+      "solution": "A",
       "word_ids": [
         "A3",
         "D1"
@@ -494,7 +494,7 @@
       "row": 3,
       "col": 2,
       "type": "letter",
-      "solution": "E",
+      "solution": "R",
       "word_ids": [
         "A3",
         "D2"
@@ -505,7 +505,7 @@
       "row": 3,
       "col": 3,
       "type": "letter",
-      "solution": "N",
+      "solution": "A",
       "word_ids": [
         "A3",
         "D3"
@@ -516,7 +516,7 @@
       "row": 3,
       "col": 4,
       "type": "letter",
-      "solution": "K",
+      "solution": "S",
       "word_ids": [
         "A3",
         "D4"
@@ -527,7 +527,7 @@
       "row": 3,
       "col": 5,
       "type": "letter",
-      "solution": "İ",
+      "solution": "T",
       "word_ids": [
         "A3",
         "D5"
@@ -538,7 +538,7 @@
       "row": 3,
       "col": 6,
       "type": "letter",
-      "solution": "T",
+      "solution": "A",
       "word_ids": [
         "A3",
         "D7"
@@ -560,31 +560,31 @@
       "row": 4,
       "col": 3,
       "type": "letter",
-      "solution": "S",
-      "word_ids": [
-        "A5",
-        "D3"
-      ],
-      "clues": []
-    },
-    {
-      "row": 4,
-      "col": 4,
-      "type": "letter",
-      "solution": "U",
-      "word_ids": [
-        "A5",
-        "D4"
-      ],
-      "clues": []
-    },
-    {
-      "row": 4,
-      "col": 5,
-      "type": "letter",
       "solution": "F",
       "word_ids": [
         "A5",
+        "D3"
+      ],
+      "clues": []
+    },
+    {
+      "row": 4,
+      "col": 4,
+      "type": "letter",
+      "solution": "Ö",
+      "word_ids": [
+        "A5",
+        "D4"
+      ],
+      "clues": []
+    },
+    {
+      "row": 4,
+      "col": 5,
+      "type": "letter",
+      "solution": "T",
+      "word_ids": [
+        "A5",
         "D5"
       ],
       "clues": []
@@ -593,7 +593,7 @@
       "row": 4,
       "col": 6,
       "type": "letter",
-      "solution": "İ",
+      "solution": "R",
       "word_ids": [
         "A5",
         "D7"
@@ -615,7 +615,7 @@
       "row": 5,
       "col": 2,
       "type": "letter",
-      "solution": "N",
+      "solution": "V",
       "word_ids": [
         "A6",
         "D8"
@@ -626,7 +626,7 @@
       "row": 5,
       "col": 3,
       "type": "letter",
-      "solution": "E",
+      "solution": "A",
       "word_ids": [
         "A6",
         "D3"
@@ -637,7 +637,7 @@
       "row": 5,
       "col": 4,
       "type": "letter",
-      "solution": "M",
+      "solution": "R",
       "word_ids": [
         "A6",
         "D4"
@@ -648,7 +648,7 @@
       "row": 5,
       "col": 5,
       "type": "letter",
-      "solution": "O",
+      "solution": "I",
       "word_ids": [
         "A6",
         "D5"
@@ -659,7 +659,7 @@
       "row": 5,
       "col": 6,
       "type": "letter",
-      "solution": "N",
+      "solution": "Z",
       "word_ids": [
         "A6",
         "D7"
@@ -692,7 +692,7 @@
       "row": 6,
       "col": 3,
       "type": "letter",
-      "solution": "L",
+      "solution": "T",
       "word_ids": [
         "A7",
         "D3"
@@ -813,7 +813,7 @@
   "words": [
     {
       "id": "A1",
-      "answer": "KÜTLÜK",
+      "answer": "ULAMAK",
       "length": 6,
       "direction": "right",
       "clue_cell": {
@@ -851,7 +851,7 @@
         }
       ],
       "clue": {
-        "text": "Sıralı, düzenli",
+        "text": "Birbirine eklemek",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -861,7 +861,7 @@
     },
     {
       "id": "A2",
-      "answer": "ORİON",
+      "answer": "FİRAR",
       "length": 5,
       "direction": "right",
       "clue_cell": {
@@ -895,7 +895,7 @@
         }
       ],
       "clue": {
-        "text": "Avcı takımyıldızı",
+        "text": "Kaçış, kurtulma",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -905,7 +905,7 @@
     },
     {
       "id": "A3",
-      "answer": "TENKİT",
+      "answer": "ARASTA",
       "length": 6,
       "direction": "right",
       "clue_cell": {
@@ -943,7 +943,7 @@
         }
       ],
       "clue": {
-        "text": "Eleştiri",
+        "text": "Esnaf sokağı",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -981,7 +981,7 @@
     },
     {
       "id": "A5",
-      "answer": "SUFİ",
+      "answer": "FÖTR",
       "length": 4,
       "direction": "right",
       "clue_cell": {
@@ -1011,7 +1011,7 @@
         }
       ],
       "clue": {
-        "text": "Mistik derviş",
+        "text": "Şapka türü",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1021,7 +1021,7 @@
     },
     {
       "id": "A6",
-      "answer": "ANEMON",
+      "answer": "AVARIZ",
       "length": 6,
       "direction": "right",
       "clue_cell": {
@@ -1059,7 +1059,7 @@
         }
       ],
       "clue": {
-        "text": "Dağ lalesi",
+        "text": "Ani sorun",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1069,7 +1069,7 @@
     },
     {
       "id": "A7",
-      "answer": "MAL",
+      "answer": "MAT",
       "length": 3,
       "direction": "right",
       "clue_cell": {
@@ -1095,7 +1095,7 @@
         }
       ],
       "clue": {
-        "text": "Mülk, eşya",
+        "text": "Şahı deviren hamle",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1265,7 +1265,7 @@
     },
     {
       "id": "D1",
-      "answer": "KOTLAMAK",
+      "answer": "UFALAMAK",
       "length": 8,
       "direction": "down",
       "clue_cell": {
@@ -1311,7 +1311,7 @@
         }
       ],
       "clue": {
-        "text": "Yükseklik işaretleme",
+        "text": "Kırıntılara ayırmak",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1321,7 +1321,7 @@
     },
     {
       "id": "D2",
-      "answer": "ÜRE",
+      "answer": "LİR",
       "length": 3,
       "direction": "down",
       "clue_cell": {
@@ -1347,7 +1347,7 @@
         }
       ],
       "clue": {
-        "text": "Canlıda azotlu atık",
+        "text": "Antik telli çalgı",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1357,7 +1357,7 @@
     },
     {
       "id": "D3",
-      "answer": "TİNSEL",
+      "answer": "ARAFAT",
       "length": 6,
       "direction": "down",
       "clue_cell": {
@@ -1395,7 +1395,7 @@
         }
       ],
       "clue": {
-        "text": "Ruhsal, manevi",
+        "text": "Hac mekanı",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1405,7 +1405,7 @@
     },
     {
       "id": "D4",
-      "answer": "LOKUM",
+      "answer": "MASÖR",
       "length": 5,
       "direction": "down",
       "clue_cell": {
@@ -1439,7 +1439,7 @@
         }
       ],
       "clue": {
-        "text": "Bayram şekerlemesi",
+        "text": "Masaj yapan kişi",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1449,7 +1449,7 @@
     },
     {
       "id": "D5",
-      "answer": "ÜNİFORMA",
+      "answer": "ARTTIRMA",
       "length": 8,
       "direction": "down",
       "clue_cell": {
@@ -1495,7 +1495,7 @@
         }
       ],
       "clue": {
-        "text": "Tek tip giysi",
+        "text": "Çoğaltma",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1533,7 +1533,7 @@
     },
     {
       "id": "D7",
-      "answer": "TİN",
+      "answer": "ARZ",
       "length": 3,
       "direction": "down",
       "clue_cell": {
@@ -1559,7 +1559,7 @@
         }
       ],
       "clue": {
-        "text": "Ruh (felsefe)",
+        "text": "Gök karşıtı",
         "arrow": "down",
         "word_id": "D7",
         "image_id": null,
@@ -1569,7 +1569,7 @@
     },
     {
       "id": "D8",
-      "answer": "NALE",
+      "answer": "VALE",
       "length": 4,
       "direction": "down",
       "clue_cell": {
@@ -1599,7 +1599,7 @@
         }
       ],
       "clue": {
-        "text": "İnilti, feryat",
+        "text": "Otopark görevlisi",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,
@@ -1675,6 +1675,6 @@
     "post_fill_scanned": true,
     "scanner_version": "2.0.0"
   },
-  "generated_at": "2026-07-04T20:02:17.056887+00:00",
+  "generated_at": "2026-07-05T07:54:50.399124+00:00",
   "generator_version": "2.0.0"
 }

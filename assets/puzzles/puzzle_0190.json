@@ -23,7 +23,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Dokuma yüzey",
+          "text": "Seyrek nakış kumaşı",
           "arrow": "down",
           "word_id": "D1",
           "image_id": null,
@@ -39,7 +39,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Farklı tonda",
+          "text": "Çok renklilik",
           "arrow": "down",
           "word_id": "D2",
           "image_id": null,
@@ -71,7 +71,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Razı olmuş",
+          "text": "Ayakta duran",
           "arrow": "down",
           "word_id": "D4",
           "image_id": null,
@@ -103,7 +103,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Aydınlık, parlak",
+          "text": "Işıklı yüzlü",
           "arrow": "down",
           "word_id": "D6",
           "image_id": null,
@@ -151,7 +151,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Faydalı, yararlı",
+          "text": "Müzik aleti",
           "arrow": "right",
           "word_id": "A4",
           "image_id": null,
@@ -167,7 +167,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "İvedi",
+          "text": "Bir müzik makamı",
           "arrow": "right",
           "word_id": "A6",
           "image_id": null,
@@ -183,7 +183,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Kedisiyle ünlü il",
+          "text": "Mevcut, olan",
           "arrow": "right",
           "word_id": "A8",
           "image_id": null,
@@ -215,7 +215,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Yukarı doğru hareket",
+          "text": "Çok bacaklı böcek",
           "arrow": "right",
           "word_id": "A11",
           "image_id": null,
@@ -254,7 +254,7 @@
           "source": "llm"
         },
         {
-          "text": "Antalya'da bir ilçe",
+          "text": "İslam hukuku",
           "arrow": "down",
           "word_id": "D7",
           "image_id": null,
@@ -293,7 +293,7 @@
           "source": "curated"
         },
         {
-          "text": "Ergenlik sorunu",
+          "text": "Sivilce",
           "arrow": "down",
           "word_id": "D8",
           "image_id": null,
@@ -487,7 +487,7 @@
       "row": 3,
       "col": 3,
       "type": "letter",
-      "solution": "F",
+      "solution": "Ş",
       "word_ids": [
         "A4",
         "D7"
@@ -542,7 +542,7 @@
       "row": 4,
       "col": 3,
       "type": "letter",
-      "solution": "İ",
+      "solution": "E",
       "word_ids": [
         "A6",
         "D7"
@@ -553,7 +553,7 @@
       "row": 4,
       "col": 4,
       "type": "letter",
-      "solution": "L",
+      "solution": "M",
       "word_ids": [
         "A6",
         "D4"
@@ -597,7 +597,7 @@
       "row": 5,
       "col": 3,
       "type": "letter",
-      "solution": "N",
+      "solution": "R",
       "word_ids": [
         "A8",
         "D7"
@@ -718,7 +718,7 @@
       "row": 7,
       "col": 3,
       "type": "letter",
-      "solution": "K",
+      "solution": "Y",
       "word_ids": [
         "A11",
         "D7"
@@ -933,7 +933,7 @@
     },
     {
       "id": "A4",
-      "answer": "NAFİ",
+      "answer": "NAŞİ",
       "length": 4,
       "direction": "right",
       "clue_cell": {
@@ -963,7 +963,7 @@
         }
       ],
       "clue": {
-        "text": "Faydalı, yararlı",
+        "text": "Müzik aleti",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1001,7 +1001,7 @@
     },
     {
       "id": "A6",
-      "answer": "ACİL",
+      "answer": "ACEM",
       "length": 4,
       "direction": "right",
       "clue_cell": {
@@ -1031,7 +1031,7 @@
         }
       ],
       "clue": {
-        "text": "İvedi",
+        "text": "Bir müzik makamı",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1069,7 +1069,7 @@
     },
     {
       "id": "A8",
-      "answer": "VAN",
+      "answer": "VAR",
       "length": 3,
       "direction": "right",
       "clue_cell": {
@@ -1095,7 +1095,7 @@
         }
       ],
       "clue": {
-        "text": "Kedisiyle ünlü il",
+        "text": "Mevcut, olan",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1185,7 +1185,7 @@
     },
     {
       "id": "A11",
-      "answer": "ÇIKAN",
+      "answer": "ÇIYAN",
       "length": 5,
       "direction": "right",
       "clue_cell": {
@@ -1219,7 +1219,7 @@
         }
       ],
       "clue": {
-        "text": "Yukarı doğru hareket",
+        "text": "Çok bacaklı böcek",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1417,7 +1417,7 @@
     },
     {
       "id": "D4",
-      "answer": "KAİL",
+      "answer": "KAİM",
       "length": 4,
       "direction": "down",
       "clue_cell": {
@@ -1447,7 +1447,7 @@
         }
       ],
       "clue": {
-        "text": "Razı olmuş",
+        "text": "Ayakta duran",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1537,7 +1537,7 @@
     },
     {
       "id": "D7",
-      "answer": "FİNİKE",
+      "answer": "ŞERİYE",
       "length": 6,
       "direction": "down",
       "clue_cell": {
@@ -1575,7 +1575,7 @@
         }
       ],
       "clue": {
-        "text": "Portakal diyarı ilçe",
+        "text": "İslam hukuku",
         "arrow": "down",
         "word_id": "D7",
         "image_id": null,
@@ -1695,6 +1695,6 @@
     "post_fill_scanned": true,
     "scanner_version": "2.0.0"
   },
-  "generated_at": "2026-07-05T02:10:26.654820+00:00",
+  "generated_at": "2026-07-05T10:55:06.150708+00:00",
   "generator_version": "2.0.0"
 }

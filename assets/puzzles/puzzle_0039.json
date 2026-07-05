@@ -39,7 +39,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Eskrim kılıcı",
+          "text": "Geniş düzlük",
           "arrow": "down",
           "word_id": "D2",
           "image_id": null,
@@ -55,7 +55,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Hukuki süreç",
+          "text": "Eşini yitiren",
           "arrow": "down",
           "word_id": "D3",
           "image_id": null,
@@ -71,7 +71,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "İsa'nın dili",
+          "text": "Japon kadın adı",
           "arrow": "down",
           "word_id": "D4",
           "image_id": null,
@@ -103,7 +103,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Gül kokusu",
+          "text": "Güzel kokulu (eski)",
           "arrow": "down",
           "word_id": "D6",
           "image_id": null,
@@ -119,7 +119,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Taşıma aracı",
+          "text": "Maden suyu gibi",
           "arrow": "right",
           "word_id": "A1",
           "image_id": null,
@@ -135,7 +135,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Yardımcı gereç",
+          "text": "Dava vekili",
           "arrow": "right",
           "word_id": "A2",
           "image_id": null,
@@ -151,7 +151,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Bulgar parası",
+          "text": "Soğanlı bir çiçek",
           "arrow": "right",
           "word_id": "A3",
           "image_id": null,
@@ -183,7 +183,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Arap hükümdarı",
+          "text": "Hükümdar (eski)",
           "arrow": "right",
           "word_id": "A7",
           "image_id": null,
@@ -215,7 +215,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "İrmikli şerbetli tatlı",
+          "text": "İrmik tatlısı",
           "arrow": "right",
           "word_id": "A10",
           "image_id": null,
@@ -293,7 +293,7 @@
           "source": "llm"
         },
         {
-          "text": "Yanardağdan akan",
+          "text": "Halat çekme komutu",
           "arrow": "down",
           "word_id": "D9",
           "image_id": null,
@@ -371,7 +371,7 @@
       "row": 1,
       "col": 2,
       "type": "letter",
-      "solution": "E",
+      "solution": "O",
       "word_ids": [
         "A1",
         "D2"
@@ -437,7 +437,7 @@
       "row": 2,
       "col": 2,
       "type": "letter",
-      "solution": "P",
+      "solution": "V",
       "word_ids": [
         "A2",
         "D2"
@@ -448,7 +448,7 @@
       "row": 2,
       "col": 3,
       "type": "letter",
-      "solution": "A",
+      "solution": "U",
       "word_ids": [
         "A2",
         "D3"
@@ -459,7 +459,7 @@
       "row": 2,
       "col": 4,
       "type": "letter",
-      "solution": "R",
+      "solution": "K",
       "word_ids": [
         "A2",
         "D4"
@@ -503,7 +503,7 @@
       "row": 3,
       "col": 2,
       "type": "letter",
-      "solution": "E",
+      "solution": "A",
       "word_ids": [
         "A3",
         "D2"
@@ -514,7 +514,7 @@
       "row": 3,
       "col": 3,
       "type": "letter",
-      "solution": "V",
+      "solution": "L",
       "word_ids": [
         "A3",
         "D3"
@@ -525,7 +525,7 @@
       "row": 3,
       "col": 4,
       "type": "letter",
-      "solution": "A",
+      "solution": "E",
       "word_ids": [
         "A3",
         "D4"
@@ -822,7 +822,7 @@
   "words": [
     {
       "id": "A1",
-      "answer": "SEDALI",
+      "answer": "SODALI",
       "length": 6,
       "direction": "right",
       "clue_cell": {
@@ -860,7 +860,7 @@
         }
       ],
       "clue": {
-        "text": "Sesli (harf)",
+        "text": "Maden suyu gibi",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -870,7 +870,7 @@
     },
     {
       "id": "A2",
-      "answer": "APARAT",
+      "answer": "AVUKAT",
       "length": 6,
       "direction": "right",
       "clue_cell": {
@@ -908,7 +908,7 @@
         }
       ],
       "clue": {
-        "text": "Yardımcı gereç",
+        "text": "Dava vekili",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -918,7 +918,7 @@
     },
     {
       "id": "A3",
-      "answer": "LEVA",
+      "answer": "LALE",
       "length": 4,
       "direction": "right",
       "clue_cell": {
@@ -948,7 +948,7 @@
         }
       ],
       "clue": {
-        "text": "Bulgar parası",
+        "text": "Soğanlı bir çiçek",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -1310,7 +1310,7 @@
     },
     {
       "id": "D2",
-      "answer": "EPE",
+      "answer": "OVA",
       "length": 3,
       "direction": "down",
       "clue_cell": {
@@ -1336,7 +1336,7 @@
         }
       ],
       "clue": {
-        "text": "Eskrim kılıcı",
+        "text": "Geniş düzlük",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1346,7 +1346,7 @@
     },
     {
       "id": "D3",
-      "answer": "DAV",
+      "answer": "DUL",
       "length": 3,
       "direction": "down",
       "clue_cell": {
@@ -1372,7 +1372,7 @@
         }
       ],
       "clue": {
-        "text": "Hukuki süreç",
+        "text": "Eşini yitiren",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1382,7 +1382,7 @@
     },
     {
       "id": "D4",
-      "answer": "ARAMİ",
+      "answer": "AKEMİ",
       "length": 5,
       "direction": "down",
       "clue_cell": {
@@ -1416,7 +1416,7 @@
         }
       ],
       "clue": {
-        "text": "Antik Ortadoğu dili",
+        "text": "Japon kadın adı",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1716,6 +1716,6 @@
     "post_fill_scanned": true,
     "scanner_version": "2.0.0"
   },
-  "generated_at": "2026-07-04T20:07:36.893876+00:00",
+  "generated_at": "2026-07-05T07:56:19.613629+00:00",
   "generator_version": "2.0.0"
 }

@@ -23,7 +23,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Evrensel barış dini",
+          "text": "İnsanın uçması",
           "arrow": "down",
           "word_id": "D1",
           "image_id": null,
@@ -39,7 +39,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Özlem duyurmak",
+          "text": "Özletmek",
           "arrow": "down",
           "word_id": "D2",
           "image_id": null,
@@ -55,7 +55,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Siyah beyaz sığır",
+          "text": "Dünya parçası",
           "arrow": "down",
           "word_id": "D3",
           "image_id": null,
@@ -71,7 +71,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Yerine getirme",
+          "text": "-den -e kadar",
           "arrow": "down",
           "word_id": "D4",
           "image_id": null,
@@ -87,7 +87,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Kanun yapma yetkisi",
+          "text": "Ayıplama",
           "arrow": "down",
           "word_id": "D5",
           "image_id": null,
@@ -103,7 +103,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Organik bileşik",
+          "text": "İki seçenek açmazı",
           "arrow": "down",
           "word_id": "D6",
           "image_id": null,
@@ -119,7 +119,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Issız kır",
+          "text": "Gerçek, sahici",
           "arrow": "right",
           "word_id": "A1",
           "image_id": null,
@@ -135,7 +135,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Hac mekanı",
+          "text": "Vızvızların evi",
           "arrow": "right",
           "word_id": "A2",
           "image_id": null,
@@ -151,7 +151,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Duygusal konuşma",
+          "text": "Memleketle ilgili",
           "arrow": "right",
           "word_id": "A3",
           "image_id": null,
@@ -270,7 +270,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Yaşam gücü",
+          "text": "Şeffaf malzeme",
           "arrow": "right",
           "word_id": "A8",
           "image_id": null,
@@ -337,7 +337,7 @@
       "row": 1,
       "col": 1,
       "type": "letter",
-      "solution": "B",
+      "solution": "H",
       "word_ids": [
         "A1",
         "D1"
@@ -359,7 +359,7 @@
       "row": 1,
       "col": 3,
       "type": "letter",
-      "solution": "D",
+      "solution": "K",
       "word_ids": [
         "A1",
         "D3"
@@ -381,7 +381,7 @@
       "row": 1,
       "col": 5,
       "type": "letter",
-      "solution": "Y",
+      "solution": "K",
       "word_ids": [
         "A1",
         "D5"
@@ -392,7 +392,7 @@
       "row": 1,
       "col": 6,
       "type": "letter",
-      "solution": "E",
+      "solution": "İ",
       "word_ids": [
         "A1",
         "D6"
@@ -425,7 +425,7 @@
       "row": 2,
       "col": 3,
       "type": "letter",
-      "solution": "A",
+      "solution": "I",
       "word_ids": [
         "A2",
         "D3"
@@ -436,7 +436,7 @@
       "row": 2,
       "col": 4,
       "type": "letter",
-      "solution": "F",
+      "solution": "L",
       "word_ids": [
         "A2",
         "D4"
@@ -447,7 +447,7 @@
       "row": 2,
       "col": 5,
       "type": "letter",
-      "solution": "A",
+      "solution": "I",
       "word_ids": [
         "A2",
         "D5"
@@ -458,7 +458,7 @@
       "row": 2,
       "col": 6,
       "type": "letter",
-      "solution": "T",
+      "solution": "K",
       "word_ids": [
         "A2",
         "D6"
@@ -469,7 +469,7 @@
       "row": 3,
       "col": 1,
       "type": "letter",
-      "solution": "H",
+      "solution": "V",
       "word_ids": [
         "A3",
         "D1"
@@ -491,7 +491,7 @@
       "row": 3,
       "col": 3,
       "type": "letter",
-      "solution": "M",
+      "solution": "T",
       "word_ids": [
         "A3",
         "D3"
@@ -513,7 +513,7 @@
       "row": 3,
       "col": 5,
       "type": "letter",
-      "solution": "S",
+      "solution": "N",
       "word_ids": [
         "A3",
         "D5"
@@ -700,7 +700,7 @@
       "row": 6,
       "col": 6,
       "type": "letter",
-      "solution": "N",
+      "solution": "M",
       "word_ids": [
         "A8",
         "D6"
@@ -810,7 +810,7 @@
   "words": [
     {
       "id": "A1",
-      "answer": "BADİYE",
+      "answer": "HAKİKİ",
       "length": 6,
       "direction": "right",
       "clue_cell": {
@@ -848,7 +848,7 @@
         }
       ],
       "clue": {
-        "text": "Çöl (eski)",
+        "text": "Gerçek, sahici",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -858,7 +858,7 @@
     },
     {
       "id": "A2",
-      "answer": "ARAFAT",
+      "answer": "ARILIK",
       "length": 6,
       "direction": "right",
       "clue_cell": {
@@ -896,7 +896,7 @@
         }
       ],
       "clue": {
-        "text": "Hac mekanı",
+        "text": "Vızvızların evi",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -906,7 +906,7 @@
     },
     {
       "id": "A3",
-      "answer": "HAMASİ",
+      "answer": "VATANİ",
       "length": 6,
       "direction": "right",
       "clue_cell": {
@@ -944,7 +944,7 @@
         }
       ],
       "clue": {
-        "text": "Kahramanlık temalı",
+        "text": "Memleketle ilgili",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -1102,7 +1102,7 @@
     },
     {
       "id": "A8",
-      "answer": "CAN",
+      "answer": "CAM",
       "length": 3,
       "direction": "right",
       "clue_cell": {
@@ -1128,7 +1128,7 @@
         }
       ],
       "clue": {
-        "text": "Yaşam gücü",
+        "text": "Şeffaf malzeme",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1246,7 +1246,7 @@
     },
     {
       "id": "D1",
-      "answer": "BAHAİLİK",
+      "answer": "HAVAİLİK",
       "length": 8,
       "direction": "down",
       "clue_cell": {
@@ -1292,7 +1292,7 @@
         }
       ],
       "clue": {
-        "text": "Evrensel barış dini",
+        "text": "İnsanın uçması",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1354,7 +1354,7 @@
     },
     {
       "id": "D3",
-      "answer": "DAMAL",
+      "answer": "KITAL",
       "length": 5,
       "direction": "down",
       "clue_cell": {
@@ -1388,7 +1388,7 @@
         }
       ],
       "clue": {
-        "text": "Ardahan ilçesi",
+        "text": "Dünya parçası",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1398,7 +1398,7 @@
     },
     {
       "id": "D4",
-      "answer": "İFA",
+      "answer": "İLA",
       "length": 3,
       "direction": "down",
       "clue_cell": {
@@ -1424,7 +1424,7 @@
         }
       ],
       "clue": {
-        "text": "Yerine getirme",
+        "text": "-den -e kadar",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1434,7 +1434,7 @@
     },
     {
       "id": "D5",
-      "answer": "YASAMA",
+      "answer": "KINAMA",
       "length": 6,
       "direction": "down",
       "clue_cell": {
@@ -1472,7 +1472,7 @@
         }
       ],
       "clue": {
-        "text": "Kanun yapma yetkisi",
+        "text": "Ayıplama",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1482,7 +1482,7 @@
     },
     {
       "id": "D6",
-      "answer": "ETİLEN",
+      "answer": "İKİLEM",
       "length": 6,
       "direction": "down",
       "clue_cell": {
@@ -1520,7 +1520,7 @@
         }
       ],
       "clue": {
-        "text": "Organik bileşik",
+        "text": "İki seçenek açmazı",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1664,6 +1664,6 @@
     "post_fill_scanned": true,
     "scanner_version": "2.0.0"
   },
-  "generated_at": "2026-07-05T01:47:57.861252+00:00",
+  "generated_at": "2026-07-05T10:45:16.133779+00:00",
   "generator_version": "2.0.0"
 }

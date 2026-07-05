@@ -23,7 +23,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Köpek yavrusu",
+          "text": "Sığır sesi",
           "arrow": "down",
           "word_id": "D1",
           "image_id": null,
@@ -39,7 +39,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Kesinlik durumu",
+          "text": "Dilbilgisi terimi",
           "arrow": "down",
           "word_id": "D2",
           "image_id": null,
@@ -71,7 +71,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Modena sirkesi",
+          "text": "Bir sirke türü",
           "arrow": "down",
           "word_id": "D4",
           "image_id": null,
@@ -87,7 +87,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "-den -e kadar",
+          "text": "Bir göz rengi",
           "arrow": "down",
           "word_id": "D5",
           "image_id": null,
@@ -103,7 +103,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Bulgar parası",
+          "text": "Yaka içi sert astar",
           "arrow": "down",
           "word_id": "D6",
           "image_id": null,
@@ -119,7 +119,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Kâbe'nin koruyucusu",
+          "text": "Hedefi tutturma",
           "arrow": "right",
           "word_id": "A1",
           "image_id": null,
@@ -151,7 +151,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Vilayet",
+          "text": "Müzikte susma, durak",
           "arrow": "right",
           "word_id": "A3",
           "image_id": null,
@@ -247,7 +247,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Yanardağdan akan",
+          "text": "Dili tutulmuş",
           "arrow": "right",
           "word_id": "A4",
           "image_id": null,
@@ -369,7 +369,7 @@
       "row": 1,
       "col": 1,
       "type": "letter",
-      "solution": "E",
+      "solution": "İ",
       "word_ids": [
         "A1",
         "D1"
@@ -380,7 +380,7 @@
       "row": 1,
       "col": 2,
       "type": "letter",
-      "solution": "B",
+      "solution": "S",
       "word_ids": [
         "A1",
         "D2"
@@ -413,7 +413,7 @@
       "row": 1,
       "col": 5,
       "type": "letter",
-      "solution": "İ",
+      "solution": "E",
       "word_ids": [
         "A1",
         "D5"
@@ -424,7 +424,7 @@
       "row": 1,
       "col": 6,
       "type": "letter",
-      "solution": "L",
+      "solution": "T",
       "word_ids": [
         "A1",
         "D6"
@@ -501,7 +501,7 @@
       "row": 3,
       "col": 1,
       "type": "letter",
-      "solution": "İ",
+      "solution": "E",
       "word_ids": [
         "A3",
         "D1"
@@ -512,7 +512,7 @@
       "row": 3,
       "col": 2,
       "type": "letter",
-      "solution": "L",
+      "solution": "S",
       "word_ids": [
         "A3",
         "D2"
@@ -545,7 +545,7 @@
       "row": 3,
       "col": 6,
       "type": "letter",
-      "solution": "V",
+      "solution": "L",
       "word_ids": [
         "A4",
         "D6"
@@ -820,7 +820,7 @@
   "words": [
     {
       "id": "A1",
-      "answer": "EBABİL",
+      "answer": "İSABET",
       "length": 6,
       "direction": "right",
       "clue_cell": {
@@ -858,7 +858,7 @@
         }
       ],
       "clue": {
-        "text": "Bir kırlangıç türü",
+        "text": "Hedefi tutturma",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -916,7 +916,7 @@
     },
     {
       "id": "A3",
-      "answer": "İL",
+      "answer": "ES",
       "length": 2,
       "direction": "right",
       "clue_cell": {
@@ -938,7 +938,7 @@
         }
       ],
       "clue": {
-        "text": "Vilayet",
+        "text": "Müzikte susma, durak",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -948,7 +948,7 @@
     },
     {
       "id": "A4",
-      "answer": "LAV",
+      "answer": "LAL",
       "length": 3,
       "direction": "right",
       "clue_cell": {
@@ -974,7 +974,7 @@
         }
       ],
       "clue": {
-        "text": "Yanardağdan akan",
+        "text": "Dili tutulmuş",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1272,7 +1272,7 @@
     },
     {
       "id": "D1",
-      "answer": "ENİKLEME",
+      "answer": "İNEKLEME",
       "length": 8,
       "direction": "down",
       "clue_cell": {
@@ -1318,7 +1318,7 @@
         }
       ],
       "clue": {
-        "text": "Köpeğin doğurması",
+        "text": "Sığır sesi",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1328,7 +1328,7 @@
     },
     {
       "id": "D2",
-      "answer": "BELLİLİK",
+      "answer": "SESLİLİK",
       "length": 8,
       "direction": "down",
       "clue_cell": {
@@ -1374,7 +1374,7 @@
         }
       ],
       "clue": {
-        "text": "Kesinlik durumu",
+        "text": "Dilbilgisi terimi",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1472,7 +1472,7 @@
     },
     {
       "id": "D5",
-      "answer": "İLA",
+      "answer": "ELA",
       "length": 3,
       "direction": "down",
       "clue_cell": {
@@ -1498,7 +1498,7 @@
         }
       ],
       "clue": {
-        "text": "-den -e kadar",
+        "text": "Bir göz rengi",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1508,7 +1508,7 @@
     },
     {
       "id": "D6",
-      "answer": "LEVA",
+      "answer": "TELA",
       "length": 4,
       "direction": "down",
       "clue_cell": {
@@ -1538,7 +1538,7 @@
         }
       ],
       "clue": {
-        "text": "Bulgar parası",
+        "text": "Yaka içi sert astar",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1706,6 +1706,6 @@
     "post_fill_scanned": true,
     "scanner_version": "2.0.0"
   },
-  "generated_at": "2026-07-05T00:43:22.156563+00:00",
+  "generated_at": "2026-07-05T10:25:03.818303+00:00",
   "generator_version": "2.0.0"
 }

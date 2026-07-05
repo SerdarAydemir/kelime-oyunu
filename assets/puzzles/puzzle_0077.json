@@ -23,7 +23,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Sıkışmak, girmek",
+          "text": "Bir şekerleme",
           "arrow": "down",
           "word_id": "D1",
           "image_id": null,
@@ -39,11 +39,11 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Bir pamuk türü",
+          "text": "Yakınma ünlemi",
           "arrow": "down",
           "word_id": "D2",
           "image_id": null,
-          "source": "llm"
+          "source": "curated"
         }
       ]
     },
@@ -55,7 +55,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Taşınan şey",
+          "text": "Şark köşesi",
           "arrow": "down",
           "word_id": "D3",
           "image_id": null,
@@ -71,7 +71,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Bulmaya çalışmak",
+          "text": "Funda bitkisi",
           "arrow": "down",
           "word_id": "D4",
           "image_id": null,
@@ -87,7 +87,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Bitkisel",
+          "text": "Ölçü aleti",
           "arrow": "down",
           "word_id": "D5",
           "image_id": null,
@@ -103,7 +103,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Cet, soy büyüğü",
+          "text": "İğdiş etmek",
           "arrow": "down",
           "word_id": "D6",
           "image_id": null,
@@ -119,7 +119,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Japon kılıcı",
+          "text": "Aşama, seviye",
           "arrow": "right",
           "word_id": "A1",
           "image_id": null,
@@ -135,7 +135,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Kira getiren mülk",
+          "text": "Bitiminde",
           "arrow": "right",
           "word_id": "A2",
           "image_id": null,
@@ -151,11 +151,11 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Küçük şehir",
+          "text": "Yarıçap simgesi",
           "arrow": "right",
           "word_id": "A3",
           "image_id": null,
-          "source": "llm"
+          "source": "curated"
         }
       ]
     },
@@ -167,9 +167,9 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Ilıklaşma",
+          "text": "Samsun'da sahil ilçesi",
           "arrow": "right",
-          "word_id": "A4",
+          "word_id": "A5",
           "image_id": null,
           "source": "llm"
         }
@@ -183,9 +183,9 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Yaygara",
+          "text": "Camiye yüksek yapı",
           "arrow": "right",
-          "word_id": "A5",
+          "word_id": "A6",
           "image_id": null,
           "source": "llm"
         }
@@ -199,9 +199,9 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Romen rakamıyla bin",
+          "text": "Rütbesiz asker",
           "arrow": "right",
-          "word_id": "A6",
+          "word_id": "A7",
           "image_id": null,
           "source": "curated"
         }
@@ -215,9 +215,9 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "İki şeyin ortası",
+          "text": "Boş söz, gevezelik",
           "arrow": "right",
-          "word_id": "A8",
+          "word_id": "A9",
           "image_id": null,
           "source": "llm"
         }
@@ -231,43 +231,34 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Bir av kuşu",
+          "text": "Göreve getirmek",
           "arrow": "right",
-          "word_id": "A9",
+          "word_id": "A10",
           "image_id": null,
           "source": "llm"
         }
       ]
     },
     {
-      "row": 4,
-      "col": 6,
-      "type": "clue",
-      "solution": null,
-      "word_ids": [],
-      "clues": [
-        {
-          "text": "Binek hayvanı",
-          "arrow": "down",
-          "word_id": "D7",
-          "image_id": null,
-          "source": "curated"
-        }
-      ]
-    },
-    {
-      "row": 6,
+      "row": 3,
       "col": 2,
       "type": "clue",
       "solution": null,
       "word_ids": [],
       "clues": [
         {
-          "text": "İkinci nota",
-          "arrow": "down",
-          "word_id": "D8",
+          "text": "Giriş izni",
+          "arrow": "right",
+          "word_id": "A4",
           "image_id": null,
-          "source": "curated"
+          "source": "llm"
+        },
+        {
+          "text": "Sahne oyunu repliği",
+          "arrow": "down",
+          "word_id": "D7",
+          "image_id": null,
+          "source": "llm"
         }
       ]
     },
@@ -279,16 +270,25 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Parça takımı, set",
-          "arrow": "right",
-          "word_id": "A7",
+          "text": "Dördüncü nota",
+          "arrow": "down",
+          "word_id": "D8",
           "image_id": null,
-          "source": "llm"
-        },
+          "source": "curated"
+        }
+      ]
+    },
+    {
+      "row": 6,
+      "col": 4,
+      "type": "clue",
+      "solution": null,
+      "word_ids": [],
+      "clues": [
         {
           "text": "Beyaz, temiz",
-          "arrow": "down",
-          "word_id": "D9",
+          "arrow": "right",
+          "word_id": "A8",
           "image_id": null,
           "source": "curated"
         }
@@ -302,9 +302,9 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Romen rakamıyla elli",
+          "text": "Romen rakamıyla bin",
           "arrow": "down",
-          "word_id": "D10",
+          "word_id": "D9",
           "image_id": null,
           "source": "curated"
         }
@@ -318,9 +318,9 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "İzmir'in ilk harfi",
+          "text": "Alfabenin ilk harfi",
           "arrow": "down",
-          "word_id": "D11",
+          "word_id": "D10",
           "image_id": null,
           "source": "curated"
         }
@@ -336,7 +336,7 @@
         {
           "text": "Potasyumun simgesi",
           "arrow": "down",
-          "word_id": "D12",
+          "word_id": "D11",
           "image_id": null,
           "source": "curated"
         }
@@ -368,7 +368,7 @@
       "row": 1,
       "col": 3,
       "type": "letter",
-      "solution": "T",
+      "solution": "D",
       "word_ids": [
         "A1",
         "D3"
@@ -379,7 +379,7 @@
       "row": 1,
       "col": 4,
       "type": "letter",
-      "solution": "A",
+      "solution": "E",
       "word_ids": [
         "A1",
         "D4"
@@ -390,7 +390,7 @@
       "row": 1,
       "col": 5,
       "type": "letter",
-      "solution": "N",
+      "solution": "M",
       "word_ids": [
         "A1",
         "D5"
@@ -401,7 +401,7 @@
       "row": 1,
       "col": 6,
       "type": "letter",
-      "solution": "A",
+      "solution": "E",
       "word_ids": [
         "A1",
         "D6"
@@ -423,7 +423,7 @@
       "row": 2,
       "col": 2,
       "type": "letter",
-      "solution": "K",
+      "solution": "H",
       "word_ids": [
         "A2",
         "D2"
@@ -434,7 +434,7 @@
       "row": 2,
       "col": 3,
       "type": "letter",
-      "solution": "A",
+      "solution": "İ",
       "word_ids": [
         "A2",
         "D3"
@@ -467,7 +467,7 @@
       "row": 2,
       "col": 6,
       "type": "letter",
-      "solution": "T",
+      "solution": "N",
       "word_ids": [
         "A2",
         "D6"
@@ -478,7 +478,7 @@
       "row": 3,
       "col": 1,
       "type": "letter",
-      "solution": "K",
+      "solution": "R",
       "word_ids": [
         "A3",
         "D1"
@@ -487,22 +487,11 @@
     },
     {
       "row": 3,
-      "col": 2,
-      "type": "letter",
-      "solution": "A",
-      "word_ids": [
-        "A3",
-        "D2"
-      ],
-      "clues": []
-    },
-    {
-      "row": 3,
       "col": 3,
       "type": "letter",
-      "solution": "S",
+      "solution": "V",
       "word_ids": [
-        "A3",
+        "A4",
         "D3"
       ],
       "clues": []
@@ -511,9 +500,9 @@
       "row": 3,
       "col": 4,
       "type": "letter",
-      "solution": "A",
+      "solution": "İ",
       "word_ids": [
-        "A3",
+        "A4",
         "D4"
       ],
       "clues": []
@@ -522,9 +511,9 @@
       "row": 3,
       "col": 5,
       "type": "letter",
-      "solution": "B",
+      "solution": "Z",
       "word_ids": [
-        "A3",
+        "A4",
         "D5"
       ],
       "clues": []
@@ -533,9 +522,9 @@
       "row": 3,
       "col": 6,
       "type": "letter",
-      "solution": "A",
+      "solution": "E",
       "word_ids": [
-        "A3",
+        "A4",
         "D6"
       ],
       "clues": []
@@ -544,9 +533,9 @@
       "row": 4,
       "col": 1,
       "type": "letter",
-      "solution": "I",
+      "solution": "A",
       "word_ids": [
-        "A4",
+        "A5",
         "D1"
       ],
       "clues": []
@@ -554,107 +543,8 @@
     {
       "row": 4,
       "col": 2,
-      "type": "letter",
-      "solution": "L",
-      "word_ids": [
-        "A4",
-        "D2"
-      ],
-      "clues": []
-    },
-    {
-      "row": 4,
-      "col": 3,
-      "type": "letter",
-      "solution": "I",
-      "word_ids": [
-        "A4",
-        "D3"
-      ],
-      "clues": []
-    },
-    {
-      "row": 4,
-      "col": 4,
-      "type": "letter",
-      "solution": "M",
-      "word_ids": [
-        "A4",
-        "D4"
-      ],
-      "clues": []
-    },
-    {
-      "row": 4,
-      "col": 5,
-      "type": "letter",
-      "solution": "A",
-      "word_ids": [
-        "A4",
-        "D5"
-      ],
-      "clues": []
-    },
-    {
-      "row": 5,
-      "col": 1,
-      "type": "letter",
-      "solution": "Ş",
-      "word_ids": [
-        "A5",
-        "D1"
-      ],
-      "clues": []
-    },
-    {
-      "row": 5,
-      "col": 2,
-      "type": "letter",
-      "solution": "A",
-      "word_ids": [
-        "A5",
-        "D2"
-      ],
-      "clues": []
-    },
-    {
-      "row": 5,
-      "col": 3,
-      "type": "letter",
-      "solution": "M",
-      "word_ids": [
-        "A5",
-        "D3"
-      ],
-      "clues": []
-    },
-    {
-      "row": 5,
-      "col": 4,
-      "type": "letter",
-      "solution": "A",
-      "word_ids": [
-        "A5",
-        "D4"
-      ],
-      "clues": []
-    },
-    {
-      "row": 5,
-      "col": 5,
       "type": "letter",
       "solution": "T",
-      "word_ids": [
-        "A5",
-        "D5"
-      ],
-      "clues": []
-    },
-    {
-      "row": 5,
-      "col": 6,
-      "type": "letter",
-      "solution": "A",
       "word_ids": [
         "A5",
         "D7"
@@ -662,7 +552,51 @@
       "clues": []
     },
     {
-      "row": 6,
+      "row": 4,
+      "col": 3,
+      "type": "letter",
+      "solution": "A",
+      "word_ids": [
+        "A5",
+        "D3"
+      ],
+      "clues": []
+    },
+    {
+      "row": 4,
+      "col": 4,
+      "type": "letter",
+      "solution": "K",
+      "word_ids": [
+        "A5",
+        "D4"
+      ],
+      "clues": []
+    },
+    {
+      "row": 4,
+      "col": 5,
+      "type": "letter",
+      "solution": "U",
+      "word_ids": [
+        "A5",
+        "D5"
+      ],
+      "clues": []
+    },
+    {
+      "row": 4,
+      "col": 6,
+      "type": "letter",
+      "solution": "M",
+      "word_ids": [
+        "A5",
+        "D6"
+      ],
+      "clues": []
+    },
+    {
+      "row": 5,
       "col": 1,
       "type": "letter",
       "solution": "M",
@@ -673,13 +607,79 @@
       "clues": []
     },
     {
-      "row": 6,
+      "row": 5,
+      "col": 2,
+      "type": "letter",
+      "solution": "İ",
+      "word_ids": [
+        "A6",
+        "D7"
+      ],
+      "clues": []
+    },
+    {
+      "row": 5,
+      "col": 3,
+      "type": "letter",
+      "solution": "N",
+      "word_ids": [
+        "A6",
+        "D3"
+      ],
+      "clues": []
+    },
+    {
+      "row": 5,
       "col": 4,
       "type": "letter",
-      "solution": "K",
+      "solution": "A",
+      "word_ids": [
+        "A6",
+        "D4"
+      ],
+      "clues": []
+    },
+    {
+      "row": 5,
+      "col": 5,
+      "type": "letter",
+      "solution": "R",
+      "word_ids": [
+        "A6",
+        "D5"
+      ],
+      "clues": []
+    },
+    {
+      "row": 5,
+      "col": 6,
+      "type": "letter",
+      "solution": "E",
+      "word_ids": [
+        "A6",
+        "D6"
+      ],
+      "clues": []
+    },
+    {
+      "row": 6,
+      "col": 1,
+      "type": "letter",
+      "solution": "E",
       "word_ids": [
         "A7",
-        "D4"
+        "D1"
+      ],
+      "clues": []
+    },
+    {
+      "row": 6,
+      "col": 2,
+      "type": "letter",
+      "solution": "R",
+      "word_ids": [
+        "A7",
+        "D7"
       ],
       "clues": []
     },
@@ -687,9 +687,9 @@
       "row": 6,
       "col": 5,
       "type": "letter",
-      "solution": "İ",
+      "solution": "A",
       "word_ids": [
-        "A7",
+        "A8",
         "D5"
       ],
       "clues": []
@@ -698,62 +698,40 @@
       "row": 6,
       "col": 6,
       "type": "letter",
-      "solution": "T",
+      "solution": "K",
       "word_ids": [
-        "A7",
+        "A8",
+        "D6"
+      ],
+      "clues": []
+    },
+    {
+      "row": 7,
+      "col": 1,
+      "type": "letter",
+      "solution": "L",
+      "word_ids": [
+        "A9",
+        "D1"
+      ],
+      "clues": []
+    },
+    {
+      "row": 7,
+      "col": 2,
+      "type": "letter",
+      "solution": "A",
+      "word_ids": [
+        "A9",
         "D7"
       ],
       "clues": []
     },
     {
       "row": 7,
-      "col": 1,
-      "type": "letter",
-      "solution": "A",
-      "word_ids": [
-        "A8",
-        "D1"
-      ],
-      "clues": []
-    },
-    {
-      "row": 7,
-      "col": 2,
-      "type": "letter",
-      "solution": "R",
-      "word_ids": [
-        "A8",
-        "D8"
-      ],
-      "clues": []
-    },
-    {
-      "row": 7,
       "col": 3,
       "type": "letter",
-      "solution": "A",
-      "word_ids": [
-        "A8",
-        "D9"
-      ],
-      "clues": []
-    },
-    {
-      "row": 8,
-      "col": 1,
-      "type": "letter",
-      "solution": "K",
-      "word_ids": [
-        "A9",
-        "D1"
-      ],
-      "clues": []
-    },
-    {
-      "row": 8,
-      "col": 2,
-      "type": "letter",
-      "solution": "E",
+      "solution": "F",
       "word_ids": [
         "A9",
         "D8"
@@ -762,12 +740,34 @@
     },
     {
       "row": 8,
+      "col": 1,
+      "type": "letter",
+      "solution": "A",
+      "word_ids": [
+        "A10",
+        "D1"
+      ],
+      "clues": []
+    },
+    {
+      "row": 8,
+      "col": 2,
+      "type": "letter",
+      "solution": "T",
+      "word_ids": [
+        "A10",
+        "D7"
+      ],
+      "clues": []
+    },
+    {
+      "row": 8,
       "col": 3,
       "type": "letter",
-      "solution": "K",
+      "solution": "A",
       "word_ids": [
-        "A9",
-        "D9"
+        "A10",
+        "D8"
       ],
       "clues": []
     },
@@ -775,10 +775,10 @@
       "row": 8,
       "col": 4,
       "type": "letter",
-      "solution": "L",
+      "solution": "M",
       "word_ids": [
-        "A9",
-        "D10"
+        "A10",
+        "D9"
       ],
       "clues": []
     },
@@ -786,10 +786,10 @@
       "row": 8,
       "col": 5,
       "type": "letter",
-      "solution": "İ",
+      "solution": "A",
       "word_ids": [
-        "A9",
-        "D11"
+        "A10",
+        "D10"
       ],
       "clues": []
     },
@@ -799,8 +799,8 @@
       "type": "letter",
       "solution": "K",
       "word_ids": [
-        "A9",
-        "D12"
+        "A10",
+        "D11"
       ],
       "clues": []
     }
@@ -808,7 +808,7 @@
   "words": [
     {
       "id": "A1",
-      "answer": "KATANA",
+      "answer": "KADEME",
       "length": 6,
       "direction": "right",
       "clue_cell": {
@@ -846,7 +846,7 @@
         }
       ],
       "clue": {
-        "text": "Japon kılıcı",
+        "text": "Aşama, seviye",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -856,7 +856,7 @@
     },
     {
       "id": "A2",
-      "answer": "AKARET",
+      "answer": "AHİREN",
       "length": 6,
       "direction": "right",
       "clue_cell": {
@@ -894,7 +894,7 @@
         }
       ],
       "clue": {
-        "text": "Kira getiren mülk",
+        "text": "Bitiminde",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -904,8 +904,8 @@
     },
     {
       "id": "A3",
-      "answer": "KASABA",
-      "length": 6,
+      "answer": "R",
+      "length": 1,
       "direction": "right",
       "clue_cell": {
         "row": 3,
@@ -919,11 +919,31 @@
         {
           "row": 3,
           "col": 1
-        },
-        {
-          "row": 3,
-          "col": 2
-        },
+        }
+      ],
+      "clue": {
+        "text": "Yarıçap simgesi",
+        "arrow": "right",
+        "word_id": "A3",
+        "image_id": null,
+        "source": "curated"
+      },
+      "frequency_score": 95
+    },
+    {
+      "id": "A4",
+      "answer": "VİZE",
+      "length": 4,
+      "direction": "right",
+      "clue_cell": {
+        "row": 3,
+        "col": 2
+      },
+      "start_cell": {
+        "row": 3,
+        "col": 3
+      },
+      "cells": [
         {
           "row": 3,
           "col": 3
@@ -942,99 +962,55 @@
         }
       ],
       "clue": {
-        "text": "Küçük şehir",
-        "arrow": "right",
-        "word_id": "A3",
-        "image_id": null,
-        "source": "llm"
-      },
-      "frequency_score": 60
-    },
-    {
-      "id": "A4",
-      "answer": "ILIMA",
-      "length": 5,
-      "direction": "right",
-      "clue_cell": {
-        "row": 4,
-        "col": 0
-      },
-      "start_cell": {
-        "row": 4,
-        "col": 1
-      },
-      "cells": [
-        {
-          "row": 4,
-          "col": 1
-        },
-        {
-          "row": 4,
-          "col": 2
-        },
-        {
-          "row": 4,
-          "col": 3
-        },
-        {
-          "row": 4,
-          "col": 4
-        },
-        {
-          "row": 4,
-          "col": 5
-        }
-      ],
-      "clue": {
-        "text": "Ilıklaşma",
+        "text": "Giriş izni",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
         "source": "llm"
       },
-      "frequency_score": 70
+      "frequency_score": 80
     },
     {
       "id": "A5",
-      "answer": "ŞAMATA",
+      "answer": "ATAKUM",
       "length": 6,
       "direction": "right",
       "clue_cell": {
-        "row": 5,
+        "row": 4,
         "col": 0
       },
       "start_cell": {
-        "row": 5,
+        "row": 4,
         "col": 1
       },
       "cells": [
         {
-          "row": 5,
+          "row": 4,
           "col": 1
         },
         {
-          "row": 5,
+          "row": 4,
           "col": 2
         },
         {
-          "row": 5,
+          "row": 4,
           "col": 3
         },
         {
-          "row": 5,
+          "row": 4,
           "col": 4
         },
         {
-          "row": 5,
+          "row": 4,
           "col": 5
         },
         {
-          "row": 5,
+          "row": 4,
           "col": 6
         }
       ],
       "clue": {
-        "text": "Yaygara",
+        "text": "Samsun'da sahil ilçesi",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1044,8 +1020,56 @@
     },
     {
       "id": "A6",
-      "answer": "M",
-      "length": 1,
+      "answer": "MİNARE",
+      "length": 6,
+      "direction": "right",
+      "clue_cell": {
+        "row": 5,
+        "col": 0
+      },
+      "start_cell": {
+        "row": 5,
+        "col": 1
+      },
+      "cells": [
+        {
+          "row": 5,
+          "col": 1
+        },
+        {
+          "row": 5,
+          "col": 2
+        },
+        {
+          "row": 5,
+          "col": 3
+        },
+        {
+          "row": 5,
+          "col": 4
+        },
+        {
+          "row": 5,
+          "col": 5
+        },
+        {
+          "row": 5,
+          "col": 6
+        }
+      ],
+      "clue": {
+        "text": "Camiye yüksek yapı",
+        "arrow": "right",
+        "word_id": "A6",
+        "image_id": null,
+        "source": "llm"
+      },
+      "frequency_score": 60
+    },
+    {
+      "id": "A7",
+      "answer": "ER",
+      "length": 2,
       "direction": "right",
       "clue_cell": {
         "row": 6,
@@ -1059,35 +1083,35 @@
         {
           "row": 6,
           "col": 1
+        },
+        {
+          "row": 6,
+          "col": 2
         }
       ],
       "clue": {
-        "text": "Romen rakamıyla bin",
+        "text": "Rütbesiz asker",
         "arrow": "right",
-        "word_id": "A6",
+        "word_id": "A7",
         "image_id": null,
         "source": "curated"
       },
-      "frequency_score": 95
+      "frequency_score": 92
     },
     {
-      "id": "A7",
-      "answer": "KİT",
-      "length": 3,
+      "id": "A8",
+      "answer": "AK",
+      "length": 2,
       "direction": "right",
       "clue_cell": {
         "row": 6,
-        "col": 3
+        "col": 4
       },
       "start_cell": {
         "row": 6,
-        "col": 4
+        "col": 5
       },
       "cells": [
-        {
-          "row": 6,
-          "col": 4
-        },
         {
           "row": 6,
           "col": 5
@@ -1098,17 +1122,17 @@
         }
       ],
       "clue": {
-        "text": "Parça takımı, set",
+        "text": "Beyaz, temiz",
         "arrow": "right",
-        "word_id": "A7",
+        "word_id": "A8",
         "image_id": null,
-        "source": "llm"
+        "source": "curated"
       },
-      "frequency_score": 90
+      "frequency_score": 92
     },
     {
-      "id": "A8",
-      "answer": "ARA",
+      "id": "A9",
+      "answer": "LAF",
       "length": 3,
       "direction": "right",
       "clue_cell": {
@@ -1134,17 +1158,17 @@
         }
       ],
       "clue": {
-        "text": "İki şeyin ortası",
+        "text": "Boş söz, gevezelik",
         "arrow": "right",
-        "word_id": "A8",
+        "word_id": "A9",
         "image_id": null,
         "source": "llm"
       },
       "frequency_score": 90
     },
     {
-      "id": "A9",
-      "answer": "KEKLİK",
+      "id": "A10",
+      "answer": "ATAMAK",
       "length": 6,
       "direction": "right",
       "clue_cell": {
@@ -1182,9 +1206,9 @@
         }
       ],
       "clue": {
-        "text": "Bir av kuşu",
+        "text": "Göreve getirmek",
         "arrow": "right",
-        "word_id": "A9",
+        "word_id": "A10",
         "image_id": null,
         "source": "llm"
       },
@@ -1192,7 +1216,7 @@
     },
     {
       "id": "D1",
-      "answer": "KAKIŞMAK",
+      "answer": "KARAMELA",
       "length": 8,
       "direction": "down",
       "clue_cell": {
@@ -1238,7 +1262,7 @@
         }
       ],
       "clue": {
-        "text": "İtişip durmak",
+        "text": "Bir şekerleme",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1248,8 +1272,8 @@
     },
     {
       "id": "D2",
-      "answer": "AKALA",
-      "length": 5,
+      "answer": "AH",
+      "length": 2,
       "direction": "down",
       "clue_cell": {
         "row": 0,
@@ -1267,32 +1291,20 @@
         {
           "row": 2,
           "col": 2
-        },
-        {
-          "row": 3,
-          "col": 2
-        },
-        {
-          "row": 4,
-          "col": 2
-        },
-        {
-          "row": 5,
-          "col": 2
         }
       ],
       "clue": {
-        "text": "Bir pamuk türü",
+        "text": "Yakınma ünlemi",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
-        "source": "llm"
+        "source": "curated"
       },
-      "frequency_score": 70
+      "frequency_score": 92
     },
     {
       "id": "D3",
-      "answer": "TASIM",
+      "answer": "DİVAN",
       "length": 5,
       "direction": "down",
       "clue_cell": {
@@ -1326,7 +1338,7 @@
         }
       ],
       "clue": {
-        "text": "Taşınan şey",
+        "text": "Şark köşesi",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1336,8 +1348,8 @@
     },
     {
       "id": "D4",
-      "answer": "ARAMAK",
-      "length": 6,
+      "answer": "ERİKA",
+      "length": 5,
       "direction": "down",
       "clue_cell": {
         "row": 0,
@@ -1367,24 +1379,20 @@
         {
           "row": 5,
           "col": 4
-        },
-        {
-          "row": 6,
-          "col": 4
         }
       ],
       "clue": {
-        "text": "Bulmaya çalışmak",
+        "text": "Funda bitkisi",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
         "source": "llm"
       },
-      "frequency_score": 60
+      "frequency_score": 70
     },
     {
       "id": "D5",
-      "answer": "NEBATİ",
+      "answer": "MEZURA",
       "length": 6,
       "direction": "down",
       "clue_cell": {
@@ -1422,7 +1430,7 @@
         }
       ],
       "clue": {
-        "text": "Bitkisel",
+        "text": "Ölçü aleti",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1432,8 +1440,8 @@
     },
     {
       "id": "D6",
-      "answer": "ATA",
-      "length": 3,
+      "answer": "ENEMEK",
+      "length": 6,
       "direction": "down",
       "clue_cell": {
         "row": 0,
@@ -1455,31 +1463,11 @@
         {
           "row": 3,
           "col": 6
-        }
-      ],
-      "clue": {
-        "text": "Cet, soy büyüğü",
-        "arrow": "down",
-        "word_id": "D6",
-        "image_id": null,
-        "source": "llm"
-      },
-      "frequency_score": 90
-    },
-    {
-      "id": "D7",
-      "answer": "AT",
-      "length": 2,
-      "direction": "down",
-      "clue_cell": {
-        "row": 4,
-        "col": 6
-      },
-      "start_cell": {
-        "row": 5,
-        "col": 6
-      },
-      "cells": [
+        },
+        {
+          "row": 4,
+          "col": 6
+        },
         {
           "row": 5,
           "col": 6
@@ -1490,28 +1478,40 @@
         }
       ],
       "clue": {
-        "text": "Binek hayvanı",
+        "text": "İğdiş etmek",
         "arrow": "down",
-        "word_id": "D7",
+        "word_id": "D6",
         "image_id": null,
-        "source": "curated"
+        "source": "llm"
       },
-      "frequency_score": 92
+      "frequency_score": 60
     },
     {
-      "id": "D8",
-      "answer": "RE",
-      "length": 2,
+      "id": "D7",
+      "answer": "TİRAT",
+      "length": 5,
       "direction": "down",
       "clue_cell": {
-        "row": 6,
+        "row": 3,
         "col": 2
       },
       "start_cell": {
-        "row": 7,
+        "row": 4,
         "col": 2
       },
       "cells": [
+        {
+          "row": 4,
+          "col": 2
+        },
+        {
+          "row": 5,
+          "col": 2
+        },
+        {
+          "row": 6,
+          "col": 2
+        },
         {
           "row": 7,
           "col": 2
@@ -1522,7 +1522,39 @@
         }
       ],
       "clue": {
-        "text": "İkinci nota",
+        "text": "Sahne oyunu repliği",
+        "arrow": "down",
+        "word_id": "D7",
+        "image_id": null,
+        "source": "llm"
+      },
+      "frequency_score": 70
+    },
+    {
+      "id": "D8",
+      "answer": "FA",
+      "length": 2,
+      "direction": "down",
+      "clue_cell": {
+        "row": 6,
+        "col": 3
+      },
+      "start_cell": {
+        "row": 7,
+        "col": 3
+      },
+      "cells": [
+        {
+          "row": 7,
+          "col": 3
+        },
+        {
+          "row": 8,
+          "col": 3
+        }
+      ],
+      "clue": {
+        "text": "Dördüncü nota",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,
@@ -1532,39 +1564,7 @@
     },
     {
       "id": "D9",
-      "answer": "AK",
-      "length": 2,
-      "direction": "down",
-      "clue_cell": {
-        "row": 6,
-        "col": 3
-      },
-      "start_cell": {
-        "row": 7,
-        "col": 3
-      },
-      "cells": [
-        {
-          "row": 7,
-          "col": 3
-        },
-        {
-          "row": 8,
-          "col": 3
-        }
-      ],
-      "clue": {
-        "text": "Beyaz, temiz",
-        "arrow": "down",
-        "word_id": "D9",
-        "image_id": null,
-        "source": "curated"
-      },
-      "frequency_score": 92
-    },
-    {
-      "id": "D10",
-      "answer": "L",
+      "answer": "M",
       "length": 1,
       "direction": "down",
       "clue_cell": {
@@ -1582,17 +1582,17 @@
         }
       ],
       "clue": {
-        "text": "Romen rakamıyla elli",
+        "text": "Romen rakamıyla bin",
         "arrow": "down",
-        "word_id": "D10",
+        "word_id": "D9",
         "image_id": null,
         "source": "curated"
       },
       "frequency_score": 95
     },
     {
-      "id": "D11",
-      "answer": "İ",
+      "id": "D10",
+      "answer": "A",
       "length": 1,
       "direction": "down",
       "clue_cell": {
@@ -1610,16 +1610,16 @@
         }
       ],
       "clue": {
-        "text": "İzmir'in ilk harfi",
+        "text": "Alfabenin ilk harfi",
         "arrow": "down",
-        "word_id": "D11",
+        "word_id": "D10",
         "image_id": null,
         "source": "curated"
       },
       "frequency_score": 95
     },
     {
-      "id": "D12",
+      "id": "D11",
       "answer": "K",
       "length": 1,
       "direction": "down",
@@ -1640,7 +1640,7 @@
       "clue": {
         "text": "Potasyumun simgesi",
         "arrow": "down",
-        "word_id": "D12",
+        "word_id": "D11",
         "image_id": null,
         "source": "curated"
       },
@@ -1649,11 +1649,11 @@
   ],
   "difficulty": "medium",
   "difficulty_score": 39,
-  "template_id": "medium_frame_038180800000",
+  "template_id": "medium_frame_038300002000",
   "safety": {
     "post_fill_scanned": true,
     "scanner_version": "2.0.0"
   },
-  "generated_at": "2026-07-04T21:37:28.484807+00:00",
+  "generated_at": "2026-07-05T08:29:11.728684+00:00",
   "generator_version": "2.0.0"
 }

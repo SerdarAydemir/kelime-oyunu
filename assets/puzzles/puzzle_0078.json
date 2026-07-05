@@ -23,7 +23,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Tüm vücudu etkileyen",
+          "text": "Hazır bulunma",
           "arrow": "down",
           "word_id": "D1",
           "image_id": null,
@@ -39,7 +39,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Isı yayan yüzey",
+          "text": "Zorla ayırma",
           "arrow": "down",
           "word_id": "D2",
           "image_id": null,
@@ -55,7 +55,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Çekişme (eski)",
+          "text": "Paylama",
           "arrow": "down",
           "word_id": "D3",
           "image_id": null,
@@ -71,7 +71,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Duyularla idrak",
+          "text": "Sayım bilimi",
           "arrow": "down",
           "word_id": "D4",
           "image_id": null,
@@ -87,7 +87,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Uzun ince çubuk",
+          "text": "Bey (eski dil)",
           "arrow": "down",
           "word_id": "D5",
           "image_id": null,
@@ -119,7 +119,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Test, imtihan",
+          "text": "Çiçekli sarmaşık",
           "arrow": "right",
           "word_id": "A1",
           "image_id": null,
@@ -135,7 +135,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "İnce, uzun kumaş",
+          "text": "Küçük taşlarla resim",
           "arrow": "right",
           "word_id": "A2",
           "image_id": null,
@@ -151,7 +151,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Ağrılı, sancılı",
+          "text": "Tamamen benzersiz",
           "arrow": "right",
           "word_id": "A3",
           "image_id": null,
@@ -167,7 +167,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Yemek (eski)",
+          "text": "Boza tahılı",
           "arrow": "right",
           "word_id": "A4",
           "image_id": null,
@@ -183,7 +183,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Avuç ve parmaklar",
+          "text": "Rütbesiz asker",
           "arrow": "right",
           "word_id": "A6",
           "image_id": null,
@@ -199,7 +199,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Hamur kabartan",
+          "text": "Çıtalı",
           "arrow": "right",
           "word_id": "A8",
           "image_id": null,
@@ -277,7 +277,7 @@
           "source": "llm"
         },
         {
-          "text": "Hayvan bulamacı",
+          "text": "İlkel bitki gövdesi",
           "arrow": "down",
           "word_id": "D8",
           "image_id": null,
@@ -337,7 +337,7 @@
       "row": 1,
       "col": 1,
       "type": "letter",
-      "solution": "S",
+      "solution": "A",
       "word_ids": [
         "A1",
         "D1"
@@ -348,7 +348,7 @@
       "row": 1,
       "col": 2,
       "type": "letter",
-      "solution": "I",
+      "solution": "K",
       "word_ids": [
         "A1",
         "D2"
@@ -359,7 +359,7 @@
       "row": 1,
       "col": 3,
       "type": "letter",
-      "solution": "N",
+      "solution": "A",
       "word_ids": [
         "A1",
         "D3"
@@ -370,7 +370,7 @@
       "row": 1,
       "col": 4,
       "type": "letter",
-      "solution": "A",
+      "solution": "S",
       "word_ids": [
         "A1",
         "D4"
@@ -403,7 +403,7 @@
       "row": 2,
       "col": 1,
       "type": "letter",
-      "solution": "İ",
+      "solution": "M",
       "word_ids": [
         "A2",
         "D1"
@@ -414,7 +414,7 @@
       "row": 2,
       "col": 2,
       "type": "letter",
-      "solution": "S",
+      "solution": "O",
       "word_ids": [
         "A2",
         "D2"
@@ -425,7 +425,7 @@
       "row": 2,
       "col": 3,
       "type": "letter",
-      "solution": "İ",
+      "solution": "Z",
       "word_ids": [
         "A2",
         "D3"
@@ -436,7 +436,7 @@
       "row": 2,
       "col": 4,
       "type": "letter",
-      "solution": "L",
+      "solution": "A",
       "word_ids": [
         "A2",
         "D4"
@@ -469,7 +469,7 @@
       "row": 3,
       "col": 1,
       "type": "letter",
-      "solution": "S",
+      "solution": "A",
       "word_ids": [
         "A3",
         "D1"
@@ -480,7 +480,7 @@
       "row": 3,
       "col": 2,
       "type": "letter",
-      "solution": "I",
+      "solution": "P",
       "word_ids": [
         "A3",
         "D2"
@@ -491,7 +491,7 @@
       "row": 3,
       "col": 3,
       "type": "letter",
-      "solution": "Z",
+      "solution": "A",
       "word_ids": [
         "A3",
         "D3"
@@ -502,7 +502,7 @@
       "row": 3,
       "col": 4,
       "type": "letter",
-      "solution": "I",
+      "solution": "Y",
       "word_ids": [
         "A3",
         "D4"
@@ -513,7 +513,7 @@
       "row": 3,
       "col": 5,
       "type": "letter",
-      "solution": "L",
+      "solution": "R",
       "word_ids": [
         "A3",
         "D5"
@@ -535,7 +535,7 @@
       "row": 4,
       "col": 1,
       "type": "letter",
-      "solution": "T",
+      "solution": "D",
       "word_ids": [
         "A4",
         "D1"
@@ -557,7 +557,7 @@
       "row": 4,
       "col": 3,
       "type": "letter",
-      "solution": "A",
+      "solution": "R",
       "word_ids": [
         "A4",
         "D3"
@@ -568,7 +568,7 @@
       "row": 4,
       "col": 4,
       "type": "letter",
-      "solution": "M",
+      "solution": "I",
       "word_ids": [
         "A4",
         "D4"
@@ -601,7 +601,7 @@
       "row": 5,
       "col": 2,
       "type": "letter",
-      "solution": "L",
+      "solution": "R",
       "word_ids": [
         "A6",
         "D2"
@@ -645,7 +645,7 @@
       "row": 6,
       "col": 1,
       "type": "letter",
-      "solution": "M",
+      "solution": "L",
       "word_ids": [
         "A8",
         "D1"
@@ -667,7 +667,7 @@
       "row": 6,
       "col": 3,
       "type": "letter",
-      "solution": "Y",
+      "solution": "T",
       "word_ids": [
         "A8",
         "D8"
@@ -810,7 +810,7 @@
   "words": [
     {
       "id": "A1",
-      "answer": "SINAMA",
+      "answer": "AKASMA",
       "length": 6,
       "direction": "right",
       "clue_cell": {
@@ -848,7 +848,7 @@
         }
       ],
       "clue": {
-        "text": "Test, imtihan",
+        "text": "Çiçekli sarmaşık",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -858,7 +858,7 @@
     },
     {
       "id": "A2",
-      "answer": "İSİLİK",
+      "answer": "MOZAİK",
       "length": 6,
       "direction": "right",
       "clue_cell": {
@@ -896,7 +896,7 @@
         }
       ],
       "clue": {
-        "text": "Ter döküntüsü",
+        "text": "Küçük taşlarla resim",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -906,7 +906,7 @@
     },
     {
       "id": "A3",
-      "answer": "SIZILI",
+      "answer": "APAYRI",
       "length": 6,
       "direction": "right",
       "clue_cell": {
@@ -944,7 +944,7 @@
         }
       ],
       "clue": {
-        "text": "Ağrılı, sancılı",
+        "text": "Tamamen benzersiz",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -954,7 +954,7 @@
     },
     {
       "id": "A4",
-      "answer": "TAAM",
+      "answer": "DARI",
       "length": 4,
       "direction": "right",
       "clue_cell": {
@@ -984,7 +984,7 @@
         }
       ],
       "clue": {
-        "text": "Yemek (eski)",
+        "text": "Boza tahılı",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1022,7 +1022,7 @@
     },
     {
       "id": "A6",
-      "answer": "EL",
+      "answer": "ER",
       "length": 2,
       "direction": "right",
       "clue_cell": {
@@ -1044,7 +1044,7 @@
         }
       ],
       "clue": {
-        "text": "Avuç ve parmaklar",
+        "text": "Rütbesiz asker",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1090,7 +1090,7 @@
     },
     {
       "id": "A8",
-      "answer": "MAYALI",
+      "answer": "LATALI",
       "length": 6,
       "direction": "right",
       "clue_cell": {
@@ -1128,7 +1128,7 @@
         }
       ],
       "clue": {
-        "text": "Mayası katılmış",
+        "text": "Çıtalı",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1294,7 +1294,7 @@
     },
     {
       "id": "D1",
-      "answer": "SİSTEMİK",
+      "answer": "AMADELİK",
       "length": 8,
       "direction": "down",
       "clue_cell": {
@@ -1340,7 +1340,7 @@
         }
       ],
       "clue": {
-        "text": "Bütün sistemi saran",
+        "text": "Hazır bulunma",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1350,7 +1350,7 @@
     },
     {
       "id": "D2",
-      "answer": "ISIALAN",
+      "answer": "KOPARAN",
       "length": 7,
       "direction": "down",
       "clue_cell": {
@@ -1392,7 +1392,7 @@
         }
       ],
       "clue": {
-        "text": "Isı emen (kimya)",
+        "text": "Zorla ayırma",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1402,7 +1402,7 @@
     },
     {
       "id": "D3",
-      "answer": "NİZA",
+      "answer": "AZAR",
       "length": 4,
       "direction": "down",
       "clue_cell": {
@@ -1432,7 +1432,7 @@
         }
       ],
       "clue": {
-        "text": "Çekişme (eski)",
+        "text": "Paylama",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1442,7 +1442,7 @@
     },
     {
       "id": "D4",
-      "answer": "ALIMLAMA",
+      "answer": "SAYILAMA",
       "length": 8,
       "direction": "down",
       "clue_cell": {
@@ -1488,7 +1488,7 @@
         }
       ],
       "clue": {
-        "text": "Duyularla idrak",
+        "text": "Sayım bilimi",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1498,7 +1498,7 @@
     },
     {
       "id": "D5",
-      "answer": "MİL",
+      "answer": "MİR",
       "length": 3,
       "direction": "down",
       "clue_cell": {
@@ -1524,7 +1524,7 @@
         }
       ],
       "clue": {
-        "text": "Uzun ince çubuk",
+        "text": "Bey (eski dil)",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1622,7 +1622,7 @@
     },
     {
       "id": "D8",
-      "answer": "YAL",
+      "answer": "TAL",
       "length": 3,
       "direction": "down",
       "clue_cell": {
@@ -1648,7 +1648,7 @@
         }
       ],
       "clue": {
-        "text": "Hayvan bulamacı",
+        "text": "İlkel bitki gövdesi",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,
@@ -1664,6 +1664,6 @@
     "post_fill_scanned": true,
     "scanner_version": "2.0.0"
   },
-  "generated_at": "2026-07-04T21:45:40.531406+00:00",
+  "generated_at": "2026-07-05T08:38:03.943867+00:00",
   "generator_version": "2.0.0"
 }

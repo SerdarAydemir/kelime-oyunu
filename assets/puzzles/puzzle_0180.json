@@ -23,7 +23,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Gizlemek, örtmek",
+          "text": "Çok renkli yapmak",
           "arrow": "down",
           "word_id": "D1",
           "image_id": null,
@@ -39,7 +39,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Yerine getirme",
+          "text": "Şafak vakti",
           "arrow": "down",
           "word_id": "D2",
           "image_id": null,
@@ -55,7 +55,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Tescilsiz, jenerik",
+          "text": "Konu dışı",
           "arrow": "down",
           "word_id": "D3",
           "image_id": null,
@@ -71,7 +71,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Beyaz mantar tabakası",
+          "text": "Kaba dokuma",
           "arrow": "down",
           "word_id": "D4",
           "image_id": null,
@@ -103,7 +103,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Cilve, işve",
+          "text": "Lüks deniz taşıtı",
           "arrow": "down",
           "word_id": "D6",
           "image_id": null,
@@ -119,7 +119,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Yüzüyle ilgili",
+          "text": "Selçuklu'da lala",
           "arrow": "right",
           "word_id": "A1",
           "image_id": null,
@@ -135,7 +135,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Dış alem",
+          "text": "Şehzade eğitmeni",
           "arrow": "right",
           "word_id": "A2",
           "image_id": null,
@@ -151,7 +151,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Yaz meyvesi",
+          "text": "Ekin taşıma çatalı",
           "arrow": "right",
           "word_id": "A4",
           "image_id": null,
@@ -277,7 +277,7 @@
           "source": "llm"
         },
         {
-          "text": "İşlem, hesap",
+          "text": "Osmanlı el yazısı",
           "arrow": "down",
           "word_id": "D8",
           "image_id": null,
@@ -344,7 +344,7 @@
       "row": 1,
       "col": 1,
       "type": "letter",
-      "solution": "S",
+      "solution": "A",
       "word_ids": [
         "A1",
         "D1"
@@ -355,7 +355,7 @@
       "row": 1,
       "col": 2,
       "type": "letter",
-      "solution": "İ",
+      "solution": "T",
       "word_ids": [
         "A1",
         "D2"
@@ -366,7 +366,7 @@
       "row": 1,
       "col": 3,
       "type": "letter",
-      "solution": "M",
+      "solution": "A",
       "word_ids": [
         "A1",
         "D3"
@@ -377,7 +377,7 @@
       "row": 1,
       "col": 4,
       "type": "letter",
-      "solution": "A",
+      "solution": "B",
       "word_ids": [
         "A1",
         "D4"
@@ -399,7 +399,7 @@
       "row": 1,
       "col": 6,
       "type": "letter",
-      "solution": "N",
+      "solution": "Y",
       "word_ids": [
         "A1",
         "D6"
@@ -410,7 +410,7 @@
       "row": 2,
       "col": 1,
       "type": "letter",
-      "solution": "A",
+      "solution": "L",
       "word_ids": [
         "A2",
         "D1"
@@ -421,7 +421,7 @@
       "row": 2,
       "col": 2,
       "type": "letter",
-      "solution": "F",
+      "solution": "A",
       "word_ids": [
         "A2",
         "D2"
@@ -432,7 +432,7 @@
       "row": 2,
       "col": 3,
       "type": "letter",
-      "solution": "A",
+      "solution": "L",
       "word_ids": [
         "A2",
         "D3"
@@ -443,7 +443,7 @@
       "row": 2,
       "col": 4,
       "type": "letter",
-      "solution": "K",
+      "solution": "A",
       "word_ids": [
         "A2",
         "D4"
@@ -465,7 +465,7 @@
       "row": 3,
       "col": 1,
       "type": "letter",
-      "solution": "K",
+      "solution": "A",
       "word_ids": [
         "A4",
         "D1"
@@ -476,7 +476,7 @@
       "row": 3,
       "col": 2,
       "type": "letter",
-      "solution": "A",
+      "solution": "N",
       "word_ids": [
         "A4",
         "D2"
@@ -487,7 +487,7 @@
       "row": 3,
       "col": 3,
       "type": "letter",
-      "solution": "R",
+      "solution": "A",
       "word_ids": [
         "A4",
         "D3"
@@ -498,7 +498,7 @@
       "row": 3,
       "col": 4,
       "type": "letter",
-      "solution": "P",
+      "solution": "D",
       "word_ids": [
         "A4",
         "D4"
@@ -520,7 +520,7 @@
       "row": 3,
       "col": 6,
       "type": "letter",
-      "solution": "Z",
+      "solution": "T",
       "word_ids": [
         "A4",
         "D6"
@@ -817,7 +817,7 @@
   "words": [
     {
       "id": "A1",
-      "answer": "SİMAEN",
+      "answer": "ATABEY",
       "length": 6,
       "direction": "right",
       "clue_cell": {
@@ -855,7 +855,7 @@
         }
       ],
       "clue": {
-        "text": "Yüzüyle ilgili",
+        "text": "Selçuklu'da lala",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -865,7 +865,7 @@
     },
     {
       "id": "A2",
-      "answer": "AFAK",
+      "answer": "LALA",
       "length": 4,
       "direction": "right",
       "clue_cell": {
@@ -895,7 +895,7 @@
         }
       ],
       "clue": {
-        "text": "Ufuklar (eski)",
+        "text": "Şehzade eğitmeni",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -933,7 +933,7 @@
     },
     {
       "id": "A4",
-      "answer": "KARPUZ",
+      "answer": "ANADUT",
       "length": 6,
       "direction": "right",
       "clue_cell": {
@@ -971,7 +971,7 @@
         }
       ],
       "clue": {
-        "text": "Yaz meyvesi",
+        "text": "Ekin taşıma çatalı",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1277,7 +1277,7 @@
     },
     {
       "id": "D1",
-      "answer": "SAKLAMAK",
+      "answer": "ALALAMAK",
       "length": 8,
       "direction": "down",
       "clue_cell": {
@@ -1323,7 +1323,7 @@
         }
       ],
       "clue": {
-        "text": "Gizlemek, örtmek",
+        "text": "Çok renkli yapmak",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1333,7 +1333,7 @@
     },
     {
       "id": "D2",
-      "answer": "İFA",
+      "answer": "TAN",
       "length": 3,
       "direction": "down",
       "clue_cell": {
@@ -1359,7 +1359,7 @@
         }
       ],
       "clue": {
-        "text": "Yerine getirme",
+        "text": "Şafak vakti",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1369,7 +1369,7 @@
     },
     {
       "id": "D3",
-      "answer": "MARKASIZ",
+      "answer": "ALAKASIZ",
       "length": 8,
       "direction": "down",
       "clue_cell": {
@@ -1415,7 +1415,7 @@
         }
       ],
       "clue": {
-        "text": "Tescilsiz, jenerik",
+        "text": "Konu dışı",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1425,7 +1425,7 @@
     },
     {
       "id": "D4",
-      "answer": "AKPAS",
+      "answer": "BADAS",
       "length": 5,
       "direction": "down",
       "clue_cell": {
@@ -1459,7 +1459,7 @@
         }
       ],
       "clue": {
-        "text": "Bir bitki hastalığı",
+        "text": "Kaba dokuma",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1497,7 +1497,7 @@
     },
     {
       "id": "D6",
-      "answer": "NAZ",
+      "answer": "YAT",
       "length": 3,
       "direction": "down",
       "clue_cell": {
@@ -1523,7 +1523,7 @@
         }
       ],
       "clue": {
-        "text": "Cilve, işve",
+        "text": "Lüks deniz taşıtı",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1695,6 +1695,6 @@
     "post_fill_scanned": true,
     "scanner_version": "2.0.0"
   },
-  "generated_at": "2026-07-05T01:27:39.469112+00:00",
+  "generated_at": "2026-07-05T10:42:12.394495+00:00",
   "generator_version": "2.0.0"
 }

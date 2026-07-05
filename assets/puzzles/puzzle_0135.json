@@ -39,7 +39,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Otlak",
+          "text": "Cam ev",
           "arrow": "down",
           "word_id": "D2",
           "image_id": null,
@@ -55,7 +55,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Gökyüzündeki uydumuz",
+          "text": "Avuç ve parmaklar",
           "arrow": "down",
           "word_id": "D3",
           "image_id": null,
@@ -71,7 +71,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Sınır koyma",
+          "text": "Tehlike, korkutma",
           "arrow": "down",
           "word_id": "D4",
           "image_id": null,
@@ -87,7 +87,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Tavsiye, fikir",
+          "text": "Piyango tesellisi",
           "arrow": "down",
           "word_id": "D5",
           "image_id": null,
@@ -103,7 +103,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Müzikte sus işareti",
+          "text": "Atın hareketi",
           "arrow": "down",
           "word_id": "D6",
           "image_id": null,
@@ -119,7 +119,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Profesyonel değil",
+          "text": "Projeksiyon filmi",
           "arrow": "right",
           "word_id": "A1",
           "image_id": null,
@@ -135,7 +135,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Sıvı macun kıvamı",
+          "text": "Koyun sesi çıkarma",
           "arrow": "right",
           "word_id": "A2",
           "image_id": null,
@@ -167,7 +167,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Büyük, kapalı alan",
+          "text": "Yazarı bilinmeyen",
           "arrow": "right",
           "word_id": "A5",
           "image_id": null,
@@ -199,7 +199,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Tekne tekerleği",
+          "text": "Kauçuk tekerlek",
           "arrow": "right",
           "word_id": "A8",
           "image_id": null,
@@ -247,7 +247,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Aynı zamanda, dahi",
+          "text": "Sıçrama ünlemi",
           "arrow": "right",
           "word_id": "A4",
           "image_id": null,
@@ -364,7 +364,7 @@
       "row": 1,
       "col": 2,
       "type": "letter",
-      "solution": "M",
+      "solution": "S",
       "word_ids": [
         "A1",
         "D2"
@@ -375,7 +375,7 @@
       "row": 1,
       "col": 3,
       "type": "letter",
-      "solution": "A",
+      "solution": "E",
       "word_ids": [
         "A1",
         "D3"
@@ -397,7 +397,7 @@
       "row": 1,
       "col": 5,
       "type": "letter",
-      "solution": "Ö",
+      "solution": "A",
       "word_ids": [
         "A1",
         "D5"
@@ -408,7 +408,7 @@
       "row": 1,
       "col": 6,
       "type": "letter",
-      "solution": "R",
+      "solution": "T",
       "word_ids": [
         "A1",
         "D6"
@@ -441,7 +441,7 @@
       "row": 2,
       "col": 3,
       "type": "letter",
-      "solution": "Y",
+      "solution": "L",
       "word_ids": [
         "A2",
         "D3"
@@ -452,7 +452,7 @@
       "row": 2,
       "col": 4,
       "type": "letter",
-      "solution": "A",
+      "solution": "E",
       "word_ids": [
         "A2",
         "D4"
@@ -463,7 +463,7 @@
       "row": 2,
       "col": 5,
       "type": "letter",
-      "solution": "N",
+      "solution": "M",
       "word_ids": [
         "A2",
         "D5"
@@ -518,7 +518,7 @@
       "row": 3,
       "col": 5,
       "type": "letter",
-      "solution": "E",
+      "solution": "O",
       "word_ids": [
         "A4",
         "D5"
@@ -529,7 +529,7 @@
       "row": 3,
       "col": 6,
       "type": "letter",
-      "solution": "M",
+      "solution": "P",
       "word_ids": [
         "A4",
         "D6"
@@ -815,7 +815,7 @@
   "words": [
     {
       "id": "A1",
-      "answer": "AMATÖR",
+      "answer": "ASETAT",
       "length": 6,
       "direction": "right",
       "clue_cell": {
@@ -853,7 +853,7 @@
         }
       ],
       "clue": {
-        "text": "Profesyonel değil",
+        "text": "Projeksiyon filmi",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -863,7 +863,7 @@
     },
     {
       "id": "A2",
-      "answer": "MEYANE",
+      "answer": "MELEME",
       "length": 6,
       "direction": "right",
       "clue_cell": {
@@ -901,7 +901,7 @@
         }
       ],
       "clue": {
-        "text": "Unlu çorba harcı",
+        "text": "Koyun sesi çıkarma",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -943,7 +943,7 @@
     },
     {
       "id": "A4",
-      "answer": "HEM",
+      "answer": "HOP",
       "length": 3,
       "direction": "right",
       "clue_cell": {
@@ -969,7 +969,7 @@
         }
       ],
       "clue": {
-        "text": "Aynı zamanda, dahi",
+        "text": "Sıçrama ünlemi",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1327,7 +1327,7 @@
     },
     {
       "id": "D2",
-      "answer": "MERA",
+      "answer": "SERA",
       "length": 4,
       "direction": "down",
       "clue_cell": {
@@ -1357,7 +1357,7 @@
         }
       ],
       "clue": {
-        "text": "Otlak",
+        "text": "Cam ev",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1367,7 +1367,7 @@
     },
     {
       "id": "D3",
-      "answer": "AY",
+      "answer": "EL",
       "length": 2,
       "direction": "down",
       "clue_cell": {
@@ -1389,7 +1389,7 @@
         }
       ],
       "clue": {
-        "text": "Gökyüzündeki uydumuz",
+        "text": "Avuç ve parmaklar",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1399,7 +1399,7 @@
     },
     {
       "id": "D4",
-      "answer": "TAHDİT",
+      "answer": "TEHDİT",
       "length": 6,
       "direction": "down",
       "clue_cell": {
@@ -1437,7 +1437,7 @@
         }
       ],
       "clue": {
-        "text": "Sınır koyma",
+        "text": "Tehlike, korkutma",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1447,7 +1447,7 @@
     },
     {
       "id": "D5",
-      "answer": "ÖNERTİ",
+      "answer": "AMORTİ",
       "length": 6,
       "direction": "down",
       "clue_cell": {
@@ -1485,7 +1485,7 @@
         }
       ],
       "clue": {
-        "text": "Tavsiye, fikir",
+        "text": "Piyango tesellisi",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1495,7 +1495,7 @@
     },
     {
       "id": "D6",
-      "answer": "REMİ",
+      "answer": "TEPİ",
       "length": 4,
       "direction": "down",
       "clue_cell": {
@@ -1525,7 +1525,7 @@
         }
       ],
       "clue": {
-        "text": "Bir iskambil oyunu",
+        "text": "Atın hareketi",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1685,6 +1685,6 @@
     "post_fill_scanned": true,
     "scanner_version": "2.0.0"
   },
-  "generated_at": "2026-07-04T23:54:23.097867+00:00",
+  "generated_at": "2026-07-05T10:11:30.649987+00:00",
   "generator_version": "2.0.0"
 }
