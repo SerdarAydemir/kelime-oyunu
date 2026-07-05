@@ -64,7 +64,7 @@ def _used_indices(puzzles_dir: Path, library: FrameLibrary, skip_ids: set[int]) 
         puzzle = PuzzleData.model_validate_json(path.read_text(encoding="utf-8"))
         if puzzle.puzzle_id in skip_ids:
             continue
-        bits = int(puzzle.template_id.rsplit("_", 1)[-1])
+        bits = int(puzzle.template_id.rsplit("_", 1)[-1], 16)  # bits are 012x hex
         index = bits_to_index.get(bits)
         if index is None:
             print(f"[UYARI] {path.name}: template kütüphanede yok, atlanıyor", file=sys.stderr)
