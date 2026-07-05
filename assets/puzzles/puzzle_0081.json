@@ -1194,7 +1194,7 @@
         }
       ],
       "clue": {
-        "text": "Toprak besini",
+        "text": "Azot içeren",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1390,7 +1390,7 @@
         }
       ],
       "clue": {
-        "text": "Sırdaş, yoldaş",
+        "text": "Yakın arkadaş",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1434,7 +1434,7 @@
         }
       ],
       "clue": {
-        "text": "Kara taşıtı",
+        "text": "Dört tekerli taşıt",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1490,7 +1490,7 @@
         }
       ],
       "clue": {
-        "text": "İnsanlar aleminden önce",
+        "text": "Çok eski zaman",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1594,7 +1594,7 @@
         }
       ],
       "clue": {
-        "text": "Dik kafalı",
+        "text": "İnatçı",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,

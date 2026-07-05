@@ -841,7 +841,7 @@
         }
       ],
       "clue": {
-        "text": "Geyik türü",
+        "text": "Bir geyik türü",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -1065,7 +1065,7 @@
         }
       ],
       "clue": {
-        "text": "Ciddiyet, ağırbaşlılık",
+        "text": "Ağırbaşlılık",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1457,7 +1457,7 @@
         }
       ],
       "clue": {
-        "text": "Yüreklice",
+        "text": "Yiğitçe",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,

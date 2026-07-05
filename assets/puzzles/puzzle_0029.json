@@ -906,7 +906,7 @@
         }
       ],
       "clue": {
-        "text": "Yayına hazırlayan",
+        "text": "Yayın hazırlayan",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -1342,7 +1342,7 @@
         }
       ],
       "clue": {
-        "text": "Neşelenme, sevinç",
+        "text": "Neşelenme",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1474,7 +1474,7 @@
         }
       ],
       "clue": {
-        "text": "Anlaşmaya yanaşan",
+        "text": "Uzlaşmacı",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1510,7 +1510,7 @@
         }
       ],
       "clue": {
-        "text": "Yanmış odun parçası",
+        "text": "Yanan odun kalıntısı",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,

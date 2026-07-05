@@ -1448,7 +1448,7 @@
         }
       ],
       "clue": {
-        "text": "Kapı mandalı",
+        "text": "Kapı emniyeti",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1488,7 +1488,7 @@
         }
       ],
       "clue": {
-        "text": "Elde mevcut",
+        "text": "Hazır (öz T)",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,

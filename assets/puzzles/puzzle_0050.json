@@ -858,7 +858,7 @@
         }
       ],
       "clue": {
-        "text": "Tohum ekme eylemi",
+        "text": "Ekilme biçimi",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -1042,7 +1042,7 @@
         }
       ],
       "clue": {
-        "text": "Seçimde kullanılan tercih",
+        "text": "Seçim tercihi",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1170,7 +1170,7 @@
         }
       ],
       "clue": {
-        "text": "Evlat, evlatlık",
+        "text": "Oğlu olan",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1350,7 +1350,7 @@
         }
       ],
       "clue": {
-        "text": "Kışın yerlere düşen",
+        "text": "Maydanozsu ot",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1390,7 +1390,7 @@
         }
       ],
       "clue": {
-        "text": "Yapılaşma izni",
+        "text": "Bayındırlık",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,

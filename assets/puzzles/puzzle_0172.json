@@ -901,7 +901,7 @@
         }
       ],
       "clue": {
-        "text": "Korku dolu, ürkütücü",
+        "text": "Ürkütücü, tekinsiz",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -949,7 +949,7 @@
         }
       ],
       "clue": {
-        "text": "Horoz başı",
+        "text": "İbiği olan",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -993,7 +993,7 @@
         }
       ],
       "clue": {
-        "text": "Işık veren araç",
+        "text": "Işık aracı",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1393,7 +1393,7 @@
         }
       ],
       "clue": {
-        "text": "Ağzına kadar dolu",
+        "text": "Ağzına dek dolu",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1433,7 +1433,7 @@
         }
       ],
       "clue": {
-        "text": "Kocanın kardeşi",
+        "text": "Menzil, erişim",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1481,7 +1481,7 @@
         }
       ],
       "clue": {
-        "text": "Mizahi taklit",
+        "text": "Talihsizlik",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,

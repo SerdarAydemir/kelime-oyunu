@@ -908,7 +908,7 @@
         }
       ],
       "clue": {
-        "text": "Gerçekte, aslında",
+        "text": "Gerçekte",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -1156,7 +1156,7 @@
         }
       ],
       "clue": {
-        "text": "Gelecekten haber",
+        "text": "Belirti, iz",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1324,7 +1324,7 @@
         }
       ],
       "clue": {
-        "text": "Donakalma hali",
+        "text": "Şaşırıp kalma",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1400,7 +1400,7 @@
         }
       ],
       "clue": {
-        "text": "İki yüzlülük, ikiyüzlülük",
+        "text": "İki yüzlülük",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,

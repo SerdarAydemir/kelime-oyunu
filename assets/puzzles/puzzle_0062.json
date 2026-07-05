@@ -862,7 +862,7 @@
         }
       ],
       "clue": {
-        "text": "Susamaz",
+        "text": "Bir reçineli ağaç",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -950,7 +950,7 @@
         }
       ],
       "clue": {
-        "text": "Bağlantı, irtibat",
+        "text": "İnternet bağlantısı",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -1430,7 +1430,7 @@
         }
       ],
       "clue": {
-        "text": "Çan sesi",
+        "text": "Vurmalı çan",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1474,7 +1474,7 @@
         }
       ],
       "clue": {
-        "text": "Feldspatlı kayaç",
+        "text": "Bir kumtaşı türü",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,

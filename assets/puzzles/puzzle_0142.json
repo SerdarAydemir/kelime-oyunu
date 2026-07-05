@@ -906,7 +906,7 @@
         }
       ],
       "clue": {
-        "text": "Alkol türü",
+        "text": "Bir alkol türü",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -954,7 +954,7 @@
         }
       ],
       "clue": {
-        "text": "Duygusal anlatım",
+        "text": "Coşkulu anlatım",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -1126,7 +1126,7 @@
         }
       ],
       "clue": {
-        "text": "Tatlı uyum",
+        "text": "Uyum",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1358,7 +1358,7 @@
         }
       ],
       "clue": {
-        "text": "Hızlı, çevik",
+        "text": "Çevik, hızlı",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1398,7 +1398,7 @@
         }
       ],
       "clue": {
-        "text": "Güneş rengi",
+        "text": "Limon rengi",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1482,7 +1482,7 @@
         }
       ],
       "clue": {
-        "text": "Orta Anadolu ezgisi",
+        "text": "Bir Anadolu ezgisi",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1526,7 +1526,7 @@
         }
       ],
       "clue": {
-        "text": "Edinme",
+        "text": "Edinmek",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,

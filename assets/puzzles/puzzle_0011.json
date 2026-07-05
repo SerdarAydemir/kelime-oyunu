@@ -865,7 +865,7 @@
         }
       ],
       "clue": {
-        "text": "Ormanların yırtıcısı",
+        "text": "Çizgili yırtıcı",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -1001,7 +1001,7 @@
         }
       ],
       "clue": {
-        "text": "Hayvan gösterisi",
+        "text": "Gösteri çadırı",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1485,7 +1485,7 @@
         }
       ],
       "clue": {
-        "text": "AB ortak parası",
+        "text": "Avrupa parası",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1613,7 +1613,7 @@
         }
       ],
       "clue": {
-        "text": "Miras bırakma",
+        "text": "Görevde bırakma",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,

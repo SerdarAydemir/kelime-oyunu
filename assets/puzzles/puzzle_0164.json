@@ -916,7 +916,7 @@
         }
       ],
       "clue": {
-        "text": "Uyku hayali",
+        "text": "Rüya",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -1100,7 +1100,7 @@
         }
       ],
       "clue": {
-        "text": "Ruhsal yaralanma",
+        "text": "Ruhsal örselenme",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1316,7 +1316,7 @@
         }
       ],
       "clue": {
-        "text": "Yoldan çıkarmak",
+        "text": "Baştan çıkarmak",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1368,7 +1368,7 @@
         }
       ],
       "clue": {
-        "text": "Parmak ucunda dans",
+        "text": "Kadın dansçı",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1488,7 +1488,7 @@
         }
       ],
       "clue": {
-        "text": "Kusursuz, şahane",
+        "text": "Kusursuz",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1532,7 +1532,7 @@
         }
       ],
       "clue": {
-        "text": "Tanıdık sima",
+        "text": "Tanıdık, bildik",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1616,7 +1616,7 @@
         }
       ],
       "clue": {
-        "text": "Döndürerek geçen",
+        "text": "Burgulu çivi",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,

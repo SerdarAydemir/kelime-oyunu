@@ -862,7 +862,7 @@
         }
       ],
       "clue": {
-        "text": "Kimliği belirsiz",
+        "text": "Adı gizli",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -1094,7 +1094,7 @@
         }
       ],
       "clue": {
-        "text": "Birden irkilmek",
+        "text": "Ürküp sıçramak",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1138,7 +1138,7 @@
         }
       ],
       "clue": {
-        "text": "Sahne oyunu repliği",
+        "text": "Tiyatro söylevi",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1622,7 +1622,7 @@
         }
       ],
       "clue": {
-        "text": "İnce hamur işi",
+        "text": "İnce gözleme",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,

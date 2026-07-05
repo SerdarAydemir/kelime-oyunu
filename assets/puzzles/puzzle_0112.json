@@ -851,7 +851,7 @@
         }
       ],
       "clue": {
-        "text": "Teminat gösterilen",
+        "text": "Tapu teminatı",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -1099,7 +1099,7 @@
         }
       ],
       "clue": {
-        "text": "Daha çok, genellikle",
+        "text": "Çoğunlukla",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1335,7 +1335,7 @@
         }
       ],
       "clue": {
-        "text": "Işıltılı, göz alıcı",
+        "text": "Işıltılı",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1423,7 +1423,7 @@
         }
       ],
       "clue": {
-        "text": "Azarlama, paylama",
+        "text": "Azarlama",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,

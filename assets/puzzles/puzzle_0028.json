@@ -855,7 +855,7 @@
         }
       ],
       "clue": {
-        "text": "Bitiminde",
+        "text": "Son zamanlarda",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -971,7 +971,7 @@
         }
       ],
       "clue": {
-        "text": "Sıvı madde",
+        "text": "Su akıntısı",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1323,7 +1323,7 @@
         }
       ],
       "clue": {
-        "text": "Soylu, aristokrat",
+        "text": "Soylu kişi",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1379,7 +1379,7 @@
         }
       ],
       "clue": {
-        "text": "İnsanın uçması",
+        "text": "Hoppalık",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1643,7 +1643,7 @@
         }
       ],
       "clue": {
-        "text": "Bir daha!",
+        "text": "Tekrar! (alkış)",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,

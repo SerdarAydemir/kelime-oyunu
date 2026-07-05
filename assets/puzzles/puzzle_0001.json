@@ -855,7 +855,7 @@
         }
       ],
       "clue": {
-        "text": "Sığ su av aracı",
+        "text": "Kıyı balık ağı",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -903,7 +903,7 @@
         }
       ],
       "clue": {
-        "text": "Düz arazi",
+        "text": "Düz geniş arazi",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -1127,7 +1127,7 @@
         }
       ],
       "clue": {
-        "text": "Şekilsiz canlı",
+        "text": "Tek hücreli",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1323,7 +1323,7 @@
         }
       ],
       "clue": {
-        "text": "Renk verilen mekan",
+        "text": "Boya işliği",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1491,7 +1491,7 @@
         }
       ],
       "clue": {
-        "text": "Usta yanındaki",
+        "text": "Usta yardımcısı",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1583,7 +1583,7 @@
         }
       ],
       "clue": {
-        "text": "Tekme, tekmelemek",
+        "text": "Tekme (halk)",
         "arrow": "down",
         "word_id": "D7",
         "image_id": null,

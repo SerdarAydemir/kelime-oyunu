@@ -848,7 +848,7 @@
         }
       ],
       "clue": {
-        "text": "Evcil olmayan",
+        "text": "Vahşi, evcilsiz",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -964,7 +964,7 @@
         }
       ],
       "clue": {
-        "text": "Şarkı, ezgi",
+        "text": "Ezgi, şiir",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1400,7 +1400,7 @@
         }
       ],
       "clue": {
-        "text": "İçindekini çıkarmak",
+        "text": "İçini döktürmek",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1472,7 +1472,7 @@
         }
       ],
       "clue": {
-        "text": "Az bulunan, seyrek",
+        "text": "Seyrek, az",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,

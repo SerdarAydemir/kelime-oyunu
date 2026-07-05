@@ -895,7 +895,7 @@
         }
       ],
       "clue": {
-        "text": "Büyük ev, apartman",
+        "text": "Büyük gösterişli ev",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -943,7 +943,7 @@
         }
       ],
       "clue": {
-        "text": "Cesaretlendirme, özendirme",
+        "text": "Özendirme",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -991,7 +991,7 @@
         }
       ],
       "clue": {
-        "text": "İğneleyici sözler",
+        "text": "İğneleyen",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1367,7 +1367,7 @@
         }
       ],
       "clue": {
-        "text": "Yapı kurma işi",
+        "text": "Yapı kurma",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1411,7 +1411,7 @@
         }
       ],
       "clue": {
-        "text": "Ucu sivri pense",
+        "text": "Diş çekme kıskacı",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1467,7 +1467,7 @@
         }
       ],
       "clue": {
-        "text": "Tohum atma işi",
+        "text": "Tarımcılık",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,

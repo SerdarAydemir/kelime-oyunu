@@ -967,7 +967,7 @@
         }
       ],
       "clue": {
-        "text": "Geri çekilme eylemi",
+        "text": "Geri çekilme",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1323,7 +1323,7 @@
         }
       ],
       "clue": {
-        "text": "Ağzı açık kalmak",
+        "text": "Şarıl şarıl akmak",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,

@@ -1137,7 +1137,7 @@
         }
       ],
       "clue": {
-        "text": "Denizci, denizle ilgili",
+        "text": "Terbiyeye yatırılmış",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1545,7 +1545,7 @@
         }
       ],
       "clue": {
-        "text": "Su yolu",
+        "text": "Baraj su kanalı",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,

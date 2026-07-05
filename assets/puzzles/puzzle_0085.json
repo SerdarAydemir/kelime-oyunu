@@ -853,7 +853,7 @@
         }
       ],
       "clue": {
-        "text": "Kaynar su",
+        "text": "Çok sıcak (su)",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -1213,7 +1213,7 @@
         }
       ],
       "clue": {
-        "text": "Tek boynuzlu balina",
+        "text": "Bir kutup balinası",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1637,7 +1637,7 @@
         }
       ],
       "clue": {
-        "text": "Ölüm, vefat",
+        "text": "Ölüm (eski)",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,

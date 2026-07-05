@@ -970,7 +970,7 @@
         }
       ],
       "clue": {
-        "text": "İşlevsel olan",
+        "text": "Gerçekleşmiş",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1130,7 +1130,7 @@
         }
       ],
       "clue": {
-        "text": "İbadet yeri",
+        "text": "Kokulu küçük kavun",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1318,7 +1318,7 @@
         }
       ],
       "clue": {
-        "text": "Haberleşme biçimi",
+        "text": "Haberleşme",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1366,7 +1366,7 @@
         }
       ],
       "clue": {
-        "text": "Duvarlara yeni yüz",
+        "text": "Duvar boyası",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1478,7 +1478,7 @@
         }
       ],
       "clue": {
-        "text": "Atlara nal çakmak",
+        "text": "Nal çakmak",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,

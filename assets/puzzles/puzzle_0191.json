@@ -1007,7 +1007,7 @@
         }
       ],
       "clue": {
-        "text": "Ham gerçekler",
+        "text": "Ham veri",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1371,7 +1371,7 @@
         }
       ],
       "clue": {
-        "text": "Komutan, baş",
+        "text": "Komutan (eski)",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1595,7 +1595,7 @@
         }
       ],
       "clue": {
-        "text": "Sıvı akışını kesen",
+        "text": "Boru musluğu",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,

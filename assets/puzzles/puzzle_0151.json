@@ -858,7 +858,7 @@
         }
       ],
       "clue": {
-        "text": "Tokat, şamar",
+        "text": "Şamar, tokat",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -1122,7 +1122,7 @@
         }
       ],
       "clue": {
-        "text": "Hepsi birden",
+        "text": "Tümü, toplamı",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1294,7 +1294,7 @@
         }
       ],
       "clue": {
-        "text": "Aptalca davranış",
+        "text": "Sakar, dağınık",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1338,7 +1338,7 @@
         }
       ],
       "clue": {
-        "text": "Gözü sulu, hüzünlü",
+        "text": "Sulugöz",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,

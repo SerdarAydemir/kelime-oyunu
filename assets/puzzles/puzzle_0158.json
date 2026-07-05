@@ -935,7 +935,7 @@
         }
       ],
       "clue": {
-        "text": "Dik kafalı",
+        "text": "İnatçı",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -1399,7 +1399,7 @@
         }
       ],
       "clue": {
-        "text": "Gereklilik, koşul",
+        "text": "Koşul",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1519,7 +1519,7 @@
         }
       ],
       "clue": {
-        "text": "Sebep olan, müessir",
+        "text": "Etmen, faktör",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,

@@ -948,7 +948,7 @@
         }
       ],
       "clue": {
-        "text": "Dalgınlık hali",
+        "text": "Bunama (eski)",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -1240,7 +1240,7 @@
         }
       ],
       "clue": {
-        "text": "Kuzeydoğu lezzeti",
+        "text": "Bir börek türü",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1380,7 +1380,7 @@
         }
       ],
       "clue": {
-        "text": "Ölümcül sonuç",
+        "text": "Kadercilik",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1464,7 +1464,7 @@
         }
       ],
       "clue": {
-        "text": "Anlık zaman dilimi",
+        "text": "An, kısa süre",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,

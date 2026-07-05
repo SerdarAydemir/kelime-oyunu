@@ -899,7 +899,7 @@
         }
       ],
       "clue": {
-        "text": "Çapraz, meyilli",
+        "text": "Meyilli, çapraz",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -1243,7 +1243,7 @@
         }
       ],
       "clue": {
-        "text": "Telli çalgı",
+        "text": "Yaylı halk çalgısı",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1299,7 +1299,7 @@
         }
       ],
       "clue": {
-        "text": "Türlerin değişimi",
+        "text": "Değişime uğramak",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1559,7 +1559,7 @@
         }
       ],
       "clue": {
-        "text": "Leke, kusur",
+        "text": "Kuşku, leke",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,

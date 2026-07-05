@@ -1199,7 +1199,7 @@
         }
       ],
       "clue": {
-        "text": "Tohum ekme eylemi",
+        "text": "Ekilme biçimi",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1323,7 +1323,7 @@
         }
       ],
       "clue": {
-        "text": "Can bulmak",
+        "text": "Yeniden canlanmak",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1483,7 +1483,7 @@
         }
       ],
       "clue": {
-        "text": "Vücuttan atılan",
+        "text": "Silkinme anı",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,

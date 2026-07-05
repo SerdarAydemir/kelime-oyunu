@@ -1178,7 +1178,7 @@
         }
       ],
       "clue": {
-        "text": "Ay çevresi ışık çemberi",
+        "text": "Ay ışık halkası",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1526,7 +1526,7 @@
         }
       ],
       "clue": {
-        "text": "Dünya elinde",
+        "text": "Harita kitabı",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1598,7 +1598,7 @@
         }
       ],
       "clue": {
-        "text": "Soy, uruk",
+        "text": "Soy, boy",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,

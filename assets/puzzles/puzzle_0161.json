@@ -905,7 +905,7 @@
         }
       ],
       "clue": {
-        "text": "Sıvı olmayan",
+        "text": "Un kıvamlı",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -1649,7 +1649,7 @@
         }
       ],
       "clue": {
-        "text": "Duyuru tahtası",
+        "text": "İlan tahtası",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,

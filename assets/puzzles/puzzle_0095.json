@@ -1194,7 +1194,7 @@
         }
       ],
       "clue": {
-        "text": "Teselli, rahatlama",
+        "text": "Teselli",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1318,7 +1318,7 @@
         }
       ],
       "clue": {
-        "text": "Sırtını dayamak",
+        "text": "Bir yere dayamak",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1478,7 +1478,7 @@
         }
       ],
       "clue": {
-        "text": "Nadiren, ara sıra",
+        "text": "Ara sıra",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1526,7 +1526,7 @@
         }
       ],
       "clue": {
-        "text": "Oturur vaziyette değil",
+        "text": "Dikilir halde",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1594,7 +1594,7 @@
         }
       ],
       "clue": {
-        "text": "Müzikte bir durak",
+        "text": "Güçlü, sağlam",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,
@@ -1630,7 +1630,7 @@
         }
       ],
       "clue": {
-        "text": "Topa vurmak",
+        "text": "Kaleye vuruş",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,

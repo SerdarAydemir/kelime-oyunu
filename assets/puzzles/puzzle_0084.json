@@ -1108,7 +1108,7 @@
         }
       ],
       "clue": {
-        "text": "İşyerinin kapanması",
+        "text": "İş yeri kapatma",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1348,7 +1348,7 @@
         }
       ],
       "clue": {
-        "text": "Zarar verme eylemi",
+        "text": "Zarar verme",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1464,7 +1464,7 @@
         }
       ],
       "clue": {
-        "text": "Dikdörtgen prizma",
+        "text": "Dikdörtgen (eski)",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
