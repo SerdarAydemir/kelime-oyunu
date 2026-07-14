@@ -17,19 +17,11 @@ void main() {
     // ── 1 ──────────────────────────────────────────────────────────────────
     test('single correct placement scores +1 with a cell-bound event', () {
       final puzzle = puzzleFromWords([
-        buildWord(
-          id: 'w1',
-          answer: 'MASA',
-          startRow: 1,
-          startCol: 1,
-          direction: ClueArrow.right,
-        ),
+        buildWord(id: 'w1', answer: 'MASA', startRow: 1, startCol: 1, direction: ClueArrow.right),
       ]);
 
       final result = engine.resolveMove(
-        placements: const [
-          Placement(cell: WordCell(row: 1, col: 1), letter: 'M', expected: 'M'),
-        ],
+        placements: const [Placement(cell: WordCell(row: 1, col: 1), letter: 'M', expected: 'M')],
         puzzle: puzzle,
         board: const {},
         rackStartCount: 5,
@@ -43,19 +35,11 @@ void main() {
     // ── 2 ──────────────────────────────────────────────────────────────────
     test('single wrong placement scores -1 and returns the letter', () {
       final puzzle = puzzleFromWords([
-        buildWord(
-          id: 'w1',
-          answer: 'MASA',
-          startRow: 1,
-          startCol: 1,
-          direction: ClueArrow.right,
-        ),
+        buildWord(id: 'w1', answer: 'MASA', startRow: 1, startCol: 1, direction: ClueArrow.right),
       ]);
 
       final result = engine.resolveMove(
-        placements: const [
-          Placement(cell: WordCell(row: 1, col: 1), letter: 'X', expected: 'M'),
-        ],
+        placements: const [Placement(cell: WordCell(row: 1, col: 1), letter: 'X', expected: 'M')],
         puzzle: puzzle,
         board: const {},
         rackStartCount: 5,
@@ -69,13 +53,7 @@ void main() {
     // ── 3 ──────────────────────────────────────────────────────────────────
     test('mixed move (2 correct, 1 wrong) nets +1 and returns 1 letter', () {
       final puzzle = puzzleFromWords([
-        buildWord(
-          id: 'w1',
-          answer: 'MASA',
-          startRow: 1,
-          startCol: 1,
-          direction: ClueArrow.right,
-        ),
+        buildWord(id: 'w1', answer: 'MASA', startRow: 1, startCol: 1, direction: ClueArrow.right),
       ]);
 
       final result = engine.resolveMove(
@@ -96,13 +74,7 @@ void main() {
     // ── 4 ──────────────────────────────────────────────────────────────────
     test('completing a 4-letter word adds a +4 game-level bonus event', () {
       final puzzle = puzzleFromWords([
-        buildWord(
-          id: 'w1',
-          answer: 'MASA',
-          startRow: 1,
-          startCol: 1,
-          direction: ClueArrow.right,
-        ),
+        buildWord(id: 'w1', answer: 'MASA', startRow: 1, startCol: 1, direction: ClueArrow.right),
       ]);
 
       final result = engine.resolveMove(
@@ -120,22 +92,13 @@ void main() {
       // 4 correct letters (+4) plus the completion bonus (+4).
       expect(result.scoreDelta, 8);
       expect(result.completedWordIds, contains('w1'));
-      expect(
-        result.events.any((e) => e.cell == null && e.wordBonus == 4),
-        isTrue,
-      );
+      expect(result.events.any((e) => e.cell == null && e.wordBonus == 4), isTrue);
     });
 
     // ── 5 ──────────────────────────────────────────────────────────────────
     test('an incomplete word grants no completion bonus', () {
       final puzzle = puzzleFromWords([
-        buildWord(
-          id: 'w1',
-          answer: 'MASA',
-          startRow: 1,
-          startCol: 1,
-          direction: ClueArrow.right,
-        ),
+        buildWord(id: 'w1', answer: 'MASA', startRow: 1, startCol: 1, direction: ClueArrow.right),
       ]);
 
       final result = engine.resolveMove(
@@ -156,13 +119,7 @@ void main() {
     // ── 6 ──────────────────────────────────────────────────────────────────
     test('emptying a 5-tile rack with all-correct play grants +5', () {
       final puzzle = puzzleFromWords([
-        buildWord(
-          id: 'w1',
-          answer: 'KALEM',
-          startRow: 1,
-          startCol: 1,
-          direction: ClueArrow.right,
-        ),
+        buildWord(id: 'w1', answer: 'KALEM', startRow: 1, startCol: 1, direction: ClueArrow.right),
       ]);
 
       final result = engine.resolveMove(
@@ -185,13 +142,7 @@ void main() {
     // ── 7 ──────────────────────────────────────────────────────────────────
     test('emptying a 6-tile power-up rack grants +6', () {
       final puzzle = puzzleFromWords([
-        buildWord(
-          id: 'w1',
-          answer: 'KAPLAN',
-          startRow: 1,
-          startCol: 1,
-          direction: ClueArrow.down,
-        ),
+        buildWord(id: 'w1', answer: 'KAPLAN', startRow: 1, startCol: 1, direction: ClueArrow.down),
       ]);
 
       final result = engine.resolveMove(
@@ -217,13 +168,7 @@ void main() {
       // Near the endgame RackManager stops padding the rack from the alphabet,
       // so it can legitimately start a turn with fewer than 5 tiles.
       final puzzle = puzzleFromWords([
-        buildWord(
-          id: 'w1',
-          answer: 'KALEM',
-          startRow: 1,
-          startCol: 1,
-          direction: ClueArrow.right,
-        ),
+        buildWord(id: 'w1', answer: 'KALEM', startRow: 1, startCol: 1, direction: ClueArrow.right),
       ]);
 
       final result = engine.resolveMove(
@@ -233,10 +178,7 @@ void main() {
           Placement(cell: WordCell(row: 1, col: 5), letter: 'M', expected: 'M'),
         ],
         puzzle: puzzle,
-        board: {
-          const WordCell(row: 1, col: 1): 'K',
-          const WordCell(row: 1, col: 2): 'A',
-        },
+        board: {const WordCell(row: 1, col: 1): 'K', const WordCell(row: 1, col: 2): 'A'},
         rackStartCount: 3,
       );
 
@@ -247,19 +189,11 @@ void main() {
     // ── 7b (endgame): a single-tile rack is trivially emptied — no bonus ─────
     test('emptying a 1-tile rack grants no bonus', () {
       final puzzle = puzzleFromWords([
-        buildWord(
-          id: 'w1',
-          answer: 'KALEM',
-          startRow: 1,
-          startCol: 1,
-          direction: ClueArrow.right,
-        ),
+        buildWord(id: 'w1', answer: 'KALEM', startRow: 1, startCol: 1, direction: ClueArrow.right),
       ]);
 
       final result = engine.resolveMove(
-        placements: const [
-          Placement(cell: WordCell(row: 1, col: 5), letter: 'M', expected: 'M'),
-        ],
+        placements: const [Placement(cell: WordCell(row: 1, col: 5), letter: 'M', expected: 'M')],
         puzzle: puzzle,
         board: {
           const WordCell(row: 1, col: 1): 'K',
@@ -277,13 +211,7 @@ void main() {
     // ── 8 ──────────────────────────────────────────────────────────────────
     test('a wrong letter in the move blocks the emptied-rack bonus', () {
       final puzzle = puzzleFromWords([
-        buildWord(
-          id: 'w1',
-          answer: 'KALEM',
-          startRow: 1,
-          startCol: 1,
-          direction: ClueArrow.right,
-        ),
+        buildWord(id: 'w1', answer: 'KALEM', startRow: 1, startCol: 1, direction: ClueArrow.right),
       ]);
 
       final result = engine.resolveMove(
@@ -306,13 +234,7 @@ void main() {
     // ── 9 ──────────────────────────────────────────────────────────────────
     test('word completion and emptied rack stack into scoreDelta', () {
       final puzzle = puzzleFromWords([
-        buildWord(
-          id: 'w1',
-          answer: 'KALEM',
-          startRow: 1,
-          startCol: 1,
-          direction: ClueArrow.right,
-        ),
+        buildWord(id: 'w1', answer: 'KALEM', startRow: 1, startCol: 1, direction: ClueArrow.right),
       ]);
 
       final result = engine.resolveMove(
@@ -337,13 +259,7 @@ void main() {
     // ── 10 ─────────────────────────────────────────────────────────────────
     test('updatedBoard contains only the correct placements', () {
       final puzzle = puzzleFromWords([
-        buildWord(
-          id: 'w1',
-          answer: 'MASA',
-          startRow: 1,
-          startCol: 1,
-          direction: ClueArrow.right,
-        ),
+        buildWord(id: 'w1', answer: 'MASA', startRow: 1, startCol: 1, direction: ClueArrow.right),
       ]);
 
       final result = engine.resolveMove(

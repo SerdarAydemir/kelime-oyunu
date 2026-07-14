@@ -36,10 +36,7 @@ class BotProfile extends Equatable {
 
 /// One computed bot turn: the cells it fills plus a humanized display delay.
 class BotMove extends Equatable {
-  const BotMove({
-    required this.placements,
-    required this.thinkingDelayMs,
-  });
+  const BotMove({required this.placements, required this.thinkingDelayMs});
 
   final List<Placement> placements;
 
@@ -81,9 +78,7 @@ class BotEngine {
       final solution = solutionByCell[cell];
       // Unreachable: prioritized cells are always letter cells of this puzzle.
       if (solution == null) continue;
-      placements.add(
-        Placement(cell: cell, letter: solution, expected: solution),
-      );
+      placements.add(Placement(cell: cell, letter: solution, expected: solution));
     }
 
     final thinkingDelayMs = rng.nextInt(3001) + 2000;
@@ -102,10 +97,10 @@ class BotEngine {
 
   // Min/max cells the bot places, per baseline band.
   ({int min, int max}) _bandRange(DifficultyBand band) => switch (band) {
-        DifficultyBand.easy => (min: 1, max: 2),
-        DifficultyBand.medium => (min: 2, max: 4),
-        DifficultyBand.hard => (min: 3, max: 6),
-      };
+    DifficultyBand.easy => (min: 1, max: 2),
+    DifficultyBand.medium => (min: 2, max: 4),
+    DifficultyBand.hard => (min: 3, max: 6),
+  };
 
   // Interpolates a move count inside [min, max] using rubber-banding.
   //
@@ -134,11 +129,7 @@ class BotEngine {
 
   // Selects up to [count] unsolved cells, preferring words closest to finished
   // (fewest missing cells first), so the bot tends to complete half-done words.
-  List<WordCell> _prioritizedCells(
-    PuzzleData puzzle,
-    Map<WordCell, String> board,
-    int count,
-  ) {
+  List<WordCell> _prioritizedCells(PuzzleData puzzle, Map<WordCell, String> board, int count) {
     final ranked = <({WordSpec word, int missing})>[];
     for (final word in puzzle.words) {
       final missing = word.cells.where((c) => !board.containsKey(c)).length;

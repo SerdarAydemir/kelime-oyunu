@@ -11,11 +11,7 @@ import 'package:kelime_oyunu/data/models/puzzle.dart';
 
 /// A single letter a player dropped onto one grid cell during a turn.
 class Placement extends Equatable {
-  const Placement({
-    required this.cell,
-    required this.letter,
-    required this.expected,
-  });
+  const Placement({required this.cell, required this.letter, required this.expected});
 
   final WordCell cell;
 
@@ -37,12 +33,7 @@ class Placement extends Equatable {
 /// [cell] is null for game-level bonuses (word completion, rack emptied) that
 /// do not belong to a single cell; it is non-null for per-letter +1 / -1 events.
 class ScoreEvent extends Equatable {
-  const ScoreEvent({
-    required this.delta,
-    this.cell,
-    this.completedWordId,
-    this.wordBonus,
-  });
+  const ScoreEvent({required this.delta, this.cell, this.completedWordId, this.wordBonus});
 
   /// The cell this event animates over, or null for game-level bonuses.
   final WordCell? cell;
@@ -100,15 +91,15 @@ class MoveResult extends Equatable {
 
   @override
   List<Object?> get props => [
-        placements,
-        events,
-        scoreDelta,
-        updatedBoard,
-        returnedLetters,
-        completedWordIds,
-        rackEmptied,
-        rackEmptyBonus,
-      ];
+    placements,
+    events,
+    scoreDelta,
+    updatedBoard,
+    returnedLetters,
+    completedWordIds,
+    rackEmptied,
+    rackEmptyBonus,
+  ];
 }
 
 /// Resolves a confirmed move into scores, events, and the next board state.
@@ -162,13 +153,7 @@ class ScoreEngine {
       if (!completedThisTurn) continue;
       completedWordIds.add(word.id);
       scoreDelta += word.length;
-      events.add(
-        ScoreEvent(
-          delta: word.length,
-          completedWordId: word.id,
-          wordBonus: word.length,
-        ),
-      );
+      events.add(ScoreEvent(delta: word.length, completedWordId: word.id, wordBonus: word.length));
     }
 
     // 3. Emptied-rack bonus: every placement correct and the whole rack played.

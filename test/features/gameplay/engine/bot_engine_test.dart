@@ -15,14 +15,8 @@ void main() {
 
   // A 7-cell down word gives plenty of unsolved cells for count assertions.
   PuzzleData longPuzzle() => puzzleFromWords([
-        buildWord(
-          id: 'w1',
-          answer: 'KİTAPÇI',
-          startRow: 1,
-          startCol: 1,
-          direction: ClueArrow.down,
-        ),
-      ]);
+    buildWord(id: 'w1', answer: 'KİTAPÇI', startRow: 1, startCol: 1, direction: ClueArrow.down),
+  ]);
 
   group('BotEngine.computeMove move count', () {
     // ── 1 ──────────────────────────────────────────────────────────────────
@@ -92,20 +86,8 @@ void main() {
       // Word A "TAS" has 1 missing cell; word B "MASA" has 3. An easy bot with
       // a big lead places exactly 1 cell — it must be A's missing cell.
       final puzzle = puzzleFromWords([
-        buildWord(
-          id: 'a',
-          answer: 'TAS',
-          startRow: 1,
-          startCol: 1,
-          direction: ClueArrow.right,
-        ),
-        buildWord(
-          id: 'b',
-          answer: 'MASA',
-          startRow: 3,
-          startCol: 1,
-          direction: ClueArrow.right,
-        ),
+        buildWord(id: 'a', answer: 'TAS', startRow: 1, startCol: 1, direction: ClueArrow.right),
+        buildWord(id: 'b', answer: 'MASA', startRow: 3, startCol: 1, direction: ClueArrow.right),
       ]);
       // Not const: WordCell overrides ==, so it cannot be a const map key.
       final board = <WordCell, String>{

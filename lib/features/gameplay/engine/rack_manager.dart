@@ -174,9 +174,7 @@ class RackManager {
     required int seed,
   }) {
     final demand = _letterDemand(puzzle, board);
-    final isLive = [
-      for (final tile in currentRack) _takeDemand(demand, tile.letter),
-    ];
+    final isLive = [for (final tile in currentRack) _takeDemand(demand, tile.letter)];
     if (!isLive.contains(false)) return currentRack;
     final rng = Random(seed);
     final deadCount = isLive.where((live) => !live).length;
@@ -184,10 +182,7 @@ class RackManager {
     var fi = 0;
     return [
       for (var i = 0; i < currentRack.length; i++)
-        if (isLive[i])
-          currentRack[i]
-        else if (fi < fresh.length)
-          RackTile(letter: fresh[fi++]),
+        if (isLive[i]) currentRack[i] else if (fi < fresh.length) RackTile(letter: fresh[fi++]),
     ];
   }
 

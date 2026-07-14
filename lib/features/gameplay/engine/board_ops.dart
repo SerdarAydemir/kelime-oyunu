@@ -46,9 +46,7 @@ List<RackTile> markPlacedTiles(List<RackTile> rack, List<Placement> pending) {
     final count = remaining[tile.letter] ?? 0;
     final placed = count > 0;
     if (placed) remaining[tile.letter] = count - 1;
-    result.add(
-      RackTile(letter: tile.letter, isPlaced: placed, isReturned: tile.isReturned),
-    );
+    result.add(RackTile(letter: tile.letter, isPlaced: placed, isReturned: tile.isReturned));
   }
   return result;
 }

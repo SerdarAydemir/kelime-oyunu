@@ -139,9 +139,7 @@ void main() {
       final puzzle = puzzleFromWords([
         buildWord(id: 'w1', answer: 'KÖPRÜ', startRow: 1, startCol: 1, direction: ClueArrow.right),
       ]);
-      final board = {
-        for (var i = 0; i < 3; i++) WordCell(row: 1, col: 1 + i): 'KÖP'[i],
-      };
+      final board = {for (var i = 0; i < 3; i++) WordCell(row: 1, col: 1 + i): 'KÖP'[i]};
       const playedRack = [
         RackTile(letter: 'K', isPlaced: true),
         RackTile(letter: 'A', isPlaced: true),
@@ -223,10 +221,7 @@ void main() {
       final puzzle = puzzleFromWords([
         buildWord(id: 'w1', answer: 'KANAT', startRow: 1, startCol: 1, direction: ClueArrow.right),
       ]);
-      final board = {
-        const WordCell(row: 1, col: 2): 'A',
-        const WordCell(row: 1, col: 3): 'N',
-      };
+      final board = {const WordCell(row: 1, col: 2): 'A', const WordCell(row: 1, col: 3): 'N'};
       const playedRack = [
         RackTile(letter: 'B', isPlaced: true),
         RackTile(letter: 'C', isPlaced: true),
@@ -521,9 +516,7 @@ void main() {
       final puzzle = puzzleFromWords([
         buildWord(id: 'w1', answer: 'KÖPRÜ', startRow: 1, startCol: 1, direction: ClueArrow.right),
       ]);
-      final board = {
-        for (var i = 0; i < 4; i++) WordCell(row: 1, col: 1 + i): 'KÖPR'[i],
-      };
+      final board = {for (var i = 0; i < 4; i++) WordCell(row: 1, col: 1 + i): 'KÖPR'[i]};
       final rack = manager.ensurePlayable(
         currentRack: deadRack,
         puzzle: puzzle,
