@@ -176,11 +176,31 @@ class _GameActiveBodyState extends State<_GameActiveBody> {
                 botPlacedCells: state.botPlacedCells,
                 revealMode: _revealMode,
                 onCellTap: (cell, bottomHalf) => _onCellTap(context, cell, bottomHalf),
+                isCellPlaceable: _isPlaceable,
+                onCellDrop: (data, cell) {
+                  final bloc = context.read<GameBloc>();
+                  // A drag that started on a pending letter is a MOVE: free
+                  // the source cell first, then place on the target.
+                  final from = data.fromCell;
+                  if (from != null && from != cell) bloc.add(LetterRecalled(from));
+                  if (from != cell) {
+                    bloc.add(LetterPlaced(rackIndex: data.rackIndex, cell: cell));
+                  }
+                  bloc.add(const RackTileSelected(-1));
+                },
+                pendingDragEnabled: _canReveal && !_revealMode,
+                rackIndexForPending: _rackIndexForPending,
+                onPendingDragCancelled: (cell) =>
+                    context.read<GameBloc>().add(LetterRecalled(cell)),
               ),
             ),
           ),
           RackWidget(
             rack: state.rack,
+            // Drag mirrors the tap guards: player's turn, game running, no
+            // reveal mode — the bot's turn must not accept ghost drags.
+            dragEnabled: _canReveal && !_revealMode,
+            onDragStarted: (_) => context.read<GameBloc>().add(const RackTileSelected(-1)),
             showPlusSlot: state.rackSize == RackManager.baseRackSize,
             onPlusTap: _canReveal && !_revealMode ? () => _confirmSixthSlot(context) : null,
             onTileTap: (i) => context.read<GameBloc>().add(RackTileSelected(i)),
@@ -209,6 +229,14 @@ class _GameActiveBodyState extends State<_GameActiveBody> {
         ],
       ),
     );
+  }
+
+  /// Rack index of the tile whose letter is pending at [cell]; -1 disables
+  /// dragging that pending letter (mirrors onTileRecall's letter matching).
+  int _rackIndexForPending(WordCell cell) {
+    final placement = state.pendingPlacements.firstWhereOrNull((p) => p.cell == cell);
+    if (placement == null) return -1;
+    return state.rack.indexWhere((t) => t.isPlaced && t.letter == placement.letter);
   }
 
   // Whether [cell] can accept a placement: a letter cell that is not yet

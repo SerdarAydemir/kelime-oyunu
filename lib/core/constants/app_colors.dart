@@ -42,6 +42,10 @@ abstract final class AppColors {
   // black, the ghost grey, and the green clue-cell background.
   static const Color botLetter = Color(0xFF1A4B8C);
 
+  /// Cream background of a rack tile — also used for a pending letter on the
+  /// board (drawn as an inset tile: "your tile, not committed yet").
+  static const Color rackTileBg = Color(0xFFF5E6C8);
+
   // ── Economy ────────────────────────────────────────────────────────────────
   static const Color coinGold = Color(0xFFFFC107);
   static const Color star = Color(0xFFFFB300);
