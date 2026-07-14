@@ -171,7 +171,6 @@ class _GameActiveBodyState extends State<_GameActiveBody> {
                 puzzle: state.puzzle,
                 board: state.board,
                 pendingPlacements: state.pendingPlacements,
-                highlightedWordId: state.highlightedWordId,
                 revealedWordIds: state.revealedWordIds,
                 botPlacedCells: state.botPlacedCells,
                 revealMode: _revealMode,
@@ -280,17 +279,12 @@ class _GameActiveBodyState extends State<_GameActiveBody> {
         bloc.add(const RackTileSelected(-1)); // clear selection
       }
     } else {
+      // Tapping a pending letter recalls it to the rack; any other cell tap
+      // is inert (the old grey word-highlight was dropped as noise).
       final isPending = state.pendingPlacements.any(
         (p) => p.cell.row == cell.row && p.cell.col == cell.col,
       );
-      if (isPending) {
-        bloc.add(LetterRecalled(cell));
-      } else {
-        final tappedWord = state.puzzle.words.firstWhereOrNull(
-          (w) => w.cells.any((c) => c.row == cell.row && c.col == cell.col),
-        );
-        if (tappedWord != null) bloc.add(WordSelected(tappedWord.id));
-      }
+      if (isPending) bloc.add(LetterRecalled(cell));
     }
   }
 

@@ -26,7 +26,6 @@ class GameBloc extends Bloc<GameEvent, GameState> {
     this._seed = 0,
   }) : super(const GameInitial()) {
     on<PuzzleLoadRequested>(_onPuzzleLoadRequested);
-    on<WordSelected>(_onWordSelected);
     on<LetterPlaced>(_onLetterPlaced);
     on<LetterRecalled>(_onLetterRecalled);
     on<MoveConfirmed>(_onMoveConfirmed);
@@ -81,14 +80,6 @@ class GameBloc extends Bloc<GameEvent, GameState> {
     } on PuzzleNotFoundException catch (e) {
       emit(GameError(e.message));
     }
-  }
-
-  void _onWordSelected(WordSelected event, Emitter<GameState> emit) {
-    final current = state;
-    if (current is! GameActive) return;
-    // Toggle: tapping the already-highlighted word clears the selection.
-    final next = current.highlightedWordId == event.wordId ? null : event.wordId;
-    emit(current.copyWith(highlightedWordId: next));
   }
 
   void _onLetterPlaced(LetterPlaced event, Emitter<GameState> emit) {
@@ -162,7 +153,6 @@ class GameBloc extends Bloc<GameEvent, GameState> {
       ),
       pendingPlacements: const [],
       playerScore: current.playerScore + result.scoreDelta,
-      highlightedWordId: null, // a confirmed move clears any selection
       selectedRackIndex: -1, // the refill may shrink the rack — drop the index
     );
     if (isBoardComplete(current.puzzle, newBoard)) {

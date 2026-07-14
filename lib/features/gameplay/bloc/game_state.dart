@@ -57,7 +57,6 @@ class GameActive extends GameState {
     required this.status,
     required this.rackSize,
     required this.revealedWordIds,
-    this.highlightedWordId,
     this.selectedRackIndex = -1,
     this.botPlacedCells = const {},
     this.swapQuotaRemaining = swapQuotaPerMatch,
@@ -82,9 +81,6 @@ class GameActive extends GameState {
   final TurnPhase phase;
   final bool botThinking;
 
-  /// The word currently highlighted on the board, if any.
-  final String? highlightedWordId;
-
   final GameStatus status;
 
   /// Current rack capacity: 5, or 6 after the sixth slot is unlocked.
@@ -103,10 +99,6 @@ class GameActive extends GameState {
   /// Letters the player may still swap this match (each swapped letter costs 1).
   final int swapQuotaRemaining;
 
-  // Sentinel for copyWith: distinguishes "argument omitted → keep current" from
-  // "explicitly passed null → clear". Needed so highlightedWordId can be cleared.
-  static const Object _unset = Object();
-
   GameActive copyWith({
     PuzzleData? puzzle,
     Map<WordCell, String>? board,
@@ -116,7 +108,6 @@ class GameActive extends GameState {
     int? botScore,
     TurnPhase? phase,
     bool? botThinking,
-    Object? highlightedWordId = _unset,
     GameStatus? status,
     int? rackSize,
     Set<String>? revealedWordIds,
@@ -133,9 +124,6 @@ class GameActive extends GameState {
       botScore: botScore ?? this.botScore,
       phase: phase ?? this.phase,
       botThinking: botThinking ?? this.botThinking,
-      highlightedWordId: identical(highlightedWordId, _unset)
-          ? this.highlightedWordId
-          : highlightedWordId as String?,
       status: status ?? this.status,
       rackSize: rackSize ?? this.rackSize,
       revealedWordIds: revealedWordIds ?? this.revealedWordIds,
@@ -155,7 +143,6 @@ class GameActive extends GameState {
     botScore,
     phase,
     botThinking,
-    highlightedWordId,
     status,
     rackSize,
     revealedWordIds,

@@ -18,7 +18,6 @@ class GridPainter extends StatefulWidget {
     required this.puzzle,
     required this.board,
     required this.pendingPlacements,
-    required this.highlightedWordId,
     required this.revealedWordIds,
     required this.botPlacedCells,
     required this.revealMode,
@@ -34,7 +33,6 @@ class GridPainter extends StatefulWidget {
   final PuzzleData puzzle;
   final Map<WordCell, String> board;
   final List<Placement> pendingPlacements;
-  final String? highlightedWordId;
   final Set<String> revealedWordIds;
   final Set<WordCell> botPlacedCells;
 
@@ -168,7 +166,6 @@ class _GridPainterState extends State<GridPainter> {
                         size: Size(width, height),
                         painter: GridDynamicPainter(
                           pendingPlacements: widget.pendingPlacements,
-                          highlightedWordId: widget.highlightedWordId,
                           revealMode: widget.revealMode,
                           puzzle: puzzle,
                           cellSize: cell,
@@ -417,7 +414,6 @@ class GridStaticPainter extends CustomPainter {
 class GridDynamicPainter extends CustomPainter {
   GridDynamicPainter({
     required this.pendingPlacements,
-    required this.highlightedWordId,
     required this.revealMode,
     required this.puzzle,
     required this.cellSize,
@@ -427,7 +423,6 @@ class GridDynamicPainter extends CustomPainter {
   });
 
   final List<Placement> pendingPlacements;
-  final String? highlightedWordId;
   final bool revealMode;
   final PuzzleData puzzle;
   final double cellSize;
@@ -450,26 +445,6 @@ class GridDynamicPainter extends CustomPainter {
       for (final c in puzzle.cells) {
         if (c.type == CellType.clue) continue;
         canvas.drawRect(Rect.fromLTWH(c.col * cellSize, c.row * cellSize, cellSize, cellSize), dim);
-      }
-    }
-
-    if (highlightedWordId != null) {
-      WordSpec? word;
-      for (final w in puzzle.words) {
-        if (w.id == highlightedWordId) {
-          word = w;
-          break;
-        }
-      }
-      if (word != null) {
-        // TODO: add AppColors.highlightOverlay token (0x22000000)
-        final highlightPaint = Paint()..color = const Color(0x22000000);
-        for (final cell in word.cells) {
-          canvas.drawRect(
-            Rect.fromLTWH(cell.col * cellSize, cell.row * cellSize, cellSize, cellSize),
-            highlightPaint,
-          );
-        }
       }
     }
 
@@ -537,7 +512,6 @@ class GridDynamicPainter extends CustomPainter {
   @override
   bool shouldRepaint(covariant GridDynamicPainter old) =>
       pendingPlacements != old.pendingPlacements ||
-      highlightedWordId != old.highlightedWordId ||
       revealMode != old.revealMode ||
       cellSize != old.cellSize ||
       hoverCell != old.hoverCell ||

@@ -24,16 +24,6 @@ class PuzzleLoadRequested extends GameEvent {
   List<Object?> get props => [puzzleId];
 }
 
-/// The player tapped a clue/word to highlight it on the board.
-class WordSelected extends GameEvent {
-  const WordSelected(this.wordId);
-
-  final String wordId;
-
-  @override
-  List<Object?> get props => [wordId];
-}
-
 /// The player dropped the rack tile at [rackIndex] onto [cell].
 class LetterPlaced extends GameEvent {
   const LetterPlaced({required this.rackIndex, required this.cell});

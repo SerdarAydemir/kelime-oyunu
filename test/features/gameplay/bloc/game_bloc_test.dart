@@ -77,7 +77,6 @@ GameActive _activeState({
   int botScore = 0,
   TurnPhase phase = TurnPhase.playerTurn,
   bool botThinking = false,
-  String? highlightedWordId,
   int rackSize = RackManager.baseRackSize,
   int swapQuotaRemaining = GameActive.swapQuotaPerMatch,
 }) {
@@ -93,7 +92,6 @@ GameActive _activeState({
     status: GameStatus.playing,
     rackSize: rackSize,
     revealedWordIds: const {},
-    highlightedWordId: highlightedWordId,
     swapQuotaRemaining: swapQuotaRemaining,
   );
 }
@@ -427,28 +425,6 @@ void main() {
         ).called(1);
       },
     );
-
-    // ── 8a: a confirmed move clears the word highlight ──────────────────────
-    blocTest<GameBloc, GameState>(
-      'clears the word highlight after a confirmed move',
-      build: () {
-        stubResolveMove(_moveResult(scoreDelta: 1));
-        stubRefill();
-        stubComputeMove();
-        stubEnsurePlayable();
-        return buildBloc();
-      },
-      seed: () => _activeState(
-        highlightedWordId: 'w1',
-        pending: const [Placement(cell: _cell11, letter: 'K', expected: 'K')],
-      ),
-      act: (bloc) => bloc.add(const MoveConfirmed()),
-      wait: const Duration(milliseconds: 50),
-      expect: () => [
-        isA<GameActive>().having((s) => s.highlightedWordId, 'highlight', isNull),
-        isA<GameActive>().having((s) => s.highlightedWordId, 'highlight', isNull),
-      ],
-    );
   });
 
   group('BotMoveCompleted', () {
@@ -604,26 +580,6 @@ void main() {
       seed: _activeState,
       act: (bloc) => bloc.add(const WordRevealed('nope')),
       expect: () => <GameState>[],
-    );
-  });
-
-  group('WordSelected', () {
-    // ── 10 ─────────────────────────────────────────────────────────────────
-    blocTest<GameBloc, GameState>(
-      'updates the highlighted word id',
-      build: buildBloc,
-      seed: _activeState,
-      act: (bloc) => bloc.add(const WordSelected('w1')),
-      expect: () => [isA<GameActive>().having((s) => s.highlightedWordId, 'highlight', 'w1')],
-    );
-
-    // ── 10a: re-selecting the highlighted word clears it (toggle) ───────────
-    blocTest<GameBloc, GameState>(
-      're-selecting the highlighted word clears the highlight',
-      build: buildBloc,
-      seed: () => _activeState(highlightedWordId: 'w1'),
-      act: (bloc) => bloc.add(const WordSelected('w1')),
-      expect: () => [isA<GameActive>().having((s) => s.highlightedWordId, 'highlight', isNull)],
     );
   });
 }
