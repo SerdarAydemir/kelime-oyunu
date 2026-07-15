@@ -20,6 +20,7 @@ final _puzzle = puzzleFromWords([
 
 const _c1 = WordCell(row: 1, col: 1);
 const _c2 = WordCell(row: 1, col: 2);
+const _c3 = WordCell(row: 1, col: 3);
 
 GameActive _stateWith(MoveNarration narration, {int playerScore = 0, int botScore = 0}) {
   return GameActive(
@@ -147,5 +148,40 @@ void main() {
 
     await tester.pumpAndSettle();
     expect(find.text('P-1'), findsOneWidget);
+  });
+
+  testWidgets('completing a word raises a frame/glow and settles on the total', (tester) async {
+    // KOL completed: +1 per letter (3) then a +3 word bonus → 6 total.
+    final state = _stateWith(
+      const MoveNarration(
+        id: 3,
+        actor: NarrationActor.player,
+        events: [
+          ScoreEvent(cell: _c1, delta: 1),
+          ScoreEvent(cell: _c2, delta: 1),
+          ScoreEvent(cell: _c3, delta: 1),
+          ScoreEvent(delta: 3, completedWordId: 'w1', wordBonus: 3),
+        ],
+        placements: [
+          Placement(cell: _c1, letter: 'K', expected: 'K'),
+          Placement(cell: _c2, letter: 'O', expected: 'O'),
+          Placement(cell: _c3, letter: 'L', expected: 'L'),
+        ],
+      ),
+      playerScore: 6,
+    );
+
+    await tester.pumpWidget(_Host(state: state));
+    await tester.pump();
+
+    var sawFrame = false;
+    for (var i = 0; i < 60; i++) {
+      await tester.pump(const Duration(milliseconds: 30));
+      if (find.byKey(const ValueKey('frame_w1')).evaluate().isNotEmpty) sawFrame = true;
+    }
+    expect(sawFrame, isTrue, reason: 'expected a word-completion frame to appear');
+
+    await tester.pumpAndSettle();
+    expect(find.text('P6'), findsOneWidget); // 3 letters + 3 word bonus
   });
 }

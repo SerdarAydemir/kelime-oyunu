@@ -14,6 +14,7 @@ class NarrationCue {
   const NarrationCue({
     required this.kind,
     required this.event,
+    required this.delta,
     required this.launchAt,
     required this.landAt,
   });
@@ -21,14 +22,17 @@ class NarrationCue {
   final CueKind kind;
   final ScoreEvent event;
 
+  /// Points this single cue adds to the count-up. Word bonuses are split into
+  /// [delta] == 1 cues (one per point) so the frame's badges cascade and the
+  /// counter steps letter by letter; a letter/rack cue carries its full delta.
+  final int delta;
+
   /// When the flying letter lifts off (normalized). Equals [landAt] for
   /// cell-less bonus cues, which have no flight.
   final double launchAt;
 
   /// When the badge pops and the score counter absorbs this cue (normalized).
   final double landAt;
-
-  int get delta => event.delta;
 }
 
 /// Maps a [MoveNarration] to an ordered list of [NarrationCue]s and the total
@@ -49,6 +53,7 @@ class NarrationTimeline {
   static const int _staggerMs = 90;
   static const int _flightMs = 360;
   static const int _wordDelayMs = 170;
+  static const int _wordStaggerMs = 70;
   static const int _rackDelayMs = 340;
   static const int _tailMs = 360;
   static const int _minTotalMs = 700;
@@ -70,29 +75,44 @@ class NarrationTimeline {
     final n = letters.length;
     final lastLandMs = n > 0 ? (n - 1) * _staggerMs + _flightMs : 0;
 
-    final raw = <(CueKind, ScoreEvent, int, int)>[]; // kind, event, launchMs, landMs
+    // kind, event, delta, launchMs, landMs
+    final raw = <(CueKind, ScoreEvent, int, int, int)>[];
     for (var i = 0; i < n; i++) {
       final launch = i * _staggerMs;
-      raw.add((CueKind.letter, letters[i], launch, launch + _flightMs));
+      raw.add((CueKind.letter, letters[i], letters[i].delta, launch, launch + _flightMs));
     }
-    for (var i = 0; i < words.length; i++) {
-      final at = lastLandMs + _wordDelayMs + i * 120;
-      raw.add((CueKind.wordBonus, words[i], at, at));
+    // Split each word bonus into one +1 cue per point so the frame's badges
+    // cascade across the word and the counter steps letter by letter.
+    var wordCursor = lastLandMs + _wordDelayMs;
+    for (final e in words) {
+      final count = e.wordBonus ?? e.delta;
+      for (var k = 0; k < count; k++) {
+        raw.add((CueKind.wordBonus, e, 1, wordCursor, wordCursor));
+        wordCursor += _wordStaggerMs;
+      }
     }
-    for (var i = 0; i < racks.length; i++) {
-      final at = lastLandMs + _rackDelayMs + i * 120;
-      raw.add((CueKind.rackBonus, racks[i], at, at));
+    var rackCursor = lastLandMs + _rackDelayMs;
+    if (wordCursor > rackCursor) rackCursor = wordCursor + 80;
+    for (final e in racks) {
+      raw.add((CueKind.rackBonus, e, e.delta, rackCursor, rackCursor));
+      rackCursor += 120;
     }
 
     var maxMs = _minTotalMs - _tailMs;
     for (final r in raw) {
-      if (r.$4 > maxMs) maxMs = r.$4;
+      if (r.$5 > maxMs) maxMs = r.$5;
     }
     final totalMs = maxMs + _tailMs;
 
     final cues = [
       for (final r in raw)
-        NarrationCue(kind: r.$1, event: r.$2, launchAt: r.$3 / totalMs, landAt: r.$4 / totalMs),
+        NarrationCue(
+          kind: r.$1,
+          event: r.$2,
+          delta: r.$3,
+          launchAt: r.$4 / totalMs,
+          landAt: r.$5 / totalMs,
+        ),
     ];
     return NarrationTimeline._(cues, totalMs, _flightMs);
   }
