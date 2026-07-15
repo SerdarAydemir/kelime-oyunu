@@ -231,4 +231,42 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.byType(FlyingTile), findsNothing);
   });
+
+  testWidgets('tapping to 2x finishes the story by half-time without cancelling', (tester) async {
+    final state = _stateWith(
+      const MoveNarration(
+        id: 5,
+        actor: NarrationActor.player,
+        events: [
+          ScoreEvent(cell: _c1, delta: 1),
+          ScoreEvent(cell: _c2, delta: 1),
+          ScoreEvent(cell: _c3, delta: 1),
+        ],
+        placements: [
+          Placement(cell: _c1, letter: 'K', expected: 'K'),
+          Placement(cell: _c2, letter: 'O', expected: 'O'),
+          Placement(cell: _c3, letter: 'L', expected: 'L'),
+        ],
+      ),
+      playerScore: 3,
+    );
+
+    await tester.pumpWidget(_Host(state: state));
+    await tester.pump();
+    final host = tester.state<_HostState>(find.byType(_Host));
+    final total = host.controller.currentTimeline!.totalMs;
+    expect(host.controller.isSpedUp, isFalse);
+
+    host.controller.toggleSpeed(); // the screen's tap-catcher calls this
+    expect(host.controller.isSpedUp, isTrue);
+    await tester.pump(); // let the sped-up ticker establish its start frame
+
+    // Less than the full 1× duration — at 1× the story would still be running,
+    // but at 2× it is already done and the score fully counted (fast-forward,
+    // not a skip).
+    await tester.pump(Duration(milliseconds: total - 100));
+    await tester.pump();
+    expect(host.controller.narrating, isFalse);
+    expect(find.text('P3'), findsOneWidget);
+  });
 }

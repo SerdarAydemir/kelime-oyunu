@@ -47,6 +47,9 @@ class NarrationController extends ChangeNotifier {
 
   double get progress => _anim.value;
   bool get narrating => _current != null;
+
+  /// True once the player has tapped to fast-forward the current turn (2×).
+  bool get isSpedUp => _speed == 2;
   NarrationActor? get currentActor => _current?.narration.actor;
   NarrationTimeline? get currentTimeline => _current?.timeline;
 
@@ -116,8 +119,13 @@ class NarrationController extends ChangeNotifier {
     final c = _current;
     if (c == null || _speed == 2) return;
     _speed = 2;
-    final remainingMs = (c.timeline.totalMs * (1 - _anim.value) / 2).round();
-    _anim.animateTo(1.0, duration: Duration(milliseconds: remainingMs.clamp(1, 1 << 30)));
+    // forward() plays from the CURRENT value to 1.0 over duration * (1 - value),
+    // so halving the duration halves the remaining real time — an exact 2×
+    // continuation, no restart, no skip.
+    _anim
+      ..duration = Duration(milliseconds: (c.timeline.totalMs / 2).round())
+      ..forward();
+    notifyListeners(); // surface the 2× indicator immediately, before the next tick
   }
 
   /// Cells whose flying letter has not yet landed — the grid hides the committed

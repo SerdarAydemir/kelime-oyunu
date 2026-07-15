@@ -9,6 +9,34 @@ import 'package:kelime_oyunu/core/constants/app_colors.dart';
 /// normalized inputs so [NarrationController] stays the single clock — no
 /// widget here owns a timer or animation.
 
+/// Small "2×" pill shown while the narration is fast-forwarding — confirms the
+/// player's tap registered without ever cancelling the story.
+class NarrationSpeedChip extends StatelessWidget {
+  const NarrationSpeedChip({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+      decoration: BoxDecoration(
+        color: Colors.black.withValues(alpha: 0.55),
+        borderRadius: BorderRadius.circular(14),
+      ),
+      child: const Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Icon(Icons.fast_forward, size: 16, color: Colors.white),
+          SizedBox(width: 4),
+          Text(
+            '2×',
+            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 13),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
 /// A letter mid-flight from its source (rack / bot portrait) to a cell. Fades
 /// in on launch and out on arrival; the layer positions it and picks [phase]
 /// (0 = just launched, 1 = landing).

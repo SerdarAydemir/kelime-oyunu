@@ -20,6 +20,7 @@ import 'package:kelime_oyunu/features/gameplay/widgets/clue_sheet.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/grid_painter.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/narration_controller.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/narration_layer.dart';
+import 'package:kelime_oyunu/features/gameplay/widgets/narration_tiles.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/rack_widget.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/result_dialog.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/score_header.dart';
@@ -320,6 +321,14 @@ class _GameActiveBodyState extends State<_GameActiveBody> with SingleTickerProvi
               child: GestureDetector(
                 behavior: HitTestBehavior.opaque,
                 onTapDown: (_) => _narration.toggleSpeed(),
+                child: _narration.isSpedUp
+                    ? const SafeArea(
+                        child: Align(
+                          alignment: Alignment.topRight,
+                          child: Padding(padding: EdgeInsets.all(12), child: NarrationSpeedChip()),
+                        ),
+                      )
+                    : const SizedBox.expand(),
               ),
             ),
         ],
