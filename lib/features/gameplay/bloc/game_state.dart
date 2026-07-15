@@ -3,6 +3,7 @@
 import 'package:equatable/equatable.dart';
 
 import 'package:kelime_oyunu/data/models/puzzle.dart';
+import 'package:kelime_oyunu/features/gameplay/bloc/move_narration.dart';
 import 'package:kelime_oyunu/features/gameplay/engine/rack_manager.dart';
 import 'package:kelime_oyunu/features/gameplay/engine/score_engine.dart';
 
@@ -60,6 +61,7 @@ class GameActive extends GameState {
     this.selectedRackIndex = -1,
     this.botPlacedCells = const {},
     this.swapQuotaRemaining = swapQuotaPerMatch,
+    this.narration,
   });
 
   /// Total letters the player may swap over one match (swap joker budget).
@@ -99,6 +101,12 @@ class GameActive extends GameState {
   /// Letters the player may still swap this match (each swapped letter costs 1).
   final int swapQuotaRemaining;
 
+  /// The move that just resolved, tagged for the UI narration layer to replay
+  /// as an animated score story. Null before any move; the widget layer dedupes
+  /// by [MoveNarration.id] so a lingering value never replays (game_state owns
+  /// no timing — see move_narration.dart). Preserved across copyWith by default.
+  final MoveNarration? narration;
+
   GameActive copyWith({
     PuzzleData? puzzle,
     Map<WordCell, String>? board,
@@ -114,6 +122,7 @@ class GameActive extends GameState {
     int? selectedRackIndex,
     Set<WordCell>? botPlacedCells,
     int? swapQuotaRemaining,
+    MoveNarration? narration,
   }) {
     return GameActive(
       puzzle: puzzle ?? this.puzzle,
@@ -130,6 +139,10 @@ class GameActive extends GameState {
       selectedRackIndex: selectedRackIndex ?? this.selectedRackIndex,
       botPlacedCells: botPlacedCells ?? this.botPlacedCells,
       swapQuotaRemaining: swapQuotaRemaining ?? this.swapQuotaRemaining,
+      // Preserve by default: a resolved move sets it once, the botThinking
+      // copy carries it through, and the next resolve replaces it. Never
+      // cleared to null (no gameplay path needs an un-narrated GameActive).
+      narration: narration ?? this.narration,
     );
   }
 
@@ -149,5 +162,6 @@ class GameActive extends GameState {
     selectedRackIndex,
     botPlacedCells,
     swapQuotaRemaining,
+    narration,
   ];
 }

@@ -10,6 +10,7 @@ import 'package:kelime_oyunu/data/repositories/puzzle_repository.dart';
 import 'package:kelime_oyunu/features/gameplay/bloc/game_bloc.dart';
 import 'package:kelime_oyunu/features/gameplay/bloc/game_event.dart';
 import 'package:kelime_oyunu/features/gameplay/bloc/game_state.dart';
+import 'package:kelime_oyunu/features/gameplay/bloc/move_narration.dart';
 import 'package:kelime_oyunu/features/gameplay/engine/bot_engine.dart';
 import 'package:kelime_oyunu/features/gameplay/engine/rack_manager.dart';
 import 'package:kelime_oyunu/features/gameplay/engine/score_engine.dart';
@@ -580,6 +581,91 @@ void main() {
       seed: _activeState,
       act: (bloc) => bloc.add(const WordRevealed('nope')),
       expect: () => <GameState>[],
+    );
+  });
+
+  group('MoveNarration tagging (F6)', () {
+    // The resolved move is tagged for the UI score story: actor, events, and
+    // placements mirror the ScoreEngine output (scoring itself is unchanged).
+    final richResult = MoveResult(
+      placements: const [Placement(cell: _cell11, letter: 'K', expected: 'K')],
+      events: const [ScoreEvent(cell: _cell11, delta: 1)],
+      scoreDelta: 1,
+      updatedBoard: {_cell11: 'K'},
+      returnedLetters: const [],
+      completedWordIds: const [],
+      rackEmptied: false,
+      rackEmptyBonus: 0,
+    );
+
+    blocTest<GameBloc, GameState>(
+      'tags a player narration on MoveConfirmed',
+      build: () {
+        stubResolveMove(richResult);
+        stubRefill();
+        stubComputeMove();
+        stubEnsurePlayable();
+        return buildBloc();
+      },
+      seed: () => _activeState(
+        pending: const [Placement(cell: _cell11, letter: 'K', expected: 'K')],
+      ),
+      act: (bloc) => bloc.add(const MoveConfirmed()),
+      wait: const Duration(milliseconds: 50),
+      expect: () => [
+        isA<GameActive>()
+            .having((s) => s.narration?.actor, 'actor', NarrationActor.player)
+            .having((s) => s.narration?.events.length, 'events', 1)
+            .having((s) => s.narration?.placements.length, 'placements', 1),
+        isA<GameActive>().having((s) => s.phase, 'phase', TurnPhase.playerTurn),
+      ],
+    );
+
+    blocTest<GameBloc, GameState>(
+      'tags a bot narration on BotMoveCompleted',
+      build: () {
+        stubResolveMove(richResult);
+        stubEnsurePlayable();
+        return buildBloc();
+      },
+      seed: () => _activeState(phase: TurnPhase.botThinking, botThinking: true),
+      act: (bloc) => bloc.add(
+        const BotMoveCompleted(
+          BotMove(
+            placements: [Placement(cell: _cell11, letter: 'K', expected: 'K')],
+            thinkingDelayMs: 0,
+          ),
+        ),
+      ),
+      expect: () => [
+        isA<GameActive>()
+            .having((s) => s.narration?.actor, 'actor', NarrationActor.bot)
+            .having((s) => s.narration?.events.length, 'events', 1),
+      ],
+    );
+
+    // The narration id must advance so the UI can tell two byte-identical moves
+    // apart (dedupe-by-id). Player move then bot pass → ids 0 and 1.
+    blocTest<GameBloc, GameState>(
+      'advances the narration id across consecutive moves',
+      build: () {
+        stubResolveMove(richResult);
+        stubRefill();
+        stubComputeMove();
+        stubEnsurePlayable();
+        return buildBloc();
+      },
+      seed: () => _activeState(
+        pending: const [Placement(cell: _cell11, letter: 'K', expected: 'K')],
+      ),
+      act: (bloc) => bloc.add(const MoveConfirmed()),
+      wait: const Duration(milliseconds: 50),
+      verify: (bloc) {
+        final s = bloc.state as GameActive;
+        // After the bot's (empty) turn resolves, the last narration is the bot's,
+        // with an id strictly greater than the player's initial id 0.
+        expect(s.narration!.id, greaterThan(0));
+      },
     );
   });
 }

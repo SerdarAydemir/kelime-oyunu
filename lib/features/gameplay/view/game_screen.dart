@@ -18,6 +18,8 @@ import 'package:kelime_oyunu/features/gameplay/engine/score_engine.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/action_bar.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/clue_sheet.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/grid_painter.dart';
+import 'package:kelime_oyunu/features/gameplay/widgets/narration_controller.dart';
+import 'package:kelime_oyunu/features/gameplay/widgets/narration_layer.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/rack_widget.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/result_dialog.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/score_header.dart';
@@ -63,19 +65,13 @@ class _GameBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<GameBloc, GameState>(
-      // Fire once, on the transition into the finished phase — not on every
-      // status change, so re-entering the screen after a restart re-arms it.
-      listenWhen: (prev, curr) =>
-          curr is GameError ||
-          (prev is GameActive &&
-              curr is GameActive &&
-              curr.phase == TurnPhase.finished &&
-              prev.phase != TurnPhase.finished),
+      // Only surface load errors here. The end-of-match dialog is owned by
+      // _GameActiveBody so it can be deferred until the final move finishes
+      // narrating (the player must see the winning move play out first).
+      listenWhen: (prev, curr) => curr is GameError,
       listener: (context, state) {
         if (state is GameError) {
           ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(state.message)));
-        } else if (state is GameActive && state.phase == TurnPhase.finished) {
-          _showResultDialog(context, state);
         }
       },
       builder: (context, state) {
@@ -87,37 +83,6 @@ class _GameBody extends StatelessWidget {
           },
         );
       },
-    );
-  }
-
-  /// Shows the end-of-match modal. The bloc and router are captured from
-  /// [context] *before* the dialog opens: showDialog pushes onto the root
-  /// navigator, whose context sits outside this screen's BlocProvider, so
-  /// reading the GameBloc from inside the dialog builder would fail.
-  Future<void> _showResultDialog(BuildContext context, GameActive state) {
-    final bloc = context.read<GameBloc>();
-    final router = GoRouter.of(context);
-    return showDialog<void>(
-      context: context,
-      barrierDismissible: false,
-      builder: (dialogContext) => ResultDialog(
-        status: state.status,
-        playerScore: state.playerScore,
-        botScore: state.botScore,
-        botName: _kBotProfile.name,
-        levelId: puzzleId,
-        // Restart the same level: reloading passes through GameLoading, which
-        // unmounts the grid and resets the InteractiveViewer zoom for free.
-        onReplay: () {
-          Navigator.of(dialogContext).pop();
-          bloc.add(PuzzleLoadRequested(puzzleId));
-        },
-        // Hard progression: only reachable after a win on a non-final level.
-        onNext: () {
-          Navigator.of(dialogContext).pop();
-          router.go('/gameplay/${puzzleId + 1}');
-        },
-      ),
     );
   }
 }
@@ -133,98 +98,215 @@ class _GameActiveBody extends StatefulWidget {
   State<_GameActiveBody> createState() => _GameActiveBodyState();
 }
 
-class _GameActiveBodyState extends State<_GameActiveBody> {
+class _GameActiveBodyState extends State<_GameActiveBody> with SingleTickerProviderStateMixin {
   /// Local interaction mode: the player is picking a clue cell to reveal.
   /// Gameplay actions stay disabled until the mode closes (yes / toggle /
   /// tapping a non-clue cell). Reveal itself is the existing WordRevealed.
   bool _revealMode = false;
 
+  /// Owns the score-story clock: enqueues each resolved move's narration and
+  /// exposes the lagging display scores. The bloc never waits on it.
+  late final NarrationController _narration;
+
+  /// The match has finished but its final move may still be narrating; the
+  /// result dialog is held until [_narration] drains (see [_onNarrationDrained]).
+  bool _finishPending = false;
+  bool _resultShown = false;
+
   GameActive get state => widget.state;
 
   /// The lamp only works on the player's turn while the game is running.
-  bool get _canReveal => state.phase == TurnPhase.playerTurn && state.status == GameStatus.playing;
+  bool get _canReveal =>
+      state.phase == TurnPhase.playerTurn &&
+      state.status == GameStatus.playing &&
+      !_narration.narrating;
+
+  @override
+  void initState() {
+    super.initState();
+    _narration = NarrationController(vsync: this)..onDrained = _onNarrationDrained;
+    _narration.sync(widget.state);
+  }
+
+  @override
+  void didUpdateWidget(_GameActiveBody old) {
+    super.didUpdateWidget(old);
+    final justFinished =
+        old.state.phase != TurnPhase.finished && widget.state.phase == TurnPhase.finished;
+    _narration.sync(widget.state);
+    if (justFinished) {
+      _finishPending = true;
+      // Nothing left to narrate → show immediately; otherwise wait for onDrained.
+      if (!_narration.narrating) _onNarrationDrained();
+    }
+  }
+
+  @override
+  void dispose() {
+    _narration.dispose();
+    super.dispose();
+  }
+
+  /// The narration queue emptied: release a deferred end-of-match dialog.
+  void _onNarrationDrained() {
+    if (!_finishPending || _resultShown || !mounted) return;
+    _resultShown = true;
+    _showResultDialog(context, state);
+  }
+
+  /// Shows the end-of-match modal once the final move has finished narrating.
+  /// The bloc and router are captured from [context] *before* the dialog opens:
+  /// showDialog pushes onto the root navigator, whose context sits outside this
+  /// screen's BlocProvider, so reading the GameBloc from the dialog would fail.
+  Future<void> _showResultDialog(BuildContext context, GameActive state) {
+    final bloc = context.read<GameBloc>();
+    final router = GoRouter.of(context);
+    return showDialog<void>(
+      context: context,
+      barrierDismissible: false,
+      builder: (dialogContext) => ResultDialog(
+        status: state.status,
+        playerScore: state.playerScore,
+        botScore: state.botScore,
+        botName: _kBotProfile.name,
+        levelId: widget.puzzleId,
+        // Restart the same level: reloading passes through GameLoading, which
+        // unmounts the grid and resets the InteractiveViewer zoom for free.
+        onReplay: () {
+          Navigator.of(dialogContext).pop();
+          bloc.add(PuzzleLoadRequested(widget.puzzleId));
+        },
+        // Hard progression: only reachable after a win on a non-final level.
+        onNext: () {
+          Navigator.of(dialogContext).pop();
+          router.go('/gameplay/${widget.puzzleId + 1}');
+        },
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Column(
+    return AnimatedBuilder(
+      animation: _narration,
+      builder: (context, _) => Stack(
         children: [
-          // Lightweight progress label. Kept above ScoreHeader as its own
-          // centred child so it never disturbs the "VS" centring in the header.
-          // Minimal top padding so the grid below claims the most vertical room.
-          Padding(
-            padding: const EdgeInsets.only(top: AppDimensions.spacingXxs),
-            child: Text('Bölüm ${widget.puzzleId} / $kLastLevelId', style: AppTypography.caption),
-          ),
-          ScoreHeader(
-            playerScore: state.playerScore,
-            botScore: state.botScore,
-            botName: _kBotProfile.name,
-            botThinking: state.botThinking,
-          ),
-          Expanded(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
-              // GridPainter sizes itself to fill this bounded area (largest
-              // square cells that fit) and centres the grid — no scroll view.
-              child: GridPainter(
-                puzzle: state.puzzle,
-                board: state.board,
-                pendingPlacements: state.pendingPlacements,
-                revealedWordIds: state.revealedWordIds,
-                botPlacedCells: state.botPlacedCells,
-                revealMode: _revealMode,
-                onCellTap: (cell, bottomHalf) => _onCellTap(context, cell, bottomHalf),
-                isCellPlaceable: _isPlaceable,
-                onCellDrop: (data, cell) {
-                  final bloc = context.read<GameBloc>();
-                  // A drag that started on a pending letter is a MOVE: free
-                  // the source cell first, then place on the target.
-                  final from = data.fromCell;
-                  if (from != null && from != cell) bloc.add(LetterRecalled(from));
-                  if (from != cell) {
-                    bloc.add(LetterPlaced(rackIndex: data.rackIndex, cell: cell));
-                  }
-                  bloc.add(const RackTileSelected(-1));
-                },
-                pendingDragEnabled: _canReveal && !_revealMode,
-                rackIndexForPending: _rackIndexForPending,
-                onPendingDragCancelled: (cell) =>
-                    context.read<GameBloc>().add(LetterRecalled(cell)),
-              ),
+          SafeArea(
+            child: Column(
+              children: [
+                // Lightweight progress label. Kept above ScoreHeader as its own
+                // centred child so it never disturbs the "VS" centring in the header.
+                // Minimal top padding so the grid below claims the most vertical room.
+                Padding(
+                  padding: const EdgeInsets.only(top: AppDimensions.spacingXxs),
+                  child: Text(
+                    'Bölüm ${widget.puzzleId} / $kLastLevelId',
+                    style: AppTypography.caption,
+                  ),
+                ),
+                ScoreHeader(
+                  // Lagging display scores: the counter walks up as the narration
+                  // lands each cue (12→13→14→15), it never snaps to the bloc total.
+                  playerScore: _narration.displayPlayerScore,
+                  botScore: _narration.displayBotScore,
+                  botName: _kBotProfile.name,
+                  botThinking: state.botThinking,
+                ),
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+                    // GridPainter sizes itself to fill this bounded area (largest
+                    // square cells that fit) and centres the grid — no scroll view.
+                    // The narration overlay stacks on top with the SAME cell math so
+                    // its badges land on the right cells.
+                    child: Stack(
+                      children: [
+                        GridPainter(
+                          puzzle: state.puzzle,
+                          board: state.board,
+                          pendingPlacements: state.pendingPlacements,
+                          revealedWordIds: state.revealedWordIds,
+                          botPlacedCells: state.botPlacedCells,
+                          revealMode: _revealMode,
+                          onCellTap: (cell, bottomHalf) => _onCellTap(context, cell, bottomHalf),
+                          isCellPlaceable: _isPlaceable,
+                          onCellDrop: (data, cell) {
+                            final bloc = context.read<GameBloc>();
+                            // A drag that started on a pending letter is a MOVE: free
+                            // the source cell first, then place on the target.
+                            final from = data.fromCell;
+                            if (from != null && from != cell) bloc.add(LetterRecalled(from));
+                            if (from != cell) {
+                              bloc.add(LetterPlaced(rackIndex: data.rackIndex, cell: cell));
+                            }
+                            bloc.add(const RackTileSelected(-1));
+                          },
+                          pendingDragEnabled: _canReveal && !_revealMode,
+                          rackIndexForPending: _rackIndexForPending,
+                          onPendingDragCancelled: (cell) =>
+                              context.read<GameBloc>().add(LetterRecalled(cell)),
+                        ),
+                        // Non-interactive: badges only. The narrating tap-catcher
+                        // (above the whole body) owns input while a story plays.
+                        Positioned.fill(
+                          child: IgnorePointer(
+                            child: NarrationLayer(controller: _narration, puzzle: state.puzzle),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                RackWidget(
+                  rack: state.rack,
+                  // Drag mirrors the tap guards: player's turn, game running, no
+                  // reveal mode — the bot's turn must not accept ghost drags.
+                  dragEnabled: _canReveal && !_revealMode,
+                  onDragStarted: (_) => context.read<GameBloc>().add(const RackTileSelected(-1)),
+                  showPlusSlot: state.rackSize == RackManager.baseRackSize,
+                  onPlusTap: _canReveal && !_revealMode ? () => _confirmSixthSlot(context) : null,
+                  onTileTap: (i) => context.read<GameBloc>().add(RackTileSelected(i)),
+                  onTileRecall: (i) {
+                    final tile = state.rack[i];
+                    final placement = state.pendingPlacements.firstWhereOrNull(
+                      (p) => p.letter == tile.letter,
+                    );
+                    if (placement != null) {
+                      context.read<GameBloc>().add(LetterRecalled(placement.cell));
+                    }
+                  },
+                ),
+                ActionBar(
+                  pendingPlacements: state.pendingPlacements,
+                  revealActive: _revealMode,
+                  onConfirm: _revealMode
+                      ? null
+                      : () => context.read<GameBloc>().add(const MoveConfirmed()),
+                  onPass: _revealMode
+                      ? null
+                      : () => context.read<GameBloc>().add(const MovePassed()),
+                  onSwap:
+                      !_revealMode &&
+                          state.pendingPlacements.isEmpty &&
+                          state.swapQuotaRemaining > 0
+                      ? () => _showSwapSheet(context)
+                      : null,
+                  onReveal: _canReveal ? () => setState(() => _revealMode = !_revealMode) : null,
+                ),
+              ],
             ),
           ),
-          RackWidget(
-            rack: state.rack,
-            // Drag mirrors the tap guards: player's turn, game running, no
-            // reveal mode — the bot's turn must not accept ghost drags.
-            dragEnabled: _canReveal && !_revealMode,
-            onDragStarted: (_) => context.read<GameBloc>().add(const RackTileSelected(-1)),
-            showPlusSlot: state.rackSize == RackManager.baseRackSize,
-            onPlusTap: _canReveal && !_revealMode ? () => _confirmSixthSlot(context) : null,
-            onTileTap: (i) => context.read<GameBloc>().add(RackTileSelected(i)),
-            onTileRecall: (i) {
-              final tile = state.rack[i];
-              final placement = state.pendingPlacements.firstWhereOrNull(
-                (p) => p.letter == tile.letter,
-              );
-              if (placement != null) {
-                context.read<GameBloc>().add(LetterRecalled(placement.cell));
-              }
-            },
-          ),
-          ActionBar(
-            pendingPlacements: state.pendingPlacements,
-            revealActive: _revealMode,
-            onConfirm: _revealMode
-                ? null
-                : () => context.read<GameBloc>().add(const MoveConfirmed()),
-            onPass: _revealMode ? null : () => context.read<GameBloc>().add(const MovePassed()),
-            onSwap: !_revealMode && state.pendingPlacements.isEmpty && state.swapQuotaRemaining > 0
-                ? () => _showSwapSheet(context)
-                : null,
-            onReveal: _canReveal ? () => setState(() => _revealMode = !_revealMode) : null,
-          ),
+          // Input lock + fast-forward. While a narration plays, an opaque
+          // catcher covers everything: it swallows all gameplay input and
+          // turns any tap into a 2× speed-up (never a cancel — the player must
+          // not miss a move). It vanishes the instant the queue drains.
+          if (_narration.narrating)
+            Positioned.fill(
+              child: GestureDetector(
+                behavior: HitTestBehavior.opaque,
+                onTapDown: (_) => _narration.toggleSpeed(),
+              ),
+            ),
         ],
       ),
     );

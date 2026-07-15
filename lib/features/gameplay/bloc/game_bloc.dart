@@ -8,6 +8,7 @@ import 'package:kelime_oyunu/data/models/puzzle.dart';
 import 'package:kelime_oyunu/data/repositories/puzzle_repository.dart';
 import 'package:kelime_oyunu/features/gameplay/bloc/game_event.dart';
 import 'package:kelime_oyunu/features/gameplay/bloc/game_state.dart';
+import 'package:kelime_oyunu/features/gameplay/bloc/move_narration.dart';
 import 'package:kelime_oyunu/features/gameplay/engine/board_ops.dart';
 import 'package:kelime_oyunu/features/gameplay/engine/bot_engine.dart';
 import 'package:kelime_oyunu/features/gameplay/engine/rack_manager.dart';
@@ -49,6 +50,9 @@ class GameBloc extends Bloc<GameEvent, GameState> {
   Map<WordCell, String> _solutionByCell = const {};
   int _turnCounter = 0;
   int _nextSeed() => _seed + _turnCounter++;
+  // Monotonic narration id: lets the UI detect a fresh move to narrate even
+  // when two consecutive moves produce byte-identical events (§move_narration).
+  int _narrationSeq = 0;
 
   Future<void> _onPuzzleLoadRequested(PuzzleLoadRequested event, Emitter<GameState> emit) async {
     emit(const GameLoading());
@@ -154,6 +158,12 @@ class GameBloc extends Bloc<GameEvent, GameState> {
       pendingPlacements: const [],
       playerScore: current.playerScore + result.scoreDelta,
       selectedRackIndex: -1, // the refill may shrink the rack — drop the index
+      narration: MoveNarration(
+        id: _narrationSeq++,
+        actor: NarrationActor.player,
+        events: result.events,
+        placements: result.placements,
+      ),
     );
     if (isBoardComplete(current.puzzle, newBoard)) {
       emit(_finish(afterMove));
@@ -201,6 +211,12 @@ class GameBloc extends Bloc<GameEvent, GameState> {
       botThinking: false,
       botPlacedCells: {...current.botPlacedCells, ...event.botMove.placements.map((p) => p.cell)},
       selectedRackIndex: -1, // tiles may have been replaced/dropped — drop the index
+      narration: MoveNarration(
+        id: _narrationSeq++,
+        actor: NarrationActor.bot,
+        events: result.events,
+        placements: result.placements,
+      ),
     );
     emit(isBoardComplete(current.puzzle, newBoard) ? _finish(afterBot) : afterBot);
   }
