@@ -17,10 +17,15 @@ class NarrationCue {
     required this.delta,
     required this.launchAt,
     required this.landAt,
+    this.letter,
   });
 
   final CueKind kind;
   final ScoreEvent event;
+
+  /// The placed glyph for a letter cue (null for bonus cues) — the flying tile
+  /// shows it as it travels from the rack / bot portrait to the cell.
+  final String? letter;
 
   /// Points this single cue adds to the count-up. Word bonuses are split into
   /// [delta] == 1 cues (one per point) so the frame's badges cascade and the
@@ -75,6 +80,9 @@ class NarrationTimeline {
     final n = letters.length;
     final lastLandMs = n > 0 ? (n - 1) * _staggerMs + _flightMs : 0;
 
+    // Cell → placed glyph, so a letter cue can carry the letter it flies in.
+    final letterByCell = {for (final p in narration.placements) p.cell: p.letter};
+
     // kind, event, delta, launchMs, landMs
     final raw = <(CueKind, ScoreEvent, int, int, int)>[];
     for (var i = 0; i < n; i++) {
@@ -112,6 +120,7 @@ class NarrationTimeline {
           delta: r.$3,
           launchAt: r.$4 / totalMs,
           landAt: r.$5 / totalMs,
+          letter: r.$1 == CueKind.letter ? letterByCell[r.$2.cell] : null,
         ),
     ];
     return NarrationTimeline._(cues, totalMs, _flightMs);

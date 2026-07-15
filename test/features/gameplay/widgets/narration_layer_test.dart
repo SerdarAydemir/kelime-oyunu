@@ -10,6 +10,7 @@ import 'package:kelime_oyunu/features/gameplay/engine/rack_manager.dart';
 import 'package:kelime_oyunu/features/gameplay/engine/score_engine.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/narration_controller.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/narration_layer.dart';
+import 'package:kelime_oyunu/features/gameplay/widgets/narration_tiles.dart';
 
 // ignore: always_use_package_imports
 import '../../../helpers/engine_test_fixtures.dart';
@@ -52,6 +53,8 @@ class _Host extends StatefulWidget {
 
 class _HostState extends State<_Host> with SingleTickerProviderStateMixin {
   late final NarrationController controller;
+  final GlobalKey _rackKey = GlobalKey();
+  final GlobalKey _avatarKey = GlobalKey();
 
   @override
   void initState() {
@@ -76,8 +79,20 @@ class _HostState extends State<_Host> with SingleTickerProviderStateMixin {
               animation: controller,
               builder: (_, _) => Text('P${controller.displayPlayerScore}'),
             ),
+            // Flight sources: a laid-out avatar + rack the overlay can anchor to.
+            Row(
+              children: [
+                SizedBox(key: _avatarKey, width: 32, height: 32),
+                SizedBox(key: _rackKey, width: 200, height: 48),
+              ],
+            ),
             Expanded(
-              child: NarrationLayer(controller: controller, puzzle: widget.state.puzzle),
+              child: NarrationLayer(
+                controller: controller,
+                puzzle: widget.state.puzzle,
+                rackKey: _rackKey,
+                botAvatarKey: _avatarKey,
+              ),
             ),
           ],
         ),
@@ -183,5 +198,37 @@ void main() {
 
     await tester.pumpAndSettle();
     expect(find.text('P6'), findsOneWidget); // 3 letters + 3 word bonus
+  });
+
+  testWidgets('a letter flies in (FlyingTile) then hands off to the board', (tester) async {
+    final state = _stateWith(
+      const MoveNarration(
+        id: 4,
+        actor: NarrationActor.player,
+        events: [
+          ScoreEvent(cell: _c1, delta: 1),
+          ScoreEvent(cell: _c2, delta: 1),
+        ],
+        placements: [
+          Placement(cell: _c1, letter: 'K', expected: 'K'),
+          Placement(cell: _c2, letter: 'O', expected: 'O'),
+        ],
+      ),
+      playerScore: 2,
+    );
+
+    await tester.pumpWidget(_Host(state: state));
+    await tester.pump();
+
+    var sawFlight = false;
+    for (var i = 0; i < 40; i++) {
+      await tester.pump(const Duration(milliseconds: 20));
+      if (find.byType(FlyingTile).evaluate().isNotEmpty) sawFlight = true;
+    }
+    expect(sawFlight, isTrue, reason: 'expected a FlyingTile mid-wave');
+
+    // After the story ends the tiles are gone (handed off to the committed grid).
+    await tester.pumpAndSettle();
+    expect(find.byType(FlyingTile), findsNothing);
   });
 }

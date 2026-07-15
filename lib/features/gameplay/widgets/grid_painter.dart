@@ -27,6 +27,7 @@ class GridPainter extends StatefulWidget {
     this.pendingDragEnabled = false,
     this.rackIndexForPending,
     this.onPendingDragCancelled,
+    this.suppressedCells = const {},
     super.key,
   });
 
@@ -35,6 +36,10 @@ class GridPainter extends StatefulWidget {
   final List<Placement> pendingPlacements;
   final Set<String> revealedWordIds;
   final Set<WordCell> botPlacedCells;
+
+  /// Cells whose committed glyph is hidden this frame because a narration tile
+  /// is still flying toward them — the letter appears the instant it lands.
+  final Set<WordCell> suppressedCells;
 
   /// Joker mode: clue cells are highlighted as selectable reveal targets.
   final bool revealMode;
@@ -154,6 +159,7 @@ class _GridPainterState extends State<GridPainter> {
                         board: widget.board,
                         revealedWordIds: widget.revealedWordIds,
                         botPlacedCells: widget.botPlacedCells,
+                        suppressedCells: widget.suppressedCells,
                         puzzle: puzzle,
                         cellSize: cell,
                       ),
@@ -296,6 +302,7 @@ class GridStaticPainter extends CustomPainter {
     required this.botPlacedCells,
     required this.puzzle,
     required this.cellSize,
+    this.suppressedCells = const {},
   }) : _cellMap = {for (final c in puzzle.cells) WordCell(row: c.row, col: c.col): c},
        _revealedCells = {
          for (final w in puzzle.words)
@@ -305,6 +312,9 @@ class GridStaticPainter extends CustomPainter {
   final Map<WordCell, String> board;
   final Set<String> revealedWordIds;
   final Set<WordCell> botPlacedCells;
+
+  /// Committed cells hidden this frame while a narration tile flies to them.
+  final Set<WordCell> suppressedCells;
   final PuzzleData puzzle;
   final double cellSize;
 
@@ -351,7 +361,9 @@ class GridStaticPainter extends CustomPainter {
 
   void _drawLetterCell(Canvas canvas, Rect rect, WordCell cell) {
     canvas.drawRect(rect, Paint()..color = AppColors.gridCellNormal);
-    final letter = board[cell];
+    // Suppressed: a narration tile is still flying here — draw the cell empty
+    // so the glyph pops in exactly when the tile lands (no double image).
+    final letter = suppressedCells.contains(cell) ? null : board[cell];
     if (letter == null) {
       // Revealed but unplayed: draw the solution as a faint, playable ghost.
       // The cell stays empty in [board], so it remains placeable.
@@ -408,6 +420,7 @@ class GridStaticPainter extends CustomPainter {
       board != old.board ||
       revealedWordIds != old.revealedWordIds ||
       botPlacedCells != old.botPlacedCells ||
+      suppressedCells != old.suppressedCells ||
       cellSize != old.cellSize;
 }
 

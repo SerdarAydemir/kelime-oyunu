@@ -11,6 +11,7 @@ class ScoreHeader extends StatelessWidget {
     required this.botScore,
     required this.botName,
     required this.botThinking,
+    this.avatarKey,
     super.key,
   });
 
@@ -18,6 +19,9 @@ class ScoreHeader extends StatelessWidget {
   final int botScore;
   final String botName;
   final bool botThinking;
+
+  /// Anchors the bot's letter-flight source to the avatar portrait (F6).
+  final GlobalKey? avatarKey;
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +46,7 @@ class ScoreHeader extends StatelessWidget {
                 children: [
                   Text('$botScore $botName', style: const TextStyle(fontWeight: FontWeight.w600)),
                   const SizedBox(width: 8),
-                  const _BotAvatar(),
+                  _BotAvatar(key: avatarKey),
                   if (botThinking) ...[const SizedBox(width: 4), const _AnimatedDots()],
                 ],
               ),
@@ -73,7 +77,7 @@ class _ScorePill extends StatelessWidget {
 }
 
 class _BotAvatar extends StatelessWidget {
-  const _BotAvatar();
+  const _BotAvatar({super.key});
 
   @override
   Widget build(BuildContext context) {

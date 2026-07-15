@@ -5,20 +5,42 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:kelime_oyunu/core/constants/app_colors.dart';
 import 'package:kelime_oyunu/data/models/puzzle.dart';
+import 'package:kelime_oyunu/features/gameplay/bloc/move_narration.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/narration_controller.dart';
+import 'package:kelime_oyunu/features/gameplay/widgets/narration_tiles.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/narration_timeline.dart';
 
-/// Transient overlay that draws the score-story visuals — per-letter badges,
-/// the word-completion frame/glow, and the word/rack bonus cascade — over the
-/// grid, in lock-step with [NarrationController.progress]. It centres itself on
-/// the grid with the SAME cell math as [GridPainter] so everything lands on the
-/// right cells (it does not follow the InteractiveViewer zoom, but input — and
-/// therefore zoom — is locked while narrating).
-class NarrationLayer extends StatelessWidget {
-  const NarrationLayer({required this.controller, required this.puzzle, super.key});
+/// Transient overlay that draws the score-story visuals — flying letters, the
+/// word-completion frame/glow, per-letter and bonus badges — over the grid, in
+/// lock-step with [NarrationController.progress]. It centres itself on the grid
+/// with the SAME cell math as [GridPainter] so everything lands on the right
+/// cells (it does not follow the InteractiveViewer zoom, but input — and so
+/// zoom — is locked while narrating).
+///
+/// Letters fly in from a visible source: the rack for the player ([rackKey]),
+/// the bot's avatar for the bot ([botAvatarKey]). Their global positions are
+/// converted into this overlay's grid-box coordinate space each frame.
+class NarrationLayer extends StatefulWidget {
+  const NarrationLayer({
+    required this.controller,
+    required this.puzzle,
+    required this.rackKey,
+    required this.botAvatarKey,
+    super.key,
+  });
 
   final NarrationController controller;
   final PuzzleData puzzle;
+  final GlobalKey rackKey;
+  final GlobalKey botAvatarKey;
+
+  @override
+  State<NarrationLayer> createState() => _NarrationLayerState();
+}
+
+class _NarrationLayerState extends State<NarrationLayer> {
+  /// Stable anchor for global→local conversion of the flight sources.
+  final GlobalKey _gridBoxKey = GlobalKey();
 
   /// Normalized on-screen lifespan of one badge (fraction of the narration).
   static const double _badgeLife = 0.42;
@@ -26,6 +48,9 @@ class NarrationLayer extends StatelessWidget {
   /// Normalized lifespan of a word-completion frame — longer than a badge so
   /// the highlight lingers while its point badges cascade.
   static const double _frameLife = 0.5;
+
+  NarrationController get controller => widget.controller;
+  PuzzleData get puzzle => widget.puzzle;
 
   @override
   Widget build(BuildContext context) {
@@ -37,12 +62,15 @@ class NarrationLayer extends StatelessWidget {
         final cell = raw.isFinite ? math.max(0.0, raw) : 48.0;
         return Center(
           child: SizedBox(
+            key: _gridBoxKey,
             width: cell * cols,
             height: cell * rows,
             child: AnimatedBuilder(
               animation: controller,
-              builder: (context, _) =>
-                  Stack(clipBehavior: Clip.none, children: [..._frames(cell), ..._badges(cell)]),
+              builder: (context, _) => Stack(
+                clipBehavior: Clip.none,
+                children: [..._frames(cell), ..._flights(cell), ..._badges(cell)],
+              ),
             ),
           ),
         );
@@ -50,10 +78,54 @@ class NarrationLayer extends StatelessWidget {
     );
   }
 
-  /// Letter cells of a word, resolved once from the puzzle.
+  /// Letter cells of a word, resolved from the puzzle.
   List<WordCell> _wordCells(String wordId) {
     final match = puzzle.words.where((w) => w.id == wordId);
     return match.isEmpty ? const [] : match.first.cells;
+  }
+
+  /// Source point (rack or bot avatar) in this overlay's grid-box coordinates,
+  /// or null while a key is not yet laid out (fall back to no flight).
+  Offset? _sourceLocal(NarrationActor? actor) {
+    final key = actor == NarrationActor.bot ? widget.botAvatarKey : widget.rackKey;
+    final gridObj = _gridBoxKey.currentContext?.findRenderObject();
+    final srcObj = key.currentContext?.findRenderObject();
+    if (gridObj is! RenderBox || srcObj is! RenderBox) return null;
+    if (!gridObj.hasSize || !srcObj.hasSize) return null;
+    final srcGlobal = srcObj.localToGlobal(srcObj.size.center(Offset.zero));
+    return gridObj.globalToLocal(srcGlobal);
+  }
+
+  /// Flying letters: each tile travels from the source to its cell over the
+  /// cue's launch→land window, easing in and out. Only visible while airborne.
+  List<Widget> _flights(double cell) {
+    final timeline = controller.currentTimeline;
+    if (timeline == null) return const [];
+    final src = _sourceLocal(controller.currentActor);
+    if (src == null) return const [];
+    final progress = controller.progress;
+    final tiles = <Widget>[];
+    for (var i = 0; i < timeline.cues.length; i++) {
+      final cue = timeline.cues[i];
+      final letter = cue.letter;
+      final cellPos = cue.event.cell;
+      if (cue.kind != CueKind.letter || letter == null || cellPos == null) continue;
+      final span = cue.landAt - cue.launchAt;
+      final t = span <= 0 ? 1.0 : (progress - cue.launchAt) / span;
+      if (t < 0 || t >= 1) continue; // not launched yet, or already landed
+      final target = Offset((cellPos.col + 0.5) * cell, (cellPos.row + 0.5) * cell);
+      final pos = Offset.lerp(src, target, Curves.easeInOut.transform(t))!;
+      tiles.add(
+        Positioned(
+          left: pos.dx - cell / 2,
+          top: pos.dy - cell / 2,
+          width: cell,
+          height: cell,
+          child: FlyingTile(letter: letter, size: cell, phase: t),
+        ),
+      );
+    }
+    return tiles;
   }
 
   /// A frame/glow around each word completed this move, timed to its first
@@ -89,7 +161,7 @@ class NarrationLayer extends StatelessWidget {
           top: minR * cell,
           width: (maxC - minC + 1) * cell,
           height: (maxR - minR + 1) * cell,
-          child: _WordFrame(local: local, key: ValueKey('frame_$id')),
+          child: WordFrame(local: local, key: ValueKey('frame_$id')),
         ),
       );
     });
@@ -115,7 +187,7 @@ class NarrationLayer extends StatelessWidget {
           top: anchor.row * cell,
           width: cell,
           height: cell,
-          child: _Badge(
+          child: NarrationBadge(
             text: _label(cue),
             color: _color(cue),
             local: local,
@@ -149,100 +221,4 @@ class NarrationLayer extends StatelessWidget {
     CueKind.wordBonus => AppColors.accent,
     CueKind.rackBonus => AppColors.accent,
   };
-}
-
-/// The word-completion highlight: a cell-aligned rounded rect that pops in with
-/// an outer glow, holds, then fades. Pure function of [local] ([0,1]).
-class _WordFrame extends StatelessWidget {
-  const _WordFrame({required this.local, super.key});
-
-  final double local;
-
-  @override
-  Widget build(BuildContext context) {
-    final appear = Curves.easeOutBack.transform(math.min(1, local / 0.25));
-    final fade = local < 0.65 ? 1.0 : 1.0 - (local - 0.65) / 0.35;
-    final alpha = (appear * fade).clamp(0.0, 1.0);
-    final scale = 0.94 + 0.06 * appear;
-    return IgnorePointer(
-      child: Opacity(
-        opacity: alpha,
-        child: Transform.scale(
-          scale: scale,
-          child: Container(
-            margin: const EdgeInsets.all(1.5),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(8),
-              border: Border.all(color: AppColors.accent, width: 2.5),
-              boxShadow: [
-                BoxShadow(
-                  color: AppColors.accent.withValues(alpha: 0.55 * alpha),
-                  blurRadius: 12,
-                  spreadRadius: 1,
-                ),
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-/// A single score badge: pops in, floats up, fades out over its [local] life
-/// ([0,1]). Pure function of [local] so the driving controller stays the clock.
-class _Badge extends StatelessWidget {
-  const _Badge({
-    required this.text,
-    required this.color,
-    required this.local,
-    this.big = false,
-    super.key,
-  });
-
-  final String text;
-  final Color color;
-  final double local;
-
-  /// The rack-empty bonus reads as a headline — a larger pill at grid centre.
-  final bool big;
-
-  @override
-  Widget build(BuildContext context) {
-    // Ease: quick pop (0→0.15), hold, drift up and fade out (0.6→1).
-    final appear = Curves.easeOut.transform(math.min(1, local / 0.15));
-    final fade = local < 0.6 ? 1.0 : 1.0 - (local - 0.6) / 0.4;
-    final rise = -18.0 * Curves.easeOut.transform(local);
-    final scale = (big ? 0.7 : 0.6) + 0.4 * appear;
-    return Align(
-      alignment: big ? Alignment.center : Alignment.topCenter,
-      child: Transform.translate(
-        offset: Offset(0, big ? rise * 0.5 : -6 + rise),
-        child: Opacity(
-          opacity: (appear * fade).clamp(0.0, 1.0),
-          child: Transform.scale(
-            scale: scale,
-            child: Container(
-              padding: EdgeInsets.symmetric(horizontal: big ? 14 : 8, vertical: big ? 6 : 3),
-              decoration: BoxDecoration(
-                color: color,
-                borderRadius: BorderRadius.circular(big ? 16 : 12),
-                boxShadow: const [
-                  BoxShadow(color: Color(0x40000000), blurRadius: 4, offset: Offset(0, 2)),
-                ],
-              ),
-              child: Text(
-                text,
-                style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: big ? 22 : 15,
-                ),
-              ),
-            ),
-          ),
-        ),
-      ),
-    );
-  }
 }

@@ -120,10 +120,22 @@ class NarrationController extends ChangeNotifier {
     _anim.animateTo(1.0, duration: Duration(milliseconds: remainingMs.clamp(1, 1 << 30)));
   }
 
-  /// Cells whose flying letter has not yet landed — hidden by the grid so the
-  /// mid-air tile is not doubled. Empty until the flight phase (phase 3); the
-  /// API is here so the view wiring stays stable across phases.
-  Set<WordCell> get suppressedCells => const {};
+  /// Cells whose flying letter has not yet landed — the grid hides the committed
+  /// glyph there so the mid-air tile is not doubled, then reveals it exactly as
+  /// the tile arrives. Only correct placements commit to the board, so only
+  /// those are suppressed; wrong letters never reach it.
+  Set<WordCell> get suppressedCells {
+    final c = _current;
+    if (c == null) return const {};
+    final p = _anim.value;
+    final cells = <WordCell>{};
+    for (final cue in c.timeline.cues) {
+      if (cue.kind != CueKind.letter || cue.delta <= 0) continue;
+      final cell = cue.event.cell;
+      if (cell != null && p < cue.landAt) cells.add(cell);
+    }
+    return cells;
+  }
 
   @override
   void dispose() {

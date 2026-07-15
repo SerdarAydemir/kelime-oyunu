@@ -108,6 +108,12 @@ class _GameActiveBodyState extends State<_GameActiveBody> with SingleTickerProvi
   /// exposes the lagging display scores. The bloc never waits on it.
   late final NarrationController _narration;
 
+  /// Flight-source anchors: the player's letters lift from the rack, the bot's
+  /// from its avatar portrait. The narration overlay converts these into its
+  /// own coordinate space (F6 phase 3).
+  final GlobalKey _rackKey = GlobalKey();
+  final GlobalKey _avatarKey = GlobalKey();
+
   /// The match has finished but its final move may still be narrating; the
   /// result dialog is held until [_narration] drains (see [_onNarrationDrained]).
   bool _finishPending = false;
@@ -211,6 +217,7 @@ class _GameActiveBodyState extends State<_GameActiveBody> with SingleTickerProvi
                   botScore: _narration.displayBotScore,
                   botName: _kBotProfile.name,
                   botThinking: state.botThinking,
+                  avatarKey: _avatarKey,
                 ),
                 Expanded(
                   child: Padding(
@@ -227,6 +234,8 @@ class _GameActiveBodyState extends State<_GameActiveBody> with SingleTickerProvi
                           pendingPlacements: state.pendingPlacements,
                           revealedWordIds: state.revealedWordIds,
                           botPlacedCells: state.botPlacedCells,
+                          // Hide letters mid-flight so they pop in as their tile lands.
+                          suppressedCells: _narration.suppressedCells,
                           revealMode: _revealMode,
                           onCellTap: (cell, bottomHalf) => _onCellTap(context, cell, bottomHalf),
                           isCellPlaceable: _isPlaceable,
@@ -250,7 +259,12 @@ class _GameActiveBodyState extends State<_GameActiveBody> with SingleTickerProvi
                         // (above the whole body) owns input while a story plays.
                         Positioned.fill(
                           child: IgnorePointer(
-                            child: NarrationLayer(controller: _narration, puzzle: state.puzzle),
+                            child: NarrationLayer(
+                              controller: _narration,
+                              puzzle: state.puzzle,
+                              rackKey: _rackKey,
+                              botAvatarKey: _avatarKey,
+                            ),
                           ),
                         ),
                       ],
@@ -258,6 +272,7 @@ class _GameActiveBodyState extends State<_GameActiveBody> with SingleTickerProvi
                   ),
                 ),
                 RackWidget(
+                  key: _rackKey,
                   rack: state.rack,
                   // Drag mirrors the tap guards: player's turn, game running, no
                   // reveal mode — the bot's turn must not accept ghost drags.
