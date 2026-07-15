@@ -69,7 +69,7 @@ class _NarrationLayerState extends State<NarrationLayer> {
               animation: controller,
               builder: (context, _) => Stack(
                 clipBehavior: Clip.none,
-                children: [..._frames(cell), ..._flights(cell), ..._badges(cell)],
+                children: [..._frames(cell), ..._pulses(cell), ..._flights(cell), ..._badges(cell)],
               ),
             ),
           ),
@@ -94,6 +94,37 @@ class _NarrationLayerState extends State<NarrationLayer> {
     if (!gridObj.hasSize || !srcObj.hasSize) return null;
     final srcGlobal = srcObj.localToGlobal(srcObj.size.center(Offset.zero));
     return gridObj.globalToLocal(srcGlobal);
+  }
+
+  /// Evaluation pulses: as each letter cue lands, its cell flashes a coloured
+  /// border (green correct / red wrong) so the one-by-one scoring beat has a
+  /// clear spatial anchor — the letter itself never moves.
+  List<Widget> _pulses(double cell) {
+    final timeline = controller.currentTimeline;
+    if (timeline == null) return const [];
+    final progress = controller.progress;
+    final pulses = <Widget>[];
+    for (var i = 0; i < timeline.cues.length; i++) {
+      final cue = timeline.cues[i];
+      final cellPos = cue.event.cell;
+      if (cue.kind != CueKind.letter || cellPos == null) continue;
+      final local = (progress - cue.landAt) / _badgeLife;
+      if (local < 0 || local > 1) continue;
+      pulses.add(
+        Positioned(
+          left: cellPos.col * cell,
+          top: cellPos.row * cell,
+          width: cell,
+          height: cell,
+          child: CellPulse(
+            color: cue.delta >= 0 ? AppColors.success : AppColors.error,
+            local: local,
+            key: ValueKey('pulse_${cue.landAt}_$i'),
+          ),
+        ),
+      );
+    }
+    return pulses;
   }
 
   /// Flying letters: each tile travels from the source to its cell over the

@@ -11,8 +11,12 @@ const _c1 = WordCell(row: 1, col: 1);
 const _c2 = WordCell(row: 1, col: 2);
 const _c3 = WordCell(row: 1, col: 3);
 
-MoveNarration _narration(List<ScoreEvent> events, {List<Placement> placements = const []}) {
-  return MoveNarration(id: 0, actor: NarrationActor.player, events: events, placements: placements);
+MoveNarration _narration(
+  List<ScoreEvent> events, {
+  List<Placement> placements = const [],
+  NarrationActor actor = NarrationActor.player,
+}) {
+  return MoveNarration(id: 0, actor: actor, events: events, placements: placements);
 }
 
 void main() {
@@ -27,12 +31,29 @@ void main() {
       );
       expect(timeline.cues.length, 3);
       expect(timeline.cues.every((c) => c.kind == CueKind.letter), isTrue);
-      // Wave: each letter lifts and lands strictly after the previous one.
-      expect(timeline.cues[0].launchAt, lessThan(timeline.cues[1].launchAt));
-      expect(timeline.cues[1].launchAt, lessThan(timeline.cues[2].launchAt));
-      expect(timeline.cues[0].landAt, lessThan(timeline.cues[2].landAt));
-      // A letter lands after it launches (there is a flight span).
+      // Sequential beats: each letter scores strictly after the previous one.
+      expect(timeline.cues[0].landAt, lessThan(timeline.cues[1].landAt));
+      expect(timeline.cues[1].landAt, lessThan(timeline.cues[2].landAt));
+      // Player letters are evaluated IN PLACE: no flight span, no flying glyph
+      // (they are already sitting on the board when the move confirms).
+      expect(timeline.cues[0].landAt, timeline.cues[0].launchAt);
+      expect(timeline.cues.every((c) => c.letter == null), isTrue);
+    });
+
+    test('bot letters fly: launch precedes landing and the cue carries a glyph', () {
+      final timeline = NarrationTimeline.build(
+        _narration(
+          const [ScoreEvent(cell: _c1, delta: 1), ScoreEvent(cell: _c2, delta: 1)],
+          placements: const [
+            Placement(cell: _c1, letter: 'K', expected: 'K'),
+            Placement(cell: _c2, letter: 'O', expected: 'O'),
+          ],
+          actor: NarrationActor.bot,
+        ),
+      );
       expect(timeline.cues[0].landAt, greaterThan(timeline.cues[0].launchAt));
+      expect(timeline.cues[0].letter, 'K');
+      expect(timeline.cues[1].letter, 'O');
     });
 
     test('word and rack bonuses trail the last letter', () {

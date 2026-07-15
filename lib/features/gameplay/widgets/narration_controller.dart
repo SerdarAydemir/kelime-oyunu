@@ -130,11 +130,12 @@ class NarrationController extends ChangeNotifier {
 
   /// Cells whose flying letter has not yet landed — the grid hides the committed
   /// glyph there so the mid-air tile is not doubled, then reveals it exactly as
-  /// the tile arrives. Only correct placements commit to the board, so only
-  /// those are suppressed; wrong letters never reach it.
+  /// the tile arrives. BOT moves only: the player's letters were already placed
+  /// on the board by hand and never fly, so hiding them would visibly un-place
+  /// what the player just put down.
   Set<WordCell> get suppressedCells {
     final c = _current;
-    if (c == null) return const {};
+    if (c == null || c.narration.actor != NarrationActor.bot) return const {};
     final p = _anim.value;
     final cells = <WordCell>{};
     for (final cue in c.timeline.cues) {

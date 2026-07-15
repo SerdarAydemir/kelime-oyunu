@@ -200,11 +200,11 @@ void main() {
     expect(find.text('P6'), findsOneWidget); // 3 letters + 3 word bonus
   });
 
-  testWidgets('a letter flies in (FlyingTile) then hands off to the board', (tester) async {
+  testWidgets('a BOT letter flies in (FlyingTile) then hands off to the board', (tester) async {
     final state = _stateWith(
       const MoveNarration(
         id: 4,
-        actor: NarrationActor.player,
+        actor: NarrationActor.bot,
         events: [
           ScoreEvent(cell: _c1, delta: 1),
           ScoreEvent(cell: _c2, delta: 1),
@@ -214,15 +214,15 @@ void main() {
           Placement(cell: _c2, letter: 'O', expected: 'O'),
         ],
       ),
-      playerScore: 2,
+      botScore: 2,
     );
 
     await tester.pumpWidget(_Host(state: state));
     await tester.pump();
 
     var sawFlight = false;
-    for (var i = 0; i < 40; i++) {
-      await tester.pump(const Duration(milliseconds: 20));
+    for (var i = 0; i < 60; i++) {
+      await tester.pump(const Duration(milliseconds: 25));
       if (find.byType(FlyingTile).evaluate().isNotEmpty) sawFlight = true;
     }
     expect(sawFlight, isTrue, reason: 'expected a FlyingTile mid-wave');
@@ -230,6 +230,39 @@ void main() {
     // After the story ends the tiles are gone (handed off to the committed grid).
     await tester.pumpAndSettle();
     expect(find.byType(FlyingTile), findsNothing);
+  });
+
+  testWidgets('PLAYER letters never fly — they are evaluated in place with a pulse', (
+    tester,
+  ) async {
+    final state = _stateWith(
+      const MoveNarration(
+        id: 6,
+        actor: NarrationActor.player,
+        events: [
+          ScoreEvent(cell: _c1, delta: 1),
+          ScoreEvent(cell: _c2, delta: -1),
+        ],
+        placements: [
+          Placement(cell: _c1, letter: 'K', expected: 'K'),
+          Placement(cell: _c2, letter: 'O', expected: 'X'),
+        ],
+      ),
+      playerScore: 0,
+    );
+
+    await tester.pumpWidget(_Host(state: state));
+    await tester.pump();
+
+    var sawFlight = false;
+    var sawPulse = false;
+    for (var i = 0; i < 60; i++) {
+      await tester.pump(const Duration(milliseconds: 25));
+      if (find.byType(FlyingTile).evaluate().isNotEmpty) sawFlight = true;
+      if (find.byType(CellPulse).evaluate().isNotEmpty) sawPulse = true;
+    }
+    expect(sawFlight, isFalse, reason: 'player letters are already on the board');
+    expect(sawPulse, isTrue, reason: 'each letter should flash its cell as it scores');
   });
 
   testWidgets('tapping to 2x finishes the story by half-time without cancelling', (tester) async {

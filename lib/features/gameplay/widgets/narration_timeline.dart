@@ -1,5 +1,6 @@
 // lib/features/gameplay/widgets/narration_timeline.dart
 
+import 'package:kelime_oyunu/data/models/puzzle.dart';
 import 'package:kelime_oyunu/features/gameplay/bloc/move_narration.dart';
 import 'package:kelime_oyunu/features/gameplay/engine/score_engine.dart';
 
@@ -41,8 +42,14 @@ class NarrationCue {
 }
 
 /// Maps a [MoveNarration] to an ordered list of [NarrationCue]s and the total
-/// real-time duration. Letters lift in a wave ([_staggerMs] apart) so the first
-/// lands while the next is airborne; word / rack bonuses trail the last letter.
+/// real-time duration.
+///
+/// The rhythm differs by actor. The PLAYER's letters are already sitting on the
+/// board when the move confirms — re-flying them from the rack would visibly
+/// un-place and re-place them — so they stay put and get evaluated in place,
+/// one by one (pulse + badge + counter step). The BOT's letters genuinely
+/// arrive from outside, so each flies in from the portrait and scores as it
+/// lands. Word / rack bonuses trail the last letter for both.
 class NarrationTimeline {
   NarrationTimeline._(this.cues, this.totalMs, this.flightMs);
 
@@ -53,15 +60,16 @@ class NarrationTimeline {
   /// normalized fraction for the per-tile flight curve.
   final int flightMs;
 
-  // Wave rhythm (real ms). Tuned so a 4-letter move reads as ~1.2 s at 1×,
-  // inside the ~1.5–2 s per-move budget, with each letter still separable.
-  static const int _staggerMs = 90;
-  static const int _flightMs = 360;
-  static const int _wordDelayMs = 170;
-  static const int _wordStaggerMs = 70;
-  static const int _rackDelayMs = 340;
-  static const int _tailMs = 360;
-  static const int _minTotalMs = 700;
+  // Rhythm (real ms). Steps are wide enough that each letter's score reads as
+  // its own beat (~300 ms), keeping a 4-letter move inside the ~2 s budget.
+  static const int _stepMs = 300;
+  static const int _evalDelayMs = 150;
+  static const int _flightMs = 500;
+  static const int _wordDelayMs = 300;
+  static const int _wordStaggerMs = 150;
+  static const int _rackDelayMs = 450;
+  static const int _tailMs = 500;
+  static const int _minTotalMs = 900;
 
   factory NarrationTimeline.build(MoveNarration narration) {
     final letters = <ScoreEvent>[];
@@ -78,16 +86,22 @@ class NarrationTimeline {
     }
 
     final n = letters.length;
-    final lastLandMs = n > 0 ? (n - 1) * _staggerMs + _flightMs : 0;
+    final isBot = narration.actor == NarrationActor.bot;
+    final lastLandMs = n > 0 ? (n - 1) * _stepMs + (isBot ? _flightMs : _evalDelayMs) : 0;
 
-    // Cell → placed glyph, so a letter cue can carry the letter it flies in.
-    final letterByCell = {for (final p in narration.placements) p.cell: p.letter};
+    // Cell → placed glyph. Only bot cues carry it: a non-null letter is what
+    // makes the layer draw a flying tile, and only the bot's letters fly.
+    final letterByCell = isBot
+        ? {for (final p in narration.placements) p.cell: p.letter}
+        : const <WordCell, String>{};
 
     // kind, event, delta, launchMs, landMs
     final raw = <(CueKind, ScoreEvent, int, int, int)>[];
     for (var i = 0; i < n; i++) {
-      final launch = i * _staggerMs;
-      raw.add((CueKind.letter, letters[i], letters[i].delta, launch, launch + _flightMs));
+      final start = i * _stepMs;
+      // Player: evaluate in place — no flight, the beat IS the landing.
+      final land = start + (isBot ? _flightMs : _evalDelayMs);
+      raw.add((CueKind.letter, letters[i], letters[i].delta, isBot ? start : land, land));
     }
     // Split each word bonus into one +1 cue per point so the frame's badges
     // cascade across the word and the counter steps letter by letter.

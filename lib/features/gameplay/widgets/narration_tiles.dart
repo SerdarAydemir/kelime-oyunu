@@ -37,6 +37,37 @@ class NarrationSpeedChip extends StatelessWidget {
   }
 }
 
+/// A brief evaluation flash on the cell whose letter is being scored right
+/// now: a coloured (green = correct, red = wrong) rounded border that pops and
+/// fades. Gives the "letters score one by one" beat a spatial anchor without
+/// moving the letter itself. Pure function of [local] ([0, 1]).
+class CellPulse extends StatelessWidget {
+  const CellPulse({required this.color, required this.local, super.key});
+
+  final Color color;
+  final double local;
+
+  @override
+  Widget build(BuildContext context) {
+    final appear = Curves.easeOutBack.transform(math.min(1, local / 0.3));
+    final fade = local < 0.55 ? 1.0 : 1.0 - (local - 0.55) / 0.45;
+    final alpha = (appear * fade).clamp(0.0, 1.0);
+    return IgnorePointer(
+      child: Opacity(
+        opacity: alpha,
+        child: Container(
+          margin: const EdgeInsets.all(1),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(7),
+            border: Border.all(color: color, width: 2.5),
+            color: color.withValues(alpha: 0.15 * alpha),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
 /// A letter mid-flight from its source (rack / bot portrait) to a cell. Fades
 /// in on launch and out on arrival; the layer positions it and picks [phase]
 /// (0 = just launched, 1 = landing).
