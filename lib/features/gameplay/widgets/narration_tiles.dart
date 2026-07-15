@@ -117,8 +117,10 @@ class FlyingTile extends StatelessWidget {
   }
 }
 
-/// The word-completion highlight: a cell-aligned rounded rect that pops in with
-/// an outer glow, holds, then fades. Pure function of [local] ([0,1]).
+/// The word-completion celebration: a golden cell-aligned rounded frame with a
+/// bright shimmer travelling around its border while it holds (the "+N" badge
+/// sits over it), fading only at the end as the badge flies to the score.
+/// Pure function of [local] over the word cue's land→absorb window.
 class WordFrame extends StatelessWidget {
   const WordFrame({required this.local, super.key});
 
@@ -126,8 +128,8 @@ class WordFrame extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final appear = Curves.easeOutBack.transform(math.min(1, local / 0.25));
-    final fade = local < 0.65 ? 1.0 : 1.0 - (local - 0.65) / 0.35;
+    final appear = Curves.easeOutBack.transform(math.min(1, local / 0.12));
+    final fade = local < 0.82 ? 1.0 : 1.0 - (local - 0.82) / 0.18;
     final alpha = (appear * fade).clamp(0.0, 1.0);
     final scale = 0.94 + 0.06 * appear;
     return IgnorePointer(
@@ -135,19 +137,101 @@ class WordFrame extends StatelessWidget {
         opacity: alpha,
         child: Transform.scale(
           scale: scale,
-          child: Container(
-            margin: const EdgeInsets.all(1.5),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(8),
-              border: Border.all(color: AppColors.accent, width: 2.5),
-              boxShadow: [
-                BoxShadow(
-                  color: AppColors.accent.withValues(alpha: 0.55 * alpha),
-                  blurRadius: 12,
-                  spreadRadius: 1,
-                ),
-              ],
-            ),
+          child: CustomPaint(
+            // Two full laps of shimmer over the celebration.
+            painter: _GoldenFramePainter(sweep: local * 2 * 2 * math.pi, alpha: alpha),
+            child: const SizedBox.expand(),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// Paints the golden rounded border with a travelling highlight (a sweep
+/// gradient rotated by [sweep]) plus a soft outer glow.
+class _GoldenFramePainter extends CustomPainter {
+  _GoldenFramePainter({required this.sweep, required this.alpha});
+
+  final double sweep;
+  final double alpha;
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final rrect = RRect.fromRectAndRadius(
+      (Offset.zero & size).deflate(2),
+      const Radius.circular(8),
+    );
+    // Soft golden glow behind the border.
+    canvas.drawRRect(
+      rrect,
+      Paint()
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 6
+        ..color = AppColors.coinGold.withValues(alpha: 0.35 * alpha)
+        ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 6),
+    );
+    // Base golden border.
+    canvas.drawRRect(
+      rrect,
+      Paint()
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 2.5
+        ..color = AppColors.coinGold,
+    );
+    // Travelling shimmer: a bright arc sweeping around the border.
+    canvas.drawRRect(
+      rrect,
+      Paint()
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 3.5
+        ..shader = SweepGradient(
+          transform: GradientRotation(sweep),
+          colors: const [
+            Color(0x00FFFFFF),
+            Color(0xFFFFF3C4),
+            Color(0x00FFFFFF),
+            Color(0x00FFFFFF),
+          ],
+          stops: const [0.0, 0.08, 0.2, 1.0],
+        ).createShader(Offset.zero & size),
+    );
+  }
+
+  @override
+  bool shouldRepaint(covariant _GoldenFramePainter old) => sweep != old.sweep || alpha != old.alpha;
+}
+
+/// A returning letter tile: the wrong letter, shown sitting on its cell during
+/// the narration and then carried back to the rack by the layer. Fades out
+/// only in the last stretch of the return trip.
+class GhostLetterTile extends StatelessWidget {
+  const GhostLetterTile({required this.letter, required this.size, this.fade = 1.0, super.key});
+
+  final String letter;
+  final double size;
+  final double fade;
+
+  @override
+  Widget build(BuildContext context) {
+    return Opacity(
+      opacity: fade.clamp(0.0, 1.0),
+      child: Container(
+        width: size,
+        height: size,
+        margin: EdgeInsets.all(size * 0.08),
+        decoration: BoxDecoration(
+          color: AppColors.rackTileBg,
+          borderRadius: BorderRadius.circular(size * 0.12),
+          border: Border.all(color: AppColors.error, width: 1.5),
+        ),
+        alignment: Alignment.center,
+        child: Text(
+          letter,
+          style: TextStyle(
+            fontSize: size * 0.42,
+            fontWeight: FontWeight.bold,
+            color: Colors.black87,
           ),
         ),
       ),
@@ -165,6 +249,7 @@ class NarrationBadge extends StatelessWidget {
     required this.color,
     required this.local,
     this.big = false,
+    this.hold = holdEnds,
     super.key,
   });
 
@@ -175,8 +260,11 @@ class NarrationBadge extends StatelessWidget {
   /// The rack-empty bonus reads as a headline — a larger pill at grid centre.
   final bool big;
 
-  /// Fraction of the badge's life spent holding on the cell before it starts
-  /// flying to the score display (the layer uses the same split for position).
+  /// Fraction of THIS badge's life spent holding before it flies to the score
+  /// (word badges hold much longer — see NarrationTimeline.wordHoldFraction).
+  final double hold;
+
+  /// Default hold split for letter/rack badges.
   static const double holdEnds = 0.4;
 
   @override
@@ -187,7 +275,7 @@ class NarrationBadge extends StatelessWidget {
     final fade = local < 0.85 ? 1.0 : 1.0 - (local - 0.85) / 0.15;
     // Slightly shrink while flying so the pill reads as "condensing" into the
     // counter; no vertical drift — the layer owns the travel path.
-    final flight = local <= holdEnds ? 0.0 : (local - holdEnds) / (1 - holdEnds);
+    final flight = local <= hold ? 0.0 : (local - hold) / (1 - hold);
     final scale = ((big ? 0.7 : 0.6) + 0.4 * appear) * (1.0 - 0.35 * flight);
     return Align(
       alignment: big ? Alignment.center : Alignment.topCenter,

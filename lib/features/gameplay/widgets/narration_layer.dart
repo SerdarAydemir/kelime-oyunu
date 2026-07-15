@@ -48,10 +48,6 @@ class _NarrationLayerState extends State<NarrationLayer> {
   /// Stable anchor for global→local conversion of the flight sources.
   final GlobalKey _gridBoxKey = GlobalKey();
 
-  /// Normalized lifespan of a word-completion frame — long enough that the
-  /// highlight lingers while its "+N" badge flies off to the score.
-  static const double _frameLife = 0.5;
-
   NarrationController get controller => widget.controller;
   PuzzleData get puzzle => widget.puzzle;
 
@@ -72,7 +68,13 @@ class _NarrationLayerState extends State<NarrationLayer> {
               animation: controller,
               builder: (context, _) => Stack(
                 clipBehavior: Clip.none,
-                children: [..._frames(cell), ..._pulses(cell), ..._flights(cell), ..._badges(cell)],
+                children: [
+                  ..._frames(cell),
+                  ..._pulses(cell),
+                  ..._flights(cell),
+                  ..._returningLetters(cell),
+                  ..._badges(cell),
+                ],
               ),
             ),
           ),
@@ -178,16 +180,20 @@ class _NarrationLayerState extends State<NarrationLayer> {
     final timeline = controller.currentTimeline;
     if (timeline == null) return const [];
     final progress = controller.progress;
-    final firstLandByWord = <String, double>{};
+    // The frame lives exactly as long as its word cue's badge: it appears as
+    // the "+N" lands and fades as the badge is absorbed by the score.
+    final windowByWord = <String, (double, double)>{};
     for (final cue in timeline.cues) {
       if (cue.kind != CueKind.wordBonus) continue;
       final id = cue.event.completedWordId;
       if (id == null) continue;
-      firstLandByWord[id] = math.min(firstLandByWord[id] ?? 1.0, cue.landAt);
+      windowByWord[id] = (cue.landAt, cue.absorbAt);
     }
     final frames = <Widget>[];
-    firstLandByWord.forEach((id, start) {
-      final local = (progress - start) / _frameLife;
+    windowByWord.forEach((id, window) {
+      final (start, end) = window;
+      final span = end - start;
+      final local = span <= 0 ? 2.0 : (progress - start) / span;
       if (local < 0 || local > 1) return;
       final cells = _wordCells(id);
       if (cells.isEmpty) return;
@@ -224,13 +230,17 @@ class _NarrationLayerState extends State<NarrationLayer> {
       final span = cue.absorbAt - cue.landAt;
       final local = span <= 0 ? 2.0 : (progress - cue.landAt) / span;
       if (local < 0 || local > 1 || anchor == null) continue;
-      // Phase 1 (hold): the badge pops and sits on its cell. Phase 2 (fly):
-      // it travels to the owner's score display and is absorbed on arrival —
-      // the exact moment the counter ticks (absorbAt drives accumulatedDelta).
+      // Phase 1 (hold): the badge pops and sits on its cell — a word badge
+      // holds much longer, over its spinning golden frame. Phase 2 (fly): it
+      // travels to the owner's score display and is absorbed on arrival — the
+      // exact moment the counter ticks (absorbAt drives accumulatedDelta).
+      final hold = cue.kind == CueKind.wordBonus
+          ? NarrationTimeline.wordHoldFraction
+          : NarrationBadge.holdEnds;
       final cellOrigin = Offset(anchor.col * cell, anchor.row * cell);
       var origin = cellOrigin;
-      if (target != null && local > NarrationBadge.holdEnds) {
-        final t = (local - NarrationBadge.holdEnds) / (1 - NarrationBadge.holdEnds);
+      if (target != null && local > hold) {
+        final t = (local - hold) / (1 - hold);
         final eased = Curves.easeInCubic.transform(t.clamp(0.0, 1.0));
         // Aim the badge's centre at the score display's centre.
         final targetOrigin = target - Offset(cell / 2, cell / 2);
@@ -248,12 +258,61 @@ class _NarrationLayerState extends State<NarrationLayer> {
             local: local,
             // Bonuses (word total "+N", rack empty) read as headlines.
             big: cue.kind != CueKind.letter,
+            hold: hold,
             key: ValueKey('badge_${cue.landAt}_$i'),
           ),
         ),
       );
     }
     return widgets;
+  }
+
+  /// Wrong letters travel HOME: the misplaced letter stays visible on its cell
+  /// through its −1 beat, then flies back to where it came from (the rack for
+  /// the player, the portrait for the bot) instead of silently vanishing.
+  List<Widget> _returningLetters(double cell) {
+    final timeline = controller.currentTimeline;
+    if (timeline == null) return const [];
+    final narration = controller.currentNarration;
+    if (narration == null) return const [];
+    final progress = controller.progress;
+    final home = _sourceLocal(controller.currentActor);
+    final letterByCell = {for (final p in narration.placements) p.cell: p.letter};
+    final tiles = <Widget>[];
+    for (var i = 0; i < timeline.cues.length; i++) {
+      final cue = timeline.cues[i];
+      final cellPos = cue.event.cell;
+      if (cue.kind != CueKind.letter || cue.delta >= 0 || cellPos == null) continue;
+      final letter = letterByCell[cellPos];
+      if (letter == null) continue;
+      final span = cue.absorbAt - cue.landAt;
+      final local = span <= 0 ? 2.0 : (progress - cue.landAt) / span;
+      if (local > 1) continue; // trip finished — the rack shows the tile now
+      final cellOrigin = Offset(cellPos.col * cell, cellPos.row * cell);
+      var origin = cellOrigin;
+      var fade = 1.0;
+      if (local > NarrationBadge.holdEnds && home != null) {
+        final t = (local - NarrationBadge.holdEnds) / (1 - NarrationBadge.holdEnds);
+        final eased = Curves.easeInCubic.transform(t.clamp(0.0, 1.0));
+        origin = Offset.lerp(cellOrigin, home - Offset(cell / 2, cell / 2), eased)!;
+        fade = t < 0.8 ? 1.0 : 1.0 - (t - 0.8) / 0.2;
+      }
+      tiles.add(
+        Positioned(
+          left: origin.dx,
+          top: origin.dy,
+          width: cell,
+          height: cell,
+          child: GhostLetterTile(
+            letter: letter,
+            size: cell,
+            fade: fade,
+            key: ValueKey('return_${cue.landAt}_$i'),
+          ),
+        ),
+      );
+    }
+    return tiles;
   }
 
   /// The cell a cue's badge floats above: the letter's own cell, the middle of

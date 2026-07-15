@@ -236,6 +236,33 @@ void main() {
     expect(find.byType(FlyingTile), findsNothing);
   });
 
+  testWidgets('a wrong letter rides home: visible on the cell, then returns', (tester) async {
+    final state = _stateWith(
+      const MoveNarration(
+        id: 7,
+        actor: NarrationActor.player,
+        events: [ScoreEvent(cell: _c1, delta: -1)],
+        placements: [Placement(cell: _c1, letter: 'Z', expected: 'K')],
+      ),
+      playerScore: -1,
+    );
+
+    await tester.pumpWidget(_Host(state: state));
+    await tester.pump();
+
+    var sawReturningTile = false;
+    for (var i = 0; i < 80; i++) {
+      await tester.pump(const Duration(milliseconds: 25));
+      if (find.byType(GhostLetterTile).evaluate().isNotEmpty) sawReturningTile = true;
+    }
+    expect(sawReturningTile, isTrue, reason: 'the wrong letter must visibly travel back');
+
+    // Trip over: the tile is gone (the rack owns the returned letter now).
+    await tester.pumpAndSettle();
+    expect(find.byType(GhostLetterTile), findsNothing);
+    expect(find.text('P-1'), findsOneWidget);
+  });
+
   testWidgets('PLAYER letters never fly — they are evaluated in place with a pulse', (
     tester,
   ) async {

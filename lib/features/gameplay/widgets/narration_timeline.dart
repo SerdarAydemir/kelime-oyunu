@@ -78,6 +78,16 @@ class NarrationTimeline {
   /// Badge lifetime after landing: it holds on the cell, then flies to the
   /// owner's score display and is absorbed there (the counter ticks on arrival).
   static const int _badgeMs = 600;
+
+  /// A completed word celebrates much longer: the golden frame with its "+N"
+  /// badge lingers (~1.5 s, shimmer spinning) before the badge flies off.
+  static const int _wordBadgeMs = 1900;
+
+  /// Fraction of a WORD cue's life spent holding before the badge flies
+  /// (1500/1900). Letter cues use [NarrationBadge.holdEnds]-style 0.4 in the
+  /// layer; exposing this here keeps timeline & layer in sync.
+  static const double wordHoldFraction = 1500 / 1900;
+
   static const int _tailMs = 250;
   static const int _minTotalMs = 900;
 
@@ -115,14 +125,17 @@ class NarrationTimeline {
     }
     // One cue per completed word: the frame lights the whole word up and a
     // single "+N" badge carries the full bonus (a per-point +1 cascade read as
-    // noise). Multiple completed words still fire one after another.
+    // noise). Consecutive words celebrate one after another, and the rack
+    // bonus waits for the last celebration to finish.
     var wordCursor = lastLandMs + _wordDelayMs;
+    var lastWordAbsorbMs = 0;
     for (final e in words) {
       raw.add((CueKind.wordBonus, e, e.wordBonus ?? e.delta, wordCursor, wordCursor));
-      wordCursor += _wordStaggerMs;
+      lastWordAbsorbMs = wordCursor + _wordBadgeMs;
+      wordCursor += _wordBadgeMs + _wordStaggerMs;
     }
     var rackCursor = lastLandMs + _rackDelayMs;
-    if (wordCursor > rackCursor) rackCursor = wordCursor + 80;
+    if (lastWordAbsorbMs > rackCursor) rackCursor = lastWordAbsorbMs + 100;
     for (final e in racks) {
       raw.add((CueKind.rackBonus, e, e.delta, rackCursor, rackCursor));
       rackCursor += 120;
@@ -130,7 +143,8 @@ class NarrationTimeline {
 
     var maxMs = _minTotalMs - _tailMs;
     for (final r in raw) {
-      if (r.$5 + _badgeMs > maxMs) maxMs = r.$5 + _badgeMs;
+      final badgeMs = r.$1 == CueKind.wordBonus ? _wordBadgeMs : _badgeMs;
+      if (r.$5 + badgeMs > maxMs) maxMs = r.$5 + badgeMs;
     }
     final totalMs = maxMs + _tailMs;
 
@@ -142,7 +156,7 @@ class NarrationTimeline {
           delta: r.$3,
           launchAt: r.$4 / totalMs,
           landAt: r.$5 / totalMs,
-          absorbAt: (r.$5 + _badgeMs) / totalMs,
+          absorbAt: (r.$5 + (r.$1 == CueKind.wordBonus ? _wordBadgeMs : _badgeMs)) / totalMs,
           letter: r.$1 == CueKind.letter ? letterByCell[r.$2.cell] : null,
         ),
     ];

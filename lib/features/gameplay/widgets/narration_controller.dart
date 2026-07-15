@@ -52,6 +52,7 @@ class NarrationController extends ChangeNotifier {
   bool get isSpedUp => _speed == 2;
   NarrationActor? get currentActor => _current?.narration.actor;
   NarrationTimeline? get currentTimeline => _current?.timeline;
+  MoveNarration? get currentNarration => _current?.narration;
 
   /// The player score to show right now: the walked-up value while the player's
   /// move narrates, otherwise the last settled total.
