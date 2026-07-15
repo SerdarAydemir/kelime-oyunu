@@ -155,8 +155,10 @@ class WordFrame extends StatelessWidget {
   }
 }
 
-/// A single score badge: pops in, floats up, fades out over its [local] life
-/// ([0,1]). Pure function of [local] so the driving controller stays the clock.
+/// A single score badge over its [local] life ([0,1]): pops in on the cell,
+/// holds, then — while the layer carries it toward its owner's score display —
+/// shrinks slightly and is swallowed on arrival (the counter ticks that same
+/// instant). Pure function of [local] so the driving controller stays the clock.
 class NarrationBadge extends StatelessWidget {
   const NarrationBadge({
     required this.text,
@@ -173,17 +175,24 @@ class NarrationBadge extends StatelessWidget {
   /// The rack-empty bonus reads as a headline — a larger pill at grid centre.
   final bool big;
 
+  /// Fraction of the badge's life spent holding on the cell before it starts
+  /// flying to the score display (the layer uses the same split for position).
+  static const double holdEnds = 0.4;
+
   @override
   Widget build(BuildContext context) {
-    // Ease: quick pop (0→0.15), hold, drift up and fade out (0.6→1).
+    // Quick pop (0→0.15), hold on the cell, stay fully visible in flight and
+    // vanish only in the last stretch as the score display swallows it.
     final appear = Curves.easeOut.transform(math.min(1, local / 0.15));
-    final fade = local < 0.6 ? 1.0 : 1.0 - (local - 0.6) / 0.4;
-    final rise = -18.0 * Curves.easeOut.transform(local);
-    final scale = (big ? 0.7 : 0.6) + 0.4 * appear;
+    final fade = local < 0.85 ? 1.0 : 1.0 - (local - 0.85) / 0.15;
+    // Slightly shrink while flying so the pill reads as "condensing" into the
+    // counter; no vertical drift — the layer owns the travel path.
+    final flight = local <= holdEnds ? 0.0 : (local - holdEnds) / (1 - holdEnds);
+    final scale = ((big ? 0.7 : 0.6) + 0.4 * appear) * (1.0 - 0.35 * flight);
     return Align(
       alignment: big ? Alignment.center : Alignment.topCenter,
       child: Transform.translate(
-        offset: Offset(0, big ? rise * 0.5 : -6 + rise),
+        offset: const Offset(0, -6),
         child: Opacity(
           opacity: (appear * fade).clamp(0.0, 1.0),
           child: Transform.scale(

@@ -115,6 +115,10 @@ class _GameActiveBodyState extends State<_GameActiveBody> with SingleTickerProvi
   final GlobalKey _rackKey = GlobalKey();
   final GlobalKey _avatarKey = GlobalKey();
 
+  /// Score-badge flight target for the player's points (the "Sen" pill); bot
+  /// badges fly to [_avatarKey].
+  final GlobalKey _playerScoreKey = GlobalKey();
+
   /// The match has finished but its final move may still be narrating; the
   /// result dialog is held until [_narration] drains (see [_onNarrationDrained]).
   bool _finishPending = false;
@@ -219,6 +223,7 @@ class _GameActiveBodyState extends State<_GameActiveBody> with SingleTickerProvi
                   botName: _kBotProfile.name,
                   botThinking: state.botThinking,
                   avatarKey: _avatarKey,
+                  playerScoreKey: _playerScoreKey,
                 ),
                 Expanded(
                   child: Padding(
@@ -228,6 +233,9 @@ class _GameActiveBodyState extends State<_GameActiveBody> with SingleTickerProvi
                     // The narration overlay stacks on top with the SAME cell math so
                     // its badges land on the right cells.
                     child: Stack(
+                      // Score badges fly OUT of the grid area up to the header
+                      // (the "Sen" pill / bot avatar) — don't clip them mid-path.
+                      clipBehavior: Clip.none,
                       children: [
                         GridPainter(
                           puzzle: state.puzzle,
@@ -265,6 +273,7 @@ class _GameActiveBodyState extends State<_GameActiveBody> with SingleTickerProvi
                               puzzle: state.puzzle,
                               rackKey: _rackKey,
                               botAvatarKey: _avatarKey,
+                              playerScoreKey: _playerScoreKey,
                             ),
                           ),
                         ),

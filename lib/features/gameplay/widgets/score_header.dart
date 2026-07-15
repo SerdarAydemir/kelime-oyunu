@@ -12,6 +12,7 @@ class ScoreHeader extends StatelessWidget {
     required this.botName,
     required this.botThinking,
     this.avatarKey,
+    this.playerScoreKey,
     super.key,
   });
 
@@ -20,8 +21,13 @@ class ScoreHeader extends StatelessWidget {
   final String botName;
   final bool botThinking;
 
-  /// Anchors the bot's letter-flight source to the avatar portrait (F6).
+  /// Anchors the bot's letter-flight source AND its score-badge target to the
+  /// avatar portrait (F6).
   final GlobalKey? avatarKey;
+
+  /// Anchors the player's score-badge target to the "Sen" pill: each score
+  /// badge flies here and the counter ticks as it arrives.
+  final GlobalKey? playerScoreKey;
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +40,7 @@ class ScoreHeader extends StatelessWidget {
           Expanded(
             child: Align(
               alignment: Alignment.centerLeft,
-              child: _ScorePill(label: 'Sen $playerScore'),
+              child: _ScorePill(key: playerScoreKey, label: 'Sen $playerScore'),
             ),
           ),
           const Text('VS', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
@@ -59,7 +65,7 @@ class ScoreHeader extends StatelessWidget {
 }
 
 class _ScorePill extends StatelessWidget {
-  const _ScorePill({required this.label});
+  const _ScorePill({required this.label, super.key});
 
   final String label;
 

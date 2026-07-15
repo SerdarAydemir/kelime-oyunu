@@ -18,6 +18,7 @@ class NarrationCue {
     required this.delta,
     required this.launchAt,
     required this.landAt,
+    required this.absorbAt,
     this.letter,
   });
 
@@ -37,8 +38,13 @@ class NarrationCue {
   /// cell-less bonus cues, which have no flight.
   final double launchAt;
 
-  /// When the badge pops and the score counter absorbs this cue (normalized).
+  /// When the badge pops on the cell (normalized).
   final double landAt;
+
+  /// When the badge — having flown to its owner's score display — is absorbed
+  /// and the counter ticks (normalized). The badge lives over [landAt,
+  /// absorbAt]: it holds on the cell first, then travels to the score.
+  final double absorbAt;
 }
 
 /// Maps a [MoveNarration] to an ordered list of [NarrationCue]s and the total
@@ -68,7 +74,11 @@ class NarrationTimeline {
   static const int _wordDelayMs = 350;
   static const int _wordStaggerMs = 250;
   static const int _rackDelayMs = 500;
-  static const int _tailMs = 500;
+
+  /// Badge lifetime after landing: it holds on the cell, then flies to the
+  /// owner's score display and is absorbed there (the counter ticks on arrival).
+  static const int _badgeMs = 600;
+  static const int _tailMs = 250;
   static const int _minTotalMs = 900;
 
   factory NarrationTimeline.build(MoveNarration narration) {
@@ -120,7 +130,7 @@ class NarrationTimeline {
 
     var maxMs = _minTotalMs - _tailMs;
     for (final r in raw) {
-      if (r.$5 > maxMs) maxMs = r.$5;
+      if (r.$5 + _badgeMs > maxMs) maxMs = r.$5 + _badgeMs;
     }
     final totalMs = maxMs + _tailMs;
 
@@ -132,18 +142,20 @@ class NarrationTimeline {
           delta: r.$3,
           launchAt: r.$4 / totalMs,
           landAt: r.$5 / totalMs,
+          absorbAt: (r.$5 + _badgeMs) / totalMs,
           letter: r.$1 == CueKind.letter ? letterByCell[r.$2.cell] : null,
         ),
     ];
     return NarrationTimeline._(cues, totalMs, _flightMs);
   }
 
-  /// Sum of every cue delta whose badge has already landed at [progress] — the
-  /// count-up value the score counter shows (never jumps: it steps per cue).
+  /// Sum of every cue delta whose badge has already been ABSORBED by the score
+  /// display at [progress] — the counter ticks exactly when its badge arrives,
+  /// so the number visibly "receives" each point (never jumps).
   int accumulatedDelta(double progress) {
     var sum = 0;
     for (final c in cues) {
-      if (c.landAt <= progress) sum += c.delta;
+      if (c.absorbAt <= progress) sum += c.delta;
     }
     return sum;
   }

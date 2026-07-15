@@ -26,6 +26,7 @@ class NarrationLayer extends StatefulWidget {
     required this.puzzle,
     required this.rackKey,
     required this.botAvatarKey,
+    this.playerScoreKey,
     super.key,
   });
 
@@ -33,6 +34,11 @@ class NarrationLayer extends StatefulWidget {
   final PuzzleData puzzle;
   final GlobalKey rackKey;
   final GlobalKey botAvatarKey;
+
+  /// Where a player badge flies to be absorbed (the "Sen" score pill). Bot
+  /// badges fly to [botAvatarKey]. Null (tests without a header) → no flight,
+  /// badges just fade in place.
+  final GlobalKey? playerScoreKey;
 
   @override
   State<NarrationLayer> createState() => _NarrationLayerState();
@@ -42,11 +48,8 @@ class _NarrationLayerState extends State<NarrationLayer> {
   /// Stable anchor for global→local conversion of the flight sources.
   final GlobalKey _gridBoxKey = GlobalKey();
 
-  /// Normalized on-screen lifespan of one badge (fraction of the narration).
-  static const double _badgeLife = 0.42;
-
-  /// Normalized lifespan of a word-completion frame — longer than a badge so
-  /// the highlight lingers while its point badges cascade.
+  /// Normalized lifespan of a word-completion frame — long enough that the
+  /// highlight lingers while its "+N" badge flies off to the score.
   static const double _frameLife = 0.5;
 
   NarrationController get controller => widget.controller;
@@ -84,17 +87,24 @@ class _NarrationLayerState extends State<NarrationLayer> {
     return match.isEmpty ? const [] : match.first.cells;
   }
 
-  /// Source point (rack or bot avatar) in this overlay's grid-box coordinates,
-  /// or null while a key is not yet laid out (fall back to no flight).
-  Offset? _sourceLocal(NarrationActor? actor) {
-    final key = actor == NarrationActor.bot ? widget.botAvatarKey : widget.rackKey;
+  /// Centre of the widget behind [key] in this overlay's grid-box coordinates,
+  /// or null while it is not laid out.
+  Offset? _anchorLocal(GlobalKey? key) {
     final gridObj = _gridBoxKey.currentContext?.findRenderObject();
-    final srcObj = key.currentContext?.findRenderObject();
+    final srcObj = key?.currentContext?.findRenderObject();
     if (gridObj is! RenderBox || srcObj is! RenderBox) return null;
     if (!gridObj.hasSize || !srcObj.hasSize) return null;
     final srcGlobal = srcObj.localToGlobal(srcObj.size.center(Offset.zero));
     return gridObj.globalToLocal(srcGlobal);
   }
+
+  /// Source point of a flying LETTER (rack / bot portrait).
+  Offset? _sourceLocal(NarrationActor? actor) =>
+      _anchorLocal(actor == NarrationActor.bot ? widget.botAvatarKey : widget.rackKey);
+
+  /// Target a score badge flies to: the owner's score display.
+  Offset? _scoreTargetLocal(NarrationActor? actor) =>
+      _anchorLocal(actor == NarrationActor.bot ? widget.botAvatarKey : widget.playerScoreKey);
 
   /// Evaluation pulses: as each letter cue lands, its cell flashes a coloured
   /// border (green correct / red wrong) so the one-by-one scoring beat has a
@@ -108,7 +118,10 @@ class _NarrationLayerState extends State<NarrationLayer> {
       final cue = timeline.cues[i];
       final cellPos = cue.event.cell;
       if (cue.kind != CueKind.letter || cellPos == null) continue;
-      final local = (progress - cue.landAt) / _badgeLife;
+      // The pulse lives on the cell while the badge holds there (before it
+      // flies off to the score), so the flash and the pill read as one beat.
+      final window = (cue.absorbAt - cue.landAt) * NarrationBadge.holdEnds;
+      final local = window <= 0 ? 1.1 : (progress - cue.landAt) / window;
       if (local < 0 || local > 1) continue;
       pulses.add(
         Positioned(
@@ -204,15 +217,29 @@ class _NarrationLayerState extends State<NarrationLayer> {
     if (timeline == null) return const [];
     final progress = controller.progress;
     final widgets = <Widget>[];
+    final target = _scoreTargetLocal(controller.currentActor);
     for (var i = 0; i < timeline.cues.length; i++) {
       final cue = timeline.cues[i];
       final anchor = _anchorCell(cue);
-      final local = (progress - cue.landAt) / _badgeLife;
+      final span = cue.absorbAt - cue.landAt;
+      final local = span <= 0 ? 2.0 : (progress - cue.landAt) / span;
       if (local < 0 || local > 1 || anchor == null) continue;
+      // Phase 1 (hold): the badge pops and sits on its cell. Phase 2 (fly):
+      // it travels to the owner's score display and is absorbed on arrival —
+      // the exact moment the counter ticks (absorbAt drives accumulatedDelta).
+      final cellOrigin = Offset(anchor.col * cell, anchor.row * cell);
+      var origin = cellOrigin;
+      if (target != null && local > NarrationBadge.holdEnds) {
+        final t = (local - NarrationBadge.holdEnds) / (1 - NarrationBadge.holdEnds);
+        final eased = Curves.easeInCubic.transform(t.clamp(0.0, 1.0));
+        // Aim the badge's centre at the score display's centre.
+        final targetOrigin = target - Offset(cell / 2, cell / 2);
+        origin = Offset.lerp(cellOrigin, targetOrigin, eased)!;
+      }
       widgets.add(
         Positioned(
-          left: anchor.col * cell,
-          top: anchor.row * cell,
+          left: origin.dx,
+          top: origin.dy,
           width: cell,
           height: cell,
           child: NarrationBadge(
