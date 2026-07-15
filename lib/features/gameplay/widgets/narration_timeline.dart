@@ -61,13 +61,13 @@ class NarrationTimeline {
   final int flightMs;
 
   // Rhythm (real ms). Steps are wide enough that each letter's score reads as
-  // its own beat (~300 ms), keeping a 4-letter move inside the ~2 s budget.
-  static const int _stepMs = 300;
+  // its own beat (~450 ms), keeping a 4-letter move around the ~2 s budget.
+  static const int _stepMs = 450;
   static const int _evalDelayMs = 150;
   static const int _flightMs = 500;
-  static const int _wordDelayMs = 300;
-  static const int _wordStaggerMs = 150;
-  static const int _rackDelayMs = 450;
+  static const int _wordDelayMs = 350;
+  static const int _wordStaggerMs = 250;
+  static const int _rackDelayMs = 500;
   static const int _tailMs = 500;
   static const int _minTotalMs = 900;
 
@@ -103,15 +103,13 @@ class NarrationTimeline {
       final land = start + (isBot ? _flightMs : _evalDelayMs);
       raw.add((CueKind.letter, letters[i], letters[i].delta, isBot ? start : land, land));
     }
-    // Split each word bonus into one +1 cue per point so the frame's badges
-    // cascade across the word and the counter steps letter by letter.
+    // One cue per completed word: the frame lights the whole word up and a
+    // single "+N" badge carries the full bonus (a per-point +1 cascade read as
+    // noise). Multiple completed words still fire one after another.
     var wordCursor = lastLandMs + _wordDelayMs;
     for (final e in words) {
-      final count = e.wordBonus ?? e.delta;
-      for (var k = 0; k < count; k++) {
-        raw.add((CueKind.wordBonus, e, 1, wordCursor, wordCursor));
-        wordCursor += _wordStaggerMs;
-      }
+      raw.add((CueKind.wordBonus, e, e.wordBonus ?? e.delta, wordCursor, wordCursor));
+      wordCursor += _wordStaggerMs;
     }
     var rackCursor = lastLandMs + _rackDelayMs;
     if (wordCursor > rackCursor) rackCursor = wordCursor + 80;

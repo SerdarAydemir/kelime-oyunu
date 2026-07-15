@@ -190,11 +190,15 @@ void main() {
     await tester.pump();
 
     var sawFrame = false;
-    for (var i = 0; i < 60; i++) {
+    var sawTotalBadge = false;
+    for (var i = 0; i < 80; i++) {
       await tester.pump(const Duration(milliseconds: 30));
       if (find.byKey(const ValueKey('frame_w1')).evaluate().isNotEmpty) sawFrame = true;
+      // The word bonus is ONE "+3" badge over the lit word, never three +1s.
+      if (find.text('+3').evaluate().isNotEmpty) sawTotalBadge = true;
     }
     expect(sawFrame, isTrue, reason: 'expected a word-completion frame to appear');
+    expect(sawTotalBadge, isTrue, reason: 'expected a single +3 total badge');
 
     await tester.pumpAndSettle();
     expect(find.text('P6'), findsOneWidget); // 3 letters + 3 word bonus

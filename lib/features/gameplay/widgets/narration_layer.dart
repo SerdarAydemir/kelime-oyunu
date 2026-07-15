@@ -204,12 +204,9 @@ class _NarrationLayerState extends State<NarrationLayer> {
     if (timeline == null) return const [];
     final progress = controller.progress;
     final widgets = <Widget>[];
-    final wordSeen = <String, int>{}; // per-word cue index → which cell to anchor
     for (var i = 0; i < timeline.cues.length; i++) {
       final cue = timeline.cues[i];
-      // Advance the per-word index even for not-yet-visible cues so each point
-      // keeps a stable cell as the cascade plays.
-      final anchor = _anchorCell(cue, wordSeen);
+      final anchor = _anchorCell(cue);
       final local = (progress - cue.landAt) / _badgeLife;
       if (local < 0 || local > 1 || anchor == null) continue;
       widgets.add(
@@ -222,7 +219,8 @@ class _NarrationLayerState extends State<NarrationLayer> {
             text: _label(cue),
             color: _color(cue),
             local: local,
-            big: cue.kind == CueKind.rackBonus,
+            // Bonuses (word total "+N", rack empty) read as headlines.
+            big: cue.kind != CueKind.letter,
             key: ValueKey('badge_${cue.landAt}_$i'),
           ),
         ),
@@ -231,16 +229,15 @@ class _NarrationLayerState extends State<NarrationLayer> {
     return widgets;
   }
 
-  /// The cell a cue's badge floats above. Word-bonus points cascade across the
-  /// word's cells (index tracked in [wordSeen]); a rack bonus sits at centre.
-  WordCell? _anchorCell(NarrationCue cue, Map<String, int> wordSeen) {
+  /// The cell a cue's badge floats above: the letter's own cell, the middle of
+  /// a completed word (its single "+N" badge sits over the lit frame), or the
+  /// grid centre for a rack-empty bonus.
+  WordCell? _anchorCell(NarrationCue cue) {
     if (cue.event.cell != null) return cue.event.cell;
     if (cue.kind == CueKind.wordBonus && cue.event.completedWordId != null) {
-      final id = cue.event.completedWordId!;
-      final cells = _wordCells(id);
-      final index = wordSeen.update(id, (v) => v + 1, ifAbsent: () => 0);
+      final cells = _wordCells(cue.event.completedWordId!);
       if (cells.isEmpty) return null;
-      return cells[math.min(index, cells.length - 1)];
+      return cells[cells.length ~/ 2];
     }
     return WordCell(row: puzzle.grid.rows ~/ 2, col: puzzle.grid.cols ~/ 2);
   }
