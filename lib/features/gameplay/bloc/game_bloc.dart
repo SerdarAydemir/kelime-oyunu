@@ -53,9 +53,17 @@ class GameBloc extends Bloc<GameEvent, GameState> {
   // Monotonic narration id: lets the UI detect a fresh move to narrate even
   // when two consecutive moves produce byte-identical events (§move_narration).
   int _narrationSeq = 0;
+  // Refill is DEFERRED to the end of the bot's reply (F6): the player's rack
+  // keeps its spent/empty look while the exchange narrates, and fresh letters
+  // (plus any returned wrong ones) arrive only after the bot has played.
+  bool _refillPending = false;
+  List<String> _deferredReturns = const [];
 
   Future<void> _onPuzzleLoadRequested(PuzzleLoadRequested event, Emitter<GameState> emit) async {
     emit(const GameLoading());
+    // A replay reuses this bloc: drop any refill deferred by an earlier match.
+    _refillPending = false;
+    _deferredReturns = const [];
     try {
       final puzzle = await _puzzleRepo.loadPuzzle(event.puzzleId);
       _solutionByCell = buildSolutionByCell(puzzle);
@@ -145,19 +153,16 @@ class GameBloc extends Bloc<GameEvent, GameState> {
       rackStartCount: current.rack.length,
     );
     final newBoard = result.updatedBoard;
+    // No refill here: the rack stays spent-looking while the exchange plays
+    // out, and _onBotMoveCompleted deals the new letters (with any returned
+    // wrong ones) after the bot's move — so fresh tiles arrive last (F6).
+    _refillPending = true;
+    _deferredReturns = result.returnedLetters;
     final afterMove = current.copyWith(
       board: newBoard,
-      rack: _rackManager.refill(
-        currentRack: current.rack,
-        puzzle: current.puzzle,
-        board: newBoard,
-        returnedLetters: result.returnedLetters,
-        seed: _nextSeed(),
-        targetSize: current.rackSize,
-      ),
       pendingPlacements: const [],
       playerScore: current.playerScore + result.scoreDelta,
-      selectedRackIndex: -1, // the refill may shrink the rack — drop the index
+      selectedRackIndex: -1, // placed tiles are gone — drop the index
       narration: MoveNarration(
         id: _narrationSeq++,
         actor: NarrationActor.player,
@@ -190,17 +195,32 @@ class GameBloc extends Bloc<GameEvent, GameState> {
       rackStartCount: 0,
     );
     final newBoard = result.updatedBoard;
-    // Clear transient flags (Karar 2/3), then refresh every tile the bot's
-    // move just killed: deadness is permanent (the board only fills up), so
-    // the player must never carry unplayable letters into their turn.
+    // Clear transient flags (Karar 2/3) from the previous turn, then deal the
+    // DEFERRED refill (queued by _onMoveConfirmed): new letters and returned
+    // wrong ones arrive only now, after the bot has played (F6). Refilling
+    // against the post-bot board also makes the demand-aware deal sharper.
     final resetRack = [for (final t in current.rack) RackTile(letter: t.letter)];
+    final dealtRack = _refillPending
+        ? _rackManager.refill(
+            currentRack: resetRack,
+            puzzle: current.puzzle,
+            board: newBoard,
+            returnedLetters: _deferredReturns,
+            seed: _nextSeed(),
+            targetSize: current.rackSize,
+          )
+        : resetRack;
+    _refillPending = false;
+    _deferredReturns = const [];
+    // Refresh every tile the bot's move just killed: deadness is permanent
+    // (the board only fills up), so the player never starts a turn stuck.
     final playableRack = _rackManager.ensurePlayable(
-      currentRack: resetRack,
+      currentRack: dealtRack,
       puzzle: current.puzzle,
       board: newBoard,
       seed: _nextSeed(),
     );
-    if (!identical(playableRack, resetRack)) {
+    if (!identical(playableRack, dealtRack)) {
       debugPrint('Dead rack tiles refreshed after bot move.');
     }
     final afterBot = current.copyWith(

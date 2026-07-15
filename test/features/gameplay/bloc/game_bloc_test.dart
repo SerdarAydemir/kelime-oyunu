@@ -584,6 +584,68 @@ void main() {
     );
   });
 
+  group('deferred refill (F6)', () {
+    // Fresh letters must arrive only AFTER the bot has replied: the player's
+    // rack keeps its spent look through the whole exchange narration.
+    blocTest<GameBloc, GameState>(
+      'holds the spent rack through the exchange and refills with the bot move',
+      build: () {
+        stubResolveMove(
+          const MoveResult(
+            placements: [Placement(cell: _cell11, letter: 'Z', expected: 'K')],
+            events: [ScoreEvent(cell: _cell11, delta: -1)],
+            scoreDelta: -1,
+            updatedBoard: {},
+            returnedLetters: ['Z'],
+            completedWordIds: [],
+            rackEmptied: false,
+            rackEmptyBonus: 0,
+          ),
+        );
+        stubRefill();
+        stubComputeMove();
+        stubEnsurePlayable();
+        return buildBloc();
+      },
+      seed: () => _activeState(
+        rack: const [
+          RackTile(letter: 'Z'),
+          RackTile(letter: 'B'),
+        ],
+        pending: const [Placement(cell: _cell11, letter: 'Z', expected: 'K')],
+      ),
+      act: (bloc) => bloc.add(const MoveConfirmed()),
+      wait: const Duration(milliseconds: 50),
+      expect: () => [
+        // The resolved move rides straight into the bot's thinking state with
+        // the SPENT rack untouched — no refill yet.
+        isA<GameActive>().having((s) => s.botThinking, 'botThinking', true).having(
+          (s) => [for (final t in s.rack) t.letter],
+          'rack',
+          ['Z', 'B'],
+        ),
+        // The deferred refill lands together with the bot's resolved move.
+        isA<GameActive>()
+            .having((s) => s.phase, 'phase', TurnPhase.playerTurn)
+            .having((s) => s.rack, 'rack', _defaultRack),
+      ],
+      verify: (_) {
+        final captured = verify(
+          () => rackManager.refill(
+            currentRack: any(named: 'currentRack'),
+            puzzle: any(named: 'puzzle'),
+            board: any(named: 'board'),
+            returnedLetters: captureAny(named: 'returnedLetters'),
+            seed: any(named: 'seed'),
+            targetSize: any(named: 'targetSize'),
+          ),
+        ).captured;
+        // Exactly one refill, and it carries the wrong letter back to the rack.
+        expect(captured.single, ['Z']);
+      },
+    );
+  });
+
   group('MoveNarration tagging (F6)', () {
     // The resolved move is tagged for the UI score story: actor, events, and
     // placements mirror the ScoreEngine output (scoring itself is unchanged).
