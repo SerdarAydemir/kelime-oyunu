@@ -184,3 +184,6 @@ Her yeni görev geldiğinde şu sırayı bozmadan uygula:
   +1 harf slotu (mock reklam kapısı)
 - Talep-bilinçli rack ✅ — hedef hücresi olmayan taş verilmez, ölü taş
   yenileme, oyun sonu rack küçülmesi
+- F7: kalıcılık + resume + level-select ✅ — şifreli Hive (`progress`,
+  `active_session`), tur-sınırı flush + lifecycle flush, `/levels` giriş
+  ekranı. Kararlar ve save-scum ödünleşimi: `docs/F7_PLAN.md`.
