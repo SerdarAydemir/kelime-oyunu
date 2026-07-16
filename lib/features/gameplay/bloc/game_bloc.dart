@@ -5,6 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:kelime_oyunu/core/errors/app_exception.dart';
 import 'package:kelime_oyunu/data/models/puzzle.dart';
+import 'package:kelime_oyunu/data/repositories/progress_repository.dart';
 import 'package:kelime_oyunu/data/repositories/puzzle_repository.dart';
 import 'package:kelime_oyunu/features/gameplay/bloc/game_event.dart';
 import 'package:kelime_oyunu/features/gameplay/bloc/game_state.dart';
@@ -25,7 +26,9 @@ class GameBloc extends Bloc<GameEvent, GameState> {
     required this._botEngine,
     required this._puzzleRepo,
     this._seed = 0,
-  }) : super(const GameInitial()) {
+    ProgressRepository? progressRepo,
+  }) : _progressRepo = progressRepo ?? InMemoryProgressRepository(),
+       super(const GameInitial()) {
     on<PuzzleLoadRequested>(_onPuzzleLoadRequested);
     on<LetterPlaced>(_onLetterPlaced);
     on<LetterRecalled>(_onLetterRecalled);
@@ -42,6 +45,9 @@ class GameBloc extends Bloc<GameEvent, GameState> {
   final ScoreEngine _scoreEngine;
   final RackManager _rackManager;
   final BotEngine _botEngine;
+  // Optional by design: unwired blocs (every existing unit test) get their own
+  // volatile progress, so nothing here can reach the disk unless main() says so.
+  final ProgressRepository _progressRepo;
   final int _seed;
   // Bot identity (UI reads name/avatar) and the puzzle's global difficulty index.
   final BotProfile botProfile;
@@ -171,7 +177,7 @@ class GameBloc extends Bloc<GameEvent, GameState> {
       ),
     );
     if (isBoardComplete(current.puzzle, newBoard)) {
-      emit(_finish(afterMove));
+      emit(await _finish(afterMove));
       return;
     }
     await _runBotTurn(afterMove, emit);
@@ -183,7 +189,7 @@ class GameBloc extends Bloc<GameEvent, GameState> {
     await _runBotTurn(current, emit);
   }
 
-  void _onBotMoveCompleted(BotMoveCompleted event, Emitter<GameState> emit) {
+  Future<void> _onBotMoveCompleted(BotMoveCompleted event, Emitter<GameState> emit) async {
     final current = state;
     if (current is! GameActive) return;
     // The bot has no rack, so rackStartCount: 0 disables the empty-rack bonus;
@@ -238,7 +244,7 @@ class GameBloc extends Bloc<GameEvent, GameState> {
         placements: result.placements,
       ),
     );
-    emit(isBoardComplete(current.puzzle, newBoard) ? _finish(afterBot) : afterBot);
+    emit(isBoardComplete(current.puzzle, newBoard) ? await _finish(afterBot) : afterBot);
   }
 
   Future<void> _onLettersSwapped(LettersSwapped event, Emitter<GameState> emit) async {
@@ -317,7 +323,12 @@ class GameBloc extends Bloc<GameEvent, GameState> {
     emit(current.copyWith(selectedRackIndex: event.rackIndex));
   }
 
-  GameActive _finish(GameActive snapshot) {
+  /// Resolves the terminal status and persists its consequences *before* the
+  /// finished state is emitted (architecture.md §11.2: write first, then paint).
+  ///
+  /// Only a win advances progression — the existing hard-progression rule is
+  /// unchanged here, it is merely written down now.
+  Future<GameActive> _finish(GameActive snapshot) async {
     final GameStatus status;
     if (snapshot.playerScore > snapshot.botScore) {
       status = GameStatus.won;
@@ -325,6 +336,9 @@ class GameBloc extends Bloc<GameEvent, GameState> {
       status = GameStatus.lost;
     } else {
       status = GameStatus.tie;
+    }
+    if (status == GameStatus.won) {
+      await _progressRepo.recordWin(snapshot.puzzle.puzzleId);
     }
     return snapshot.copyWith(phase: TurnPhase.finished, botThinking: false, status: status);
   }

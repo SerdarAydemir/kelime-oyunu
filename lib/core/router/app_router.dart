@@ -2,15 +2,16 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import 'package:kelime_oyunu/data/repositories/progress_repository.dart';
 import 'package:kelime_oyunu/features/gameplay/view/game_screen.dart';
 
 /// Centralised route configuration (architecture.md §8).
 ///
-/// Every [GoRoute.builder] currently returns a [_PlaceholderScreen]. Replace
-/// each builder with the real screen widget as the corresponding feature is
-/// implemented.
+/// A factory rather than a static `final`: the gameplay route needs the
+/// persistence repositories that `main()` builds after Hive is open, and
+/// widget tests need to hand in volatile fakes.
 abstract final class AppRouter {
-  static final GoRouter router = GoRouter(
+  static GoRouter build({required ProgressRepository progressRepo}) => GoRouter(
     initialLocation: '/',
     routes: [
       GoRoute(path: '/', builder: (context, state) => const _QuickStartScreen()),
@@ -34,7 +35,7 @@ abstract final class AppRouter {
           // forces a fresh Element — otherwise GoRouter reuses the GameScreen
           // Element and its BlocProvider keeps the previous level's GameBloc,
           // leaving the board stuck on the finished puzzle.
-          return GameScreen(key: ValueKey(levelId), puzzleId: levelId);
+          return GameScreen(key: ValueKey(levelId), puzzleId: levelId, progressRepo: progressRepo);
         },
       ),
       GoRoute(

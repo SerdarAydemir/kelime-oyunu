@@ -8,6 +8,7 @@ import 'package:kelime_oyunu/core/constants/app_dimensions.dart';
 import 'package:kelime_oyunu/core/constants/app_typography.dart';
 import 'package:kelime_oyunu/core/constants/game_constants.dart';
 import 'package:kelime_oyunu/data/models/puzzle.dart';
+import 'package:kelime_oyunu/data/repositories/progress_repository.dart';
 import 'package:kelime_oyunu/data/repositories/puzzle_repository.dart';
 import 'package:kelime_oyunu/features/gameplay/bloc/game_bloc.dart';
 import 'package:kelime_oyunu/features/gameplay/bloc/game_event.dart';
@@ -37,9 +38,12 @@ const _kBotProfile = BotProfile(
 
 /// Entry point widget. Creates the [GameBloc] and provides it to the subtree.
 class GameScreen extends StatelessWidget {
-  const GameScreen({required this.puzzleId, super.key});
+  const GameScreen({required this.puzzleId, required this.progressRepo, super.key});
 
   final int puzzleId;
+
+  /// Persists the win that unlocks the next level (F7).
+  final ProgressRepository progressRepo;
 
   @override
   Widget build(BuildContext context) {
@@ -51,6 +55,7 @@ class GameScreen extends StatelessWidget {
         botEngine: const BotEngine(),
         botProfile: _kBotProfile,
         puzzleIndex: puzzleId - 1,
+        progressRepo: progressRepo,
       )..add(PuzzleLoadRequested(puzzleId)),
       child: _GameBody(puzzleId: puzzleId),
     );
