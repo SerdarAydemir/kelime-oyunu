@@ -10,6 +10,7 @@ import 'package:kelime_oyunu/core/constants/game_constants.dart';
 import 'package:kelime_oyunu/data/models/puzzle.dart';
 import 'package:kelime_oyunu/data/repositories/progress_repository.dart';
 import 'package:kelime_oyunu/data/repositories/puzzle_repository.dart';
+import 'package:kelime_oyunu/data/repositories/session_repository.dart';
 import 'package:kelime_oyunu/features/gameplay/bloc/game_bloc.dart';
 import 'package:kelime_oyunu/features/gameplay/bloc/game_event.dart';
 import 'package:kelime_oyunu/features/gameplay/bloc/game_state.dart';
@@ -38,12 +39,25 @@ const _kBotProfile = BotProfile(
 
 /// Entry point widget. Creates the [GameBloc] and provides it to the subtree.
 class GameScreen extends StatelessWidget {
-  const GameScreen({required this.puzzleId, required this.progressRepo, super.key});
+  const GameScreen({
+    required this.puzzleId,
+    required this.progressRepo,
+    required this.sessionRepo,
+    this.resume = false,
+    super.key,
+  });
 
   final int puzzleId;
 
   /// Persists the win that unlocks the next level (F7).
   final ProgressRepository progressRepo;
+
+  /// Stores the half-played match for resume (F7).
+  final SessionRepository sessionRepo;
+
+  /// Whether to continue the saved match rather than start [puzzleId] fresh.
+  /// Falls back to a fresh game when no matching record exists.
+  final bool resume;
 
   @override
   Widget build(BuildContext context) {
@@ -56,10 +70,46 @@ class GameScreen extends StatelessWidget {
         botProfile: _kBotProfile,
         puzzleIndex: puzzleId - 1,
         progressRepo: progressRepo,
-      )..add(PuzzleLoadRequested(puzzleId)),
-      child: _GameBody(puzzleId: puzzleId),
+        sessionRepo: sessionRepo,
+      )..add(resume ? SessionResumeRequested(puzzleId) : PuzzleLoadRequested(puzzleId)),
+      child: _SessionFlushListener(child: _GameBody(puzzleId: puzzleId)),
     );
   }
+}
+
+/// Writes the match down when the app leaves the foreground.
+///
+/// The bloc already persists at every turn boundary, so this is a safety net
+/// for the states in between — and the only hook that fires when the OS is
+/// about to kill the process (architecture.md §11.2).
+class _SessionFlushListener extends StatefulWidget {
+  const _SessionFlushListener({required this.child});
+
+  final Widget child;
+
+  @override
+  State<_SessionFlushListener> createState() => _SessionFlushListenerState();
+}
+
+class _SessionFlushListenerState extends State<_SessionFlushListener> {
+  late final AppLifecycleListener _listener;
+
+  @override
+  void initState() {
+    super.initState();
+    _listener = AppLifecycleListener(onPause: _flush, onDetach: _flush);
+  }
+
+  void _flush() => context.read<GameBloc>().add(const SessionFlushRequested());
+
+  @override
+  void dispose() {
+    _listener.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) => widget.child;
 }
 
 /// Reads [GameBloc] from context; drives the [BlocConsumer] and routing.

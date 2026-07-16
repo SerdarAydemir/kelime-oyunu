@@ -24,6 +24,24 @@ class PuzzleLoadRequested extends GameEvent {
   List<Object?> get props => [puzzleId];
 }
 
+/// The player chose to continue the half-played match on [levelId].
+///
+/// Falls back to a fresh game if there is no saved match, or if the saved one
+/// belongs to a different level.
+class SessionResumeRequested extends GameEvent {
+  const SessionResumeRequested(this.levelId);
+
+  final int levelId;
+
+  @override
+  List<Object?> get props => [levelId];
+}
+
+/// The app is going to the background; write the match down now.
+class SessionFlushRequested extends GameEvent {
+  const SessionFlushRequested();
+}
+
 /// The player dropped the rack tile at [rackIndex] onto [cell].
 class LetterPlaced extends GameEvent {
   const LetterPlaced({required this.rackIndex, required this.cell});

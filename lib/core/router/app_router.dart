@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import 'package:kelime_oyunu/data/repositories/progress_repository.dart';
+import 'package:kelime_oyunu/data/repositories/session_repository.dart';
 import 'package:kelime_oyunu/features/gameplay/view/game_screen.dart';
 
 /// Centralised route configuration (architecture.md §8).
@@ -11,7 +12,10 @@ import 'package:kelime_oyunu/features/gameplay/view/game_screen.dart';
 /// persistence repositories that `main()` builds after Hive is open, and
 /// widget tests need to hand in volatile fakes.
 abstract final class AppRouter {
-  static GoRouter build({required ProgressRepository progressRepo}) => GoRouter(
+  static GoRouter build({
+    required ProgressRepository progressRepo,
+    required SessionRepository sessionRepo,
+  }) => GoRouter(
     initialLocation: '/',
     routes: [
       GoRoute(path: '/', builder: (context, state) => const _QuickStartScreen()),
@@ -35,7 +39,15 @@ abstract final class AppRouter {
           // forces a fresh Element — otherwise GoRouter reuses the GameScreen
           // Element and its BlocProvider keeps the previous level's GameBloc,
           // leaving the board stuck on the finished puzzle.
-          return GameScreen(key: ValueKey(levelId), puzzleId: levelId, progressRepo: progressRepo);
+          // ?resume=true continues the saved match instead of restarting it.
+          final resume = state.uri.queryParameters['resume'] == 'true';
+          return GameScreen(
+            key: ValueKey(levelId),
+            puzzleId: levelId,
+            progressRepo: progressRepo,
+            sessionRepo: sessionRepo,
+            resume: resume,
+          );
         },
       ),
       GoRoute(

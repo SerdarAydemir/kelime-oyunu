@@ -7,9 +7,11 @@ import 'package:kelime_oyunu/core/errors/app_exception.dart';
 import 'package:kelime_oyunu/data/models/puzzle.dart';
 import 'package:kelime_oyunu/data/repositories/progress_repository.dart';
 import 'package:kelime_oyunu/data/repositories/puzzle_repository.dart';
+import 'package:kelime_oyunu/data/repositories/session_repository.dart';
 import 'package:kelime_oyunu/features/gameplay/bloc/game_event.dart';
 import 'package:kelime_oyunu/features/gameplay/bloc/game_state.dart';
 import 'package:kelime_oyunu/features/gameplay/bloc/move_narration.dart';
+import 'package:kelime_oyunu/features/gameplay/bloc/session_codec.dart';
 import 'package:kelime_oyunu/features/gameplay/engine/board_ops.dart';
 import 'package:kelime_oyunu/features/gameplay/engine/bot_engine.dart';
 import 'package:kelime_oyunu/features/gameplay/engine/rack_manager.dart';
@@ -27,9 +29,13 @@ class GameBloc extends Bloc<GameEvent, GameState> {
     required this._puzzleRepo,
     this._seed = 0,
     ProgressRepository? progressRepo,
+    SessionRepository? sessionRepo,
   }) : _progressRepo = progressRepo ?? InMemoryProgressRepository(),
+       _sessionRepo = sessionRepo ?? InMemorySessionRepository(),
        super(const GameInitial()) {
     on<PuzzleLoadRequested>(_onPuzzleLoadRequested);
+    on<SessionResumeRequested>(_onSessionResumeRequested);
+    on<SessionFlushRequested>(_onSessionFlushRequested);
     on<LetterPlaced>(_onLetterPlaced);
     on<LetterRecalled>(_onLetterRecalled);
     on<MoveConfirmed>(_onMoveConfirmed);
@@ -46,8 +52,9 @@ class GameBloc extends Bloc<GameEvent, GameState> {
   final RackManager _rackManager;
   final BotEngine _botEngine;
   // Optional by design: unwired blocs (every existing unit test) get their own
-  // volatile progress, so nothing here can reach the disk unless main() says so.
+  // volatile storage, so nothing here can reach the disk unless main() says so.
   final ProgressRepository _progressRepo;
+  final SessionRepository _sessionRepo;
   final int _seed;
   // Bot identity (UI reads name/avatar) and the puzzle's global difficulty index.
   final BotProfile botProfile;
@@ -80,7 +87,9 @@ class GameBloc extends Bloc<GameEvent, GameState> {
         rackSize: RackManager.baseRackSize,
         seed: _nextSeed(),
       );
-      emit(
+      // Saving the opening position too: the record always describes the match
+      // in flight, so starting a new level also retires the previous one's.
+      await _emitAndSave(
         GameActive(
           puzzle: puzzle,
           board: board,
@@ -94,10 +103,63 @@ class GameBloc extends Bloc<GameEvent, GameState> {
           rackSize: RackManager.baseRackSize,
           revealedWordIds: const {},
         ),
+        emit,
       );
     } on PuzzleNotFoundException catch (e) {
       emit(GameError(e.message));
     }
+  }
+
+  /// Restores the half-played match for [event.levelId], or starts it fresh if
+  /// no usable record exists.
+  Future<void> _onSessionResumeRequested(
+    SessionResumeRequested event,
+    Emitter<GameState> emit,
+  ) async {
+    final saved = _sessionRepo.load();
+    if (saved == null || saved.levelId != event.levelId) {
+      await _onPuzzleLoadRequested(PuzzleLoadRequested(event.levelId), emit);
+      return;
+    }
+    emit(const GameLoading());
+    _refillPending = false;
+    _deferredReturns = const [];
+    try {
+      // The puzzle is an asset, not part of the record: reload it by id (§K4).
+      final puzzle = await _puzzleRepo.loadPuzzle(saved.levelId);
+      _solutionByCell = buildSolutionByCell(puzzle);
+      emit(stateFromSession(saved, puzzle));
+    } on PuzzleNotFoundException catch (e) {
+      // The record points at a puzzle this build no longer ships: drop it
+      // rather than stranding the player on an error screen forever.
+      await _sessionRepo.clear();
+      emit(GameError(e.message));
+    }
+  }
+
+  /// Lifecycle flush (onPause / onDetach): the last chance to write before the
+  /// OS may kill us. A no-op unless the player is mid-match and to move.
+  Future<void> _onSessionFlushRequested(
+    SessionFlushRequested event,
+    Emitter<GameState> emit,
+  ) async {
+    final current = state;
+    if (current is GameActive) await _saveIfResumable(current);
+  }
+
+  /// Persists [next] *before* emitting it (architecture.md §11.2: write first,
+  /// then paint), so a kill between the two can never lose the move.
+  Future<void> _emitAndSave(GameActive next, Emitter<GameState> emit) async {
+    await _saveIfResumable(next);
+    emit(next);
+  }
+
+  /// Writes [snapshot] only at a resumable moment: the player is to move and
+  /// the match is live. Mid-turn states (pending letters, the bot thinking)
+  /// are not resume points — see F7 plan §K6 for the save-scumming trade-off.
+  Future<void> _saveIfResumable(GameActive snapshot) async {
+    if (snapshot.phase != TurnPhase.playerTurn || snapshot.status != GameStatus.playing) return;
+    await _sessionRepo.save(sessionFromState(snapshot));
   }
 
   void _onLetterPlaced(LetterPlaced event, Emitter<GameState> emit) {
@@ -244,7 +306,13 @@ class GameBloc extends Bloc<GameEvent, GameState> {
         placements: result.placements,
       ),
     );
-    emit(isBoardComplete(current.puzzle, newBoard) ? await _finish(afterBot) : afterBot);
+    // The main resume point: the bot has replied and the turn is the player's
+    // again, so this is exactly the position a restart should come back to.
+    if (isBoardComplete(current.puzzle, newBoard)) {
+      emit(await _finish(afterBot));
+    } else {
+      await _emitAndSave(afterBot, emit);
+    }
   }
 
   Future<void> _onLettersSwapped(LettersSwapped event, Emitter<GameState> emit) async {
@@ -269,13 +337,15 @@ class GameBloc extends Bloc<GameEvent, GameState> {
     );
     // Ad-paid swap keeps the turn; the free swap costs it (§1.5).
     if (event.viaAd) {
-      emit(next);
+      // Still the player's turn, but the quota is spent — persist it so a
+      // restart cannot hand the jokers back.
+      await _emitAndSave(next, emit);
       return;
     }
     await _runBotTurn(next, emit);
   }
 
-  void _onWordRevealed(WordRevealed event, Emitter<GameState> emit) {
+  Future<void> _onWordRevealed(WordRevealed event, Emitter<GameState> emit) async {
     final current = state;
     if (current is! GameActive) return;
     if (!current.puzzle.words.any((w) => w.id == event.wordId)) return;
@@ -283,10 +353,14 @@ class GameBloc extends Bloc<GameEvent, GameState> {
     // on still-empty, playable cells); it does NOT commit letters to the board.
     // The player still places real tiles to score, so the board can only be
     // completed — and the game finished — through a real move (§1.5).
-    emit(current.copyWith(revealedWordIds: {...current.revealedWordIds, event.wordId}));
+    // Persisted: a revealed word is a spent joker, it must stay revealed.
+    await _emitAndSave(
+      current.copyWith(revealedWordIds: {...current.revealedWordIds, event.wordId}),
+      emit,
+    );
   }
 
-  void _onSixthSlotUnlocked(SixthSlotUnlocked event, Emitter<GameState> emit) {
+  Future<void> _onSixthSlotUnlocked(SixthSlotUnlocked event, Emitter<GameState> emit) async {
     final current = state;
     if (current is! GameActive) return;
     if (current.rackSize >= RackManager.powerUpRackSize) return;
@@ -296,8 +370,10 @@ class GameBloc extends Bloc<GameEvent, GameState> {
       rackSize: 1,
       seed: _nextSeed(),
     );
-    emit(
+    // Persisted: the slot was paid for, a restart must not take it back.
+    await _emitAndSave(
       current.copyWith(rack: [...current.rack, ...extra], rackSize: RackManager.powerUpRackSize),
+      emit,
     );
   }
 
@@ -340,6 +416,9 @@ class GameBloc extends Bloc<GameEvent, GameState> {
     if (status == GameStatus.won) {
       await _progressRepo.recordWin(snapshot.puzzle.puzzleId);
     }
+    // The match is over however it ended: there is nothing left to resume, and
+    // a stale record would offer "Devam Et" into a finished board.
+    await _sessionRepo.clear();
     return snapshot.copyWith(phase: TurnPhase.finished, botThinking: false, status: status);
   }
 }

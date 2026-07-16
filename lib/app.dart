@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 import 'package:kelime_oyunu/core/router/app_router.dart';
 import 'package:kelime_oyunu/core/theme/app_theme.dart';
 import 'package:kelime_oyunu/data/repositories/progress_repository.dart';
+import 'package:kelime_oyunu/data/repositories/session_repository.dart';
 
 /// Root widget of the Kelime Oyunu application.
 ///
@@ -12,10 +13,13 @@ import 'package:kelime_oyunu/data/repositories/progress_repository.dart';
 /// Feature-level BlocProviders are added here incrementally as each feature
 /// is scaffolded (skills.md §8 steps 2–5).
 class KelimeOyunuApp extends StatefulWidget {
-  const KelimeOyunuApp({required this.progressRepo, super.key});
+  const KelimeOyunuApp({required this.progressRepo, required this.sessionRepo, super.key});
 
   /// Persisted level progression, opened by `main()` before the first frame.
   final ProgressRepository progressRepo;
+
+  /// The half-played match store, opened by `main()` before the first frame.
+  final SessionRepository sessionRepo;
 
   @override
   State<KelimeOyunuApp> createState() => _KelimeOyunuAppState();
@@ -23,7 +27,10 @@ class KelimeOyunuApp extends StatefulWidget {
 
 class _KelimeOyunuAppState extends State<KelimeOyunuApp> {
   // Built once and held: rebuilding a GoRouter would reset the navigation stack.
-  late final GoRouter _router = AppRouter.build(progressRepo: widget.progressRepo);
+  late final GoRouter _router = AppRouter.build(
+    progressRepo: widget.progressRepo,
+    sessionRepo: widget.sessionRepo,
+  );
 
   @override
   Widget build(BuildContext context) {

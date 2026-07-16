@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'package:kelime_oyunu/app.dart';
 import 'package:kelime_oyunu/data/repositories/progress_repository.dart';
+import 'package:kelime_oyunu/data/repositories/session_repository.dart';
 import 'package:kelime_oyunu/data/sources/secure_hive.dart';
 
 // TODO: Firebase.initializeApp() — FAZ 6'da eklenecek
@@ -15,6 +16,12 @@ Future<void> main() async {
   await SecureHive.init();
   final cipher = await SecureHive.cipher();
   final progressBox = await SecureHive.openEncryptedBox(HiveProgressRepository.boxName, cipher);
+  final sessionBox = await SecureHive.openEncryptedBox(HiveSessionRepository.boxName, cipher);
 
-  runApp(KelimeOyunuApp(progressRepo: HiveProgressRepository(progressBox)));
+  runApp(
+    KelimeOyunuApp(
+      progressRepo: HiveProgressRepository(progressBox),
+      sessionRepo: HiveSessionRepository(sessionBox),
+    ),
+  );
 }
