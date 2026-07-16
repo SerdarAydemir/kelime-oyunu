@@ -4,9 +4,6 @@ import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:kelime_oyunu/core/constants/app_dimensions.dart';
-import 'package:kelime_oyunu/core/constants/app_typography.dart';
-import 'package:kelime_oyunu/core/constants/game_constants.dart';
 import 'package:kelime_oyunu/data/models/puzzle.dart';
 import 'package:kelime_oyunu/data/repositories/progress_repository.dart';
 import 'package:kelime_oyunu/data/repositories/puzzle_repository.dart';
@@ -20,6 +17,7 @@ import 'package:kelime_oyunu/features/gameplay/engine/score_engine.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/action_bar.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/clue_sheet.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/grid_painter.dart';
+import 'package:kelime_oyunu/features/gameplay/widgets/level_top_bar.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/narration_controller.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/narration_layer.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/narration_tiles.dart';
@@ -247,6 +245,11 @@ class _GameActiveBodyState extends State<_GameActiveBody> with SingleTickerProvi
           Navigator.of(dialogContext).pop();
           router.go('/gameplay/${widget.puzzleId + 1}');
         },
+        // Back to the grid, where the win is now reflected as unlocked.
+        onLevels: () {
+          Navigator.of(dialogContext).pop();
+          router.go('/levels');
+        },
       ),
     );
   }
@@ -260,15 +263,13 @@ class _GameActiveBodyState extends State<_GameActiveBody> with SingleTickerProvi
           SafeArea(
             child: Column(
               children: [
-                // Lightweight progress label. Kept above ScoreHeader as its own
-                // centred child so it never disturbs the "VS" centring in the header.
-                // Minimal top padding so the grid below claims the most vertical room.
-                Padding(
-                  padding: const EdgeInsets.only(top: AppDimensions.spacingXxs),
-                  child: Text(
-                    'Bölüm ${widget.puzzleId} / $kLastLevelId',
-                    style: AppTypography.caption,
-                  ),
+                // Progress label + the way out. Kept above ScoreHeader as its
+                // own child so it never disturbs the "VS" centring in the header.
+                LevelTopBar(
+                  levelId: widget.puzzleId,
+                  // Leaving is safe: the match is saved at every turn boundary
+                  // and comes back as "Devam Et" on the grid.
+                  onExit: () => context.go('/levels'),
                 ),
                 ScoreHeader(
                   // Lagging display scores: the counter walks up as the narration

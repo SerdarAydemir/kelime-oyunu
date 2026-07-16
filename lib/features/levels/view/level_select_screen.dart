@@ -84,19 +84,49 @@ class _ProgressLine extends StatelessWidget {
 /// A lazy [GridView.builder]: only the visible tiles are built, so the widget
 /// count stays bounded. (The no-widgets-per-cell rule of ADR-0004 governs the
 /// game board's repaint budget; this is a static, scrollable list.)
-class _LevelGrid extends StatelessWidget {
+class _LevelGrid extends StatefulWidget {
   const _LevelGrid({required this.state});
 
   final LevelSelectState state;
 
   @override
+  State<_LevelGrid> createState() => _LevelGridState();
+}
+
+class _LevelGridState extends State<_LevelGrid> {
+  /// Owned here, not built in `build`: a controller created per rebuild would
+  /// leak and would yank the grid back to the frontier on every repaint.
+  late final ScrollController _controller;
+
+  LevelSelectState get state => widget.state;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    // Built once, here rather than in initState: the initial offset needs the
+    // screen width, and MediaQuery is only reachable once dependencies resolve.
+    // Runs before the first build, so _controller is always ready in time.
+    if (_built) return;
+    _built = true;
+    // Scroll straight to the frontier: with 200 levels, a returning player
+    // should not have to hunt for the one level they can actually play.
+    _controller = ScrollController(
+      initialScrollOffset: _initialOffset(MediaQuery.sizeOf(context).width),
+    );
+  }
+
+  bool _built = false;
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return GridView.builder(
-      // Scroll straight to the frontier: with 200 levels, a returning player
-      // should not have to hunt for the one level they can actually play.
-      controller: ScrollController(
-        initialScrollOffset: _initialOffset(MediaQuery.sizeOf(context).width),
-      ),
+      controller: _controller,
       gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
         maxCrossAxisExtent: _tileExtent,
         mainAxisSpacing: AppDimensions.spacingS,

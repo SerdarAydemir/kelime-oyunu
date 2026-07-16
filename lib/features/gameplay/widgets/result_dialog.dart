@@ -24,6 +24,7 @@ class ResultDialog extends StatelessWidget {
     required this.levelId,
     required this.onReplay,
     required this.onNext,
+    required this.onLevels,
     super.key,
   });
 
@@ -40,6 +41,11 @@ class ResultDialog extends StatelessWidget {
   /// a non-final level — the button is hidden on a loss, a tie, or the final
   /// level — but kept non-null so the caller's wiring stays uniform.
   final VoidCallback onNext;
+
+  /// Leaves for the level grid ("Bölümler"). Always available: with the system
+  /// back gesture disabled here, this is the player's only way out of a
+  /// finished board that they do not want to replay.
+  final VoidCallback onLevels;
 
   bool get _isLastLevel => levelId >= kLastLevelId;
 
@@ -92,6 +98,7 @@ class ResultDialog extends StatelessWidget {
           ],
         ),
         actions: [
+          TextButton(onPressed: onLevels, child: const Text('Bölümler')),
           TextButton(onPressed: onReplay, child: const Text('Tekrar Oyna')),
           if (_canAdvance) FilledButton(onPressed: onNext, child: const Text('Sonraki Bölüm')),
         ],

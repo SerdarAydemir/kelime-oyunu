@@ -1,6 +1,9 @@
 # F7 — İlerleme Kalıcılığı + Yarım Maç Resume + Level-Select
 
-Durum: plan (bu doküman) → 4 fazda uygulanır. Referans: `architecture.md §11`, `CLAUDE.md`.
+Durum: **uygulandı** (4 faz, 4 commit). Referans: `architecture.md §11`, `CLAUDE.md`.
+Sonuç: `flutter analyze` 0 hata, 160 test geçiyor (baseline 118 + 42 yeni), debug APK derleniyor.
+Bu ortamda tanımlı Android emülatörü yok (`flutter emulators` boş) → doğrulama testlerle yapıldı;
+elle bakılması gereken senaryolar dönüş raporunda listelendi.
 
 ## 1. Teşhis — bugün ne oluyor?
 

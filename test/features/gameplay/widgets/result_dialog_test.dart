@@ -15,6 +15,7 @@ void main() {
     int levelId = 5,
     VoidCallback? onReplay,
     VoidCallback? onNext,
+    VoidCallback? onLevels,
   }) {
     return MaterialApp(
       home: Scaffold(
@@ -26,6 +27,7 @@ void main() {
           levelId: levelId,
           onReplay: onReplay ?? () {},
           onNext: onNext ?? () {},
+          onLevels: onLevels ?? () {},
         ),
       ),
     );
@@ -108,6 +110,25 @@ void main() {
       await tester.pump();
       expect(next, 1);
       expect(replay, 1);
+    });
+
+    testWidgets('offers the level grid on every outcome — back is disabled here', (tester) async {
+      for (final status in [GameStatus.won, GameStatus.lost, GameStatus.tie]) {
+        await tester.pumpWidget(harness(status: status, levelId: 5));
+        expect(find.text('Bölümler'), findsOneWidget, reason: 'no way out of a $status board');
+      }
+    });
+
+    testWidgets('fires onLevels when the grid button is tapped', (tester) async {
+      var levels = 0;
+      await tester.pumpWidget(
+        harness(status: GameStatus.lost, levelId: 5, onLevels: () => levels++),
+      );
+
+      await tester.tap(find.text('Bölümler'));
+      await tester.pump();
+
+      expect(levels, 1);
     });
   });
 }
