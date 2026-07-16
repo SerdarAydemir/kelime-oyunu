@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 import 'package:kelime_oyunu/data/repositories/progress_repository.dart';
 import 'package:kelime_oyunu/data/repositories/session_repository.dart';
 import 'package:kelime_oyunu/features/gameplay/view/game_screen.dart';
+import 'package:kelime_oyunu/features/levels/view/level_select_screen.dart';
 
 /// Centralised route configuration (architecture.md §8).
 ///
@@ -16,9 +17,16 @@ abstract final class AppRouter {
     required ProgressRepository progressRepo,
     required SessionRepository sessionRepo,
   }) => GoRouter(
-    initialLocation: '/',
+    initialLocation: '/levels',
     routes: [
-      GoRoute(path: '/', builder: (context, state) => const _QuickStartScreen()),
+      // The app opens on the level grid, never straight into a match: the
+      // player picks up where they left off (F7).
+      GoRoute(path: '/', redirect: (context, state) => '/levels'),
+      GoRoute(
+        path: '/levels',
+        builder: (context, state) =>
+            LevelSelectScreen(progressRepo: progressRepo, sessionRepo: sessionRepo),
+      ),
       GoRoute(
         path: '/consent',
         builder: (context, state) => const _PlaceholderScreen(label: 'Consent'),
@@ -84,29 +92,4 @@ class _PlaceholderScreen extends StatelessWidget {
       body: Center(child: Text(label, style: Theme.of(context).textTheme.headlineMedium)),
     );
   }
-}
-
-/// Temporary quick-start screen: shows a spinner and immediately navigates
-/// to puzzle #1. Replaced by the real splash + menu flow in a later phase.
-class _QuickStartScreen extends StatefulWidget {
-  const _QuickStartScreen();
-
-  @override
-  State<_QuickStartScreen> createState() => _QuickStartScreenState();
-}
-
-class _QuickStartScreenState extends State<_QuickStartScreen> {
-  @override
-  void initState() {
-    super.initState();
-    // Temporary: jump straight into the game.
-    // Real splash → consent → menu → packs flow comes in a later phase.
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      if (mounted) context.go('/gameplay/1');
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) =>
-      const Scaffold(body: Center(child: CircularProgressIndicator()));
 }
