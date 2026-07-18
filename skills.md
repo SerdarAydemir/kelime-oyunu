@@ -10,6 +10,24 @@
 
 # 
 
+# > \*\*GÜNCEL DURUM (2026-07, bu dosyanın üstünde tutulur):\*\* Bu manifesto ilk tasarım niyetidir;
+
+# > ürün evrildi. Kaynak-doğruluk = \*\*CLAUDE.md\*\*. Bilinen sapmalar:
+
+# > • Oyun \*\*günlük eşleşme DEĞİL\*\*, 200 sıralı bölüm (Bölüm X/200); sert ilerleme, bot zorluğu
+
+# >   bölüm no'sundan türer. `matchmaking` feature'ı yok.
+
+# > • Grid tek boyut \*\*9×7 tam-çerçeve\*\*; §3.2'deki 3-boyut uygulanmadı.
+
+# > • Resume box adı \*\*`active_session`\*\* (§6'da geçen `active_game` bayat isimdir).
+
+# > • Yapıldı ama burada yazmıyor: drag&drop, F6 puan-anlatısı/harf-uçuşu, level-select.
+
+# > • Sıradaki içerik işi: P1 re-clue (clue kalitesi).
+
+# 
+
 # \---
 
 # 
@@ -112,7 +130,7 @@
 
 # \- Türkçe karakterler tam destekli (Ç, Ş, Ğ, İ, I, Ö, Ü).
 
-# \- 3 boyut: small 6×5, medium 8×6, large 10×7.
+# \- \*\*Grid: tek boyut 9×7 tam-çerçeve\*\* (üretimde uygulanan). 3-boyut (small/medium/large) tasarımı GERÇEKLEŞMEDİ.
 
 # 
 
@@ -228,7 +246,7 @@
 
 # \## 6. Güvenlik ve Veri
 
-# \- Şifreli Hive box'lar (\*\*AES\*\*): `active\_game`, `progress`, `coin\_wallet`, `iap\_state`,
+# \- Şifreli Hive box'lar (\*\*AES\*\*): `active\_session` (eski ad: active\_game), `progress`, `coin\_wallet`, `iap\_state`,
 
 # &#x20; `ad\_state`. (`active\_game`/`progress` şifreli → save-scumming + skor hilesi önlemi.)
 

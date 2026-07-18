@@ -18,6 +18,30 @@
 
 # > \*\*terk edilmiştir\*\*. Korunan altyapı için bkz. §12 (Korunan/Atılan Kod).
 
+# >
+
+# > \*\*GÜNCEL DURUM (2026-07) — bu doküman ilk tasarımdır, ürün evrildi. Kaynak-doğruluk = `CLAUDE.md`.\*\*
+
+# > Aktif sapmalar (doküman gövdesi bunları HENÜZ yansıtmıyor):
+
+# > • \*\*İlerleme:\*\* "günlük eşleşme" (§1.1) DEĞİL — 200 sıralı bölüm, sert ilerleme, bot zorluğu
+
+# >   bölüm no'sundan türer. \*\*`matchmaking` feature'ı yok\*\* (§2/§9'daki referanslar hayali).
+
+# > • \*\*Grid:\*\* üretimde tek boyut \*\*9×7 tam-çerçeve\*\*; §1.2/§5.3'teki 3-boyut (6×5/8×6/10×7) ve
+
+# >   §5.7-5.8'deki "loose" model UYGULANMADI (strict tam-çerçeve kullanıldı).
+
+# > • \*\*Resume box adı `active_session`\*\* (§11'deki `active_game` değil). Codec: `session_codec.dart`.
+
+# > • \*\*Yapıldı, gövdede yok:\*\* drag&drop (`rack_widget`/`grid_painter`), F6 puan-anlatısı +
+
+# >   harf-uçuşu (`narration_*.dart`, zamanlama UI-tarafı, bloc gate'lenmez), level-select
+
+# >   (`features/levels/`, `/levels` giriş rotası).
+
+# > • \*\*Sıradaki içerik işi:\*\* P1 re-clue (clue kalitesi — bkz. memory `p1-reclue-diagnosis`).
+
 # 
 
 # \---

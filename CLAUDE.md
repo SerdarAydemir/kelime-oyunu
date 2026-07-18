@@ -173,17 +173,41 @@ Her yeni görev geldiğinde şu sırayı bozmadan uygula:
 - P0: placeholder gate ✅ (havuz önleme + runtime skip + rapor tespiti)
 - Efektif havuz: ~30k master-clue'lu kelime ∖ sensitive ∖ rejected
 
+**İlerleme modeli (ÖNEMLİ — skills.md/architecture.md'deki "günlük" bayat):**
+Oyun **günlük eşleşme değil, 200 sıralı bölüm** (Bölüm X / 200). Sert ilerleme:
+yalnız kazanınca sonraki bölüm açılır. Bot zorluğu bölüm numarasından türer
+(matchmaking feature'ı yok). Grid tek boyut: **9×7 tam-çerçeve** (3-boyut
+tasarımı uygulanmadı).
+
 **Flutter:**
 - F1: Data layer (PuzzleData, repository) ✅
 - F2: Engines (ScoreEngine, RackManager, BotEngine) ✅
 - F3: GameBloc ✅
 - F4: GridPainter + GameScreen ✅ — fit-to-screen grid, ipucu render
-  (tam metin auto-fit, kenar okları, çift-ipucu okunabilirliği, dokun-oku)
+  (tam metin auto-fit, kenar okları, çift-ipucu okunabilirliği, dokun-oku sheet)
 - Oyun sonu ekranı + sert ilerleme (kaybedince tekrar) ✅
 - Joker akışı ✅ — harf açma (reveal), harf değiştirme (kota + çift ödeme),
   +1 harf slotu (mock reklam kapısı)
 - Talep-bilinçli rack ✅ — hedef hücresi olmayan taş verilmez, ölü taş
   yenileme, oyun sonu rack küçülmesi
+- F5: Drag & drop ✅ — WYSIWYG yerleştirme (uçan tile görsel merkezine hizalı,
+  `feedbackOffset` ile alt-satır ölü bölgesi yok), pending harfi tek hamlede
+  başka hücreye taşıma, geçersiz→yerinde kal / grid dışı→rack'e dön. Tap akışı
+  korunur; bot turu/reveal/bitiş'te kapalı. `_GameActiveBody` içinde.
+- F6: Puan anlatısı + harf uçuşu ✅ — bloc çözülen hamleye `MoveNarration`
+  iliştirir (id'li), zamanlama tamamen UI-tarafı `NarrationController`'da
+  (bloc'un tur akışı gate'lenmez, mevcut testler korunur). Oyuncu harfleri
+  yerinde değerlendirilir (uçmaz), bot harfleri avatardan uçar; skora uçan
+  rozetler + sayarak artan sayaç; kelime tamamlama altın çerçeve/ışıltı + tek
+  "+N"; yanlış harf hücreden rack'e uçarak döner; refill bot cevabına ertelenir;
+  ekrana dokun = 2× (iptal değil). `narration_*.dart` dosyaları.
 - F7: kalıcılık + resume + level-select ✅ — şifreli Hive (`progress`,
   `active_session`), tur-sınırı flush + lifecycle flush, `/levels` giriş
-  ekranı. Kararlar ve save-scum ödünleşimi: `docs/F7_PLAN.md`.
+  ekranı. Emülatörde soğuk-başlat (süreç öldür → box sağ çıkıyor) doğrulandı.
+  Kararlar ve save-scum ödünleşimi: `docs/F7_PLAN.md`.
+
+**Sıradaki (planlı, yapılmadı):**
+- **P1 re-clue** — ~2k kelimenin flash-lite clue'ları elden geçmeli; teşhiste
+  %15+ hatalı/zorlama (İDAME="ölüme mahkum", KERİME, MET, KAK gibi aktif
+  yanlışlar). ≤20kr bütçe + aile-uygunluk kriteri. Detay memory'de.
+- Ses/haptik cilası; gerçek SDK (AdMob/RevenueCat) entegrasyonu.
