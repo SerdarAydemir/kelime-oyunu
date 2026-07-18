@@ -59,19 +59,40 @@ class BotEngine {
   /// [scoreDiff] is `botScore - playerScore`; a positive gap (bot ahead) pulls
   /// the move count toward the band floor, a negative gap (bot behind) toward
   /// the ceiling (architecture.md §9.4).
+  ///
+  /// [reservedLetters] is the multiset of letters the player is holding in hand
+  /// (unplaced rack tiles). For each letter L the bot may fill at most
+  /// `max(0, emptyCells(L) - reservedLetters[L])` cells, keeping a cell open for
+  /// every tile the player could still play — this is a per-letter quota, not
+  /// word-level avoidance: everywhere else the bot plays normally. When a
+  /// letter's quota is exhausted the bot skips that letter's remaining cells
+  /// (it does not stop selecting; its word-completion priority is preserved).
+  ///
+  /// [ignoreReservations] drops the quota entirely so the bot fills the minimum
+  /// cells regardless — the stalemate escape hatch that guarantees the board
+  /// advances when reservations would otherwise freeze it.
   BotMove computeMove({
     required PuzzleData puzzle,
     required Map<WordCell, String> board,
     required int scoreDiff,
     required DifficultyBand difficultyBand,
     required int seed,
+    Map<String, int> reservedLetters = const {},
+    bool ignoreReservations = false,
   }) {
     final rng = Random(seed);
     final range = _bandRange(difficultyBand);
     final targetCount = _targetCount(range.min, range.max, scoreDiff);
 
     final solutionByCell = _solutionByCell(puzzle);
-    final cells = _prioritizedCells(puzzle, board, targetCount);
+    final cells = _prioritizedCells(
+      puzzle,
+      board,
+      solutionByCell,
+      targetCount,
+      ignoreReservations ? const {} : reservedLetters,
+      ignoreReservations,
+    );
 
     final placements = <Placement>[];
     for (final cell in cells) {
@@ -129,7 +150,38 @@ class BotEngine {
 
   // Selects up to [count] unsolved cells, preferring words closest to finished
   // (fewest missing cells first), so the bot tends to complete half-done words.
-  List<WordCell> _prioritizedCells(PuzzleData puzzle, Map<WordCell, String> board, int count) {
+  //
+  // [reservedLetters] caps how many cells of each solution letter the bot may
+  // take (see computeMove): a cell is skipped once its letter's quota is spent,
+  // reserving the rest for the player's held tiles. When [ignoreReservations] is
+  // set the cap is dropped and every unsolved cell is fair game.
+  List<WordCell> _prioritizedCells(
+    PuzzleData puzzle,
+    Map<WordCell, String> board,
+    Map<WordCell, String> solutionByCell,
+    int count,
+    Map<String, int> reservedLetters,
+    bool ignoreReservations,
+  ) {
+    // Per-letter remaining quota: botQuota(L) = max(0, emptyCells(L) - held(L)).
+    // The max(0, ...) clamp is defensive — the demand-aware rack keeps
+    // held(L) <= emptyCells(L), so it never actually goes negative today, but a
+    // future rack change that broke that invariant would clamp here instead of
+    // crashing. Empty when reservations are ignored (no cap applied at all).
+    final remainingQuota = <String, int>{};
+    if (!ignoreReservations) {
+      final emptyByLetter = <String, int>{};
+      for (final entry in solutionByCell.entries) {
+        if (board.containsKey(entry.key)) continue;
+        emptyByLetter.update(entry.value, (v) => v + 1, ifAbsent: () => 1);
+      }
+      for (final letterEntry in emptyByLetter.entries) {
+        final empty = letterEntry.value;
+        final held = reservedLetters[letterEntry.key] ?? 0;
+        remainingQuota[letterEntry.key] = (empty - held).clamp(0, empty);
+      }
+    }
+
     final ranked = <({WordSpec word, int missing})>[];
     for (final word in puzzle.words) {
       final missing = word.cells.where((c) => !board.containsKey(c)).length;
@@ -144,6 +196,14 @@ class BotEngine {
         if (selected.length >= count) break;
         if (board.containsKey(cell)) continue;
         if (!seen.add(cell)) continue; // skip cells already taken at a crossing
+        if (!ignoreReservations) {
+          final letter = solutionByCell[cell];
+          if (letter != null) {
+            final left = remainingQuota[letter] ?? 0;
+            if (left <= 0) continue; // quota spent: this letter is the player's
+            remainingQuota[letter] = left - 1;
+          }
+        }
         selected.add(cell);
       }
       if (selected.length >= count) break;
