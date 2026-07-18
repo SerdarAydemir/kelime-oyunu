@@ -71,12 +71,24 @@ class GameBloc extends Bloc<GameEvent, GameState> {
   // (plus any returned wrong ones) arrive only after the bot has played.
   bool _refillPending = false;
   List<String> _deferredReturns = const [];
+  // Stalemate guard for the reserve filter: the bot reserves the player's held
+  // letters, so a run of turns that neither side progresses could in theory
+  // freeze the board. We count consecutive full turns (player + bot) that leave
+  // the committed-cell total unchanged; after _stallLimit of them the next bot
+  // turn plays with reservations off (min cells, board guaranteed to advance).
+  // Normal aggressive play grows the board every turn, so this never fires.
+  static const int _stallLimit = 2;
+  int _stallCount = 0;
+  int _lastTurnBoardCount = 0;
 
   Future<void> _onPuzzleLoadRequested(PuzzleLoadRequested event, Emitter<GameState> emit) async {
     emit(const GameLoading());
     // A replay reuses this bloc: drop any refill deferred by an earlier match.
     _refillPending = false;
     _deferredReturns = const [];
+    // Fresh board: reset the stalemate accounting to an empty position.
+    _stallCount = 0;
+    _lastTurnBoardCount = 0;
     try {
       final puzzle = await _puzzleRepo.loadPuzzle(event.puzzleId);
       _solutionByCell = buildSolutionByCell(puzzle);
@@ -128,6 +140,10 @@ class GameBloc extends Bloc<GameEvent, GameState> {
       // The puzzle is an asset, not part of the record: reload it by id (§K4).
       final puzzle = await _puzzleRepo.loadPuzzle(saved.levelId);
       _solutionByCell = buildSolutionByCell(puzzle);
+      // Resume mid-board: seed the stalemate baseline from the restored board so
+      // the first turn back measures progress against it, not against empty.
+      _stallCount = 0;
+      _lastTurnBoardCount = saved.board.length;
       emit(stateFromSession(saved, puzzle));
     } on PuzzleNotFoundException catch (e) {
       // The record points at a puzzle this build no longer ships: drop it
@@ -263,6 +279,15 @@ class GameBloc extends Bloc<GameEvent, GameState> {
       rackStartCount: 0,
     );
     final newBoard = result.updatedBoard;
+    // Stalemate accounting: this is the end of a full turn (the player already
+    // moved before the bot). If the committed-cell total did not grow across the
+    // whole turn, the board stalled; otherwise reset. See _stallLimit above.
+    if (newBoard.length > _lastTurnBoardCount) {
+      _stallCount = 0;
+    } else {
+      _stallCount++;
+    }
+    _lastTurnBoardCount = newBoard.length;
     // Clear transient flags (Karar 2/3) from the previous turn, then deal the
     // DEFERRED refill (queued by _onMoveConfirmed): new letters and returned
     // wrong ones arrive only now, after the bot has played (F6). Refilling
@@ -380,12 +405,17 @@ class GameBloc extends Bloc<GameEvent, GameState> {
   // Computes the bot's move, shows the thinking phase, waits out the humanized
   // delay, then feeds the move back in. Shared by confirm / pass / swap.
   Future<void> _runBotTurn(GameActive current, Emitter<GameState> emit) async {
+    // Reserve the letters the player is still holding so the bot leaves a target
+    // cell open for each. On a stalled board, drop the reservation for this one
+    // turn so the bot fills the minimum and the game cannot lock up.
     final botMove = _botEngine.computeMove(
       puzzle: current.puzzle,
       board: current.board,
       scoreDiff: current.botScore - current.playerScore,
       difficultyBand: BotEngine.bandForPuzzleIndex(puzzleIndex),
       seed: _nextSeed(),
+      reservedLetters: heldLetters(current.rack),
+      ignoreReservations: _stallCount >= _stallLimit,
     );
     emit(current.copyWith(phase: TurnPhase.botThinking, botThinking: true));
     await Future<void>.delayed(Duration(milliseconds: botMove.thinkingDelayMs));

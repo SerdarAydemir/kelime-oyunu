@@ -109,6 +109,7 @@ void main() {
     registerFallbackValue(<RackTile>[]);
     registerFallbackValue(<String>[]);
     registerFallbackValue(<Placement>[]);
+    registerFallbackValue(<String, int>{});
     registerFallbackValue(DifficultyBand.easy);
   });
 
@@ -154,6 +155,8 @@ void main() {
         scoreDiff: any(named: 'scoreDiff'),
         difficultyBand: any(named: 'difficultyBand'),
         seed: any(named: 'seed'),
+        reservedLetters: any(named: 'reservedLetters'),
+        ignoreReservations: any(named: 'ignoreReservations'),
       ),
     ).thenReturn(const BotMove(placements: [], thinkingDelayMs: 0));
   });

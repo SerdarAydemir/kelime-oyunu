@@ -32,6 +32,19 @@ bool isBoardComplete(PuzzleData puzzle, Map<WordCell, String> board) {
   return true;
 }
 
+/// Multiset of letters the player is still holding: the unplaced rack tiles.
+///
+/// Fed to BotEngine.computeMove as `reservedLetters` so the bot keeps a target
+/// cell open for every tile the player could play (letter-level tile hiding).
+Map<String, int> heldLetters(List<RackTile> rack) {
+  final held = <String, int>{};
+  for (final tile in rack) {
+    if (tile.isPlaced) continue;
+    held.update(tile.letter, (v) => v + 1, ifAbsent: () => 1);
+  }
+  return held;
+}
+
 /// Marks rack tiles as placed to match [pending] letters, freeing the rest.
 ///
 /// Tiles are fungible by letter, so matching by letter (rather than by index)
