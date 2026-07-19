@@ -649,6 +649,89 @@ void main() {
     );
   });
 
+  group('reserved letters + stalemate guard (tile hiding)', () {
+    // The bot is handed the multiset of letters the player is still holding, so
+    // it can keep a target cell open for each. A duplicate proves it is counted.
+    blocTest<GameBloc, GameState>(
+      'passes the held-letter multiset to the bot as reservedLetters',
+      build: () {
+        stubResolveMove(_moveResult(scoreDelta: 0));
+        stubComputeMove();
+        stubEnsurePlayable();
+        return buildBloc();
+      },
+      seed: () => _activeState(
+        rack: const [
+          RackTile(letter: 'O'),
+          RackTile(letter: 'O'),
+          RackTile(letter: 'K'),
+          RackTile(letter: 'L'),
+          RackTile(letter: 'B'),
+        ],
+      ),
+      act: (bloc) => bloc.add(const MovePassed()),
+      wait: const Duration(milliseconds: 50),
+      verify: (_) {
+        final captured = verify(
+          () => botEngine.computeMove(
+            puzzle: any(named: 'puzzle'),
+            board: any(named: 'board'),
+            scoreDiff: any(named: 'scoreDiff'),
+            difficultyBand: any(named: 'difficultyBand'),
+            seed: any(named: 'seed'),
+            reservedLetters: captureAny(named: 'reservedLetters'),
+            ignoreReservations: any(named: 'ignoreReservations'),
+          ),
+        ).captured;
+        expect(captured.single, {'O': 2, 'K': 1, 'L': 1, 'B': 1});
+      },
+    );
+
+    // Two full turns without board progress flip the next bot turn to
+    // ignoreReservations (the escape hatch); a progressing turn resets the guard
+    // so reservations come straight back on. Board progress is faked through the
+    // stubbed resolveMove's updatedBoard.
+    blocTest<GameBloc, GameState>(
+      'unlocks the board after two stalls, then resets on progress',
+      build: () {
+        stubResolveMove(_moveResult(scoreDelta: 0, updatedBoard: const {}));
+        stubComputeMove();
+        stubEnsurePlayable();
+        return buildBloc();
+      },
+      seed: _activeState,
+      act: (bloc) async {
+        Future<void> passAndSettle() async {
+          bloc.add(const MovePassed());
+          await Future<void>.delayed(const Duration(milliseconds: 20));
+        }
+
+        await passAndSettle(); // no progress -> stall 1
+        await passAndSettle(); // no progress -> stall 2
+        // From here the board makes progress again.
+        stubResolveMove(
+          _moveResult(scoreDelta: 1, updatedBoard: {const WordCell(row: 1, col: 1): 'K'}),
+        );
+        await passAndSettle(); // stall >= 2: override fires; progress resets to 0
+        await passAndSettle(); // guard reset: reservations back on
+      },
+      verify: (_) {
+        final flags = verify(
+          () => botEngine.computeMove(
+            puzzle: any(named: 'puzzle'),
+            board: any(named: 'board'),
+            scoreDiff: any(named: 'scoreDiff'),
+            difficultyBand: any(named: 'difficultyBand'),
+            seed: any(named: 'seed'),
+            reservedLetters: any(named: 'reservedLetters'),
+            ignoreReservations: captureAny(named: 'ignoreReservations'),
+          ),
+        ).captured;
+        expect(flags, [false, false, true, false]);
+      },
+    );
+  });
+
   group('MoveNarration tagging (F6)', () {
     // The resolved move is tagged for the UI score story: actor, events, and
     // placements mirror the ScoreEngine output (scoring itself is unchanged).

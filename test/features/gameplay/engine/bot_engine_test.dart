@@ -18,6 +18,17 @@ void main() {
     buildWord(id: 'w1', answer: 'KİTAPÇI', startRow: 1, startCol: 1, direction: ClueArrow.down),
   ]);
 
+  // Two disjoint down words, each carrying exactly one O -> two empty O cells.
+  PuzzleData twoOPuzzle() => puzzleFromWords([
+    buildWord(id: 'kol', answer: 'KOL', startRow: 1, startCol: 1, direction: ClueArrow.down),
+    buildWord(id: 'top', answer: 'TOP', startRow: 1, startCol: 3, direction: ClueArrow.down),
+  ]);
+
+  // A single down word "KOL" -> exactly one empty O cell.
+  PuzzleData oneOPuzzle() => puzzleFromWords([
+    buildWord(id: 'kol', answer: 'KOL', startRow: 1, startCol: 1, direction: ClueArrow.down),
+  ]);
+
   group('BotEngine.computeMove move count', () {
     // ── 1 ──────────────────────────────────────────────────────────────────
     test('easy band at a tied score places at most 2 cells', () {
@@ -107,6 +118,87 @@ void main() {
       expect(move.placements.length, 1);
       // The only missing cell of word A is (1, 3).
       expect(move.placements.first.cell, const WordCell(row: 1, col: 3));
+    });
+  });
+
+  group('BotEngine.computeMove letter reservations', () {
+    int letterCount(BotMove move, String letter) =>
+        move.placements.where((p) => p.letter == letter).length;
+
+    // ── 9 ──────────────────────────────────────────────────────────────────
+    // 1 O held, 2 empty O cells -> quota 1 -> the bot takes exactly one O and
+    // leaves the other for the player. A ceiling move (hard, big deficit) wants
+    // every cell, so the single O is the reservation biting, not a low count.
+    test('holding one O leaves one of two O cells for the player', () {
+      final move = bot.computeMove(
+        puzzle: twoOPuzzle(),
+        board: const {},
+        scoreDiff: -50,
+        difficultyBand: DifficultyBand.hard,
+        seed: 10,
+        reservedLetters: const {'O': 1},
+      );
+      expect(letterCount(move, 'O'), 1);
+    });
+
+    // ── 10 ─────────────────────────────────────────────────────────────────
+    // 1 O held, only 1 empty O cell -> quota 0 -> the bot skips the O entirely
+    // while still playing the other letters.
+    test('holding the only O keeps the bot off that cell', () {
+      final move = bot.computeMove(
+        puzzle: oneOPuzzle(),
+        board: const {},
+        scoreDiff: -50,
+        difficultyBand: DifficultyBand.hard,
+        seed: 11,
+        reservedLetters: const {'O': 1},
+      );
+      expect(letterCount(move, 'O'), 0);
+      expect(move.placements.map((p) => p.letter), containsAll(['K', 'L']));
+    });
+
+    // ── 11 ─────────────────────────────────────────────────────────────────
+    // Holding more O than exist clamps the quota at 0 (max(0, ...)): no negative
+    // quota, no crash — the defensive clamp.
+    test('holding more copies than cells clamps the quota at zero', () {
+      final move = bot.computeMove(
+        puzzle: oneOPuzzle(),
+        board: const {},
+        scoreDiff: -50,
+        difficultyBand: DifficultyBand.hard,
+        seed: 12,
+        reservedLetters: const {'O': 3},
+      );
+      expect(letterCount(move, 'O'), 0);
+    });
+
+    // ── 12 ─────────────────────────────────────────────────────────────────
+    // Every letter reserved -> no cell is available -> the bot passes.
+    test('a fully reserved board yields an empty (passing) move', () {
+      final move = bot.computeMove(
+        puzzle: oneOPuzzle(),
+        board: const {},
+        scoreDiff: -50,
+        difficultyBand: DifficultyBand.hard,
+        seed: 13,
+        reservedLetters: const {'K': 1, 'O': 1, 'L': 1},
+      );
+      expect(move.placements, isEmpty);
+    });
+
+    // ── 13 ─────────────────────────────────────────────────────────────────
+    // The stalemate escape hatch ignores the reservations and fills anyway.
+    test('ignoreReservations fills despite a fully reserved board', () {
+      final move = bot.computeMove(
+        puzzle: oneOPuzzle(),
+        board: const {},
+        scoreDiff: -50,
+        difficultyBand: DifficultyBand.hard,
+        seed: 14,
+        reservedLetters: const {'K': 1, 'O': 1, 'L': 1},
+        ignoreReservations: true,
+      );
+      expect(move.placements, isNotEmpty);
     });
   });
 
