@@ -97,9 +97,22 @@ def generate(
         )
         raise typer.Exit(code=1)
 
+    # Fail fast: without the blacklist post_fill_safety would scan against an
+    # empty set and still stamp post_fill_scanned=true — a silent success,
+    # which CLAUDE.md forbids. The file is provided out-of-band (not in git).
+    if not _BLACKLIST_PATH.exists():
+        print(
+            f"Küfür kara listesi bulunamadı: {_BLACKLIST_PATH}. "
+            "Dosya olmadan post-fill güvenlik taraması anlamsızdır; "
+            "profanity_blacklist.txt dosyasını data/raw/ altına koy (bkz. README).",
+            file=sys.stderr,
+        )
+        raise typer.Exit(code=1)
+
     if not _POOL_PATH.exists():
         print(
-            f"Kelime havuzu bulunamadı: {_POOL_PATH}. Önce word_pool çalıştır.",
+            f"Kelime havuzu bulunamadı: {_POOL_PATH}. "
+            "Önce scripts/rebuild_pool_from_master.py çalıştır.",
             file=sys.stderr,
         )
         raise typer.Exit(code=1)
@@ -122,7 +135,7 @@ def generate(
         excluded=excluded,
         master_clue_answers=frozenset(master_clues),
     )
-    blacklist = load_blacklist(_BLACKLIST_PATH) if _BLACKLIST_PATH.exists() else set()
+    blacklist = load_blacklist(_BLACKLIST_PATH)
     puzzle_size = PuzzleSize(size)
 
     # Frame mask library: loaded from cache, or enumerated once (~30 s).

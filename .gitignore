@@ -154,6 +154,8 @@ tools/puzzle_generator/data/processed/*
 # Hand-curated / audit-accumulated label data is NOT derivable — keep in git
 # (unlike the downloaded tdk_words/blacklist and the derived pool/clue files).
 !tools/puzzle_generator/data/raw/sensitive_answers.txt
+# Provided out-of-band; `generate` refuses to run without it (no silent empty scan).
+!tools/puzzle_generator/data/raw/profanity_blacklist.txt
 !tools/puzzle_generator/data/processed/approved_words.json
 !tools/puzzle_generator/data/processed/rejected_words.json
 # Since the P2c audit these two carry hand-written clues and verdicts (the
