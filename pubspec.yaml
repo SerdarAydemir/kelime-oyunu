@@ -38,7 +38,7 @@ dependencies:
   go_router: ^18.0.1
 
   # Ads & monetisation (skills.md §6)
-  google_mobile_ads: ^8.0.0
+  google_mobile_ads: ^9.1.0
   # app_tracking_transparency — add via `flutter pub add` when ATT feature is built
   # purchases_flutter — add via `flutter pub add` when IAP feature is built
 
