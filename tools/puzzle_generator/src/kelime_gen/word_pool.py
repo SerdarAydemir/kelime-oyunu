@@ -1,4 +1,4 @@
-# tools/level_generator/src/kelime_gen/word_pool.py
+# tools/puzzle_generator/src/kelime_gen/word_pool.py
 """Cleans the raw TDK word list into a scored, profanity-free word pool.
 
 Pipeline (see architecture.md section 7.1):
