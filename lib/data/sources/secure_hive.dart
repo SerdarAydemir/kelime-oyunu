@@ -18,9 +18,9 @@ abstract final class SecureHive {
   /// Secure-storage entry holding the base64 AES key.
   static const String _keyEntry = 'hive_aes_key';
 
-  static const FlutterSecureStorage _storage = FlutterSecureStorage(
-    aOptions: AndroidOptions(encryptedSharedPreferences: true),
-  );
+  // v11 defaults: Android keys wrapped by the KeyStore (AES-GCM), no Jetpack
+  // EncryptedSharedPreferences backend any more — that option was removed.
+  static const FlutterSecureStorage _storage = FlutterSecureStorage();
 
   /// Prepares Hive for use. Call once, before opening any box.
   static Future<void> init() => Hive.initFlutter();
