@@ -36,8 +36,7 @@ Her yeni görev geldiğinde şu sırayı bozmadan uygula:
 **Yeni paket eklemeden önce gerekçe sun, onay bekle.** (`skills.md §2`)
 
 **Android build:** AGP 9 + built-in Kotlin (`android.builtInKotlin=true`);
-`app/build.gradle.kts` `kotlin-android` uygulamaz. Android dosyaları CRLF'li,
-`sed`/regex düzenlemelerinde `\r`'ı hesaba kat.
+`app/build.gradle.kts` `kotlin-android` uygulamaz.
 
 **Durum yönetimi:** Gameplay → `Bloc` (event-driven). Diğer her şey → `Cubit`. (`skills.md §3`, `architecture.md §3`)
 
