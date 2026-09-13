@@ -35,7 +35,14 @@ Her yeni görev geldiğinde şu sırayı bozmadan uygula:
 
 **Yeni paket eklemeden önce gerekçe sun, onay bekle.** (`skills.md §2`)
 
+**Android build:** AGP 9 + built-in Kotlin (`android.builtInKotlin=true`);
+`app/build.gradle.kts` `kotlin-android` uygulamaz. Android dosyaları CRLF'li,
+`sed`/regex düzenlemelerinde `\r`'ı hesaba kat.
+
 **Durum yönetimi:** Gameplay → `Bloc` (event-driven). Diğer her şey → `Cubit`. (`skills.md §3`, `architecture.md §3`)
+
+**Bağımlılık enjeksiyonu:** constructor injection (`AppRouter.build({required repos})`,
+`GameBloc({repos?})`). `get_it` pubspec'te yok; gerçekten gerekirse gerekçeyle eklenir.
 
 ---
 
@@ -78,6 +85,10 @@ Her yeni görev geldiğinde şu sırayı bozmadan uygula:
 - AES anahtarı: `flutter_secure_storage` → `SecureHive.cipher()`. (`architecture.md §5.4`)
 - **`allowBackup="false"`** AndroidManifest'te zorunlu — aksi hâlde reinstall çökmesi. Flutter projesi oluşturulduğunda ilk iş AndroidManifest'i ayarla. (`architecture.md §5.6`, `coding-standards.md §9.1`)
 - API key: `--dart-define` ile; kod içinde hardcode yasak. (`architecture.md §11.1`)
+- **Yayın sonrası `flutter_secure_storage` major atlaması yapılmaz;** her major
+  sırayla, migrasyon sürümü üzerinden geçilir (9→11 doğrudan atlandığında v9
+  verisi taşınmaz, AES anahtarı kaybolur, `openEncryptedBox` box'ı sıfırlar).
+  Yayın öncesi 9→11 atlaması bilinçli kabul edildi (2026-09-13).
 - Test AdMob ID production build'e sızmaması için `AdUnitIds.assertNoTestIdsInRelease()`. (`architecture.md §11.4`)
 
 ---
@@ -211,6 +222,10 @@ tasarımı uygulanmadı).
   `active_session`), tur-sınırı flush + lifecycle flush, `/levels` giriş
   ekranı. Emülatörde soğuk-başlat (süreç öldür → box sağ çıkıyor) doğrulandı.
   Kararlar ve save-scum ödünleşimi: `docs/F7_PLAN.md`.
+- Bağımlılık yükseltmesi (2026-09-13) ✅ — secure_storage 11, go_router 18,
+  firebase core-4 hattı, google_mobile_ads 9, built-in Kotlin, Impeller opt-out
+  kaldırıldı; Java 8 uyarısı kapandı, KGP uyarısı Flutter tarafında yanlış
+  pozitif (`docs/HANDOFF_DEPS.md`).
 - Bot rezervasyon kotası ✅ — `computeMove` harf-başına rezerv kotası + stalemate
   guard: oyuncunun elindeki harflerin multiset sayımı kadar hücre bot'a kapalı,
   böylece oyuncunun oynayabileceği taş bot tarafından kapılmaz; hiçbir hamle
@@ -221,11 +236,6 @@ tasarımı uygulanmadı).
   %15+ hatalı/zorlama (İDAME="ölüme mahkum", KERİME, MET, KAK gibi aktif
   yanlışlar). ≤20kr bütçe + aile-uygunluk kriteri. Detay memory'de.
 - Ses/haptik cilası; gerçek SDK (AdMob/RevenueCat) entegrasyonu.
-- **Android build uyarıları (Flutter 3.47):**
-  - `EnableImpeller=false` opt-out'u deprecated (`android/app/src/main/AndroidManifest.xml`);
-    emülatör GLES sorunu yeniden değerlendirilip meta-data kaldırılmalı.
-  - `firebase_*` paketleri iki major geride (KGP/Kotlin Gradle Plugin uyarısı);
-    `firebase_core`/`analytics`/`crashlytics`/`remote_config` birlikte yükseltilmeli.
-  - Java target 8 obsolete uyarısı: app modülü zaten 17; kaynak
-    `flutter_secure_storage` 9.2.4'ün Android modülü (`VERSION_1_8`) — paket
-    yükseltmesi gerekir.
+- Impeller altında GridPainter'ın emülatörde gözle doğrulanması
+  (`docs/HANDOFF_DEPS.md` kontrol listesi) — opt-out kaldırıldı, henüz
+  emülatörde görülmedi.
