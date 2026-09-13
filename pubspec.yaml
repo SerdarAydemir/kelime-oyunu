@@ -31,11 +31,11 @@ dependencies:
   hive: ^2.2.3
   hive_flutter: ^1.1.0
 
-  # Dependency injection
-  get_it: ^8.0.0
+  # Dependency injection: constructor injection only for now; add get_it
+  # (or similar) if a real service locator becomes necessary.
 
   # Navigation (go_router — architecture.md §8)
-  go_router: ^14.0.0
+  go_router: ^18.0.1
 
   # Ads & monetisation (skills.md §6)
   google_mobile_ads: ^8.0.0
