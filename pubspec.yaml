@@ -22,9 +22,9 @@ dependencies:
   flutter_bloc: ^9.0.0
 
   # Firebase
-  firebase_analytics: ^11.3.8
-  firebase_crashlytics: ^4.2.0
-  firebase_remote_config: ^5.4.0
+  firebase_analytics: ^12.5.0
+  firebase_crashlytics: ^5.3.0
+  firebase_remote_config: ^6.6.0
 
   # Local storage (Hive AES encrypted — architecture.md §5)
   flutter_secure_storage: ^11.1.1
