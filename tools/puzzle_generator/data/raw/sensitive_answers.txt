@@ -166,3 +166,14 @@ ULA
 
 # -- 7c. P2c delta audit (owner sign-off 2026-07-05) --
 MEZAR  # olum temasi, sahip karari
+
+# -- 8. P1 re-clue pack audit (owner sign-off 2026-09-13) --
+# Flash-lite kalıntı listesinde saptandı; aile-uygunluk gereği cevap olamaz.
+LİVATA
+NAZİZM
+SADİSTÇE
+KATLEDİŞ
+MAKTUL
+HARAKİRİ
+ÇİŞ
+LAVMAN

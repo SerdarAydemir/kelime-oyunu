@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-07-05T15:53:03.491494+00:00",
+  "generated_at": "2026-09-13T20:57:15.156307+00:00",
   "total_puzzles": 200,
   "puzzles": [
     {
@@ -161,7 +161,7 @@
       "size": "medium",
       "difficulty": "medium",
       "difficulty_score": 39,
-      "template_id": "medium_frame_204000080c00"
+      "template_id": "medium_frame_204000088200"
     },
     {
       "puzzle_id": 21,
@@ -233,7 +233,7 @@
       "size": "medium",
       "difficulty": "medium",
       "difficulty_score": 39,
-      "template_id": "medium_frame_400126480000"
+      "template_id": "medium_frame_400128038000"
     },
     {
       "puzzle_id": 30,
@@ -289,7 +289,7 @@
       "size": "medium",
       "difficulty": "medium",
       "difficulty_score": 39,
-      "template_id": "medium_frame_200c12080000"
+      "template_id": "medium_frame_200c1c000000"
     },
     {
       "puzzle_id": 37,
@@ -913,7 +913,7 @@
       "size": "medium",
       "difficulty": "medium",
       "difficulty_score": 39,
-      "template_id": "medium_frame_01840080c000"
+      "template_id": "medium_frame_018400308000"
     },
     {
       "puzzle_id": 115,
@@ -953,7 +953,7 @@
       "size": "medium",
       "difficulty": "medium",
       "difficulty_score": 39,
-      "template_id": "medium_frame_100210082100"
+      "template_id": "medium_frame_10020aa00000"
     },
     {
       "puzzle_id": 120,
@@ -1449,7 +1449,7 @@
       "size": "medium",
       "difficulty": "medium",
       "difficulty_score": 40,
-      "template_id": "medium_frame_098300000000"
+      "template_id": "medium_frame_092208000000"
     },
     {
       "puzzle_id": 182,
