@@ -13,6 +13,10 @@ analyzer:
     - lib/generated/**
     - '**/*.g.dart'
     - '**/*.freezed.dart'
+    - build/**
+    - android/**
+    - ios/**
+    - windows/**
 
 linter:
   rules:

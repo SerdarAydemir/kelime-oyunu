@@ -16,6 +16,8 @@ assets/puzzles_v3/
 # Miscellaneous
 *.class
 *.lock
+# Flutter apps commit their lock file (the glob above is for Python/other tooling).
+!/pubspec.lock
 *.log
 *.pyc
 *.swp
