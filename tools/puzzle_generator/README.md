@@ -27,9 +27,11 @@ koşullarıyla dağıtılır. 3 harfli girişlerin neden atıldığı script doc
 ölçümleriyle açıklanmıştır (yaygın Türkçe heceler: MAL, ANA, EMİ…; kısa cevaplar
 `sensitive_answers.txt` ile cevap düzeyinde kontrol edilir).
 
-Efektif havuz, `data/processed/master_clues.json` anahtarlarıdır: master clue'su
-olmayan kelime zaten üretime giremez (P0 placeholder gate), bu yüzden ham TDK
-listesine gerek yoktur. Cevap-düzeyi dışlamalar (`sensitive_answers.txt`,
+Efektif havuz, `data/processed/master_clues.json` anahtarlarının kalite-kapılı
+alt kümesidir: master clue'su olmayan kelime zaten üretime giremez (P0 placeholder
+gate), flash-lite (`gemini-2.5-flash-lite`) ipuçlu kelimeler ise Claude re-clue'dan
+geçene kadar havuz dışında tutulur (`--include-model` ile yalnız deney için açılır).
+Ham TDK listesine gerek yoktur. Cevap-düzeyi dışlamalar (`sensitive_answers.txt`,
 `rejected_words.json`) üretim anında uygulanır; havuz dosyasına yansımaz.
 
 ## Kullanım

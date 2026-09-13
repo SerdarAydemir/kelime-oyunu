@@ -142,8 +142,13 @@ Her yeni görev geldiğinde şu sırayı bozmadan uygula:
 - **Havuz kaynağı:** `word_pool_cleaned.json` git'te yok; `scripts/rebuild_pool_from_master.py`
   ile `master_clues.json` anahtarlarından türetilir (ham TDK listesi artık gerekmez,
   blacklist uygulanmaz — dışlamalar üretim anında `load_excluded_answers` ile).
-- **Blacklist zorunlu:** `data/raw/profanity_blacklist.txt` (git'te yok, ayrıca sağlanır)
-  yoksa `generate` açıklayıcı hata ile `Exit(1)` — boş set ile sessiz tarama yasak.
+- **Havuz kalite kapısı (2026-09-13):** havuz flash-lite (`model="gemini-2.5-flash-lite"`)
+  kelime içermez; `rebuild_pool_from_master.py` bunları varsayılan olarak dışlar
+  (~8.8k kelime; kuru koşu 200/200, ort. fallback 1.62, maks 48). Flash-lite bir
+  kelime ancak Claude re-clue'dan geçince (`source="claude_reclue"`, model alanı
+  değişir) havuza girer. `--include-model` yalnız deney içindir.
+- **Blacklist zorunlu:** `data/raw/profanity_blacklist.txt` (`scripts/build_blacklist.py` üretir,
+  git'te izlenir) yoksa `generate` açıklayıcı hata ile `Exit(1)` — boş set ile sessiz tarama yasak.
 - Post-fill küfür taraması zorunlu (`post_fill_safety.py`). `safety.post_fill_scanned = true` olmayan puzzle dosyaya yazılmaz. (`architecture.md §7.3`)
 - Hatalı puzzle: `SafetyGenerationError` fırlat, `sys.exit(1)` ile çık. Sessiz başarı yasak. (`coding-standards.md §8.7`)
 - Türkçe büyük/küçük harf: `tr_upper()` / `tr_lower()` helper'larını kullan, `str.upper()` değil. (`architecture.md §7.6`)
