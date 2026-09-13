@@ -23,6 +23,10 @@ from kelime_gen.mask_synth import (
     MaskSynthError,
     synthesize,
 )
+
+# v1 (8x6 loose model) archive synthesizer: superseded by mask_synth_frame for
+# production, and the whole module takes 20+ minutes. Opt-in via `pytest -m slow`.
+pytestmark = pytest.mark.slow
 from kelime_gen.mask_template import MaskTemplate
 from kelime_gen.schema import CellType, ClueArrow, PuzzleSize
 

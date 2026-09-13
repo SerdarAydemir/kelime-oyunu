@@ -40,3 +40,11 @@ mypy_path = ["src", "scripts"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["src"]
+# Slow tests (the v1 8x6 archive synthesizer, 20+ min) are opt-in:
+#   pytest            -> fast suite (default)
+#   pytest -m slow    -> only the slow tests
+#   pytest -m ""      -> everything
+addopts = "-m 'not slow'"
+markers = [
+    "slow: long-running tests excluded from the default run (use `pytest -m slow`)",
+]
