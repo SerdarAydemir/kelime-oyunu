@@ -177,3 +177,10 @@ MAKTUL
 HARAKİRİ
 ÇİŞ
 LAVMAN
+# Etnik köken politikası + mezhep/din adı ve mensubiyet (sahip onayı 2026-09-13)
+İBRANİ
+ŞİA
+Şİİ
+İSEVİLİK
+TAKİYE
+PAŞABABA
