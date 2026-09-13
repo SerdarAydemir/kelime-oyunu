@@ -1,0 +1,16 @@
+# Normalize line endings: every text file is stored as LF in the repo and
+# checked out as LF on every platform (the project moved from Windows to Linux).
+* text=auto eol=lf
+
+# Binary assets: never touch their bytes.
+*.png -text
+*.jpg -text
+*.jpeg -text
+*.gif -text
+*.webp -text
+*.ico -text
+*.ttf -text
+*.otf -text
+*.keystore -text
+*.jks -text
+*.jar -text
