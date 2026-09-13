@@ -129,13 +129,19 @@ Her yeni görev geldiğinde şu sırayı bozmadan uygula:
 - **Üretim sonrası doğrulama:** `pack_report.py` her pack'i diskten bağımsız
   yeniden okur (adet, köşe-blank, mask tekrarsızlığı, placeholder=0, kaynak/k
   dağılımları) ve `reports/generation_report_*.json` yazar.
+- **Havuz kaynağı:** `word_pool_cleaned.json` git'te yok; `scripts/rebuild_pool_from_master.py`
+  ile `master_clues.json` anahtarlarından türetilir (ham TDK listesi artık gerekmez,
+  blacklist uygulanmaz — dışlamalar üretim anında `load_excluded_answers` ile).
+- **Blacklist zorunlu:** `data/raw/profanity_blacklist.txt` (git'te yok, ayrıca sağlanır)
+  yoksa `generate` açıklayıcı hata ile `Exit(1)` — boş set ile sessiz tarama yasak.
 - Post-fill küfür taraması zorunlu (`post_fill_safety.py`). `safety.post_fill_scanned = true` olmayan puzzle dosyaya yazılmaz. (`architecture.md §7.3`)
 - Hatalı puzzle: `SafetyGenerationError` fırlat, `sys.exit(1)` ile çık. Sessiz başarı yasak. (`coding-standards.md §8.7`)
 - Türkçe büyük/küçük harf: `tr_upper()` / `tr_lower()` helper'larını kullan, `str.upper()` değil. (`architecture.md §7.6`)
 - Her puzzle `pydantic` ile validate edilir + Flutter parse testi (CI). (`coding-standards.md §8.6`)
-- Windows konsolunda Türkçe karakter için: `_force_utf8_stdout()` fonksiyonuna koy,
-  yalnızca `main()` / CLI giriş noktasından çağır.
-  Import edilebilen modüllerin tepesine asla koyma — pytest capture'ını bozar.
+- `_force_utf8_stdout()`: yalnızca Windows konsolunda gerekliydi; Linux'ta stdout
+  zaten UTF-8 olduğundan fiilen no-op. Kalsın ama yalnızca `main()` / CLI giriş
+  noktasından çağır. Import edilebilen modüllerin tepesine asla koyma — pytest
+  capture'ını bozar.
 
 ---
 
@@ -205,9 +211,21 @@ tasarımı uygulanmadı).
   `active_session`), tur-sınırı flush + lifecycle flush, `/levels` giriş
   ekranı. Emülatörde soğuk-başlat (süreç öldür → box sağ çıkıyor) doğrulandı.
   Kararlar ve save-scum ödünleşimi: `docs/F7_PLAN.md`.
+- Bot rezervasyon kotası ✅ — `computeMove` harf-başına rezerv kotası + stalemate
+  guard: oyuncunun elindeki harflerin multiset sayımı kadar hücre bot'a kapalı,
+  böylece oyuncunun oynayabileceği taş bot tarafından kapılmaz; hiçbir hamle
+  kalmazsa guard kilitlenmeyi önler. (d2e6cf0, 818ded6, a42ba5f)
 
 **Sıradaki (planlı, yapılmadı):**
 - **P1 re-clue** — ~2k kelimenin flash-lite clue'ları elden geçmeli; teşhiste
   %15+ hatalı/zorlama (İDAME="ölüme mahkum", KERİME, MET, KAK gibi aktif
   yanlışlar). ≤20kr bütçe + aile-uygunluk kriteri. Detay memory'de.
 - Ses/haptik cilası; gerçek SDK (AdMob/RevenueCat) entegrasyonu.
+- **Android build uyarıları (Flutter 3.47):**
+  - `EnableImpeller=false` opt-out'u deprecated (`android/app/src/main/AndroidManifest.xml`);
+    emülatör GLES sorunu yeniden değerlendirilip meta-data kaldırılmalı.
+  - `firebase_*` paketleri iki major geride (KGP/Kotlin Gradle Plugin uyarısı);
+    `firebase_core`/`analytics`/`crashlytics`/`remote_config` birlikte yükseltilmeli.
+  - Java target 8 obsolete uyarısı: app modülü zaten 17; kaynak
+    `flutter_secure_storage` 9.2.4'ün Android modülü (`VERSION_1_8`) — paket
+    yükseltmesi gerekir.
