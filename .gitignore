@@ -170,3 +170,6 @@ tools/puzzle_generator/.pytest_cache/
 tools/puzzle_generator/.mypy_cache/
 tools/puzzle_generator/.ruff_cache/
 *.pyc
+# Build/IDE artefacts
+*.egg-info/
+.idea/workspace.xml
