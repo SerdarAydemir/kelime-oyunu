@@ -13,9 +13,19 @@ pip install -e ".[dev]"
 # Kelime havuzunu master clue'lardan türet (tek seferlik; data/processed/ git'te yok)
 python scripts/rebuild_pool_from_master.py
 
-# Küfür kara listesi (git'te yok, ayrıca sağlanır) — yoksa `generate` başarısız olur
-cp /path/to/profanity_blacklist.txt data/raw/profanity_blacklist.txt
+# Küfür kara listesi (data/raw/profanity_blacklist.txt) — yoksa `generate` başarısız olur
+python scripts/build_blacklist.py
 ```
+
+## Küfür kara listesi
+
+`data/raw/profanity_blacklist.txt`, [ooguz/turkce-kufur-karaliste](https://github.com/ooguz/turkce-kufur-karaliste)
+deposundaki `karaliste.txt` dosyasından `scripts/build_blacklist.py` ile türetilir
+(tr_upper, tek kelimelik girişler, en az 4 harf, tekilleştirme, sıralama).
+Kaynak liste **CC BY-SA 4.0** lisanslıdır; bu türev dosya aynı lisans ve atıf
+koşullarıyla dağıtılır. 3 harfli girişlerin neden atıldığı script docstring'inde
+ölçümleriyle açıklanmıştır (yaygın Türkçe heceler: MAL, ANA, EMİ…; kısa cevaplar
+`sensitive_answers.txt` ile cevap düzeyinde kontrol edilir).
 
 Efektif havuz, `data/processed/master_clues.json` anahtarlarıdır: master clue'su
 olmayan kelime zaten üretime giremez (P0 placeholder gate), bu yüzden ham TDK
