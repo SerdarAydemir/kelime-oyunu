@@ -87,7 +87,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Niğde'de bir ilçe",
+          "text": "Niğde'nin bir ilçesi",
           "arrow": "down",
           "word_id": "D5",
           "image_id": null,
@@ -103,7 +103,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Isı veren alet",
+          "text": "Hızla dönerek",
           "arrow": "down",
           "word_id": "D6",
           "image_id": null,
@@ -119,7 +119,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Harcama, gider",
+          "text": "Harcanmış (para)",
           "arrow": "right",
           "word_id": "A1",
           "image_id": null,
@@ -135,7 +135,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Yansıtıcı yüzey",
+          "text": "Yansıtıcı camı olan",
           "arrow": "right",
           "word_id": "A2",
           "image_id": null,
@@ -247,7 +247,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Kitap okuyan",
+          "text": "Okuyucu",
           "arrow": "right",
           "word_id": "A4",
           "image_id": null,

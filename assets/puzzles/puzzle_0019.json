@@ -23,7 +23,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Yarı iletken element",
+          "text": "Yarı metal",
           "arrow": "down",
           "word_id": "D1",
           "image_id": null,
@@ -55,7 +55,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Husumet, çekişme",
+          "text": "Çekişme, hasımlık",
           "arrow": "down",
           "word_id": "D3",
           "image_id": null,
@@ -135,7 +135,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Zincir, pranga",
+          "text": "Tutsaklık",
           "arrow": "right",
           "word_id": "A2",
           "image_id": null,
@@ -151,7 +151,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Tek başına olan",
+          "text": "Çoğul karşıtı",
           "arrow": "right",
           "word_id": "A3",
           "image_id": null,

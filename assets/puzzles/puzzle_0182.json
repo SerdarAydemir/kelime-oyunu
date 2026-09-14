@@ -103,7 +103,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Burundan hissettirme",
+          "text": "Koku duyurma",
           "arrow": "down",
           "word_id": "D6",
           "image_id": null,
@@ -119,7 +119,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Gizemli, uhrevi",
+          "text": "Gizemci",
           "arrow": "right",
           "word_id": "A1",
           "image_id": null,
@@ -183,7 +183,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Evli olduğum erkek",
+          "text": "Rüzgarın esmesi",
           "arrow": "right",
           "word_id": "A8",
           "image_id": null,
@@ -199,7 +199,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Sanat dalı",
+          "text": "Zanaat (eski)",
           "arrow": "right",
           "word_id": "A10",
           "image_id": null,
@@ -215,7 +215,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Meğil, yatkınlık",
+          "text": "Meyil, yatkınlık",
           "arrow": "right",
           "word_id": "A11",
           "image_id": null,
@@ -286,7 +286,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Geminin yanaştığı yer",
+          "text": "Kapasite (fizik)",
           "arrow": "down",
           "word_id": "D8",
           "image_id": null,

@@ -23,7 +23,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Kızgınlık belirtisi",
+          "text": "Hışıltı çıkarmak",
           "arrow": "down",
           "word_id": "D1",
           "image_id": null,
@@ -71,7 +71,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Derin çizik, yırtık",
+          "text": "Uzun derin çatlak",
           "arrow": "down",
           "word_id": "D4",
           "image_id": null,
@@ -135,7 +135,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Geri çekme eylemi",
+          "text": "Salıverme, bırakma",
           "arrow": "right",
           "word_id": "A2",
           "image_id": null,

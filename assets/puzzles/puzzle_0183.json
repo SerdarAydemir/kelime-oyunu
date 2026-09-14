@@ -23,7 +23,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "İnsanın uçması",
+          "text": "Hoppalık",
           "arrow": "down",
           "word_id": "D1",
           "image_id": null,
@@ -55,7 +55,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Dünya parçası",
+          "text": "Savaşma, vuruşma",
           "arrow": "down",
           "word_id": "D3",
           "image_id": null,
@@ -135,7 +135,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Vızvızların evi",
+          "text": "Saflık, temizlik",
           "arrow": "right",
           "word_id": "A2",
           "image_id": null,
@@ -151,7 +151,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Memleketle ilgili",
+          "text": "Yurtla ilgili",
           "arrow": "right",
           "word_id": "A3",
           "image_id": null,
@@ -270,7 +270,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Şeffaf malzeme",
+          "text": "Pencere maddesi",
           "arrow": "right",
           "word_id": "A8",
           "image_id": null,

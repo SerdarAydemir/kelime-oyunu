@@ -87,7 +87,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Bozukluğu giderme",
+          "text": "Her birine on",
           "arrow": "down",
           "word_id": "D5",
           "image_id": null,
@@ -119,7 +119,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Kuyruklu kemirgen",
+          "text": "Kunduz",
           "arrow": "right",
           "word_id": "A1",
           "image_id": null,
@@ -199,7 +199,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Kuşların evi",
+          "text": "Kuş yuvası (eski)",
           "arrow": "right",
           "word_id": "A10",
           "image_id": null,
@@ -215,7 +215,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Engelli, özürlü",
+          "text": "Kusurlu, hasarlı",
           "arrow": "right",
           "word_id": "A11",
           "image_id": null,
@@ -309,14 +309,14 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Masraf, gider",
+          "text": "Tüketme, harcama",
           "arrow": "right",
           "word_id": "A7",
           "image_id": null,
           "source": "llm"
         },
         {
-          "text": "Toprak vergisi",
+          "text": "Osmanlı ürün vergisi",
           "arrow": "down",
           "word_id": "D10",
           "image_id": null,

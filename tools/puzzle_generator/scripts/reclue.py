@@ -14,7 +14,7 @@ from __future__ import annotations
 import io
 import json
 import sys
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 from typing import Annotated, Any
 
@@ -23,10 +23,10 @@ import typer
 _ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(_ROOT / "src"))
 
-from kelime_gen.build_manifest import build_manifest  # noqa: E402
-from kelime_gen.clue_writer import write_clue  # noqa: E402
-from kelime_gen.pack_report import verify_pack  # noqa: E402
-from kelime_gen.schema import PuzzleData, tr_upper  # noqa: E402
+from kelime_gen.build_manifest import build_manifest
+from kelime_gen.clue_writer import write_clue
+from kelime_gen.pack_report import verify_pack
+from kelime_gen.schema import PuzzleData, tr_upper
 
 _PROCESSED = _ROOT / "data" / "processed"
 _PACK_WORDS = _ROOT / "reports" / "pack_words.json"
@@ -169,7 +169,7 @@ def apply(
         raise typer.Exit(code=1)
 
     batch_no = 1 + max((int(r["batch"]) for r in results.values()), default=0)
-    stamp = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    stamp = datetime.now(UTC).isoformat(timespec="seconds")
     master = _read_json(_MASTER, {})
     approved_list: list[str] = _read_json(_APPROVED, [])
     rejected_list: list[str] = _read_json(_REJECTED, [])
@@ -239,19 +239,29 @@ def write_pack(
     }
     master_map = {tr_upper(w): str(rec["text"]) for w, rec in _read_json(_MASTER, {}).items()}
 
-    changed_words = changed_files = 0
+    changed_words = changed_cells = changed_files = 0
     for path in sorted(puzzles_dir.glob("puzzle_*.json")):
         raw = json.loads(path.read_text(encoding="utf-8"))
         touched = False
+        by_id: dict[str, tuple[str, str]] = {}
         for w in raw["words"]:
             spec = write_clue(tr_upper(w["answer"]), None, curated_map, master_map)
             if spec.source == "placeholder":
                 print(f"{path.name}: {w['answer']} clue'suz kaldı — durduruldu.", file=sys.stderr)
                 raise typer.Exit(code=1)
+            by_id[w["id"]] = (spec.text, spec.source)
             if w["clue"]["text"] != spec.text or w["clue"]["source"] != spec.source:
                 w["clue"]["text"], w["clue"]["source"] = spec.text, spec.source
                 touched = True
                 changed_words += 1
+        # The renderer paints cells[].clues, so sync those too (word_id keyed).
+        for cell in raw["cells"]:
+            for clue in cell.get("clues") or []:
+                text, source = by_id[clue["word_id"]]
+                if clue["text"] != text or clue["source"] != source:
+                    clue["text"], clue["source"] = text, source
+                    touched = True
+                    changed_cells += 1
         if touched:
             puzzle = PuzzleData.model_validate(raw)  # re-validate before writing
             path.write_text(puzzle.model_dump_json(indent=2), encoding="utf-8")
@@ -260,12 +270,14 @@ def write_pack(
     manifest = build_manifest(puzzles_dir)
     verification = verify_pack(puzzles_dir, expected_count=expected_count)
     print(
-        f"{changed_words} clue güncellendi ({changed_files} dosyada); "
+        f"{changed_words} word clue + {changed_cells} cell clue güncellendi "
+        f"({changed_files} dosyada); "
         f"manifest: {manifest['total_puzzles']} bölüm."
     )
     print(
         f"verify_pack: ok={verification['ok']} "
         f"placeholder={len(verification['placeholder_violations'])} "
+        f"cell_sync_hatası={len(verification['clue_sync_violations'])} "
         f"kaynaklar={verification['clue_sources']}"
     )
     if not verification["ok"]:

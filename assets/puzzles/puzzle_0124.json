@@ -71,7 +71,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Kedi sesi",
+          "text": "Kedi sesi çıkarmak",
           "arrow": "down",
           "word_id": "D4",
           "image_id": null,
@@ -151,7 +151,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Şiir yazan kimse",
+          "text": "Başka, öteki",
           "arrow": "right",
           "word_id": "A4",
           "image_id": null,
@@ -325,7 +325,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Parfüm çiçeği",
+          "text": "Hoş kokulu bir bitki",
           "arrow": "down",
           "word_id": "D10",
           "image_id": null,

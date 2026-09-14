@@ -1,6 +1,7 @@
 # tools/puzzle_generator/tests/test_pack_report.py
 """Unit tests for the pack verification report (pack_report)."""
 
+import json
 from pathlib import Path
 
 from kelime_gen.pack_report import build_report, format_report, verify_pack, write_report
@@ -31,13 +32,19 @@ def _puzzle(
             row=1,
             col=0,
             type=CellType.CLUE,
-            clues=[ClueSpec(text="Miyavlayan hayvan", arrow=ClueArrow.RIGHT, word_id="w1")],
+            clues=[
+                ClueSpec(
+                    text="Miyavlayan hayvan", arrow=ClueArrow.RIGHT, word_id="w1", source="llm"
+                )
+            ],
         ),
         CellSpec(
             row=0,
             col=3,
             type=CellType.CLUE,
-            clues=[ClueSpec(text="Ağaç parçası", arrow=ClueArrow.DOWN, word_id="w2")],
+            clues=[
+                ClueSpec(text="Ağaç parçası", arrow=ClueArrow.DOWN, word_id="w2", source=w2_source)
+            ],
         ),
         CellSpec(row=1, col=1, type=CellType.LETTER, solution="K", word_ids=["w1"]),
         CellSpec(row=1, col=2, type=CellType.LETTER, solution="E", word_ids=["w1"]),
@@ -155,6 +162,25 @@ def test_verify_pack_flags_placeholder_clue(tmp_path: Path) -> None:
     result = verify_pack(tmp_path, expected_count=1)
     assert result["ok"] is False
     assert result["placeholder_violations"] == ["puzzle_0001.json: DAL"]
+
+
+def test_verify_pack_flags_cell_clue_out_of_sync(tmp_path: Path) -> None:
+    """cells[].clues is what the renderer paints; it must mirror words[].clue."""
+    puzzle = _puzzle(1, "t1")
+    stale = puzzle.model_dump(mode="json")
+    for cell in stale["cells"]:
+        for clue in cell.get("clues", []):
+            if clue["word_id"] == "w2":
+                clue["text"] = "Eski ipucu"
+    tmp_path.mkdir(exist_ok=True)
+    (tmp_path / "puzzle_0001.json").write_text(json.dumps(stale), encoding="utf-8")
+
+    result = verify_pack(tmp_path, expected_count=1)
+
+    assert result["ok"] is False
+    assert len(result["clue_sync_violations"]) == 1
+    assert "w2" in result["clue_sync_violations"][0]
+    assert "'Eski ipucu' != 'Ağaç parçası'" in result["clue_sync_violations"][0]
 
 
 def test_verify_pack_skips_manifest(tmp_path: Path) -> None:

@@ -23,7 +23,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Sirk gösterisi",
+          "text": "Cambazlık",
           "arrow": "down",
           "word_id": "D1",
           "image_id": null,
@@ -71,7 +71,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Dini alim, hoca",
+          "text": "Medrese hocası",
           "arrow": "down",
           "word_id": "D4",
           "image_id": null,
@@ -135,7 +135,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Sırt çantası",
+          "text": "Çekmeceli dolap",
           "arrow": "right",
           "word_id": "A2",
           "image_id": null,
@@ -167,7 +167,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Sağlık bulma",
+          "text": "İyileşme (eski)",
           "arrow": "right",
           "word_id": "A5",
           "image_id": null,
@@ -183,7 +183,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Hayvan yavrusu",
+          "text": "Çocuk, yavru (halk)",
           "arrow": "right",
           "word_id": "A6",
           "image_id": null,
@@ -215,7 +215,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Sanat dalı",
+          "text": "Zanaat (eski)",
           "arrow": "right",
           "word_id": "A10",
           "image_id": null,
@@ -263,14 +263,14 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Koca parça",
+          "text": "Yekpare parça",
           "arrow": "right",
           "word_id": "A4",
           "image_id": null,
           "source": "llm"
         },
         {
-          "text": "Nâdir görülen",
+          "text": "Kadınlar hamamcısı",
           "arrow": "down",
           "word_id": "D8",
           "image_id": null,

@@ -23,7 +23,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Meyveden yapılan reçel",
+          "text": "Meyve ezmesi",
           "arrow": "down",
           "word_id": "D1",
           "image_id": null,
@@ -183,7 +183,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Darbe izi",
+          "text": "Üzünç, sıkıntı",
           "arrow": "right",
           "word_id": "A8",
           "image_id": null,
@@ -279,7 +279,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Yılın ikinci ayı",
+          "text": "Bir bahar ayı",
           "arrow": "down",
           "word_id": "D8",
           "image_id": null,
@@ -318,7 +318,7 @@
           "source": "curated"
         },
         {
-          "text": "Nasıl, ne şekilde",
+          "text": "Nasıl, ne dilde",
           "arrow": "down",
           "word_id": "D9",
           "image_id": null,

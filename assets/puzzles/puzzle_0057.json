@@ -119,7 +119,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Yardımcı araç",
+          "text": "Cihaz (dişçilik)",
           "arrow": "right",
           "word_id": "A1",
           "image_id": null,
@@ -135,7 +135,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Sindirim organı",
+          "text": "Mideye iyi gelen",
           "arrow": "right",
           "word_id": "A2",
           "image_id": null,
@@ -183,7 +183,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Sırtüstü yatmak",
+          "text": "İğdiş etmek",
           "arrow": "right",
           "word_id": "A7",
           "image_id": null,
@@ -247,7 +247,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Şehir devleti",
+          "text": "Koruma alanı",
           "arrow": "right",
           "word_id": "A4",
           "image_id": null,
@@ -263,7 +263,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Olumlu durum",
+          "text": "Kötü karşıtı",
           "arrow": "right",
           "word_id": "A6",
           "image_id": null,
@@ -325,7 +325,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Timsah gözyaşları",
+          "text": "Rüşvet alan (eski)",
           "arrow": "right",
           "word_id": "A11",
           "image_id": null,

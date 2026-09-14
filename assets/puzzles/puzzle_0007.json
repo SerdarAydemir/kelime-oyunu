@@ -23,7 +23,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Meyveden yapılan reçel",
+          "text": "Meyve ezmesi",
           "arrow": "down",
           "word_id": "D1",
           "image_id": null,
@@ -71,7 +71,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Kilit açar",
+          "text": "Kilit açan",
           "arrow": "down",
           "word_id": "D4",
           "image_id": null,
@@ -87,7 +87,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "ABD para birimi",
+          "text": "ABD parası",
           "arrow": "down",
           "word_id": "D5",
           "image_id": null,
@@ -103,7 +103,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Ölçülü, kararında",
+          "text": "Ölçülü",
           "arrow": "down",
           "word_id": "D6",
           "image_id": null,
@@ -119,7 +119,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Bağıran kimse",
+          "text": "Tellal, çağırıcı",
           "arrow": "right",
           "word_id": "A1",
           "image_id": null,
@@ -183,7 +183,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Fazladan, ilave",
+          "text": "Fazladan",
           "arrow": "right",
           "word_id": "A8",
           "image_id": null,
@@ -263,7 +263,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Yerine geçme",
+          "text": "Yerine koyma",
           "arrow": "down",
           "word_id": "D7",
           "image_id": null,
@@ -295,14 +295,14 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Sınır, limit",
+          "text": "Sınır, derece",
           "arrow": "right",
           "word_id": "A7",
           "image_id": null,
           "source": "llm"
         },
         {
-          "text": "Tek kürekli sandal",
+          "text": "Yarış kayığı",
           "arrow": "down",
           "word_id": "D8",
           "image_id": null,

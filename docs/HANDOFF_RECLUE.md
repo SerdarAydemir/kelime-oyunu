@@ -89,6 +89,18 @@ Uygulama: `python scripts/reclue_apply.py batch.json` (önce `--dry-run`), sonra
   119, 147, 168, 169, 172, 181, 200.
 - P1 re-clue pack kapsamında KAPANDI.
 
+## Düzeltme (2026-09-14): ekranda bayat ipucu gösteriliyordu
+
+Puzzle JSON'unda ipucu metni iki yerde tutulur: `words[].clue` ve `cells[].clues`. Flutter
+ClueRenderer `cells[].clues`'tan çizer; `reclue.py write-pack` ise yalnız `words[].clue`'yu
+güncelliyordu. Sonuç: Temmuz audit'inden bu yana ve dünkü 122 re-clue dahil, ekranda bayat
+ipucu gösteriliyordu (159 dosyada 646 hücre, 604 tekil metin farklıydı; örn. TOST p85'te
+"Ekmek arası eritilmiş peynir"). Bu commit'le write-pack `cells[].clues`'u da word_id üzerinden
+senkronluyor, `verify_pack` her hücre ipucunun words tarafıyla aynı olduğunu doğruluyor
+(`clue_sync_violations`, test `test_verify_pack_flags_cell_clue_out_of_sync`) ve pack yeniden
+yazıldı. regen_only ve generate zaten verify_pack'i çağırdığı için bundan sonra sessiz
+sapma mümkün değil.
+
 ## Açık kalanlar
 
 - Havuz dışındaki ~21k flash-lite kelime re-clue bekliyor; kapı sayesinde acil değil.

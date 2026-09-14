@@ -183,7 +183,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Yırtıcı kuş",
+          "text": "Yırtıcı iri kuş",
           "arrow": "right",
           "word_id": "A8",
           "image_id": null,
@@ -215,7 +215,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Zengin, servetli",
+          "text": "Zengin",
           "arrow": "right",
           "word_id": "A11",
           "image_id": null,
@@ -318,7 +318,7 @@
           "source": "curated"
         },
         {
-          "text": "Ekmek arası eritilmiş peynir",
+          "text": "Preslenmiş sandviç",
           "arrow": "down",
           "word_id": "D9",
           "image_id": null,

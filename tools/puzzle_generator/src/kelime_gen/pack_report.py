@@ -27,12 +27,15 @@ def verify_pack(puzzles_dir: Path, expected_count: int) -> dict[str, Any]:
 
     Returns a JSON-ready dict; verification["ok"] is True only when the file
     count matches, every puzzle has exactly one BLANK cell at (0,0), no two
-    puzzles share a mask (template_id), and no clue has source="placeholder"
-    (detection half of the P0 gate — "N harfli kelime" is unplayable).
+    puzzles share a mask (template_id), no clue has source="placeholder"
+    (detection half of the P0 gate — "N harfli kelime" is unplayable), and every
+    cell-side clue (cells[].clues, what the Flutter renderer paints) carries the
+    same text and source as its word (words[].clue, keyed by word_id).
     """
     paths = [p for p in sorted(puzzles_dir.glob("*.json")) if p.name != MANIFEST_NAME]
     blank_violations: list[str] = []
     placeholder_violations: list[str] = []
+    clue_sync_violations: list[str] = []
     sources: Counter[str] = Counter()
     k_distribution: Counter[int] = Counter()
     slot_counts: Counter[int] = Counter()
@@ -52,6 +55,17 @@ def verify_pack(puzzles_dir: Path, expected_count: int) -> dict[str, Any]:
             sources[word.clue.source] += 1
             if word.clue.source == "placeholder":
                 placeholder_violations.append(f"{path.name}: {word.answer}")
+        # Cell/word clue sync: the renderer reads cells[].clues, tooling edits
+        # words[].clue — they must agree or players see stale text.
+        by_id = {w.id: w.clue for w in puzzle.words}
+        for cell in puzzle.cells:
+            for clue in cell.clues:
+                ref = by_id.get(clue.word_id)
+                if ref is None or ref.text != clue.text or ref.source != clue.source:
+                    clue_sync_violations.append(
+                        f"{path.name}: ({cell.row},{cell.col}) {clue.word_id} "
+                        f"{clue.text!r} != {ref.text if ref else None!r}"
+                    )
 
     duplicate_masks = [t for t, n in Counter(template_ids).items() if n > 1]
     ok = (
@@ -59,6 +73,7 @@ def verify_pack(puzzles_dir: Path, expected_count: int) -> dict[str, Any]:
         and not blank_violations
         and not duplicate_masks
         and not placeholder_violations
+        and not clue_sync_violations
     )
     return {
         "ok": ok,
@@ -66,6 +81,7 @@ def verify_pack(puzzles_dir: Path, expected_count: int) -> dict[str, Any]:
         "actual_count": len(paths),
         "blank_violations": blank_violations,
         "placeholder_violations": placeholder_violations,
+        "clue_sync_violations": clue_sync_violations,
         "unique_masks": len(set(template_ids)),
         "duplicate_masks": duplicate_masks,
         "clue_sources": dict(sources),

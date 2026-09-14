@@ -23,7 +23,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Şefkat, acıma duygusu",
+          "text": "Acıma duygusu",
           "arrow": "down",
           "word_id": "D1",
           "image_id": null,
@@ -55,7 +55,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Kızmak, bağırmak",
+          "text": "Şapır sesi çıkarmak",
           "arrow": "down",
           "word_id": "D3",
           "image_id": null,
@@ -71,7 +71,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Beklenti, dilek",
+          "text": "Ümit",
           "arrow": "down",
           "word_id": "D4",
           "image_id": null,
@@ -119,7 +119,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Sevilen, gönül verilen",
+          "text": "Sevilen kadın (eski)",
           "arrow": "right",
           "word_id": "A1",
           "image_id": null,
@@ -167,7 +167,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Ağırlık kaldıran",
+          "text": "Ağırlık sporu",
           "arrow": "right",
           "word_id": "A5",
           "image_id": null,

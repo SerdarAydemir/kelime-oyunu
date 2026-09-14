@@ -71,7 +71,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Tuzdaki mineral",
+          "text": "İyot katılmış (tuz)",
           "arrow": "down",
           "word_id": "D4",
           "image_id": null,
@@ -87,7 +87,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Güvenilir kişi",
+          "text": "Yasal emanetçi",
           "arrow": "down",
           "word_id": "D5",
           "image_id": null,
@@ -119,7 +119,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Bayramda verilen armağan",
+          "text": "Armağan",
           "arrow": "right",
           "word_id": "A1",
           "image_id": null,
@@ -183,7 +183,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Fırında kabaran tatlı",
+          "text": "Kabaran tatlı",
           "arrow": "right",
           "word_id": "A8",
           "image_id": null,
@@ -293,7 +293,7 @@
           "source": "llm"
         },
         {
-          "text": "Erkeğe özgü resmi giysi",
+          "text": "Kuyruklu resmi ceket",
           "arrow": "down",
           "word_id": "D8",
           "image_id": null,
@@ -325,7 +325,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Mevlevi dervişi",
+          "text": "Eski güneş takvimi",
           "arrow": "right",
           "word_id": "A10",
           "image_id": null,

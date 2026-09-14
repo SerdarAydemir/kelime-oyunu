@@ -23,7 +23,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "İçine almak, içine sığdırmak",
+          "text": "İçine almak",
           "arrow": "down",
           "word_id": "D1",
           "image_id": null,
@@ -39,7 +39,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Hece sesi",
+          "text": "Hareke türü",
           "arrow": "down",
           "word_id": "D2",
           "image_id": null,
@@ -87,7 +87,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "İleri gelenler, beyler",
+          "text": "Beyler (eski)",
           "arrow": "down",
           "word_id": "D5",
           "image_id": null,
@@ -119,7 +119,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Yenilmez, yenemez",
+          "text": "Susam küspesi",
           "arrow": "right",
           "word_id": "A1",
           "image_id": null,
@@ -135,7 +135,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Yerden kesilme",
+          "text": "Sıçrama",
           "arrow": "right",
           "word_id": "A2",
           "image_id": null,
@@ -167,7 +167,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Soğuk, ayaz",
+          "text": "Baş (eski)",
           "arrow": "right",
           "word_id": "A4",
           "image_id": null,
@@ -199,7 +199,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Üzerinde yemek yenilen",
+          "text": "Dört ayaklı mobilya",
           "arrow": "right",
           "word_id": "A9",
           "image_id": null,
@@ -231,7 +231,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Elektrik akım yolu",
+          "text": "Marş anahtarı yuvası",
           "arrow": "right",
           "word_id": "A11",
           "image_id": null,

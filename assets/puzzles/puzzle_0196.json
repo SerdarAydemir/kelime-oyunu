@@ -23,7 +23,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Sözlü atışma",
+          "text": "Ağız kavgası etmek",
           "arrow": "down",
           "word_id": "D1",
           "image_id": null,
@@ -55,7 +55,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Şapka türü",
+          "text": "Mezuniyet başlığı",
           "arrow": "down",
           "word_id": "D3",
           "image_id": null,
@@ -119,7 +119,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "İğne iplik ustası",
+          "text": "Ayakkabı onarımcısı",
           "arrow": "right",
           "word_id": "A1",
           "image_id": null,
@@ -183,7 +183,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Keskin bıçaklı alet",
+          "text": "Yarış yelkenlisi",
           "arrow": "right",
           "word_id": "A6",
           "image_id": null,
@@ -215,7 +215,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Okul görmemiş",
+          "text": "Mektepli karşıtı",
           "arrow": "right",
           "word_id": "A10",
           "image_id": null,
@@ -231,7 +231,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Bir defa, bir kere",
+          "text": "Defa, kere",
           "arrow": "right",
           "word_id": "A11",
           "image_id": null,
@@ -286,7 +286,7 @@
           "source": "curated"
         },
         {
-          "text": "Tavla zarı",
+          "text": "Ön ödeme akçesi",
           "arrow": "down",
           "word_id": "D9",
           "image_id": null,

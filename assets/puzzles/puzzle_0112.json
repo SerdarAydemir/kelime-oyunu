@@ -39,7 +39,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Işıltılı, göz alıcı",
+          "text": "Işıltılı",
           "arrow": "down",
           "word_id": "D2",
           "image_id": null,
@@ -71,7 +71,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Azarlama, paylama",
+          "text": "Azarlama",
           "arrow": "down",
           "word_id": "D4",
           "image_id": null,
@@ -119,7 +119,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Teminat gösterilen",
+          "text": "Tapu teminatı",
           "arrow": "right",
           "word_id": "A1",
           "image_id": null,
@@ -199,7 +199,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Daha çok, genellikle",
+          "text": "Çoğunlukla",
           "arrow": "right",
           "word_id": "A7",
           "image_id": null,
