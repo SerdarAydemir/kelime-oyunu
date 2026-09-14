@@ -1,7 +1,7 @@
 [
   {
     "answer": "A",
-    "clue": "Alfabenin ilk harfi"
+    "clue": "Alfabenin ilki"
   },
   {
     "answer": "B",
@@ -21,7 +21,7 @@
   },
   {
     "answer": "E",
-    "clue": "Enerjinin simgesi"
+    "clue": "Enerji simgesi"
   },
   {
     "answer": "F",
@@ -29,7 +29,7 @@
   },
   {
     "answer": "G",
-    "clue": "Gramın kısaltması"
+    "clue": "Gram simgesi"
   },
   {
     "answer": "Ğ",
@@ -37,7 +37,7 @@
   },
   {
     "answer": "H",
-    "clue": "Hidrojenin simgesi"
+    "clue": "Hidrojen simgesi"
   },
   {
     "answer": "I",
@@ -45,7 +45,7 @@
   },
   {
     "answer": "İ",
-    "clue": "İzmir'in ilk harfi"
+    "clue": "İzmir'in başı"
   },
   {
     "answer": "J",
@@ -53,15 +53,15 @@
   },
   {
     "answer": "K",
-    "clue": "Potasyumun simgesi"
+    "clue": "Potasyum simgesi"
   },
   {
     "answer": "L",
-    "clue": "Romen rakamıyla elli"
+    "clue": "Romen'de elli"
   },
   {
     "answer": "M",
-    "clue": "Romen rakamıyla bin"
+    "clue": "Romen'de bin"
   },
   {
     "answer": "N",
@@ -69,7 +69,7 @@
   },
   {
     "answer": "O",
-    "clue": "Oksijenin simgesi"
+    "clue": "Oksijen simgesi"
   },
   {
     "answer": "Ö",
@@ -97,7 +97,7 @@
   },
   {
     "answer": "U",
-    "clue": "Uranyumun simgesi"
+    "clue": "Uranyum simgesi"
   },
   {
     "answer": "Ü",
@@ -105,7 +105,7 @@
   },
   {
     "answer": "V",
-    "clue": "Romen rakamıyla beş"
+    "clue": "Romen'de beş"
   },
   {
     "answer": "Y",
@@ -113,6 +113,6 @@
   },
   {
     "answer": "Z",
-    "clue": "Alfabenin son harfi"
+    "clue": "Alfabenin sonu"
   }
 ]

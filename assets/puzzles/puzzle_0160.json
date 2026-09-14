@@ -55,7 +55,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Şahı deviren hamle",
+          "text": "Satrançta son",
           "arrow": "down",
           "word_id": "D3",
           "image_id": null,
@@ -215,7 +215,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Romen rakamıyla bin",
+          "text": "Romen'de bin",
           "arrow": "right",
           "word_id": "A10",
           "image_id": null,
@@ -1183,7 +1183,7 @@
         }
       ],
       "clue": {
-        "text": "Romen rakamıyla bin",
+        "text": "Romen'de bin",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1427,7 +1427,7 @@
         }
       ],
       "clue": {
-        "text": "Şahı deviren hamle",
+        "text": "Satrançta son",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,

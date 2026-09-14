@@ -55,7 +55,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Sona eklenen parça",
+          "text": "Sona eklenen",
           "arrow": "down",
           "word_id": "D3",
           "image_id": null,
@@ -1368,7 +1368,7 @@
         }
       ],
       "clue": {
-        "text": "Sona eklenen parça",
+        "text": "Sona eklenen",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,

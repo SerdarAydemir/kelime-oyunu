@@ -231,7 +231,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Sona eklenen parça",
+          "text": "Sona eklenen",
           "arrow": "right",
           "word_id": "A11",
           "image_id": null,
@@ -247,7 +247,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Maden arıtma işlemi",
+          "text": "Maden arıtma",
           "arrow": "right",
           "word_id": "A3",
           "image_id": null,
@@ -318,7 +318,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Alfabenin ilk harfi",
+          "text": "Alfabenin ilki",
           "arrow": "right",
           "word_id": "A8",
           "image_id": null,
@@ -921,7 +921,7 @@
         }
       ],
       "clue": {
-        "text": "Maden arıtma işlemi",
+        "text": "Maden arıtma",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -1097,7 +1097,7 @@
         }
       ],
       "clue": {
-        "text": "Alfabenin ilk harfi",
+        "text": "Alfabenin ilki",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1225,7 +1225,7 @@
         }
       ],
       "clue": {
-        "text": "Sona eklenen parça",
+        "text": "Sona eklenen",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,

@@ -39,7 +39,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Enerjinin simgesi",
+          "text": "Enerji simgesi",
           "arrow": "down",
           "word_id": "D2",
           "image_id": null,
@@ -135,7 +135,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Alfabenin ilk harfi",
+          "text": "Alfabenin ilki",
           "arrow": "right",
           "word_id": "A2",
           "image_id": null,
@@ -300,7 +300,7 @@
           "source": "llm"
         },
         {
-          "text": "Kırmızı taneli meyve",
+          "text": "Taneli meyve",
           "arrow": "down",
           "word_id": "D9",
           "image_id": null,
@@ -355,7 +355,7 @@
           "source": "llm"
         },
         {
-          "text": "İzmir'in ilk harfi",
+          "text": "İzmir'in başı",
           "arrow": "down",
           "word_id": "D12",
           "image_id": null,
@@ -895,7 +895,7 @@
         }
       ],
       "clue": {
-        "text": "Alfabenin ilk harfi",
+        "text": "Alfabenin ilki",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -1359,7 +1359,7 @@
         }
       ],
       "clue": {
-        "text": "Enerjinin simgesi",
+        "text": "Enerji simgesi",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1639,7 +1639,7 @@
         }
       ],
       "clue": {
-        "text": "Kırmızı taneli meyve",
+        "text": "Taneli meyve",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,
@@ -1731,7 +1731,7 @@
         }
       ],
       "clue": {
-        "text": "İzmir'in ilk harfi",
+        "text": "İzmir'in başı",
         "arrow": "down",
         "word_id": "D12",
         "image_id": null,

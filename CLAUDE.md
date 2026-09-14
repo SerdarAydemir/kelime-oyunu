@@ -149,6 +149,12 @@ Her yeni görev geldiğinde şu sırayı bozmadan uygula:
   değişir) havuza girer. `--include-model` yalnız deney içindir.
 - **Blacklist zorunlu:** `data/raw/profanity_blacklist.txt` (`scripts/build_blacklist.py` üretir,
   git'te izlenir) yoksa `generate` açıklayıcı hata ile `Exit(1)` — boş set ile sessiz tarama yasak.
+- **İpucu uzunluk bütçesi:** çift-ipucu hücresi 49 dp hücrede (360 dp telefon) 9 px fontla
+  2 satır × ~10 karakter alır. İpucu bütçesi **20 karakter üst sınır, 16 hedef**; tek kelime
+  10 karakteri geçmesin. symbols/two_letter ≤16 test ile zorlanır
+  (`test_curated_clue_budget.py`); Flutter tarafı `test/tooling/clue_fit_report_test.dart`
+  ile ölçülür (49 dp'de overflow 0 hedefi). UI kelime içinde kırmaz, hece+tire ile böler;
+  sığmayanı generator kısaltır, UI zorlamaz.
 - Post-fill küfür taraması zorunlu (`post_fill_safety.py`). `safety.post_fill_scanned = true` olmayan puzzle dosyaya yazılmaz. (`architecture.md §7.3`)
 - Hatalı puzzle: `SafetyGenerationError` fırlat, `sys.exit(1)` ile çık. Sessiz başarı yasak. (`coding-standards.md §8.7`)
 - Türkçe büyük/küçük harf: `tr_upper()` / `tr_lower()` helper'larını kullan, `str.upper()` değil. (`architecture.md §7.6`)

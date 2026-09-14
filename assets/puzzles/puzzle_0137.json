@@ -39,7 +39,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Avuç ve parmaklar",
+          "text": "Avuç ve parmak",
           "arrow": "down",
           "word_id": "D2",
           "image_id": null,
@@ -71,7 +71,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Alfabenin ilk harfi",
+          "text": "Alfabenin ilki",
           "arrow": "down",
           "word_id": "D4",
           "image_id": null,
@@ -103,7 +103,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Vahşi hayvan yuvası",
+          "text": "Hayvan yuvası",
           "arrow": "down",
           "word_id": "D6",
           "image_id": null,
@@ -270,7 +270,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "En yakın işaret sözü",
+          "text": "Yakını gösterir",
           "arrow": "right",
           "word_id": "A5",
           "image_id": null,
@@ -325,7 +325,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Potasyumun simgesi",
+          "text": "Potasyum simgesi",
           "arrow": "down",
           "word_id": "D11",
           "image_id": null,
@@ -976,7 +976,7 @@
         }
       ],
       "clue": {
-        "text": "En yakın işaret sözü",
+        "text": "Yakını gösterir",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1300,7 +1300,7 @@
         }
       ],
       "clue": {
-        "text": "Avuç ve parmaklar",
+        "text": "Avuç ve parmak",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1384,7 +1384,7 @@
         }
       ],
       "clue": {
-        "text": "Alfabenin ilk harfi",
+        "text": "Alfabenin ilki",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1448,7 +1448,7 @@
         }
       ],
       "clue": {
-        "text": "Vahşi hayvan yuvası",
+        "text": "Hayvan yuvası",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1648,7 +1648,7 @@
         }
       ],
       "clue": {
-        "text": "Potasyumun simgesi",
+        "text": "Potasyum simgesi",
         "arrow": "down",
         "word_id": "D11",
         "image_id": null,

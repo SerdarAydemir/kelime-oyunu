@@ -167,7 +167,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Alfabenin ilk harfi",
+          "text": "Alfabenin ilki",
           "arrow": "right",
           "word_id": "A4",
           "image_id": null,
@@ -341,7 +341,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Oksijenin simgesi",
+          "text": "Oksijen simgesi",
           "arrow": "right",
           "word_id": "A10",
           "image_id": null,
@@ -978,7 +978,7 @@
         }
       ],
       "clue": {
-        "text": "Alfabenin ilk harfi",
+        "text": "Alfabenin ilki",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1194,7 +1194,7 @@
         }
       ],
       "clue": {
-        "text": "Oksijenin simgesi",
+        "text": "Oksijen simgesi",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,

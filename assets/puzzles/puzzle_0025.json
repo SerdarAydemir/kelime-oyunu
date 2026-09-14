@@ -231,7 +231,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Potasyumun simgesi",
+          "text": "Potasyum simgesi",
           "arrow": "right",
           "word_id": "A11",
           "image_id": null,
@@ -309,7 +309,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Sona eklenen parça",
+          "text": "Sona eklenen",
           "arrow": "right",
           "word_id": "A10",
           "image_id": null,
@@ -348,7 +348,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Alfabenin ilk harfi",
+          "text": "Alfabenin ilki",
           "arrow": "right",
           "word_id": "A13",
           "image_id": null,
@@ -1204,7 +1204,7 @@
         }
       ],
       "clue": {
-        "text": "Sona eklenen parça",
+        "text": "Sona eklenen",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1232,7 +1232,7 @@
         }
       ],
       "clue": {
-        "text": "Potasyumun simgesi",
+        "text": "Potasyum simgesi",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1292,7 +1292,7 @@
         }
       ],
       "clue": {
-        "text": "Alfabenin ilk harfi",
+        "text": "Alfabenin ilki",
         "arrow": "right",
         "word_id": "A13",
         "image_id": null,

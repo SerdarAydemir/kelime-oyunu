@@ -167,7 +167,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Romen rakamıyla elli",
+          "text": "Romen'de elli",
           "arrow": "right",
           "word_id": "A4",
           "image_id": null,
@@ -231,7 +231,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Kasaptan alınan gıda",
+          "text": "Kasap malı",
           "arrow": "right",
           "word_id": "A11",
           "image_id": null,
@@ -975,7 +975,7 @@
         }
       ],
       "clue": {
-        "text": "Romen rakamıyla elli",
+        "text": "Romen'de elli",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1219,7 +1219,7 @@
         }
       ],
       "clue": {
-        "text": "Kasaptan alınan gıda",
+        "text": "Kasap malı",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,

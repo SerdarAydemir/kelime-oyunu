@@ -231,7 +231,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Potasyumun simgesi",
+          "text": "Potasyum simgesi",
           "arrow": "right",
           "word_id": "A11",
           "image_id": null,
@@ -1220,7 +1220,7 @@
         }
       ],
       "clue": {
-        "text": "Potasyumun simgesi",
+        "text": "Potasyum simgesi",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,

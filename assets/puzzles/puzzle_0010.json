@@ -167,7 +167,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Alfabenin ilk harfi",
+          "text": "Alfabenin ilki",
           "arrow": "right",
           "word_id": "A5",
           "image_id": null,
@@ -334,7 +334,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Potasyumun simgesi",
+          "text": "Potasyum simgesi",
           "arrow": "right",
           "word_id": "A12",
           "image_id": null,
@@ -995,7 +995,7 @@
         }
       ],
       "clue": {
-        "text": "Alfabenin ilk harfi",
+        "text": "Alfabenin ilki",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1251,7 +1251,7 @@
         }
       ],
       "clue": {
-        "text": "Potasyumun simgesi",
+        "text": "Potasyum simgesi",
         "arrow": "right",
         "word_id": "A12",
         "image_id": null,

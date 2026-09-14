@@ -2058,10 +2058,10 @@
     "note": "mevcut clue doğruydu, korundu"
   },
   "AKAR": {
-    "text": "Gelir getiren mülk",
-    "source": "claude_audit",
-    "model": "claude-fable-5",
-    "note": "eski clue 'daimi su' ikincil okumaydı; birincil anlam mülk (AKARET ailesi)"
+    "text": "Gelirli mülk",
+    "source": "claude_reclue",
+    "model": "claude-fable-5-1",
+    "previous": "Gelir getiren mülk"
   },
   "AKARLAR": {
     "text": "Tozda yaşayan",
@@ -2645,10 +2645,10 @@
     "meaning_used": "Örnekle açıklama"
   },
   "AKSAK": {
-    "text": "Düzgün yürüyemeyen",
-    "source": "claude_audit",
-    "model": "claude-fable-5",
-    "note": "'topal' etiketi yerine tanımlayıcı ifade"
+    "text": "Topal",
+    "source": "claude_reclue",
+    "model": "claude-fable-5-1",
+    "previous": "Düzgün yürüyemeyen"
   },
   "AKSAN": {
     "text": "Ağız özelliği",
@@ -3153,10 +3153,10 @@
     "meaning_used": "Mali"
   },
   "AKÜ": {
-    "text": "Araç elektrik deposu",
-    "source": "claude_audit",
-    "model": "claude-fable-5",
-    "note": "mevcut clue doğruydu, korundu"
+    "text": "Araç bataryası",
+    "source": "claude_reclue",
+    "model": "claude-fable-5-1",
+    "previous": "Araç elektrik deposu"
   },
   "AKİDE": {
     "text": "Bir sert şeker",
@@ -4734,10 +4734,10 @@
     "meaning_used": "Hafifmeşrep"
   },
   "ALİ": {
-    "text": "Yüce, yüksek (eski)",
-    "source": "claude_audit",
-    "model": "claude-fable-5",
-    "note": "eski clue dini bağlamdaydı ('peygamber damadı'); sensitive kategori 2 politikasına uygun laik anlam (âli) seçildi"
+    "text": "Yüce (eski)",
+    "source": "claude_reclue",
+    "model": "claude-fable-5-1",
+    "previous": "Yüce, yüksek (eski)"
   },
   "ALÇIPAN": {
     "text": "Kolay bölme duvarı",
@@ -8463,9 +8463,10 @@
     "note": "ASABİLİK ile clue çakışması giderildi"
   },
   "ASES": {
-    "text": "Osmanlı gece bekçisi",
-    "source": "claude_audit",
-    "model": "claude-fable-5"
+    "text": "Osmanlı bekçisi",
+    "source": "claude_reclue",
+    "model": "claude-fable-5-1",
+    "previous": "Osmanlı gece bekçisi"
   },
   "ASESBAŞI": {
     "text": "Osmanlı polis şefi",
@@ -10321,9 +10322,10 @@
     "meaning_used": "kutsal metin"
   },
   "AYI": {
-    "text": "Kış uykusuna yatan",
-    "source": "claude_audit",
-    "model": "claude-fable-5"
+    "text": "Kış uykucusu",
+    "source": "claude_reclue",
+    "model": "claude-fable-5-1",
+    "previous": "Kış uykusuna yatan"
   },
   "AYDIN": {
     "text": "Fikir önderi",
@@ -47284,10 +47286,10 @@
     "model": "claude-fable-5"
   },
   "FAŞ": {
-    "text": "Açığa vurma (eski)",
-    "source": "claude_audit",
-    "model": "claude-fable-5",
-    "note": "eski clue AKTİF YANLIŞ: 'işaret' değil; faş etmek"
+    "text": "Açığa vurma",
+    "source": "claude_reclue",
+    "model": "claude-fable-5-1",
+    "previous": "Açığa vurma (eski)"
   },
   "FELDSPAT": {
     "text": "Mika olmayan mineral",
@@ -61105,10 +61107,10 @@
     "meaning_used": "hastalık"
   },
   "HEM": {
-    "text": "Aynı zamanda, dahi",
-    "source": "claude_audit",
-    "model": "claude-fable-5",
-    "note": "mevcut clue doğruydu, korundu"
+    "text": "Aynı zamanda",
+    "source": "claude_reclue",
+    "model": "claude-fable-5-1",
+    "previous": "Aynı zamanda, dahi"
   },
   "HELVACI": {
     "text": "Tatlıcı, şekerci",
@@ -63811,10 +63813,10 @@
     "meaning_used": "duygu durum"
   },
   "HİT": {
-    "text": "Çok popüler şarkı",
-    "source": "claude_audit",
-    "model": "claude-fable-5",
-    "note": "mevcut clue doğruydu, korundu"
+    "text": "Popüler şarkı",
+    "source": "claude_reclue",
+    "model": "claude-fable-5-1",
+    "previous": "Çok popüler şarkı"
   },
   "HİTAM": {
     "text": "Son, nihayet",
@@ -66484,10 +66486,10 @@
     "meaning_used": "liman iskelesi"
   },
   "KAL": {
-    "text": "Maden arıtma işlemi",
-    "source": "claude_audit",
-    "model": "claude-fable-5",
-    "note": "eski clue emir kipiydi ('dur, bekleme'); TDK maden anlamı kullanıldı"
+    "text": "Maden arıtma",
+    "source": "claude_reclue",
+    "model": "claude-fable-5-1",
+    "previous": "Maden arıtma işlemi"
   },
   "KAKIŞMAK": {
     "text": "İtişip durmak",
@@ -69948,10 +69950,10 @@
     "meaning_used": "arşiv"
   },
   "KASA": {
-    "text": "Para saklanan yer",
-    "source": "claude_audit",
-    "model": "claude-fable-5",
-    "note": "mevcut clue doğruydu, korundu"
+    "text": "Para dolabı",
+    "source": "claude_reclue",
+    "model": "claude-fable-5-1",
+    "previous": "Para saklanan yer"
   },
   "KASAP": {
     "text": "Et kesen uzman",
@@ -70984,9 +70986,10 @@
     "meaning_used": "anlama"
   },
   "KAVRAM": {
-    "text": "Soyut düşünce birimi",
-    "source": "claude_audit",
-    "model": "claude-fable-5"
+    "text": "Soyut düşünce",
+    "source": "claude_reclue",
+    "model": "claude-fable-5-1",
+    "previous": "Soyut düşünce birimi"
   },
   "KAVAL": {
     "text": "Çoban düdüğü",
@@ -82309,10 +82312,10 @@
     "meaning_used": "seyahat mobilya"
   },
   "KUZ": {
-    "text": "Güneş görmeyen yer",
-    "source": "claude_audit",
-    "model": "claude-fable-5",
-    "note": "eski clue 'soğuk hava' eksikti; kuytu/gölgede kalan yer — orta güven"
+    "text": "Güneşsiz yer",
+    "source": "claude_reclue",
+    "model": "claude-fable-5-1",
+    "previous": "Güneş görmeyen yer"
   },
   "KUVÖZ": {
     "text": "Prematüreler için",
@@ -86259,10 +86262,10 @@
     "meaning_used": "mücevher"
   },
   "LAVA": {
-    "text": "Halat çekme komutu",
-    "source": "claude_audit",
-    "model": "claude-fable-5",
-    "note": "eski clue AKTİF YANLIŞ: LAV+a okumasıydı; denizcilik komutu"
+    "text": "Halat çek komutu",
+    "source": "claude_reclue",
+    "model": "claude-fable-5-1",
+    "previous": "Halat çekme komutu"
   },
   "LAYİHA": {
     "text": "Yasa taslağı",
@@ -86294,10 +86297,10 @@
     "note": "levazım ailesi — orta güven"
   },
   "LAİK": {
-    "text": "Dine dayanmayan",
-    "source": "claude_audit",
-    "model": "claude-fable-5",
-    "note": "eski clue 24 karakterdi; anayasal nötr kavram"
+    "text": "Dinden bağımsız",
+    "source": "claude_reclue",
+    "model": "claude-fable-5-1",
+    "previous": "Dine dayanmayan"
   },
   "LAZANYA": {
     "text": "İtalyan makarna böreği",
@@ -90793,10 +90796,10 @@
     "meaning_used": "iplik sarma"
   },
   "MAT": {
-    "text": "Şahı deviren hamle",
-    "source": "claude_audit",
-    "model": "claude-fable-5",
-    "note": "eski clue AKTİF YANLIŞ ve TERS: 'yenilmez' değil, mat olan yenilir"
+    "text": "Satrançta son",
+    "source": "claude_reclue",
+    "model": "claude-fable-5-1",
+    "previous": "Şahı deviren hamle"
   },
   "MASUMANE": {
     "text": "Safça, el değmemiş",
@@ -100883,9 +100886,10 @@
     "meaning_used": "ahlaki zayıflık"
   },
   "NAR": {
-    "text": "Kırmızı taneli meyve",
-    "source": "claude_audit",
-    "model": "claude-fable-5"
+    "text": "Taneli meyve",
+    "source": "claude_reclue",
+    "model": "claude-fable-5-1",
+    "previous": "Kırmızı taneli meyve"
   },
   "NANİK": {
     "text": "Burunla alay işareti",
@@ -103904,10 +103908,10 @@
     "note": "eski clue ÇÖPTÜ ('rende') — orta güven"
   },
   "OHA": {
-    "text": "Öküz durdurma sesi",
-    "source": "claude_audit",
-    "model": "claude-fable-5",
-    "note": "clue-disiplin: kaba kullanım yerine asıl hayvancılık anlamı (YUH'un aksine masum asıl anlamı var)"
+    "text": "Öküze dur sözü",
+    "source": "claude_reclue",
+    "model": "claude-fable-5-1",
+    "previous": "Öküz durdurma sesi"
   },
   "OKSİDE": {
     "text": "Metal paslanması",
@@ -111916,10 +111920,10 @@
     "meaning_used": "taşıma aracı"
   },
   "PURO": {
-    "text": "Yaprak tütün sarması",
-    "source": "claude_audit",
-    "model": "claude-fable-5",
-    "note": "şart: özendirmesiz nesne tanımı"
+    "text": "Tütün sarması",
+    "source": "claude_reclue",
+    "model": "claude-fable-5-1",
+    "previous": "Yaprak tütün sarması"
   },
   "PUSMAK": {
     "text": "Gizlice beklemek",
@@ -116184,10 +116188,10 @@
     "meaning_used": "temizlik"
   },
   "SABİ": {
-    "text": "Küçük çocuk (eski)",
-    "source": "claude_audit",
-    "model": "claude-fable-5",
-    "note": "eski clue ÇÖPTÜ ('esnaf')"
+    "text": "Küçük çocuk",
+    "source": "claude_reclue",
+    "model": "claude-fable-5-1",
+    "previous": "Küçük çocuk (eski)"
   },
   "SABİT": {
     "text": "Durağan, değişmez",
@@ -116567,10 +116571,10 @@
     "meaning_used": "erdem"
   },
   "SAH": {
-    "text": "Onay işareti (eski)",
-    "source": "claude_audit",
-    "model": "claude-fable-5",
-    "note": "eski clue ÇÖPTÜ ('masa örtüsü'); sah çekmek"
+    "text": "Onay işareti",
+    "source": "claude_reclue",
+    "model": "claude-fable-5-1",
+    "previous": "Onay işareti (eski)"
   },
   "SAFİYANE": {
     "text": "Masumca, katıksız",
@@ -119103,10 +119107,10 @@
     "meaning_used": "süsleme"
   },
   "SAVA": {
-    "text": "Haber, müjde (halk)",
-    "source": "claude_audit",
-    "model": "claude-fable-5",
-    "note": "eski clue AKTİF YANLIŞ: SAVAŞ karışmasıydı"
+    "text": "Haber, müjde",
+    "source": "claude_reclue",
+    "model": "claude-fable-5-1",
+    "previous": "Haber, müjde (halk)"
   },
   "SATİR": {
     "text": "Keskin metal",
@@ -132489,10 +132493,10 @@
     "meaning_used": "emir komut"
   },
   "TARAK": {
-    "text": "Saç düzeltme aleti",
-    "source": "claude_audit",
-    "model": "claude-fable-5",
-    "note": "mevcut clue doğruydu, korundu"
+    "text": "Saç düzeltici",
+    "source": "claude_reclue",
+    "model": "claude-fable-5-1",
+    "previous": "Saç düzeltme aleti"
   },
   "TARABA": {
     "text": "Tahta perde",
@@ -134026,10 +134030,10 @@
     "meaning_used": "taşınma eylemi"
   },
   "TAŞ": {
-    "text": "Sert mineral kütlesi",
-    "source": "claude_audit",
-    "model": "claude-fable-5",
-    "note": "mevcut clue doğruydu, korundu"
+    "text": "Sert mineral",
+    "source": "claude_reclue",
+    "model": "claude-fable-5-1",
+    "previous": "Sert mineral kütlesi"
   },
   "TAŞIMSI": {
     "text": "Yumuşak kayaç",
@@ -136854,9 +136858,10 @@
     "meaning_used": "ayrılma"
   },
   "TEREKE": {
-    "text": "Ölenin bıraktığı mal",
-    "source": "claude_audit",
-    "model": "claude-fable-5"
+    "text": "Ölenin malı",
+    "source": "claude_reclue",
+    "model": "claude-fable-5-1",
+    "previous": "Ölenin bıraktığı mal"
   },
   "TERFİK": {
     "text": "Makam yükseltme",
@@ -168275,10 +168280,10 @@
     "meaning_used": "topluluk"
   },
   "İARE": {
-    "text": "Ödünç verme (eski)",
-    "source": "claude_audit",
-    "model": "claude-fable-5",
-    "note": "eski clue yön hatalıydı: iare ödünç VERMEdir, alma değil"
+    "text": "Ödünç verme",
+    "source": "claude_reclue",
+    "model": "claude-fable-5-1",
+    "previous": "Ödünç verme (eski)"
   },
   "ÜŞME": {
     "text": "Soğuğa maruz kalma",
@@ -168406,9 +168411,10 @@
     "meaning_used": "mutfak eşyası"
   },
   "İADELİ": {
-    "text": "Alındı onaylı posta",
-    "source": "claude_audit",
-    "model": "claude-fable-5"
+    "text": "Alındılı posta",
+    "source": "claude_reclue",
+    "model": "claude-fable-5-1",
+    "previous": "Alındı onaylı posta"
   },
   "İBRETLİK": {
     "text": "Ders çıkarılacak",

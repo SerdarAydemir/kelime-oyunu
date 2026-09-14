@@ -71,7 +71,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Potasyumun simgesi",
+          "text": "Potasyum simgesi",
           "arrow": "down",
           "word_id": "D4",
           "image_id": null,
@@ -103,7 +103,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Yüce, yüksek (eski)",
+          "text": "Yüce (eski)",
           "arrow": "down",
           "word_id": "D6",
           "image_id": null,
@@ -199,7 +199,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Ötedeki işaret sözü",
+          "text": "Öteyi gösterir",
           "arrow": "right",
           "word_id": "A9",
           "image_id": null,
@@ -286,7 +286,7 @@
           "source": "curated"
         },
         {
-          "text": "İzmir'in ilk harfi",
+          "text": "İzmir'in başı",
           "arrow": "down",
           "word_id": "D8",
           "image_id": null,
@@ -334,7 +334,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Alfabenin ilk harfi",
+          "text": "Alfabenin ilki",
           "arrow": "right",
           "word_id": "A8",
           "image_id": null,
@@ -1105,7 +1105,7 @@
         }
       ],
       "clue": {
-        "text": "Alfabenin ilk harfi",
+        "text": "Alfabenin ilki",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1137,7 +1137,7 @@
         }
       ],
       "clue": {
-        "text": "Ötedeki işaret sözü",
+        "text": "Öteyi gösterir",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1437,7 +1437,7 @@
         }
       ],
       "clue": {
-        "text": "Potasyumun simgesi",
+        "text": "Potasyum simgesi",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1513,7 +1513,7 @@
         }
       ],
       "clue": {
-        "text": "Yüce, yüksek (eski)",
+        "text": "Yüce (eski)",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1577,7 +1577,7 @@
         }
       ],
       "clue": {
-        "text": "İzmir'in ilk harfi",
+        "text": "İzmir'in başı",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,

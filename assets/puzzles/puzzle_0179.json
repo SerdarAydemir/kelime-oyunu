@@ -199,7 +199,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Romen rakamıyla elli",
+          "text": "Romen'de elli",
           "arrow": "right",
           "word_id": "A9",
           "image_id": null,
@@ -270,7 +270,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Alfabenin ilk harfi",
+          "text": "Alfabenin ilki",
           "arrow": "right",
           "word_id": "A6",
           "image_id": null,
@@ -325,7 +325,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Sona eklenen parça",
+          "text": "Sona eklenen",
           "arrow": "right",
           "word_id": "A8",
           "image_id": null,
@@ -348,7 +348,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Ödünç verme (eski)",
+          "text": "Ödünç verme",
           "arrow": "right",
           "word_id": "A10",
           "image_id": null,
@@ -1043,7 +1043,7 @@
         }
       ],
       "clue": {
-        "text": "Alfabenin ilk harfi",
+        "text": "Alfabenin ilki",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1111,7 +1111,7 @@
         }
       ],
       "clue": {
-        "text": "Sona eklenen parça",
+        "text": "Sona eklenen",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1139,7 +1139,7 @@
         }
       ],
       "clue": {
-        "text": "Romen rakamıyla elli",
+        "text": "Romen'de elli",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1179,7 +1179,7 @@
         }
       ],
       "clue": {
-        "text": "Ödünç verme (eski)",
+        "text": "Ödünç verme",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,

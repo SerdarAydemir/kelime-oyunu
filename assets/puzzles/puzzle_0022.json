@@ -318,7 +318,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Kasaptan alınan gıda",
+          "text": "Kasap malı",
           "arrow": "right",
           "word_id": "A11",
           "image_id": null,
@@ -1229,7 +1229,7 @@
         }
       ],
       "clue": {
-        "text": "Kasaptan alınan gıda",
+        "text": "Kasap malı",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,

@@ -103,7 +103,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Potasyumun simgesi",
+          "text": "Potasyum simgesi",
           "arrow": "down",
           "word_id": "D6",
           "image_id": null,
@@ -167,7 +167,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Romen rakamıyla elli",
+          "text": "Romen'de elli",
           "arrow": "right",
           "word_id": "A4",
           "image_id": null,
@@ -199,7 +199,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Şahı deviren hamle",
+          "text": "Satrançta son",
           "arrow": "right",
           "word_id": "A7",
           "image_id": null,
@@ -302,7 +302,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Vahşi hayvan yuvası",
+          "text": "Hayvan yuvası",
           "arrow": "down",
           "word_id": "D9",
           "image_id": null,
@@ -971,7 +971,7 @@
         }
       ],
       "clue": {
-        "text": "Romen rakamıyla elli",
+        "text": "Romen'de elli",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1095,7 +1095,7 @@
         }
       ],
       "clue": {
-        "text": "Şahı deviren hamle",
+        "text": "Satrançta son",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1523,7 +1523,7 @@
         }
       ],
       "clue": {
-        "text": "Potasyumun simgesi",
+        "text": "Potasyum simgesi",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1631,7 +1631,7 @@
         }
       ],
       "clue": {
-        "text": "Vahşi hayvan yuvası",
+        "text": "Hayvan yuvası",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,

@@ -199,7 +199,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Romen rakamıyla bin",
+          "text": "Romen'de bin",
           "arrow": "right",
           "word_id": "A8",
           "image_id": null,
@@ -215,7 +215,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Müzikte susma, durak",
+          "text": "Müzikte durak",
           "arrow": "right",
           "word_id": "A10",
           "image_id": null,
@@ -295,7 +295,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Potasyumun simgesi",
+          "text": "Potasyum simgesi",
           "arrow": "right",
           "word_id": "A6",
           "image_id": null,
@@ -1041,7 +1041,7 @@
         }
       ],
       "clue": {
-        "text": "Potasyumun simgesi",
+        "text": "Potasyum simgesi",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1117,7 +1117,7 @@
         }
       ],
       "clue": {
-        "text": "Romen rakamıyla bin",
+        "text": "Romen'de bin",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1189,7 +1189,7 @@
         }
       ],
       "clue": {
-        "text": "Müzikte susma, durak",
+        "text": "Müzikte durak",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,

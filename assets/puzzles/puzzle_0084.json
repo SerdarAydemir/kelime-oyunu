@@ -55,7 +55,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Romen rakamıyla elli",
+          "text": "Romen'de elli",
           "arrow": "down",
           "word_id": "D3",
           "image_id": null,
@@ -286,7 +286,7 @@
           "source": "llm"
         },
         {
-          "text": "Sona eklenen parça",
+          "text": "Sona eklenen",
           "arrow": "down",
           "word_id": "D8",
           "image_id": null,
@@ -302,7 +302,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Alfabenin ilk harfi",
+          "text": "Alfabenin ilki",
           "arrow": "right",
           "word_id": "A7",
           "image_id": null,
@@ -1060,7 +1060,7 @@
         }
       ],
       "clue": {
-        "text": "Alfabenin ilk harfi",
+        "text": "Alfabenin ilki",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1408,7 +1408,7 @@
         }
       ],
       "clue": {
-        "text": "Romen rakamıyla elli",
+        "text": "Romen'de elli",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1632,7 +1632,7 @@
         }
       ],
       "clue": {
-        "text": "Sona eklenen parça",
+        "text": "Sona eklenen",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,

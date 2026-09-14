@@ -39,7 +39,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "İzmir'in ilk harfi",
+          "text": "İzmir'in başı",
           "arrow": "down",
           "word_id": "D2",
           "image_id": null,
@@ -103,7 +103,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Vahşi hayvan yuvası",
+          "text": "Hayvan yuvası",
           "arrow": "down",
           "word_id": "D6",
           "image_id": null,
@@ -135,7 +135,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Alfabenin ilk harfi",
+          "text": "Alfabenin ilki",
           "arrow": "right",
           "word_id": "A2",
           "image_id": null,
@@ -199,7 +199,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Avuç ve parmaklar",
+          "text": "Avuç ve parmak",
           "arrow": "right",
           "word_id": "A9",
           "image_id": null,
@@ -325,7 +325,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Enerjinin simgesi",
+          "text": "Enerji simgesi",
           "arrow": "right",
           "word_id": "A8",
           "image_id": null,
@@ -900,7 +900,7 @@
         }
       ],
       "clue": {
-        "text": "Alfabenin ilk harfi",
+        "text": "Alfabenin ilki",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -1116,7 +1116,7 @@
         }
       ],
       "clue": {
-        "text": "Enerjinin simgesi",
+        "text": "Enerji simgesi",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1148,7 +1148,7 @@
         }
       ],
       "clue": {
-        "text": "Avuç ve parmaklar",
+        "text": "Avuç ve parmak",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1384,7 +1384,7 @@
         }
       ],
       "clue": {
-        "text": "İzmir'in ilk harfi",
+        "text": "İzmir'in başı",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1520,7 +1520,7 @@
         }
       ],
       "clue": {
-        "text": "Vahşi hayvan yuvası",
+        "text": "Hayvan yuvası",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,

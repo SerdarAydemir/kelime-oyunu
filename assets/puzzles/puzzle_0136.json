@@ -87,7 +87,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "En yakın işaret sözü",
+          "text": "Yakını gösterir",
           "arrow": "down",
           "word_id": "D5",
           "image_id": null,
@@ -199,7 +199,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Romen rakamıyla elli",
+          "text": "Romen'de elli",
           "arrow": "right",
           "word_id": "A7",
           "image_id": null,
@@ -215,7 +215,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Alındı onaylı posta",
+          "text": "Alındılı posta",
           "arrow": "right",
           "word_id": "A9",
           "image_id": null,
@@ -231,7 +231,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Potasyumun simgesi",
+          "text": "Potasyum simgesi",
           "arrow": "right",
           "word_id": "A10",
           "image_id": null,
@@ -341,7 +341,7 @@
           "source": "llm"
         },
         {
-          "text": "Alfabenin ilk harfi",
+          "text": "Alfabenin ilki",
           "arrow": "down",
           "word_id": "D12",
           "image_id": null,
@@ -1082,7 +1082,7 @@
         }
       ],
       "clue": {
-        "text": "Romen rakamıyla elli",
+        "text": "Romen'de elli",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1170,7 +1170,7 @@
         }
       ],
       "clue": {
-        "text": "Alındı onaylı posta",
+        "text": "Alındılı posta",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1198,7 +1198,7 @@
         }
       ],
       "clue": {
-        "text": "Potasyumun simgesi",
+        "text": "Potasyum simgesi",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1442,7 +1442,7 @@
         }
       ],
       "clue": {
-        "text": "En yakın işaret sözü",
+        "text": "Yakını gösterir",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1690,7 +1690,7 @@
         }
       ],
       "clue": {
-        "text": "Alfabenin ilk harfi",
+        "text": "Alfabenin ilki",
         "arrow": "down",
         "word_id": "D12",
         "image_id": null,

@@ -103,7 +103,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Potasyumun simgesi",
+          "text": "Potasyum simgesi",
           "arrow": "down",
           "word_id": "D6",
           "image_id": null,
@@ -183,7 +183,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Romen rakamıyla elli",
+          "text": "Romen'de elli",
           "arrow": "right",
           "word_id": "A6",
           "image_id": null,
@@ -263,7 +263,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Enerjinin simgesi",
+          "text": "Enerji simgesi",
           "arrow": "right",
           "word_id": "A5",
           "image_id": null,
@@ -286,7 +286,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Alfabenin ilk harfi",
+          "text": "Alfabenin ilki",
           "arrow": "right",
           "word_id": "A7",
           "image_id": null,
@@ -1022,7 +1022,7 @@
         }
       ],
       "clue": {
-        "text": "Enerjinin simgesi",
+        "text": "Enerji simgesi",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1050,7 +1050,7 @@
         }
       ],
       "clue": {
-        "text": "Romen rakamıyla elli",
+        "text": "Romen'de elli",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1078,7 +1078,7 @@
         }
       ],
       "clue": {
-        "text": "Alfabenin ilk harfi",
+        "text": "Alfabenin ilki",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1518,7 +1518,7 @@
         }
       ],
       "clue": {
-        "text": "Potasyumun simgesi",
+        "text": "Potasyum simgesi",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,

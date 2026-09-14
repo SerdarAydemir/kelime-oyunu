@@ -183,7 +183,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Enerjinin simgesi",
+          "text": "Enerji simgesi",
           "arrow": "right",
           "word_id": "A6",
           "image_id": null,
@@ -293,7 +293,7 @@
           "source": "llm"
         },
         {
-          "text": "Alfabenin ilk harfi",
+          "text": "Alfabenin ilki",
           "arrow": "down",
           "word_id": "D9",
           "image_id": null,
@@ -325,7 +325,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Ötedeki işaret sözü",
+          "text": "Öteyi gösterir",
           "arrow": "down",
           "word_id": "D11",
           "image_id": null,
@@ -341,7 +341,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Sert mineral kütlesi",
+          "text": "Sert mineral",
           "arrow": "right",
           "word_id": "A10",
           "image_id": null,
@@ -364,7 +364,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "İçilen berrak sıvı",
+          "text": "İçilen sıvı",
           "arrow": "right",
           "word_id": "A12",
           "image_id": null,
@@ -1057,7 +1057,7 @@
         }
       ],
       "clue": {
-        "text": "Enerjinin simgesi",
+        "text": "Enerji simgesi",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1201,7 +1201,7 @@
         }
       ],
       "clue": {
-        "text": "Sert mineral kütlesi",
+        "text": "Sert mineral",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1269,7 +1269,7 @@
         }
       ],
       "clue": {
-        "text": "İçilen berrak sıvı",
+        "text": "İçilen sıvı",
         "arrow": "right",
         "word_id": "A12",
         "image_id": null,
@@ -1629,7 +1629,7 @@
         }
       ],
       "clue": {
-        "text": "Alfabenin ilk harfi",
+        "text": "Alfabenin ilki",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,
@@ -1693,7 +1693,7 @@
         }
       ],
       "clue": {
-        "text": "Ötedeki işaret sözü",
+        "text": "Öteyi gösterir",
         "arrow": "down",
         "word_id": "D11",
         "image_id": null,

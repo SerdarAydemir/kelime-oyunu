@@ -215,7 +215,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Alfabenin ilk harfi",
+          "text": "Alfabenin ilki",
           "arrow": "right",
           "word_id": "A9",
           "image_id": null,
@@ -231,7 +231,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Potasyumun simgesi",
+          "text": "Potasyum simgesi",
           "arrow": "right",
           "word_id": "A12",
           "image_id": null,
@@ -286,7 +286,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Gökyüzündeki uydumuz",
+          "text": "Dünya'nın uydusu",
           "arrow": "right",
           "word_id": "A10",
           "image_id": null,
@@ -302,7 +302,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Romen rakamıyla bin",
+          "text": "Romen'de bin",
           "arrow": "right",
           "word_id": "A11",
           "image_id": null,
@@ -1156,7 +1156,7 @@
         }
       ],
       "clue": {
-        "text": "Alfabenin ilk harfi",
+        "text": "Alfabenin ilki",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1188,7 +1188,7 @@
         }
       ],
       "clue": {
-        "text": "Gökyüzündeki uydumuz",
+        "text": "Dünya'nın uydusu",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1216,7 +1216,7 @@
         }
       ],
       "clue": {
-        "text": "Romen rakamıyla bin",
+        "text": "Romen'de bin",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1244,7 +1244,7 @@
         }
       ],
       "clue": {
-        "text": "Potasyumun simgesi",
+        "text": "Potasyum simgesi",
         "arrow": "right",
         "word_id": "A12",
         "image_id": null,

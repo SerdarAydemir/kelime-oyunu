@@ -55,7 +55,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Çalışma, meşguliyet",
+          "text": "Meşguliyet",
           "arrow": "down",
           "word_id": "D3",
           "image_id": null,
@@ -103,7 +103,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Potasyumun simgesi",
+          "text": "Potasyum simgesi",
           "arrow": "down",
           "word_id": "D6",
           "image_id": null,
@@ -151,7 +151,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Müzikte susma, durak",
+          "text": "Müzikte durak",
           "arrow": "right",
           "word_id": "A3",
           "image_id": null,
@@ -231,7 +231,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Sona eklenen parça",
+          "text": "Sona eklenen",
           "arrow": "right",
           "word_id": "A11",
           "image_id": null,
@@ -302,7 +302,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Alfabenin ilk harfi",
+          "text": "Alfabenin ilki",
           "arrow": "right",
           "word_id": "A6",
           "image_id": null,
@@ -332,7 +332,7 @@
           "source": "llm"
         },
         {
-          "text": "Romen rakamıyla elli",
+          "text": "Romen'de elli",
           "arrow": "down",
           "word_id": "D11",
           "image_id": null,
@@ -941,7 +941,7 @@
         }
       ],
       "clue": {
-        "text": "Müzikte susma, durak",
+        "text": "Müzikte durak",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -1041,7 +1041,7 @@
         }
       ],
       "clue": {
-        "text": "Alfabenin ilk harfi",
+        "text": "Alfabenin ilki",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1233,7 +1233,7 @@
         }
       ],
       "clue": {
-        "text": "Sona eklenen parça",
+        "text": "Sona eklenen",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1413,7 +1413,7 @@
         }
       ],
       "clue": {
-        "text": "Çalışma, meşguliyet",
+        "text": "Meşguliyet",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1513,7 +1513,7 @@
         }
       ],
       "clue": {
-        "text": "Potasyumun simgesi",
+        "text": "Potasyum simgesi",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1693,7 +1693,7 @@
         }
       ],
       "clue": {
-        "text": "Romen rakamıyla elli",
+        "text": "Romen'de elli",
         "arrow": "down",
         "word_id": "D11",
         "image_id": null,

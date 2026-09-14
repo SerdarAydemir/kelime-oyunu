@@ -183,7 +183,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Alfabenin ilk harfi",
+          "text": "Alfabenin ilki",
           "arrow": "right",
           "word_id": "A6",
           "image_id": null,
@@ -302,14 +302,14 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Enerjinin simgesi",
+          "text": "Enerji simgesi",
           "arrow": "right",
           "word_id": "A8",
           "image_id": null,
           "source": "curated"
         },
         {
-          "text": "Yüce, yüksek (eski)",
+          "text": "Yüce (eski)",
           "arrow": "down",
           "word_id": "D9",
           "image_id": null,
@@ -341,7 +341,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Onay işareti (eski)",
+          "text": "Onay işareti",
           "arrow": "right",
           "word_id": "A10",
           "image_id": null,
@@ -1052,7 +1052,7 @@
         }
       ],
       "clue": {
-        "text": "Alfabenin ilk harfi",
+        "text": "Alfabenin ilki",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1108,7 +1108,7 @@
         }
       ],
       "clue": {
-        "text": "Enerjinin simgesi",
+        "text": "Enerji simgesi",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1172,7 +1172,7 @@
         }
       ],
       "clue": {
-        "text": "Onay işareti (eski)",
+        "text": "Onay işareti",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1636,7 +1636,7 @@
         }
       ],
       "clue": {
-        "text": "Yüce, yüksek (eski)",
+        "text": "Yüce (eski)",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,

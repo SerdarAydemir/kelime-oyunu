@@ -151,7 +151,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Romen rakamıyla elli",
+          "text": "Romen'de elli",
           "arrow": "right",
           "word_id": "A4",
           "image_id": null,
@@ -231,7 +231,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Potasyumun simgesi",
+          "text": "Potasyum simgesi",
           "arrow": "right",
           "word_id": "A12",
           "image_id": null,
@@ -277,7 +277,7 @@
           "source": "llm"
         },
         {
-          "text": "Dine dayanmayan",
+          "text": "Dinden bağımsız",
           "arrow": "down",
           "word_id": "D8",
           "image_id": null,
@@ -293,7 +293,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Alfabenin ilk harfi",
+          "text": "Alfabenin ilki",
           "arrow": "right",
           "word_id": "A8",
           "image_id": null,
@@ -958,7 +958,7 @@
         }
       ],
       "clue": {
-        "text": "Romen rakamıyla elli",
+        "text": "Romen'de elli",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1114,7 +1114,7 @@
         }
       ],
       "clue": {
-        "text": "Alfabenin ilk harfi",
+        "text": "Alfabenin ilki",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1258,7 +1258,7 @@
         }
       ],
       "clue": {
-        "text": "Potasyumun simgesi",
+        "text": "Potasyum simgesi",
         "arrow": "right",
         "word_id": "A12",
         "image_id": null,
@@ -1642,7 +1642,7 @@
         }
       ],
       "clue": {
-        "text": "Dine dayanmayan",
+        "text": "Dinden bağımsız",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,

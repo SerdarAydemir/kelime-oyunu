@@ -31,8 +31,9 @@ const _family = 'Roboto';
 const _cellSizes = [44.0, 49.0, 54.0, 56.0];
 
 class _Instance {
-  _Instance(this.text, this.puzzleId, this.isDouble);
+  _Instance(this.text, this.answer, this.puzzleId, this.isDouble);
   final String text;
+  final String answer;
   final int puzzleId;
   final bool isDouble;
 }
@@ -54,10 +55,18 @@ List<_Instance> _loadClues() {
   ).listSync().whereType<File>().where((f) => RegExp(r'puzzle_\d{4}\.json$').hasMatch(f.path));
   for (final f in files) {
     final puzzle = PuzzleData.fromJson(jsonDecode(f.readAsStringSync()) as Map<String, dynamic>);
+    final answers = {for (final w in puzzle.words) w.id: w.answer};
     for (final cell in puzzle.cells) {
       if (cell.type != CellType.clue) continue;
       for (final clue in cell.clues) {
-        out.add(_Instance(clue.text, puzzle.puzzleId, cell.clues.length >= 2));
+        out.add(
+          _Instance(
+            clue.text,
+            answers[clue.wordId] ?? '?',
+            puzzle.puzzleId,
+            cell.clues.length >= 2,
+          ),
+        );
       }
     }
   }
@@ -133,7 +142,7 @@ void main() {
           lineHeight: _lineHeight,
         );
         counts[key]![r.kind] = (counts[key]![r.kind] ?? 0) + 1;
-        if (r.kind == ClueFitKind.overflow) overflow.add('${c.text} [$key, p${c.puzzleId}]');
+        if (r.kind == ClueFitKind.overflow) overflow.add('${c.answer}=${c.text} [$key]');
       }
       buf.writeln('--- cell ${cell.toStringAsFixed(0)} dp ---');
       for (final key in ['single', 'double']) {

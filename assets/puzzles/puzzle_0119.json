@@ -183,7 +183,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Enerjinin simgesi",
+          "text": "Enerji simgesi",
           "arrow": "right",
           "word_id": "A6",
           "image_id": null,
@@ -231,7 +231,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Geride kalan belirti",
+          "text": "Kalan belirti",
           "arrow": "right",
           "word_id": "A12",
           "image_id": null,
@@ -247,7 +247,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Romen rakamıyla elli",
+          "text": "Romen'de elli",
           "arrow": "right",
           "word_id": "A5",
           "image_id": null,
@@ -1013,7 +1013,7 @@
         }
       ],
       "clue": {
-        "text": "Romen rakamıyla elli",
+        "text": "Romen'de elli",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1041,7 +1041,7 @@
         }
       ],
       "clue": {
-        "text": "Enerjinin simgesi",
+        "text": "Enerji simgesi",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1249,7 +1249,7 @@
         }
       ],
       "clue": {
-        "text": "Geride kalan belirti",
+        "text": "Kalan belirti",
         "arrow": "right",
         "word_id": "A12",
         "image_id": null,

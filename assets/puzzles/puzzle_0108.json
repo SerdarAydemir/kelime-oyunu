@@ -55,7 +55,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Çok popüler şarkı",
+          "text": "Popüler şarkı",
           "arrow": "down",
           "word_id": "D3",
           "image_id": null,
@@ -71,7 +71,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Vahşi hayvan yuvası",
+          "text": "Hayvan yuvası",
           "arrow": "down",
           "word_id": "D4",
           "image_id": null,
@@ -167,7 +167,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Müzikte susma, durak",
+          "text": "Müzikte durak",
           "arrow": "right",
           "word_id": "A5",
           "image_id": null,
@@ -316,14 +316,14 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Alfabenin ilk harfi",
+          "text": "Alfabenin ilki",
           "arrow": "right",
           "word_id": "A11",
           "image_id": null,
           "source": "curated"
         },
         {
-          "text": "Enerjinin simgesi",
+          "text": "Enerji simgesi",
           "arrow": "down",
           "word_id": "D10",
           "image_id": null,
@@ -1010,7 +1010,7 @@
         }
       ],
       "clue": {
-        "text": "Müzikte susma, durak",
+        "text": "Müzikte durak",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1230,7 +1230,7 @@
         }
       ],
       "clue": {
-        "text": "Alfabenin ilk harfi",
+        "text": "Alfabenin ilki",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1434,7 +1434,7 @@
         }
       ],
       "clue": {
-        "text": "Çok popüler şarkı",
+        "text": "Popüler şarkı",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1466,7 +1466,7 @@
         }
       ],
       "clue": {
-        "text": "Vahşi hayvan yuvası",
+        "text": "Hayvan yuvası",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1710,7 +1710,7 @@
         }
       ],
       "clue": {
-        "text": "Enerjinin simgesi",
+        "text": "Enerji simgesi",
         "arrow": "down",
         "word_id": "D10",
         "image_id": null,

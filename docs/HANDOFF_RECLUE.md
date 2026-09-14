@@ -101,6 +101,19 @@ senkronluyor, `verify_pack` her hücre ipucunun words tarafıyla aynı olduğunu
 yazıldı. regen_only ve generate zaten verify_pack'i çağırdığı için bundan sonra sessiz
 sapma mümkün değil.
 
+## Ekrana sığdırma (2026-09-14): kelime/hece sınırında kırma + ipucu bütçesi
+
+- UI (543e3d8): ClueRenderer artık `layoutClueText` ile kelime sınırında kırar, 9 px tabanda
+  Türkçe hece kuralıyla tireler (`lib/core/utils/tr_hyphenation.dart`), overflow'da ellipsis
+  kalır ve debug'da `AppLogger.warning` ile ipucunu yazar. Ölçüm aracı
+  `test/tooling/clue_fit_report_test.dart` (gerçek Roboto, 44/49/54/56 dp hücre).
+- Bütçe: symbols/two_letter ipuçları ≤16 karakter, kelime ≤10 (`test_curated_clue_budget.py`,
+  26 curated ipucu kısaltıldı); master'da 27 kısa cevabın ipucu ≤16'ya indirildi
+  (reclue_apply, `previous` korunur). CLAUDE.md'ye bütçe kuralı eklendi.
+- Son ölçüm: 49/54/56 dp'de overflow 0; 44 dp'de (kötümser, 330 dp ekran) çift hücrede 31 örnek
+  kalıyor (PUL, TOK, FRAK, KITA, FAUL, FİL, KAK, BAR, TOST, SELA, AST, KİTAP, İKİ vb.). Hedef
+  49 dp olduğu için bilinçli bırakıldı; gerekirse aynı yöntemle ≤14'e indirilir.
+
 ## Açık kalanlar
 
 - Havuz dışındaki ~21k flash-lite kelime re-clue bekliyor; kapı sayesinde acil değil.

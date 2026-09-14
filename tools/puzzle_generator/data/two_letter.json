@@ -1,7 +1,7 @@
 [
   {
     "answer": "AD",
-    "clue": "Kişiye verilen isim"
+    "clue": "İsim"
   },
   {
     "answer": "AH",
@@ -33,7 +33,7 @@
   },
   {
     "answer": "AY",
-    "clue": "Gökyüzündeki uydumuz"
+    "clue": "Dünya'nın uydusu"
   },
   {
     "answer": "AZ",
@@ -53,7 +53,7 @@
   },
   {
     "answer": "BU",
-    "clue": "En yakın işaret sözü"
+    "clue": "Yakını gösterir"
   },
   {
     "answer": "DO",
@@ -61,11 +61,11 @@
   },
   {
     "answer": "EK",
-    "clue": "Sona eklenen parça"
+    "clue": "Sona eklenen"
   },
   {
     "answer": "EL",
-    "clue": "Avuç ve parmaklar"
+    "clue": "Avuç ve parmak"
   },
   {
     "answer": "EN",
@@ -77,11 +77,11 @@
   },
   {
     "answer": "ES",
-    "clue": "Müzikte susma, durak"
+    "clue": "Müzikte durak"
   },
   {
     "answer": "ET",
-    "clue": "Kasaptan alınan gıda"
+    "clue": "Kasap malı"
   },
   {
     "answer": "EV",
@@ -121,7 +121,7 @@
   },
   {
     "answer": "OT",
-    "clue": "Yeşil küçük bitki"
+    "clue": "Yeşil bitki"
   },
   {
     "answer": "OY",
@@ -133,7 +133,7 @@
   },
   {
     "answer": "SU",
-    "clue": "İçilen berrak sıvı"
+    "clue": "İçilen sıvı"
   },
   {
     "answer": "Sİ",
@@ -161,7 +161,7 @@
   },
   {
     "answer": "ÖZ",
-    "clue": "Bir şeyin esası, temeli"
+    "clue": "Bir şeyin esası"
   },
   {
     "answer": "ÜN",
@@ -181,7 +181,7 @@
   },
   {
     "answer": "İN",
-    "clue": "Vahşi hayvan yuvası"
+    "clue": "Hayvan yuvası"
   },
   {
     "answer": "İP",
@@ -189,7 +189,7 @@
   },
   {
     "answer": "İZ",
-    "clue": "Geride kalan belirti"
+    "clue": "Kalan belirti"
   },
   {
     "answer": "İÇ",
@@ -197,10 +197,10 @@
   },
   {
     "answer": "İŞ",
-    "clue": "Çalışma, meşguliyet"
+    "clue": "Meşguliyet"
   },
   {
     "answer": "ŞU",
-    "clue": "Ötedeki işaret sözü"
+    "clue": "Öteyi gösterir"
   }
 ]

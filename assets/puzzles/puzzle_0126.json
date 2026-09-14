@@ -318,14 +318,14 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Kasaptan alınan gıda",
+          "text": "Kasap malı",
           "arrow": "right",
           "word_id": "A10",
           "image_id": null,
           "source": "curated"
         },
         {
-          "text": "Alfabenin ilk harfi",
+          "text": "Alfabenin ilki",
           "arrow": "down",
           "word_id": "D10",
           "image_id": null,
@@ -1188,7 +1188,7 @@
         }
       ],
       "clue": {
-        "text": "Kasaptan alınan gıda",
+        "text": "Kasap malı",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1648,7 +1648,7 @@
         }
       ],
       "clue": {
-        "text": "Alfabenin ilk harfi",
+        "text": "Alfabenin ilki",
         "arrow": "down",
         "word_id": "D10",
         "image_id": null,

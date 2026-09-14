@@ -103,7 +103,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Alfabenin ilk harfi",
+          "text": "Alfabenin ilki",
           "arrow": "down",
           "word_id": "D6",
           "image_id": null,
@@ -167,7 +167,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Kasaptan alınan gıda",
+          "text": "Kasap malı",
           "arrow": "right",
           "word_id": "A4",
           "image_id": null,
@@ -231,7 +231,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Potasyumun simgesi",
+          "text": "Potasyum simgesi",
           "arrow": "right",
           "word_id": "A12",
           "image_id": null,
@@ -334,14 +334,14 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Çalışma, meşguliyet",
+          "text": "Meşguliyet",
           "arrow": "right",
           "word_id": "A11",
           "image_id": null,
           "source": "curated"
         },
         {
-          "text": "Enerjinin simgesi",
+          "text": "Enerji simgesi",
           "arrow": "down",
           "word_id": "D10",
           "image_id": null,
@@ -982,7 +982,7 @@
         }
       ],
       "clue": {
-        "text": "Kasaptan alınan gıda",
+        "text": "Kasap malı",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1218,7 +1218,7 @@
         }
       ],
       "clue": {
-        "text": "Çalışma, meşguliyet",
+        "text": "Meşguliyet",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1246,7 +1246,7 @@
         }
       ],
       "clue": {
-        "text": "Potasyumun simgesi",
+        "text": "Potasyum simgesi",
         "arrow": "right",
         "word_id": "A12",
         "image_id": null,
@@ -1550,7 +1550,7 @@
         }
       ],
       "clue": {
-        "text": "Alfabenin ilk harfi",
+        "text": "Alfabenin ilki",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,
@@ -1690,7 +1690,7 @@
         }
       ],
       "clue": {
-        "text": "Enerjinin simgesi",
+        "text": "Enerji simgesi",
         "arrow": "down",
         "word_id": "D10",
         "image_id": null,

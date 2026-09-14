@@ -215,7 +215,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "İzmir'in ilk harfi",
+          "text": "İzmir'in başı",
           "arrow": "right",
           "word_id": "A9",
           "image_id": null,
@@ -302,7 +302,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Alfabenin ilk harfi",
+          "text": "Alfabenin ilki",
           "arrow": "down",
           "word_id": "D9",
           "image_id": null,
@@ -1152,7 +1152,7 @@
         }
       ],
       "clue": {
-        "text": "İzmir'in ilk harfi",
+        "text": "İzmir'in başı",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1620,7 +1620,7 @@
         }
       ],
       "clue": {
-        "text": "Alfabenin ilk harfi",
+        "text": "Alfabenin ilki",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,

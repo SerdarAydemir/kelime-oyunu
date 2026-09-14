@@ -39,7 +39,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Halat çekme komutu",
+          "text": "Halat çek komutu",
           "arrow": "down",
           "word_id": "D2",
           "image_id": null,
@@ -103,7 +103,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Potasyumun simgesi",
+          "text": "Potasyum simgesi",
           "arrow": "down",
           "word_id": "D6",
           "image_id": null,
@@ -183,7 +183,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Alfabenin ilk harfi",
+          "text": "Alfabenin ilki",
           "arrow": "right",
           "word_id": "A7",
           "image_id": null,
@@ -263,7 +263,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Romen rakamıyla bin",
+          "text": "Romen'de bin",
           "arrow": "right",
           "word_id": "A4",
           "image_id": null,
@@ -311,7 +311,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Enerjinin simgesi",
+          "text": "Enerji simgesi",
           "arrow": "right",
           "word_id": "A6",
           "image_id": null,
@@ -334,7 +334,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Osmanlı gece bekçisi",
+          "text": "Osmanlı bekçisi",
           "arrow": "right",
           "word_id": "A8",
           "image_id": null,
@@ -970,7 +970,7 @@
         }
       ],
       "clue": {
-        "text": "Romen rakamıyla bin",
+        "text": "Romen'de bin",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1030,7 +1030,7 @@
         }
       ],
       "clue": {
-        "text": "Enerjinin simgesi",
+        "text": "Enerji simgesi",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1058,7 +1058,7 @@
         }
       ],
       "clue": {
-        "text": "Alfabenin ilk harfi",
+        "text": "Alfabenin ilki",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1098,7 +1098,7 @@
         }
       ],
       "clue": {
-        "text": "Osmanlı gece bekçisi",
+        "text": "Osmanlı bekçisi",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1358,7 +1358,7 @@
         }
       ],
       "clue": {
-        "text": "Halat çekme komutu",
+        "text": "Halat çek komutu",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1490,7 +1490,7 @@
         }
       ],
       "clue": {
-        "text": "Potasyumun simgesi",
+        "text": "Potasyum simgesi",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,

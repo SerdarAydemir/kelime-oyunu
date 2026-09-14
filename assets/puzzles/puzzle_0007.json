@@ -279,7 +279,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Yüce, yüksek (eski)",
+          "text": "Yüce (eski)",
           "arrow": "right",
           "word_id": "A5",
           "image_id": null,
@@ -318,7 +318,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Romen rakamıyla elli",
+          "text": "Romen'de elli",
           "arrow": "right",
           "word_id": "A10",
           "image_id": null,
@@ -985,7 +985,7 @@
         }
       ],
       "clue": {
-        "text": "Yüce, yüksek (eski)",
+        "text": "Yüce (eski)",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1169,7 +1169,7 @@
         }
       ],
       "clue": {
-        "text": "Romen rakamıyla elli",
+        "text": "Romen'de elli",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,

@@ -167,7 +167,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Alfabenin ilk harfi",
+          "text": "Alfabenin ilki",
           "arrow": "right",
           "word_id": "A5",
           "image_id": null,
@@ -302,7 +302,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Halat çekme komutu",
+          "text": "Halat çek komutu",
           "arrow": "right",
           "word_id": "A8",
           "image_id": null,
@@ -988,7 +988,7 @@
         }
       ],
       "clue": {
-        "text": "Alfabenin ilk harfi",
+        "text": "Alfabenin ilki",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1096,7 +1096,7 @@
         }
       ],
       "clue": {
-        "text": "Halat çekme komutu",
+        "text": "Halat çek komutu",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,

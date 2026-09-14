@@ -302,7 +302,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Romen rakamıyla bin",
+          "text": "Romen'de bin",
           "arrow": "down",
           "word_id": "D9",
           "image_id": null,
@@ -318,7 +318,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Alfabenin ilk harfi",
+          "text": "Alfabenin ilki",
           "arrow": "down",
           "word_id": "D10",
           "image_id": null,
@@ -334,7 +334,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Potasyumun simgesi",
+          "text": "Potasyum simgesi",
           "arrow": "down",
           "word_id": "D11",
           "image_id": null,
@@ -1582,7 +1582,7 @@
         }
       ],
       "clue": {
-        "text": "Romen rakamıyla bin",
+        "text": "Romen'de bin",
         "arrow": "down",
         "word_id": "D9",
         "image_id": null,
@@ -1610,7 +1610,7 @@
         }
       ],
       "clue": {
-        "text": "Alfabenin ilk harfi",
+        "text": "Alfabenin ilki",
         "arrow": "down",
         "word_id": "D10",
         "image_id": null,
@@ -1638,7 +1638,7 @@
         }
       ],
       "clue": {
-        "text": "Potasyumun simgesi",
+        "text": "Potasyum simgesi",
         "arrow": "down",
         "word_id": "D11",
         "image_id": null,

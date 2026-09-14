@@ -247,7 +247,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Yaprak tütün sarması",
+          "text": "Tütün sarması",
           "arrow": "right",
           "word_id": "A4",
           "image_id": null,
@@ -286,7 +286,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Sona eklenen parça",
+          "text": "Sona eklenen",
           "arrow": "right",
           "word_id": "A9",
           "image_id": null,
@@ -302,7 +302,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Romen rakamıyla bin",
+          "text": "Romen'de bin",
           "arrow": "right",
           "word_id": "A11",
           "image_id": null,
@@ -962,7 +962,7 @@
         }
       ],
       "clue": {
-        "text": "Yaprak tütün sarması",
+        "text": "Tütün sarması",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1146,7 +1146,7 @@
         }
       ],
       "clue": {
-        "text": "Sona eklenen parça",
+        "text": "Sona eklenen",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1210,7 +1210,7 @@
         }
       ],
       "clue": {
-        "text": "Romen rakamıyla bin",
+        "text": "Romen'de bin",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,

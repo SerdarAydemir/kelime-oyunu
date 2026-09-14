@@ -71,7 +71,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Romen rakamıyla elli",
+          "text": "Romen'de elli",
           "arrow": "down",
           "word_id": "D4",
           "image_id": null,
@@ -167,7 +167,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Avuç ve parmaklar",
+          "text": "Avuç ve parmak",
           "arrow": "right",
           "word_id": "A5",
           "image_id": null,
@@ -199,7 +199,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Yüce, yüksek (eski)",
+          "text": "Yüce (eski)",
           "arrow": "right",
           "word_id": "A8",
           "image_id": null,
@@ -293,7 +293,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Potasyumun simgesi",
+          "text": "Potasyum simgesi",
           "arrow": "right",
           "word_id": "A9",
           "image_id": null,
@@ -332,14 +332,14 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Alfabenin ilk harfi",
+          "text": "Alfabenin ilki",
           "arrow": "right",
           "word_id": "A11",
           "image_id": null,
           "source": "curated"
         },
         {
-          "text": "İzmir'in ilk harfi",
+          "text": "İzmir'in başı",
           "arrow": "down",
           "word_id": "D11",
           "image_id": null,
@@ -1010,7 +1010,7 @@
         }
       ],
       "clue": {
-        "text": "Avuç ve parmaklar",
+        "text": "Avuç ve parmak",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1130,7 +1130,7 @@
         }
       ],
       "clue": {
-        "text": "Yüce, yüksek (eski)",
+        "text": "Yüce (eski)",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1158,7 +1158,7 @@
         }
       ],
       "clue": {
-        "text": "Potasyumun simgesi",
+        "text": "Potasyum simgesi",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1226,7 +1226,7 @@
         }
       ],
       "clue": {
-        "text": "Alfabenin ilk harfi",
+        "text": "Alfabenin ilki",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1450,7 +1450,7 @@
         }
       ],
       "clue": {
-        "text": "Romen rakamıyla elli",
+        "text": "Romen'de elli",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1710,7 +1710,7 @@
         }
       ],
       "clue": {
-        "text": "İzmir'in ilk harfi",
+        "text": "İzmir'in başı",
         "arrow": "down",
         "word_id": "D11",
         "image_id": null,

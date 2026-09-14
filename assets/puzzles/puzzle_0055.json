@@ -167,7 +167,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Kasaptan alınan gıda",
+          "text": "Kasap malı",
           "arrow": "right",
           "word_id": "A4",
           "image_id": null,
@@ -199,7 +199,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Romen rakamıyla bin",
+          "text": "Romen'de bin",
           "arrow": "right",
           "word_id": "A8",
           "image_id": null,
@@ -231,7 +231,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Potasyumun simgesi",
+          "text": "Potasyum simgesi",
           "arrow": "right",
           "word_id": "A11",
           "image_id": null,
@@ -302,7 +302,7 @@
       "word_ids": [],
       "clues": [
         {
-          "text": "Küçük çocuk (eski)",
+          "text": "Küçük çocuk",
           "arrow": "right",
           "word_id": "A9",
           "image_id": null,
@@ -972,7 +972,7 @@
         }
       ],
       "clue": {
-        "text": "Kasaptan alınan gıda",
+        "text": "Kasap malı",
         "arrow": "right",
         "word_id": "A4",
         "image_id": null,
@@ -1104,7 +1104,7 @@
         }
       ],
       "clue": {
-        "text": "Romen rakamıyla bin",
+        "text": "Romen'de bin",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1144,7 +1144,7 @@
         }
       ],
       "clue": {
-        "text": "Küçük çocuk (eski)",
+        "text": "Küçük çocuk",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1220,7 +1220,7 @@
         }
       ],
       "clue": {
-        "text": "Potasyumun simgesi",
+        "text": "Potasyum simgesi",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
