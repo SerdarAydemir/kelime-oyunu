@@ -184,3 +184,6 @@ LAVMAN
 İSEVİLİK
 TAKİYE
 PAŞABABA
+# Mezhep adı (MALİKİ) ve şiddet teması (MAKTEL) — sahip onayı 2026-09-14
+MALİKİ
+MAKTEL

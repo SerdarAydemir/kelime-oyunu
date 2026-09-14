@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-14T17:47:04.297416+00:00",
+  "generated_at": "2026-09-14T17:55:19.469071+00:00",
   "total_puzzles": 200,
   "puzzles": [
     {
@@ -665,7 +665,7 @@
       "size": "medium",
       "difficulty": "medium",
       "difficulty_score": 39,
-      "template_id": "medium_frame_200000d84800"
+      "template_id": "medium_frame_200000d92000"
     },
     {
       "puzzle_id": 84,
@@ -1601,7 +1601,7 @@
       "size": "medium",
       "difficulty": "medium",
       "difficulty_score": 39,
-      "template_id": "medium_frame_004008288000"
+      "template_id": "medium_frame_004008210200"
     }
   ]
 }

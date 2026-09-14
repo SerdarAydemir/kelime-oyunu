@@ -6,7 +6,8 @@
   CC BY-SA 4.0), 601 giriş, en az 4 harf (gerekçe script docstring'inde). Commit 12956b0.
 - Havuz kalite kapısı kalıcı: `rebuild_pool_from_master.py` flash-lite ipuçlu kelimeleri
   varsayılan dışlar (29.996 → 8.805). Commit 916d14f. CLAUDE.md kuralı eklendi.
-- 14 hassas cevap emekli edildi, 15 bulmaca yeniden üretildi. Commit'ler 516094e, 1b73f29.
+- 16 hassas cevap emekli edildi, 17 bulmaca yeniden üretildi. Commit'ler 516094e, 1b73f29
+  ve kapanış commit'i.
 - Pack'teki flash-lite kalıntısı 135 kelimeden 122'si Claude ile yeniden ipuçlandı
   (`scripts/reclue_apply.py`, `source="claude_reclue"`, `model="claude-fable-5-1"`,
   eski metin `previous` alanında). 49 dosyada 123 ipucu metni güncellendi. Commit d468496.
@@ -56,14 +57,14 @@ Süre mevcut havuzdan kısa (domain küçük), fallback biraz yüksek. İkinci k
 
 ## Değişen bulmacalar
 
-- Yeniden üretilen (geometri değişti): 9, 20, 29, 36, 39, 106, 108, 114, 118, 119, 147,
-  168, 169, 172, 181.
+- Yeniden üretilen (geometri değişti): 9, 20, 29, 36, 39, 83, 106, 108, 114, 118, 119,
+  147, 168, 169, 172, 181, 200.
 - Yalnız ipucu metni değişen (geometri aynı): 1, 3, 11, 13, 16, 22, 25, 30, 31, 33, 35, 48, 52, 60, 62, 68, 69, 71, 77, 78, 79, 81, 82, 84, 85, 95, 104, 107, 113, 121, 124, 131, 136, 144, 149, 150, 157, 158, 166, 176, 177, 180, 183, 185, 190, 191, 194, 195, 200.
 
 ## Hassas listeye eklenenler (bölüm 8, sahip onayı)
 
 LİVATA, NAZİZM, SADİSTÇE, KATLEDİŞ, MAKTUL, HARAKİRİ, ÇİŞ, LAVMAN, İBRANİ, ŞİA, Şİİ,
-İSEVİLİK, TAKİYE, PAŞABABA. Gündelik dini-kültürel kelimeler (NAMAZ, MİNARE, HELAL, NOEL,
+İSEVİLİK, TAKİYE, PAŞABABA, MALİKİ, MAKTEL. Gündelik dini-kültürel kelimeler (NAMAZ, MİNARE, HELAL, NOEL,
 TAVAF, SELA, EZANİ, İLAHİ, İTİKAT, İNFAK, MOLLA, YARADAN, PUT, ENAM) nötr ipucuyla kaldı.
 
 ## Re-clue yazma kriterleri (onaylı)
@@ -79,16 +80,20 @@ Uygulama: `python scripts/reclue_apply.py batch.json` (önce `--dry-run`), sonra
 `python scripts/reclue.py write-pack --puzzles-dir assets/puzzles`. TDK doğrulaması için
 `https://sozluk.gov.tr/gts?ara=<kelime>` (yavaş, zaman aşımına hazırlıklı ol).
 
+## Kapanış (2026-09-14)
+
+- MALİKİ (puzzle 83) ve MAKTEL (puzzle 200) hassas listeye alındı (mezhep ve şiddet
+  politikası), iki bulmaca regen_only ile yeniden üretildi (0 fallback). Pack'te artık
+  flash-lite kaynaklı cevap yok; hassas listede 16 yeni giriş (bölüm 8).
+- Yeniden üretilen bulmacaların tam listesi: 9, 20, 29, 36, 39, 83, 106, 108, 114, 118,
+  119, 147, 168, 169, 172, 181, 200.
+- P1 re-clue pack kapsamında KAPANDI.
+
 ## Açık kalanlar
 
-- **MALİKİ** (puzzle 1): tek anlamı Sünni fıkıh mezhebi; mezhep politikasına göre hassas
-  listeye alınıp bulmacası yeniden üretilmeli. Karar sahipte. Şu an eski yanlış ipucu
-  ("Sahip olan kimse") pack'te; pack'teki tek flash-lite kalıntısı.
-- **MAKTEL** (puzzle 62): "Cinayet yeri" olarak ipuçlandı; MAKTUL/KATLEDİŞ ile aynı aile,
-  emeklilik kararı sahipte.
 - Havuz dışındaki ~21k flash-lite kelime re-clue bekliyor; kapı sayesinde acil değil.
   3 harfli havuz dar (457 kelime, pack 314'ünü kullanıyor): kısa kelimeleri önce re-clue
-  etmek havuzu rahatlatır.
+  etmek yeni pack üretimini rahatlatır.
 - `reports/pack_words.json` gitignored; gerekirse `scripts/extract_pack_words.py` ile
   yeniden üret.
 - Emülatörde yeni ipuçlarının çift-ipucu hücrelerine sığması gözle bakılmadı.
