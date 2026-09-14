@@ -858,7 +858,7 @@
         }
       ],
       "clue": {
-        "text": "Kaçınılmaz, zorunlu",
+        "text": "Ertelenemez, zorunlu",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -1330,7 +1330,7 @@
         }
       ],
       "clue": {
-        "text": "Altının zıttı",
+        "text": "Alt karşıtı",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1490,7 +1490,7 @@
         }
       ],
       "clue": {
-        "text": "Kısa yol",
+        "text": "Çok uzun etek boyu",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,

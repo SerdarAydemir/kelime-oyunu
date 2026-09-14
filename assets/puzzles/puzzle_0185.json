@@ -1001,7 +1001,7 @@
         }
       ],
       "clue": {
-        "text": "Küçülme, küçülmek",
+        "text": "Küçülme",
         "arrow": "right",
         "word_id": "A5",
         "image_id": null,
@@ -1137,7 +1137,7 @@
         }
       ],
       "clue": {
-        "text": "Sert taş yüzey",
+        "text": "Heykelcinin taşı",
         "arrow": "right",
         "word_id": "A8",
         "image_id": null,
@@ -1261,7 +1261,7 @@
         }
       ],
       "clue": {
-        "text": "Kağıda renkli desen",
+        "text": "Suda desenle süsleme",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1381,7 +1381,7 @@
         }
       ],
       "clue": {
-        "text": "Topluluk, ulus",
+        "text": "Kum ve çamurla dolma",
         "arrow": "down",
         "word_id": "D4",
         "image_id": null,
@@ -1421,7 +1421,7 @@
         }
       ],
       "clue": {
-        "text": "Müslümanların kutsal kitabı",
+        "text": "Kur'an'da bir sure",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,

@@ -855,7 +855,7 @@
         }
       ],
       "clue": {
-        "text": "Emir verme yetkisi",
+        "text": "Kumanda",
         "arrow": "right",
         "word_id": "A1",
         "image_id": null,
@@ -1035,7 +1035,7 @@
         }
       ],
       "clue": {
-        "text": "İnsanın nefes vermesi",
+        "text": "Önem verme",
         "arrow": "right",
         "word_id": "A6",
         "image_id": null,
@@ -1323,7 +1323,7 @@
         }
       ],
       "clue": {
-        "text": "İşlevini yitirmek",
+        "text": "Kesmez olmak",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1483,7 +1483,7 @@
         }
       ],
       "clue": {
-        "text": "İçgüdüsel anlama",
+        "text": "İma yoluyla",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1599,7 +1599,7 @@
         }
       ],
       "clue": {
-        "text": "Namaz vakti çağrısı",
+        "text": "Alaturka saat türü",
         "arrow": "down",
         "word_id": "D8",
         "image_id": null,

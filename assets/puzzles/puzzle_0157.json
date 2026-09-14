@@ -899,7 +899,7 @@
         }
       ],
       "clue": {
-        "text": "Başka dünyadan gelen",
+        "text": "Dünya dışı varlık",
         "arrow": "right",
         "word_id": "A2",
         "image_id": null,
@@ -947,7 +947,7 @@
         }
       ],
       "clue": {
-        "text": "Hileci, dalavereci",
+        "text": "Cin fikirli, açıkgöz",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -1163,7 +1163,7 @@
         }
       ],
       "clue": {
-        "text": "Merhaba deme şekli",
+        "text": "Esenlik dileme sözü",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,
@@ -1343,7 +1343,7 @@
         }
       ],
       "clue": {
-        "text": "Katırın babası",
+        "text": "Atlamalı çocuk oyunu",
         "arrow": "down",
         "word_id": "D2",
         "image_id": null,
@@ -1387,7 +1387,7 @@
         }
       ],
       "clue": {
-        "text": "Bebek bekleyen yer",
+        "text": "Göbek bölgesi",
         "arrow": "down",
         "word_id": "D3",
         "image_id": null,
@@ -1499,7 +1499,7 @@
         }
       ],
       "clue": {
-        "text": "Onay, icazet",
+        "text": "Onay, kabul",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,

@@ -951,7 +951,7 @@
         }
       ],
       "clue": {
-        "text": "Hoş, güzel",
+        "text": "Çok iyi (not)",
         "arrow": "right",
         "word_id": "A3",
         "image_id": null,
@@ -1219,7 +1219,7 @@
         }
       ],
       "clue": {
-        "text": "Hata giderme",
+        "text": "Zararı karşılama",
         "arrow": "right",
         "word_id": "A11",
         "image_id": null,
@@ -1323,7 +1323,7 @@
         }
       ],
       "clue": {
-        "text": "Takıntı, vehim",
+        "text": "Takıntı, fikrisabit",
         "arrow": "down",
         "word_id": "D1",
         "image_id": null,
@@ -1487,7 +1487,7 @@
         }
       ],
       "clue": {
-        "text": "Salatalık türü",
+        "text": "Salatalık",
         "arrow": "down",
         "word_id": "D5",
         "image_id": null,
@@ -1543,7 +1543,7 @@
         }
       ],
       "clue": {
-        "text": "Duyulan şey",
+        "text": "Duyulma biçimi",
         "arrow": "down",
         "word_id": "D6",
         "image_id": null,

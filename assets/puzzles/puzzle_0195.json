@@ -1077,7 +1077,7 @@
         }
       ],
       "clue": {
-        "text": "Vekil, temsilci",
+        "text": "Hükümdar vekili",
         "arrow": "right",
         "word_id": "A7",
         "image_id": null,
@@ -1149,7 +1149,7 @@
         }
       ],
       "clue": {
-        "text": "Yönetimle ilgili",
+        "text": "Yönetsel",
         "arrow": "right",
         "word_id": "A9",
         "image_id": null,

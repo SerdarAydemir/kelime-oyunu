@@ -1200,7 +1200,7 @@
         }
       ],
       "clue": {
-        "text": "Kan kanseri türü",
+        "text": "Kan kanseri",
         "arrow": "right",
         "word_id": "A10",
         "image_id": null,
@@ -1664,7 +1664,7 @@
         }
       ],
       "clue": {
-        "text": "Kan kanseri türü",
+        "text": "Sarı killi toprak",
         "arrow": "down",
         "word_id": "D10",
         "image_id": null,
