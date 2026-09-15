@@ -114,6 +114,9 @@ Her yeni görev geldiğinde şu sırayı bozmadan uygula:
 - Konsol hatası paylaşırsan **tüm kodu baştan yazma.**
 - Hatanın nedenini açıkla; sadece değişecek bloğu öncesi/sonrası olarak ver.
 - Tek seferde max 3 dosya değiştir.
+- **QA kilit açma:** `flutter run --dart-define=DEV_UNLOCK_ALL=true` → level select'te tüm
+  bölümler oynanabilir, başlıkta "DEV" rozeti; ilerlemeye yazmaz, kDebugMode ile AND'li
+  (`lib/core/config/dev_flags.dart`), release'de etkisiz.
 
 (`skills.md §8 Adım 6`)
 

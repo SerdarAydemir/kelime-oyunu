@@ -2,6 +2,7 @@
 
 import 'package:equatable/equatable.dart';
 
+import 'package:kelime_oyunu/core/config/dev_flags.dart';
 import 'package:kelime_oyunu/core/constants/game_constants.dart';
 import 'package:kelime_oyunu/data/models/saved_session.dart';
 
@@ -19,10 +20,18 @@ enum LevelStatus {
 
 /// What the level-select screen renders.
 class LevelSelectState extends Equatable {
-  const LevelSelectState({this.highestCompletedLevel = 0, this.resume});
+  const LevelSelectState({
+    this.highestCompletedLevel = 0,
+    this.resume,
+    this.unlockAll = kDevUnlockAll,
+  });
 
   /// Highest level ever won; 0 for a new player.
   final int highestCompletedLevel;
+
+  /// QA override ([kDevUnlockAll]): every level opens, nothing is written to
+  /// progress and tiles keep their real lock/complete look.
+  final bool unlockAll;
 
   /// The half-played match on offer as "Devam Et", or null if there is none.
   final ResumeSummary? resume;
@@ -43,9 +52,10 @@ class LevelSelectState extends Equatable {
     return LevelStatus.locked;
   }
 
-  /// Whether [levelId] can be opened: any won level, plus the frontier.
-  bool isPlayable(int levelId) => statusOf(levelId) != LevelStatus.locked;
+  /// Whether [levelId] can be opened: any won level, plus the frontier — or
+  /// anything at all under the QA override.
+  bool isPlayable(int levelId) => unlockAll || statusOf(levelId) != LevelStatus.locked;
 
   @override
-  List<Object?> get props => [highestCompletedLevel, resume];
+  List<Object?> get props => [highestCompletedLevel, resume, unlockAll];
 }

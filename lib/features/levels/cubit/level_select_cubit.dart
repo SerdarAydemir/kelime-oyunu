@@ -2,6 +2,7 @@
 
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import 'package:kelime_oyunu/core/config/dev_flags.dart';
 import 'package:kelime_oyunu/data/repositories/progress_repository.dart';
 import 'package:kelime_oyunu/data/repositories/session_repository.dart';
 import 'package:kelime_oyunu/features/levels/cubit/level_select_state.dart';
@@ -13,13 +14,21 @@ import 'package:kelime_oyunu/features/levels/cubit/level_select_state.dart';
 class LevelSelectCubit extends Cubit<LevelSelectState> {
   // Private field formals (as in GameBloc): call sites still write
   // `progressRepo:`, while the fields stay private to this cubit.
-  LevelSelectCubit({required this._progressRepo, required this._sessionRepo})
-    : super(const LevelSelectState()) {
+  LevelSelectCubit({
+    required this._progressRepo,
+    required this._sessionRepo,
+    bool unlockAll = kDevUnlockAll,
+  }) : _unlockAll = unlockAll,
+       super(LevelSelectState(unlockAll: unlockAll)) {
     refresh();
   }
 
   final ProgressRepository _progressRepo;
   final SessionRepository _sessionRepo;
+
+  // QA override (DEV_UNLOCK_ALL); injectable so tests can cover both branches
+  // of a compile-time constant.
+  final bool _unlockAll;
 
   /// Re-reads storage. Both repositories are already open, so this is a
   /// synchronous read — no loading state is needed or wanted (the grid would
@@ -29,6 +38,7 @@ class LevelSelectCubit extends Cubit<LevelSelectState> {
       LevelSelectState(
         highestCompletedLevel: _progressRepo.highestCompletedLevel,
         resume: _sessionRepo.summary,
+        unlockAll: _unlockAll,
       ),
     );
   }

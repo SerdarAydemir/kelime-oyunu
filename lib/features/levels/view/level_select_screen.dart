@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
+import 'package:kelime_oyunu/core/config/dev_flags.dart';
+import 'package:kelime_oyunu/core/constants/app_colors.dart';
 import 'package:kelime_oyunu/core/constants/app_dimensions.dart';
 import 'package:kelime_oyunu/core/constants/app_typography.dart';
 import 'package:kelime_oyunu/data/repositories/progress_repository.dart';
@@ -18,16 +20,57 @@ import 'package:kelime_oyunu/features/levels/widgets/resume_banner.dart';
 /// Replaces the old auto-jump into `/gameplay/1`, which silently discarded
 /// every bit of progress the player had made.
 class LevelSelectScreen extends StatelessWidget {
-  const LevelSelectScreen({required this.progressRepo, required this.sessionRepo, super.key});
+  const LevelSelectScreen({
+    required this.progressRepo,
+    required this.sessionRepo,
+    this.unlockAll = kDevUnlockAll,
+    super.key,
+  });
 
   final ProgressRepository progressRepo;
   final SessionRepository sessionRepo;
 
+  /// QA override, see [kDevUnlockAll]; injectable for tests.
+  final bool unlockAll;
+
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (_) => LevelSelectCubit(progressRepo: progressRepo, sessionRepo: sessionRepo),
+      create: (_) => LevelSelectCubit(
+        progressRepo: progressRepo,
+        sessionRepo: sessionRepo,
+        unlockAll: unlockAll,
+      ),
       child: const _LevelSelectBody(),
+    );
+  }
+}
+
+/// Screen title; carries a small "DEV" tag only under the QA unlock override,
+/// so a build with every level open is never mistaken for real progress.
+class _Title extends StatelessWidget {
+  const _Title({required this.dev});
+
+  final bool dev;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        const Text('Bölümler'),
+        if (dev) ...[
+          const SizedBox(width: AppDimensions.spacingS),
+          // QA-only label, intentionally not localised.
+          Text(
+            'DEV',
+            style: AppTypography.bodySmall.copyWith(
+              color: AppColors.accent,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ],
+      ],
     );
   }
 }
@@ -38,7 +81,12 @@ class _LevelSelectBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Bölümler'), centerTitle: true),
+      appBar: AppBar(
+        title: BlocBuilder<LevelSelectCubit, LevelSelectState>(
+          builder: (context, state) => _Title(dev: state.unlockAll),
+        ),
+        centerTitle: true,
+      ),
       body: SafeArea(
         child: BlocBuilder<LevelSelectCubit, LevelSelectState>(
           builder: (context, state) => Padding(

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:go_router/go_router.dart';
 
+import 'package:kelime_oyunu/core/config/dev_flags.dart';
 import 'package:kelime_oyunu/core/constants/game_constants.dart';
 import 'package:kelime_oyunu/data/models/saved_session.dart';
 import 'package:kelime_oyunu/data/repositories/progress_repository.dart';
@@ -30,6 +31,7 @@ Future<String?> _pumpAndTap(
   WidgetTester tester, {
   required int highestCompletedLevel,
   SavedSession? saved,
+  bool unlockAll = false,
   required Future<void> Function(WidgetTester tester) act,
 }) async {
   String? destination;
@@ -41,6 +43,7 @@ Future<String?> _pumpAndTap(
         builder: (context, state) => LevelSelectScreen(
           progressRepo: InMemoryProgressRepository(highestCompletedLevel: highestCompletedLevel),
           sessionRepo: InMemorySessionRepository(initial: saved),
+          unlockAll: unlockAll,
         ),
       ),
       GoRoute(
@@ -114,6 +117,41 @@ void main() {
       );
 
       expect(destination, isNull);
+    });
+  });
+
+  group('DEV_UNLOCK_ALL override', () {
+    test('the compile-time flag is off in the test build', () {
+      expect(kDevUnlockAll, isFalse);
+    });
+
+    test('unlockAll makes a locked level playable without changing its status', () {
+      const state = LevelSelectState(highestCompletedLevel: 0, unlockAll: true);
+      expect(state.statusOf(kLastLevelId), LevelStatus.locked);
+      expect(state.isPlayable(kLastLevelId), isTrue);
+      expect(const LevelSelectState(highestCompletedLevel: 0).isPlayable(2), isFalse);
+    });
+
+    testWidgets('with the override a locked level opens and a DEV tag shows', (tester) async {
+      final destination = await _pumpAndTap(
+        tester,
+        highestCompletedLevel: 0,
+        unlockAll: true,
+        act: (tester) async {
+          expect(find.text('DEV'), findsOneWidget);
+          await tester.tap(find.byWidgetPredicate((w) => w is LevelTile && w.levelId == 5));
+        },
+      );
+
+      expect(destination, '/gameplay/5');
+    });
+
+    testWidgets('without the override there is no DEV tag', (tester) async {
+      await _pumpAndTap(
+        tester,
+        highestCompletedLevel: 0,
+        act: (tester) async => expect(find.text('DEV'), findsNothing),
+      );
     });
   });
 
