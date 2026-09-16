@@ -54,6 +54,11 @@ Her yeni görev geldiğinde şu sırayı bozmadan uygula:
 - **Her dosyanın ilk satırı dosya yolu yorumu:** `// lib/features/gameplay/bloc/gameplay_bloc.dart` (`coding-standards.md §1.4`)
 - **`package:` import zorunlu, relative import yasak.** (`coding-standards.md §1.5`)
 - **`debugPrint` kullan, `print` yasak.** (`skills.md §11`)
+- **Büyük sınıfı bölerken:** `part 'package:kelime_oyunu/...'` + aynı kütüphanede
+  private extension/mixin (örn. `game_bloc_turn.dart`, `game_active_interaction.dart`);
+  sembol dışa açılmaz, testler değişmez. Part dosyasında import olmaz, ilk satır
+  yine dosya-yolu yorumu. Bağımsız widget/painter ise ayrı kütüphane + eski
+  dosyadan `export` (`grid_painter.dart`, `narration_tiles.dart`). (`docs/HANDOFF_REFACTOR.md`)
 
 ---
 
@@ -243,8 +248,17 @@ tasarımı uygulanmadı).
   guard: oyuncunun elindeki harflerin multiset sayımı kadar hücre bot'a kapalı,
   böylece oyuncunun oynayabileceği taş bot tarafından kapılmaz; hiçbir hamle
   kalmazsa guard kilitlenmeyi önler. (d2e6cf0, 818ded6, a42ba5f)
+- FAZ 4 teknik borç (2026-09-16) ✅ — 300 satırı aşan 6 dosya sorumluluğa göre
+  bölündü (grid painter'lar, game screen gövde/etkileşim/dialog, bloc handler
+  part'ları, narration layer/tiles, puzzle modelleri); opak raw renk literal'leri
+  token'landı. Davranış değişmedi, 187 test yeşil, `lib/` altında 300 üstü dosya 0.
+  Dosya haritası + yapılmayan bulgular: `docs/HANDOFF_REFACTOR.md`.
 
 **Sıradaki (planlı, yapılmadı):**
+- FAZ 4 artıkları (`docs/HANDOFF_REFACTOR.md` "Bulgular"): alpha-only gölge
+  renkleri token'a, dialog/bot-profil string'leri `.arb`'a, kullanılmayan
+  `AppColors.gridCellSelected`/`star`, hücre-boyutu hesabının ortaklaştırılması,
+  `GameScreen`/`GameActiveBody` için gerçek widget testi.
 - **P1 re-clue** — ~2k kelimenin flash-lite clue'ları elden geçmeli; teşhiste
   %15+ hatalı/zorlama (İDAME="ölüme mahkum", KERİME, MET, KAK gibi aktif
   yanlışlar). ≤20kr bütçe + aile-uygunluk kriteri. Detay memory'de.
