@@ -65,8 +65,7 @@ class _CircleIconButton extends StatelessWidget {
         height: 48,
         decoration: BoxDecoration(
           shape: BoxShape.circle,
-          // TODO: add AppColors.circleButtonActiveBg token (0xFFE3F2FD)
-          color: isDisabled ? AppColors.gridCellLocked : const Color(0xFFE3F2FD),
+          color: isDisabled ? AppColors.gridCellLocked : AppColors.circleButtonActiveBg,
           border: Border.all(
             color: isDisabled ? AppColors.gridCellLocked : AppColors.primary,
             width: 1.5,
@@ -132,12 +131,11 @@ class _RevealButton extends StatelessWidget {
             height: 48,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              // TODO: add AppColors.revealActiveBg token (0xFFFFF8E1)
               color: isDisabled
                   ? AppColors.gridCellLocked
                   : active
                   ? AppColors.accent
-                  : const Color(0xFFFFF8E1),
+                  : AppColors.revealActiveBg,
               border: Border.all(
                 color: isDisabled ? AppColors.gridCellLocked : AppColors.accent,
                 width: 1.5,

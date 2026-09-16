@@ -77,7 +77,7 @@ class _GoldenFramePainter extends CustomPainter {
           transform: GradientRotation(sweep),
           colors: const [
             Color(0x00FFFFFF),
-            Color(0xFFFFF3C4),
+            AppColors.shimmerHighlight,
             Color(0x00FFFFFF),
             Color(0x00FFFFFF),
           ],

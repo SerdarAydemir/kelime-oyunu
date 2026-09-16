@@ -46,6 +46,19 @@ abstract final class AppColors {
   /// board (drawn as an inset tile: "your tile, not committed yet").
   static const Color rackTileBg = Color(0xFFF5E6C8);
 
+  // ── Action bar ─────────────────────────────────────────────────────────────
+
+  /// Pale blue fill of an enabled circular action button (confirm / pass / swap).
+  static const Color circleButtonActiveBg = Color(0xFFE3F2FD);
+
+  /// Pale amber fill of the reveal (lamp) button while it is available but off.
+  static const Color revealActiveBg = Color(0xFFFFF8E1);
+
+  // ── Narration ──────────────────────────────────────────────────────────────
+
+  /// Bright cream highlight that sweeps around the word-completion frame.
+  static const Color shimmerHighlight = Color(0xFFFFF3C4);
+
   // ── Economy ────────────────────────────────────────────────────────────────
   static const Color coinGold = Color(0xFFFFC107);
   static const Color star = Color(0xFFFFB300);

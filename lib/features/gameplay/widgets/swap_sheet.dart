@@ -125,8 +125,7 @@ class _SelectableTile extends StatelessWidget {
         width: 48,
         height: 48,
         decoration: BoxDecoration(
-          // TODO: add AppColors.rackTileBg token (0xFFF5E6C8)
-          color: const Color(0xFFF5E6C8),
+          color: AppColors.rackTileBg,
           borderRadius: BorderRadius.circular(6),
           border: selected ? Border.all(color: AppColors.accent, width: 2.5) : null,
         ),
