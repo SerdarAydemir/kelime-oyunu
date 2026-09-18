@@ -45,20 +45,31 @@ Map<String, int> heldLetters(List<RackTile> rack) {
   return held;
 }
 
-/// Marks rack tiles as placed to match [pending] letters, freeing the rest.
+/// Marks rack tiles as placed to match [pending], freeing the rest.
 ///
-/// Tiles are fungible by letter, so matching by letter (rather than by index)
-/// correctly handles replacing a pending letter on a cell.
+/// A placement that remembers its [Placement.rackIndex] pins that exact tile,
+/// so two tiles of the same letter keep their own identity (recalling one
+/// never frees the other). Placements without an index (bot moves, legacy
+/// fixtures) fall back to matching by letter among the tiles left unpinned.
 List<RackTile> markPlacedTiles(List<RackTile> rack, List<Placement> pending) {
+  final pinned = <int>{};
   final remaining = <String, int>{};
   for (final p in pending) {
+    final i = p.rackIndex;
+    if (i != null && i >= 0 && i < rack.length && rack[i].letter == p.letter && pinned.add(i)) {
+      continue;
+    }
     remaining.update(p.letter, (v) => v + 1, ifAbsent: () => 1);
   }
   final result = <RackTile>[];
-  for (final tile in rack) {
-    final count = remaining[tile.letter] ?? 0;
-    final placed = count > 0;
-    if (placed) remaining[tile.letter] = count - 1;
+  for (var i = 0; i < rack.length; i++) {
+    final tile = rack[i];
+    var placed = pinned.contains(i);
+    if (!placed) {
+      final count = remaining[tile.letter] ?? 0;
+      placed = count > 0;
+      if (placed) remaining[tile.letter] = count - 1;
+    }
     result.add(RackTile(letter: tile.letter, isPlaced: placed, isReturned: tile.isReturned));
   }
   return result;

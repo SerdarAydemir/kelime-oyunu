@@ -13,6 +13,7 @@ import 'package:kelime_oyunu/features/gameplay/bloc/game_state.dart';
 import 'package:kelime_oyunu/features/gameplay/bloc/move_narration.dart';
 import 'package:kelime_oyunu/features/gameplay/engine/bot_engine.dart';
 import 'package:kelime_oyunu/features/gameplay/engine/rack_manager.dart';
+import 'package:kelime_oyunu/features/gameplay/view/game_active_queries.dart';
 import 'package:kelime_oyunu/features/gameplay/engine/score_engine.dart';
 
 // Shared helpers live under test/ with no package: path (relative import only).
@@ -39,6 +40,7 @@ final _completeBoard = <WordCell, String>{
       WordCell(row: c.row, col: c.col): c.solution!,
 };
 
+const _cell12 = WordCell(row: 1, col: 2);
 const _cell11 = WordCell(row: 1, col: 1);
 
 const _defaultRack = [
@@ -299,6 +301,61 @@ void main() {
         isA<GameActive>()
             .having((s) => s.pendingPlacements, 'pending', isEmpty)
             .having((s) => s.rack.every((t) => !t.isPlaced), 'none placed', true),
+      ],
+    );
+  });
+
+  group('LetterRecalled with duplicate letters', () {
+    // Rack holds K twice: place slot 0 on (1,1) and slot 1 on (1,2), recall
+    // (1,2). Only slot 1 may come back; slot 0 stays on the board.
+    blocTest<GameBloc, GameState>(
+      'frees exactly the tile the recalled placement came from',
+      build: buildBloc,
+      seed: () => _activeState(
+        rack: const [
+          RackTile(letter: 'K'),
+          RackTile(letter: 'K'),
+          RackTile(letter: 'O'),
+          RackTile(letter: 'L'),
+          RackTile(letter: 'A'),
+        ],
+      ),
+      act: (bloc) => bloc
+        ..add(const LetterPlaced(rackIndex: 0, cell: _cell11))
+        ..add(const LetterPlaced(rackIndex: 1, cell: _cell12))
+        ..add(const LetterRecalled(_cell12)),
+      skip: 2,
+      expect: () => [
+        isA<GameActive>()
+            .having((s) => s.pendingPlacements.map((p) => p.cell).toList(), 'pending', [_cell11])
+            .having((s) => s.pendingPlacements.single.rackIndex, 'rack index kept', 0)
+            .having((s) => s.rack[0].isPlaced, 'slot 0 still placed', true)
+            .having((s) => s.rack[1].isPlaced, 'slot 1 freed', false),
+      ],
+    );
+
+    blocTest<GameBloc, GameState>(
+      'rackIndexForPending / pendingForRackIndex address the exact tile',
+      build: buildBloc,
+      seed: () => _activeState(
+        rack: const [
+          RackTile(letter: 'K'),
+          RackTile(letter: 'K'),
+          RackTile(letter: 'O'),
+          RackTile(letter: 'L'),
+          RackTile(letter: 'A'),
+        ],
+      ),
+      act: (bloc) => bloc
+        ..add(const LetterPlaced(rackIndex: 1, cell: _cell11))
+        ..add(const LetterPlaced(rackIndex: 0, cell: _cell12)),
+      skip: 1,
+      expect: () => [
+        isA<GameActive>()
+            .having((s) => s.rackIndexForPending(_cell11), 'index for (1,1)', 1)
+            .having((s) => s.rackIndexForPending(_cell12), 'index for (1,2)', 0)
+            .having((s) => s.pendingForRackIndex(1)?.cell, 'slot 1 -> (1,1)', _cell11)
+            .having((s) => s.pendingForRackIndex(0)?.cell, 'slot 0 -> (1,2)', _cell12),
       ],
     );
   });

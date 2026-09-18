@@ -26,10 +26,10 @@ mixin _GameInteraction on State<GameActiveBody> {
     bloc.add(const RackTileSelected(-1));
   }
 
-  /// Long-press on a placed rack tile: recall its pending letter to the rack.
+  /// Long-press on a placed rack tile: recall ITS pending letter to the rack —
+  /// the placement made from this slot, not the first one with the same letter.
   void _onTileRecall(BuildContext context, int index) {
-    final tile = state.rack[index];
-    final placement = state.pendingPlacements.firstWhereOrNull((p) => p.letter == tile.letter);
+    final placement = state.pendingForRackIndex(index);
     if (placement != null) {
       context.read<GameBloc>().add(LetterRecalled(placement.cell));
     }

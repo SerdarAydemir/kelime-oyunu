@@ -28,6 +28,7 @@ extension _TurnHandlers on GameBloc {
       cell: event.cell,
       letter: tile.letter,
       expected: _solutionByCell[event.cell] ?? '',
+      rackIndex: event.rackIndex,
     );
     // Replace any existing pending letter on the same cell (no duplicates).
     final pending = <Placement>[

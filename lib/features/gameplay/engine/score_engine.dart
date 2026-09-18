@@ -11,7 +11,12 @@ import 'package:kelime_oyunu/data/models/puzzle.dart';
 
 /// A single letter a player dropped onto one grid cell during a turn.
 class Placement extends Equatable {
-  const Placement({required this.cell, required this.letter, required this.expected});
+  const Placement({
+    required this.cell,
+    required this.letter,
+    required this.expected,
+    this.rackIndex,
+  });
 
   final WordCell cell;
 
@@ -21,11 +26,17 @@ class Placement extends Equatable {
   /// The correct solution letter for [cell].
   final String expected;
 
+  /// Which rack slot the letter came from, so recall / move gestures address
+  /// this exact tile even when the rack holds the same letter twice. Null for
+  /// placements that did not come from the rack (bot moves, legacy fixtures);
+  /// consumers then fall back to matching by letter.
+  final int? rackIndex;
+
   /// Whether the placed [letter] matches the [expected] solution.
   bool get isCorrect => letter == expected;
 
   @override
-  List<Object?> get props => [cell, letter, expected];
+  List<Object?> get props => [cell, letter, expected, rackIndex];
 }
 
 /// One scoring outcome produced by resolving a move.
