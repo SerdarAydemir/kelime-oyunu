@@ -131,20 +131,31 @@ class NarrationController extends ChangeNotifier {
 
   /// Cells whose flying letter has not yet landed — the grid hides the committed
   /// glyph there so the mid-air tile is not doubled, then reveals it exactly as
-  /// the tile arrives. BOT moves only: the player's letters were already placed
-  /// on the board by hand and never fly, so hiding them would visibly un-place
-  /// what the player just put down.
+  /// the tile arrives. Covers the ACTIVE bot narration and every bot narration
+  /// still QUEUED behind it: the bloc commits the bot's letters to the board in
+  /// the same state as the player's confirm, so while the player's story plays
+  /// the bot's letters would otherwise show early, vanish, and fly in again.
+  /// BOT moves only: the player's letters were already placed on the board by
+  /// hand and never fly, so hiding them would visibly un-place what the player
+  /// just put down. Wrong letters (negative delta) are never on the board — the
+  /// overlay draws their homeward ghost — so they are never suppressed either.
   Set<WordCell> get suppressedCells {
-    final c = _current;
-    if (c == null || c.narration.actor != NarrationActor.bot) return const {};
-    final p = _anim.value;
     final cells = <WordCell>{};
-    for (final cue in c.timeline.cues) {
+    final c = _current;
+    if (c != null) _addUnlanded(c, _anim.value, cells);
+    for (final q in _queue) {
+      _addUnlanded(q, 0.0, cells); // not started yet: nothing has landed
+    }
+    return cells.isEmpty ? const {} : cells;
+  }
+
+  static void _addUnlanded(_Queued q, double progress, Set<WordCell> into) {
+    if (q.narration.actor != NarrationActor.bot) return;
+    for (final cue in q.timeline.cues) {
       if (cue.kind != CueKind.letter || cue.delta <= 0) continue;
       final cell = cue.event.cell;
-      if (cell != null && p < cue.landAt) cells.add(cell);
+      if (cell != null && progress < cue.landAt) into.add(cell);
     }
-    return cells;
   }
 
   @override
