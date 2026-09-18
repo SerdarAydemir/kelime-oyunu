@@ -188,6 +188,7 @@ class _LevelGridState extends State<_LevelGrid> {
           levelId: levelId,
           status: status,
           onTap: state.isPlayable(levelId) ? () => context.go('/gameplay/$levelId') : null,
+          showNumberWhenLocked: state.unlockAll,
         );
       },
     );

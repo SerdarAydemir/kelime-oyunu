@@ -146,6 +146,34 @@ void main() {
       expect(destination, '/gameplay/5');
     });
 
+    testWidgets('with the override locked tiles show their number', (tester) async {
+      await _pumpAndTap(
+        tester,
+        highestCompletedLevel: 0,
+        unlockAll: true,
+        act: (tester) async {
+          final last = find.byWidgetPredicate((w) => w is LevelTile && w.levelId == kLastLevelId);
+          await tester.scrollUntilVisible(last, 200, scrollable: find.byType(Scrollable).first);
+          expect(_tile(tester, kLastLevelId).status, LevelStatus.locked);
+          expect(find.descendant(of: last, matching: find.text('$kLastLevelId')), findsOneWidget);
+          expect(find.descendant(of: last, matching: find.byIcon(Icons.lock)), findsNothing);
+        },
+      );
+    });
+
+    testWidgets('without the override locked tiles keep the padlock, no number', (tester) async {
+      await _pumpAndTap(
+        tester,
+        highestCompletedLevel: 0,
+        act: (tester) async {
+          final last = find.byWidgetPredicate((w) => w is LevelTile && w.levelId == kLastLevelId);
+          await tester.scrollUntilVisible(last, 200, scrollable: find.byType(Scrollable).first);
+          expect(find.descendant(of: last, matching: find.text('$kLastLevelId')), findsNothing);
+          expect(find.descendant(of: last, matching: find.byIcon(Icons.lock)), findsOneWidget);
+        },
+      );
+    });
+
     testWidgets('without the override there is no DEV tag', (tester) async {
       await _pumpAndTap(
         tester,

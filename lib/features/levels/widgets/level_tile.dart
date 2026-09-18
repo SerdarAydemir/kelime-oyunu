@@ -11,9 +11,17 @@ import 'package:kelime_oyunu/features/levels/cubit/level_select_state.dart';
 ///
 /// Three looks, one per [LevelStatus]: a won level is green with a tick, the
 /// frontier is the accent-ringed call to action, and a locked level is grey
-/// with a padlock and no tap target at all.
+/// with a padlock and no tap target at all. Under the QA unlock override
+/// ([showNumberWhenLocked]) a locked tile keeps its grey look but shows its
+/// number instead of the padlock, so testers can aim for a specific level.
 class LevelTile extends StatelessWidget {
-  const LevelTile({required this.levelId, required this.status, this.onTap, super.key});
+  const LevelTile({
+    required this.levelId,
+    required this.status,
+    this.onTap,
+    this.showNumberWhenLocked = false,
+    super.key,
+  });
 
   final int levelId;
   final LevelStatus status;
@@ -21,7 +29,12 @@ class LevelTile extends StatelessWidget {
   /// Null for a locked level — the tile is then inert, not just styled dead.
   final VoidCallback? onTap;
 
+  /// DEV_UNLOCK_ALL: draw the level number on locked tiles (style unchanged).
+  final bool showNumberWhenLocked;
+
   bool get _locked => status == LevelStatus.locked;
+
+  bool get _showsPadlock => _locked && !showNumberWhenLocked;
 
   Color get _background => switch (status) {
     LevelStatus.completed => AppColors.gridCellFound,
@@ -44,8 +57,8 @@ class LevelTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Semantics(
-      button: !_locked,
-      enabled: !_locked,
+      button: onTap != null,
+      enabled: onTap != null,
       label: _semanticLabel,
       child: Material(
         color: _background,
@@ -61,7 +74,7 @@ class LevelTile extends StatelessWidget {
           onTap: onTap,
           borderRadius: BorderRadius.circular(AppDimensions.radiusM),
           child: Center(
-            child: _locked
+            child: _showsPadlock
                 ? Icon(Icons.lock, size: AppDimensions.iconS, color: _foreground)
                 : Column(
                     mainAxisSize: MainAxisSize.min,
