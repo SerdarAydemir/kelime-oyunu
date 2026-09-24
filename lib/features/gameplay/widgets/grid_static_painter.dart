@@ -114,7 +114,7 @@ class GridStaticPainter extends CustomPainter {
 
   void _drawGridLines(Canvas canvas, Size size) {
     final paint = Paint()
-      ..color = tokens.board
+      ..color = tokens.gridLine
       ..strokeWidth = 0.5;
     for (var col = 0; col <= puzzle.grid.cols; col++) {
       final x = col * cellSize;

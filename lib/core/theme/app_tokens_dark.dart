@@ -58,6 +58,7 @@ const AppTokens _dark = AppTokens(
     blurRadius: 50,
     color: Color.fromRGBO(0, 0, 0, 0.4),
   ),
+  gridLine: Color(0xFFE9DCC1),
   cellLetter: Color(0xFFFFFAF0),
   cellClue: Color(0xFFE9DCC1),
   cellPending: Color(0xFFFBE3B8),

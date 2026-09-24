@@ -58,7 +58,10 @@ const AppTokens _light = AppTokens(
     blurRadius: 36,
     color: Color.fromRGBO(42, 26, 16, 0.14),
   ),
-  cellLetter: Color(0xFFFFFFFF),
+  gridLine: Color(0xFFE3D5B6),
+  // Design says #ffffff; nudged to #fffdf7 so letter cells separate from the
+  // #fffaf0 board (README "Flutter sapmaları").
+  cellLetter: Color(0xFFFFFDF7),
   cellClue: Color(0xFFEFE3C9),
   cellPending: Color(0xFFFBE3B8),
   cellWrong: Color(0xFFF9DCD7),

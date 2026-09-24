@@ -32,6 +32,7 @@ class AppTokens extends ThemeExtension<AppTokens> {
     required this.board,
     required this.boardBorder,
     required this.boardShadow,
+    required this.gridLine,
     required this.cellLetter,
     required this.cellClue,
     required this.cellPending,
@@ -130,6 +131,10 @@ class AppTokens extends ThemeExtension<AppTokens> {
 
   /// Tahta gölgesi
   final BoxShadow boardShadow;
+
+  /// Hücre arası çizgi (Flutter eki, kz-tokens.js'te yok — README "Flutter
+  /// sapmaları"): dark `cellClue`, light `boardBorder`.
+  final Color gridLine;
 
   /// Harf hücresi zemini
   final Color cellLetter;

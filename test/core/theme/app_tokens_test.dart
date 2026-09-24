@@ -20,6 +20,13 @@ void main() {
       expect(t.dim, const Color.fromRGBO(5, 16, 31, .55));
     });
 
+    test('Flutter-only additions and deviations (README "Flutter sapmaları")', () {
+      expect(AppTokens.dark.gridLine, AppTokens.dark.cellClue);
+      expect(AppTokens.light.gridLine, AppTokens.light.boardBorder);
+      expect(AppTokens.light.cellLetter, const Color(0xFFFFFDF7));
+      expect(AppTokens.light.cellLetter, isNot(AppTokens.light.board));
+    });
+
     test('spot-checks light values against the JS source', () {
       const t = AppTokens.light;
       expect(t.bgFlat, const Color(0xFFF3EAD8));
