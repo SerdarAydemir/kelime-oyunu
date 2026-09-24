@@ -13,6 +13,9 @@ mixin _GameInteraction on State<GameActiveBody> {
 
   GameActive get state => widget.state;
 
+  /// The lamp button: enters / leaves reveal mode.
+  void _toggleRevealMode() => setState(() => _revealMode = !_revealMode);
+
   /// Runs the rewarded-ad gate for an ad-paid action. Returns true only when
   /// the ad was watched. When no ad can be shown, the offline toast appears
   /// with "Tekrar dene", which re-runs [onRetry] (the whole action, so the

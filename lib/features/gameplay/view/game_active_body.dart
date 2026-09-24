@@ -28,6 +28,7 @@ import 'package:kelime_oyunu/features/gameplay/widgets/score_header.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/turn_pill.dart';
 import 'package:kelime_oyunu/l10n/generated/app_localizations.dart';
 
+part 'package:kelime_oyunu/features/gameplay/view/game_active_controls.dart';
 part 'package:kelime_oyunu/features/gameplay/view/game_active_interaction.dart';
 
 /// Full game UI rendered while a match is in progress. Reads [GameBloc] from
@@ -231,51 +232,8 @@ class _GameActiveBodyState extends State<GameActiveBody>
                     ),
                   ),
                 ),
-                // Rack dims to 45 % while the opponent plays (README "States").
-                // The lifted selected tile needs headroom above the row.
-                AnimatedOpacity(
-                  opacity: _botTurn ? 0.45 : 1.0,
-                  duration: const Duration(milliseconds: 200),
-                  child: Padding(
-                    padding: const EdgeInsets.only(top: AppDimensions.space12),
-                    child: RackWidget(
-                      key: _rackKey,
-                      rack: state.rack,
-                      selectedIndex: state.selectedRackIndex,
-                      // Drag mirrors the tap guards: player's turn, game running, no
-                      // reveal mode — the bot's turn must not accept ghost drags.
-                      dragEnabled: _canReveal && !_revealMode,
-                      onDragStarted: (_) =>
-                          context.read<GameBloc>().add(const RackTileSelected(-1)),
-                      showPlusSlot: state.rackSize == RackManager.baseRackSize,
-                      showAdLabel: showAdLabelsFor(widget.puzzleId),
-                      onPlusTap: _canReveal && !_revealMode
-                          ? () => _confirmSixthSlot(context)
-                          : null,
-                      onTileTap: (i) => context.read<GameBloc>().add(RackTileSelected(i)),
-                      onTileRecall: (i) => _onTileRecall(context, i),
-                    ),
-                  ),
-                ),
-                ActionBar(
-                  pendingPlacements: state.pendingPlacements,
-                  revealActive: _revealMode,
-                  botTurn: _botTurn,
-                  showAdLabel: showAdLabelsFor(widget.puzzleId),
-                  onConfirm: _revealMode
-                      ? null
-                      : () => context.read<GameBloc>().add(const MoveConfirmed()),
-                  onPass: _revealMode
-                      ? null
-                      : () => context.read<GameBloc>().add(const MovePassed()),
-                  onSwap:
-                      !_revealMode &&
-                          state.pendingPlacements.isEmpty &&
-                          state.swapQuotaRemaining > 0
-                      ? () => _showSwapSheet(context)
-                      : null,
-                  onReveal: _canReveal ? () => setState(() => _revealMode = !_revealMode) : null,
-                ),
+                _rackSection(context),
+                _actionBar(context),
               ],
             ),
           ),
