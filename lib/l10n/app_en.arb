@@ -254,5 +254,6 @@
       }
     }
   },
-  "botDescription": "Your opponent on the way to the summit."
+  "botDescription": "Your opponent on the way to the summit.",
+  "levelTag": "LEVEL"
 }

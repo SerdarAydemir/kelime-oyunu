@@ -103,7 +103,10 @@ class GridStaticPainter extends CustomPainter {
   // Draws [text] centred in [rect] in the board letter style (Lora 22).
   void _paintCenteredLetter(Canvas canvas, Rect rect, String text, Color color) {
     final tp = TextPainter(
-      text: TextSpan(text: text, style: AppTypography.cellLetter.copyWith(color: color)),
+      text: TextSpan(
+        text: text,
+        style: AppTypography.cellLetter.copyWith(color: color),
+      ),
       textDirection: TextDirection.ltr,
     )..layout();
     tp.paint(

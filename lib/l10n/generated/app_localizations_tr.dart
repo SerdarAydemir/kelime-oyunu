@@ -469,4 +469,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get botDescription => 'Zirveye giden yolda rakibin.';
+
+  @override
+  String get levelTag => 'BÖLÜM';
 }

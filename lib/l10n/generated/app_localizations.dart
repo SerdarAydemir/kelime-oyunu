@@ -949,6 +949,12 @@ abstract class AppLocalizations {
   /// In tr, this message translates to:
   /// **'Zirveye giden yolda rakibin.'**
   String get botDescription;
+
+  /// No description provided for @levelTag.
+  ///
+  /// In tr, this message translates to:
+  /// **'BÖLÜM'**
+  String get levelTag;
 }
 
 class _AppLocalizationsDelegate

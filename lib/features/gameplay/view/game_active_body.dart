@@ -3,6 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:kelime_oyunu/core/constants/app_dimensions.dart';
+import 'package:kelime_oyunu/core/theme/app_tokens.dart';
 import 'package:kelime_oyunu/data/models/puzzle.dart';
 import 'package:kelime_oyunu/features/gameplay/bloc/game_bloc.dart';
 import 'package:kelime_oyunu/features/gameplay/bloc/game_event.dart';
@@ -19,6 +21,8 @@ import 'package:kelime_oyunu/features/gameplay/widgets/narration_layer.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/narration_tiles.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/rack_widget.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/score_header.dart';
+import 'package:kelime_oyunu/features/gameplay/widgets/turn_pill.dart';
+import 'package:kelime_oyunu/l10n/generated/app_localizations.dart';
 
 part 'package:kelime_oyunu/features/gameplay/view/game_active_interaction.dart';
 
@@ -123,19 +127,25 @@ class _GameActiveBodyState extends State<GameActiveBody>
 
   @override
   Widget build(BuildContext context) {
+    final tokens = context.tokens;
+    final l10n = AppLocalizations.of(context);
     return AnimatedBuilder(
       animation: _narration,
       builder: (context, _) => Stack(
         children: [
+          // bgGame gradient behind everything (README "Game screen").
+          Positioned.fill(
+            child: DecoratedBox(decoration: BoxDecoration(gradient: tokens.bgGame)),
+          ),
           SafeArea(
             child: Column(
               children: [
-                // Progress label + the way out. Kept above ScoreHeader as its
+                // Level header + the way out. Kept above ScoreHeader as its
                 // own child so it never disturbs the "VS" centring in the header.
                 LevelTopBar(
                   levelId: widget.puzzleId,
                   // Leaving is safe: the match is saved at every turn boundary
-                  // and comes back as "Devam Et" on the grid.
+                  // and comes back as "Yarım kalan oyun" on the grid.
                   onExit: () => context.go('/levels'),
                 ),
                 ScoreHeader(
@@ -147,6 +157,10 @@ class _GameActiveBodyState extends State<GameActiveBody>
                   botThinking: state.botThinking,
                   avatarKey: _avatarKey,
                   playerScoreKey: _playerScoreKey,
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: AppDimensions.space8),
+                  child: TurnPill(spec: turnPillFor(state, l10n)),
                 ),
                 Expanded(
                   child: Padding(

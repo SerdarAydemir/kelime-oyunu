@@ -1,12 +1,15 @@
 // lib/features/gameplay/widgets/score_header.dart
 
-import 'dart:async';
-
 import 'package:flutter/material.dart';
+import 'package:kelime_oyunu/core/constants/app_dimensions.dart';
 import 'package:kelime_oyunu/core/constants/app_typography.dart';
 import 'package:kelime_oyunu/core/theme/app_tokens.dart';
 import 'package:kelime_oyunu/l10n/generated/app_localizations.dart';
 
+/// Scorebar (README "Game screen"): `1fr auto 1fr` — player avatar (amber)
+/// with "Sen" + score, "VS", opponent avatar (blue) with "Rakip" + score.
+/// While the bot thinks the player side dims to 55 % and the bot avatar
+/// wears a pulsing 3 px blue ring.
 class ScoreHeader extends StatelessWidget {
   const ScoreHeader({
     required this.playerScore,
@@ -27,38 +30,51 @@ class ScoreHeader extends StatelessWidget {
   /// avatar portrait (F6).
   final GlobalKey? avatarKey;
 
-  /// Anchors the player's score-badge target to the "Sen" pill: each score
-  /// badge flies here and the counter ticks as it arrives.
+  /// Anchors the player's score-badge target to the player's score: each
+  /// score badge flies here and the counter ticks as it arrives.
   final GlobalKey? playerScoreKey;
 
   @override
   Widget build(BuildContext context) {
+    final tokens = context.tokens;
     final l10n = AppLocalizations.of(context);
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-      // Both sides get equal flex so the fixed middle child ("VS") sits at the
-      // true screen centre regardless of how wide either score block is.
+      padding: const EdgeInsets.symmetric(horizontal: AppDimensions.space16),
+      // Both sides get equal flex so "VS" sits at the true screen centre
+      // regardless of how wide either score block is.
       child: Row(
         children: [
           Expanded(
-            child: Align(
-              alignment: Alignment.centerLeft,
-              child: _ScorePill(key: playerScoreKey, label: '${l10n.you} $playerScore'),
+            child: AnimatedOpacity(
+              opacity: botThinking ? 0.55 : 1.0,
+              duration: const Duration(milliseconds: 200),
+              child: _Side(
+                avatar: _Avatar(background: tokens.accent, foreground: tokens.accentInk),
+                name: l10n.you,
+                score: playerScore,
+                scoreKey: playerScoreKey,
+                alignEnd: false,
+              ),
             ),
           ),
-          Text(l10n.vs, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+          Text(
+            l10n.vs,
+            style: AppTypography.overline.copyWith(
+              letterSpacing: 2,
+              color: tokens.text.withValues(alpha: 0.55),
+            ),
+          ),
           Expanded(
-            child: Align(
-              alignment: Alignment.centerRight,
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Text('$botScore $botName', style: const TextStyle(fontWeight: FontWeight.w600)),
-                  const SizedBox(width: 8),
-                  _BotAvatar(key: avatarKey),
-                  if (botThinking) ...[const SizedBox(width: 4), const _AnimatedDots()],
-                ],
+            child: _Side(
+              avatar: _Avatar(
+                key: avatarKey,
+                background: tokens.bot,
+                foreground: tokens.botInk,
+                ring: botThinking,
               ),
+              name: botName,
+              score: botScore,
+              alignEnd: true,
             ),
           ),
         ],
@@ -67,63 +83,119 @@ class ScoreHeader extends StatelessWidget {
   }
 }
 
-class _ScorePill extends StatelessWidget {
-  const _ScorePill({required this.label, super.key});
+/// One half of the bar: avatar plus a name / score column. The bot side is
+/// mirrored so both scores sit next to "VS".
+class _Side extends StatelessWidget {
+  const _Side({
+    required this.avatar,
+    required this.name,
+    required this.score,
+    required this.alignEnd,
+    this.scoreKey,
+  });
 
-  final String label;
-
-  @override
-  Widget build(BuildContext context) {
-    final tokens = context.tokens;
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-      decoration: BoxDecoration(color: tokens.accent, borderRadius: BorderRadius.circular(20)),
-      child: Text(label, style: AppTypography.pill.copyWith(color: tokens.accentInk)),
-    );
-  }
-}
-
-class _BotAvatar extends StatelessWidget {
-  const _BotAvatar({super.key});
+  final Widget avatar;
+  final String name;
+  final int score;
+  final bool alignEnd;
+  final GlobalKey? scoreKey;
 
   @override
   Widget build(BuildContext context) {
     final tokens = context.tokens;
-    return CircleAvatar(
-      radius: 16,
-      backgroundColor: tokens.bot,
-      child: Icon(Icons.smart_toy, size: 16, color: tokens.botInk),
+    final column = Column(
+      crossAxisAlignment: alignEnd ? CrossAxisAlignment.end : CrossAxisAlignment.start,
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        Text(
+          name,
+          style: AppTypography.overline.copyWith(
+            letterSpacing: 0,
+            color: tokens.text.withValues(alpha: 0.7),
+          ),
+        ),
+        Text(
+          '$score',
+          key: scoreKey,
+          style: AppTypography.screenTitle.copyWith(color: tokens.text),
+        ),
+      ],
+    );
+    return Row(
+      mainAxisAlignment: alignEnd ? MainAxisAlignment.end : MainAxisAlignment.start,
+      children: alignEnd
+          ? [column, const SizedBox(width: AppDimensions.space10), avatar]
+          : [avatar, const SizedBox(width: AppDimensions.space10), column],
     );
   }
 }
 
-class _AnimatedDots extends StatefulWidget {
-  const _AnimatedDots();
+/// 38 dp circle with the person-silhouette placeholder (photos may replace it
+/// later). [ring] draws the pulsing "thinking" ring.
+class _Avatar extends StatefulWidget {
+  const _Avatar({required this.background, required this.foreground, this.ring = false, super.key});
+
+  final Color background;
+  final Color foreground;
+  final bool ring;
 
   @override
-  State<_AnimatedDots> createState() => _AnimatedDotsState();
+  State<_Avatar> createState() => _AvatarState();
 }
 
-class _AnimatedDotsState extends State<_AnimatedDots> {
-  late Timer _timer;
-  int _dotCount = 1;
+class _AvatarState extends State<_Avatar> with SingleTickerProviderStateMixin {
+  late final AnimationController _pulse = AnimationController(
+    vsync: this,
+    duration: const Duration(seconds: 1),
+  );
 
   @override
   void initState() {
     super.initState();
-    _timer = Timer.periodic(const Duration(milliseconds: 500), (_) {
-      setState(() => _dotCount = _dotCount % 3 + 1);
-    });
+    _syncPulse();
+  }
+
+  @override
+  void didUpdateWidget(_Avatar old) {
+    super.didUpdateWidget(old);
+    if (old.ring != widget.ring) _syncPulse();
+  }
+
+  // Idle: no ticking, zero repaints (CLAUDE.md animation budget).
+  void _syncPulse() {
+    if (widget.ring) {
+      _pulse.repeat(reverse: true);
+    } else {
+      _pulse
+        ..stop()
+        ..value = 0;
+    }
   }
 
   @override
   void dispose() {
-    _timer.cancel();
+    _pulse.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    return Text('.' * _dotCount, style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold));
+    final tokens = context.tokens;
+    return AnimatedBuilder(
+      animation: _pulse,
+      builder: (context, child) => Container(
+        width: AppDimensions.avatar,
+        height: AppDimensions.avatar,
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          color: widget.background,
+          border: widget.ring
+              ? Border.all(color: tokens.bot.withValues(alpha: 0.4 + 0.6 * _pulse.value), width: 3)
+              : null,
+        ),
+        child: child,
+      ),
+      child: Icon(Icons.person, size: 22, color: widget.foreground),
+    );
   }
 }

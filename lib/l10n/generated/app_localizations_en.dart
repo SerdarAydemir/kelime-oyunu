@@ -468,4 +468,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get botDescription => 'Your opponent on the way to the summit.';
+
+  @override
+  String get levelTag => 'LEVEL';
 }
