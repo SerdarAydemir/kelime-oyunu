@@ -10,4 +10,7 @@ flutter_launcher_icons:
   adaptive_icon_foreground: assets/icon/app_icon_foreground.png
   # LOGO_BG: linear-gradient(160deg, #1c3358 0%, #0b1a33 100%)
   adaptive_icon_background: assets/icon/app_icon_background.png
+  # 0: the PNG already carries the safe-zone padding (content diagonal < 66 dp
+  # of the 108 dp canvas), so the plugin must not inset it a second time.
+  adaptive_icon_foreground_inset: 0
   min_sdk_android: 21
