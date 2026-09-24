@@ -71,17 +71,30 @@ flutter:
     - assets/puzzles/
     # Placeholder dirs — populate before first build
     - assets/images/
-    - assets/fonts/
     - assets/audio/
 
-  # Fonts added here once TTF files are placed in assets/fonts/
-  # fonts:
-  #   - family: Inter
-  #     fonts:
-  #       - asset: assets/fonts/Inter-Regular.ttf
-  #       - asset: assets/fonts/Inter-Bold.ttf
-  #         weight: 700
-  #   - family: Nunito
-  #     fonts:
-  #       - asset: assets/fonts/Nunito-Bold.ttf
-  #         weight: 700
+  # Bundled offline (no google_fonts — the game must work without network).
+  # Static instances cut from the Google Fonts variable masters (OFL 1.1;
+  # licence text sits next to each family in assets/fonts/<family>/OFL.txt).
+  # Design source: docs/design/kz-tokens.js TYPE.
+  fonts:
+    - family: Lora
+      fonts:
+        - asset: assets/fonts/lora/Lora-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/lora/Lora-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/lora/Lora-Bold.ttf
+          weight: 700
+    - family: Nunito Sans
+      fonts:
+        - asset: assets/fonts/nunito_sans/NunitoSans-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/nunito_sans/NunitoSans-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/nunito_sans/NunitoSans-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/nunito_sans/NunitoSans-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/nunito_sans/NunitoSans-ExtraBold.ttf
+          weight: 800
