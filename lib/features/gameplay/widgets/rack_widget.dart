@@ -1,7 +1,8 @@
 // lib/features/gameplay/widgets/rack_widget.dart
 
 import 'package:flutter/material.dart';
-import 'package:kelime_oyunu/core/constants/app_colors.dart';
+import 'package:kelime_oyunu/core/constants/app_typography.dart';
+import 'package:kelime_oyunu/core/theme/app_tokens.dart';
 import 'package:kelime_oyunu/data/models/puzzle.dart';
 import 'package:kelime_oyunu/features/gameplay/engine/rack_manager.dart';
 
@@ -100,6 +101,7 @@ class DragFeedbackTile extends StatelessWidget {
   Widget build(BuildContext context) {
     // Material: the feedback lives in the root Overlay, outside the app's
     // Material ancestry — without it, Text falls back to error styling.
+    final tokens = context.tokens;
     return Transform.translate(
       // Centre horizontally on the finger, float above it.
       offset: const Offset(-size / 2, -size * 1.3),
@@ -109,21 +111,12 @@ class DragFeedbackTile extends StatelessWidget {
           width: size,
           height: size,
           decoration: BoxDecoration(
-            color: AppColors.rackTileBg,
+            color: tokens.tile,
             borderRadius: BorderRadius.circular(8),
-            boxShadow: const [
-              BoxShadow(color: Color(0x4D000000), blurRadius: 10, offset: Offset(0, 5)),
-            ],
+            boxShadow: [BoxShadow(color: tokens.dim, blurRadius: 10, offset: const Offset(0, 5))],
           ),
           alignment: Alignment.center,
-          child: Text(
-            letter,
-            style: const TextStyle(
-              fontSize: 28,
-              fontWeight: FontWeight.bold,
-              color: Colors.black87,
-            ),
-          ),
+          child: Text(letter, style: AppTypography.tileLetter.copyWith(color: tokens.tileInk)),
         ),
       ),
     );
@@ -138,6 +131,7 @@ class _PlusSlotWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final tokens = context.tokens;
     return GestureDetector(
       onTap: onTap,
       child: Opacity(
@@ -149,12 +143,12 @@ class _PlusSlotWidget extends StatelessWidget {
               width: 48,
               height: 48,
               decoration: BoxDecoration(
-                color: AppColors.rackTileBg,
+                color: tokens.tile,
                 borderRadius: BorderRadius.circular(6),
-                border: Border.all(color: AppColors.accent, width: 1.5),
+                border: Border.all(color: tokens.accent, width: 1.5),
               ),
               alignment: Alignment.center,
-              child: const Icon(Icons.add, color: AppColors.accent, size: 26),
+              child: Icon(Icons.add, color: tokens.accent, size: 26),
             ),
             Positioned(
               top: -4,
@@ -162,12 +156,16 @@ class _PlusSlotWidget extends StatelessWidget {
               child: Container(
                 padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 2),
                 decoration: BoxDecoration(
-                  color: AppColors.accent,
+                  color: tokens.accent,
                   borderRadius: BorderRadius.circular(8),
                 ),
-                child: const Text(
+                child: Text(
                   'Ad',
-                  style: TextStyle(fontSize: 9, fontWeight: FontWeight.bold, color: Colors.white),
+                  style: TextStyle(
+                    fontSize: 9,
+                    fontWeight: FontWeight.bold,
+                    color: tokens.accentInk,
+                  ),
                 ),
               ),
             ),
@@ -189,6 +187,7 @@ class _RackTileWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final tokens = context.tokens;
     return GestureDetector(
       onTap: onTap,
       onLongPress: onLongPress,
@@ -198,22 +197,16 @@ class _RackTileWidget extends StatelessWidget {
           width: _tileSize,
           height: _tileSize,
           decoration: BoxDecoration(
-            color: AppColors.rackTileBg,
+            color: tokens.tile,
             borderRadius: BorderRadius.circular(6),
-            border: tile.isReturned ? Border.all(color: Colors.red.shade300, width: 2) : null,
+            border: tile.isReturned ? Border.all(color: tokens.error, width: 2) : null,
+            // Design: "0 4 0 tileShadow" — a hard 4 dp base under an idle tile.
             boxShadow: tile.isPlaced
                 ? null
-                : const [BoxShadow(color: Color(0x26000000), blurRadius: 3, offset: Offset(0, 2))],
+                : [BoxShadow(color: tokens.tileShadow, offset: const Offset(0, 4))],
           ),
           alignment: Alignment.center,
-          child: Text(
-            tile.letter,
-            style: const TextStyle(
-              fontSize: 24,
-              fontWeight: FontWeight.bold,
-              color: Colors.black87,
-            ),
-          ),
+          child: Text(tile.letter, style: AppTypography.tileLetter.copyWith(color: tokens.tileInk)),
         ),
       ),
     );

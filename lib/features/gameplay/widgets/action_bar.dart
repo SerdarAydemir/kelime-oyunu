@@ -1,7 +1,8 @@
 // lib/features/gameplay/widgets/action_bar.dart
 
 import 'package:flutter/material.dart';
-import 'package:kelime_oyunu/core/constants/app_colors.dart';
+import 'package:kelime_oyunu/core/constants/app_typography.dart';
+import 'package:kelime_oyunu/core/theme/app_tokens.dart';
 import 'package:kelime_oyunu/features/gameplay/engine/score_engine.dart';
 
 class ActionBar extends StatelessWidget {
@@ -48,6 +49,8 @@ class ActionBar extends StatelessWidget {
   }
 }
 
+/// Swap button: a `surface` circle with a 1.5 px `faint` ring (design "Bottom
+/// bar"); dims to 40 % when disabled.
 class _CircleIconButton extends StatelessWidget {
   const _CircleIconButton({required this.icon, required this.onTap});
 
@@ -56,22 +59,22 @@ class _CircleIconButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isDisabled = onTap == null;
+    final tokens = context.tokens;
     return InkWell(
       onTap: onTap,
       borderRadius: BorderRadius.circular(24),
-      child: Container(
-        width: 48,
-        height: 48,
-        decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          color: isDisabled ? AppColors.gridCellLocked : AppColors.circleButtonActiveBg,
-          border: Border.all(
-            color: isDisabled ? AppColors.gridCellLocked : AppColors.primary,
-            width: 1.5,
+      child: Opacity(
+        opacity: onTap == null ? 0.4 : 1.0,
+        child: Container(
+          width: 48,
+          height: 48,
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            color: tokens.surface,
+            border: Border.all(color: tokens.faint, width: 1.5),
           ),
+          child: Icon(icon, color: tokens.text, size: 22),
         ),
-        child: Icon(icon, color: isDisabled ? Colors.grey : AppColors.primary, size: 22),
       ),
     );
   }
@@ -90,25 +93,25 @@ class _ConfirmPassButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final tokens = context.tokens;
     return SizedBox(
       height: 48,
       child: ElevatedButton(
         onPressed: hasPending ? onConfirm : onPass,
         style: ElevatedButton.styleFrom(
-          backgroundColor: AppColors.success,
-          foregroundColor: Colors.white,
+          backgroundColor: tokens.accent,
+          foregroundColor: tokens.accentInk,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
           elevation: 2,
         ),
-        child: Text(
-          hasPending ? 'Onayla' : 'Pas',
-          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
-        ),
+        child: Text(hasPending ? 'Onayla' : 'Pas', style: AppTypography.buttonPrimary),
       ),
     );
   }
 }
 
+/// Reveal (lamp) button: amber 15 % fill with an amber ring while available,
+/// solid amber while reveal mode is on, 40 % dimmed when disabled.
 class _RevealButton extends StatelessWidget {
   const _RevealButton({required this.onReveal, required this.active});
 
@@ -119,54 +122,50 @@ class _RevealButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isDisabled = onReveal == null;
+    final tokens = context.tokens;
     return InkWell(
       onTap: onReveal,
       borderRadius: BorderRadius.circular(24),
-      child: Stack(
-        clipBehavior: Clip.none,
-        children: [
-          Container(
-            width: 48,
-            height: 48,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              color: isDisabled
-                  ? AppColors.gridCellLocked
-                  : active
-                  ? AppColors.accent
-                  : AppColors.revealActiveBg,
-              border: Border.all(
-                color: isDisabled ? AppColors.gridCellLocked : AppColors.accent,
-                width: 1.5,
-              ),
-            ),
-            child: Icon(
-              active ? Icons.lightbulb : Icons.lightbulb_outline,
-              color: isDisabled
-                  ? Colors.grey
-                  : active
-                  ? Colors.white
-                  : AppColors.accent,
-              size: 22,
-            ),
-          ),
-          Positioned(
-            top: -4,
-            right: -4,
-            child: Container(
-              padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 2),
+      child: Opacity(
+        opacity: onReveal == null ? 0.4 : 1.0,
+        child: Stack(
+          clipBehavior: Clip.none,
+          children: [
+            Container(
+              width: 48,
+              height: 48,
               decoration: BoxDecoration(
-                color: AppColors.accent,
-                borderRadius: BorderRadius.circular(8),
+                shape: BoxShape.circle,
+                color: active ? tokens.accent : tokens.accent.withValues(alpha: 0.15),
+                border: Border.all(color: tokens.accent, width: 1.5),
               ),
-              child: const Text(
-                'Ad',
-                style: TextStyle(fontSize: 9, fontWeight: FontWeight.bold, color: Colors.white),
+              child: Icon(
+                active ? Icons.lightbulb : Icons.lightbulb_outline,
+                color: active ? tokens.accentInk : tokens.accent,
+                size: 22,
               ),
             ),
-          ),
-        ],
+            Positioned(
+              top: -4,
+              right: -4,
+              child: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 2),
+                decoration: BoxDecoration(
+                  color: tokens.accent,
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: Text(
+                  'Ad',
+                  style: TextStyle(
+                    fontSize: 9,
+                    fontWeight: FontWeight.bold,
+                    color: tokens.accentInk,
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

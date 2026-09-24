@@ -3,7 +3,7 @@
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
-import 'package:kelime_oyunu/core/constants/app_colors.dart';
+import 'package:kelime_oyunu/core/theme/app_tokens.dart';
 import 'package:kelime_oyunu/data/models/puzzle.dart';
 import 'package:kelime_oyunu/features/gameplay/bloc/move_narration.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/narration_controller.dart';
@@ -131,8 +131,12 @@ class _NarrationLayerState extends State<NarrationLayer> {
   String _label(NarrationCue cue) => cue.delta >= 0 ? '+${cue.delta}' : '${cue.delta}';
 
   Color _color(NarrationCue cue) => switch (cue.kind) {
-    CueKind.letter => cue.delta >= 0 ? AppColors.success : AppColors.error,
-    CueKind.wordBonus => AppColors.accent,
-    CueKind.rackBonus => AppColors.accent,
+    CueKind.letter => cue.delta >= 0 ? context.tokens.success : context.tokens.error,
+    CueKind.wordBonus => context.tokens.accent,
+    CueKind.rackBonus => context.tokens.accent,
   };
+
+  /// Badge text colour: dark ink on the amber bonus pills, cream elsewhere.
+  Color _ink(NarrationCue cue) =>
+      cue.kind == CueKind.letter ? context.tokens.solidText : context.tokens.accentInk;
 }

@@ -29,7 +29,7 @@ extension _ScoreCues on _NarrationLayerState {
           width: cell,
           height: cell,
           child: CellPulse(
-            color: cue.delta >= 0 ? AppColors.success : AppColors.error,
+            color: cue.delta >= 0 ? context.tokens.success : context.tokens.error,
             local: local,
             key: ValueKey('pulse_${cue.landAt}_$i'),
           ),
@@ -120,6 +120,7 @@ extension _ScoreCues on _NarrationLayerState {
           child: NarrationBadge(
             text: _label(cue),
             color: _color(cue),
+            ink: _ink(cue),
             local: local,
             // Bonuses (word total "+N", rack empty) read as headlines.
             big: cue.kind != CueKind.letter,

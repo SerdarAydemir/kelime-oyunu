@@ -2,9 +2,9 @@
 
 import 'package:flutter/material.dart';
 
-import 'package:kelime_oyunu/core/constants/app_colors.dart';
 import 'package:kelime_oyunu/core/constants/app_dimensions.dart';
 import 'package:kelime_oyunu/core/constants/app_typography.dart';
+import 'package:kelime_oyunu/core/theme/app_tokens.dart';
 import 'package:kelime_oyunu/data/models/saved_session.dart';
 
 /// The "Devam Et" call to action for a half-played match.
@@ -19,34 +19,41 @@ class ResumeBanner extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final tokens = context.tokens;
     return Card(
-      color: AppColors.accent,
-      elevation: AppDimensions.cardElevation,
-      margin: const EdgeInsets.only(bottom: AppDimensions.spacingM),
+      color: tokens.accent,
+      elevation: 2,
+      margin: const EdgeInsets.only(bottom: AppDimensions.space16),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(AppDimensions.radiusListCard),
+      ),
       child: InkWell(
         onTap: onResume,
-        borderRadius: BorderRadius.circular(AppDimensions.radiusM),
+        borderRadius: BorderRadius.circular(AppDimensions.radiusListCard),
         child: Padding(
-          padding: const EdgeInsets.all(AppDimensions.spacingM),
+          padding: const EdgeInsets.all(AppDimensions.space16),
           child: Row(
             children: [
-              const Icon(Icons.play_circle_fill, size: AppDimensions.iconL),
-              const SizedBox(width: AppDimensions.spacingM),
+              Icon(Icons.play_circle_fill, size: AppDimensions.iconL, color: tokens.accentInk),
+              const SizedBox(width: AppDimensions.space16),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    const Text('Devam Et', style: AppTypography.title),
-                    const SizedBox(height: AppDimensions.spacingXxs),
+                    Text(
+                      'Devam Et',
+                      style: AppTypography.buttonSecondary.copyWith(color: tokens.accentInk),
+                    ),
+                    const SizedBox(height: AppDimensions.space2),
                     Text(
                       'Bölüm ${summary.levelId} • ${summary.playerScore} - ${summary.botScore}',
-                      style: AppTypography.bodySmall,
+                      style: AppTypography.bodySmall.copyWith(color: tokens.accentInk),
                     ),
                   ],
                 ),
               ),
-              const Icon(Icons.chevron_right, size: AppDimensions.iconM),
+              Icon(Icons.chevron_right, size: AppDimensions.iconM, color: tokens.accentInk),
             ],
           ),
         ),

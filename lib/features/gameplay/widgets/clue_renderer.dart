@@ -5,7 +5,8 @@ import 'dart:math' as math;
 import 'package:flutter/foundation.dart' show kDebugMode;
 import 'package:flutter/material.dart';
 
-import 'package:kelime_oyunu/core/constants/app_colors.dart';
+import 'package:kelime_oyunu/core/constants/app_typography.dart';
+import 'package:kelime_oyunu/core/theme/app_tokens.dart';
 import 'package:kelime_oyunu/core/utils/logger.dart';
 import 'package:kelime_oyunu/data/models/puzzle.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/clue_text_layout.dart';
@@ -30,35 +31,42 @@ class ClueRenderer {
 
   /// Draws a clue cell's background, text and divider. [spec] must be a
   /// [CellType.clue] cell. Arrows are NOT drawn here — see [drawArrows].
-  void drawCell(Canvas canvas, Rect rect, CellSpec spec) {
-    canvas.drawRect(rect, Paint()..color = AppColors.clueCellBg);
+  void drawCell(Canvas canvas, Rect rect, CellSpec spec, AppTokens tokens) {
+    canvas.drawRect(rect, Paint()..color = tokens.cellClue);
+    final ink = tokens.clueText;
     if (spec.clues.length >= 2) {
       final half = rect.height / 2;
-      _drawClueText(canvas, Rect.fromLTWH(rect.left, rect.top, rect.width, half), spec.clues[0]);
+      _drawClueText(
+        canvas,
+        Rect.fromLTWH(rect.left, rect.top, rect.width, half),
+        spec.clues[0],
+        ink,
+      );
       _drawClueText(
         canvas,
         Rect.fromLTWH(rect.left, rect.top + half, rect.width, half),
         spec.clues[1],
+        ink,
       );
       // Divider between the two clues; each half is its own reveal target.
       canvas.drawLine(
         Offset(rect.left, rect.top + half),
         Offset(rect.right, rect.top + half),
         Paint()
-          ..color = Colors.black
+          ..color = ink
           ..strokeWidth = 1,
       );
     } else if (spec.clues.isNotEmpty) {
-      _drawClueText(canvas, rect, spec.clues[0]);
+      _drawClueText(canvas, rect, spec.clues[0], ink);
     }
   }
 
   /// Draws each of [spec]'s direction arrows straddling the cell border on the
   /// edge the word runs toward. Call this AFTER every cell is painted so the
   /// arrows are not overdrawn by the neighbouring letter cell.
-  void drawArrows(Canvas canvas, Rect rect, CellSpec spec) {
+  void drawArrows(Canvas canvas, Rect rect, CellSpec spec, AppTokens tokens) {
     for (final clue in spec.clues) {
-      _drawEdgeArrow(canvas, rect, clue.arrow);
+      _drawEdgeArrow(canvas, rect, clue.arrow, tokens.arrow);
     }
   }
 
@@ -69,7 +77,7 @@ class ClueRenderer {
   /// paragraph is painted with explicit newlines and never wraps mid-word. Only
   /// when even that overflows does it fall back to capped lines + ellipsis, and
   /// says so once per text in debug builds so the clue can be shortened upstream.
-  void _drawClueText(Canvas canvas, Rect rect, ClueSpec clue) {
+  void _drawClueText(Canvas canvas, Rect rect, ClueSpec clue, Color ink) {
     final textW = math.max(0.0, rect.width - _pad * 2);
     final textH = math.max(0.0, rect.height - _pad * 2);
     final startFont = (rect.height * 0.30).clamp(_minFont, _maxFont);
@@ -89,7 +97,11 @@ class ClueRenderer {
     final tp = TextPainter(
       text: TextSpan(
         text: overflow ? clue.text : layout.text,
-        style: TextStyle(fontSize: layout.fontSize, height: _lineHeight, color: Colors.black),
+        style: AppTypography.clue.copyWith(
+          fontSize: layout.fontSize,
+          height: _lineHeight,
+          color: ink,
+        ),
       ),
       textAlign: TextAlign.center,
       textDirection: TextDirection.ltr,
@@ -111,7 +123,7 @@ class ClueRenderer {
         final tp = TextPainter(
           text: TextSpan(
             text: text,
-            style: TextStyle(fontSize: fontSize, height: _lineHeight),
+            style: AppTypography.clue.copyWith(fontSize: fontSize, height: _lineHeight),
           ),
           textDirection: TextDirection.ltr,
         )..layout();
@@ -134,11 +146,11 @@ class ClueRenderer {
   // arrow on the right edge (vertically centred), down arrow on the bottom edge
   // (horizontally centred). Mostly outside the clue cell so it costs no text
   // space; drawn in a later pass so the neighbour cell does not overdraw it.
-  void _drawEdgeArrow(Canvas canvas, Rect rect, ClueArrow arrow) {
+  void _drawEdgeArrow(Canvas canvas, Rect rect, ClueArrow arrow, Color color) {
     const half = 4.0; // half the triangle base
     const out = 5.0; // how far the tip pokes past the border
     const back = 1.5; // how far the base sits inside the border
-    final paint = Paint()..color = AppColors.accent;
+    final paint = Paint()..color = color;
     final List<Offset> pts;
     if (arrow == ClueArrow.right) {
       final cy = rect.center.dy;

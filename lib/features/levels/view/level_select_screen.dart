@@ -5,9 +5,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 import 'package:kelime_oyunu/core/config/dev_flags.dart';
-import 'package:kelime_oyunu/core/constants/app_colors.dart';
 import 'package:kelime_oyunu/core/constants/app_dimensions.dart';
 import 'package:kelime_oyunu/core/constants/app_typography.dart';
+import 'package:kelime_oyunu/core/theme/app_tokens.dart';
 import 'package:kelime_oyunu/data/repositories/progress_repository.dart';
 import 'package:kelime_oyunu/data/repositories/session_repository.dart';
 import 'package:kelime_oyunu/features/levels/cubit/level_select_cubit.dart';
@@ -60,12 +60,12 @@ class _Title extends StatelessWidget {
       children: [
         const Text('Bölümler'),
         if (dev) ...[
-          const SizedBox(width: AppDimensions.spacingS),
+          const SizedBox(width: AppDimensions.space8),
           // QA-only label, intentionally not localised.
           Text(
             'DEV',
-            style: AppTypography.bodySmall.copyWith(
-              color: AppColors.accent,
+            style: AppTypography.label.copyWith(
+              color: context.tokens.accent,
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -90,7 +90,7 @@ class _LevelSelectBody extends StatelessWidget {
       body: SafeArea(
         child: BlocBuilder<LevelSelectCubit, LevelSelectState>(
           builder: (context, state) => Padding(
-            padding: const EdgeInsets.all(AppDimensions.spacingM),
+            padding: const EdgeInsets.all(AppDimensions.space16),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
@@ -101,7 +101,7 @@ class _LevelSelectBody extends StatelessWidget {
                     onResume: () => context.go('/gameplay/${resume.levelId}?resume=true'),
                   ),
                 _ProgressLine(state: state),
-                const SizedBox(height: AppDimensions.spacingS),
+                const SizedBox(height: AppDimensions.space8),
                 Expanded(child: _LevelGrid(state: state)),
               ],
             ),
@@ -177,8 +177,8 @@ class _LevelGridState extends State<_LevelGrid> {
       controller: _controller,
       gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
         maxCrossAxisExtent: _tileExtent,
-        mainAxisSpacing: AppDimensions.spacingS,
-        crossAxisSpacing: AppDimensions.spacingS,
+        mainAxisSpacing: AppDimensions.space8,
+        crossAxisSpacing: AppDimensions.space8,
       ),
       itemCount: state.levelCount,
       itemBuilder: (context, index) {
@@ -203,7 +203,7 @@ class _LevelGridState extends State<_LevelGrid> {
   double _initialOffset(double width) {
     final columns = (width / _tileExtent).ceil().clamp(1, 12);
     final row = (state.currentLevel - 1) ~/ columns;
-    const rowHeight = _tileExtent + AppDimensions.spacingS;
+    const rowHeight = _tileExtent + AppDimensions.space8;
     return ((row - 2) * rowHeight).clamp(0.0, double.infinity);
   }
 }

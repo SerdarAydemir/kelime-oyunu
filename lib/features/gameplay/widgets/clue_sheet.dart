@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 
-import 'package:kelime_oyunu/core/constants/app_colors.dart';
+import 'package:kelime_oyunu/core/theme/app_tokens.dart';
 import 'package:kelime_oyunu/core/constants/app_dimensions.dart';
 import 'package:kelime_oyunu/core/constants/app_typography.dart';
 import 'package:kelime_oyunu/data/models/puzzle.dart';
@@ -19,13 +19,13 @@ class ClueSheet extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Padding(
-        padding: const EdgeInsets.all(AppDimensions.spacingL),
+        padding: const EdgeInsets.all(AppDimensions.space24),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(clues.length >= 2 ? 'İpuçları' : 'İpucu', style: AppTypography.title),
-            const SizedBox(height: AppDimensions.spacingM),
+            Text(clues.length >= 2 ? 'İpuçları' : 'İpucu', style: AppTypography.screenTitle),
+            const SizedBox(height: AppDimensions.space16),
             for (final clue in clues) _ClueRow(clue: clue),
           ],
         ),
@@ -43,17 +43,17 @@ class _ClueRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: AppDimensions.spacingS),
+      padding: const EdgeInsets.only(bottom: AppDimensions.space8),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Icon(
             clue.arrow == ClueArrow.right ? Icons.arrow_forward : Icons.arrow_downward,
             size: AppDimensions.iconS,
-            color: AppColors.accent,
+            color: context.tokens.arrow,
           ),
-          const SizedBox(width: AppDimensions.spacingS),
-          Expanded(child: Text(clue.text, style: AppTypography.bodyLarge)),
+          const SizedBox(width: AppDimensions.space8),
+          Expanded(child: Text(clue.text, style: AppTypography.body)),
         ],
       ),
     );

@@ -1,7 +1,8 @@
 // lib/features/gameplay/widgets/grid_dynamic_painter.dart
 
 import 'package:flutter/material.dart';
-import 'package:kelime_oyunu/core/constants/app_colors.dart';
+import 'package:kelime_oyunu/core/constants/app_typography.dart';
+import 'package:kelime_oyunu/core/theme/app_tokens.dart';
 import 'package:kelime_oyunu/data/models/puzzle.dart';
 import 'package:kelime_oyunu/features/gameplay/engine/score_engine.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/clue_renderer.dart';
@@ -15,6 +16,7 @@ class GridDynamicPainter extends CustomPainter {
     required this.revealMode,
     required this.puzzle,
     required this.cellSize,
+    required this.tokens,
     this.hoverCell,
     this.hoverValid = false,
     this.hiddenPendingCell,
@@ -24,6 +26,9 @@ class GridDynamicPainter extends CustomPainter {
   final bool revealMode;
   final PuzzleData puzzle;
   final double cellSize;
+
+  /// Active theme palette (the painter has no BuildContext of its own).
+  final AppTokens tokens;
 
   /// Cell currently under a dragged tile, if any, and whether dropping there
   /// would succeed — paints the positive/negative drop-target feedback.
@@ -39,7 +44,7 @@ class GridDynamicPainter extends CustomPainter {
     // Joker mode: dim every non-clue cell so the green clue cells stand out
     // as the selectable targets (spotlight). MVP look — grow+blur is F6.
     if (revealMode) {
-      final dim = Paint()..color = Colors.black45;
+      final dim = Paint()..color = tokens.dim;
       for (final c in puzzle.cells) {
         if (c.type == CellType.clue) continue;
         canvas.drawRect(Rect.fromLTWH(c.col * cellSize, c.row * cellSize, cellSize, cellSize), dim);
@@ -52,7 +57,7 @@ class GridDynamicPainter extends CustomPainter {
     final hover = hoverCell;
     if (hover != null) {
       final rect = Rect.fromLTWH(hover.col * cellSize, hover.row * cellSize, cellSize, cellSize);
-      final base = hoverValid ? AppColors.success : AppColors.error;
+      final base = hoverValid ? tokens.success : tokens.error;
       canvas.drawRect(rect, Paint()..color = base.withValues(alpha: hoverValid ? 0.35 : 0.20));
       canvas.drawRect(
         rect.deflate(1),
@@ -63,9 +68,8 @@ class GridDynamicPainter extends CustomPainter {
       );
     }
 
-    // Pending letters render as a full-cell rounded tile in rack-tile cream:
-    // reads as "your letter, not committed yet" and contrasts with the accent
-    // arrows (the old full-orange fill colour-matched and hid them).
+    // Pending letters render as a full-cell rounded tile on `cellPending` with
+    // `inkPending` glyph and ring: reads as "your letter, not committed yet".
     for (final placement in pendingPlacements) {
       if (placement.cell == hiddenPendingCell) continue;
       final rect = Rect.fromLTWH(
@@ -75,18 +79,18 @@ class GridDynamicPainter extends CustomPainter {
         cellSize,
       );
       final rrect = RRect.fromRectAndRadius(rect.deflate(1), Radius.circular(cellSize * 0.12));
-      canvas.drawRRect(rrect, Paint()..color = AppColors.rackTileBg);
+      canvas.drawRRect(rrect, Paint()..color = tokens.cellPending);
       canvas.drawRRect(
         rrect,
         Paint()
           ..style = PaintingStyle.stroke
           ..strokeWidth = 1.5
-          ..color = AppColors.accent,
+          ..color = tokens.inkPending,
       );
       final tp = TextPainter(
         text: TextSpan(
           text: placement.letter,
-          style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black),
+          style: AppTypography.cellLetter.copyWith(color: tokens.inkPending),
         ),
         textDirection: TextDirection.ltr,
       )..layout();
@@ -101,7 +105,7 @@ class GridDynamicPainter extends CustomPainter {
     for (final spec in puzzle.cells) {
       if (spec.type != CellType.clue) continue;
       final rect = Rect.fromLTWH(spec.col * cellSize, spec.row * cellSize, cellSize, cellSize);
-      _clueRenderer.drawArrows(canvas, rect, spec);
+      _clueRenderer.drawArrows(canvas, rect, spec, tokens);
     }
   }
 
@@ -114,5 +118,6 @@ class GridDynamicPainter extends CustomPainter {
       cellSize != old.cellSize ||
       hoverCell != old.hoverCell ||
       hoverValid != old.hoverValid ||
-      hiddenPendingCell != old.hiddenPendingCell;
+      hiddenPendingCell != old.hiddenPendingCell ||
+      tokens != old.tokens;
 }

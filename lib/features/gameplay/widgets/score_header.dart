@@ -3,7 +3,8 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:kelime_oyunu/core/constants/app_colors.dart';
+import 'package:kelime_oyunu/core/constants/app_typography.dart';
+import 'package:kelime_oyunu/core/theme/app_tokens.dart';
 
 class ScoreHeader extends StatelessWidget {
   const ScoreHeader({
@@ -71,13 +72,11 @@ class _ScorePill extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final tokens = context.tokens;
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-      decoration: BoxDecoration(color: AppColors.success, borderRadius: BorderRadius.circular(20)),
-      child: Text(
-        label,
-        style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 14),
-      ),
+      decoration: BoxDecoration(color: tokens.accent, borderRadius: BorderRadius.circular(20)),
+      child: Text(label, style: AppTypography.pill.copyWith(color: tokens.accentInk)),
     );
   }
 }
@@ -87,10 +86,11 @@ class _BotAvatar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CircleAvatar(
+    final tokens = context.tokens;
+    return CircleAvatar(
       radius: 16,
-      backgroundColor: AppColors.primary,
-      child: Icon(Icons.smart_toy, size: 16, color: Colors.white),
+      backgroundColor: tokens.bot,
+      child: Icon(Icons.smart_toy, size: 16, color: tokens.botInk),
     );
   }
 }

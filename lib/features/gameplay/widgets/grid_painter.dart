@@ -3,6 +3,7 @@
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
+import 'package:kelime_oyunu/core/theme/app_tokens.dart';
 import 'package:kelime_oyunu/data/models/puzzle.dart';
 import 'package:kelime_oyunu/features/gameplay/engine/score_engine.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/grid_dynamic_painter.dart';
@@ -136,6 +137,7 @@ class _GridPainterState extends State<GridPainter> {
     final puzzle = widget.puzzle;
     final cols = puzzle.grid.cols;
     final rows = puzzle.grid.rows;
+    final tokens = context.tokens;
 
     return LayoutBuilder(
       builder: (context, constraints) {
@@ -168,6 +170,7 @@ class _GridPainterState extends State<GridPainter> {
                         suppressedCells: widget.suppressedCells,
                         puzzle: puzzle,
                         cellSize: cell,
+                        tokens: tokens,
                       ),
                     ),
                   ),
@@ -181,6 +184,7 @@ class _GridPainterState extends State<GridPainter> {
                           revealMode: widget.revealMode,
                           puzzle: puzzle,
                           cellSize: cell,
+                          tokens: tokens,
                           hoverCell: _hover.value?.cell,
                           hoverValid: _hover.value?.valid ?? false,
                           hiddenPendingCell: _liftedPending.value,

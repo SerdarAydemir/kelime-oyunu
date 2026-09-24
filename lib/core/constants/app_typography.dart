@@ -1,81 +1,122 @@
 // lib/core/constants/app_typography.dart
+
 import 'package:flutter/material.dart';
 
-/// Text style tokens for the Kelime Oyunu design system.
+/// Type scale of the Kelime Zirvesi design system — `TYPE` in
+/// `docs/design/kz-tokens.js` (single source of truth), plus the body styles
+/// the screen specs in `docs/design/README.md` reference.
 ///
-/// Font families match the assets declared in pubspec.yaml.
-/// Until the TTF files are placed in assets/fonts/, Flutter falls back to
-/// the system sans-serif — layout is unaffected.
+/// Lora (serif) carries titles, scores, level numbers and letters; Nunito Sans
+/// carries everything else. Both are bundled from `assets/fonts/` — no
+/// network font loading in an offline game.
 abstract final class AppTypography {
-  static const String _inter = 'Inter';
-  static const String _nunito = 'Nunito';
+  static const String lora = 'Lora';
+  static const String nunitoSans = 'Nunito Sans';
 
-  // ── Headlines (Nunito Bold) ─────────────────────────────────────────────
-  static const TextStyle headline1 = TextStyle(
-    fontFamily: _nunito,
-    fontSize: 32,
+  // ── Lora ───────────────────────────────────────────────────────────────
+
+  /// Display — ana ekran adı, iki satır (62 / 700, line-height 0.95, ls −1).
+  static const TextStyle display = TextStyle(
+    fontFamily: lora,
+    fontSize: 62,
     fontWeight: FontWeight.w700,
-    letterSpacing: -0.5,
+    height: 0.95,
+    letterSpacing: -1,
   );
 
-  static const TextStyle headline2 = TextStyle(
-    fontFamily: _nunito,
-    fontSize: 24,
+  /// Sonuç başlığı (40 / 700; 48 tek satır, 40 iki satır).
+  static const TextStyle resultTitle = TextStyle(
+    fontFamily: lora,
+    fontSize: 40,
+    fontWeight: FontWeight.w700,
+    height: 1.05,
+  );
+
+  /// Ekran başlığı, skor, bölüm numarası (22 / 700).
+  static const TextStyle screenTitle = TextStyle(
+    fontFamily: lora,
+    fontSize: 22,
     fontWeight: FontWeight.w700,
   );
 
-  static const TextStyle title = TextStyle(
-    fontFamily: _nunito,
-    fontSize: 20,
+  /// Harita düğüm numarası, liste vurgusu (15 / 600).
+  static const TextStyle nodeNumber = TextStyle(
+    fontFamily: lora,
+    fontSize: 15,
+    fontWeight: FontWeight.w600,
+  );
+
+  /// Board letter size (TYPE: "22 hücre"); exposed for painters that scale it.
+  static const double cellLetterSize = 22;
+
+  /// Letter committed on the board — Lora 22 (TYPE: "22 hücre").
+  static const TextStyle cellLetter = TextStyle(
+    fontFamily: lora,
+    fontSize: cellLetterSize,
     fontWeight: FontWeight.w700,
   );
 
-  // ── Body copy (Inter Regular / Bold) ───────────────────────────────────
-  static const TextStyle bodyLarge = TextStyle(
-    fontFamily: _inter,
-    fontSize: 16,
-    fontWeight: FontWeight.w400,
+  /// Letter on a rack tile — Lora 26 (TYPE: "26 taş").
+  static const TextStyle tileLetter = TextStyle(
+    fontFamily: lora,
+    fontSize: 26,
+    fontWeight: FontWeight.w700,
   );
 
-  static const TextStyle bodyMedium = TextStyle(
-    fontFamily: _inter,
-    fontSize: 14,
-    fontWeight: FontWeight.w400,
-  );
+  // ── Nunito Sans ────────────────────────────────────────────────────────
 
-  static const TextStyle bodySmall = TextStyle(
-    fontFamily: _inter,
-    fontSize: 12,
-    fontWeight: FontWeight.w400,
-  );
-
-  static const TextStyle caption = TextStyle(
-    fontFamily: _inter,
-    fontSize: 11,
-    fontWeight: FontWeight.w400,
-    letterSpacing: 0.4,
-  );
-
-  // ── Specialised ────────────────────────────────────────────────────────
-  /// Letter rendered inside a word-search grid cell (CustomPainter).
-  static const TextStyle gridLetter = TextStyle(
-    fontFamily: _nunito,
+  /// Birincil buton (18 / 800).
+  static const TextStyle buttonPrimary = TextStyle(
+    fontFamily: nunitoSans,
     fontSize: 18,
+    fontWeight: FontWeight.w800,
+  );
+
+  /// İkincil buton, liste satırı (15 / 700).
+  static const TextStyle buttonSecondary = TextStyle(
+    fontFamily: nunitoSans,
+    fontSize: 15,
     fontWeight: FontWeight.w700,
   );
 
-  /// CTA button label.
-  static const TextStyle button = TextStyle(
-    fontFamily: _inter,
-    fontSize: 14,
-    fontWeight: FontWeight.w700,
-    letterSpacing: 0.5,
+  /// Pill metni, alt bilgi (13 / 600).
+  static const TextStyle pill = TextStyle(
+    fontFamily: nunitoSans,
+    fontSize: 13,
+    fontWeight: FontWeight.w600,
   );
 
-  /// Coin / star count in the HUD.
-  static const TextStyle hudCounter = TextStyle(
-    fontFamily: _nunito,
-    fontSize: 16,
-    fontWeight: FontWeight.w700,
+  /// İkincil açıklama, etiket (12 / 600).
+  static const TextStyle label = TextStyle(
+    fontFamily: nunitoSans,
+    fontSize: 12,
+    fontWeight: FontWeight.w600,
   );
+
+  /// Büyük harf etiket (11 / 600, letter-spacing 3 px).
+  static const TextStyle overline = TextStyle(
+    fontFamily: nunitoSans,
+    fontSize: 11,
+    fontWeight: FontWeight.w600,
+    letterSpacing: 3,
+  );
+
+  /// Body copy (README: Nunito 400 15 / 1.55).
+  static const TextStyle body = TextStyle(
+    fontFamily: nunitoSans,
+    fontSize: 15,
+    fontWeight: FontWeight.w400,
+    height: 1.55,
+  );
+
+  /// Secondary body / row subtitle (README: Nunito 500 12).
+  static const TextStyle bodySmall = TextStyle(
+    fontFamily: nunitoSans,
+    fontSize: 12,
+    fontWeight: FontWeight.w500,
+  );
+
+  /// Clue text inside a cell (Nunito 600; size is auto-fitted by the
+  /// renderer, so no fontSize here).
+  static const TextStyle clue = TextStyle(fontFamily: nunitoSans, fontWeight: FontWeight.w600);
 }

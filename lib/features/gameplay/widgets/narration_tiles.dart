@@ -3,7 +3,8 @@
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
-import 'package:kelime_oyunu/core/constants/app_colors.dart';
+import 'package:kelime_oyunu/core/constants/app_typography.dart';
+import 'package:kelime_oyunu/core/theme/app_tokens.dart';
 
 // WordFrame (golden frame + shimmer painter) has its own file; re-exported so
 // this import path keeps serving the whole tile set.
@@ -20,21 +21,16 @@ class NarrationSpeedChip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final tokens = context.tokens;
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-      decoration: BoxDecoration(
-        color: Colors.black.withValues(alpha: 0.55),
-        borderRadius: BorderRadius.circular(14),
-      ),
-      child: const Row(
+      decoration: BoxDecoration(color: tokens.dim, borderRadius: BorderRadius.circular(14)),
+      child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Icon(Icons.fast_forward, size: 16, color: Colors.white),
-          SizedBox(width: 4),
-          Text(
-            '2×',
-            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 13),
-          ),
+          Icon(Icons.fast_forward, size: 16, color: tokens.solidText),
+          const SizedBox(width: 4),
+          Text('2×', style: AppTypography.pill.copyWith(color: tokens.solidText)),
         ],
       ),
     );
@@ -92,6 +88,7 @@ class FlyingTile extends StatelessWidget {
     final opacity = (fadeIn * fadeOut).clamp(0.0, 1.0);
     // Slight overshoot in scale mid-flight, settling to 1 on arrival.
     final scale = 1.0 + 0.12 * math.sin(phase * math.pi);
+    final tokens = context.tokens;
     return Opacity(
       opacity: opacity,
       child: Transform.scale(
@@ -100,20 +97,14 @@ class FlyingTile extends StatelessWidget {
           width: size,
           height: size,
           decoration: BoxDecoration(
-            color: AppColors.rackTileBg,
+            color: tokens.tile,
             borderRadius: BorderRadius.circular(size * 0.14),
-            boxShadow: const [
-              BoxShadow(color: Color(0x40000000), blurRadius: 8, offset: Offset(0, 4)),
-            ],
+            boxShadow: [BoxShadow(color: tokens.dim, blurRadius: 8, offset: const Offset(0, 4))],
           ),
           alignment: Alignment.center,
           child: Text(
             letter,
-            style: TextStyle(
-              fontSize: size * 0.5,
-              fontWeight: FontWeight.bold,
-              color: Colors.black87,
-            ),
+            style: AppTypography.tileLetter.copyWith(fontSize: size * 0.5, color: tokens.tileInk),
           ),
         ),
       ),
@@ -133,6 +124,7 @@ class GhostLetterTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final tokens = context.tokens;
     return Opacity(
       opacity: fade.clamp(0.0, 1.0),
       child: Container(
@@ -140,18 +132,14 @@ class GhostLetterTile extends StatelessWidget {
         height: size,
         margin: EdgeInsets.all(size * 0.08),
         decoration: BoxDecoration(
-          color: AppColors.rackTileBg,
+          color: tokens.tile,
           borderRadius: BorderRadius.circular(size * 0.12),
-          border: Border.all(color: AppColors.error, width: 1.5),
+          border: Border.all(color: tokens.error, width: 1.5),
         ),
         alignment: Alignment.center,
         child: Text(
           letter,
-          style: TextStyle(
-            fontSize: size * 0.42,
-            fontWeight: FontWeight.bold,
-            color: Colors.black87,
-          ),
+          style: AppTypography.tileLetter.copyWith(fontSize: size * 0.42, color: tokens.tileInk),
         ),
       ),
     );
@@ -167,6 +155,7 @@ class NarrationBadge extends StatelessWidget {
     required this.text,
     required this.color,
     required this.local,
+    this.ink,
     this.big = false,
     this.hold = holdEnds,
     super.key,
@@ -174,6 +163,10 @@ class NarrationBadge extends StatelessWidget {
 
   final String text;
   final Color color;
+
+  /// Text colour on [color]; defaults to the theme's `solidText` (cream),
+  /// which reads on the success / error fills. Amber badges pass `accentInk`.
+  final Color? ink;
   final double local;
 
   /// The rack-empty bonus reads as a headline — a larger pill at grid centre.
@@ -196,6 +189,7 @@ class NarrationBadge extends StatelessWidget {
     // counter; no vertical drift — the layer owns the travel path.
     final flight = local <= hold ? 0.0 : (local - hold) / (1 - hold);
     final scale = ((big ? 0.7 : 0.6) + 0.4 * appear) * (1.0 - 0.35 * flight);
+    final tokens = context.tokens;
     return Align(
       alignment: big ? Alignment.center : Alignment.topCenter,
       child: Transform.translate(
@@ -209,15 +203,14 @@ class NarrationBadge extends StatelessWidget {
               decoration: BoxDecoration(
                 color: color,
                 borderRadius: BorderRadius.circular(big ? 16 : 12),
-                boxShadow: const [
-                  BoxShadow(color: Color(0x40000000), blurRadius: 4, offset: Offset(0, 2)),
+                boxShadow: [
+                  BoxShadow(color: tokens.dim, blurRadius: 4, offset: const Offset(0, 2)),
                 ],
               ),
               child: Text(
                 text,
-                style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
+                style: AppTypography.buttonSecondary.copyWith(
+                  color: ink ?? tokens.solidText,
                   fontSize: big ? 22 : 15,
                 ),
               ),

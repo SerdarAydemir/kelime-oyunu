@@ -2,16 +2,17 @@
 
 import 'package:flutter/material.dart';
 
-import 'package:kelime_oyunu/core/constants/app_colors.dart';
 import 'package:kelime_oyunu/core/constants/app_dimensions.dart';
 import 'package:kelime_oyunu/core/constants/app_typography.dart';
+import 'package:kelime_oyunu/core/theme/app_tokens.dart';
 import 'package:kelime_oyunu/features/levels/cubit/level_select_state.dart';
 
 /// One square on the level grid.
 ///
-/// Three looks, one per [LevelStatus]: a won level is green with a tick, the
-/// frontier is the accent-ringed call to action, and a locked level is grey
-/// with a padlock and no tap target at all. Under the QA unlock override
+/// Three looks, one per [LevelStatus]: a won level is a `board` card with a
+/// tick and an amber ring (the map's "done" node), the frontier is the solid
+/// amber call to action, and a locked level is a muted `surface` square with a
+/// padlock and no tap target at all. Under the QA unlock override
 /// ([showNumberWhenLocked]) a locked tile keeps its grey look but shows its
 /// number instead of the padlock, so testers can aim for a specific level.
 class LevelTile extends StatelessWidget {
@@ -36,16 +37,16 @@ class LevelTile extends StatelessWidget {
 
   bool get _showsPadlock => _locked && !showNumberWhenLocked;
 
-  Color get _background => switch (status) {
-    LevelStatus.completed => AppColors.gridCellFound,
-    LevelStatus.current => AppColors.primary,
-    LevelStatus.locked => AppColors.gridCellLocked,
+  Color _background(AppTokens t) => switch (status) {
+    LevelStatus.completed => t.board,
+    LevelStatus.current => t.accent,
+    LevelStatus.locked => t.surface,
   };
 
-  Color get _foreground => switch (status) {
-    LevelStatus.completed => AppColors.primaryDark,
-    LevelStatus.current => AppColors.gridCellNormal,
-    LevelStatus.locked => AppColors.gridCellNormal,
+  Color _foreground(AppTokens t) => switch (status) {
+    LevelStatus.completed => t.ink,
+    LevelStatus.current => t.accentInk,
+    LevelStatus.locked => t.faint,
   };
 
   String get _semanticLabel => switch (status) {
@@ -56,42 +57,34 @@ class LevelTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final tokens = context.tokens;
+    final foreground = _foreground(tokens);
     return Semantics(
       button: onTap != null,
       enabled: onTap != null,
       label: _semanticLabel,
       child: Material(
-        color: _background,
-        // shape carries its own radius — Material forbids passing both. The
-        // frontier wears the accent ring so the eye lands on it first.
+        color: _background(tokens),
+        // shape carries its own radius — Material forbids passing both. Done
+        // nodes wear the 2 px amber ring of the climb map's "done" state.
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(AppDimensions.radiusM),
-          side: status == LevelStatus.current
-              ? const BorderSide(color: AppColors.accent, width: 3)
+          borderRadius: BorderRadius.circular(AppDimensions.radiusTile),
+          side: status == LevelStatus.completed
+              ? BorderSide(color: tokens.accent, width: 2)
               : BorderSide.none,
         ),
         child: InkWell(
           onTap: onTap,
-          borderRadius: BorderRadius.circular(AppDimensions.radiusM),
+          borderRadius: BorderRadius.circular(AppDimensions.radiusTile),
           child: Center(
             child: _showsPadlock
-                ? Icon(Icons.lock, size: AppDimensions.iconS, color: _foreground)
+                ? Icon(Icons.lock, size: AppDimensions.iconS, color: foreground)
                 : Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      Text(
-                        '$levelId',
-                        style: AppTypography.bodyLarge.copyWith(
-                          color: _foreground,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
+                      Text('$levelId', style: AppTypography.nodeNumber.copyWith(color: foreground)),
                       if (status == LevelStatus.completed)
-                        const Icon(
-                          Icons.check,
-                          size: AppDimensions.iconS,
-                          color: AppColors.success,
-                        ),
+                        Icon(Icons.check, size: AppDimensions.iconS, color: tokens.success),
                     ],
                   ),
           ),

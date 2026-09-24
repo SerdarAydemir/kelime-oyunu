@@ -27,7 +27,7 @@ class LevelTopBar extends StatelessWidget {
       child: Stack(
         alignment: Alignment.center,
         children: [
-          Text('Bölüm $levelId / $kLastLevelId', style: AppTypography.caption),
+          Text('Bölüm $levelId / $kLastLevelId', style: AppTypography.pill),
           Align(
             alignment: Alignment.centerLeft,
             child: IconButton(

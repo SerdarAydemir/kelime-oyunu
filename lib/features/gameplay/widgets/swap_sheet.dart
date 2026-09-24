@@ -1,7 +1,8 @@
 // lib/features/gameplay/widgets/swap_sheet.dart
 
 import 'package:flutter/material.dart';
-import 'package:kelime_oyunu/core/constants/app_colors.dart';
+import 'package:kelime_oyunu/core/constants/app_typography.dart';
+import 'package:kelime_oyunu/core/theme/app_tokens.dart';
 import 'package:kelime_oyunu/features/gameplay/engine/rack_manager.dart';
 
 /// What the player chose in the swap sheet: which tiles and how to pay.
@@ -41,6 +42,7 @@ class _SwapSheetState extends State<SwapSheet> {
   @override
   Widget build(BuildContext context) {
     final hasSelection = _selected.isNotEmpty;
+    final tokens = context.tokens;
     return SafeArea(
       child: Padding(
         padding: const EdgeInsets.all(24),
@@ -77,8 +79,8 @@ class _SwapSheetState extends State<SwapSheet> {
                     icon: const Icon(Icons.play_arrow),
                     label: const Text('Şimdi Değiştir'),
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: AppColors.accent,
-                      foregroundColor: Colors.white,
+                      backgroundColor: tokens.accent,
+                      foregroundColor: tokens.accentInk,
                     ),
                   ),
                 ),
@@ -87,8 +89,8 @@ class _SwapSheetState extends State<SwapSheet> {
                   child: ElevatedButton(
                     onPressed: hasSelection ? () => _finish(false) : null,
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: AppColors.success,
-                      foregroundColor: Colors.white,
+                      backgroundColor: tokens.solid,
+                      foregroundColor: tokens.solidText,
                     ),
                     child: const Text('Değiştir ve Onayla'),
                   ),
@@ -96,11 +98,11 @@ class _SwapSheetState extends State<SwapSheet> {
               ],
             ),
             const SizedBox(height: 8),
-            const Text(
+            Text(
               'Şimdi Değiştir: reklam izle, sıra sende kalsın. '
               'Değiştir ve Onayla: reklamsız, sıra rakibe geçer.',
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 12, color: Colors.grey),
+              style: AppTypography.bodySmall.copyWith(color: tokens.sheetMuted),
             ),
           ],
         ),
@@ -119,21 +121,19 @@ class _SelectableTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final tokens = context.tokens;
     return GestureDetector(
       onTap: onTap,
       child: Container(
         width: 48,
         height: 48,
         decoration: BoxDecoration(
-          color: AppColors.rackTileBg,
+          color: selected ? tokens.accent : tokens.sheetCard,
           borderRadius: BorderRadius.circular(6),
-          border: selected ? Border.all(color: AppColors.accent, width: 2.5) : null,
+          border: selected ? Border.all(color: tokens.arrow, width: 2.5) : null,
         ),
         alignment: Alignment.center,
-        child: Text(
-          letter,
-          style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.black87),
-        ),
+        child: Text(letter, style: AppTypography.tileLetter.copyWith(color: tokens.tileInk)),
       ),
     );
   }

@@ -3,7 +3,7 @@
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
-import 'package:kelime_oyunu/core/constants/app_colors.dart';
+import 'package:kelime_oyunu/core/theme/app_tokens.dart';
 
 /// The word-completion celebration: a golden cell-aligned rounded frame with a
 /// bright shimmer travelling around its border while it holds (the "+N" badge
@@ -27,7 +27,11 @@ class WordFrame extends StatelessWidget {
           scale: scale,
           child: CustomPaint(
             // Two full laps of shimmer over the celebration.
-            painter: _GoldenFramePainter(sweep: local * 2 * 2 * math.pi, alpha: alpha),
+            painter: _GoldenFramePainter(
+              sweep: local * 2 * 2 * math.pi,
+              alpha: alpha,
+              tokens: context.tokens,
+            ),
             child: const SizedBox.expand(),
           ),
         ),
@@ -39,10 +43,11 @@ class WordFrame extends StatelessWidget {
 /// Paints the golden rounded border with a travelling highlight (a sweep
 /// gradient rotated by [sweep]) plus a soft outer glow.
 class _GoldenFramePainter extends CustomPainter {
-  _GoldenFramePainter({required this.sweep, required this.alpha});
+  _GoldenFramePainter({required this.sweep, required this.alpha, required this.tokens});
 
   final double sweep;
   final double alpha;
+  final AppTokens tokens;
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -56,7 +61,7 @@ class _GoldenFramePainter extends CustomPainter {
       Paint()
         ..style = PaintingStyle.stroke
         ..strokeWidth = 6
-        ..color = AppColors.coinGold.withValues(alpha: 0.35 * alpha)
+        ..color = tokens.accent.withValues(alpha: 0.35 * alpha)
         ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 6),
     );
     // Base golden border.
@@ -65,7 +70,7 @@ class _GoldenFramePainter extends CustomPainter {
       Paint()
         ..style = PaintingStyle.stroke
         ..strokeWidth = 2.5
-        ..color = AppColors.coinGold,
+        ..color = tokens.accent,
     );
     // Travelling shimmer: a bright arc sweeping around the border.
     canvas.drawRRect(
@@ -75,11 +80,11 @@ class _GoldenFramePainter extends CustomPainter {
         ..strokeWidth = 3.5
         ..shader = SweepGradient(
           transform: GradientRotation(sweep),
-          colors: const [
-            Color(0x00FFFFFF),
-            AppColors.shimmerHighlight,
-            Color(0x00FFFFFF),
-            Color(0x00FFFFFF),
+          colors: [
+            tokens.cellLetter.withValues(alpha: 0),
+            tokens.cellLetter,
+            tokens.cellLetter.withValues(alpha: 0),
+            tokens.cellLetter.withValues(alpha: 0),
           ],
           stops: const [0.0, 0.08, 0.2, 1.0],
         ).createShader(Offset.zero & size),
@@ -87,5 +92,6 @@ class _GoldenFramePainter extends CustomPainter {
   }
 
   @override
-  bool shouldRepaint(covariant _GoldenFramePainter old) => sweep != old.sweep || alpha != old.alpha;
+  bool shouldRepaint(covariant _GoldenFramePainter old) =>
+      sweep != old.sweep || alpha != old.alpha || tokens != old.tokens;
 }

@@ -1,7 +1,8 @@
 // lib/features/gameplay/widgets/grid_static_painter.dart
 
 import 'package:flutter/material.dart';
-import 'package:kelime_oyunu/core/constants/app_colors.dart';
+import 'package:kelime_oyunu/core/constants/app_typography.dart';
+import 'package:kelime_oyunu/core/theme/app_tokens.dart';
 import 'package:kelime_oyunu/data/models/puzzle.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/clue_renderer.dart';
 
@@ -15,6 +16,7 @@ class GridStaticPainter extends CustomPainter {
     required this.botPlacedCells,
     required this.puzzle,
     required this.cellSize,
+    required this.tokens,
     this.suppressedCells = const {},
   }) : _cellMap = {for (final c in puzzle.cells) WordCell(row: c.row, col: c.col): c},
        _revealedCells = {
@@ -30,6 +32,9 @@ class GridStaticPainter extends CustomPainter {
   final Set<WordCell> suppressedCells;
   final PuzzleData puzzle;
   final double cellSize;
+
+  /// Active theme palette (the painter has no BuildContext of its own).
+  final AppTokens tokens;
 
   final Map<WordCell, CellSpec> _cellMap;
   final Set<WordCell> _revealedCells;
@@ -52,7 +57,7 @@ class GridStaticPainter extends CustomPainter {
         } else if (isBlank) {
           _drawBlankCell(canvas, rect);
         } else if (spec.type == CellType.clue) {
-          _clueRenderer.drawCell(canvas, rect, spec);
+          _clueRenderer.drawCell(canvas, rect, spec, tokens);
         } else {
           _drawLetterCell(canvas, rect, cell);
         }
@@ -62,18 +67,18 @@ class GridStaticPainter extends CustomPainter {
   }
 
   void _drawBlankCell(Canvas canvas, Rect rect) {
-    canvas.drawRect(rect, Paint()..color = AppColors.gridCellLocked);
+    canvas.drawRect(rect, Paint()..color = tokens.surface);
   }
 
-  // Decorative top-left corner: a green brand tile with a centred "K".
-  // Painter-only placeholder for a real logo asset later.
+  // Decorative top-left corner: the brand tile on `bgFlat` with a centred "K".
+  // Painter-only placeholder until the logo widget lands (design step 5).
   void _drawBrandCorner(Canvas canvas, Rect rect) {
-    canvas.drawRect(rect, Paint()..color = AppColors.brandCorner);
-    _paintCenteredLetter(canvas, rect, 'K', Colors.white, fontSize: cellSize * 0.5);
+    canvas.drawRect(rect, Paint()..color = tokens.bgFlat);
+    _paintCenteredLetter(canvas, rect, 'K', tokens.logoMtn, fontSize: cellSize * 0.5);
   }
 
   void _drawLetterCell(Canvas canvas, Rect rect, WordCell cell) {
-    canvas.drawRect(rect, Paint()..color = AppColors.gridCellNormal);
+    canvas.drawRect(rect, Paint()..color = tokens.cellLetter);
     // Suppressed: a narration tile is still flying here — draw the cell empty
     // so the glyph pops in exactly when the tile lands (no double image).
     final letter = suppressedCells.contains(cell) ? null : board[cell];
@@ -82,13 +87,15 @@ class GridStaticPainter extends CustomPainter {
       // The cell stays empty in [board], so it remains placeable.
       if (_revealedCells.contains(cell)) {
         final ghost = _cellMap[cell]?.solution;
-        if (ghost != null) _paintCenteredLetter(canvas, rect, ghost, AppColors.ghost);
+        if (ghost != null) {
+          _paintCenteredLetter(canvas, rect, ghost, tokens.ink.withValues(alpha: 0.3));
+        }
       }
       return;
     }
     // Committed letters: bot blue, player black. Revealed cells are never
     // committed in the ghost model, so there is no locked colour here.
-    final color = botPlacedCells.contains(cell) ? AppColors.botLetter : Colors.black;
+    final color = botPlacedCells.contains(cell) ? tokens.inkBot : tokens.ink;
     _paintCenteredLetter(canvas, rect, letter, color);
   }
 
@@ -99,12 +106,12 @@ class GridStaticPainter extends CustomPainter {
     Rect rect,
     String text,
     Color color, {
-    double fontSize = 20,
+    double fontSize = AppTypography.cellLetterSize,
   }) {
     final tp = TextPainter(
       text: TextSpan(
         text: text,
-        style: TextStyle(fontSize: fontSize, fontWeight: FontWeight.bold, color: color),
+        style: AppTypography.cellLetter.copyWith(fontSize: fontSize, color: color),
       ),
       textDirection: TextDirection.ltr,
     )..layout();
@@ -116,7 +123,7 @@ class GridStaticPainter extends CustomPainter {
 
   void _drawGridLines(Canvas canvas, Size size) {
     final paint = Paint()
-      ..color = AppColors.gridLine
+      ..color = tokens.board
       ..strokeWidth = 0.5;
     for (var col = 0; col <= puzzle.grid.cols; col++) {
       final x = col * cellSize;
@@ -134,5 +141,6 @@ class GridStaticPainter extends CustomPainter {
       revealedWordIds != old.revealedWordIds ||
       botPlacedCells != old.botPlacedCells ||
       suppressedCells != old.suppressedCells ||
-      cellSize != old.cellSize;
+      cellSize != old.cellSize ||
+      tokens != old.tokens;
 }

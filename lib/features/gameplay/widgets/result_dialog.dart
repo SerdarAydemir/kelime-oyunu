@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 
-import 'package:kelime_oyunu/core/constants/app_colors.dart';
+import 'package:kelime_oyunu/core/theme/app_tokens.dart';
 import 'package:kelime_oyunu/core/constants/app_dimensions.dart';
 import 'package:kelime_oyunu/core/constants/app_typography.dart';
 import 'package:kelime_oyunu/core/constants/game_constants.dart';
@@ -58,12 +58,13 @@ class ResultDialog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final tokens = context.tokens;
     final (title, titleColor) = switch (status) {
-      GameStatus.won => ('Kazandın! 🎉', AppColors.success),
-      GameStatus.lost => ('Kaybettin', AppColors.error),
-      GameStatus.tie => ('Berabere', AppColors.warning),
+      GameStatus.won => ('Kazandın! 🎉', tokens.success),
+      GameStatus.lost => ('Kaybettin', tokens.error),
+      GameStatus.tie => ('Berabere', tokens.accent),
       // Unreachable: the dialog is only shown for a finished match.
-      GameStatus.playing => ('', AppColors.primary),
+      GameStatus.playing => ('', tokens.text),
     };
     final scoreDiff = (playerScore - botScore).abs();
 
@@ -75,24 +76,24 @@ class ResultDialog extends StatelessWidget {
         title: Text(
           title,
           textAlign: TextAlign.center,
-          style: AppTypography.headline2.copyWith(color: titleColor),
+          style: AppTypography.resultTitle.copyWith(color: titleColor),
         ),
         content: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
             Text('Bölüm $levelId / $kLastLevelId', style: AppTypography.bodySmall),
-            const SizedBox(height: AppDimensions.spacingM),
+            const SizedBox(height: AppDimensions.space16),
             _ScoreRow(label: 'Sen', score: playerScore),
-            const SizedBox(height: AppDimensions.spacingXs),
+            const SizedBox(height: AppDimensions.space4),
             _ScoreRow(label: botName, score: botScore),
-            const SizedBox(height: AppDimensions.spacingS),
-            Text('Fark: $scoreDiff', style: AppTypography.bodyMedium),
+            const SizedBox(height: AppDimensions.space8),
+            Text('Fark: $scoreDiff', style: AppTypography.body),
             if (_finishedAll) ...[
-              const SizedBox(height: AppDimensions.spacingM),
+              const SizedBox(height: AppDimensions.space16),
               const Text(
                 'Tüm bölümleri bitirdin! 🎉',
                 textAlign: TextAlign.center,
-                style: AppTypography.bodyLarge,
+                style: AppTypography.body,
               ),
             ],
           ],
@@ -119,8 +120,8 @@ class _ScoreRow extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text(label, style: AppTypography.bodyMedium),
-        Text('$score', style: AppTypography.title),
+        Text(label, style: AppTypography.body),
+        Text('$score', style: AppTypography.screenTitle),
       ],
     );
   }
