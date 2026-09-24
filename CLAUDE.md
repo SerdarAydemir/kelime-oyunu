@@ -36,7 +36,10 @@ Her yeni görev geldiğinde şu sırayı bozmadan uygula:
 **Yeni paket eklemeden önce gerekçe sun, onay bekle.** (`skills.md §2`)
 
 **Android build:** AGP 9 + built-in Kotlin (`android.builtInKotlin=true`);
-`app/build.gradle.kts` `kotlin-android` uygulamaz.
+`app/build.gradle.kts` `kotlin-android` uygulamaz. Release R8 **full mode**:
+yansımayla oluşturulan sınıfların kurucuları `android/app/proguard-rules.pro`'da
+`{ <init>(); }` ile korunur (Room/WorkManager çökmesi — `docs/HANDOFF_DESIGN_B.md`).
+Release'i her SDK ekleyişinde emülatörde aç, `build/app/outputs/mapping/release/usage.txt`'e bak.
 
 **Durum yönetimi:** Gameplay → `Bloc` (event-driven). Diğer her şey → `Cubit`. (`skills.md §3`, `architecture.md §3`)
 

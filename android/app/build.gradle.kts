@@ -30,6 +30,15 @@ android {
             // TODO: Add your own signing config for the release build.
             // Signing with the debug keys for now, so `flutter run --release` works.
             signingConfig = signingConfigs.getByName("debug")
+            // Flutter already minifies + shrinks release builds; the explicit
+            // flags make that visible, and proguard-rules.pro carries the keep
+            // rules R8 full mode needs (Room/WorkManager reflective <init>).
+            isMinifyEnabled = true
+            isShrinkResources = true
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro",
+            )
         }
     }
 }

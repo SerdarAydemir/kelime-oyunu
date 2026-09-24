@@ -119,7 +119,8 @@ sorun, `flutter test` yeşil (sonda 239 test). Oturum A ve A2 için
 - `flutter analyze` 0 sorun; `flutter test` 239/239; `lib/` altında 300 satır
   üstü dosya yok.
 - **Emülatörde bakılmadı.** Aşağıdaki liste bunun için.
-- `flutter build apk` çalıştırılmadı.
+- `flutter build apk --release` çalıştırıldı ve emülatörde açıldı (aşağıdaki
+  R8 düzeltmesinden sonra); ekranlar hâlâ gözle kontrol edilmedi.
 
 ## Emülatörde bakılacaklar (her biri koyu + açık temada)
 
@@ -142,6 +143,50 @@ varsayılan) ya da geçici olarak `SettingsCubit.setThemeMode` çağır.
 | 10 | Reveal modu | Lamba | Lamba dolu amber; ipucu olmayan hücreye dokununca mod kapanır; hücre karartması `dim` |
 | 11 | Sonuç dialogu | Bölümü bitir | Token renkleri (henüz README "Result screens" tasarımı değil — Oturum C) |
 | 12 | Tablet / küçük telefon | 600 dp+ ve 360 dp | Tahta `BoardFrame` ile ortalanır, hücre 49–56 dp beklenir; küçük ekranda rack + bar sığmalı |
+
+## Release build açılış çökmesi (2026-09-24, düzeltildi)
+
+**Belirti.** Debug açılıyor, release APK emülatörde `MainActivity` gelmeden
+ölüyordu. `adb logcat`:
+
+```
+FATAL EXCEPTION: main
+java.lang.RuntimeException: Unable to get provider androidx.startup.InitializationProvider
+Caused by: java.lang.RuntimeException: Failed to create an instance of androidx.work.impl.WorkDatabase
+    at androidx.work.WorkManagerInitializer.b(...)
+```
+
+**Kök neden.** WorkManager (google_mobile_ads / Firebase bağımlılığı) süreç
+başında `androidx.startup` ile başlar ve Room `WorkDatabase_Impl`'i
+yansımayla, parametresiz kurucuyla oluşturur. Projedeki `room-runtime 2.2.5`
+tüketici kuralı yalnız `-keep class * extends androidx.room.RoomDatabase`;
+R8 **full mode** (AGP 8+/9 varsayılanı) sınıf-düzeyi keep ile artık
+varsayılan kurucuyu korumuyor. `build/app/outputs/mapping/release/usage.txt`
+bunu doğruladı: `androidx.work.impl.WorkDatabase_Impl: public void <init>()`
+silinenler listesindeydi. Hive adapter'ları (pure Dart), Firebase (henüz init
+edilmiyor), flutter_svg (yok) ve splash/ikon kaynakları ilgisiz çıktı.
+
+**Düzeltme.** `android/app/proguard-rules.pro` (yeni):
+
+```
+-keep class * extends androidx.room.RoomDatabase { <init>(); }
+-keep class androidx.work.impl.WorkDatabase_Impl { *; }
+```
+
+`android/app/build.gradle.kts` release'de `isMinifyEnabled`,
+`isShrinkResources` ve `proguardFiles(getDefaultProguardFile(
+"proguard-android-optimize.txt"), "proguard-rules.pro")` açıkça bağlandı
+(Flutter'ın Gradle eklentisi `proguard-rules.pro` varsa zaten ekler; açık
+bağlantı niyet belgesi). Doğrulama: `flutter build apk --release`,
+`adb install -r`, `adb shell monkey -p com.kelimeoyunu.kelime_oyunu 1`,
+`adb logcat -d` → FATAL yok, `ActivityTaskManager: Displayed
+com.kelimeoyunu.kelime_oyunu/.MainActivity +910ms`, süreç ayakta; yeni
+mapping'de `WorkDatabase_Impl.<init>()` korunuyor.
+
+**İleride.** Gerçek AdMob / Firebase / RevenueCat eklenince release'i her
+seferinde emülatörde açıp `usage.txt`'e bakın; yansımayla oluşturulan her
+sınıf (Room `_Impl`, Firebase component registrar'ları) aynı sınıf tuzağa
+düşebilir.
 
 ## Açık kalanlar
 
