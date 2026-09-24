@@ -52,11 +52,20 @@ Future<void> showMatchResultDialog(
   );
 }
 
-/// Opens the read-only clue sheet for [clues] (free; just reveals the text).
-void showClueSheet(BuildContext context, List<ClueSpec> clues) {
+/// Opens the read-only clue sheet for the clue cell [spec] (free; just
+/// reveals the text). Word lengths are looked up in [puzzle] for the
+/// "SAĞA · 3 HARF" headings.
+void showClueSheet(BuildContext context, CellSpec spec, PuzzleData puzzle) {
+  final lengths = {for (final w in puzzle.words) w.id: w.length};
   showModalBottomSheet<void>(
     context: context,
-    builder: (_) => ClueSheet(clues: clues),
+    builder: (_) => ClueSheet(
+      cell: WordCell(row: spec.row, col: spec.col),
+      entries: [
+        for (final clue in spec.clues)
+          (clue: clue, length: lengths[clue.wordId] ?? clue.text.length),
+      ],
+    ),
   );
 }
 
@@ -101,9 +110,10 @@ Future<SwapChoice?> showSwapSheet(
   BuildContext context, {
   required List<RackTile> rack,
   required int quotaRemaining,
+  bool showAdLabel = false,
 }) {
   return showModalBottomSheet<SwapChoice>(
     context: context,
-    builder: (_) => SwapSheet(rack: rack, quotaRemaining: quotaRemaining),
+    builder: (_) => SwapSheet(rack: rack, quotaRemaining: quotaRemaining, showAdLabel: showAdLabel),
   );
 }

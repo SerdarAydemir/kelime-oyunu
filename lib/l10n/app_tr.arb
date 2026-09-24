@@ -255,5 +255,36 @@
     }
   },
   "botDescription": "Zirveye giden yolda rakibin.",
-  "levelTag": "BÖLÜM"
+  "levelTag": "BÖLÜM",
+  "clueCellPosition": "{row}. satır · {col}. sütun",
+  "@clueCellPosition": {
+    "placeholders": {
+      "row": {
+        "type": "int"
+      },
+      "col": {
+        "type": "int"
+      }
+    }
+  },
+  "clueCellPositionDouble": "{row}. satır · {col}. sütun — bu hücre iki kelimeye açılıyor",
+  "@clueCellPositionDouble": {
+    "placeholders": {
+      "row": {
+        "type": "int"
+      },
+      "col": {
+        "type": "int"
+      }
+    }
+  },
+  "swapSelected": "{n} harf seçildi",
+  "@swapSelected": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "swapNone": "Henüz harf seçilmedi"
 }

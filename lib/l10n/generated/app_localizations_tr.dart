@@ -472,4 +472,22 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get levelTag => 'BÖLÜM';
+
+  @override
+  String clueCellPosition(int row, int col) {
+    return '$row. satır · $col. sütun';
+  }
+
+  @override
+  String clueCellPositionDouble(int row, int col) {
+    return '$row. satır · $col. sütun — bu hücre iki kelimeye açılıyor';
+  }
+
+  @override
+  String swapSelected(int n) {
+    return '$n harf seçildi';
+  }
+
+  @override
+  String get swapNone => 'Henüz harf seçilmedi';
 }

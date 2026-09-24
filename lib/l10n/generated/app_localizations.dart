@@ -955,6 +955,30 @@ abstract class AppLocalizations {
   /// In tr, this message translates to:
   /// **'BÖLÜM'**
   String get levelTag;
+
+  /// No description provided for @clueCellPosition.
+  ///
+  /// In tr, this message translates to:
+  /// **'{row}. satır · {col}. sütun'**
+  String clueCellPosition(int row, int col);
+
+  /// No description provided for @clueCellPositionDouble.
+  ///
+  /// In tr, this message translates to:
+  /// **'{row}. satır · {col}. sütun — bu hücre iki kelimeye açılıyor'**
+  String clueCellPositionDouble(int row, int col);
+
+  /// No description provided for @swapSelected.
+  ///
+  /// In tr, this message translates to:
+  /// **'{n} harf seçildi'**
+  String swapSelected(int n);
+
+  /// No description provided for @swapNone.
+  ///
+  /// In tr, this message translates to:
+  /// **'Henüz harf seçilmedi'**
+  String get swapNone;
 }
 
 class _AppLocalizationsDelegate

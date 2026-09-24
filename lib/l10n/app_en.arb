@@ -255,5 +255,36 @@
     }
   },
   "botDescription": "Your opponent on the way to the summit.",
-  "levelTag": "LEVEL"
+  "levelTag": "LEVEL",
+  "clueCellPosition": "Row {row} · column {col}",
+  "@clueCellPosition": {
+    "placeholders": {
+      "row": {
+        "type": "int"
+      },
+      "col": {
+        "type": "int"
+      }
+    }
+  },
+  "clueCellPositionDouble": "Row {row} · column {col} — this cell opens two words",
+  "@clueCellPositionDouble": {
+    "placeholders": {
+      "row": {
+        "type": "int"
+      },
+      "col": {
+        "type": "int"
+      }
+    }
+  },
+  "swapSelected": "{n} letters selected",
+  "@swapSelected": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "swapNone": "No letters selected yet"
 }

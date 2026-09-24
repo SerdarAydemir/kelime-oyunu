@@ -49,7 +49,7 @@ mixin _GameInteraction on State<GameActiveBody> {
     // A clue cell holds no rack action — tapping it opens the full clue text
     // (free read). Works for single and double-clue cells alike.
     if (clueSpec != null && clueSpec.clues.isNotEmpty) {
-      showClueSheet(context, clueSpec.clues);
+      showClueSheet(context, clueSpec, state.puzzle);
       return;
     }
     final bloc = context.read<GameBloc>();
@@ -96,6 +96,7 @@ mixin _GameInteraction on State<GameActiveBody> {
       context,
       rack: state.rack,
       quotaRemaining: state.swapQuotaRemaining,
+      showAdLabel: showAdLabelsFor(widget.puzzleId),
     );
     if (!mounted || choice == null) return;
     // TODO: gate the viaAd path behind a real rewarded ad (AdService phase).

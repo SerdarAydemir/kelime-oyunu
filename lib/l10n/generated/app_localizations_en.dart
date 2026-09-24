@@ -471,4 +471,22 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get levelTag => 'LEVEL';
+
+  @override
+  String clueCellPosition(int row, int col) {
+    return 'Row $row · column $col';
+  }
+
+  @override
+  String clueCellPositionDouble(int row, int col) {
+    return 'Row $row · column $col — this cell opens two words';
+  }
+
+  @override
+  String swapSelected(int n) {
+    return '$n letters selected';
+  }
+
+  @override
+  String get swapNone => 'No letters selected yet';
 }
