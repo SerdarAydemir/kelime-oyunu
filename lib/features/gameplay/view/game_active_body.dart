@@ -14,6 +14,7 @@ import 'package:kelime_oyunu/features/gameplay/engine/bot_engine.dart';
 import 'package:kelime_oyunu/features/gameplay/engine/rack_manager.dart';
 import 'package:kelime_oyunu/features/gameplay/view/game_active_queries.dart';
 import 'package:kelime_oyunu/features/gameplay/view/game_dialogs.dart';
+import 'package:kelime_oyunu/features/result/view/result_screen.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/action_bar.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/ad_label.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/board_frame.dart';
@@ -110,31 +111,20 @@ class _GameActiveBodyState extends State<GameActiveBody>
     super.dispose();
   }
 
-  /// The narration queue emptied: release a deferred end-of-match dialog.
+  /// The narration queue emptied: leave for the full-screen result once the
+  /// final move has finished narrating (the player must see it play out).
+  /// The bloc has already persisted the outcome; replay / next / map are
+  /// plain routes from there, so no callbacks cross the navigation.
   void _onNarrationDrained() {
     if (!_finishPending || _resultShown || !mounted) return;
     _resultShown = true;
-    _showResultDialog(context, state);
-  }
-
-  /// Shows the end-of-match modal once the final move has finished narrating.
-  /// The bloc and router are captured from [context] *before* the dialog opens
-  /// (see [showMatchResultDialog] for why).
-  Future<void> _showResultDialog(BuildContext context, GameActive state) {
-    final bloc = context.read<GameBloc>();
-    final router = GoRouter.of(context);
-    return showMatchResultDialog(
-      context,
-      state: state,
-      botName: widget.botProfile.name,
-      levelId: widget.puzzleId,
-      // Restart the same level: reloading passes through GameLoading, which
-      // unmounts the grid and resets the InteractiveViewer zoom for free.
-      onReplay: () => bloc.add(PuzzleLoadRequested(widget.puzzleId)),
-      // Hard progression: only reachable after a win on a non-final level.
-      onNext: () => router.go('/gameplay/${widget.puzzleId + 1}'),
-      // Back to the map, where the win is now reflected as unlocked.
-      onLevels: () => router.go('/map'),
+    context.go(
+      ResultScreen.location(
+        status: state.status,
+        levelId: widget.puzzleId,
+        playerScore: state.playerScore,
+        botScore: state.botScore,
+      ),
     );
   }
 

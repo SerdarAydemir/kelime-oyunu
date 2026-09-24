@@ -108,6 +108,7 @@ Store screenshots: 5 frames (Oyun · Harita · Kazandın · İpucu · Ana ekran)
 ## Flutter sapmaları (uygulama tarafında eklenen / değişen token'lar)
 `kz-tokens.js` tasarım kaynağı olarak değişmedi; Flutter portunda (`lib/core/theme/app_tokens_*.dart`) şu sapmalar var:
 - **Eklendi `gridLine`** — hücre arası 0.5 px çizgi rengi. dark: `#e9dcc1` (= `cellClue`), light: `#e3d5b6` (= `boardBorder`). Tasarımda hücreler 2 dp boşlukla tahta zemini üzerinde ayrışıyor; painter çizgi çizdiği için ayrı token gerekti (2026-09-24, A2).
+- **Sonuç ekranı literal renkleri** — güneş `#fff3d6` → `AppTokens.light.board` (%90); skor kartında oyuncu `#e0a24a` → `accent`, rakip `#3a7fc4` → `bot`. Token dışı literal eklenmedi (2026-09-24, C).
 - **Değişti `light.cellLetter`** — `#ffffff` → `#fffdf7`; açık temada harf hücresi `#fffaf0` tahtadan ayrışsın diye (2026-09-24, A2).
 
 ## Design Tokens

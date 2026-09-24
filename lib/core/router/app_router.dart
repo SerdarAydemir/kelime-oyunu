@@ -9,7 +9,10 @@ import 'package:kelime_oyunu/data/repositories/progress_repository.dart';
 import 'package:kelime_oyunu/data/repositories/session_repository.dart';
 import 'package:kelime_oyunu/features/gameplay/view/game_screen.dart';
 import 'package:kelime_oyunu/features/home/view/home_screen.dart';
+import 'package:kelime_oyunu/features/gameplay/bloc/game_state.dart';
 import 'package:kelime_oyunu/features/map/view/climb_map_screen.dart';
+import 'package:kelime_oyunu/features/result/view/result_screen.dart';
+import 'package:kelime_oyunu/l10n/generated/app_localizations.dart';
 import 'package:kelime_oyunu/features/splash/view/splash_screen.dart';
 
 /// Centralised route configuration (architecture.md §8).
@@ -72,6 +75,19 @@ abstract final class AppRouter {
             adService: kDevAdsOffline
                 ? const MockAdService(result: RewardedAdResult.unavailable)
                 : const MockAdService(),
+          );
+        },
+      ),
+      GoRoute(
+        path: '/result/:levelId',
+        builder: (context, state) {
+          final q = state.uri.queryParameters;
+          return ResultScreen(
+            status: GameStatus.values.asNameMap()[q['status']] ?? GameStatus.lost,
+            levelId: int.tryParse(state.pathParameters['levelId'] ?? '') ?? 1,
+            playerScore: int.tryParse(q['p'] ?? '') ?? 0,
+            botScore: int.tryParse(q['b'] ?? '') ?? 0,
+            botName: AppLocalizations.of(context).bot,
           );
         },
       ),

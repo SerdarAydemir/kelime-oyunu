@@ -2,55 +2,14 @@
 
 import 'package:flutter/material.dart';
 import 'package:kelime_oyunu/data/models/puzzle.dart';
-import 'package:kelime_oyunu/features/gameplay/bloc/game_state.dart';
 import 'package:kelime_oyunu/features/gameplay/engine/rack_manager.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/clue_sheet.dart';
-import 'package:kelime_oyunu/features/gameplay/widgets/result_dialog.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/swap_sheet.dart';
 import 'package:kelime_oyunu/l10n/generated/app_localizations.dart';
 
 /// Modal dialogs and bottom sheets opened by the active game body. Each one
 /// only collects the player's answer; dispatching to the bloc stays with the
 /// caller (which also owns the `mounted` check after the await).
-
-/// Shows the end-of-match modal. The dialog pops itself before any of the
-/// callbacks fires, so callers can navigate or reload straight away.
-///
-/// showDialog pushes onto the root navigator, whose context sits outside the
-/// screen's BlocProvider — the caller must capture bloc/router *before* this.
-Future<void> showMatchResultDialog(
-  BuildContext context, {
-  required GameActive state,
-  required String botName,
-  required int levelId,
-  required VoidCallback onReplay,
-  required VoidCallback onNext,
-  required VoidCallback onLevels,
-}) {
-  return showDialog<void>(
-    context: context,
-    barrierDismissible: false,
-    builder: (dialogContext) => ResultDialog(
-      status: state.status,
-      playerScore: state.playerScore,
-      botScore: state.botScore,
-      botName: botName,
-      levelId: levelId,
-      onReplay: () {
-        Navigator.of(dialogContext).pop();
-        onReplay();
-      },
-      onNext: () {
-        Navigator.of(dialogContext).pop();
-        onNext();
-      },
-      onLevels: () {
-        Navigator.of(dialogContext).pop();
-        onLevels();
-      },
-    ),
-  );
-}
 
 /// Opens the read-only clue sheet for the clue cell [spec] (free; just
 /// reveals the text). Word lengths are looked up in [puzzle] for the
