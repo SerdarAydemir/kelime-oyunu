@@ -1,6 +1,9 @@
 // lib/core/router/app_router.dart
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:kelime_oyunu/core/config/dev_flags.dart';
+import 'package:kelime_oyunu/core/services/ad_service.dart';
+import 'package:kelime_oyunu/core/services/mock_ad_service.dart';
 
 import 'package:kelime_oyunu/data/repositories/progress_repository.dart';
 import 'package:kelime_oyunu/data/repositories/session_repository.dart';
@@ -56,6 +59,10 @@ abstract final class AppRouter {
             progressRepo: progressRepo,
             sessionRepo: sessionRepo,
             resume: resume,
+            // Mock until AdMob lands; the QA flag simulates "no ad available".
+            adService: kDevAdsOffline
+                ? const MockAdService(result: RewardedAdResult.unavailable)
+                : const MockAdService(),
           );
         },
       ),

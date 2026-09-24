@@ -13,6 +13,17 @@ mixin _GameInteraction on State<GameActiveBody> {
 
   GameActive get state => widget.state;
 
+  /// Runs the rewarded-ad gate for an ad-paid action. Returns true only when
+  /// the ad was watched. When no ad can be shown, the offline toast appears
+  /// with "Tekrar dene", which re-runs [onRetry] (the whole action, so the
+  /// player lands back at the same confirmation). Gameplay is untouched.
+  Future<bool> _adGate(BuildContext context, VoidCallback onRetry) async {
+    final result = await widget.adService.showRewarded();
+    if (!context.mounted) return false;
+    if (result == RewardedAdResult.unavailable) showOfflineToast(context, onRetry: onRetry);
+    return result == RewardedAdResult.rewarded;
+  }
+
   /// A dragged tile landed on a placeable cell. A drag that started on a
   /// pending letter is a MOVE: free the source cell first, then place on the
   /// target.
@@ -75,7 +86,10 @@ mixin _GameInteraction on State<GameActiveBody> {
     final bloc = context.read<GameBloc>();
     final confirmed = await confirmRevealDialog(context, clue);
     // "Hayır" (or dismissing the dialog) keeps the player in reveal mode.
-    if (!mounted || !confirmed) return;
+    if (!context.mounted || !confirmed) return;
+    // The hint is ad-paid (README: "İPUCU AL" + ad sub-label).
+    if (!await _adGate(context, () => _confirmReveal(context, spec, bottomHalf))) return;
+    if (!mounted) return;
     bloc.add(WordRevealed(clue.wordId));
     setState(() => _revealMode = false);
   }
@@ -84,8 +98,9 @@ mixin _GameInteraction on State<GameActiveBody> {
   Future<void> _confirmSixthSlot(BuildContext context) async {
     final bloc = context.read<GameBloc>();
     final confirmed = await confirmSixthSlotDialog(context);
-    if (!mounted || !confirmed) return;
-    // TODO: gate behind a real rewarded ad once AdService lands (mock for MVP).
+    if (!context.mounted || !confirmed) return;
+    if (!await _adGate(context, () => _confirmSixthSlot(context))) return;
+    if (!mounted) return;
     bloc.add(const SixthSlotUnlocked());
   }
 
@@ -98,8 +113,10 @@ mixin _GameInteraction on State<GameActiveBody> {
       quotaRemaining: state.swapQuotaRemaining,
       showAdLabel: showAdLabelsFor(widget.puzzleId),
     );
-    if (!mounted || choice == null) return;
-    // TODO: gate the viaAd path behind a real rewarded ad (AdService phase).
+    if (!context.mounted || choice == null) return;
+    // Only the "Şimdi değiştir" path is ad-paid; "Değiştir ve pas" is free.
+    if (choice.viaAd && !await _adGate(context, () => _showSwapSheet(context))) return;
+    if (!mounted) return;
     bloc.add(LettersSwapped(choice.indices, viaAd: choice.viaAd));
   }
 }

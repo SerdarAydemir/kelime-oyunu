@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:kelime_oyunu/core/constants/app_dimensions.dart';
+import 'package:kelime_oyunu/core/services/ad_service.dart';
 import 'package:kelime_oyunu/core/theme/app_tokens.dart';
 import 'package:kelime_oyunu/data/models/puzzle.dart';
 import 'package:kelime_oyunu/features/gameplay/bloc/game_bloc.dart';
@@ -21,6 +22,7 @@ import 'package:kelime_oyunu/features/gameplay/widgets/level_top_bar.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/narration_controller.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/narration_layer.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/narration_tiles.dart';
+import 'package:kelime_oyunu/features/gameplay/widgets/offline_toast.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/rack_widget.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/score_header.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/turn_pill.dart';
@@ -35,12 +37,16 @@ class GameActiveBody extends StatefulWidget {
     required this.state,
     required this.puzzleId,
     required this.botProfile,
+    required this.adService,
     super.key,
   });
 
   final GameActive state;
   final int puzzleId;
   final BotProfile botProfile;
+
+  /// Rewarded-ad gate for the sixth slot, "Şimdi değiştir" and the hint.
+  final AdService adService;
 
   @override
   State<GameActiveBody> createState() => _GameActiveBodyState();

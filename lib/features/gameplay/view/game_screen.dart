@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:kelime_oyunu/core/services/ad_service.dart';
+import 'package:kelime_oyunu/core/services/mock_ad_service.dart';
 import 'package:kelime_oyunu/data/repositories/progress_repository.dart';
 import 'package:kelime_oyunu/data/repositories/puzzle_repository.dart';
 import 'package:kelime_oyunu/data/repositories/session_repository.dart';
@@ -35,10 +37,15 @@ class GameScreen extends StatelessWidget {
     required this.progressRepo,
     required this.sessionRepo,
     this.resume = false,
+    this.adService = const MockAdService(),
     super.key,
   });
 
   final int puzzleId;
+
+  /// Gate for the ad-paid jokers. The mock rewards instantly; the AdMob
+  /// implementation is injected here once it lands (constructor injection).
+  final AdService adService;
 
   /// Persists the win that unlocks the next level (F7).
   final ProgressRepository progressRepo;
@@ -63,7 +70,9 @@ class GameScreen extends StatelessWidget {
         progressRepo: progressRepo,
         sessionRepo: sessionRepo,
       )..add(resume ? SessionResumeRequested(puzzleId) : PuzzleLoadRequested(puzzleId)),
-      child: _SessionFlushListener(child: _GameBody(puzzleId: puzzleId)),
+      child: _SessionFlushListener(
+        child: _GameBody(puzzleId: puzzleId, adService: adService),
+      ),
     );
   }
 }
@@ -105,9 +114,10 @@ class _SessionFlushListenerState extends State<_SessionFlushListener> {
 
 /// Reads [GameBloc] from context; drives the [BlocConsumer] and routing.
 class _GameBody extends StatelessWidget {
-  const _GameBody({required this.puzzleId});
+  const _GameBody({required this.puzzleId, required this.adService});
 
   final int puzzleId;
+  final AdService adService;
 
   @override
   Widget build(BuildContext context) {
@@ -130,6 +140,7 @@ class _GameBody extends StatelessWidget {
               state: state,
               puzzleId: puzzleId,
               botProfile: _botProfile(context),
+              adService: adService,
             ),
           },
         );
