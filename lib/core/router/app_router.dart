@@ -9,7 +9,7 @@ import 'package:kelime_oyunu/data/repositories/progress_repository.dart';
 import 'package:kelime_oyunu/data/repositories/session_repository.dart';
 import 'package:kelime_oyunu/features/gameplay/view/game_screen.dart';
 import 'package:kelime_oyunu/features/home/view/home_screen.dart';
-import 'package:kelime_oyunu/features/levels/view/level_select_screen.dart';
+import 'package:kelime_oyunu/features/map/view/climb_map_screen.dart';
 import 'package:kelime_oyunu/features/splash/view/splash_screen.dart';
 
 /// Centralised route configuration (architecture.md §8).
@@ -35,11 +35,9 @@ abstract final class AppRouter {
         builder: (context, state) =>
             HomeScreen(progressRepo: progressRepo, sessionRepo: sessionRepo),
       ),
-      // The climb map (design session C step 3 replaces the grid here).
       GoRoute(
         path: '/map',
-        builder: (context, state) =>
-            LevelSelectScreen(progressRepo: progressRepo, sessionRepo: sessionRepo),
+        builder: (context, state) => ClimbMapScreen(progressRepo: progressRepo),
       ),
       GoRoute(path: '/levels', redirect: (context, state) => '/map'),
       GoRoute(

@@ -133,8 +133,8 @@ class _GameActiveBodyState extends State<GameActiveBody>
       onReplay: () => bloc.add(PuzzleLoadRequested(widget.puzzleId)),
       // Hard progression: only reachable after a win on a non-final level.
       onNext: () => router.go('/gameplay/${widget.puzzleId + 1}'),
-      // Back to the grid, where the win is now reflected as unlocked.
-      onLevels: () => router.go('/levels'),
+      // Back to the map, where the win is now reflected as unlocked.
+      onLevels: () => router.go('/map'),
     );
   }
 
@@ -158,8 +158,8 @@ class _GameActiveBodyState extends State<GameActiveBody>
                 LevelTopBar(
                   levelId: widget.puzzleId,
                   // Leaving is safe: the match is saved at every turn boundary
-                  // and comes back as "Yarım kalan oyun" on the grid.
-                  onExit: () => context.go('/levels'),
+                  // and comes back as "Yarım kalan oyun" on the home screen.
+                  onExit: () => context.go('/map'),
                 ),
                 ScoreHeader(
                   // Lagging display scores: the counter walks up as the narration
