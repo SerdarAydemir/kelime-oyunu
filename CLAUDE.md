@@ -68,9 +68,23 @@ Her yeni görev geldiğinde şu sırayı bozmadan uygula:
 - Null safety: `!` bang operator istisnai; tercih `Result<T,E>` sealed class. (`coding-standards.md §1.8`)
 - Widget constructor'ları `const`; field'lar `final`. (`coding-standards.md §1.9`)
 - `_buildX()` helper fonksiyonu yasak; private class (`_WidgetName`) yaz. (`coding-standards.md §2.2`)
-- Renk: `AppColors.primary` veya `Theme.of(context).colorScheme.x` — raw `Color(0xFF...)` literal yasak. (`architecture.md §9`)
-- Kullanıcıya görünür string: `.arb` dosyasında, hardcode yasak. (`coding-standards.md §7`)
+- Renk: `context.tokens.x` (`AppTokens` ThemeExtension) — raw `Color(0xFF...)` literal yasak;
+  tek istisna `lib/core/theme/app_tokens_*.dart`. `AppColors` kaldırıldı. (`architecture.md §9`)
+- Kullanıcıya görünür string: `lib/l10n/app_tr.arb` (+ `app_en.arb`), `AppLocalizations.of(context)`;
+  hardcode yasak. Rakip adı her yerde "Rakip". (`coding-standards.md §7`)
 - Kod yorumu: **İngilizce**. (`coding-standards.md §1.6`)
+
+---
+
+## Tasarım Kaynağı (Kelime Zirvesi)
+
+- Tasarım teslimi `docs/design/`: `README.md` (ekran ekran spec), `kz-tokens.js`
+  (**tek kaynak**: renk, tipografi, yarıçap, boşluk, buton, metin, logo SVG).
+- Flutter karşılıkları: `AppTokens` (`lib/core/theme/app_tokens.dart`, 53 token × 2 tema,
+  adlar JS ile aynı), `AppTypography` (Lora/Nunito Sans, `assets/fonts/` — google_fonts yok),
+  `AppDimensions` (RADII/SPACE/BUTTONS), `AppTheme.dark()/light()`, arb metinleri, `AppLogo`.
+  Token değişecekse önce `kz-tokens.js`, sonra Dart (`docs/HANDOFF_DESIGN_A.md`).
+- Tema modu `SettingsCubit` (shared_preferences), varsayılan `system`.
 
 ---
 
@@ -254,7 +268,15 @@ tasarımı uygulanmadı).
   token'landı. Davranış değişmedi, 187 test yeşil, `lib/` altında 300 üstü dosya 0.
   Dosya haritası + yapılmayan bulgular: `docs/HANDOFF_REFACTOR.md`.
 
+- Tasarım oturumu A (2026-09-24) ✅ — fontlar, `AppTokens`/`AppTypography`/
+  `AppDimensions`/`AppTheme`, `SettingsCubit` (tema modu + anahtarlar), gen_l10n
+  arb'lar, `AppLogo` + launcher ikonları + splash. Davranış değişmedi; eşleme
+  tablosu ve açık kalanlar: `docs/HANDOFF_DESIGN_A.md`.
+
 **Sıradaki (planlı, yapılmadı):**
+- **Tasarım oturumu B** — ekranların README spec'ine göre yeniden yapımı
+  (harita, sonuç, sheet'ler, ayarlar UI, onboarding/consent/ATT, shop, legal);
+  emülatörde ikon/splash/font doğrulaması.
 - FAZ 4 artıkları (`docs/HANDOFF_REFACTOR.md` "Bulgular"): alpha-only gölge
   renkleri token'a, dialog/bot-profil string'leri `.arb`'a, kullanılmayan
   `AppColors.gridCellSelected`/`star`, hücre-boyutu hesabının ortaklaştırılması,
