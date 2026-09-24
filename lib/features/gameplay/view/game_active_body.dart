@@ -14,6 +14,7 @@ import 'package:kelime_oyunu/features/gameplay/engine/rack_manager.dart';
 import 'package:kelime_oyunu/features/gameplay/view/game_active_queries.dart';
 import 'package:kelime_oyunu/features/gameplay/view/game_dialogs.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/action_bar.dart';
+import 'package:kelime_oyunu/features/gameplay/widgets/ad_label.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/board_frame.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/grid_painter.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/level_top_bar.dart';
@@ -65,6 +66,10 @@ class _GameActiveBodyState extends State<GameActiveBody>
   /// result dialog is held until [_narration] drains (see [_onNarrationDrained]).
   bool _finishPending = false;
   bool _resultShown = false;
+
+  /// The opponent is playing (or its move is still being narrated): the
+  /// rack and bar wear their dimmed looks.
+  bool get _botTurn => state.phase == TurnPhase.botThinking || state.botThinking;
 
   /// The lamp only works on the player's turn while the game is running.
   bool get _canReveal =>
@@ -216,21 +221,37 @@ class _GameActiveBodyState extends State<GameActiveBody>
                     ),
                   ),
                 ),
-                RackWidget(
-                  key: _rackKey,
-                  rack: state.rack,
-                  // Drag mirrors the tap guards: player's turn, game running, no
-                  // reveal mode — the bot's turn must not accept ghost drags.
-                  dragEnabled: _canReveal && !_revealMode,
-                  onDragStarted: (_) => context.read<GameBloc>().add(const RackTileSelected(-1)),
-                  showPlusSlot: state.rackSize == RackManager.baseRackSize,
-                  onPlusTap: _canReveal && !_revealMode ? () => _confirmSixthSlot(context) : null,
-                  onTileTap: (i) => context.read<GameBloc>().add(RackTileSelected(i)),
-                  onTileRecall: (i) => _onTileRecall(context, i),
+                // Rack dims to 45 % while the opponent plays (README "States").
+                // The lifted selected tile needs headroom above the row.
+                AnimatedOpacity(
+                  opacity: _botTurn ? 0.45 : 1.0,
+                  duration: const Duration(milliseconds: 200),
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: AppDimensions.space12),
+                    child: RackWidget(
+                      key: _rackKey,
+                      rack: state.rack,
+                      selectedIndex: state.selectedRackIndex,
+                      // Drag mirrors the tap guards: player's turn, game running, no
+                      // reveal mode — the bot's turn must not accept ghost drags.
+                      dragEnabled: _canReveal && !_revealMode,
+                      onDragStarted: (_) =>
+                          context.read<GameBloc>().add(const RackTileSelected(-1)),
+                      showPlusSlot: state.rackSize == RackManager.baseRackSize,
+                      showAdLabel: showAdLabelsFor(widget.puzzleId),
+                      onPlusTap: _canReveal && !_revealMode
+                          ? () => _confirmSixthSlot(context)
+                          : null,
+                      onTileTap: (i) => context.read<GameBloc>().add(RackTileSelected(i)),
+                      onTileRecall: (i) => _onTileRecall(context, i),
+                    ),
+                  ),
                 ),
                 ActionBar(
                   pendingPlacements: state.pendingPlacements,
                   revealActive: _revealMode,
+                  botTurn: _botTurn,
+                  showAdLabel: showAdLabelsFor(widget.puzzleId),
                   onConfirm: _revealMode
                       ? null
                       : () => context.read<GameBloc>().add(const MoveConfirmed()),

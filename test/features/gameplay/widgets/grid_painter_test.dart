@@ -204,13 +204,14 @@ void main() {
     testWidgets('drop lands on the aimed cell when the grid is centred in a larger box', (
       tester,
     ) async {
-      // Regression: 100px of vertical slack centres the grid 50px (a full
-      // cell) below the GridPainter's top-left. Converting drag coordinates
-      // against the wrong render box made drops land a cell below the finger.
-      // 550 keeps grid+rack inside the 600px test viewport.
+      // Regression: 90px of vertical slack centres the grid 45px (nearly a
+      // full cell) below the GridPainter's top-left. Converting drag
+      // coordinates against the wrong render box made drops land a cell
+      // below the finger. 540 keeps grid + the 56 dp rack inside the 600px
+      // test viewport.
       (DragTileData, WordCell)? dropped;
       await tester.pumpWidget(
-        _dragHarness(onDrop: (d, cell) => dropped = (d, cell), outerHeight: 550),
+        _dragHarness(onDrop: (d, cell) => dropped = (d, cell), outerHeight: 540),
       );
 
       await _dragTileTo(tester, _gridOrigin(tester) + const Offset(75, 75));

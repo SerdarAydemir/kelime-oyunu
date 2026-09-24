@@ -1,10 +1,13 @@
 // lib/features/gameplay/widgets/rack_widget.dart
 
 import 'package:flutter/material.dart';
+import 'package:kelime_oyunu/core/constants/app_dimensions.dart';
 import 'package:kelime_oyunu/core/constants/app_typography.dart';
 import 'package:kelime_oyunu/core/theme/app_tokens.dart';
+import 'package:kelime_oyunu/core/widgets/dashed_border.dart';
 import 'package:kelime_oyunu/data/models/puzzle.dart';
 import 'package:kelime_oyunu/features/gameplay/engine/rack_manager.dart';
+import 'package:kelime_oyunu/features/gameplay/widgets/ad_label.dart';
 import 'package:kelime_oyunu/l10n/generated/app_localizations.dart';
 
 /// Payload of a letter drag: which rack tile is being dragged and, when the
@@ -18,12 +21,16 @@ typedef DragTileData = ({int rackIndex, WordCell? fromCell});
 /// under the fingertip (WYSIWYG placement).
 const Offset kDragFeedbackCentreOffset = Offset(0, -DragFeedbackTile.size * 0.8);
 
+/// The letter rack (README "Rack"): 52 × 56 tiles, r10, gap 6, plus the
+/// dashed "+ HARF EKLE" slot until the sixth slot is unlocked.
 class RackWidget extends StatelessWidget {
   const RackWidget({
     required this.rack,
     required this.onTileTap,
     required this.onTileRecall,
+    this.selectedIndex = -1,
     this.showPlusSlot = false,
+    this.showAdLabel = false,
     this.onPlusTap,
     this.dragEnabled = false,
     this.onDragStarted,
@@ -34,8 +41,15 @@ class RackWidget extends StatelessWidget {
   final void Function(int rackIndex) onTileTap;
   final void Function(int rackIndex) onTileRecall;
 
+  /// Tile currently selected for tap-placement (lifted, amber); -1 for none.
+  final int selectedIndex;
+
   /// Shows the "+1 letter" joker slot at the end of the rack (until unlocked).
   final bool showPlusSlot;
+
+  /// Whether the joker slot carries its "▶ reklam" sub-label (hidden in the
+  /// ad-free first levels).
+  final bool showAdLabel;
 
   /// Tap on the joker slot; null renders it dimmed/disabled (bot's turn etc.).
   final VoidCallback? onPlusTap;
@@ -54,7 +68,7 @@ class RackWidget extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         for (var i = 0; i < rack.length; i++) ...[
-          if (i > 0) const SizedBox(width: 4),
+          if (i > 0) const SizedBox(width: AppDimensions.space6),
           Draggable<DragTileData>(
             data: (rackIndex: i, fromCell: null),
             // 0 disables dragging while keeping tap/long-press intact.
@@ -72,16 +86,20 @@ class RackWidget extends StatelessWidget {
             feedback: DragFeedbackTile(letter: rack[i].letter),
             childWhenDragging: Opacity(
               opacity: 0.35,
-              child: _RackTileWidget(tile: rack[i], onTap: null),
+              child: _RackTileWidget(tile: rack[i], selected: false, onTap: null),
             ),
             child: _RackTileWidget(
               tile: rack[i],
+              selected: i == selectedIndex,
               onTap: rack[i].isPlaced ? null : () => onTileTap(i),
               onLongPress: rack[i].isPlaced ? () => onTileRecall(i) : null,
             ),
           ),
         ],
-        if (showPlusSlot) ...[const SizedBox(width: 4), _PlusSlotWidget(onTap: onPlusTap)],
+        if (showPlusSlot) ...[
+          const SizedBox(width: AppDimensions.space6),
+          _PlusSlotWidget(onTap: onPlusTap, showAdLabel: showAdLabel),
+        ],
       ],
     );
   }
@@ -100,9 +118,9 @@ class DragFeedbackTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final tokens = context.tokens;
     // Material: the feedback lives in the root Overlay, outside the app's
     // Material ancestry — without it, Text falls back to error styling.
-    final tokens = context.tokens;
     return Transform.translate(
       // Centre horizontally on the finger, float above it.
       offset: const Offset(-size / 2, -size * 1.3),
@@ -112,9 +130,15 @@ class DragFeedbackTile extends StatelessWidget {
           width: size,
           height: size,
           decoration: BoxDecoration(
-            color: tokens.tile,
-            borderRadius: BorderRadius.circular(8),
-            boxShadow: [BoxShadow(color: tokens.dim, blurRadius: 10, offset: const Offset(0, 5))],
+            color: tokens.accent,
+            borderRadius: BorderRadius.circular(AppDimensions.radiusTile),
+            boxShadow: [
+              BoxShadow(
+                color: tokens.accent.withValues(alpha: 0.4),
+                blurRadius: 24,
+                offset: const Offset(0, 12),
+              ),
+            ],
           ),
           alignment: Alignment.center,
           child: Text(letter, style: AppTypography.tileLetter.copyWith(color: tokens.tileInk)),
@@ -124,92 +148,100 @@ class DragFeedbackTile extends StatelessWidget {
   }
 }
 
-/// The "+1 letter" joker slot: a tile-shaped button with an Ad badge.
+/// The "+ HARF EKLE" joker slot: a dashed accent outline with a plus icon,
+/// the label and — when ads are live — the "▶ reklam" sub-label.
 class _PlusSlotWidget extends StatelessWidget {
-  const _PlusSlotWidget({required this.onTap});
+  const _PlusSlotWidget({required this.onTap, required this.showAdLabel});
 
   final VoidCallback? onTap;
+  final bool showAdLabel;
 
   @override
   Widget build(BuildContext context) {
     final tokens = context.tokens;
+    final l10n = AppLocalizations.of(context);
     return GestureDetector(
       onTap: onTap,
       child: Opacity(
         opacity: onTap == null ? 0.4 : 1.0,
-        child: Stack(
-          clipBehavior: Clip.none,
-          children: [
-            Container(
-              width: 48,
-              height: 48,
-              decoration: BoxDecoration(
-                color: tokens.tile,
-                borderRadius: BorderRadius.circular(6),
-                border: Border.all(color: tokens.accent, width: 1.5),
-              ),
-              alignment: Alignment.center,
-              child: Icon(Icons.add, color: tokens.accent, size: 26),
-            ),
-            Positioned(
-              top: -4,
-              right: -4,
-              child: Container(
-                padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 2),
-                decoration: BoxDecoration(
-                  color: tokens.accent,
-                  borderRadius: BorderRadius.circular(8),
-                ),
-                child: Text(
-                  AppLocalizations.of(context).ad,
-                  style: TextStyle(
-                    fontSize: 9,
-                    fontWeight: FontWeight.bold,
-                    color: tokens.accentInk,
+        child: CustomPaint(
+          painter: DashedBorderPainter(color: tokens.accent, radius: AppDimensions.radiusTile),
+          child: SizedBox(
+            width: AppDimensions.tileWidth,
+            height: AppDimensions.tileHeight,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(Icons.add, size: AppDimensions.iconS, color: tokens.accent),
+                const SizedBox(height: 2),
+                Text(
+                  l10n.addLetter,
+                  style: AppTypography.buttonPrimary.copyWith(
+                    fontSize: 7.5,
+                    height: 1,
+                    color: tokens.accent,
                   ),
                 ),
-              ),
+                if (showAdLabel) ...[const SizedBox(height: 2), AdLabel(color: tokens.accent)],
+              ],
             ),
-          ],
+          ),
         ),
       ),
     );
   }
 }
 
+/// One rack tile in its four looks: idle (`tile` + 4 dp `tileShadow` base),
+/// selected (amber, lifted 8 dp, amber glow), placed (dashed `faint` empty
+/// slot — long-press recalls the letter) and wrong-return (2 px `error` ring).
 class _RackTileWidget extends StatelessWidget {
-  const _RackTileWidget({required this.tile, required this.onTap, this.onLongPress});
+  const _RackTileWidget({
+    required this.tile,
+    required this.selected,
+    required this.onTap,
+    this.onLongPress,
+  });
 
   final RackTile tile;
+  final bool selected;
   final VoidCallback? onTap;
   final VoidCallback? onLongPress;
-
-  static const double _tileSize = 48.0;
 
   @override
   Widget build(BuildContext context) {
     final tokens = context.tokens;
-    return GestureDetector(
-      onTap: onTap,
-      onLongPress: onLongPress,
-      child: Opacity(
-        opacity: tile.isPlaced ? 0.4 : 1.0,
-        child: Container(
-          width: _tileSize,
-          height: _tileSize,
-          decoration: BoxDecoration(
-            color: tokens.tile,
-            borderRadius: BorderRadius.circular(6),
-            border: tile.isReturned ? Border.all(color: tokens.error, width: 2) : null,
-            // Design: "0 4 0 tileShadow" — a hard 4 dp base under an idle tile.
-            boxShadow: tile.isPlaced
-                ? null
-                : [BoxShadow(color: tokens.tileShadow, offset: const Offset(0, 4))],
-          ),
-          alignment: Alignment.center,
-          child: Text(tile.letter, style: AppTypography.tileLetter.copyWith(color: tokens.tileInk)),
+    final Widget body;
+    if (tile.isPlaced) {
+      body = CustomPaint(
+        painter: DashedBorderPainter(color: tokens.faint, radius: AppDimensions.radiusTile),
+        child: const SizedBox(width: AppDimensions.tileWidth, height: AppDimensions.tileHeight),
+      );
+    } else {
+      body = AnimatedContainer(
+        duration: const Duration(milliseconds: 120),
+        width: AppDimensions.tileWidth,
+        height: AppDimensions.tileHeight,
+        transform: Matrix4.translationValues(0, selected ? -8 : 0, 0),
+        decoration: BoxDecoration(
+          color: selected ? tokens.accent : tokens.tile,
+          borderRadius: BorderRadius.circular(AppDimensions.radiusTile),
+          border: tile.isReturned ? Border.all(color: tokens.error, width: 2) : null,
+          boxShadow: [
+            if (selected)
+              BoxShadow(
+                color: tokens.accent.withValues(alpha: 0.4),
+                blurRadius: 24,
+                offset: const Offset(0, 12),
+              )
+            else
+              BoxShadow(color: tokens.tileShadow, offset: const Offset(0, 4)),
+          ],
         ),
-      ),
-    );
+        alignment: Alignment.center,
+        child: Text(tile.letter, style: AppTypography.tileLetter.copyWith(color: tokens.tileInk)),
+      );
+    }
+    return GestureDetector(onTap: onTap, onLongPress: onLongPress, child: body);
   }
 }

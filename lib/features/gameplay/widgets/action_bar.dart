@@ -1,11 +1,16 @@
 // lib/features/gameplay/widgets/action_bar.dart
 
 import 'package:flutter/material.dart';
+import 'package:kelime_oyunu/core/constants/app_dimensions.dart';
 import 'package:kelime_oyunu/core/constants/app_typography.dart';
 import 'package:kelime_oyunu/core/theme/app_tokens.dart';
 import 'package:kelime_oyunu/features/gameplay/engine/score_engine.dart';
+import 'package:kelime_oyunu/features/gameplay/widgets/ad_label.dart';
 import 'package:kelime_oyunu/l10n/generated/app_localizations.dart';
 
+/// Bottom bar (README "Bottom bar"): swap circle · confirm / pass pill ·
+/// hint circle, all 52 dp. During the bot's turn the bar dims to 40 % and
+/// the pill turns into a `surface` "Sıra rakipte" label.
 class ActionBar extends StatelessWidget {
   const ActionBar({
     required this.pendingPlacements,
@@ -14,6 +19,8 @@ class ActionBar extends StatelessWidget {
     required this.onSwap,
     required this.onReveal,
     this.revealActive = false,
+    this.botTurn = false,
+    this.showAdLabel = false,
     super.key,
   });
 
@@ -30,32 +37,50 @@ class ActionBar extends StatelessWidget {
   /// Whether reveal mode is on — the lamp renders in its "active" look.
   final bool revealActive;
 
+  /// The opponent is playing: dimmed bar, "Sıra rakipte" pill.
+  final bool botTurn;
+
+  /// Whether the hint button carries its "▶ reklam" sub-label.
+  final bool showAdLabel;
+
   @override
   Widget build(BuildContext context) {
     final hasPending = pendingPlacements.isNotEmpty;
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-      child: Row(
-        children: [
-          _CircleIconButton(icon: Icons.swap_horiz, onTap: hasPending ? null : onSwap),
-          const SizedBox(width: 8),
-          Expanded(
-            child: _ConfirmPassButton(hasPending: hasPending, onConfirm: onConfirm, onPass: onPass),
-          ),
-          const SizedBox(width: 8),
-          _RevealButton(onReveal: onReveal, active: revealActive),
-        ],
+    return AnimatedOpacity(
+      opacity: botTurn ? 0.4 : 1.0,
+      duration: const Duration(milliseconds: 200),
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(
+          AppDimensions.space16,
+          AppDimensions.space8,
+          AppDimensions.space16,
+          AppDimensions.space12,
+        ),
+        child: Row(
+          children: [
+            _SwapButton(onTap: hasPending ? null : onSwap),
+            const SizedBox(width: AppDimensions.space10),
+            Expanded(
+              child: _ConfirmPassButton(
+                hasPending: hasPending,
+                botTurn: botTurn,
+                onConfirm: onConfirm,
+                onPass: onPass,
+              ),
+            ),
+            const SizedBox(width: AppDimensions.space10),
+            _RevealButton(onReveal: onReveal, active: revealActive, showAdLabel: showAdLabel),
+          ],
+        ),
       ),
     );
   }
 }
 
-/// Swap button: a `surface` circle with a 1.5 px `faint` ring (design "Bottom
-/// bar"); dims to 40 % when disabled.
-class _CircleIconButton extends StatelessWidget {
-  const _CircleIconButton({required this.icon, required this.onTap});
+/// Swap: 52 dp circle with a 1.5 px `faint` ring; 40 % when disabled.
+class _SwapButton extends StatelessWidget {
+  const _SwapButton({required this.onTap});
 
-  final IconData icon;
   final VoidCallback? onTap;
 
   @override
@@ -63,18 +88,17 @@ class _CircleIconButton extends StatelessWidget {
     final tokens = context.tokens;
     return InkWell(
       onTap: onTap,
-      borderRadius: BorderRadius.circular(24),
+      customBorder: const CircleBorder(),
       child: Opacity(
         opacity: onTap == null ? 0.4 : 1.0,
         child: Container(
-          width: 48,
-          height: 48,
+          width: AppDimensions.buttonGame,
+          height: AppDimensions.buttonGame,
           decoration: BoxDecoration(
             shape: BoxShape.circle,
-            color: tokens.surface,
             border: Border.all(color: tokens.faint, width: 1.5),
           ),
-          child: Icon(icon, color: tokens.text, size: 22),
+          child: Icon(Icons.swap_horiz, color: tokens.text, size: 22),
         ),
       ),
     );
@@ -84,11 +108,13 @@ class _CircleIconButton extends StatelessWidget {
 class _ConfirmPassButton extends StatelessWidget {
   const _ConfirmPassButton({
     required this.hasPending,
+    required this.botTurn,
     required this.onConfirm,
     required this.onPass,
   });
 
   final bool hasPending;
+  final bool botTurn;
   final VoidCallback? onConfirm;
   final VoidCallback? onPass;
 
@@ -96,77 +122,65 @@ class _ConfirmPassButton extends StatelessWidget {
   Widget build(BuildContext context) {
     final tokens = context.tokens;
     final l10n = AppLocalizations.of(context);
+    final label = botTurn ? l10n.botTurnBtn : (hasPending ? l10n.confirm : l10n.pass);
     return SizedBox(
-      height: 48,
-      child: ElevatedButton(
-        onPressed: hasPending ? onConfirm : onPass,
-        style: ElevatedButton.styleFrom(
+      height: AppDimensions.buttonGame,
+      child: FilledButton(
+        onPressed: botTurn ? null : (hasPending ? onConfirm : onPass),
+        style: FilledButton.styleFrom(
           backgroundColor: tokens.accent,
           foregroundColor: tokens.accentInk,
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
-          elevation: 2,
+          disabledBackgroundColor: botTurn ? tokens.surface : tokens.accent.withValues(alpha: 0.4),
+          disabledForegroundColor: botTurn ? tokens.text : tokens.accentInk,
+          textStyle: AppTypography.buttonPrimary,
+          shape: const StadiumBorder(),
         ),
-        child: Text(hasPending ? l10n.confirm : l10n.pass, style: AppTypography.buttonPrimary),
+        child: Text(label),
       ),
     );
   }
 }
 
-/// Reveal (lamp) button: amber 15 % fill with an amber ring while available,
-/// solid amber while reveal mode is on, 40 % dimmed when disabled.
+/// Hint (lamp): 52 dp circle, amber 15 % fill with a 1.5 px amber ring;
+/// solid amber while reveal mode is on; 40 % when disabled.
 class _RevealButton extends StatelessWidget {
-  const _RevealButton({required this.onReveal, required this.active});
+  const _RevealButton({required this.onReveal, required this.active, required this.showAdLabel});
 
   final VoidCallback? onReveal;
 
   /// Reveal mode is on: render filled so the toggle state is obvious.
   final bool active;
+  final bool showAdLabel;
 
   @override
   Widget build(BuildContext context) {
     final tokens = context.tokens;
+    final l10n = AppLocalizations.of(context);
+    final ink = active ? tokens.accentInk : tokens.accent;
     return InkWell(
       onTap: onReveal,
-      borderRadius: BorderRadius.circular(24),
+      customBorder: const CircleBorder(),
       child: Opacity(
         opacity: onReveal == null ? 0.4 : 1.0,
-        child: Stack(
-          clipBehavior: Clip.none,
-          children: [
-            Container(
-              width: 48,
-              height: 48,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: active ? tokens.accent : tokens.accent.withValues(alpha: 0.15),
-                border: Border.all(color: tokens.accent, width: 1.5),
+        child: Container(
+          width: AppDimensions.buttonGame,
+          height: AppDimensions.buttonGame,
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            color: active ? tokens.accent : tokens.accent.withValues(alpha: 0.15),
+            border: Border.all(color: tokens.accent, width: 1.5),
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(active ? Icons.lightbulb : Icons.lightbulb_outline, color: ink, size: 17),
+              Text(
+                l10n.hint,
+                style: AppTypography.buttonPrimary.copyWith(fontSize: 7, height: 1.2, color: ink),
               ),
-              child: Icon(
-                active ? Icons.lightbulb : Icons.lightbulb_outline,
-                color: active ? tokens.accentInk : tokens.accent,
-                size: 22,
-              ),
-            ),
-            Positioned(
-              top: -4,
-              right: -4,
-              child: Container(
-                padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 2),
-                decoration: BoxDecoration(
-                  color: tokens.accent,
-                  borderRadius: BorderRadius.circular(8),
-                ),
-                child: Text(
-                  AppLocalizations.of(context).ad,
-                  style: TextStyle(
-                    fontSize: 9,
-                    fontWeight: FontWeight.bold,
-                    color: tokens.accentInk,
-                  ),
-                ),
-              ),
-            ),
-          ],
+              if (showAdLabel) AdLabel(color: ink),
+            ],
+          ),
         ),
       ),
     );
