@@ -60,9 +60,12 @@ class _KelimeOyunuAppState extends State<KelimeOyunuApp> {
           themeMode: settings.themeMode,
           routerConfig: _router,
           localizationsDelegates: AppLocalizations.localizationsDelegates,
-          // Turkish first: it is the template ARB and the fallback for every
-          // device locale that is not English (the generated list is A–Z).
           supportedLocales: const [Locale('tr'), Locale('en')],
+          // Locked to Turkish for now: the puzzle packs exist only in Turkish,
+          // so an English UI over Turkish clues would be a half-translated
+          // game. app_en.arb stays in place; drop this callback when an EN
+          // puzzle pack ships (CLAUDE.md "Tasarım Kaynağı").
+          localeResolutionCallback: (_, _) => const Locale('tr'),
         ),
       ),
     );

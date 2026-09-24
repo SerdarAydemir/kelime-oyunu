@@ -85,6 +85,9 @@ Her yeni görev geldiğinde şu sırayı bozmadan uygula:
   `AppDimensions` (RADII/SPACE/BUTTONS), `AppTheme.dark()/light()`, arb metinleri, `AppLogo`.
   Token değişecekse önce `kz-tokens.js`, sonra Dart (`docs/HANDOFF_DESIGN_A.md`).
 - Tema modu `SettingsCubit` (shared_preferences), varsayılan `system`.
+- **Dil kilidi:** `app_en.arb` hazır ama `localeResolutionCallback` uygulamayı her zaman `tr`
+  çalıştırır (bulmaca paketi yalnız Türkçe). EN bulmaca paketi gelince `lib/app.dart`'taki
+  callback kaldırılır, kilit kalkar.
 
 ---
 
