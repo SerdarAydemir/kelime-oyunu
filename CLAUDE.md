@@ -85,6 +85,9 @@ Her yeni görev geldiğinde şu sırayı bozmadan uygula:
   `AppDimensions` (RADII/SPACE/BUTTONS), `AppTheme.dark()/light()`, arb metinleri, `AppLogo`.
   Token değişecekse önce `kz-tokens.js`, sonra Dart (`docs/HANDOFF_DESIGN_A.md`).
 - Tema modu `SettingsCubit` (shared_preferences), varsayılan `system`.
+- **Reklam kapısı:** `AdService.showRewarded()` (`lib/core/services/`), MVP `MockAdService`;
+  6. yuva, "Şimdi değiştir" ve ipucu bu kapıdan geçer, `unavailable` → `showOfflineToast`.
+  Gerçek SDK aynı arayüzü uygular, `GameScreen.adService` ile enjekte edilir.
 - **Dil kilidi:** `app_en.arb` hazır ama `localeResolutionCallback` uygulamayı her zaman `tr`
   çalıştırır (bulmaca paketi yalnız Türkçe). EN bulmaca paketi gelince `lib/app.dart`'taki
   callback kaldırılır, kilit kalkar.
@@ -139,6 +142,8 @@ Her yeni görev geldiğinde şu sırayı bozmadan uygula:
 - **QA kilit açma:** `flutter run --dart-define=DEV_UNLOCK_ALL=true` → level select'te tüm
   bölümler oynanabilir, başlıkta "DEV" rozeti; ilerlemeye yazmaz, kDebugMode ile AND'li
   (`lib/core/config/dev_flags.dart`), release'de etkisiz.
+- **QA reklam yok:** `--dart-define=DEV_ADS_OFFLINE=true` → `MockAdService` her isteğe
+  `unavailable` döner, "Bağlantı yok" toast'u görülür (aynı dosya, aynı kural).
 
 (`skills.md §8 Adım 6`)
 
@@ -276,10 +281,15 @@ tasarımı uygulanmadı).
   arb'lar, `AppLogo` + launcher ikonları + splash. Davranış değişmedi; eşleme
   tablosu ve açık kalanlar: `docs/HANDOFF_DESIGN_A.md`.
 
+- Tasarım oturumu B (2026-09-24) ✅ — oyun ekranı ve sheet'ler README "Game
+  screen / Clue sheet / Swap sheet" birebir: gradyan gövde, avatarlı skor,
+  sıra pill'i, `BoardFrame` + r6 hücreler, rack/alt bar, anlatım renkleri,
+  `SheetShell`, `AdService` kapısı + çevrimdışı toast. Davranış değişmedi.
+  Emülatör kontrol listesi: `docs/HANDOFF_DESIGN_B.md`.
+
 **Sıradaki (planlı, yapılmadı):**
-- **Tasarım oturumu B** — ekranların README spec'ine göre yeniden yapımı
-  (harita, sonuç, sheet'ler, ayarlar UI, onboarding/consent/ATT, shop, legal);
-  emülatörde ikon/splash/font doğrulaması.
+- **Tasarım oturumu C** — sonuç ekranları, harita, ana ekran, ayarlar UI,
+  onboarding/consent/ATT, shop, legal; ⋯ menüsü. Önce B'nin emülatör listesi.
 - FAZ 4 artıkları (`docs/HANDOFF_REFACTOR.md` "Bulgular"): alpha-only gölge
   renkleri token'a, dialog/bot-profil string'leri `.arb`'a, kullanılmayan
   `AppColors.gridCellSelected`/`star`, hücre-boyutu hesabının ortaklaştırılması,
