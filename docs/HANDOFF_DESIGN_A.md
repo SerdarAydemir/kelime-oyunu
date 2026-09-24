@@ -147,9 +147,10 @@ temaları token'lardan; `extensions: [AppTokens]`.
 - Tasarım metni olan yerlerde tasarım metni benimsendi: "Devam Et" → "Yarım
   kalan oyun", "Kazandın! 🎉" → "KAZANDIN", "Sonraki Bölüm" → "Bölüm {n} ·
   tırmanmaya devam", "Fark: N" → "fark N", "Ad" rozeti → "reklam".
-- Locale: `supportedLocales: [tr, en]` — tr şablon ve geri dönüş; İngilizce
-  cihazda UI İngilizce olur (bulmacalar Türkçe). Yalnız tr istenirse
-  `app.dart`'ta listeyi `[Locale('tr')]` yap.
+- Locale: `supportedLocales: [tr, en]`, ancak **A2 ile kilitlendi**:
+  `localeResolutionCallback` her zaman `tr` döner (bulmaca paketi yalnız
+  Türkçe). EN paketi gelince `app.dart`'taki callback silinir;
+  `test/app_locale_test.dart` cihaz en iken tr'yi doğrular.
 - "Sokrates" hiçbir yerde yok; bot profili adı `l10n.bot` ("Rakip"),
   id `rakip`, avatar `assets/images/rakip.png` (dosya henüz yok, eskisi de yoktu).
 - Testler `test/helpers/localized_app.dart` (`localizedApp` /
@@ -166,18 +167,15 @@ temaları token'lardan; `extensions: [AppTokens]`.
   temizlendi (9.6 KB → 1.9 KB).
 - Raster'lar ImageMagick (rsvg delegate) ile `assets/icon/`'a:
   - `app_icon.png` 1024 (tam ikon, iOS düz), `app_icon_foreground.png` 1024
-    (çizim %88 dolulukta; flutter_launcher_icons ayrıca %16 inset ekler →
-    etkin ~%60, Android güvenli bölgeye uygun), `app_icon_background.png`
-    (LOGO_BG 160° gradyan, `-sparse-color barycentric`), `splash_logo.png`
-    480 (= 120 dp @4x, r28 yuvarlatılmış tile).
-  - Komutlar `flutter_launcher_icons.yaml` başlığında ve aşağıda:
-    ```bash
-    magick -background none -density 384 docs/design/app-icon-1a.svg -resize 1024x1024 assets/icon/app_icon.png
-    magick -background none -density 384 docs/design/app-icon-1a-foreground.svg -resize 900x900 -gravity center -background none -extent 1024x1024 assets/icon/app_icon_foreground.png
-    magick -size 1024x1024 xc: -sparse-color barycentric '288,-105 rgb(28,51,88) 736,1129 rgb(11,26,51)' assets/icon/app_icon_background.png
-    magick assets/icon/app_icon.png \( -size 1024x1024 xc:none -fill white -draw "roundrectangle 0,0 1023,1023 239,239" \) -compose DstIn -composite -resize 480x480 assets/icon/splash_logo.png
-    dart run flutter_launcher_icons && dart run flutter_native_splash:create
-    ```
+    (A2: çizim trim'lenip ortalanır, en uzak köşe merkezden 31.4 dp — 108 dp
+    kanvasta 66 dp güvenli bölge içinde; `adaptive_icon_foreground_inset: 0`),
+    `app_icon_background.png` (LOGO_BG 160° gradyan), `splash_logo.png` 480
+    (= 120 dp @4x, r28 tile; flutter_native_splash kaynağı xxxhdpi sayar,
+    1024 px verilse 256 dp görünürdü).
+  - **Tek komut: `tools/make_icons.sh`** — dört PNG'yi SVG'lerden üretir,
+    güvenli-bölge kontrolü yapar, `flutter_launcher_icons` ve
+    `flutter_native_splash:create`'i çalıştırır. Çıktılar deterministik
+    (ikinci koşuda diff yok).
 - Splash: `flutter_native_splash` (native: `bgFlat` açık/koyu + logo tile,
   Android 12 + iOS storyboard) **ve** `/` rotasında `SplashScreen` (tam
   tasarım: tile, "Kelime Zirvesi" Lora 40, tag overline, 120×3 ilerleme
@@ -198,12 +196,22 @@ temaları token'lardan; `extensions: [AppTokens]`.
 
 - `flutter analyze` 0 sorun, `flutter test` 219/219, `lib/` altında 300 satır
   üstü dosya yok.
-- **Cihaz/emülatörde bakılmadı**: launcher ikonu (dairesel maske dağ
-  tabanının köşelerini kırpar — tasarım kare ikon), native splash → Flutter
-  splash geçişi, Lora/Nunito render'ı, ipucu taşması. Oturum B'nin ilk işi.
+- **Cihaz/emülatörde bakılmadı**: launcher ikonu (A2 sonrası dairesel/kare/
+  damla maskelerde geometrik olarak tam sığar, gözle doğrulanmadı), native
+  splash → Flutter splash geçişi, Lora/Nunito render'ı, ipucu taşması.
+  Oturum B'nin ilk işi.
 - `flutter build apk` bu oturumda çalıştırılmadı (Android kaynakları
   flutter_native_splash/flutter_launcher_icons tarafından yazıldı; Gradle
   doğrulaması yok).
+
+## A2 düzeltmeleri (2026-09-24, aynı gün)
+
+| Commit | Ne |
+|---|---|
+| `fix(l10n): pin the app locale to Turkish…` | `localeResolutionCallback` → tr; `test/app_locale_test.dart` |
+| `fix(ui): gridLine token and a distinct light letter cell` | `AppTokens.gridLine` (dark `cellClue`, light `boardBorder`), `light.cellLetter` #fffdf7; sapma kaydı `docs/design/README.md` "Flutter sapmaları" |
+| `fix(icons): keep the adaptive foreground inside the 66 dp safe zone` | foreground trim + 440 px, inset 0 |
+| `build(icons): tools/make_icons.sh` | SVG → PNG → platform kaynakları tek script |
 
 ## Açık kalanlar / Oturum B'ye notlar
 
