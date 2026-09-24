@@ -1,6 +1,7 @@
 // lib/features/gameplay/widgets/grid_static_painter.dart
 
 import 'package:flutter/material.dart';
+import 'package:kelime_oyunu/core/constants/app_dimensions.dart';
 import 'package:kelime_oyunu/core/constants/app_typography.dart';
 import 'package:kelime_oyunu/core/theme/app_tokens.dart';
 import 'package:kelime_oyunu/core/widgets/app_logo.dart';
@@ -42,11 +43,22 @@ class GridStaticPainter extends CustomPainter {
 
   static const ClueRenderer _clueRenderer = ClueRenderer();
 
+  /// Half the 2 dp gap between cells (README "Board": gap 2, cell r6). Each
+  /// cell is painted inset by this inside its [cellSize] slot, so the
+  /// `gridLine` fill underneath shows through as the gap. Slot geometry —
+  /// and therefore hit-testing and the narration overlay — is unchanged.
+  static const double _gap = AppDimensions.gridCellGap / 2;
+
+  /// A cell's painted shape inside its slot.
+  static RRect cellShape(Rect slot) =>
+      RRect.fromRectAndRadius(slot.deflate(_gap), const Radius.circular(AppDimensions.radiusCell));
+
   @override
   void paint(Canvas canvas, Size size) {
     // NOTE: clue direction arrows are NOT drawn here — the dynamic painter
     // draws them as its final pass so they stay on top of pending tiles and
     // hover fills (this layer sits below the dynamic one).
+    canvas.drawRect(Offset.zero & size, Paint()..color = tokens.gridLine);
     for (var row = 0; row < puzzle.grid.rows; row++) {
       for (var col = 0; col < puzzle.grid.cols; col++) {
         final cell = WordCell(row: row, col: col);
@@ -64,22 +76,21 @@ class GridStaticPainter extends CustomPainter {
         }
       }
     }
-    _drawGridLines(canvas, size);
   }
 
   void _drawBlankCell(Canvas canvas, Rect rect) {
-    canvas.drawRect(rect, Paint()..color = tokens.surface);
+    canvas.drawRRect(cellShape(rect), Paint()..color = tokens.surface);
   }
 
   // Decorative top-left corner: the Kelime Zirvesi logo on its fixed navy
   // ground (design README "Board": corner cell = logo on #0b1a33, both themes).
   void _drawBrandCorner(Canvas canvas, Rect rect) {
-    canvas.drawRect(rect, Paint()..color = appLogoGround);
+    canvas.drawRRect(cellShape(rect), Paint()..color = appLogoGround);
     paintAppLogo(canvas, rect.deflate(cellSize * 0.12));
   }
 
   void _drawLetterCell(Canvas canvas, Rect rect, WordCell cell) {
-    canvas.drawRect(rect, Paint()..color = tokens.cellLetter);
+    canvas.drawRRect(cellShape(rect), Paint()..color = tokens.cellLetter);
     // Suppressed: a narration tile is still flying here — draw the cell empty
     // so the glyph pops in exactly when the tile lands (no double image).
     final letter = suppressedCells.contains(cell) ? null : board[cell];
@@ -113,20 +124,6 @@ class GridStaticPainter extends CustomPainter {
       canvas,
       Offset(rect.left + (cellSize - tp.width) / 2, rect.top + (cellSize - tp.height) / 2),
     );
-  }
-
-  void _drawGridLines(Canvas canvas, Size size) {
-    final paint = Paint()
-      ..color = tokens.gridLine
-      ..strokeWidth = 0.5;
-    for (var col = 0; col <= puzzle.grid.cols; col++) {
-      final x = col * cellSize;
-      canvas.drawLine(Offset(x, 0), Offset(x, size.height), paint);
-    }
-    for (var row = 0; row <= puzzle.grid.rows; row++) {
-      final y = row * cellSize;
-      canvas.drawLine(Offset(0, y), Offset(size.width, y), paint);
-    }
   }
 
   @override

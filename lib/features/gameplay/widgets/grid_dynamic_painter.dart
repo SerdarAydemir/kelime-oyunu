@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:kelime_oyunu/core/constants/app_typography.dart';
+import 'package:kelime_oyunu/features/gameplay/widgets/grid_static_painter.dart';
 import 'package:kelime_oyunu/core/theme/app_tokens.dart';
 import 'package:kelime_oyunu/data/models/puzzle.dart';
 import 'package:kelime_oyunu/features/gameplay/engine/score_engine.dart';
@@ -58,9 +59,10 @@ class GridDynamicPainter extends CustomPainter {
     if (hover != null) {
       final rect = Rect.fromLTWH(hover.col * cellSize, hover.row * cellSize, cellSize, cellSize);
       final base = hoverValid ? tokens.success : tokens.error;
-      canvas.drawRect(rect, Paint()..color = base.withValues(alpha: hoverValid ? 0.35 : 0.20));
-      canvas.drawRect(
-        rect.deflate(1),
+      final shape = GridStaticPainter.cellShape(rect);
+      canvas.drawRRect(shape, Paint()..color = base.withValues(alpha: hoverValid ? 0.35 : 0.20));
+      canvas.drawRRect(
+        shape.deflate(1),
         Paint()
           ..style = PaintingStyle.stroke
           ..strokeWidth = 2
@@ -78,10 +80,10 @@ class GridDynamicPainter extends CustomPainter {
         cellSize,
         cellSize,
       );
-      final rrect = RRect.fromRectAndRadius(rect.deflate(1), Radius.circular(cellSize * 0.12));
+      final rrect = GridStaticPainter.cellShape(rect);
       canvas.drawRRect(rrect, Paint()..color = tokens.cellPending);
       canvas.drawRRect(
-        rrect,
+        rrect.deflate(0.75),
         Paint()
           ..style = PaintingStyle.stroke
           ..strokeWidth = 1.5

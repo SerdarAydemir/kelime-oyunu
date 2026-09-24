@@ -14,6 +14,7 @@ import 'package:kelime_oyunu/features/gameplay/engine/rack_manager.dart';
 import 'package:kelime_oyunu/features/gameplay/view/game_active_queries.dart';
 import 'package:kelime_oyunu/features/gameplay/view/game_dialogs.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/action_bar.dart';
+import 'package:kelime_oyunu/features/gameplay/widgets/board_frame.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/grid_painter.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/level_top_bar.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/narration_controller.dart';
@@ -164,47 +165,54 @@ class _GameActiveBodyState extends State<GameActiveBody>
                 ),
                 Expanded(
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
-                    // GridPainter sizes itself to fill this bounded area (largest
-                    // square cells that fit) and centres the grid — no scroll view.
-                    // The narration overlay stacks on top with the SAME cell math so
-                    // its badges land on the right cells.
-                    child: Stack(
-                      // Score badges fly OUT of the grid area up to the header
-                      // (the "Sen" pill / bot avatar) — don't clip them mid-path.
-                      clipBehavior: Clip.none,
-                      children: [
-                        GridPainter(
-                          puzzle: state.puzzle,
-                          board: state.board,
-                          pendingPlacements: state.pendingPlacements,
-                          revealedWordIds: state.revealedWordIds,
-                          botPlacedCells: state.botPlacedCells,
-                          // Hide letters mid-flight so they pop in as their tile lands.
-                          suppressedCells: _narration.suppressedCells,
-                          revealMode: _revealMode,
-                          onCellTap: (cell, bottomHalf) => _onCellTap(context, cell, bottomHalf),
-                          isCellPlaceable: state.isPlaceable,
-                          onCellDrop: (data, cell) => _onCellDrop(context, data, cell),
-                          pendingDragEnabled: _canReveal && !_revealMode,
-                          rackIndexForPending: state.rackIndexForPending,
-                          onPendingDragCancelled: (cell) =>
-                              context.read<GameBloc>().add(LetterRecalled(cell)),
-                        ),
-                        // Non-interactive: badges only. The narrating tap-catcher
-                        // (above the whole body) owns input while a story plays.
-                        Positioned.fill(
-                          child: IgnorePointer(
-                            child: NarrationLayer(
-                              controller: _narration,
-                              puzzle: state.puzzle,
-                              rackKey: _rackKey,
-                              botAvatarKey: _avatarKey,
-                              playerScoreKey: _playerScoreKey,
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: AppDimensions.space16,
+                      vertical: AppDimensions.space8,
+                    ),
+                    // BoardFrame picks the largest grid that fits and gives both
+                    // layers EXACT grid-sized constraints, so GridPainter and the
+                    // narration overlay derive the same cell size — badges land on
+                    // the right cells. No scroll view.
+                    child: BoardFrame(
+                      rows: state.puzzle.grid.rows,
+                      cols: state.puzzle.grid.cols,
+                      child: Stack(
+                        // Score badges fly OUT of the grid area up to the header
+                        // (the score / bot avatar) — don't clip them mid-path.
+                        clipBehavior: Clip.none,
+                        children: [
+                          GridPainter(
+                            puzzle: state.puzzle,
+                            board: state.board,
+                            pendingPlacements: state.pendingPlacements,
+                            revealedWordIds: state.revealedWordIds,
+                            botPlacedCells: state.botPlacedCells,
+                            // Hide letters mid-flight so they pop in as their tile lands.
+                            suppressedCells: _narration.suppressedCells,
+                            revealMode: _revealMode,
+                            onCellTap: (cell, bottomHalf) => _onCellTap(context, cell, bottomHalf),
+                            isCellPlaceable: state.isPlaceable,
+                            onCellDrop: (data, cell) => _onCellDrop(context, data, cell),
+                            pendingDragEnabled: _canReveal && !_revealMode,
+                            rackIndexForPending: state.rackIndexForPending,
+                            onPendingDragCancelled: (cell) =>
+                                context.read<GameBloc>().add(LetterRecalled(cell)),
+                          ),
+                          // Non-interactive: badges only. The narrating tap-catcher
+                          // (above the whole body) owns input while a story plays.
+                          Positioned.fill(
+                            child: IgnorePointer(
+                              child: NarrationLayer(
+                                controller: _narration,
+                                puzzle: state.puzzle,
+                                rackKey: _rackKey,
+                                botAvatarKey: _avatarKey,
+                                playerScoreKey: _playerScoreKey,
+                              ),
                             ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                 ),
