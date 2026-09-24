@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics><meta name="design_doc_mode" content="canvas"><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet"><style>body{margin:0;background:#ecebe7;font-family:system-ui,sans-serif}a{color:#1a1a1a}a:hover{color:#2a78d6}.dv-turn{padding:40px 44px 32px;border-bottom:1px solid rgba(0,0,0,.08);scroll-margin-top:16px}.dv-thd{display:flex;align-items:baseline;gap:10px;margin:0 0 20px;max-width:1100px}.dv-tid{font:600 10px ui-monospace,Menlo,monospace;padding:3px 7px;background:#1a1a1a;color:#fff;border-radius:4px;text-decoration:none}.dv-tname{font:600 13px/1.4 system-ui,sans-serif;color:#1a1a1a}.dv-opts{display:flex;flex-direction:column;gap:56px;align-items:flex-start}.dv-oid{font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(0,0,0,.08);color:#1a1a1a;border-radius:5px;text-decoration:none}.dv-olabel{display:flex;align-items:baseline;gap:8px;font:400 12px/1.3 system-ui,sans-serif;color:rgba(0,0,0,.6);margin-bottom:14px}.dv-row{display:flex;gap:28px;flex-wrap:wrap;align-items:flex-start}.dv-row:target .dv-oid{background:#2a78d6;color:#fff}.shot{display:flex;flex-direction:column;gap:8px;flex:none}.tl{font:600 11px system-ui;color:rgba(0,0,0,.55);letter-spacing:.4px}.ph{width:390px;height:844px;border-radius:46px;overflow:hidden;position:relative;box-shadow:0 24px 60px rgba(0,0,0,.28),0 0 0 9px #161616,0 0 0 11px #3a3a3a;flex:none}.sb{position:absolute;top:0;left:0;right:0;height:50px;display:flex;justify-content:space-between;align-items:center;padding:0 30px;font:600 15px system-ui;z-index:5}.hi{position:absolute;bottom:8px;left:128px;width:134px;height:5px;border-radius:3px;opacity:.45;z-index:6}.scr{position:absolute;inset:0;overflow-y:auto;scrollbar-width:none}.scr::-webkit-scrollbar{display:none}.ic{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center}.chk{background-image:linear-gradient(45deg,#ddd 25%,transparent 25%),linear-gradient(-45deg,#ddd 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#ddd 75%),linear-gradient(-45deg,transparent 75%,#ddd 75%);background-size:16px 16px;background-position:0 0,0 8px,8px -8px,-8px 0}@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(242,194,122,.55)}70%{box-shadow:0 0 0 14px rgba(242,194,122,0)}}@keyframes glow{0%,100%{opacity:.7}50%{opacity:1}}</style></helmet>
+
+<section class="dv-turn" id="t2">
+<div class="dv-thd"><a class="dv-tid" href="#t2">2</a><span class="dv-tname">Kelime Zirvesi — final tasarım. Tüm ekranlar koyu + açık tema, durumlar, kimlik (ikon 1A), mağaza görselleri. Token/tipografi/metin tablosu ayrı sayfada: <a href="Kelime Zirvesi Design System.dc.html">Design System</a>. Oyun ekranı (Sıra sende) ve Ayarlar etkileşimli. Tweaks: bölüm numarası, reklam etiketleri.</span></div>
+<div class="dv-opts">
+
+<!-- ═══ R1 KİMLİK ═══ -->
+<div>
+<div class="dv-olabel"><a class="dv-oid" href="#r1">R1</a><b>Kimlik</b> — seçilen ikon: 1A Sıradağ + güneş · uygulama ikonu (1024, Android adaptive, iOS düz), splash</div>
+<div class="dv-row" id="r1">
+  <div class="shot"><div class="tl">İkon · 1024×1024 (ön izleme 220)</div>
+    <div style="width:220px;height:220px;border-radius:50px;background:linear-gradient(160deg,#1c3358 0%,#0b1a33 100%);position:relative;overflow:hidden;box-shadow:0 20px 40px rgba(0,0,0,.25)">
+      <svg viewBox="0 0 40 40" width="220" height="220" style="position:absolute;inset:0"><circle cx="10" cy="8.5" r="3.4" fill="#f2c27a"></circle><rect x="1.5" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="6.9" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="12.3" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="17.7" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="23.1" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="28.5" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="33.9" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="1.5" y="28.6" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="6.9" y="28.6" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="12.3" y="28.6" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="17.7" y="28.6" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="23.1" y="28.6" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="28.5" y="28.6" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="6.9" y="23.2" width="4.6" height="4.6" rx="1" fill="#f6ecd9"></rect><rect x="17.7" y="23.2" width="4.6" height="4.6" rx="1" fill="#e9dcc1"></rect><rect x="23.1" y="23.2" width="4.6" height="4.6" rx="1" fill="#e9dcc1"></rect><rect x="28.5" y="23.2" width="4.6" height="4.6" rx="1" fill="#e9dcc1"></rect><rect x="17.7" y="17.8" width="4.6" height="4.6" rx="1" fill="#f6ecd9"></rect><rect x="23.1" y="17.8" width="4.6" height="4.6" rx="1" fill="#f6ecd9"></rect><rect x="23.1" y="12.4" width="4.6" height="4.6" rx="1" fill="#f2c27a"></rect></svg>
+    </div>
+    <div class="tl" style="font-weight:400">Lacivert gradyan #1c3358→#0b1a33 · dağ #f6ecd9 · güneş #f2c27a · tepe #c77a3c</div>
+  </div>
+  <div class="shot"><div class="tl">Android adaptive · ön plan (108 dp, güvenli alan 66 dp)</div>
+    <div class="chk" style="width:220px;height:220px;position:relative;border-radius:8px;overflow:hidden">
+      <div style="position:absolute;inset:26px;border-radius:50%;border:1.5px dashed rgba(0,0,0,.35)"></div>
+      <svg viewBox="0 0 40 40" width="150" height="150" style="position:absolute;left:35px;top:35px"><circle cx="10" cy="8.5" r="3.4" fill="#f2c27a"></circle><rect x="1.5" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="6.9" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="12.3" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="17.7" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="23.1" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="28.5" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="33.9" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="1.5" y="28.6" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="6.9" y="28.6" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="12.3" y="28.6" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="17.7" y="28.6" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="23.1" y="28.6" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="28.5" y="28.6" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="6.9" y="23.2" width="4.6" height="4.6" rx="1" fill="#f6ecd9"></rect><rect x="17.7" y="23.2" width="4.6" height="4.6" rx="1" fill="#e9dcc1"></rect><rect x="23.1" y="23.2" width="4.6" height="4.6" rx="1" fill="#e9dcc1"></rect><rect x="28.5" y="23.2" width="4.6" height="4.6" rx="1" fill="#e9dcc1"></rect><rect x="17.7" y="17.8" width="4.6" height="4.6" rx="1" fill="#f6ecd9"></rect><rect x="23.1" y="17.8" width="4.6" height="4.6" rx="1" fill="#f6ecd9"></rect><rect x="23.1" y="12.4" width="4.6" height="4.6" rx="1" fill="#f2c27a"></rect></svg>
+    </div>
+  </div>
+  <div class="shot"><div class="tl">Android adaptive · arka plan</div>
+    <div style="width:220px;height:220px;border-radius:8px;background:linear-gradient(160deg,#1c3358 0%,#0b1a33 100%)"></div>
+  </div>
+  <div class="shot"><div class="tl">Adaptive maskeler · daire / kare</div>
+    <div style="display:flex;gap:16px">
+      <div style="width:102px;height:102px;border-radius:50%;background:linear-gradient(160deg,#1c3358,#0b1a33);position:relative;overflow:hidden"><svg viewBox="0 0 40 40" width="102" height="102" style="position:absolute;inset:0;transform:scale(.72)"><circle cx="10" cy="8.5" r="3.4" fill="#f2c27a"></circle><rect x="1.5" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="6.9" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="12.3" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="17.7" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="23.1" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="28.5" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="33.9" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="1.5" y="28.6" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="6.9" y="28.6" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="12.3" y="28.6" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="17.7" y="28.6" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="23.1" y="28.6" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="28.5" y="28.6" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="6.9" y="23.2" width="4.6" height="4.6" rx="1" fill="#f6ecd9"></rect><rect x="17.7" y="23.2" width="4.6" height="4.6" rx="1" fill="#e9dcc1"></rect><rect x="23.1" y="23.2" width="4.6" height="4.6" rx="1" fill="#e9dcc1"></rect><rect x="28.5" y="23.2" width="4.6" height="4.6" rx="1" fill="#e9dcc1"></rect><rect x="17.7" y="17.8" width="4.6" height="4.6" rx="1" fill="#f6ecd9"></rect><rect x="23.1" y="17.8" width="4.6" height="4.6" rx="1" fill="#f6ecd9"></rect><rect x="23.1" y="12.4" width="4.6" height="4.6" rx="1" fill="#f2c27a"></rect></svg></div>
+      <div style="width:102px;height:102px;border-radius:18px;background:linear-gradient(160deg,#1c3358,#0b1a33);position:relative;overflow:hidden"><svg viewBox="0 0 40 40" width="102" height="102" style="position:absolute;inset:0;transform:scale(.72)"><circle cx="10" cy="8.5" r="3.4" fill="#f2c27a"></circle><rect x="1.5" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="6.9" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="12.3" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="17.7" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="23.1" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="28.5" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="33.9" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="1.5" y="28.6" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="6.9" y="28.6" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="12.3" y="28.6" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="17.7" y="28.6" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="23.1" y="28.6" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="28.5" y="28.6" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="6.9" y="23.2" width="4.6" height="4.6" rx="1" fill="#f6ecd9"></rect><rect x="17.7" y="23.2" width="4.6" height="4.6" rx="1" fill="#e9dcc1"></rect><rect x="23.1" y="23.2" width="4.6" height="4.6" rx="1" fill="#e9dcc1"></rect><rect x="28.5" y="23.2" width="4.6" height="4.6" rx="1" fill="#e9dcc1"></rect><rect x="17.7" y="17.8" width="4.6" height="4.6" rx="1" fill="#f6ecd9"></rect><rect x="23.1" y="17.8" width="4.6" height="4.6" rx="1" fill="#f6ecd9"></rect><rect x="23.1" y="12.4" width="4.6" height="4.6" rx="1" fill="#f2c27a"></rect></svg></div>
+    </div>
+  </div>
+  <div class="shot"><div class="tl">iOS · düz (alfa yok, sistem köşeleri)</div>
+    <div style="width:220px;height:220px;border-radius:49px;background:linear-gradient(160deg,#1c3358 0%,#0b1a33 100%);position:relative;overflow:hidden">
+      <svg viewBox="0 0 40 40" width="220" height="220" style="position:absolute;inset:0"><circle cx="10" cy="8.5" r="3.4" fill="#f2c27a"></circle><rect x="1.5" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="6.9" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="12.3" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="17.7" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="23.1" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="28.5" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="33.9" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="1.5" y="28.6" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="6.9" y="28.6" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="12.3" y="28.6" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="17.7" y="28.6" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="23.1" y="28.6" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="28.5" y="28.6" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="6.9" y="23.2" width="4.6" height="4.6" rx="1" fill="#f6ecd9"></rect><rect x="17.7" y="23.2" width="4.6" height="4.6" rx="1" fill="#e9dcc1"></rect><rect x="23.1" y="23.2" width="4.6" height="4.6" rx="1" fill="#e9dcc1"></rect><rect x="28.5" y="23.2" width="4.6" height="4.6" rx="1" fill="#e9dcc1"></rect><rect x="17.7" y="17.8" width="4.6" height="4.6" rx="1" fill="#f6ecd9"></rect><rect x="23.1" y="17.8" width="4.6" height="4.6" rx="1" fill="#f6ecd9"></rect><rect x="23.1" y="12.4" width="4.6" height="4.6" rx="1" fill="#f2c27a"></rect></svg>
+    </div>
+  </div>
+  <sc-for list="{{ themes }}" as="T" hint-placeholder-count="2">
+  <div class="shot"><div class="tl">Splash · {{ T.label }}</div>
+  <div class="ph" data-screen-label="Splash {{ T.label }}" style="background:{{ T.bgFlat }};color:{{ T.text }};font-family:'Nunito Sans',sans-serif">
+    <div class="sb" style="color:{{ T.text }}"><span>9:41</span><span style="font-size:12px;letter-spacing:1px">▮▮▮ ◠ ▭</span></div>
+    <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px">
+      <div style="width:120px;height:120px;border-radius:28px;background:linear-gradient(160deg,#1c3358 0%,#0b1a33 100%);overflow:hidden;box-shadow:0 16px 40px rgba(0,0,0,.25)"><svg viewBox="0 0 40 40" width="120" height="120"><circle cx="10" cy="8.5" r="3.4" fill="#f2c27a"></circle><rect x="1.5" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="6.9" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="12.3" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="17.7" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="23.1" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="28.5" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="33.9" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="1.5" y="28.6" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="6.9" y="28.6" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="12.3" y="28.6" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="17.7" y="28.6" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="23.1" y="28.6" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="28.5" y="28.6" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="6.9" y="23.2" width="4.6" height="4.6" rx="1" fill="#f6ecd9"></rect><rect x="17.7" y="23.2" width="4.6" height="4.6" rx="1" fill="#e9dcc1"></rect><rect x="23.1" y="23.2" width="4.6" height="4.6" rx="1" fill="#e9dcc1"></rect><rect x="28.5" y="23.2" width="4.6" height="4.6" rx="1" fill="#e9dcc1"></rect><rect x="17.7" y="17.8" width="4.6" height="4.6" rx="1" fill="#f6ecd9"></rect><rect x="23.1" y="17.8" width="4.6" height="4.6" rx="1" fill="#f6ecd9"></rect><rect x="23.1" y="12.4" width="4.6" height="4.6" rx="1" fill="#f2c27a"></rect></svg></div>
+      <div style="font:700 40px/1 'Lora',serif">Kelime Zirvesi</div>
+      <div style="font:600 11px 'Nunito Sans';letter-spacing:3px;opacity:.7">RAKİBE KARŞI ÇENGEL BULMACA</div>
+    </div>
+    <div style="position:absolute;bottom:64px;left:0;right:0;display:flex;justify-content:center"><div style="width:120px;height:3px;border-radius:2px;background:{{ T.surface }};overflow:hidden"><div style="width:60%;height:100%;background:{{ T.accent }}"></div></div></div>
+    <div class="hi" style="background:{{ T.text }}"></div>
+  </div></div>
+  </sc-for>
+</div>
+</div>
+
+<!-- ═══ R2 ONBOARDING ═══ -->
+<div>
+<div class="dv-olabel"><a class="dv-oid" href="#r2">R2</a><b>Onboarding</b> — 3 kart, atlanabilir; kart 1 gösteriliyor (ipucu → harf koy → onayla → Rakip cevap verir)</div>
+<div class="dv-row" id="r2">
+  <sc-for list="{{ themes }}" as="T" hint-placeholder-count="2">
+  <div class="shot"><div class="tl">Onboarding 1/3 · {{ T.label }}</div>
+  <div class="ph" data-screen-label="Onboarding {{ T.label }}" style="background:{{ T.bgGame }};color:{{ T.text }};font-family:'Nunito Sans',sans-serif">
+    <div class="sb" style="color:{{ T.text }}"><span>9:41</span><span style="font-size:12px;letter-spacing:1px">▮▮▮ ◠ ▭</span></div>
+    <div style="position:absolute;top:62px;right:24px;font:700 14px 'Nunito Sans';opacity:.75">Atla</div>
+    <div style="position:absolute;top:150px;left:24px;right:24px;display:flex;flex-direction:column;gap:22px">
+      <div style="background:{{ T.board }};border:1px solid {{ T.boardBorder }};border-radius:16px;padding:22px 18px 18px;box-shadow:{{ T.boardShadow }};position:relative">
+        <div style="display:flex;gap:2px;justify-content:center">
+          <div style="width:56px;height:56px;border-radius:6px;background:{{ T.cellClue }};color:#3a2a1c;font:600 10px/1.1 'Nunito Sans';display:flex;align-items:center;justify-content:center;position:relative;text-align:center">Vilayet<div style="position:absolute;right:0;top:50%;margin-top:-4px;border-top:4px solid transparent;border-bottom:4px solid transparent;border-left:5px solid #c77a3c"></div></div>
+          <div style="width:56px;height:56px;border-radius:6px;background:{{ T.cellPending }};display:flex;align-items:center;justify-content:center;font:700 24px 'Lora',serif;color:#c77a3c">İ</div>
+          <div style="width:56px;height:56px;border-radius:6px;background:{{ T.cellLetter }};box-shadow:inset 0 0 0 2px rgba(242,194,122,.9)"></div>
+          <div style="width:56px;height:56px;border-radius:6px;background:{{ T.cellLetter }}"></div>
+        </div>
+        <div style="position:absolute;top:-16px;right:92px;width:48px;height:52px;border-radius:10px;background:{{ T.accent }};color:{{ T.accentInk }};display:flex;align-items:center;justify-content:center;font:700 24px 'Lora',serif;transform:rotate(-8deg);box-shadow:0 12px 24px rgba(242,194,122,.4);animation:bob 2.4s ease-in-out infinite">L</div>
+      </div>
+      <div style="text-align:center;padding:0 8px">
+        <div style="font:600 11px 'Nunito Sans';letter-spacing:3px;color:{{ T.muted }}">1 / 3</div>
+        <div style="font:700 28px/1.15 'Lora',serif;margin-top:10px;text-wrap:balance">İpucunu oku, harfi yerleştir</div>
+        <div style="font:400 15px/1.55 'Nunito Sans';color:{{ T.muted }};margin-top:12px;text-wrap:pretty">Ok hangi yöne gidiyorsa kelime o yöne yazılır. Tepsiden bir harf seç, boş hücreye dokun.</div>
+      </div>
+      <div style="display:flex;justify-content:center;gap:6px;flex-wrap:wrap">
+        <div style="padding:6px 12px;border-radius:999px;background:{{ T.accent }};color:{{ T.accentInk }};font:700 11px 'Nunito Sans'">İpucu</div>
+        <div style="padding:6px 12px;border-radius:999px;border:1px solid {{ T.border }};font:600 11px 'Nunito Sans';color:{{ T.muted }}">Harf koy</div>
+        <div style="padding:6px 12px;border-radius:999px;border:1px solid {{ T.border }};font:600 11px 'Nunito Sans';color:{{ T.muted }}">Onayla</div>
+        <div style="padding:6px 12px;border-radius:999px;border:1px solid {{ T.border }};font:600 11px 'Nunito Sans';color:{{ T.muted }}">Rakip cevap verir</div>
+      </div>
+    </div>
+    <div style="position:absolute;left:24px;right:24px;bottom:64px;display:flex;flex-direction:column;gap:14px;align-items:center">
+      <div style="display:flex;gap:6px"><div style="width:22px;height:6px;border-radius:3px;background:{{ T.accent }}"></div><div style="width:6px;height:6px;border-radius:3px;background:{{ T.faint }}"></div><div style="width:6px;height:6px;border-radius:3px;background:{{ T.faint }}"></div></div>
+      <div style="align-self:stretch;height:56px;border-radius:999px;background:{{ T.accent }};color:{{ T.accentInk }};display:flex;align-items:center;justify-content:center;font:800 18px 'Nunito Sans'">Devam</div>
+    </div>
+    <div class="hi" style="background:{{ T.text }}"></div>
+  </div></div>
+  </sc-for>
+</div>
+</div>
+
+<!-- ═══ R3 ANA EKRAN ═══ -->
+<div>
+<div class="dv-olabel"><a class="dv-oid" href="#r3">R3</a><b>Ana ekran</b> — koyu, açık, kaydedilmiş oyun yok</div>
+<div class="dv-row" id="r3">
+  <sc-for list="{{ homes }}" as="H" hint-placeholder-count="3">
+  <div class="shot"><div class="tl">{{ H.label }}</div>
+  <div class="ph" data-screen-label="Ana {{ H.label }}" style="background:{{ H.T.bgHome }};color:{{ H.T.text }};font-family:'Nunito Sans',sans-serif">
+    <div class="sb" style="color:{{ H.T.text }}"><span>9:41</span><span style="font-size:12px;letter-spacing:1px">▮▮▮ ◠ ▭</span></div>
+    <svg viewBox="0 0 390 844" width="390" height="844" style="position:absolute;inset:0">
+      <polygon points="-20,560 90,380 170,470 230,330 330,480 420,400 420,844 -20,844" fill="{{ H.T.mtn1 }}" opacity=".85"></polygon>
+      <polygon points="-20,640 60,540 150,600 250,470 320,560 420,520 420,844 -20,844" fill="{{ H.T.mtn2 }}"></polygon>
+      <polygon points="-20,720 120,620 210,680 300,600 420,660 420,844 -20,844" fill="{{ H.T.mtn3 }}"></polygon>
+      <path d="M195 700 C 150 660, 230 620, 190 580 C 160 550, 240 520, 230 490" stroke="#f2c27a" stroke-width="3" stroke-dasharray="6 8" fill="none" opacity=".9"></path>
+      <circle cx="230" cy="490" r="7" fill="#f2c27a"></circle>
+    </svg>
+    <div style="position:absolute;top:88px;left:0;right:0;text-align:center">
+      <div style="font:600 12px 'Nunito Sans';letter-spacing:3px;opacity:.8">{{ H.s.homeTag }}</div>
+      <div style="font:700 62px/.95 'Lora',serif;letter-spacing:-1px;margin-top:12px;white-space:pre-line">{{ H.s.appNameStacked }}</div>
+    </div>
+    <div style="position:absolute;top:268px;left:0;right:0;display:flex;justify-content:center">
+      <div style="display:flex;align-items:baseline;gap:8px;padding:10px 20px;border-radius:999px;background:{{ H.T.card }};backdrop-filter:blur(6px);border:1px solid {{ H.T.border }}">
+        <span style="font:600 13px 'Nunito Sans';opacity:.85">{{ H.s.now }}</span><span style="font:700 20px 'Lora',serif">{{ H.levelLabel }}</span><span style="font:600 13px 'Nunito Sans';opacity:.85">· 1.240 m</span>
+      </div>
+    </div>
+    <div style="position:absolute;left:24px;right:24px;bottom:64px;display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;justify-content:space-between;padding:0 6px 4px;font:600 12px 'Nunito Sans';opacity:.9"><span>{{ H.streakLine }}</span><span>{{ H.wordsLine }}</span></div>
+      <div style="display:flex;flex-direction:column;gap:2px;background:{{ H.T.card }};backdrop-filter:blur(8px);border-radius:18px;padding:16px 18px;border:1px solid {{ H.T.border }}">
+        <div style="font:700 13px 'Nunito Sans';opacity:.75">{{ H.saveTitle }}</div>
+        <div style="font:600 18px 'Lora',serif;margin-top:2px;opacity:{{ H.saveOpacity }}">{{ H.saveSub }}</div>
+      </div>
+      <div style="height:56px;border-radius:999px;background:{{ H.T.accent }};color:{{ H.T.accentInk }};display:flex;align-items:center;justify-content:center;font:800 18px 'Nunito Sans';box-shadow:0 10px 30px rgba(242,194,122,.35)">{{ H.cta }}</div>
+      <div style="display:flex;gap:10px">
+        <div style="flex:1;height:48px;border-radius:999px;border:1.5px solid {{ H.T.text }};opacity:.8;display:flex;align-items:center;justify-content:center;font:700 15px 'Nunito Sans'">{{ H.s.map }}</div>
+        <div style="flex:1;height:48px;border-radius:999px;border:1.5px solid {{ H.T.text }};opacity:.8;display:flex;align-items:center;justify-content:center;font:700 15px 'Nunito Sans'">{{ H.s.settings }}</div>
+      </div>
+    </div>
+    <div class="hi" style="background:{{ H.T.text }}"></div>
+  </div></div>
+  </sc-for>
+</div>
+</div>
+
+<!-- ═══ R4 HARİTA ═══ -->
+<div>
+<div class="dv-olabel"><a class="dv-oid" href="#r4">R4</a><b>Tırmanış haritası</b> — kaydırılabilir; aşağıya kaydırıldığında tüm geçmiş bulmacalar görünür ve tekrar oynanabilir; buradasın / sıradaki (kilit, numara yok) / uzak</div>
+<div class="dv-row" id="r4">
+  <sc-for list="{{ themes }}" as="T" hint-placeholder-count="2">
+  <div class="shot"><div class="tl">Harita · {{ T.label }}</div>
+  <div class="ph" data-screen-label="Harita {{ T.label }}" style="background:{{ T.fog }};color:{{ T.text }};font-family:'Nunito Sans',sans-serif">
+    <div class="scr" ref="{{ T.mapRef }}" style="background:{{ T.bgMap }}">
+      <div style="position:sticky;top:0;height:200px;background:linear-gradient(180deg,{{ T.fog }} 0%,{{ T.fog }} 35%,transparent 100%);z-index:3;pointer-events:none"></div>
+      <div style="position:sticky;top:0;margin-top:-200px;height:0;z-index:4">
+        <div class="sb" style="color:{{ T.text }}"><span>9:41</span><span style="font-size:12px;letter-spacing:1px">▮▮▮ ◠ ▭</span></div>
+        <div style="position:absolute;top:58px;left:16px;right:16px;display:flex;align-items:center;justify-content:space-between">
+          <div class="ic" style="background:{{ T.surface }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"></path></svg></div>
+          <div style="text-align:center"><div style="font:600 11px 'Nunito Sans';letter-spacing:3px;opacity:.7">TIRMANIŞ</div><div style="font:700 20px/1 'Lora',serif">{{ curLabel }} · 1.240 m</div></div>
+          <div style="width:40px"></div>
+        </div>
+        <div style="position:absolute;top:120px;left:0;right:0;text-align:center;font:600 12px 'Nunito Sans';opacity:.6;letter-spacing:1px">yukarısı sisin içinde…</div>
+      </div>
+      <div style="position:relative;width:390px;height:{{ mapH }}px;margin-top:-200px">
+        <svg width="390" height="{{ mapH }}" style="position:absolute;inset:0"><path d="{{ pathD }}" stroke="#f2c27a" stroke-width="3" stroke-dasharray="5 9" fill="none" opacity=".6"></path></svg>
+        <sc-for list="{{ nodes }}" as="n" hint-placeholder-count="12">
+          <sc-if value="{{ n.done }}" hint-placeholder-val="{{ false }}"><div style="position:absolute;left:{{ n.x }}px;top:{{ n.y }}px;width:48px;height:48px;margin:-24px;border-radius:12px;background:{{ T.board }};border:2px solid #f2c27a;color:#2a1a10;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:2px;padding:4px;cursor:pointer"><div style="border-radius:3px;background:{{ T.cellClue }}"></div><div style="border-radius:3px;background:{{ T.cellLetter }};display:flex;align-items:center;justify-content:center;font:700 11px 'Lora',serif">{{ n.n }}</div><div style="border-radius:3px;background:{{ T.cellLetter }}"></div><div style="border-radius:3px;background:#f2c27a"></div></div></sc-if>
+          <sc-if value="{{ n.cur }}" hint-placeholder-val="{{ false }}"><div data-cur="1" style="position:absolute;left:{{ n.x }}px;top:{{ n.y }}px;width:68px;height:68px;margin:-34px;border-radius:50%;background:#f2c27a;color:#2a1a10;display:flex;flex-direction:column;align-items:center;justify-content:center;font:700 24px/1 'Lora',serif;animation:pulse 2s infinite;box-shadow:0 0 40px rgba(242,194,122,.5)"><span>{{ n.n }}</span><span style="font:800 8px 'Nunito Sans';letter-spacing:1px;margin-top:2px">BURADASIN</span></div></sc-if>
+          <sc-if value="{{ n.next }}" hint-placeholder-val="{{ false }}"><div style="position:absolute;left:{{ n.x }}px;top:{{ n.y }}px;width:44px;height:44px;margin:-22px;border-radius:50%;border:2px dashed {{ T.faint }};color:{{ T.muted }};display:flex;align-items:center;justify-content:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="5" y="11" width="14" height="10" rx="2"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg></div></sc-if>
+          <sc-if value="{{ n.far }}" hint-placeholder-val="{{ false }}"><div style="position:absolute;left:{{ n.x }}px;top:{{ n.y }}px;width:14px;height:14px;margin:-7px;border-radius:50%;background:{{ T.faint }}"></div></sc-if>
+        </sc-for>
+        <div style="position:absolute;left:0;right:0;bottom:0;height:120px;display:flex;align-items:flex-end;justify-content:center;padding-bottom:40px;font:600 12px 'Nunito Sans';color:#2a1a10;opacity:.8">Kamp · başlangıç</div>
+      </div>
+    </div>
+    <div class="hi" style="background:{{ T.text }}"></div>
+  </div></div>
+  </sc-for>
+</div>
+</div>
+
+<!-- ═══ R5 OYUN ═══ -->
+<div>
+<div class="dv-olabel"><a class="dv-oid" href="#r5">R5</a><b>Oyun ekranı</b> — 9×7 tahta, hücre 50 dp, boşluk 2, tahta radius 16. Durumlar: sıra sende (etkileşimli), Rakip düşünüyor, kelime tamamlandı, harf uçuşu, yanlış harf geri döner, bağlantı yok</div>
+<div class="dv-row" id="r5">
+  <sc-for list="{{ games }}" as="G" hint-placeholder-count="12">
+  <div class="shot"><div class="tl">{{ G.label }}</div>
+  <div class="ph" data-screen-label="Oyun {{ G.label }}" style="background:{{ G.T.bgGame }};color:{{ G.T.text }};font-family:'Nunito Sans',sans-serif">
+    <div class="sb" style="color:{{ G.T.text }}"><span>9:41</span><span style="font-size:12px;letter-spacing:1px">▮▮▮ ◠ ▭</span></div>
+    <div style="position:absolute;top:56px;left:16px;right:16px;display:flex;align-items:center;justify-content:space-between">
+      <div class="ic" style="background:{{ G.T.surface }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"></path></svg></div>
+      <div style="text-align:center"><div style="font:600 11px 'Nunito Sans';letter-spacing:3px;opacity:.7">BÖLÜM</div><div style="font:700 22px/1 'Lora',serif">{{ cur }}</div></div>
+      <div class="ic" style="background:{{ G.T.surface }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="12" r="1.8"></circle><circle cx="12" cy="12" r="1.8"></circle><circle cx="19" cy="12" r="1.8"></circle></svg></div>
+    </div>
+    <div style="position:absolute;top:106px;left:16px;right:16px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px">
+      <div style="display:flex;align-items:center;gap:10px;opacity:{{ G.youOpacity }}"><div style="width:38px;height:38px;border-radius:50%;background:{{ G.T.accent }};overflow:hidden;flex:none"><svg width="38" height="38" viewBox="0 0 38 38"><circle cx="19" cy="14" r="7" fill="#2a1a10"></circle><path d="M6 38 C6 27 12 24 19 24 C26 24 32 27 32 38 Z" fill="#2a1a10"></path></svg></div><div><div style="font:600 11px 'Nunito Sans';opacity:.7">Sen</div><div style="font:700 22px/1 'Lora',serif">{{ G.you }}</div></div></div>
+      <div style="font:600 11px 'Nunito Sans';opacity:.55;letter-spacing:2px">VS</div>
+      <div style="display:flex;align-items:center;gap:10px;justify-content:flex-end;opacity:{{ G.botOpacity }}"><div style="text-align:right"><div style="font:600 11px 'Nunito Sans';opacity:.7">Rakip</div><div style="font:700 22px/1 'Lora',serif">{{ G.bot }}</div></div><div style="width:38px;height:38px;border-radius:50%;background:{{ G.T.bot }};overflow:hidden;flex:none;box-shadow:{{ G.botRing }}"><svg width="38" height="38" viewBox="0 0 38 38"><circle cx="19" cy="14" r="7" fill="#0b1a33"></circle><path d="M6 38 C6 27 12 24 19 24 C26 24 32 27 32 38 Z" fill="#0b1a33"></path></svg></div></div>
+    </div>
+    <div style="position:absolute;top:160px;left:0;right:0;display:flex;justify-content:center"><div style="padding:5px 12px;border-radius:999px;background:{{ G.pillBg }};color:{{ G.pillInk }};font:700 11px 'Nunito Sans';letter-spacing:.3px">{{ G.hint }}</div></div>
+    <div style="position:absolute;top:190px;left:12px;right:12px;background:{{ G.T.board }};border:1px solid {{ G.T.boardBorder }};border-radius:16px;padding:6px;box-shadow:{{ G.T.boardShadow }}">
+      <div style="display:grid;grid-template-columns:repeat(7,1fr);grid-auto-rows:50px;gap:2px">
+        <sc-for list="{{ G.cells }}" as="c" hint-placeholder-count="63">
+          <div onClick="{{ c.place }}" style="position:relative;border-radius:6px;overflow:hidden;background:{{ c.bg }};box-shadow:{{ c.glow }};display:flex;align-items:center;justify-content:center;text-align:center;cursor:pointer">
+            <sc-if value="{{ c.isCorner }}" hint-placeholder-val="{{ false }}"><svg width="44" height="44" viewBox="0 0 40 40"><circle cx="10" cy="8.5" r="3.4" fill="#f2c27a"></circle><rect x="1.5" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="6.9" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="12.3" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="17.7" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="23.1" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="28.5" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="33.9" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="1.5" y="28.6" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="6.9" y="28.6" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="12.3" y="28.6" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="17.7" y="28.6" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="23.1" y="28.6" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="28.5" y="28.6" width="4.6" height="4.6" rx="1" fill="#c77a3c"></rect><rect x="6.9" y="23.2" width="4.6" height="4.6" rx="1" fill="#f6ecd9"></rect><rect x="17.7" y="23.2" width="4.6" height="4.6" rx="1" fill="#e9dcc1"></rect><rect x="23.1" y="23.2" width="4.6" height="4.6" rx="1" fill="#e9dcc1"></rect><rect x="28.5" y="23.2" width="4.6" height="4.6" rx="1" fill="#e9dcc1"></rect><rect x="17.7" y="17.8" width="4.6" height="4.6" rx="1" fill="#f6ecd9"></rect><rect x="23.1" y="17.8" width="4.6" height="4.6" rx="1" fill="#f6ecd9"></rect><rect x="23.1" y="12.4" width="4.6" height="4.6" rx="1" fill="#f2c27a"></rect></svg></sc-if>
+            <sc-if value="{{ c.isClue }}" hint-placeholder-val="{{ false }}">
+              <div style="display:flex;flex-direction:column;justify-content:center;width:100%;height:100%;padding:2px 3px;color:{{ G.T.clueText }};font:600 {{ c.fs }}px/1.1 'Nunito Sans';text-wrap:balance;overflow-wrap:normal;hyphens:manual">
+                <div>{{ c.text }}</div>
+                <sc-if value="{{ c.isDouble }}" hint-placeholder-val="{{ false }}"><div style="height:1px;background:currentColor;margin:2px 2px;opacity:.5"></div><div>{{ c.text2 }}</div></sc-if>
+              </div>
+              <sc-if value="{{ c.down }}" hint-placeholder-val="{{ false }}"><div style="position:absolute;bottom:0;left:50%;margin-left:-4px;border-left:4px solid transparent;border-right:4px solid transparent;border-top:5px solid #c77a3c"></div></sc-if>
+              <sc-if value="{{ c.right }}" hint-placeholder-val="{{ false }}"><div style="position:absolute;right:0;top:50%;margin-top:-4px;border-top:4px solid transparent;border-bottom:4px solid transparent;border-left:5px solid #c77a3c"></div></sc-if>
+            </sc-if>
+            <sc-if value="{{ c.isLetter }}" hint-placeholder-val="{{ false }}"><div style="font:700 22px 'Lora',serif;color:{{ c.ink }}">{{ c.letter }}</div></sc-if>
+          </div>
+        </sc-for>
+      </div>
+      <sc-if value="{{ G.isWord }}" hint-placeholder-val="{{ false }}">
+        <div style="position:absolute;left:214px;top:34px;padding:6px 12px;border-radius:999px;background:#f2c27a;color:#2a1a10;font:800 15px 'Nunito Sans';box-shadow:0 8px 24px rgba(242,194,122,.6);animation:bob 1.6s ease-in-out infinite;display:flex;align-items:center;gap:4px"><span>+12</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 19V5M5 12l7-7 7 7"></path></svg></div>
+        <div style="position:absolute;left:162px;top:58px;width:50px;height:154px;border-radius:8px;pointer-events:none;box-shadow:0 0 0 3px #f2c27a,0 0 30px 6px rgba(242,194,122,.55);animation:glow 1.2s ease-in-out infinite"></div>
+      </sc-if>
+      <sc-if value="{{ G.isFly }}" hint-placeholder-val="{{ false }}">
+        <svg width="366" height="140" style="position:absolute;left:0;top:-70px;overflow:visible;pointer-events:none"><path d="M330 -30 C 330 30, 300 70, 292 145" stroke="#7fa7d8" stroke-width="2" stroke-dasharray="4 6" fill="none" opacity=".8"></path></svg>
+        <div style="position:absolute;left:300px;top:18px;width:46px;height:50px;border-radius:10px;background:#fffaf0;color:#1a4b8c;display:flex;align-items:center;justify-content:center;font:700 24px 'Lora',serif;transform:rotate(-14deg);box-shadow:0 14px 28px rgba(0,0,0,.35)">E</div>
+      </sc-if>
+    </div>
+    <sc-if value="{{ G.isBounce }}" hint-placeholder-val="{{ false }}">
+      <svg width="390" height="120" style="position:absolute;left:0;top:590px;pointer-events:none"><path d="M225 -20 C 240 40, 200 70, 170 110" stroke="#e07a6a" stroke-width="2" stroke-dasharray="4 6" fill="none" opacity=".8"></path></svg>
+      <div style="position:absolute;left:190px;top:640px;width:46px;height:50px;border-radius:10px;background:{{ G.T.tile }};color:{{ G.T.tileInk }};display:flex;align-items:center;justify-content:center;font:700 24px 'Lora',serif;transform:rotate(10deg);box-shadow:0 0 0 2px #e07a6a,0 14px 28px rgba(0,0,0,.3)">K</div>
+    </sc-if>
+    <sc-if value="{{ G.isOffline }}" hint-placeholder-val="{{ false }}">
+      <div style="position:absolute;left:24px;right:24px;top:600px;z-index:3;display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:14px;background:{{ G.T.solid }};color:{{ G.T.solidText }};box-shadow:0 10px 30px rgba(0,0,0,.3)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#e07a6a" stroke-width="2" stroke-linecap="round"><path d="M2 8.5a16 16 0 0 1 20 0"></path><path d="M5.5 12a11 11 0 0 1 13 0"></path><path d="M9 15.5a5 5 0 0 1 6 0"></path><path d="M3 3l18 18"></path></svg><div style="flex:1;font:600 12px 'Nunito Sans'">Bağlantı yok · reklam yüklenemedi</div><div style="font:800 12px 'Nunito Sans';color:#f2c27a">Tekrar dene</div></div>
+    </sc-if>
+    <div style="position:absolute;bottom:106px;left:0;right:0;display:flex;justify-content:center;gap:6px;opacity:{{ G.rackOpacity }}">
+      <sc-for list="{{ G.rack }}" as="t" hint-placeholder-count="5">
+        <sc-if value="{{ t.selected }}" hint-placeholder-val="{{ false }}"><div onClick="{{ t.pick }}" style="width:52px;height:56px;border-radius:10px;background:{{ G.T.accent }};color:{{ G.T.accentInk }};display:flex;align-items:center;justify-content:center;font:700 26px 'Lora',serif;transform:translateY(-8px);box-shadow:0 12px 24px rgba(242,194,122,.4);cursor:pointer">{{ t.letter }}</div></sc-if>
+        <sc-if value="{{ t.idle }}" hint-placeholder-val="{{ true }}"><div onClick="{{ t.pick }}" style="width:52px;height:56px;border-radius:10px;background:{{ G.T.tile }};color:{{ G.T.tileInk }};display:flex;align-items:center;justify-content:center;font:700 26px 'Lora',serif;box-shadow:0 4px 0 {{ G.T.tileShadow }};cursor:pointer">{{ t.letter }}</div></sc-if>
+        <sc-if value="{{ t.placed }}" hint-placeholder-val="{{ false }}"><div style="width:52px;height:56px;border-radius:10px;border:1.5px dashed {{ G.T.faint }}"></div></sc-if>
+        <sc-if value="{{ t.wrong }}" hint-placeholder-val="{{ false }}"><div style="width:52px;height:56px;border-radius:10px;background:{{ G.T.tile }};color:{{ G.T.tileInk }};display:flex;align-items:center;justify-content:center;font:700 26px 'Lora',serif;box-shadow:0 0 0 2px {{ G.T.error }},0 4px 0 {{ G.T.tileShadow }}">{{ t.letter }}</div></sc-if>
+      </sc-for>
+      <div style="width:52px;height:56px;border-radius:10px;border:1.5px dashed {{ G.T.accent }};color:{{ G.T.accent }};display:flex;flex-direction:column;align-items:center;justify-content:center;opacity:{{ G.slotOpacity }}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg><span style="font:700 7.5px 'Nunito Sans';letter-spacing:.4px;margin-top:2px">HARF EKLE</span><sc-if value="{{ showAd }}" hint-placeholder-val="{{ true }}"><span style="display:flex;align-items:center;gap:2px;font:600 7px 'Nunito Sans';opacity:.65;margin-top:1px"><svg width="6" height="6" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4l13 8-13 8z"></path></svg>reklam</span></sc-if></div>
+    </div>
+    <div style="position:absolute;bottom:44px;left:16px;right:16px;display:flex;gap:10px;align-items:center;opacity:{{ G.barOpacity }}">
+      <div style="width:52px;height:52px;border-radius:50%;border:1.5px solid {{ G.T.faint }};display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h13l-3-3"></path><path d="M20 16H7l3 3"></path></svg></div>
+      <div onClick="{{ G.confirm }}" style="flex:1;height:52px;border-radius:999px;background:{{ G.confirmBg }};color:{{ G.confirmInk }};display:flex;align-items:center;justify-content:center;font:800 17px 'Nunito Sans';cursor:pointer">{{ G.confirmLabel }}</div>
+      <div style="width:52px;height:52px;border-radius:50%;background:rgba(242,194,122,.15);border:1.5px solid {{ G.T.accent }};color:{{ G.T.accent }};display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"></path><path d="M10 21h4"></path><path d="M12 3a6 6 0 0 0-4 10.5c.7.7 1 1.4 1 2.5h6c0-1.1.3-1.8 1-2.5A6 6 0 0 0 12 3z"></path></svg><div style="font:800 7px 'Nunito Sans';letter-spacing:.4px">İPUCU AL</div><sc-if value="{{ showAd }}" hint-placeholder-val="{{ true }}"><div style="display:flex;align-items:center;gap:2px;font:600 6.5px 'Nunito Sans';opacity:.65"><svg width="5" height="5" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4l13 8-13 8z"></path></svg>reklam</div></sc-if></div>
+    </div>
+    <div class="hi" style="background:{{ G.T.text }}"></div>
+  </div></div>
+  </sc-for>
+</div>
+</div>
+
+<!-- ═══ R6 SHEET'LER ═══ -->
+<div>
+<div class="dv-olabel"><a class="dv-oid" href="#r6">R6</a><b>Alt sayfalar</b> — ipucu okuma (çift ipucu hücresi), harf değiştir (reklamla sırayı koru / ücretsiz pas)</div>
+<div class="dv-row" id="r6">
+  <sc-for list="{{ themes }}" as="T" hint-placeholder-count="2">
+  <div class="shot"><div class="tl">İpucu · {{ T.label }}</div>
+  <div class="ph" data-screen-label="İpucu {{ T.label }}" style="background:{{ T.bgGame }};color:{{ T.text }};font-family:'Nunito Sans',sans-serif">
+    <div class="sb" style="color:{{ T.text }}"><span>9:41</span><span style="font-size:12px;letter-spacing:1px">▮▮▮ ◠ ▭</span></div>
+    <div style="position:absolute;top:190px;left:12px;right:12px;height:466px;border-radius:16px;background:{{ T.board }};opacity:.5"></div>
+    <div style="position:absolute;inset:0;background:{{ T.dim }}"></div>
+    <div style="position:absolute;left:0;right:0;bottom:0;background:{{ T.sheet }};color:{{ T.sheetText }};border-radius:28px 28px 0 0;padding:14px 24px 60px;box-shadow:0 -20px 60px rgba(0,0,0,.35)">
+      <div style="width:44px;height:5px;border-radius:3px;background:{{ T.sheetMuted }};opacity:.35;margin:0 auto 18px"></div>
+      <div style="font:700 24px 'Lora',serif">İpuçları</div>
+      <div style="font:600 12px 'Nunito Sans';color:{{ T.sheetMuted }};margin-top:2px">4. satır · 3. sütun — bu hücre iki kelimeye açılıyor</div>
+      <div style="display:flex;flex-direction:column;gap:12px;margin-top:20px">
+        <div style="display:flex;gap:14px;align-items:flex-start;background:{{ T.sheetCard }};border-radius:16px;padding:16px"><div style="width:36px;height:36px;border-radius:10px;background:#c77a3c;color:#fff;display:flex;align-items:center;justify-content:center;flex:none"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></div><div><div style="font:600 11px 'Nunito Sans';color:{{ T.sheetMuted }};letter-spacing:1px">SAĞA · 3 HARF</div><div style="font:600 18px 'Lora',serif;margin-top:2px">İlkel bitki gövdesi</div></div></div>
+        <div style="display:flex;gap:14px;align-items:flex-start;background:{{ T.sheetCard }};border-radius:16px;padding:16px"><div style="width:36px;height:36px;border-radius:10px;background:#c77a3c;color:#fff;display:flex;align-items:center;justify-content:center;flex:none"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"></path></svg></div><div><div style="font:600 11px 'Nunito Sans';color:{{ T.sheetMuted }};letter-spacing:1px">AŞAĞI · 5 HARF</div><div style="font:600 18px 'Lora',serif;margin-top:2px">'Sen'in çoğulu</div></div></div>
+      </div>
+      <div style="margin-top:20px;height:52px;border-radius:999px;background:{{ T.solid }};color:{{ T.solidText }};display:flex;align-items:center;justify-content:center;font:800 16px 'Nunito Sans'">Kapat</div>
+    </div>
+    <div class="hi" style="background:{{ T.sheetText }}"></div>
+  </div></div>
+  </sc-for>
+  <sc-for list="{{ themes }}" as="T" hint-placeholder-count="2">
+  <div class="shot"><div class="tl">Harf değiştir · {{ T.label }}</div>
+  <div class="ph" data-screen-label="Harf değiştir {{ T.label }}" style="background:{{ T.bgGame }};color:{{ T.text }};font-family:'Nunito Sans',sans-serif">
+    <div class="sb" style="color:{{ T.text }}"><span>9:41</span><span style="font-size:12px;letter-spacing:1px">▮▮▮ ◠ ▭</span></div>
+    <div style="position:absolute;top:190px;left:12px;right:12px;height:466px;border-radius:16px;background:{{ T.board }};opacity:.5"></div>
+    <div style="position:absolute;inset:0;background:{{ T.dim }}"></div>
+    <div style="position:absolute;left:0;right:0;bottom:0;background:{{ T.sheet }};color:{{ T.sheetText }};border-radius:28px 28px 0 0;padding:14px 24px 60px;box-shadow:0 -20px 60px rgba(0,0,0,.35)">
+      <div style="width:44px;height:5px;border-radius:3px;background:{{ T.sheetMuted }};opacity:.35;margin:0 auto 18px"></div>
+      <div style="display:flex;justify-content:space-between;align-items:baseline"><div style="font:700 24px 'Lora',serif">Harf değiştir</div><div style="font:700 12px 'Nunito Sans';color:{{ T.sheetMuted }}">Kalan hak · {{ swapLeft }} harf</div></div>
+      <div style="font:600 13px 'Nunito Sans';color:{{ T.sheetMuted }};margin-top:4px">Değiştirmek istediğin harflere dokun.</div>
+      <div style="display:flex;justify-content:center;gap:8px;margin:22px 0 6px">
+        <sc-for list="{{ swapRack }}" as="t" hint-placeholder-count="5">
+          <sc-if value="{{ t.on }}" hint-placeholder-val="{{ false }}"><div onClick="{{ t.toggle }}" style="width:56px;height:60px;border-radius:10px;background:{{ T.accent }};color:{{ T.accentInk }};display:flex;align-items:center;justify-content:center;font:700 28px 'Lora',serif;box-shadow:0 0 0 3px #c77a3c;transform:translateY(-6px);cursor:pointer">{{ t.letter }}</div></sc-if>
+          <sc-if value="{{ t.off }}" hint-placeholder-val="{{ true }}"><div onClick="{{ t.toggle }}" style="width:56px;height:60px;border-radius:10px;background:{{ T.sheetCard }};color:{{ T.sheetText }};display:flex;align-items:center;justify-content:center;font:700 28px 'Lora',serif;box-shadow:0 4px 0 {{ T.tileShadow }};cursor:pointer">{{ t.letter }}</div></sc-if>
+        </sc-for>
+      </div>
+      <div style="text-align:center;font:600 12px 'Nunito Sans';color:{{ T.sheetMuted }};min-height:16px">{{ swapHint }}</div>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-top:18px;opacity:{{ swapOpacity }}">
+        <div style="height:56px;border-radius:999px;background:{{ T.accent }};color:{{ T.accentInk }};display:flex;align-items:center;justify-content:center;gap:10px;font:800 16px 'Nunito Sans'"><span>Şimdi değiştir</span><sc-if value="{{ showAd }}" hint-placeholder-val="{{ true }}"><span style="display:flex;align-items:center;gap:3px;font:700 9px 'Nunito Sans';letter-spacing:.5px;padding:3px 7px;border-radius:999px;border:1.5px solid #2a1a10"><svg width="7" height="7" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4l13 8-13 8z"></path></svg>reklam</span></sc-if><span style="font:600 12px 'Nunito Sans';opacity:.7">· sıra sende kalır</span></div>
+        <div style="height:52px;border-radius:999px;border:1.5px solid {{ T.sheetText }};display:flex;align-items:center;justify-content:center;gap:8px;font:800 15px 'Nunito Sans'"><span>Değiştir ve pas</span><span style="font:600 12px 'Nunito Sans';opacity:.6">· ücretsiz, sıra rakibe</span></div>
+      </div>
+    </div>
+    <div class="hi" style="background:{{ T.sheetText }}"></div>
+  </div></div>
+  </sc-for>
+</div>
+</div>
+
+<!-- ═══ R7 SONUÇ ═══ -->
+<div>
+<div class="dv-olabel"><a class="dv-oid" href="#r7">R7</a><b>Bölüm sonu</b> — kazandın (şafak, +40 m), kaybettin (gece, aynı kamp), berabere (nötr gökyüzü, kaybettin gibi davranır)</div>
+<div class="dv-row" id="r7">
+  <sc-for list="{{ results }}" as="R" hint-placeholder-count="6">
+  <div class="shot"><div class="tl">{{ R.label }}</div>
+  <div class="ph" data-screen-label="Sonuç {{ R.label }}" style="background:{{ R.bg }};color:{{ R.T.text }};font-family:'Nunito Sans',sans-serif">
+    <div class="sb" style="color:{{ R.T.text }}"><span>9:41</span><span style="font-size:12px;letter-spacing:1px">▮▮▮ ◠ ▭</span></div>
+    <svg viewBox="0 0 390 844" width="390" height="844" style="position:absolute;inset:0">
+      <sc-if value="{{ R.isWon }}" hint-placeholder-val="{{ false }}"><circle cx="195" cy="330" r="70" fill="#fff3d6" opacity=".9"></circle></sc-if>
+      <polygon points="-20,560 90,380 170,470 230,330 330,480 420,400 420,844 -20,844" fill="{{ R.T.mtn1 }}" opacity=".85"></polygon>
+      <polygon points="-20,640 60,540 150,600 250,470 320,560 420,520 420,844 -20,844" fill="{{ R.T.mtn2 }}"></polygon>
+      <polygon points="-20,720 120,620 210,680 300,600 420,660 420,844 -20,844" fill="{{ R.T.mtn3 }}"></polygon>
+      <sc-if value="{{ R.notWon }}" hint-placeholder-val="{{ false }}"><circle cx="195" cy="470" r="9" fill="#f2c27a"></circle><circle cx="195" cy="470" r="22" fill="#f2c27a" opacity=".15"></circle></sc-if>
+    </svg>
+    <div style="position:absolute;top:110px;left:0;right:0;text-align:center;padding:0 24px">
+      <div style="font:600 12px 'Nunito Sans';letter-spacing:4px;opacity:.85">{{ R.tag }}</div>
+      <div style="font:700 44px/1.05 'Lora',serif;margin-top:10px;white-space:pre-line;text-wrap:balance">{{ R.h }}</div>
+      <sc-if value="{{ R.isWon }}" hint-placeholder-val="{{ false }}"><div style="display:inline-flex;align-items:baseline;gap:6px;margin-top:16px;padding:8px 16px;border-radius:999px;background:rgba(20,12,10,.7);border:1px solid rgba(255,255,255,.15);backdrop-filter:blur(6px);color:#f6ecd9"><span style="font:700 20px 'Lora',serif;color:#f2c27a">+40 m</span><span style="font:600 12px 'Nunito Sans';opacity:.8">→ 1.280 m</span></div></sc-if>
+      <sc-if value="{{ R.notWon }}" hint-placeholder-val="{{ false }}"><div style="font:600 14px/1.5 'Nunito Sans';opacity:.75;margin-top:14px;padding:0 16px;text-wrap:pretty">{{ R.sub }}</div></sc-if>
+    </div>
+    <div style="position:absolute;left:24px;right:24px;bottom:64px;display:flex;flex-direction:column;gap:12px">
+      <div style="background:{{ R.T.card }};backdrop-filter:blur(8px);border-radius:20px;padding:18px 20px;border:1px solid {{ R.T.border }};display:grid;grid-template-columns:1fr auto 1fr;align-items:center">
+        <div><div style="font:600 11px 'Nunito Sans';opacity:.7">Sen</div><div style="font:700 40px/1 'Lora',serif;color:#e0a24a">{{ R.you }}</div></div>
+        <div style="font:600 12px 'Nunito Sans';opacity:.55;text-align:center;padding:0 10px;line-height:1.3">fark<br><b style="font-size:16px;opacity:1">{{ R.diff }}</b></div>
+        <div style="text-align:right"><div style="font:600 11px 'Nunito Sans';opacity:.7">Rakip</div><div style="font:700 40px/1 'Lora',serif;color:#3a7fc4">{{ R.bot }}</div></div>
+      </div>
+      <sc-if value="{{ R.isWon }}" hint-placeholder-val="{{ false }}">
+        <div style="height:56px;border-radius:999px;background:{{ R.T.solid }};color:{{ R.T.solidText }};display:flex;align-items:center;justify-content:center;font:800 18px 'Nunito Sans';margin-top:4px">{{ R.primary }}</div>
+        <div style="display:flex;gap:10px">
+          <div style="flex:1;height:48px;border-radius:999px;border:1.5px solid {{ R.T.solid }};color:{{ R.T.solid }};display:flex;align-items:center;justify-content:center;font:700 15px 'Nunito Sans'">Tekrar oyna</div>
+          <div style="flex:1;height:48px;border-radius:999px;border:1.5px solid {{ R.T.solid }};color:{{ R.T.solid }};display:flex;align-items:center;justify-content:center;font:700 15px 'Nunito Sans'">Harita</div>
+        </div>
+      </sc-if>
+      <sc-if value="{{ R.notWon }}" hint-placeholder-val="{{ false }}">
+        <div style="height:56px;border-radius:999px;background:{{ R.T.accent }};color:{{ R.T.accentInk }};display:flex;align-items:center;justify-content:center;font:800 18px 'Nunito Sans';margin-top:4px">Tekrar dene</div>
+        <div style="height:48px;border-radius:999px;border:1.5px solid {{ R.T.text }};opacity:.8;display:flex;align-items:center;justify-content:center;font:700 15px 'Nunito Sans'">Haritaya dön</div>
+      </sc-if>
+    </div>
+    <div class="hi" style="background:{{ R.T.text }}"></div>
+  </div></div>
+  </sc-for>
+</div>
+</div>
+
+<!-- ═══ R8 ROTALAR ═══ -->
+<div>
+<div class="dv-olabel"><a class="dv-oid" href="#r8">R8</a><b>Diğer rotalar</b> — onay (/consent), ATT ara ekranı (iOS, sistem diyaloğu taklit edilmez), ayarlar (Görünüm üçlü seçici etkileşimli), mağaza (koyu/açık), gizlilik</div>
+<div class="dv-row" id="r8">
+  <sc-for list="{{ themes }}" as="T" hint-placeholder-count="2">
+  <div class="shot"><div class="tl">Onay · {{ T.label }}</div>
+  <div class="ph" data-screen-label="Onay {{ T.label }}" style="background:{{ T.bgGame }};color:{{ T.text }};font-family:'Nunito Sans',sans-serif">
+    <div class="sb" style="color:{{ T.text }}"><span>9:41</span><span style="font-size:12px;letter-spacing:1px">▮▮▮ ◠ ▭</span></div>
+    <svg viewBox="0 0 390 844" width="390" height="844" style="position:absolute;inset:0"><polygon points="-20,420 100,260 200,340 300,220 420,330 420,844 -20,844" fill="{{ T.mtn1 }}" opacity=".7"></polygon><polygon points="-20,520 120,420 240,480 420,400 420,844 -20,844" fill="{{ T.mtn2 }}" opacity=".6"></polygon></svg>
+    <div style="position:absolute;top:110px;left:32px;right:32px">
+      <div style="font:600 12px 'Nunito Sans';letter-spacing:4px;opacity:.75">HOŞ GELDİN</div>
+      <div style="font:700 40px/1.05 'Lora',serif;margin-top:8px;text-wrap:balance">Tırmanışa başlamadan önce</div>
+    </div>
+    <div style="position:absolute;left:24px;right:24px;bottom:64px;display:flex;flex-direction:column;gap:12px">
+      <div style="background:{{ T.sheet }};color:{{ T.sheetText }};border-radius:20px;padding:22px 22px 18px;display:flex;flex-direction:column;gap:14px;box-shadow:{{ T.boardShadow }}">
+        <div style="font:700 18px 'Lora',serif">Reklamlar ve veri</div>
+        <div style="font:400 14px/1.55 'Nunito Sans';color:{{ T.sheetMuted }};text-wrap:pretty">Kelime Zirvesi ücretsiz; jokerler ve ekstra harfler kısa reklamlarla açılır. İlk 3 bölümde hiç reklam gösterilmez. Kişiselleştirilmiş reklam için onayın gerekir; onay vermezsen genel reklamlar gösterilir.</div>
+        <div style="display:flex;gap:16px;font:700 13px 'Nunito Sans';color:#c77a3c"><span>Gizlilik politikası</span><span>Kullanım koşulları</span></div>
+      </div>
+      <div style="height:56px;border-radius:999px;background:{{ T.accent }};color:{{ T.accentInk }};display:flex;align-items:center;justify-content:center;font:800 17px 'Nunito Sans'">Kabul et ve başla</div>
+      <div style="height:48px;border-radius:999px;border:1.5px solid {{ T.text }};opacity:.8;display:flex;align-items:center;justify-content:center;font:700 15px 'Nunito Sans'">Seçenekleri yönet</div>
+    </div>
+    <div class="hi" style="background:{{ T.text }}"></div>
+  </div></div>
+  </sc-for>
+  <sc-for list="{{ themes }}" as="T" hint-placeholder-count="2">
+  <div class="shot"><div class="tl">ATT ara ekranı (iOS) · {{ T.label }}</div>
+  <div class="ph" data-screen-label="ATT {{ T.label }}" style="background:{{ T.bgFlat }};color:{{ T.text }};font-family:'Nunito Sans',sans-serif">
+    <div class="sb" style="color:{{ T.text }}"><span>9:41</span><span style="font-size:12px;letter-spacing:1px">▮▮▮ ◠ ▭</span></div>
+    <div style="position:absolute;top:150px;left:32px;right:32px;display:flex;flex-direction:column;gap:18px">
+      <div style="width:64px;height:64px;border-radius:50%;background:{{ T.surface }};display:flex;align-items:center;justify-content:center;color:{{ T.accent }}"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V7z"></path><path d="M9 12l2 2 4-4"></path></svg></div>
+      <div style="font:600 12px 'Nunito Sans';letter-spacing:4px;opacity:.7">BİR ADIM KALDI</div>
+      <div style="font:700 36px/1.1 'Lora',serif;text-wrap:balance">Takip izni hakkında</div>
+      <div style="font:400 15px/1.6 'Nunito Sans';color:{{ T.muted }};text-wrap:pretty">Bir sonraki adımda iOS, uygulamalar arası takip için izin isteyecek. İzin verirsen reklamlar ilgi alanlarına göre seçilir; vermezsen oyun aynen devam eder, reklamlar genel olur.</div>
+      <div style="display:flex;flex-direction:column;gap:10px;padding:16px;border-radius:18px;border:1px solid {{ T.border }};font:600 13px 'Nunito Sans';color:{{ T.muted }}">
+        <div style="display:flex;gap:10px;align-items:center"><span style="width:8px;height:8px;border-radius:50%;background:{{ T.success }};flex:none"></span>Bulmaca ve ilerleme cihazında kalır</div>
+        <div style="display:flex;gap:10px;align-items:center"><span style="width:8px;height:8px;border-radius:50%;background:{{ T.success }};flex:none"></span>İzni istediğin zaman Ayarlar'dan değiştirebilirsin</div>
+      </div>
+    </div>
+    <div style="position:absolute;left:24px;right:24px;bottom:64px;display:flex;flex-direction:column;gap:12px">
+      <div style="height:56px;border-radius:999px;background:{{ T.accent }};color:{{ T.accentInk }};display:flex;align-items:center;justify-content:center;font:800 17px 'Nunito Sans'">Devam</div>
+      <div style="height:48px;border-radius:999px;display:flex;align-items:center;justify-content:center;font:700 15px 'Nunito Sans';color:{{ T.muted }}">Şimdi değil</div>
+    </div>
+    <div class="hi" style="background:{{ T.text }}"></div>
+  </div></div>
+  </sc-for>
+  <sc-for list="{{ themes }}" as="T" hint-placeholder-count="2">
+  <div class="shot"><div class="tl">Ayarlar · {{ T.label }}</div>
+  <div class="ph" data-screen-label="Ayarlar {{ T.label }}" style="background:{{ T.bgFlat }};color:{{ T.text }};font-family:'Nunito Sans',sans-serif">
+    <div class="sb" style="color:{{ T.text }}"><span>9:41</span><span style="font-size:12px;letter-spacing:1px">▮▮▮ ◠ ▭</span></div>
+    <div style="position:absolute;top:56px;left:16px;right:16px;display:flex;align-items:center;justify-content:space-between">
+      <div class="ic" style="background:{{ T.surface }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"></path></svg></div>
+      <div style="font:700 20px 'Lora',serif">Ayarlar</div>
+      <div style="width:40px"></div>
+    </div>
+    <div style="position:absolute;top:116px;left:20px;right:20px;display:flex;flex-direction:column;gap:18px">
+      <div>
+        <div style="font:600 11px 'Nunito Sans';letter-spacing:3px;opacity:.55;padding:0 6px 10px">OYUN</div>
+        <div style="background:{{ T.surface }};border-radius:18px;overflow:hidden;border:1px solid {{ T.border }}">
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid {{ T.border }}">
+            <div style="font:700 15px 'Nunito Sans'">Görünüm</div>
+            <div style="display:flex;background:{{ T.surface }};border-radius:999px;padding:3px;font:700 12px 'Nunito Sans'">
+              <sc-for list="{{ appearanceOpts }}" as="o" hint-placeholder-count="3">
+                <sc-if value="{{ o.on }}" hint-placeholder-val="{{ false }}"><div onClick="{{ o.pick }}" style="padding:6px 12px;border-radius:999px;background:{{ T.accent }};color:{{ T.accentInk }};cursor:pointer">{{ o.label }}</div></sc-if>
+                <sc-if value="{{ o.offv }}" hint-placeholder-val="{{ true }}"><div onClick="{{ o.pick }}" style="padding:6px 12px;border-radius:999px;opacity:.7;cursor:pointer">{{ o.label }}</div></sc-if>
+              </sc-for>
+            </div>
+          </div>
+          <sc-for list="{{ toggles }}" as="s" hint-placeholder-count="3">
+            <div onClick="{{ s.flip }}" style="display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid {{ T.border }};cursor:pointer">
+              <div><div style="font:700 15px 'Nunito Sans'">{{ s.label }}</div><div style="font:500 12px 'Nunito Sans';opacity:.6;margin-top:2px">{{ s.sub }}</div></div>
+              <sc-if value="{{ s.on }}" hint-placeholder-val="{{ true }}"><div style="width:48px;height:28px;border-radius:14px;background:{{ T.accent }};position:relative;flex:none"><div style="position:absolute;top:3px;right:3px;width:22px;height:22px;border-radius:50%;background:#2a1a10"></div></div></sc-if>
+              <sc-if value="{{ s.offv }}" hint-placeholder-val="{{ false }}"><div style="width:48px;height:28px;border-radius:14px;background:{{ T.toggleOff }};position:relative;flex:none"><div style="position:absolute;top:3px;left:3px;width:22px;height:22px;border-radius:50%;background:{{ T.knob }}"></div></div></sc-if>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+      <div>
+        <div style="font:600 11px 'Nunito Sans';letter-spacing:3px;opacity:.55;padding:0 6px 10px">HESAP</div>
+        <div style="background:{{ T.surface }};border-radius:18px;overflow:hidden;border:1px solid {{ T.border }}">
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid {{ T.border }}"><div style="font:700 15px 'Nunito Sans'">Reklamları kaldır</div><div style="font:700 13px 'Nunito Sans';color:#c77a3c">Mağaza →</div></div>
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid {{ T.border }}"><div style="font:700 15px 'Nunito Sans'">Reklam tercihleri</div><div style="opacity:.5">›</div></div>
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid {{ T.border }}"><div style="font:700 15px 'Nunito Sans'">İlerlemeyi sıfırla</div><div style="font:700 13px 'Nunito Sans';color:{{ T.error }}">Sil</div></div>
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid {{ T.border }}"><div style="font:700 15px 'Nunito Sans'">Gizlilik politikası</div><div style="opacity:.5">›</div></div>
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 18px"><div style="font:700 15px 'Nunito Sans'">Kullanım koşulları</div><div style="opacity:.5">›</div></div>
+        </div>
+      </div>
+      <div style="text-align:center;font:500 12px 'Nunito Sans';opacity:.45">Kelime Zirvesi 1.0.0</div>
+    </div>
+    <div class="hi" style="background:{{ T.text }}"></div>
+  </div></div>
+  </sc-for>
+  <sc-for list="{{ shops }}" as="S" hint-placeholder-count="2">
+  <div class="shot"><div class="tl">{{ S.label }}</div>
+  <div class="ph" data-screen-label="Mağaza {{ S.label }}" style="background:{{ S.T.bgGame }};color:{{ S.T.text }};font-family:'Nunito Sans',sans-serif">
+    <div class="sb" style="color:{{ S.T.text }}"><span>9:41</span><span style="font-size:12px;letter-spacing:1px">▮▮▮ ◠ ▭</span></div>
+    <div style="position:absolute;top:56px;left:16px;right:16px;display:flex;align-items:center;justify-content:space-between">
+      <div class="ic" style="background:{{ S.T.surface }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"></path></svg></div>
+      <div style="font:700 20px 'Lora',serif">{{ S.s.shop }}</div>
+      <div style="display:flex;align-items:center;gap:6px;padding:6px 12px;border-radius:999px;background:rgba(242,194,122,.18);color:#c77a3c;font:800 13px 'Nunito Sans'"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="8"></circle><circle cx="12" cy="12" r="3.5"></circle></svg>140</div>
+    </div>
+    <div style="position:absolute;top:116px;left:20px;right:20px;display:flex;flex-direction:column;gap:12px">
+      <div style="background:linear-gradient(135deg,#f2c27a,#c77a3c);color:#2a1a10;border-radius:20px;padding:20px 22px;display:flex;flex-direction:column;gap:6px">
+        <div style="font:600 11px 'Nunito Sans';letter-spacing:3px;opacity:.8">{{ S.s.oneTime }}</div>
+        <div style="font:700 26px 'Lora',serif">{{ S.s.adFree }}</div>
+        <div style="font:500 13px/1.5 'Nunito Sans';opacity:.85;text-wrap:pretty">{{ S.s.adFreeSub }}</div>
+        <div style="align-self:flex-start;margin-top:8px;padding:12px 20px;border-radius:999px;background:#2a1a10;color:#f6ecd9;font:800 15px 'Nunito Sans'">{{ S.s.price1 }}</div>
+      </div>
+      <div style="font:600 11px 'Nunito Sans';letter-spacing:3px;opacity:.55;padding:6px 6px 0">{{ S.s.coins }}</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+        <div style="background:{{ S.T.surface }};border:1px solid {{ S.T.border }};border-radius:18px;padding:16px;display:flex;flex-direction:column;gap:4px"><div style="font:700 24px 'Lora',serif;color:#c77a3c">150</div><div style="font:600 12px 'Nunito Sans';opacity:.7">{{ S.unlock15 }}</div><div style="margin-top:10px;padding:9px;border-radius:999px;border:1.5px solid {{ S.T.text }};opacity:.85;text-align:center;font:800 13px 'Nunito Sans'">{{ S.s.price2 }}</div></div>
+        <div style="background:{{ S.T.surface }};border:1px solid #f2c27a;border-radius:18px;padding:16px;display:flex;flex-direction:column;gap:4px;position:relative"><div style="position:absolute;top:-9px;right:12px;padding:3px 8px;border-radius:999px;background:#f2c27a;color:#2a1a10;font:800 9px 'Nunito Sans';letter-spacing:1px">{{ S.s.mostBought }}</div><div style="font:700 24px 'Lora',serif;color:#c77a3c">500</div><div style="font:600 12px 'Nunito Sans';opacity:.7">{{ S.unlock50 }}</div><div style="margin-top:10px;padding:9px;border-radius:999px;background:#f2c27a;color:#2a1a10;text-align:center;font:800 13px 'Nunito Sans'">{{ S.s.price3 }}</div></div>
+      </div>
+      <div style="font:600 11px 'Nunito Sans';letter-spacing:3px;opacity:.55;padding:6px 6px 0">{{ S.s.free }}</div>
+      <div style="background:{{ S.T.surface }};border:1px solid {{ S.T.border }};border-radius:18px;padding:16px 18px;display:flex;align-items:center;justify-content:space-between"><div><div style="font:700 15px 'Nunito Sans'">{{ S.s.daily }}</div><div style="font:500 12px 'Nunito Sans';opacity:.6;margin-top:2px">{{ S.s.dailySub }}</div></div><div style="padding:9px 16px;border-radius:999px;background:#f2c27a;color:#2a1a10;font:800 13px 'Nunito Sans'">{{ S.s.get }}</div></div>
+      <div style="text-align:center;font:600 12px 'Nunito Sans';opacity:.55;margin-top:4px">{{ S.s.restore }}</div>
+    </div>
+    <div class="hi" style="background:{{ S.T.text }}"></div>
+  </div></div>
+  </sc-for>
+  <sc-for list="{{ themes }}" as="T" hint-placeholder-count="2">
+  <div class="shot"><div class="tl">Gizlilik · {{ T.label }}</div>
+  <div class="ph" data-screen-label="Gizlilik {{ T.label }}" style="background:{{ T.page }};color:{{ T.pageText }};font-family:'Nunito Sans',sans-serif">
+    <div class="sb" style="color:{{ T.pageText }}"><span>9:41</span><span style="font-size:12px;letter-spacing:1px">▮▮▮ ◠ ▭</span></div>
+    <div style="position:absolute;top:56px;left:16px;right:16px;display:flex;align-items:center;justify-content:space-between">
+      <div class="ic" style="background:{{ T.pageLine }}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"></path></svg></div>
+      <div style="font:700 20px 'Lora',serif">Gizlilik politikası</div>
+      <div style="width:40px"></div>
+    </div>
+    <div style="position:absolute;top:120px;left:28px;right:28px">
+      <div style="font:500 12px 'Nunito Sans';color:{{ T.pageMuted }}">Son güncelleme · 20 Eylül 2026</div>
+      <div style="font:700 22px 'Lora',serif;margin-top:22px">Hangi verileri topluyoruz</div>
+      <div style="margin-top:10px;display:flex;flex-direction:column;gap:6px"><div style="height:12px;border-radius:6px;background:{{ T.pageLine }};width:100%"></div><div style="height:12px;border-radius:6px;background:{{ T.pageLine }};width:92%"></div><div style="height:12px;border-radius:6px;background:{{ T.pageLine }};width:96%"></div><div style="height:12px;border-radius:6px;background:{{ T.pageLine }};width:70%"></div></div>
+      <div style="font:700 22px 'Lora',serif;margin-top:28px">Reklam ortakları</div>
+      <div style="margin-top:10px;display:flex;flex-direction:column;gap:6px"><div style="height:12px;border-radius:6px;background:{{ T.pageLine }};width:100%"></div><div style="height:12px;border-radius:6px;background:{{ T.pageLine }};width:88%"></div><div style="height:12px;border-radius:6px;background:{{ T.pageLine }};width:94%"></div></div>
+      <div style="font:700 22px 'Lora',serif;margin-top:28px">Cihazda saklanan veriler</div>
+      <div style="margin-top:10px;display:flex;flex-direction:column;gap:6px"><div style="height:12px;border-radius:6px;background:{{ T.pageLine }};width:100%"></div><div style="height:12px;border-radius:6px;background:{{ T.pageLine }};width:60%"></div></div>
+      <div style="margin-top:28px;font:600 12px ui-monospace,monospace;color:{{ T.pageMuted }}">[ gerçek politika metni buraya ]</div>
+    </div>
+    <div class="hi" style="background:{{ T.pageText }}"></div>
+  </div></div>
+  </sc-for>
+</div>
+</div>
+
+<!-- ═══ R9 MAĞAZA GÖRSELLERİ ═══ -->
+<div>
+<div class="dv-olabel"><a class="dv-oid" href="#r9">R9</a><b>Mağaza ekran görüntüleri</b> — 5 kare taslak, 1290×2796 oranı; üstte slogan bandı, altta sadeleştirilmiş ekran</div>
+<div class="dv-row" id="r9">
+  <sc-for list="{{ frames }}" as="F" hint-placeholder-count="5">
+  <div class="shot"><div class="tl">{{ F.label }}</div>
+  <div data-screen-label="Store {{ F.label }}" style="width:258px;height:559px;border-radius:14px;overflow:hidden;position:relative;background:linear-gradient(180deg,#0b1a33 0%,#1c3358 55%,#3a2f3e 100%);color:#f6ecd9;font-family:'Nunito Sans',sans-serif;box-shadow:0 16px 40px rgba(0,0,0,.25)">
+    <div style="position:absolute;top:34px;left:22px;right:22px;text-align:center;font:700 22px/1.2 'Lora',serif;text-wrap:balance">{{ F.slogan }}</div>
+    <div style="position:absolute;top:130px;left:20px;right:20px;bottom:-40px;border-radius:30px 30px 0 0;background:#f6ecd9;box-shadow:0 0 0 6px #161616,0 -20px 60px rgba(0,0,0,.4);overflow:hidden">
+      <sc-if value="{{ F.isGame }}" hint-placeholder-val="{{ false }}">
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,#0b1a33,#1c3358)"></div>
+        <div style="position:absolute;top:22px;left:14px;right:14px;display:flex;justify-content:space-between;font:700 16px 'Lora',serif;color:#f6ecd9"><span>Sen <span style="color:#f2c27a">14</span></span><span><span style="color:#7fa7d8">9</span> Rakip</span></div>
+        <div style="position:absolute;top:56px;left:10px;right:10px;background:#f6ecd9;border-radius:12px;padding:4px;display:grid;grid-template-columns:repeat(7,1fr);grid-auto-rows:27px;gap:1.5px">
+          <sc-for list="{{ posterCells }}" as="c" hint-placeholder-count="63">
+            <div style="border-radius:3px;background:{{ c.bg }};display:flex;align-items:center;justify-content:center;font:700 13px 'Lora',serif;color:{{ c.ink }}">{{ c.letter }}</div>
+          </sc-for>
+        </div>
+        <div style="position:absolute;bottom:64px;left:0;right:0;display:flex;justify-content:center;gap:4px"><div style="width:28px;height:30px;border-radius:6px;background:#f6ecd9;color:#2a1a10;font:700 15px 'Lora';display:flex;align-items:center;justify-content:center">L</div><div style="width:28px;height:30px;border-radius:6px;background:#f2c27a;color:#2a1a10;font:700 15px 'Lora';display:flex;align-items:center;justify-content:center;transform:translateY(-5px)">A</div><div style="width:28px;height:30px;border-radius:6px;background:#f6ecd9;color:#2a1a10;font:700 15px 'Lora';display:flex;align-items:center;justify-content:center">K</div><div style="width:28px;height:30px;border-radius:6px;background:#f6ecd9;color:#2a1a10;font:700 15px 'Lora';display:flex;align-items:center;justify-content:center">M</div><div style="width:28px;height:30px;border-radius:6px;background:#f6ecd9;color:#2a1a10;font:700 15px 'Lora';display:flex;align-items:center;justify-content:center">A</div></div>
+      </sc-if>
+      <sc-if value="{{ F.isMap }}" hint-placeholder-val="{{ false }}">
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,#05101f 0%,#1c3358 55%,#5a3d3a 100%)"></div>
+        <svg width="218" height="470" style="position:absolute;inset:0"><path d="M109 440 L60 380 L150 320 L70 250 L140 180 L80 110 L130 50" stroke="#f2c27a" stroke-width="2.5" stroke-dasharray="4 7" fill="none" opacity=".7"></path>
+          <circle cx="109" cy="440" r="14" fill="#3f2f3e" stroke="#f2c27a" stroke-width="2"></circle><circle cx="60" cy="380" r="14" fill="#3f2f3e" stroke="#f2c27a" stroke-width="2"></circle><circle cx="150" cy="320" r="14" fill="#3f2f3e" stroke="#f2c27a" stroke-width="2"></circle>
+          <circle cx="70" cy="250" r="24" fill="#f2c27a"></circle><circle cx="140" cy="180" r="14" fill="none" stroke="rgba(246,236,217,.5)" stroke-width="2" stroke-dasharray="3 3"></circle><circle cx="80" cy="110" r="5" fill="rgba(246,236,217,.3)"></circle><circle cx="130" cy="50" r="5" fill="rgba(246,236,217,.2)"></circle>
+          <text x="109" y="445" text-anchor="middle" font-family="Lora" font-size="12" fill="#f2c27a">34</text><text x="60" y="385" text-anchor="middle" font-family="Lora" font-size="12" fill="#f2c27a">35</text><text x="150" y="325" text-anchor="middle" font-family="Lora" font-size="12" fill="#f2c27a">36</text><text x="70" y="256" text-anchor="middle" font-family="Lora" font-size="18" font-weight="700" fill="#2a1a10">37</text>
+        </svg>
+        <div style="position:absolute;top:0;left:0;right:0;height:120px;background:linear-gradient(180deg,#05101f 30%,transparent)"></div>
+        <div style="position:absolute;top:28px;left:0;right:0;text-align:center;font:600 11px 'Nunito Sans';color:rgba(246,236,217,.6);letter-spacing:1px">yukarısı sisin içinde…</div>
+      </sc-if>
+      <sc-if value="{{ F.isWon }}" hint-placeholder-val="{{ false }}">
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,#2a3a63 0%,#7a4a5a 40%,#e0895a 75%,#f2c27a 100%)"></div>
+        <svg viewBox="0 0 218 470" width="218" height="470" style="position:absolute;inset:0"><circle cx="109" cy="200" r="46" fill="#fff3d6" opacity=".9"></circle><polygon points="-10,330 50,230 100,280 140,210 190,290 230,250 230,470 -10,470" fill="#3a2f45" opacity=".8"></polygon><polygon points="-10,400 60,330 130,370 230,310 230,470 -10,470" fill="#7a4a35"></polygon></svg>
+        <div style="position:absolute;top:44px;left:0;right:0;text-align:center;color:#f6ecd9"><div style="font:600 10px 'Nunito Sans';letter-spacing:3px">KAZANDIN</div><div style="font:700 30px/1.05 'Lora',serif;margin-top:8px">Bir adım daha<br>zirveye</div><div style="display:inline-block;margin-top:60px;padding:6px 14px;border-radius:999px;background:rgba(20,12,10,.7);font:700 16px 'Lora',serif;color:#f2c27a">+40 m</div></div>
+      </sc-if>
+      <sc-if value="{{ F.isClue }}" hint-placeholder-val="{{ false }}">
+        <div style="position:absolute;inset:0;background:#1c3358"></div>
+        <div style="position:absolute;left:0;right:0;bottom:0;top:110px;background:#f6ecd9;border-radius:22px 22px 0 0;padding:20px 18px;color:#2a1a10">
+          <div style="width:36px;height:4px;border-radius:2px;background:rgba(42,26,16,.2);margin:0 auto 14px"></div>
+          <div style="font:700 20px 'Lora',serif">İpuçları</div>
+          <div style="margin-top:14px;display:flex;flex-direction:column;gap:10px">
+            <div style="display:flex;gap:10px;background:#fff;border-radius:12px;padding:12px"><div style="width:28px;height:28px;border-radius:8px;background:#c77a3c;color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;flex:none">→</div><div><div style="font:600 9px 'Nunito Sans';color:#8a6a4c;letter-spacing:1px">SAĞA · 3 HARF</div><div style="font:600 14px 'Lora',serif">İlkel bitki gövdesi</div></div></div>
+            <div style="display:flex;gap:10px;background:#fff;border-radius:12px;padding:12px"><div style="width:28px;height:28px;border-radius:8px;background:#c77a3c;color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;flex:none">↓</div><div><div style="font:600 9px 'Nunito Sans';color:#8a6a4c;letter-spacing:1px">AŞAĞI · 5 HARF</div><div style="font:600 14px 'Lora',serif">'Sen'in çoğulu</div></div></div>
+          </div>
+        </div>
+      </sc-if>
+      <sc-if value="{{ F.isHome }}" hint-placeholder-val="{{ false }}">
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,#0b1a33 0%,#1c3358 45%,#5a3d3a 78%,#c77a3c 100%)"></div>
+        <svg viewBox="0 0 218 470" width="218" height="470" style="position:absolute;inset:0"><polygon points="-10,330 50,230 100,280 140,210 190,290 230,250 230,470 -10,470" fill="#2b2d45" opacity=".85"></polygon><polygon points="-10,400 60,330 130,370 230,310 230,470 -10,470" fill="#5a3a35"></polygon></svg>
+        <div style="position:absolute;top:40px;left:0;right:0;text-align:center;color:#f6ecd9"><div style="font:600 8px 'Nunito Sans';letter-spacing:2px;opacity:.8">RAKİBE KARŞI ÇENGEL BULMACA</div><div style="font:700 40px/.95 'Lora',serif;margin-top:8px">Kelime<br>Zirvesi</div><div style="display:inline-block;margin-top:14px;padding:6px 12px;border-radius:999px;background:rgba(20,12,10,.55);border:1px solid rgba(255,255,255,.15);font:600 10px 'Nunito Sans'">Şu an · Bölüm 37 · 1.240 m</div></div>
+        <div style="position:absolute;bottom:70px;left:16px;right:16px;height:38px;border-radius:999px;background:#f2c27a;color:#2a1a10;display:flex;align-items:center;justify-content:center;font:800 13px 'Nunito Sans'">Tırmanışa devam et</div>
+      </sc-if>
+    </div>
+  </div></div>
+  </sc-for>
+</div>
+</div>
+
+</div>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;currentLevel&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:37,&quot;min&quot;:1,&quot;max&quot;:400,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;İlerleme&quot;},&quot;showAdLabels&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Reklam&quot;}}">
+class Component extends DCLogic {
+  state = { sel: null, pending: {}, cur: 37, swapSel: [1, 4], settings: { sound: true, haptic: true, sky: true }, appearance: 'system', tok: null };
+  RACK = ['L', 'A', 'K', 'M', 'A'];
+  mapRefs = { dark: React.createRef(), light: React.createRef() };
+  componentDidMount() {
+    const cur = Number(this.props.currentLevel ?? 37);
+    if (cur !== this.state.cur) this.setState({ cur });
+    import('./kz-tokens.js').then(m => this.setState({ tok: m }, () => this.scrollMaps())).catch(e => console.error('kz-tokens.js yüklenemedi', e));
+  }
+  componentDidUpdate(pp) {
+    if ((pp.currentLevel ?? 37) !== (this.props.currentLevel ?? 37)) this.setState({ cur: Number(this.props.currentLevel ?? 37) }, () => this.scrollMaps());
+  }
+  scrollMaps(tries = 0) {
+    let ok = true;
+    Object.values(this.mapRefs).forEach(r => {
+      const el = r.current; if (!el) { ok = false; return; }
+      const node = el.querySelector('[data-cur]'); if (!node) { ok = false; return; }
+      const top = node.getBoundingClientRect().top - el.getBoundingClientRect().top + el.scrollTop;
+      el.scrollTop = Math.max(0, top - el.clientHeight * 0.6);
+    });
+    if (!ok && tries < 20) setTimeout(() => this.scrollMaps(tries + 1), 150);
+  }
+  geo() { const N = Math.max(this.state.cur + 40, 80), sp = 96; return { N, sp, mapH: N * sp + 240 }; }
+  baseCells() {
+    const cols = ['Renk verilen mekan', 'Elle sürtüp sıkmak', 'Dili tutulmuş', 'Vilayet', 'Usta yanındaki', 'Bilgiçlik'];
+    const rows = ['Sığ su av aracı', 'Düz arazi', 'Hayvan bulamacı', 'Kırmızı renk', 'Padişah gözdesi', 'Şekilsiz canlı', 'İnen, aşağı gelen', 'Sona eklenen parça'];
+    const inner = { '3,4': { text: 'İkinci nota', text2: 'Tekme, tekmelemek', right: true, down: true }, '4,3': { text: 'İlkel bitki gövdesi', text2: "'Sen'in çoğulu", right: true, down: true }, '6,5': { text: 'Potasyum simgesi', text2: 'Altıncı nota', right: true, down: true }, '7,6': { text: 'Romen rakamıyla elli', down: true }, '8,3': { text: 'Maden arıtma işlemi', right: true } };
+    const letters = { '1,4': ['İ', 'p'], '2,4': ['L', 'p'], '1,3': ['D', 'b'], '2,3': ['İ', 'b'], '3,3': ['L', 'b'], '4,1': ['A', 'p'], '4,2': ['L', 'p'], '3,5': ['R', 'b'], '3,6': ['E', 'b'], '1,1': ['S', 'p'] };
+    const out = [];
+    for (let r = 0; r < 9; r++) for (let c = 0; c < 7; c++) {
+      const k = r + ',' + c;
+      const cell = { key: k, isCorner: false, isClue: false, isLetter: false, isDouble: false, down: false, right: false, text: '', text2: '', letter: '', who: '', fs: 10 };
+      if (r === 0 && c === 0) cell.isCorner = true;
+      else if (r === 0) { cell.isClue = true; cell.text = cols[c - 1]; cell.down = true; }
+      else if (c === 0) { cell.isClue = true; cell.text = rows[r - 1]; cell.right = true; }
+      else if (inner[k]) { cell.isClue = true; Object.assign(cell, inner[k]); cell.isDouble = !!inner[k].text2; }
+      else { cell.isLetter = true; const L = letters[k]; if (L) { cell.letter = L[0]; cell.who = L[1]; } }
+      if (cell.isClue) cell.fs = cell.isDouble ? 8 : cell.text.length <= 8 ? 12 : cell.text.length <= 14 ? 10 : 9;
+      out.push(cell);
+    }
+    return out;
+  }
+  cellsFor(T, mode) {
+    const { sel, pending } = this.state;
+    const WORD = ['1,3', '2,3', '3,3'];
+    return this.baseCells().map(c0 => {
+      const c = { ...c0 };
+      let glow = 'none';
+      if (mode === 'play' && pending[c.key]) { c.letter = pending[c.key].letter; c.who = 'pend'; }
+      if (mode === 'word' && WORD.includes(c.key)) { c.who = 'p'; }
+      if (mode === 'fly' && c.key === '2,5') { c.letter = ''; c.who = ''; glow = 'inset 0 0 0 2px rgba(127,167,216,.9)'; }
+      if (mode === 'bounce' && c.key === '4,4') { c.letter = 'K'; c.who = 'wrong'; glow = 'inset 0 0 0 2px ' + T.error; }
+      c.bg = c.isCorner ? '#0b1a33' : c.isClue ? T.cellClue : c.who === 'pend' ? T.cellPending : c.who === 'wrong' ? T.cellWrong : T.cellLetter;
+      c.ink = c.who === 'b' ? T.inkBot : c.who === 'pend' ? T.inkPending : c.who === 'wrong' ? T.error : T.ink;
+      c.glow = glow;
+      c.place = mode !== 'play' ? () => {} : () => {
+        if (!c.isLetter) return;
+        if (pending[c.key]) { const p = { ...pending }; delete p[c.key]; return this.setState({ pending: p }); }
+        if (sel === null || c.letter) return;
+        this.setState({ pending: { ...pending, [c.key]: { letter: this.RACK[sel], i: sel } }, sel: null });
+      };
+      return c;
+    });
+  }
+  rackFor(mode) {
+    const { sel, pending } = this.state;
+    const used = new Set(Object.values(pending).map(p => p.i));
+    return this.RACK.map((letter, i) => {
+      const t = { letter, i, selected: false, placed: false, idle: true, wrong: false, pick: () => {} };
+      if (mode === 'play') { t.selected = sel === i; t.placed = used.has(i); t.idle = !t.selected && !t.placed; t.pick = () => this.setState({ sel: sel === i ? null : i }); }
+      if (mode === 'bounce' && i === 2) { t.wrong = true; t.idle = false; }
+      return t;
+    });
+  }
+  renderVals() {
+    const { tok, cur, sel, pending, swapSel, settings, appearance } = this.state;
+    if (!tok) return {};
+    const S = tok.STRINGS.tr;
+    const themes = ['dark', 'light'].map(k => ({ ...tok.THEMES[k], mapRef: this.mapRefs[k] }));
+    const [D, L] = themes;
+    const showAd = (this.props.showAdLabels ?? true) && cur > 3;
+    const nPend = Object.keys(pending).length;
+    const confirm = () => this.setState({ pending: {}, sel: null });
+    const modes = [
+      ['play', 'Sıra sende'], ['bot', 'Rakip düşünüyor'], ['word', 'Kelime tamamlandı'], ['fly', 'Harf uçuşu · bot harfi iner'], ['bounce', 'Yanlış harf geri döner'], ['offline', 'Bağlantı yok']
+    ];
+    const games = [];
+    modes.forEach(([mode, name]) => themes.forEach(T => {
+      const isBot = mode === 'bot' || mode === 'fly';
+      const hint = mode === 'play' ? (nPend ? S.turnPending.replace('{n}', nPend) : sel !== null ? S.turnTap : S.turnYou)
+        : isBot ? S.turnBot : mode === 'word' ? S.wordDone.replace('{w}', 'DİL').replace('{n}', 12) : mode === 'bounce' ? S.wrongLetter : S.turnYou;
+      games.push({
+        T, mode, label: name + ' · ' + T.label, cells: this.cellsFor(T, mode), rack: this.rackFor(mode),
+        isWord: mode === 'word', isFly: mode === 'fly', isBounce: mode === 'bounce', isOffline: mode === 'offline',
+        you: mode === 'word' ? 24 : 12 + (mode === 'play' ? nPend : 0), bot: 9, hint,
+        youOpacity: isBot ? .55 : 1, botOpacity: 1,
+        botRing: isBot ? '0 0 0 3px rgba(127,167,216,.4)' : 'none',
+        pillBg: isBot ? 'rgba(127,167,216,.18)' : mode === 'bounce' ? 'rgba(224,122,106,.18)' : 'rgba(242,194,122,.18)',
+        pillInk: isBot ? (T.key === 'dark' ? '#7fa7d8' : '#1a4b8c') : mode === 'bounce' ? T.error : '#c77a3c',
+        rackOpacity: isBot ? .45 : 1, barOpacity: isBot ? .4 : 1, slotOpacity: mode === 'offline' ? .4 : 1,
+        confirm: mode === 'play' ? confirm : () => {},
+        confirmLabel: isBot ? S.botTurnBtn : (mode === 'play' && nPend) || mode === 'word' ? S.confirm : S.pass,
+        confirmBg: isBot ? T.surface : T.accent, confirmInk: isBot ? T.text : T.accentInk
+      });
+    }));
+    const home = (T, s, opts) => ({
+      T, s, label: opts.label, levelLabel: s.level + ' ' + cur,
+      streakLine: s.streak + ' · 4 ' + s.day, wordsLine: s.words + ' · 318',
+      saveTitle: opts.empty ? s.noSave : s.resume, saveOpacity: opts.empty ? .6 : 1,
+      saveSub: opts.empty ? s.noSaveSub : s.level + ' ' + cur + ' · ' + s.you + ' 12 – ' + s.bot + ' 9',
+      cta: opts.empty ? s.startLevel.replace('{n}', cur) : s.continueClimb
+    });
+    const homes = [home(D, S, { label: 'Ana · Koyu' }), home(L, S, { label: 'Ana · Açık' }), home(D, S, { label: 'Kaydedilmiş oyun yok · Koyu', empty: true })];
+    const shops = [D, L].map(T => ({ T, s: S, label: 'Mağaza · ' + T.label, unlock15: S.unlockN.replace('{n}', 15), unlock50: S.unlockN.replace('{n}', 50) }));
+    const results = [];
+    [['won', 'Kazandın'], ['lost', 'Kaybettin'], ['draw', 'Berabere']].forEach(([k, name]) => themes.forEach(T => {
+      const won = k === 'won';
+      results.push({
+        T, label: name + ' · ' + T.label, isWon: won, notWon: !won,
+        bg: won ? T.bgWon : k === 'lost' ? T.bgLost : T.bgDraw,
+        tag: 'BÖLÜM ' + cur + ' · ' + (won ? S.won : k === 'lost' ? S.lost : S.draw),
+        h: won ? S.wonH : k === 'lost' ? S.lostH : S.drawH,
+        sub: k === 'lost' ? S.lostSub : S.drawSub,
+        you: won ? 24 : k === 'lost' ? 17 : 18, bot: won ? 19 : k === 'lost' ? 20 : 18, diff: won ? 5 : k === 'lost' ? 3 : 0,
+        primary: S.wonCta.replace('{n}', cur + 1)
+      });
+    }));
+    const { N, sp, mapH } = this.geo();
+    const nodes = []; let d = '';
+    for (let n = 1; n <= N; n++) {
+      const x = 195 + 118 * Math.sin(n * 0.85), y = mapH - 140 - (n - 1) * sp;
+      d += (n === 1 ? 'M' : ' L') + x.toFixed(1) + ' ' + y.toFixed(1);
+      nodes.push({ n, x: Math.round(x), y: Math.round(y), done: n < cur, cur: n === cur, next: n > cur && n <= cur + 2, far: n > cur + 2 });
+    }
+    const swapRack = this.RACK.map((letter, i) => ({ letter, i, on: swapSel.includes(i), off: !swapSel.includes(i), toggle: () => this.setState({ swapSel: swapSel.includes(i) ? swapSel.filter(x => x !== i) : [...swapSel, i] }) }));
+    const toggles = [['sound', S.sound, S.soundSub], ['haptic', S.haptic, S.hapticSub], ['sky', S.sky, S.skySub]].map(([k, label, sub]) => ({ k, label, sub, on: settings[k], offv: !settings[k], flip: () => this.setState({ settings: { ...settings, [k]: !settings[k] } }) }));
+    const appearanceOpts = [['light', S.appLight], ['dark', S.appDark], ['system', S.appSystem]].map(([v, label]) => ({ v, label, on: appearance === v, offv: appearance !== v, pick: () => this.setState({ appearance: v }) }));
+    const posterCells = this.cellsFor(D, 'word').map(c => ({ bg: c.isCorner ? '#0b1a33' : c.isClue ? D.cellClue : c.bg, ink: c.ink, letter: c.isLetter ? c.letter : '' }));
+    const frames = [['Oyun', 'isGame'], ['Harita', 'isMap'], ['Kazandın', 'isWon'], ['İpucu', 'isClue'], ['Ana ekran', 'isHome']].map(([label, flag], i) => ({ label: (i + 1) + ' · ' + label, slogan: S.slogans[i], [flag]: true }));
+    return {
+      themes, homes, games, shops, results, frames, posterCells, nodes, pathD: d, mapH,
+      cur, curLabel: 'Bölüm ' + cur, showAd,
+      swapRack, swapLeft: 12 - swapSel.length, swapHint: swapSel.length ? swapSel.length + ' harf seçildi' : 'Henüz harf seçilmedi', swapOpacity: swapSel.length ? 1 : .4,
+      toggles, appearanceOpts
+    };
+  }
+}
+</script>
+</body>
+</html>

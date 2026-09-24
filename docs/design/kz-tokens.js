@@ -1,0 +1,215 @@
+// Kelime Zirvesi — tek kaynak: renk token'ları, tipografi, metinler. Flutter'a aktarım için.
+export const THEMES = {
+  dark: {
+    key: 'dark', label: 'Koyu',
+    bgFlat: '#0b1a33',
+    bgHome: 'linear-gradient(180deg,#0b1a33 0%,#1c3358 45%,#5a3d3a 78%,#c77a3c 100%)',
+    bgGame: 'linear-gradient(180deg,#0b1a33 0%,#1c3358 60%,#2d2f4a 100%)',
+    bgMap: 'linear-gradient(180deg,#05101f 0%,#0b1a33 30%,#1c3358 65%,#5a3d3a 90%,#c77a3c 100%)',
+    bgWon: 'linear-gradient(180deg,#2a3a63 0%,#7a4a5a 40%,#e0895a 75%,#f2c27a 100%)',
+    bgLost: 'linear-gradient(180deg,#05101f 0%,#0b1a33 50%,#1c2a45 100%)',
+    bgDraw: 'linear-gradient(180deg,#141f3a 0%,#2c3a5c 55%,#4a4a66 100%)',
+    fog: '#05101f',
+    surface: 'rgba(255,255,255,.10)', card: 'rgba(20,12,10,.55)', border: 'rgba(255,255,255,.12)',
+    board: '#f6ecd9', boardBorder: 'transparent', boardShadow: '0 20px 50px rgba(0,0,0,.40)',
+    cellLetter: '#fffaf0', cellClue: '#e9dcc1', cellPending: '#fbe3b8', cellWrong: '#f9dcd7', clueText: '#3a2a1c',
+    ink: '#1a1a1a', inkBot: '#1a4b8c', inkPending: '#c77a3c',
+    accent: '#f2c27a', accentInk: '#2a1a10', arrow: '#c77a3c',
+    tile: '#f6ecd9', tileInk: '#2a1a10', tileShadow: '#c9b592',
+    text: '#f6ecd9', muted: 'rgba(246,236,217,.72)', faint: 'rgba(246,236,217,.45)',
+    success: '#6fae74', error: '#e07a6a', bot: '#7fa7d8', botInk: '#0b1a33',
+    mtn1: '#2b2d45', mtn2: '#3f2f3e', mtn3: '#5a3a35',
+    sheet: '#f6ecd9', sheetText: '#2a1a10', sheetMuted: '#8a6a4c', sheetCard: '#ffffff',
+    solid: '#2a1a10', solidText: '#f6ecd9', toggleOff: 'rgba(255,255,255,.18)', knob: '#f6ecd9',
+    page: '#f6ecd9', pageText: '#2a1a10', pageMuted: '#8a6a4c', pageLine: 'rgba(42,26,16,.10)',
+    logoMtn: '#f6ecd9', logoSun: '#f2c27a', dim: 'rgba(5,16,31,.55)'
+  },
+  light: {
+    key: 'light', label: 'Açık',
+    bgFlat: '#f3ead8',
+    bgHome: 'linear-gradient(180deg,#bcd0e6 0%,#e6e0d2 45%,#f0cfa6 78%,#e2a25c 100%)',
+    bgGame: 'linear-gradient(180deg,#e3ddd0 0%,#f3ead8 60%,#efe4d0 100%)',
+    bgMap: 'linear-gradient(180deg,#eef1f5 0%,#c9d8e8 30%,#e6dfd0 65%,#f0cfa6 90%,#e2a25c 100%)',
+    bgWon: 'linear-gradient(180deg,#bcd0e6 0%,#f0c9b0 40%,#f3c98e 75%,#f2c27a 100%)',
+    bgLost: 'linear-gradient(180deg,#c9d3e2 0%,#e1e1dc 50%,#ede7dc 100%)',
+    bgDraw: 'linear-gradient(180deg,#d3d9e3 0%,#e6e3dc 55%,#ede7dc 100%)',
+    fog: '#eef1f5',
+    surface: 'rgba(11,26,51,.07)', card: 'rgba(255,255,255,.72)', border: 'rgba(11,26,51,.10)',
+    board: '#fffaf0', boardBorder: '#e3d5b6', boardShadow: '0 14px 36px rgba(42,26,16,.14)',
+    cellLetter: '#ffffff', cellClue: '#efe3c9', cellPending: '#fbe3b8', cellWrong: '#f9dcd7', clueText: '#3a2a1c',
+    ink: '#1a1a1a', inkBot: '#1a4b8c', inkPending: '#c77a3c',
+    accent: '#f2c27a', accentInk: '#2a1a10', arrow: '#c77a3c',
+    tile: '#ffffff', tileInk: '#2a1a10', tileShadow: '#d9c9a6',
+    text: '#0b1a33', muted: 'rgba(11,26,51,.66)', faint: 'rgba(11,26,51,.40)',
+    success: '#4f8a5b', error: '#c8503f', bot: '#7fa7d8', botInk: '#0b1a33',
+    mtn1: '#9fb0c8', mtn2: '#b39a92', mtn3: '#c8a284',
+    sheet: '#fffaf0', sheetText: '#0b1a33', sheetMuted: '#7a6350', sheetCard: '#f3ead8',
+    solid: '#0b1a33', solidText: '#f6ecd9', toggleOff: 'rgba(11,26,51,.15)', knob: '#ffffff',
+    page: '#fffaf0', pageText: '#0b1a33', pageMuted: '#7a6350', pageLine: 'rgba(11,26,51,.10)',
+    logoMtn: '#0b1a33', logoSun: '#c77a3c', dim: 'rgba(11,26,51,.45)'
+  }
+};
+
+export const TOKEN_META = [
+  ['bgFlat', 'Düz zemin (ayarlar, splash, harita üstü)'],
+  ['bgHome', 'Ana ekran gökyüzü gradyanı'],
+  ['bgGame', 'Oyun ekranı gradyanı'],
+  ['bgMap', 'Harita gradyanı (yukarı gece → aşağı kamp)'],
+  ['bgWon', 'Kazandın gradyanı (şafak)'],
+  ['bgLost', 'Kaybettin gradyanı (gece)'],
+  ['bgDraw', 'Berabere gradyanı (nötr)'],
+  ['fog', 'Harita üst sis rengi'],
+  ['surface', 'Yuvarlak ikon buton zemini'],
+  ['card', 'Yarı saydam kart (blur 8)'],
+  ['border', 'Kart / liste çerçevesi'],
+  ['board', 'Tahta zemini'],
+  ['boardBorder', 'Tahta çerçevesi (1 px)'],
+  ['boardShadow', 'Tahta gölgesi'],
+  ['cellLetter', 'Harf hücresi zemini'],
+  ['cellClue', 'İpucu hücresi zemini'],
+  ['cellPending', 'Bekleyen harf hücresi zemini'],
+  ['cellWrong', 'Yanlış harf hücresi (kısa flaş)'],
+  ['clueText', 'İpucu metni'],
+  ['ink', 'Oyuncu harfi'],
+  ['inkBot', 'Bot (Rakip) harfi'],
+  ['inkPending', 'Bekleyen harf'],
+  ['accent', 'Kehribar vurgu (birincil buton, seçili taş)'],
+  ['accentInk', 'Vurgu üstü metin'],
+  ['arrow', 'İpucu okları, köşe hücresi'],
+  ['tile', 'Taş zemini (boşta)'],
+  ['tileInk', 'Taş harfi'],
+  ['tileShadow', 'Taş alt gölgesi (4 px)'],
+  ['text', 'Birincil metin'],
+  ['muted', 'İkincil metin'],
+  ['faint', 'Üçüncül metin / ayraç'],
+  ['success', 'Başarı'],
+  ['error', 'Hata / yanlış harf kenarı'],
+  ['bot', 'Rakip avatar zemini'],
+  ['botInk', 'Rakip avatar silueti'],
+  ['mtn1', 'Dağ katmanı 1 (uzak)'],
+  ['mtn2', 'Dağ katmanı 2'],
+  ['mtn3', 'Dağ katmanı 3 (yakın)'],
+  ['sheet', 'Alt sayfa (sheet) zemini'],
+  ['sheetText', 'Sheet metni'],
+  ['sheetMuted', 'Sheet ikincil metni'],
+  ['sheetCard', 'Sheet içi kart'],
+  ['solid', 'Koyu dolu buton (kazandın, kapat)'],
+  ['solidText', 'Koyu buton metni'],
+  ['toggleOff', 'Anahtar kapalı'],
+  ['knob', 'Anahtar topuzu (kapalı)'],
+  ['page', 'Gizlilik / koşullar sayfa zemini'],
+  ['pageText', 'Sayfa metni'],
+  ['pageMuted', 'Sayfa ikincil metni'],
+  ['pageLine', 'Sayfa ayraç / iskelet satır'],
+  ['logoMtn', 'Logo dağ rengi'],
+  ['logoSun', 'Logo güneş rengi'],
+  ['dim', 'Sheet arkası karartma']
+];
+
+export const TYPE = {
+  lora: [
+    [62, 700, 'Display — ana ekran adı, iki satır'],
+    [40, 700, 'Sonuç başlığı (48 tek satır, 40 iki satır)'],
+    [22, 700, 'Ekran başlığı, skor, bölüm numarası, taş harfi (Lora 26 taş / 22 hücre)'],
+    [15, 600, 'Harita düğüm numarası, liste vurgusu']
+  ],
+  nunito: [
+    [18, 800, 'Birincil buton'],
+    [15, 700, 'İkincil buton, liste satırı'],
+    [13, 600, 'Pill metni, alt bilgi'],
+    [12, 600, 'İkincil açıklama, etiket'],
+    [11, 600, 'Büyük harf etiket, letter-spacing 3 px']
+  ]
+};
+export const RADII = [[6, 'Hücre'], [10, 'Taş, ikon kutusu'], [16, 'Tahta'], [18, 'Liste kartı'], [20, 'Skor kartı, sheet kartı'], [999, 'Pill / buton / avatar']];
+export const SPACE = [2, 4, 6, 8, 10, 12, 16, 18, 20, 24, 32, 40];
+export const BUTTONS = [[56, 'Birincil (CTA)'], [52, 'Oyun alt barı, sheet kapat'], [48, 'İkincil / çerçeveli']];
+export const LAYOUT = [
+  ['Tahta', '9 satır × 7 sütun, sabit'],
+  ['Hücre', '49–56 dp (390 dp ekranda 50 dp), boşluk 2 dp'],
+  ['Tahta iç boşluk', '6 dp, yarıçap 16'],
+  ['Tek ipucu', 'En fazla 3 satır; 9–14 px otomatik (≤8 karakter 12, ≤14 karakter 10, üstü 9)'],
+  ['Çift ipucu', 'Ortada 1 px ayırıcı; her yarı ≤2 satır ve ≤16 karakter; 8 px'],
+  ['Kelime bölme', 'Asla ortadan bölünmez (hyphens: manual); gerekirse hece sonuna tire'],
+  ['Taş', '52 × 56 dp, yarıçap 10; seçili: 8 dp yukarı; yanlış: 2 dp error kenar'],
+  ['Rack', '5 taş + kesikli "+ HARF EKLE" yuvası → reklam sonrası 6 taş'],
+  ['Güvenli alan', 'Üst 50 dp status bar; alt 34 dp home indicator; ← her ekranda'],
+  ['Bölüm başına', '40 m; toplam bölüm sayısı hiçbir yerde gösterilmez'],
+  ['Reklam etiketi', 'İnce "▶ reklam" alt yazısı; ilk 3 bölümde gizli']
+];
+
+export const STRINGS = {
+  tr: {
+    appName: 'Kelime Zirvesi', appNameStacked: 'Kelime\nZirvesi', homeTag: "RAKİBE KARŞI ÇENGEL BULMACA",
+    now: 'Şu an', level: 'Bölüm', streak: 'Bugünün serisi', words: 'Bulunan kelime', day: 'gün',
+    resume: 'Yarım kalan oyun', noSave: 'Kaydedilmiş oyun yok', noSaveSub: 'Yeni bölüme başlamak için aşağıya dokun',
+    continueClimb: 'Tırmanışa devam et', startLevel: 'Bölüm {n} ile başla', map: 'Harita', settings: 'Ayarlar',
+    you: 'Sen', bot: 'Rakip', vs: 'VS',
+    turnYou: 'Sıra sende', turnPending: '{n} harf bekliyor · onayla', turnTap: 'Boş bir hücreye dokun', turnBot: 'Rakip düşünüyor', botTurnBtn: "Sıra rakipte",
+    confirm: 'Onayla', pass: 'Pas', addLetter: 'HARF EKLE', hint: 'İPUCU AL', ad: 'reklam', swap: 'Harf değiştir',
+    wordDone: '{w} · +{n} puan', wrongLetter: 'Bu harf buraya uymuyor', offline: 'Bağlantı yok · reklam yüklenemedi', retry: 'Tekrar dene',
+    clues: 'İpuçları', right: 'SAĞA', down: 'AŞAĞI', letters: 'HARF', close: 'Kapat',
+    swapLeft: 'Kalan hak', swapSub: 'Değiştirmek istediğin harflere dokun.', swapNow: 'Şimdi değiştir', swapKeep: 'sıra sende kalır', swapPass: 'Değiştir ve pas', swapFree: "ücretsiz, sıra rakibe",
+    won: 'KAZANDIN', wonH: 'Bir adım daha\nzirveye', wonCta: 'Bölüm {n} · tırmanmaya devam', again: 'Tekrar oyna',
+    lost: 'KAYBETTİN', lostH: 'Kampta\nbir gece daha', lostSub: 'Rakip bu eli aldı. Aynı yerden yeniden dene; yükseklik kaybı yok.', tryAgain: 'Tekrar dene', backMap: 'Haritaya dön',
+    draw: 'BERABERE', drawH: "Berabere ·\nRakiple başa baş", drawSub: 'Puanlar eşit. Aynı kamptan yeniden dene; yükseklik kaybı yok.', diff: 'fark',
+    climb: 'TIRMANIŞ', fogUp: 'yukarısı sisin içinde…', camp: 'Kamp · başlangıç', here: 'BURADASIN',
+    onbSkip: 'Atla', onbNext: 'Devam', onb1: 'İpucunu oku, harfi yerleştir', onb1Sub: 'Ok hangi yöne gidiyorsa kelime o yöne yazılır. Tepsiden bir harf seç, boş hücreye dokun.', onbSteps: ['İpucu', 'Harf koy', 'Onayla', 'Rakip cevap verir'],
+    consentTag: 'HOŞ GELDİN', consentH: 'Tırmanışa başlamadan önce', consentTitle: 'Reklamlar ve veri', consentBody: 'Kelime Zirvesi ücretsiz; jokerler ve ekstra harfler kısa reklamlarla açılır. İlk 3 bölümde hiç reklam gösterilmez. Kişiselleştirilmiş reklam için onayın gerekir; onay vermezsen genel reklamlar gösterilir.', privacy: 'Gizlilik politikası', terms: 'Kullanım koşulları', accept: 'Kabul et ve başla', manage: 'Seçenekleri yönet',
+    attTag: 'BİR ADIM KALDI', attH: 'Takip izni hakkında', attBody: 'Bir sonraki adımda iOS, uygulamalar arası takip için izin isteyecek. İzin verirsen reklamlar ilgi alanlarına göre seçilir; vermezsen oyun aynen devam eder, reklamlar genel olur.', attCta: 'Devam', attLater: 'Şimdi değil',
+    appearance: 'Görünüm', appLight: 'Açık', appDark: 'Koyu', appSystem: 'Sistem', sound: 'Ses', soundSub: 'Harf ve puan sesleri', haptic: 'Titreşim', hapticSub: 'Harf yerleşince hafif dokunuş', sky: 'Gökyüzü', skySub: 'Arka plan ilerlemeyle değişir',
+    game: 'OYUN', account: 'HESAP', removeAds: 'Reklamları kaldır', shopLink: 'Mağaza →', adPrefs: 'Reklam tercihleri', reset: 'İlerlemeyi sıfırla', del: 'Sil', version: 'Kelime Zirvesi 1.0.0',
+    shop: 'Kamp dükkânı', oneTime: 'TEK SEFERLİK', adFree: 'Reklamsız tırmanış', adFreeSub: 'Bölüm sonu reklamları kalkar. Jokerlerdeki reklam yerine kamp parası kullanılır.', coins: 'KAMP PARASI', unlockN: '≈ {n} harf açma', mostBought: 'EN ÇOK ALINAN', free: 'ÜCRETSİZ', daily: 'Günlük kamp ateşi', dailySub: 'Her gün 20 para', get: 'Al', restore: 'Satın alımları geri yükle',
+    price1: '₺89,99', price2: '₺29,99', price3: '₺79,99',
+    legalUpdated: 'Son güncelleme · 20 Eylül 2026', legal1: 'Hangi verileri topluyoruz', legal2: 'Reklam ortakları', legal3: 'Cihazda saklanan veriler',
+    slogans: ["rakibe karşı bulmaca düellosu", 'Kelime kelime zirveye tırman', 'Her galibiyet 40 metre daha yukarı', 'İpuçları bir dokunuş uzakta', 'Zirveye giden yol sonsuz']
+  },
+  en: {
+    appName: 'Word Summit', appNameStacked: 'Word\nSummit', homeTag: 'CROSSWORD DUEL AGAINST AN OPPONENT',
+    now: 'Now', level: 'Level', streak: "Today's streak", words: 'Words found', day: 'days',
+    resume: 'Unfinished game', noSave: 'No saved game', noSaveSub: 'Tap below to start a new level',
+    continueClimb: 'Continue the climb', startLevel: 'Start level {n}', map: 'Map', settings: 'Settings',
+    you: 'You', bot: 'Opponent', vs: 'VS',
+    turnYou: 'Your turn', turnPending: '{n} letters pending · confirm', turnTap: 'Tap an empty cell', turnBot: 'Opponent is thinking', botTurnBtn: "Opponent's turn",
+    confirm: 'Confirm', pass: 'Pass', addLetter: 'ADD LETTER', hint: 'GET HINT', ad: 'ad', swap: 'Swap letters',
+    wordDone: '{w} · +{n} points', wrongLetter: "This letter doesn't fit here", offline: 'No connection · ad failed to load', retry: 'Retry',
+    clues: 'Clues', right: 'ACROSS', down: 'DOWN', letters: 'LETTERS', close: 'Close',
+    swapLeft: 'Remaining', swapSub: 'Tap the letters you want to swap.', swapNow: 'Swap now', swapKeep: 'keep your turn', swapPass: 'Swap and pass', swapFree: 'free, turn goes to opponent',
+    won: 'YOU WON', wonH: 'One step closer\nto the summit', wonCta: 'Level {n} · keep climbing', again: 'Play again',
+    lost: 'YOU LOST', lostH: 'One more night\nat camp', lostSub: 'Your opponent took this round. Try again from the same spot; no altitude lost.', tryAgain: 'Try again', backMap: 'Back to map',
+    draw: 'DRAW', drawH: 'A draw ·\nneck and neck with your opponent', drawSub: 'Scores are tied. Try again from the same camp; no altitude lost.', diff: 'gap',
+    climb: 'THE CLIMB', fogUp: 'the way up is in the mist…', camp: 'Camp · start', here: 'YOU ARE HERE',
+    onbSkip: 'Skip', onbNext: 'Next', onb1: 'Read the clue, place a letter', onb1Sub: 'The arrow shows where the word goes. Pick a letter from the rack and tap an empty cell.', onbSteps: ['Clue', 'Place letter', 'Confirm', 'Opponent replies'],
+    consentTag: 'WELCOME', consentH: 'Before you start climbing', consentTitle: 'Ads and data', consentBody: 'Word Summit is free; boosters and extra letters unlock with short ads. No ads in the first 3 levels. Personalized ads need your consent; otherwise you see generic ads.', privacy: 'Privacy policy', terms: 'Terms of use', accept: 'Accept and start', manage: 'Manage options',
+    attTag: 'ONE MORE STEP', attH: 'About tracking permission', attBody: "Next, iOS will ask for permission to track across apps. If you allow it, ads match your interests; if not, the game continues as is with generic ads.", attCta: 'Continue', attLater: 'Not now',
+    appearance: 'Appearance', appLight: 'Light', appDark: 'Dark', appSystem: 'System', sound: 'Sound', soundSub: 'Letter and score sounds', haptic: 'Haptics', hapticSub: 'Light tap when a letter lands', sky: 'Sky', skySub: 'Background changes with progress',
+    game: 'GAME', account: 'ACCOUNT', removeAds: 'Remove ads', shopLink: 'Shop →', adPrefs: 'Ad preferences', reset: 'Reset progress', del: 'Delete', version: 'Word Summit 1.0.0',
+    shop: 'Camp shop', oneTime: 'ONE-TIME', adFree: 'Ad-free climb', adFreeSub: 'No end-of-level ads. Boosters use camp coins instead of ads.', coins: 'CAMP COINS', unlockN: '≈ {n} letter unlocks', mostBought: 'MOST POPULAR', free: 'FREE', daily: 'Daily campfire', dailySub: '20 coins every day', get: 'Claim', restore: 'Restore purchases',
+    price1: '$4.99', price2: '$1.99', price3: '$3.99',
+    legalUpdated: 'Last updated · Sep 20, 2026', legal1: 'What we collect', legal2: 'Ad partners', legal3: 'Data stored on device',
+    slogans: ['A crossword duel against an opponent', 'Climb the summit word by word', 'Every win is 40 metres higher', 'Hints are one tap away', 'The road to the summit never ends']
+  }
+};
+
+export const ICONS = [
+  ['back', 'Geri', '<path d="M15 5l-7 7 7 7"/>'],
+  ['more', 'Daha fazla', '<circle cx="5" cy="12" r="1.6" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.6" fill="currentColor" stroke="none"/><circle cx="19" cy="12" r="1.6" fill="currentColor" stroke="none"/>'],
+  ['swap', 'Harf değiştir', '<path d="M4 8h13l-3-3"/><path d="M20 16H7l3 3"/>'],
+  ['lamp', 'İpucu', '<path d="M9 18h6"/><path d="M10 21h4"/><path d="M12 3a6 6 0 0 0-4 10.5c.7.7 1 1.4 1 2.5h6c0-1.1.3-1.8 1-2.5A6 6 0 0 0 12 3z"/>'],
+  ['lock', 'Kilitli bölüm', '<rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/>'],
+  ['person', 'Avatar silueti', '<circle cx="12" cy="8" r="4" fill="currentColor" stroke="none"/><path d="M4 22c0-5 3.6-8 8-8s8 3 8 8z" fill="currentColor" stroke="none"/>'],
+  ['check', 'Onay', '<path d="M5 12l5 5L20 7"/>'],
+  ['close', 'Kapat / yanlış', '<path d="M6 6l12 12M18 6L6 18"/>'],
+  ['plus', 'Harf ekle', '<path d="M12 5v14M5 12h14"/>'],
+  ['play', 'Reklam işareti', '<path d="M7 4l13 8-13 8z" fill="currentColor" stroke="none"/>'],
+  ['coin', 'Kamp parası', '<circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3.5"/>'],
+  ['wifi-off', 'Bağlantı yok', '<path d="M2 8.5a16 16 0 0 1 20 0"/><path d="M5.5 12a11 11 0 0 1 13 0"/><path d="M9 15.5a5 5 0 0 1 6 0"/><circle cx="12" cy="19" r="1" fill="currentColor"/><path d="M3 3l18 18"/>'],
+  ['sun', 'Şafak / gündüz', '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>'],
+  ['moon', 'Gece', '<path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/>'],
+  ['flag', 'Buradasın', '<path d="M5 21V4"/><path d="M5 4h11l-2 4 2 4H5"/>'],
+  ['fire', 'Kamp ateşi', '<path d="M12 22c4 0 7-3 7-7 0-3-2-5-3-6-.5 2-2 3-2 3 0-3-1-6-4-9 0 4-3 6-4 9-.6 1.8-1 3-1 4 0 4 3 6 7 6z"/>']
+];
+
+// Uygulama ikonu / logo (1A Sıradağ + güneş). viewBox 0 0 40 40; 7 sütun × 5 satır hücre grid'i, hücre 4.6, adım 5.4.
+export const LOGO_SVG = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><circle cx="10" cy="8.5" r="3.4" fill="#f2c27a"/><rect x="1.5" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"/><rect x="6.9" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"/><rect x="12.3" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"/><rect x="17.7" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"/><rect x="23.1" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"/><rect x="28.5" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"/><rect x="33.9" y="34" width="4.6" height="4.6" rx="1" fill="#c77a3c"/><rect x="1.5" y="28.6" width="4.6" height="4.6" rx="1" fill="#c77a3c"/><rect x="6.9" y="28.6" width="4.6" height="4.6" rx="1" fill="#c77a3c"/><rect x="12.3" y="28.6" width="4.6" height="4.6" rx="1" fill="#c77a3c"/><rect x="17.7" y="28.6" width="4.6" height="4.6" rx="1" fill="#c77a3c"/><rect x="23.1" y="28.6" width="4.6" height="4.6" rx="1" fill="#c77a3c"/><rect x="28.5" y="28.6" width="4.6" height="4.6" rx="1" fill="#c77a3c"/><rect x="6.9" y="23.2" width="4.6" height="4.6" rx="1" fill="#f6ecd9"/><rect x="17.7" y="23.2" width="4.6" height="4.6" rx="1" fill="#e9dcc1"/><rect x="23.1" y="23.2" width="4.6" height="4.6" rx="1" fill="#e9dcc1"/><rect x="28.5" y="23.2" width="4.6" height="4.6" rx="1" fill="#e9dcc1"/><rect x="17.7" y="17.8" width="4.6" height="4.6" rx="1" fill="#f6ecd9"/><rect x="23.1" y="17.8" width="4.6" height="4.6" rx="1" fill="#f6ecd9"/><rect x="23.1" y="12.4" width="4.6" height="4.6" rx="1" fill="#f2c27a"/></svg>';
+export const LOGO_BG = 'linear-gradient(160deg,#1c3358 0%,#0b1a33 100%)';
