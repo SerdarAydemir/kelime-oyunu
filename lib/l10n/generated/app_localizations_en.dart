@@ -183,7 +183,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get drawH => 'A draw ·\nneck and neck with your opponent';
 
   @override
-  String get drawSub => 'Scores are tied. Try again from the same camp; no altitude lost.';
+  String get drawSub =>
+      'Scores are tied. Try again from the same camp; no altitude lost.';
 
   @override
   String get diff => 'gap';
@@ -330,7 +331,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get adFree => 'Ad-free climb';
 
   @override
-  String get adFreeSub => 'No end-of-level ads. Boosters use camp coins instead of ads.';
+  String get adFreeSub =>
+      'No end-of-level ads. Boosters use camp coins instead of ads.';
 
   @override
   String get coins => 'CAMP COINS';
@@ -487,4 +489,9 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get swapNone => 'No letters selected yet';
+
+  @override
+  String meters(int m) {
+    return '$m m';
+  }
 }

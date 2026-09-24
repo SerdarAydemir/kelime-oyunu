@@ -286,5 +286,13 @@
       }
     }
   },
-  "swapNone": "No letters selected yet"
+  "swapNone": "No letters selected yet",
+  "meters": "{m} m",
+  "@meters": {
+    "placeholders": {
+      "m": {
+        "type": "int"
+      }
+    }
+  }
 }

@@ -167,7 +167,8 @@ class AppLocalizationsTr extends AppLocalizations {
   String get lostH => 'Kampta\nbir gece daha';
 
   @override
-  String get lostSub => 'Rakip bu eli aldı. Aynı yerden yeniden dene; yükseklik kaybı yok.';
+  String get lostSub =>
+      'Rakip bu eli aldı. Aynı yerden yeniden dene; yükseklik kaybı yok.';
 
   @override
   String get tryAgain => 'Tekrar dene';
@@ -182,7 +183,8 @@ class AppLocalizationsTr extends AppLocalizations {
   String get drawH => 'Berabere ·\nRakiple başa baş';
 
   @override
-  String get drawSub => 'Puanlar eşit. Aynı kamptan yeniden dene; yükseklik kaybı yok.';
+  String get drawSub =>
+      'Puanlar eşit. Aynı kamptan yeniden dene; yükseklik kaybı yok.';
 
   @override
   String get diff => 'fark';
@@ -434,7 +436,8 @@ class AppLocalizationsTr extends AppLocalizations {
   }
 
   @override
-  String get revealConfirmTitle => 'Bu kelimeyi açmak istediğinize emin misiniz?';
+  String get revealConfirmTitle =>
+      'Bu kelimeyi açmak istediğinize emin misiniz?';
 
   @override
   String get yes => 'Evet';
@@ -487,4 +490,9 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get swapNone => 'Henüz harf seçilmedi';
+
+  @override
+  String meters(int m) {
+    return '$m m';
+  }
 }

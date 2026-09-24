@@ -8,6 +8,7 @@ import 'package:kelime_oyunu/core/services/mock_ad_service.dart';
 import 'package:kelime_oyunu/data/repositories/progress_repository.dart';
 import 'package:kelime_oyunu/data/repositories/session_repository.dart';
 import 'package:kelime_oyunu/features/gameplay/view/game_screen.dart';
+import 'package:kelime_oyunu/features/home/view/home_screen.dart';
 import 'package:kelime_oyunu/features/levels/view/level_select_screen.dart';
 import 'package:kelime_oyunu/features/splash/view/splash_screen.dart';
 
@@ -21,16 +22,26 @@ abstract final class AppRouter {
     required ProgressRepository progressRepo,
     required SessionRepository sessionRepo,
   }) => GoRouter(
-    initialLocation: '/',
+    initialLocation: '/splash',
     routes: [
-      // Splash first, then the level grid — never straight into a match: the
-      // player picks up where they left off (F7).
-      GoRoute(path: '/', builder: (context, state) => const SplashScreen()),
+      // Splash first, then home — never straight into a match: the player
+      // picks up where they left off (F7).
       GoRoute(
-        path: '/levels',
+        path: '/splash',
+        builder: (context, state) => const SplashScreen(next: '/'),
+      ),
+      GoRoute(
+        path: '/',
+        builder: (context, state) =>
+            HomeScreen(progressRepo: progressRepo, sessionRepo: sessionRepo),
+      ),
+      // The climb map (design session C step 3 replaces the grid here).
+      GoRoute(
+        path: '/map',
         builder: (context, state) =>
             LevelSelectScreen(progressRepo: progressRepo, sessionRepo: sessionRepo),
       ),
+      GoRoute(path: '/levels', redirect: (context, state) => '/map'),
       GoRoute(
         path: '/consent',
         builder: (context, state) => const _PlaceholderScreen(label: 'Consent'),

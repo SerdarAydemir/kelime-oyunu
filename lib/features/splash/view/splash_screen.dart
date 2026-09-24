@@ -15,7 +15,7 @@ import 'package:kelime_oyunu/l10n/generated/app_localizations.dart';
 /// the bar simply fills over [duration] and then hands over to [next].
 class SplashScreen extends StatefulWidget {
   const SplashScreen({
-    this.next = '/levels',
+    this.next = '/',
     this.duration = const Duration(milliseconds: 1400),
     super.key,
   });

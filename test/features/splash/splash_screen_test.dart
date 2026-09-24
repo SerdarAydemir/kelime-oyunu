@@ -18,7 +18,8 @@ void main() {
       routes: [
         GoRoute(
           path: '/',
-          builder: (_, _) => const SplashScreen(duration: Duration(milliseconds: 300)),
+          builder: (_, _) =>
+              const SplashScreen(next: '/levels', duration: Duration(milliseconds: 300)),
         ),
         GoRoute(
           path: '/levels',

@@ -286,5 +286,13 @@
       }
     }
   },
-  "swapNone": "Henüz harf seçilmedi"
+  "swapNone": "Henüz harf seçilmedi",
+  "meters": "{m} m",
+  "@meters": {
+    "placeholders": {
+      "m": {
+        "type": "int"
+      }
+    }
+  }
 }
