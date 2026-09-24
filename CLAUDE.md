@@ -123,6 +123,9 @@ Release'i her SDK ekleyişinde emülatörde aç, `build/app/outputs/mapping/rele
 ## Resume (Yarım Kalan Oturum)
 
 - `ActiveLevelState` Hive `active_session` box'a yazılır.
+- `progress` box: `highest_completed_level` + `last_played_day`/`streak`/`words_found`
+  (şema 1, eksik anahtar = 0). İrtifa saklanmaz: bölüm × 40 m. Rota haritası:
+  `/splash → /` (ana), `/map` (harita), `/gameplay/:id`, `/result/:id?status=&p=&b=`.
 - Her kelime bulunduğunda + 3 saniyelik debounce + `AppLifecycleListener` (onPause/onInactive) flush.
 - Bölüm tamamlanınca box temizlenir. (`architecture.md §5.2`, `architecture.md §5.5`)
 
@@ -293,9 +296,14 @@ tasarımı uygulanmadı).
   `SheetShell`, `AdService` kapısı + çevrimdışı toast. Davranış değişmedi.
   Emülatör kontrol listesi: `docs/HANDOFF_DESIGN_B.md`.
 
+- Tasarım oturumu C (2026-09-24) ✅ — ilerleme modeli (irtifa, günlük seri,
+  bulunan kelime), ana ekran `/`, tırmanış haritası `/map` (level grid
+  silindi), tam ekran sonuç rotaları `/result/:level`. Release APK emülatörde
+  açıldı. Kontrol listesi: `docs/HANDOFF_DESIGN_C.md`.
+
 **Sıradaki (planlı, yapılmadı):**
-- **Tasarım oturumu C** — sonuç ekranları, harita, ana ekran, ayarlar UI,
-  onboarding/consent/ATT, shop, legal; ⋯ menüsü. Önce B'nin emülatör listesi.
+- **Tasarım oturumu D** — ayarlar UI (tema/ses/titreşim/gökyüzü), ⋯ menüsü,
+  onboarding/consent/ATT, shop, legal. Önce B ve C'nin emülatör listeleri.
 - FAZ 4 artıkları (`docs/HANDOFF_REFACTOR.md` "Bulgular"): alpha-only gölge
   renkleri token'a, dialog/bot-profil string'leri `.arb`'a, kullanılmayan
   `AppColors.gridCellSelected`/`star`, hücre-boyutu hesabının ortaklaştırılması,
