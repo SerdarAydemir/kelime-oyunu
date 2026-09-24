@@ -1,0 +1,13 @@
+# dart run flutter_launcher_icons
+# Source drawings: docs/design/app-icon-1a.svg (full) and
+# app-icon-1a-foreground.svg (adaptive foreground); rasterised with
+# ImageMagick into assets/icon/ (see docs/HANDOFF_DESIGN_A.md).
+flutter_launcher_icons:
+  android: true
+  ios: true
+  remove_alpha_ios: true
+  image_path: assets/icon/app_icon.png
+  adaptive_icon_foreground: assets/icon/app_icon_foreground.png
+  # LOGO_BG: linear-gradient(160deg, #1c3358 0%, #0b1a33 100%)
+  adaptive_icon_background: assets/icon/app_icon_background.png
+  min_sdk_android: 21

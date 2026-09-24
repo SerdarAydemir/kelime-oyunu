@@ -6,6 +6,7 @@ import 'package:kelime_oyunu/data/repositories/progress_repository.dart';
 import 'package:kelime_oyunu/data/repositories/session_repository.dart';
 import 'package:kelime_oyunu/features/gameplay/view/game_screen.dart';
 import 'package:kelime_oyunu/features/levels/view/level_select_screen.dart';
+import 'package:kelime_oyunu/features/splash/view/splash_screen.dart';
 
 /// Centralised route configuration (architecture.md §8).
 ///
@@ -17,11 +18,11 @@ abstract final class AppRouter {
     required ProgressRepository progressRepo,
     required SessionRepository sessionRepo,
   }) => GoRouter(
-    initialLocation: '/levels',
+    initialLocation: '/',
     routes: [
-      // The app opens on the level grid, never straight into a match: the
+      // Splash first, then the level grid — never straight into a match: the
       // player picks up where they left off (F7).
-      GoRoute(path: '/', redirect: (context, state) => '/levels'),
+      GoRoute(path: '/', builder: (context, state) => const SplashScreen()),
       GoRoute(
         path: '/levels',
         builder: (context, state) =>

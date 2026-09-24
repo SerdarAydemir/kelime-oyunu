@@ -46,13 +46,10 @@ abstract final class AppTypography {
     fontWeight: FontWeight.w600,
   );
 
-  /// Board letter size (TYPE: "22 hücre"); exposed for painters that scale it.
-  static const double cellLetterSize = 22;
-
   /// Letter committed on the board — Lora 22 (TYPE: "22 hücre").
   static const TextStyle cellLetter = TextStyle(
     fontFamily: lora,
-    fontSize: cellLetterSize,
+    fontSize: 22,
     fontWeight: FontWeight.w700,
   );
 

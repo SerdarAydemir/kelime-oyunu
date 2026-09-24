@@ -59,6 +59,8 @@ dev_dependencies:
   bloc_test: ^10.0.0
   flutter_lints: ^6.0.0
   mocktail: ^1.0.4
+  flutter_launcher_icons: ^0.14.4
+  flutter_native_splash: ^2.4.8
   # Hive code generation — re-add when @HiveType models are first written:
   # hive_generator + build_runner are incompatible with bloc_test on this SDK;
   # pin exact versions at that point.

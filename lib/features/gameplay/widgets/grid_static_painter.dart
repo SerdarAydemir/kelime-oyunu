@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:kelime_oyunu/core/constants/app_typography.dart';
 import 'package:kelime_oyunu/core/theme/app_tokens.dart';
+import 'package:kelime_oyunu/core/widgets/app_logo.dart';
 import 'package:kelime_oyunu/data/models/puzzle.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/clue_renderer.dart';
 
@@ -70,11 +71,11 @@ class GridStaticPainter extends CustomPainter {
     canvas.drawRect(rect, Paint()..color = tokens.surface);
   }
 
-  // Decorative top-left corner: the brand tile on `bgFlat` with a centred "K".
-  // Painter-only placeholder until the logo widget lands (design step 5).
+  // Decorative top-left corner: the Kelime Zirvesi logo on its fixed navy
+  // ground (design README "Board": corner cell = logo on #0b1a33, both themes).
   void _drawBrandCorner(Canvas canvas, Rect rect) {
-    canvas.drawRect(rect, Paint()..color = tokens.bgFlat);
-    _paintCenteredLetter(canvas, rect, 'K', tokens.logoMtn, fontSize: cellSize * 0.5);
+    canvas.drawRect(rect, Paint()..color = appLogoGround);
+    paintAppLogo(canvas, rect.deflate(cellSize * 0.12));
   }
 
   void _drawLetterCell(Canvas canvas, Rect rect, WordCell cell) {
@@ -99,20 +100,10 @@ class GridStaticPainter extends CustomPainter {
     _paintCenteredLetter(canvas, rect, letter, color);
   }
 
-  // Draws [text] centred in [rect]. [fontSize] defaults to the standard cell
-  // letter size; the brand corner passes a larger value.
-  void _paintCenteredLetter(
-    Canvas canvas,
-    Rect rect,
-    String text,
-    Color color, {
-    double fontSize = AppTypography.cellLetterSize,
-  }) {
+  // Draws [text] centred in [rect] in the board letter style (Lora 22).
+  void _paintCenteredLetter(Canvas canvas, Rect rect, String text, Color color) {
     final tp = TextPainter(
-      text: TextSpan(
-        text: text,
-        style: AppTypography.cellLetter.copyWith(fontSize: fontSize, color: color),
-      ),
+      text: TextSpan(text: text, style: AppTypography.cellLetter.copyWith(color: color)),
       textDirection: TextDirection.ltr,
     )..layout();
     tp.paint(

@@ -1,0 +1,15 @@
+# dart run flutter_native_splash:create
+# Native launch screen: flat bgFlat (per theme) with the 120 dp logo tile.
+# The in-app SplashScreen route draws the full design (name, tag, bar) on top
+# of this the moment Flutter is up, so the hand-over is seamless.
+flutter_native_splash:
+  color: "#f3ead8"        # THEMES.light.bgFlat
+  color_dark: "#0b1a33"   # THEMES.dark.bgFlat
+  image: assets/icon/splash_logo.png
+  android_12:
+    color: "#f3ead8"
+    color_dark: "#0b1a33"
+    image: assets/icon/splash_logo.png
+  android: true
+  ios: true
+  web: false

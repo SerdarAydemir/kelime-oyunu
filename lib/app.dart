@@ -53,7 +53,7 @@ class _KelimeOyunuAppState extends State<KelimeOyunuApp> {
       child: BlocBuilder<SettingsCubit, AppSettings>(
         buildWhen: (old, next) => old.themeMode != next.themeMode,
         builder: (context, settings) => MaterialApp.router(
-          title: 'Kelime Oyunu',
+          title: 'Kelime Zirvesi',
           debugShowCheckedModeBanner: false,
           theme: AppTheme.light(),
           darkTheme: AppTheme.dark(),
