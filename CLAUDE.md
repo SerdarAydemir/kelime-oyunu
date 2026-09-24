@@ -208,6 +208,9 @@ Release'i her SDK ekleyişinde emülatörde aç, `build/app/outputs/mapping/rele
 - [ ] Performans bütçesi aşılmadı (cold start < 2.5 sn, ≥ 60 fps)
 - [ ] `.arb`'a string eklendi, `package:` import kullanıldı
 - [ ] Commit mesajı Conventional Commits formatında ve **İngilizce** (başlık + gövde; UI stringleri Türkçe kalır)
+- [ ] **Her oturum sonunda** `flutter build apk --release` çalışır ve APK emülatörde açılır
+      (`adb install -r` + `adb shell monkey -p com.kelimeoyunu.kelime_oyunu 1` + `adb logcat -d`'de
+      FATAL yok, `Displayed .../.MainActivity`). Test kadar zorunlu; R8 yalnız release'de çalışır.
 
 (`skills.md §12`, `coding-standards.md §6.2`)
 

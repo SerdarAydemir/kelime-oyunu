@@ -28,6 +28,7 @@ class SavedSession extends Equatable {
     required this.revealedWordIds,
     required this.swapQuotaRemaining,
     required this.botPlacedCells,
+    this.playerWordsFound = 0,
   });
 
   /// Reads a record back, or returns null if it is from another schema or is
@@ -51,6 +52,8 @@ class SavedSession extends Equatable {
           for (final e in json['bot_placed_cells'] as List<dynamic>)
             _cell(e as Map<String, dynamic>),
         },
+        // Added after schema 1 shipped; absent in older records → 0.
+        playerWordsFound: json['player_words_found'] as int? ?? 0,
       );
     } on Object catch (e) {
       // Catches TypeError/CastError too — a malformed record must never throw
@@ -90,6 +93,9 @@ class SavedSession extends Equatable {
   /// Cells the bot filled, kept so its colour survives the restart.
   final Set<WordCell> botPlacedCells;
 
+  /// Words the player had completed so far in this match.
+  final int playerWordsFound;
+
   Map<String, dynamic> toJson() => {
     'schema_version': kSessionSchemaVersion,
     'level_id': levelId,
@@ -103,6 +109,7 @@ class SavedSession extends Equatable {
     'revealed_word_ids': revealedWordIds.toList(),
     'swap_quota_remaining': swapQuotaRemaining,
     'bot_placed_cells': [for (final c in botPlacedCells) _cellJson(c)],
+    'player_words_found': playerWordsFound,
   };
 
   /// What the level-select screen shows on its "Devam Et" entry.
@@ -120,6 +127,7 @@ class SavedSession extends Equatable {
     revealedWordIds,
     swapQuotaRemaining,
     botPlacedCells,
+    playerWordsFound,
   ];
 }
 

@@ -20,6 +20,7 @@ SavedSession sessionFromState(GameActive state) => SavedSession(
   revealedWordIds: Set<String>.unmodifiable(state.revealedWordIds),
   swapQuotaRemaining: state.swapQuotaRemaining,
   botPlacedCells: Set<WordCell>.unmodifiable(state.botPlacedCells),
+  playerWordsFound: state.playerWordsFound,
 );
 
 /// Rebuilds a playable state from [session] against the freshly loaded [puzzle].
@@ -41,4 +42,5 @@ GameActive stateFromSession(SavedSession session, PuzzleData puzzle) => GameActi
   revealedWordIds: session.revealedWordIds,
   botPlacedCells: session.botPlacedCells,
   swapQuotaRemaining: session.swapQuotaRemaining,
+  playerWordsFound: session.playerWordsFound,
 );

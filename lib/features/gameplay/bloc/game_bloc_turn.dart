@@ -74,6 +74,7 @@ extension _TurnHandlers on GameBloc {
       board: newBoard,
       pendingPlacements: const [],
       playerScore: current.playerScore + result.scoreDelta,
+      playerWordsFound: current.playerWordsFound + result.completedWordIds.length,
       selectedRackIndex: -1, // placed tiles are gone — drop the index
       narration: MoveNarration(
         id: _narrationSeq++,

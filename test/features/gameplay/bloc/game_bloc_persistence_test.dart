@@ -52,13 +52,17 @@ const _botProfile = BotProfile(
   difficultyBand: DifficultyBand.medium,
 );
 
-MoveResult _moveResult({int scoreDelta = 1, Map<WordCell, String>? updatedBoard}) => MoveResult(
+MoveResult _moveResult({
+  int scoreDelta = 1,
+  Map<WordCell, String>? updatedBoard,
+  List<String> completedWordIds = const [],
+}) => MoveResult(
   placements: const [],
   events: const [],
   scoreDelta: scoreDelta,
   updatedBoard: updatedBoard ?? {const WordCell(row: 1, col: 1): 'K'},
   returnedLetters: const [],
-  completedWordIds: const [],
+  completedWordIds: completedWordIds,
   rackEmptied: false,
   rackEmptyBonus: 0,
 );
@@ -214,6 +218,24 @@ void main() {
       verify: (_) {
         expect(progressRepo.highestCompletedLevel, 0);
         expect(progressRepo.isUnlocked(5), isFalse);
+      },
+    );
+
+    blocTest<GameBloc, GameState>(
+      'any finished match records the day and the words the player found',
+      build: () {
+        stubResolveMove(
+          _moveResult(scoreDelta: 0, updatedBoard: _completeBoard, completedWordIds: ['w1', 'w2']),
+        );
+        return buildBloc();
+      },
+      // Two words already found earlier in the match + two from the last move.
+      seed: () => _activeState(playerScore: 1, botScore: 9).copyWith(playerWordsFound: 2),
+      act: (bloc) => bloc.add(const MoveConfirmed()),
+      verify: (_) {
+        expect(progressRepo.wordsFound, 4);
+        expect(progressRepo.dailyStreak, 1);
+        expect(progressRepo.highestCompletedLevel, 0, reason: 'a loss still never advances');
       },
     );
 

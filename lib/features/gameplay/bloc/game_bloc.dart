@@ -208,6 +208,8 @@ class GameBloc extends Bloc<GameEvent, GameState> {
     if (status == GameStatus.won) {
       await _progressRepo.recordWin(snapshot.puzzle.puzzleId);
     }
+    // Any finished match counts for the daily streak and the word total.
+    await _progressRepo.recordMatchFinished(wordsFound: snapshot.playerWordsFound);
     // The match is over however it ended: there is nothing left to resume, and
     // a stale record would offer "Devam Et" into a finished board.
     await _sessionRepo.clear();

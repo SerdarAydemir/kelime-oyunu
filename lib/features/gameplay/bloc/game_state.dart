@@ -61,6 +61,7 @@ class GameActive extends GameState {
     this.selectedRackIndex = -1,
     this.botPlacedCells = const {},
     this.swapQuotaRemaining = swapQuotaPerMatch,
+    this.playerWordsFound = 0,
     this.narration,
   });
 
@@ -101,6 +102,10 @@ class GameActive extends GameState {
   /// Letters the player may still swap this match (each swapped letter costs 1).
   final int swapQuotaRemaining;
 
+  /// Words the player completed this match — added to the lifetime
+  /// "Bulunan kelime" total when the match finishes.
+  final int playerWordsFound;
+
   /// The move that just resolved, tagged for the UI narration layer to replay
   /// as an animated score story. Null before any move; the widget layer dedupes
   /// by [MoveNarration.id] so a lingering value never replays (game_state owns
@@ -122,6 +127,7 @@ class GameActive extends GameState {
     int? selectedRackIndex,
     Set<WordCell>? botPlacedCells,
     int? swapQuotaRemaining,
+    int? playerWordsFound,
     MoveNarration? narration,
   }) {
     return GameActive(
@@ -139,6 +145,7 @@ class GameActive extends GameState {
       selectedRackIndex: selectedRackIndex ?? this.selectedRackIndex,
       botPlacedCells: botPlacedCells ?? this.botPlacedCells,
       swapQuotaRemaining: swapQuotaRemaining ?? this.swapQuotaRemaining,
+      playerWordsFound: playerWordsFound ?? this.playerWordsFound,
       // Preserve by default: a resolved move sets it once, the botThinking
       // copy carries it through, and the next resolve replaces it. Never
       // cleared to null (no gameplay path needs an un-narrated GameActive).
@@ -162,6 +169,7 @@ class GameActive extends GameState {
     selectedRackIndex,
     botPlacedCells,
     swapQuotaRemaining,
+    playerWordsFound,
     narration,
   ];
 }

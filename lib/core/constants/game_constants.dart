@@ -8,3 +8,7 @@
 /// generated puzzle count changes. Used as the denominator of the
 /// "Bölüm X / N" progress label and to detect the final level.
 const int kLastLevelId = 200;
+
+/// Metres of altitude one won level is worth on the climb (README: "every
+/// win is +40 m"). Altitude is derived, never stored.
+const int kMetersPerLevel = 40;
