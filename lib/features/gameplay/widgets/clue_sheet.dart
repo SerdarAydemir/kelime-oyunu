@@ -6,6 +6,7 @@ import 'package:kelime_oyunu/core/theme/app_tokens.dart';
 import 'package:kelime_oyunu/core/constants/app_dimensions.dart';
 import 'package:kelime_oyunu/core/constants/app_typography.dart';
 import 'package:kelime_oyunu/data/models/puzzle.dart';
+import 'package:kelime_oyunu/l10n/generated/app_localizations.dart';
 
 /// Read-only bottom sheet showing a clue cell's full text(s). Opened by tapping
 /// a clue cell whose in-cell preview is truncated (double-clue or ellipsised).
@@ -17,6 +18,7 @@ class ClueSheet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     return SafeArea(
       child: Padding(
         padding: const EdgeInsets.all(AppDimensions.space24),
@@ -24,7 +26,7 @@ class ClueSheet extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(clues.length >= 2 ? 'İpuçları' : 'İpucu', style: AppTypography.screenTitle),
+            Text(clues.length >= 2 ? l10n.clues : l10n.clue, style: AppTypography.screenTitle),
             const SizedBox(height: AppDimensions.space16),
             for (final clue in clues) _ClueRow(clue: clue),
           ],

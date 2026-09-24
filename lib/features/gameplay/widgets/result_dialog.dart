@@ -7,6 +7,7 @@ import 'package:kelime_oyunu/core/constants/app_dimensions.dart';
 import 'package:kelime_oyunu/core/constants/app_typography.dart';
 import 'package:kelime_oyunu/core/constants/game_constants.dart';
 import 'package:kelime_oyunu/features/gameplay/bloc/game_state.dart';
+import 'package:kelime_oyunu/l10n/generated/app_localizations.dart';
 
 /// Modal shown when the board is filled and the match ends.
 ///
@@ -34,10 +35,10 @@ class ResultDialog extends StatelessWidget {
   final String botName;
   final int levelId;
 
-  /// Reloads the same level with a clean state ("Tekrar Oyna").
+  /// Reloads the same level with a clean state ("Tekrar oyna").
   final VoidCallback onReplay;
 
-  /// Advances to [levelId] + 1 ("Sonraki Bölüm"). Only reachable after a win on
+  /// Advances to [levelId] + 1 ("Bölüm N · tırmanmaya devam"). Only reachable after a win on
   /// a non-final level — the button is hidden on a loss, a tie, or the final
   /// level — but kept non-null so the caller's wiring stays uniform.
   final VoidCallback onNext;
@@ -59,17 +60,18 @@ class ResultDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final tokens = context.tokens;
+    final l10n = AppLocalizations.of(context);
     final (title, titleColor) = switch (status) {
-      GameStatus.won => ('Kazandın! 🎉', tokens.success),
-      GameStatus.lost => ('Kaybettin', tokens.error),
-      GameStatus.tie => ('Berabere', tokens.accent),
+      GameStatus.won => (l10n.won, tokens.success),
+      GameStatus.lost => (l10n.lost, tokens.error),
+      GameStatus.tie => (l10n.draw, tokens.accent),
       // Unreachable: the dialog is only shown for a finished match.
       GameStatus.playing => ('', tokens.text),
     };
     final scoreDiff = (playerScore - botScore).abs();
 
     // Disable the system back gesture: a finished board has no valid actions
-    // behind it, so the player must pick "Sonraki Bölüm" or "Tekrar Oyna".
+    // behind it, so the player must pick the next level or a replay.
     return PopScope(
       canPop: false,
       child: AlertDialog(
@@ -81,27 +83,23 @@ class ResultDialog extends StatelessWidget {
         content: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text('Bölüm $levelId / $kLastLevelId', style: AppTypography.bodySmall),
+            Text(l10n.levelOfTotal(levelId, kLastLevelId), style: AppTypography.bodySmall),
             const SizedBox(height: AppDimensions.space16),
-            _ScoreRow(label: 'Sen', score: playerScore),
+            _ScoreRow(label: l10n.you, score: playerScore),
             const SizedBox(height: AppDimensions.space4),
             _ScoreRow(label: botName, score: botScore),
             const SizedBox(height: AppDimensions.space8),
-            Text('Fark: $scoreDiff', style: AppTypography.body),
+            Text(l10n.scoreGap(scoreDiff), style: AppTypography.body),
             if (_finishedAll) ...[
               const SizedBox(height: AppDimensions.space16),
-              const Text(
-                'Tüm bölümleri bitirdin! 🎉',
-                textAlign: TextAlign.center,
-                style: AppTypography.body,
-              ),
+              Text(l10n.allLevelsDone, textAlign: TextAlign.center, style: AppTypography.body),
             ],
           ],
         ),
         actions: [
-          TextButton(onPressed: onLevels, child: const Text('Bölümler')),
-          TextButton(onPressed: onReplay, child: const Text('Tekrar Oyna')),
-          if (_canAdvance) FilledButton(onPressed: onNext, child: const Text('Sonraki Bölüm')),
+          TextButton(onPressed: onLevels, child: Text(l10n.levels)),
+          TextButton(onPressed: onReplay, child: Text(l10n.again)),
+          if (_canAdvance) FilledButton(onPressed: onNext, child: Text(l10n.wonCta(levelId + 1))),
         ],
       ),
     );

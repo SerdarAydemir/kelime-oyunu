@@ -65,6 +65,8 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  # gen_l10n: lib/l10n/*.arb -> lib/l10n/generated (see l10n.yaml)
+  generate: true
 
   assets:
     # Generated puzzle packs (Python generator output — FAZ 1)

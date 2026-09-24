@@ -15,9 +15,10 @@ import 'package:kelime_oyunu/features/gameplay/widgets/action_bar.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/rack_widget.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/score_header.dart';
 
-// Relative import — test helpers are not importable via package: path.
-// ignore: always_use_package_imports
+// Relative imports — test helpers are not importable via package: path.
+// ignore_for_file: always_use_package_imports
 import '../../../helpers/engine_test_fixtures.dart';
+import '../../../helpers/localized_app.dart';
 
 class MockGameBloc extends MockBloc<GameEvent, GameState> implements GameBloc {}
 
@@ -43,7 +44,7 @@ GameActive _fakeActiveState() => GameActive(
 
 /// Pumps a [BlocProvider.value]-wrapped widget that renders the game UI
 /// according to the current [GameBloc] state.
-Widget _buildSubject(MockGameBloc bloc) => MaterialApp(
+Widget _buildSubject(MockGameBloc bloc) => localizedApp(
   home: BlocProvider<GameBloc>.value(value: bloc, child: const _GameStateRenderer()),
 );
 
@@ -77,7 +78,7 @@ class _GameActiveContent extends StatelessWidget {
         ScoreHeader(
           playerScore: state.playerScore,
           botScore: state.botScore,
-          botName: 'Sokrates',
+          botName: 'Rakip',
           botThinking: state.botThinking,
         ),
         RackWidget(rack: state.rack, onTileTap: (_) {}, onTileRecall: (_) {}),

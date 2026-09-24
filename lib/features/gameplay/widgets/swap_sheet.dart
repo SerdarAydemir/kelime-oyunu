@@ -4,14 +4,15 @@ import 'package:flutter/material.dart';
 import 'package:kelime_oyunu/core/constants/app_typography.dart';
 import 'package:kelime_oyunu/core/theme/app_tokens.dart';
 import 'package:kelime_oyunu/features/gameplay/engine/rack_manager.dart';
+import 'package:kelime_oyunu/l10n/generated/app_localizations.dart';
 
 /// What the player chose in the swap sheet: which tiles and how to pay.
 typedef SwapChoice = ({List<int> indices, bool viaAd});
 
 /// Bottom sheet for the letter-swap joker.
 ///
-/// The player picks tiles, then pays one of two ways: "Şimdi Değiştir"
-/// (rewarded ad, turn stays) or "Değiştir ve Onayla" (free, costs the turn).
+/// The player picks tiles, then pays one of two ways: "Şimdi değiştir"
+/// (rewarded ad, turn stays) or "Değiştir ve pas" (free, costs the turn).
 /// Pops with a [SwapChoice]; null when dismissed.
 class SwapSheet extends StatefulWidget {
   const SwapSheet({required this.rack, required this.quotaRemaining, super.key});
@@ -43,18 +44,18 @@ class _SwapSheetState extends State<SwapSheet> {
   Widget build(BuildContext context) {
     final hasSelection = _selected.isNotEmpty;
     final tokens = context.tokens;
+    final l10n = AppLocalizations.of(context);
     return SafeArea(
       child: Padding(
         padding: const EdgeInsets.all(24),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            const Text(
-              'Harf Değiştir',
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-            ),
+            Text(l10n.swap, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
             const SizedBox(height: 4),
-            Text('Kalan değiştirme hakkı: ${widget.quotaRemaining} harf'),
+            Text(l10n.swapLeftCount(widget.quotaRemaining)),
+            const SizedBox(height: 4),
+            Text(l10n.swapSub, style: AppTypography.bodySmall.copyWith(color: tokens.sheetMuted)),
             const SizedBox(height: 16),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -77,7 +78,7 @@ class _SwapSheetState extends State<SwapSheet> {
                   child: ElevatedButton.icon(
                     onPressed: hasSelection ? () => _finish(true) : null,
                     icon: const Icon(Icons.play_arrow),
-                    label: const Text('Şimdi Değiştir'),
+                    label: Text(l10n.swapNow),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: tokens.accent,
                       foregroundColor: tokens.accentInk,
@@ -92,15 +93,14 @@ class _SwapSheetState extends State<SwapSheet> {
                       backgroundColor: tokens.solid,
                       foregroundColor: tokens.solidText,
                     ),
-                    child: const Text('Değiştir ve Onayla'),
+                    child: Text(l10n.swapPass),
                   ),
                 ),
               ],
             ),
             const SizedBox(height: 8),
             Text(
-              'Şimdi Değiştir: reklam izle, sıra sende kalsın. '
-              'Değiştir ve Onayla: reklamsız, sıra rakibe geçer.',
+              '${l10n.swapNow}: ${l10n.swapKeep} · ${l10n.swapPass}: ${l10n.swapFree}',
               textAlign: TextAlign.center,
               style: AppTypography.bodySmall.copyWith(color: tokens.sheetMuted),
             ),

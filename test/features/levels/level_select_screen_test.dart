@@ -14,6 +14,10 @@ import 'package:kelime_oyunu/features/levels/view/level_select_screen.dart';
 import 'package:kelime_oyunu/features/levels/widgets/level_tile.dart';
 import 'package:kelime_oyunu/features/levels/widgets/resume_banner.dart';
 
+// Relative import — test helpers are not importable via package: path.
+// ignore: always_use_package_imports
+import '../../helpers/localized_app.dart';
+
 SavedSession _session({int levelId = 3}) => SavedSession(
   levelId: levelId,
   board: const {},
@@ -55,7 +59,7 @@ Future<String?> _pumpAndTap(
       ),
     ],
   );
-  await tester.pumpWidget(MaterialApp.router(routerConfig: router));
+  await tester.pumpWidget(localizedRouterApp(router));
   await tester.pumpAndSettle();
   await act(tester);
   await tester.pumpAndSettle();
@@ -188,8 +192,8 @@ void main() {
       await _pumpAndTap(tester, highestCompletedLevel: 2, saved: _session(), act: (_) async {});
 
       expect(find.byType(ResumeBanner), findsOneWidget);
-      expect(find.text('Devam Et'), findsOneWidget);
-      expect(find.text('Bölüm 3 • 12 - 8'), findsOneWidget);
+      expect(find.text('Yarım kalan oyun'), findsOneWidget);
+      expect(find.text('Bölüm 3 · Sen 12 – Rakip 8'), findsOneWidget);
     });
 
     testWidgets('no banner when there is nothing to continue', (tester) async {

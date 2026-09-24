@@ -6,6 +6,7 @@ import 'package:kelime_oyunu/core/constants/app_dimensions.dart';
 import 'package:kelime_oyunu/core/constants/app_typography.dart';
 import 'package:kelime_oyunu/core/theme/app_tokens.dart';
 import 'package:kelime_oyunu/features/levels/cubit/level_select_state.dart';
+import 'package:kelime_oyunu/l10n/generated/app_localizations.dart';
 
 /// One square on the level grid.
 ///
@@ -49,10 +50,10 @@ class LevelTile extends StatelessWidget {
     LevelStatus.locked => t.faint,
   };
 
-  String get _semanticLabel => switch (status) {
-    LevelStatus.completed => 'Bölüm $levelId, tamamlandı',
-    LevelStatus.current => 'Bölüm $levelId, sıradaki bölüm',
-    LevelStatus.locked => 'Bölüm $levelId, kilitli',
+  String _semanticLabel(AppLocalizations l10n) => switch (status) {
+    LevelStatus.completed => l10n.levelDone(levelId),
+    LevelStatus.current => l10n.levelCurrent(levelId),
+    LevelStatus.locked => l10n.levelLocked(levelId),
   };
 
   @override
@@ -62,7 +63,7 @@ class LevelTile extends StatelessWidget {
     return Semantics(
       button: onTap != null,
       enabled: onTap != null,
-      label: _semanticLabel,
+      label: _semanticLabel(AppLocalizations.of(context)),
       child: Material(
         color: _background(tokens),
         // shape carries its own radius — Material forbids passing both. Done

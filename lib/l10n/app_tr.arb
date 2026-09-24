@@ -1,0 +1,258 @@
+{
+  "@@locale": "tr",
+  "appName": "Kelime Zirvesi",
+  "appNameStacked": "Kelime\nZirvesi",
+  "homeTag": "RAKİBE KARŞI ÇENGEL BULMACA",
+  "now": "Şu an",
+  "level": "Bölüm",
+  "streak": "Bugünün serisi",
+  "words": "Bulunan kelime",
+  "day": "gün",
+  "resume": "Yarım kalan oyun",
+  "noSave": "Kaydedilmiş oyun yok",
+  "noSaveSub": "Yeni bölüme başlamak için aşağıya dokun",
+  "continueClimb": "Tırmanışa devam et",
+  "startLevel": "Bölüm {n} ile başla",
+  "@startLevel": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "map": "Harita",
+  "settings": "Ayarlar",
+  "you": "Sen",
+  "bot": "Rakip",
+  "vs": "VS",
+  "turnYou": "Sıra sende",
+  "turnPending": "{n} harf bekliyor · onayla",
+  "@turnPending": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "turnTap": "Boş bir hücreye dokun",
+  "turnBot": "Rakip düşünüyor",
+  "botTurnBtn": "Sıra rakipte",
+  "confirm": "Onayla",
+  "pass": "Pas",
+  "addLetter": "HARF EKLE",
+  "hint": "İPUCU AL",
+  "ad": "reklam",
+  "swap": "Harf değiştir",
+  "wordDone": "{w} · +{n} puan",
+  "@wordDone": {
+    "placeholders": {
+      "w": {
+        "type": "String"
+      },
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "wrongLetter": "Bu harf buraya uymuyor",
+  "offline": "Bağlantı yok · reklam yüklenemedi",
+  "retry": "Tekrar dene",
+  "clues": "İpuçları",
+  "right": "SAĞA",
+  "down": "AŞAĞI",
+  "letters": "HARF",
+  "close": "Kapat",
+  "swapLeft": "Kalan hak",
+  "swapSub": "Değiştirmek istediğin harflere dokun.",
+  "swapNow": "Şimdi değiştir",
+  "swapKeep": "sıra sende kalır",
+  "swapPass": "Değiştir ve pas",
+  "swapFree": "ücretsiz, sıra rakibe",
+  "won": "KAZANDIN",
+  "wonH": "Bir adım daha\nzirveye",
+  "wonCta": "Bölüm {n} · tırmanmaya devam",
+  "@wonCta": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "again": "Tekrar oyna",
+  "lost": "KAYBETTİN",
+  "lostH": "Kampta\nbir gece daha",
+  "lostSub": "Rakip bu eli aldı. Aynı yerden yeniden dene; yükseklik kaybı yok.",
+  "tryAgain": "Tekrar dene",
+  "backMap": "Haritaya dön",
+  "draw": "BERABERE",
+  "drawH": "Berabere ·\nRakiple başa baş",
+  "drawSub": "Puanlar eşit. Aynı kamptan yeniden dene; yükseklik kaybı yok.",
+  "diff": "fark",
+  "climb": "TIRMANIŞ",
+  "fogUp": "yukarısı sisin içinde…",
+  "camp": "Kamp · başlangıç",
+  "here": "BURADASIN",
+  "onbSkip": "Atla",
+  "onbNext": "Devam",
+  "onb1": "İpucunu oku, harfi yerleştir",
+  "onb1Sub": "Ok hangi yöne gidiyorsa kelime o yöne yazılır. Tepsiden bir harf seç, boş hücreye dokun.",
+  "onbSteps1": "İpucu",
+  "onbSteps2": "Harf koy",
+  "onbSteps3": "Onayla",
+  "onbSteps4": "Rakip cevap verir",
+  "consentTag": "HOŞ GELDİN",
+  "consentH": "Tırmanışa başlamadan önce",
+  "consentTitle": "Reklamlar ve veri",
+  "consentBody": "Kelime Zirvesi ücretsiz; jokerler ve ekstra harfler kısa reklamlarla açılır. İlk 3 bölümde hiç reklam gösterilmez. Kişiselleştirilmiş reklam için onayın gerekir; onay vermezsen genel reklamlar gösterilir.",
+  "privacy": "Gizlilik politikası",
+  "terms": "Kullanım koşulları",
+  "accept": "Kabul et ve başla",
+  "manage": "Seçenekleri yönet",
+  "attTag": "BİR ADIM KALDI",
+  "attH": "Takip izni hakkında",
+  "attBody": "Bir sonraki adımda iOS, uygulamalar arası takip için izin isteyecek. İzin verirsen reklamlar ilgi alanlarına göre seçilir; vermezsen oyun aynen devam eder, reklamlar genel olur.",
+  "attCta": "Devam",
+  "attLater": "Şimdi değil",
+  "appearance": "Görünüm",
+  "appLight": "Açık",
+  "appDark": "Koyu",
+  "appSystem": "Sistem",
+  "sound": "Ses",
+  "soundSub": "Harf ve puan sesleri",
+  "haptic": "Titreşim",
+  "hapticSub": "Harf yerleşince hafif dokunuş",
+  "sky": "Gökyüzü",
+  "skySub": "Arka plan ilerlemeyle değişir",
+  "game": "OYUN",
+  "account": "HESAP",
+  "removeAds": "Reklamları kaldır",
+  "shopLink": "Mağaza →",
+  "adPrefs": "Reklam tercihleri",
+  "reset": "İlerlemeyi sıfırla",
+  "del": "Sil",
+  "version": "Kelime Zirvesi 1.0.0",
+  "shop": "Kamp dükkânı",
+  "oneTime": "TEK SEFERLİK",
+  "adFree": "Reklamsız tırmanış",
+  "adFreeSub": "Bölüm sonu reklamları kalkar. Jokerlerdeki reklam yerine kamp parası kullanılır.",
+  "coins": "KAMP PARASI",
+  "unlockN": "≈ {n} harf açma",
+  "@unlockN": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "mostBought": "EN ÇOK ALINAN",
+  "free": "ÜCRETSİZ",
+  "daily": "Günlük kamp ateşi",
+  "dailySub": "Her gün 20 para",
+  "getReward": "Al",
+  "restore": "Satın alımları geri yükle",
+  "price1": "₺89,99",
+  "price2": "₺29,99",
+  "price3": "₺79,99",
+  "legalUpdated": "Son güncelleme · 20 Eylül 2026",
+  "legal1": "Hangi verileri topluyoruz",
+  "legal2": "Reklam ortakları",
+  "legal3": "Cihazda saklanan veriler",
+  "slogans1": "rakibe karşı bulmaca düellosu",
+  "slogans2": "Kelime kelime zirveye tırman",
+  "slogans3": "Her galibiyet 40 metre daha yukarı",
+  "slogans4": "İpuçları bir dokunuş uzakta",
+  "slogans5": "Zirveye giden yol sonsuz",
+  "clue": "İpucu",
+  "levels": "Bölümler",
+  "levelOfTotal": "Bölüm {n} / {total}",
+  "@levelOfTotal": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "levelsProgress": "{done}/{total} bölüm tamamlandı",
+  "@levelsProgress": {
+    "placeholders": {
+      "done": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "levelsAllDone": "Tüm bölümler tamamlandı! ({total}/{total})",
+  "@levelsAllDone": {
+    "placeholders": {
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "allLevelsDone": "Tüm bölümleri bitirdin! 🎉",
+  "scoreGap": "fark {d}",
+  "@scoreGap": {
+    "placeholders": {
+      "d": {
+        "type": "int"
+      }
+    }
+  },
+  "resumeScore": "Bölüm {n} · Sen {p} – Rakip {b}",
+  "@resumeScore": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      },
+      "p": {
+        "type": "int"
+      },
+      "b": {
+        "type": "int"
+      }
+    }
+  },
+  "swapLeftCount": "Kalan hak · {n} harf",
+  "@swapLeftCount": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "revealConfirmTitle": "Bu kelimeyi açmak istediğinize emin misiniz?",
+  "yes": "Evet",
+  "no": "Hayır",
+  "sixthSlotTitle": "+1 harf jokeri",
+  "sixthSlotBody": "Reklam izleyerek 6. harf yuvasını açmak ister misin? Bu maç boyunca her el 6 harfle oynarsın; eli boşaltırsan +6 bonus!",
+  "levelDone": "Bölüm {n}, tamamlandı",
+  "@levelDone": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "levelCurrent": "Bölüm {n}, sıradaki bölüm",
+  "@levelCurrent": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "levelLocked": "Bölüm {n}, kilitli",
+  "@levelLocked": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "botDescription": "Zirveye giden yolda rakibin."
+}

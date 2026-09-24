@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:kelime_oyunu/core/constants/app_typography.dart';
 import 'package:kelime_oyunu/core/theme/app_tokens.dart';
 import 'package:kelime_oyunu/features/gameplay/engine/score_engine.dart';
+import 'package:kelime_oyunu/l10n/generated/app_localizations.dart';
 
 class ActionBar extends StatelessWidget {
   const ActionBar({
@@ -94,6 +95,7 @@ class _ConfirmPassButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final tokens = context.tokens;
+    final l10n = AppLocalizations.of(context);
     return SizedBox(
       height: 48,
       child: ElevatedButton(
@@ -104,7 +106,7 @@ class _ConfirmPassButton extends StatelessWidget {
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
           elevation: 2,
         ),
-        child: Text(hasPending ? 'Onayla' : 'Pas', style: AppTypography.buttonPrimary),
+        child: Text(hasPending ? l10n.confirm : l10n.pass, style: AppTypography.buttonPrimary),
       ),
     );
   }
@@ -155,7 +157,7 @@ class _RevealButton extends StatelessWidget {
                   borderRadius: BorderRadius.circular(8),
                 ),
                 child: Text(
-                  'Ad',
+                  AppLocalizations.of(context).ad,
                   style: TextStyle(
                     fontSize: 9,
                     fontWeight: FontWeight.bold,

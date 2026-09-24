@@ -11,6 +11,7 @@ analyzer:
     todo: ignore
   exclude:
     - lib/generated/**
+    - lib/l10n/generated/**
     - '**/*.g.dart'
     - '**/*.freezed.dart'
     - build/**

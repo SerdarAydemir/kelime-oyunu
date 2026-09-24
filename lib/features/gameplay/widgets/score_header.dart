@@ -5,6 +5,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:kelime_oyunu/core/constants/app_typography.dart';
 import 'package:kelime_oyunu/core/theme/app_tokens.dart';
+import 'package:kelime_oyunu/l10n/generated/app_localizations.dart';
 
 class ScoreHeader extends StatelessWidget {
   const ScoreHeader({
@@ -32,6 +33,7 @@ class ScoreHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       // Both sides get equal flex so the fixed middle child ("VS") sits at the
@@ -41,10 +43,10 @@ class ScoreHeader extends StatelessWidget {
           Expanded(
             child: Align(
               alignment: Alignment.centerLeft,
-              child: _ScorePill(key: playerScoreKey, label: 'Sen $playerScore'),
+              child: _ScorePill(key: playerScoreKey, label: '${l10n.you} $playerScore'),
             ),
           ),
-          const Text('VS', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+          Text(l10n.vs, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
           Expanded(
             child: Align(
               alignment: Alignment.centerRight,

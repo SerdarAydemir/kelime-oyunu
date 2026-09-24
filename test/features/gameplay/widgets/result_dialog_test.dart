@@ -7,6 +7,10 @@ import 'package:kelime_oyunu/core/constants/game_constants.dart';
 import 'package:kelime_oyunu/features/gameplay/bloc/game_state.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/result_dialog.dart';
 
+// Relative import — test helpers are not importable via package: path.
+// ignore: always_use_package_imports
+import '../../../helpers/localized_app.dart';
+
 void main() {
   Widget harness({
     required GameStatus status,
@@ -17,13 +21,13 @@ void main() {
     VoidCallback? onNext,
     VoidCallback? onLevels,
   }) {
-    return MaterialApp(
+    return localizedApp(
       home: Scaffold(
         body: ResultDialog(
           status: status,
           playerScore: playerScore,
           botScore: botScore,
-          botName: 'Sokrates',
+          botName: 'Rakip',
           levelId: levelId,
           onReplay: onReplay ?? () {},
           onNext: onNext ?? () {},
@@ -34,19 +38,19 @@ void main() {
   }
 
   group('ResultDialog outcome title', () {
-    testWidgets('shows "Kazandın!" when the player won', (tester) async {
+    testWidgets('shows "KAZANDIN" when the player won', (tester) async {
       await tester.pumpWidget(harness(status: GameStatus.won));
-      expect(find.text('Kazandın! 🎉'), findsOneWidget);
+      expect(find.text('KAZANDIN'), findsOneWidget);
     });
 
-    testWidgets('shows "Kaybettin" when the player lost', (tester) async {
+    testWidgets('shows "KAYBETTİN" when the player lost', (tester) async {
       await tester.pumpWidget(harness(status: GameStatus.lost));
-      expect(find.text('Kaybettin'), findsOneWidget);
+      expect(find.text('KAYBETTİN'), findsOneWidget);
     });
 
-    testWidgets('shows "Berabere" on a tie', (tester) async {
+    testWidgets('shows "BERABERE" on a tie', (tester) async {
       await tester.pumpWidget(harness(status: GameStatus.tie));
-      expect(find.text('Berabere'), findsOneWidget);
+      expect(find.text('BERABERE'), findsOneWidget);
     });
   });
 
@@ -59,44 +63,44 @@ void main() {
     await tester.pumpWidget(harness(status: GameStatus.won, playerScore: 10, botScore: 4));
     expect(find.text('Sen'), findsOneWidget);
     expect(find.text('10'), findsOneWidget);
-    expect(find.text('Sokrates'), findsOneWidget);
+    expect(find.text('Rakip'), findsOneWidget);
     expect(find.text('4'), findsOneWidget);
-    expect(find.text('Fark: 6'), findsOneWidget);
+    expect(find.text('fark 6'), findsOneWidget);
   });
 
   group('hard progression actions', () {
-    testWidgets('offers "Sonraki Bölüm" only after a win on a non-final level', (tester) async {
+    testWidgets('offers the next level only after a win on a non-final level', (tester) async {
       await tester.pumpWidget(harness(status: GameStatus.won, levelId: 5));
-      expect(find.text('Sonraki Bölüm'), findsOneWidget);
-      expect(find.text('Tekrar Oyna'), findsOneWidget);
+      expect(find.text('Bölüm 6 · tırmanmaya devam'), findsOneWidget);
+      expect(find.text('Tekrar oyna'), findsOneWidget);
       expect(find.text('Tüm bölümleri bitirdin! 🎉'), findsNothing);
     });
 
-    testWidgets('hides "Sonraki Bölüm" after a loss — only "Tekrar Oyna"', (tester) async {
+    testWidgets('hides the next level after a loss — only "Tekrar oyna"', (tester) async {
       await tester.pumpWidget(harness(status: GameStatus.lost, levelId: 5));
-      expect(find.text('Sonraki Bölüm'), findsNothing);
+      expect(find.text('Bölüm 6 · tırmanmaya devam'), findsNothing);
       expect(find.text('Tüm bölümleri bitirdin! 🎉'), findsNothing);
-      expect(find.text('Tekrar Oyna'), findsOneWidget);
+      expect(find.text('Tekrar oyna'), findsOneWidget);
     });
 
-    testWidgets('hides "Sonraki Bölüm" on a tie — a draw does not advance', (tester) async {
+    testWidgets('hides the next level on a tie — a draw does not advance', (tester) async {
       await tester.pumpWidget(harness(status: GameStatus.tie, levelId: 5));
-      expect(find.text('Sonraki Bölüm'), findsNothing);
-      expect(find.text('Tekrar Oyna'), findsOneWidget);
+      expect(find.text('Bölüm 6 · tırmanmaya devam'), findsNothing);
+      expect(find.text('Tekrar oyna'), findsOneWidget);
     });
 
     testWidgets('congratulates only when the final level is won', (tester) async {
       await tester.pumpWidget(harness(status: GameStatus.won, levelId: kLastLevelId));
-      expect(find.text('Sonraki Bölüm'), findsNothing);
+      expect(find.text('Bölüm 6 · tırmanmaya devam'), findsNothing);
       expect(find.text('Tüm bölümleri bitirdin! 🎉'), findsOneWidget);
-      expect(find.text('Tekrar Oyna'), findsOneWidget);
+      expect(find.text('Tekrar oyna'), findsOneWidget);
     });
 
     testWidgets('does not congratulate when the final level is lost', (tester) async {
       await tester.pumpWidget(harness(status: GameStatus.lost, levelId: kLastLevelId));
       expect(find.text('Tüm bölümleri bitirdin! 🎉'), findsNothing);
-      expect(find.text('Sonraki Bölüm'), findsNothing);
-      expect(find.text('Tekrar Oyna'), findsOneWidget);
+      expect(find.text('Bölüm 6 · tırmanmaya devam'), findsNothing);
+      expect(find.text('Tekrar oyna'), findsOneWidget);
     });
 
     testWidgets('fires onNext / onReplay when the buttons are tapped', (tester) async {
@@ -105,8 +109,8 @@ void main() {
       await tester.pumpWidget(
         harness(status: GameStatus.won, levelId: 5, onNext: () => next++, onReplay: () => replay++),
       );
-      await tester.tap(find.text('Sonraki Bölüm'));
-      await tester.tap(find.text('Tekrar Oyna'));
+      await tester.tap(find.text('Bölüm 6 · tırmanmaya devam'));
+      await tester.tap(find.text('Tekrar oyna'));
       await tester.pump();
       expect(next, 1);
       expect(replay, 1);

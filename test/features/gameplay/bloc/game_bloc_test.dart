@@ -52,8 +52,8 @@ const _defaultRack = [
 ];
 
 const _botProfile = BotProfile(
-  id: 'sokrates',
-  name: 'Sokrates',
+  id: 'rakip',
+  name: 'Rakip',
   avatarAsset: 'assets/bot.png',
   description: 'Test bot',
   difficultyBand: DifficultyBand.medium,

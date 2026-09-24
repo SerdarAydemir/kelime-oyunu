@@ -6,7 +6,11 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:kelime_oyunu/data/models/puzzle.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/clue_sheet.dart';
 
-Widget _harness(List<ClueSpec> clues) => MaterialApp(
+// Relative import — test helpers are not importable via package: path.
+// ignore: always_use_package_imports
+import '../../../helpers/localized_app.dart';
+
+Widget _harness(List<ClueSpec> clues) => localizedApp(
   home: Scaffold(body: ClueSheet(clues: clues)),
 );
 

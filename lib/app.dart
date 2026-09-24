@@ -1,7 +1,6 @@
 // lib/app.dart
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:go_router/go_router.dart';
 import 'package:kelime_oyunu/core/router/app_router.dart';
 import 'package:kelime_oyunu/core/theme/app_theme.dart';
@@ -10,6 +9,7 @@ import 'package:kelime_oyunu/data/repositories/progress_repository.dart';
 import 'package:kelime_oyunu/data/repositories/session_repository.dart';
 import 'package:kelime_oyunu/data/repositories/settings_repository.dart';
 import 'package:kelime_oyunu/features/settings/cubit/settings_cubit.dart';
+import 'package:kelime_oyunu/l10n/generated/app_localizations.dart';
 
 /// Root widget of the Kelime Oyunu application.
 ///
@@ -59,12 +59,10 @@ class _KelimeOyunuAppState extends State<KelimeOyunuApp> {
           darkTheme: AppTheme.dark(),
           themeMode: settings.themeMode,
           routerConfig: _router,
-          localizationsDelegates: const [
-            GlobalMaterialLocalizations.delegate,
-            GlobalWidgetsLocalizations.delegate,
-            GlobalCupertinoLocalizations.delegate,
-          ],
-          supportedLocales: const [Locale('tr', 'TR')],
+          localizationsDelegates: AppLocalizations.localizationsDelegates,
+          // Turkish first: it is the template ARB and the fallback for every
+          // device locale that is not English (the generated list is A–Z).
+          supportedLocales: const [Locale('tr'), Locale('en')],
         ),
       ),
     );

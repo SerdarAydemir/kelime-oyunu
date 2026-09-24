@@ -14,6 +14,7 @@ import 'package:kelime_oyunu/features/levels/cubit/level_select_cubit.dart';
 import 'package:kelime_oyunu/features/levels/cubit/level_select_state.dart';
 import 'package:kelime_oyunu/features/levels/widgets/level_tile.dart';
 import 'package:kelime_oyunu/features/levels/widgets/resume_banner.dart';
+import 'package:kelime_oyunu/l10n/generated/app_localizations.dart';
 
 /// The app's entry screen: pick a level, or continue the interrupted match.
 ///
@@ -58,7 +59,7 @@ class _Title extends StatelessWidget {
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
-        const Text('Bölümler'),
+        Text(AppLocalizations.of(context).levels),
         if (dev) ...[
           const SizedBox(width: AppDimensions.space8),
           // QA-only label, intentionally not localised.
@@ -120,9 +121,10 @@ class _ProgressLine extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     final String text = state.allCompleted
-        ? 'Tüm bölümler tamamlandı! (${state.levelCount}/${state.levelCount})'
-        : '${state.highestCompletedLevel}/${state.levelCount} bölüm tamamlandı';
+        ? l10n.levelsAllDone(state.levelCount)
+        : l10n.levelsProgress(state.highestCompletedLevel, state.levelCount);
     return Text(text, style: AppTypography.bodySmall, textAlign: TextAlign.center);
   }
 }

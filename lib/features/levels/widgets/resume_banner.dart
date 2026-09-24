@@ -6,8 +6,9 @@ import 'package:kelime_oyunu/core/constants/app_dimensions.dart';
 import 'package:kelime_oyunu/core/constants/app_typography.dart';
 import 'package:kelime_oyunu/core/theme/app_tokens.dart';
 import 'package:kelime_oyunu/data/models/saved_session.dart';
+import 'package:kelime_oyunu/l10n/generated/app_localizations.dart';
 
-/// The "Devam Et" call to action for a half-played match.
+/// The "Yarım kalan oyun" call to action for a half-played match.
 ///
 /// Sits above the grid and outranks it visually: an interrupted match is what
 /// the player most likely came back for.
@@ -20,6 +21,7 @@ class ResumeBanner extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final tokens = context.tokens;
+    final l10n = AppLocalizations.of(context);
     return Card(
       color: tokens.accent,
       elevation: 2,
@@ -42,12 +44,12 @@ class ResumeBanner extends StatelessWidget {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Text(
-                      'Devam Et',
+                      l10n.resume,
                       style: AppTypography.buttonSecondary.copyWith(color: tokens.accentInk),
                     ),
                     const SizedBox(height: AppDimensions.space2),
                     Text(
-                      'Bölüm ${summary.levelId} • ${summary.playerScore} - ${summary.botScore}',
+                      l10n.resumeScore(summary.levelId, summary.playerScore, summary.botScore),
                       style: AppTypography.bodySmall.copyWith(color: tokens.accentInk),
                     ),
                   ],

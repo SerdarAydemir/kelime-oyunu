@@ -1,0 +1,258 @@
+{
+  "@@locale": "en",
+  "appName": "Word Summit",
+  "appNameStacked": "Word\nSummit",
+  "homeTag": "CROSSWORD DUEL AGAINST AN OPPONENT",
+  "now": "Now",
+  "level": "Level",
+  "streak": "Today's streak",
+  "words": "Words found",
+  "day": "days",
+  "resume": "Unfinished game",
+  "noSave": "No saved game",
+  "noSaveSub": "Tap below to start a new level",
+  "continueClimb": "Continue the climb",
+  "startLevel": "Start level {n}",
+  "@startLevel": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "map": "Map",
+  "settings": "Settings",
+  "you": "You",
+  "bot": "Opponent",
+  "vs": "VS",
+  "turnYou": "Your turn",
+  "turnPending": "{n} letters pending · confirm",
+  "@turnPending": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "turnTap": "Tap an empty cell",
+  "turnBot": "Opponent is thinking",
+  "botTurnBtn": "Opponent's turn",
+  "confirm": "Confirm",
+  "pass": "Pass",
+  "addLetter": "ADD LETTER",
+  "hint": "GET HINT",
+  "ad": "ad",
+  "swap": "Swap letters",
+  "wordDone": "{w} · +{n} points",
+  "@wordDone": {
+    "placeholders": {
+      "w": {
+        "type": "String"
+      },
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "wrongLetter": "This letter doesn't fit here",
+  "offline": "No connection · ad failed to load",
+  "retry": "Retry",
+  "clues": "Clues",
+  "right": "ACROSS",
+  "down": "DOWN",
+  "letters": "LETTERS",
+  "close": "Close",
+  "swapLeft": "Remaining",
+  "swapSub": "Tap the letters you want to swap.",
+  "swapNow": "Swap now",
+  "swapKeep": "keep your turn",
+  "swapPass": "Swap and pass",
+  "swapFree": "free, turn goes to opponent",
+  "won": "YOU WON",
+  "wonH": "One step closer\nto the summit",
+  "wonCta": "Level {n} · keep climbing",
+  "@wonCta": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "again": "Play again",
+  "lost": "YOU LOST",
+  "lostH": "One more night\nat camp",
+  "lostSub": "Your opponent took this round. Try again from the same spot; no altitude lost.",
+  "tryAgain": "Try again",
+  "backMap": "Back to map",
+  "draw": "DRAW",
+  "drawH": "A draw ·\nneck and neck with your opponent",
+  "drawSub": "Scores are tied. Try again from the same camp; no altitude lost.",
+  "diff": "gap",
+  "climb": "THE CLIMB",
+  "fogUp": "the way up is in the mist…",
+  "camp": "Camp · start",
+  "here": "YOU ARE HERE",
+  "onbSkip": "Skip",
+  "onbNext": "Next",
+  "onb1": "Read the clue, place a letter",
+  "onb1Sub": "The arrow shows where the word goes. Pick a letter from the rack and tap an empty cell.",
+  "onbSteps1": "Clue",
+  "onbSteps2": "Place letter",
+  "onbSteps3": "Confirm",
+  "onbSteps4": "Opponent replies",
+  "consentTag": "WELCOME",
+  "consentH": "Before you start climbing",
+  "consentTitle": "Ads and data",
+  "consentBody": "Word Summit is free; boosters and extra letters unlock with short ads. No ads in the first 3 levels. Personalized ads need your consent; otherwise you see generic ads.",
+  "privacy": "Privacy policy",
+  "terms": "Terms of use",
+  "accept": "Accept and start",
+  "manage": "Manage options",
+  "attTag": "ONE MORE STEP",
+  "attH": "About tracking permission",
+  "attBody": "Next, iOS will ask for permission to track across apps. If you allow it, ads match your interests; if not, the game continues as is with generic ads.",
+  "attCta": "Continue",
+  "attLater": "Not now",
+  "appearance": "Appearance",
+  "appLight": "Light",
+  "appDark": "Dark",
+  "appSystem": "System",
+  "sound": "Sound",
+  "soundSub": "Letter and score sounds",
+  "haptic": "Haptics",
+  "hapticSub": "Light tap when a letter lands",
+  "sky": "Sky",
+  "skySub": "Background changes with progress",
+  "game": "GAME",
+  "account": "ACCOUNT",
+  "removeAds": "Remove ads",
+  "shopLink": "Shop →",
+  "adPrefs": "Ad preferences",
+  "reset": "Reset progress",
+  "del": "Delete",
+  "version": "Word Summit 1.0.0",
+  "shop": "Camp shop",
+  "oneTime": "ONE-TIME",
+  "adFree": "Ad-free climb",
+  "adFreeSub": "No end-of-level ads. Boosters use camp coins instead of ads.",
+  "coins": "CAMP COINS",
+  "unlockN": "≈ {n} letter unlocks",
+  "@unlockN": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "mostBought": "MOST POPULAR",
+  "free": "FREE",
+  "daily": "Daily campfire",
+  "dailySub": "20 coins every day",
+  "getReward": "Claim",
+  "restore": "Restore purchases",
+  "price1": "$4.99",
+  "price2": "$1.99",
+  "price3": "$3.99",
+  "legalUpdated": "Last updated · Sep 20, 2026",
+  "legal1": "What we collect",
+  "legal2": "Ad partners",
+  "legal3": "Data stored on device",
+  "slogans1": "A crossword duel against an opponent",
+  "slogans2": "Climb the summit word by word",
+  "slogans3": "Every win is 40 metres higher",
+  "slogans4": "Hints are one tap away",
+  "slogans5": "The road to the summit never ends",
+  "clue": "Clue",
+  "levels": "Levels",
+  "levelOfTotal": "Level {n} / {total}",
+  "@levelOfTotal": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "levelsProgress": "{done}/{total} levels completed",
+  "@levelsProgress": {
+    "placeholders": {
+      "done": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "levelsAllDone": "All levels completed! ({total}/{total})",
+  "@levelsAllDone": {
+    "placeholders": {
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "allLevelsDone": "You finished every level! 🎉",
+  "scoreGap": "gap {d}",
+  "@scoreGap": {
+    "placeholders": {
+      "d": {
+        "type": "int"
+      }
+    }
+  },
+  "resumeScore": "Level {n} · You {p} – Opponent {b}",
+  "@resumeScore": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      },
+      "p": {
+        "type": "int"
+      },
+      "b": {
+        "type": "int"
+      }
+    }
+  },
+  "swapLeftCount": "Remaining · {n} letters",
+  "@swapLeftCount": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "revealConfirmTitle": "Reveal this word?",
+  "yes": "Yes",
+  "no": "No",
+  "sixthSlotTitle": "+1 letter booster",
+  "sixthSlotBody": "Watch an ad to unlock a 6th rack slot? You play every hand with 6 letters for this match; empty the rack for a +6 bonus!",
+  "levelDone": "Level {n}, completed",
+  "@levelDone": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "levelCurrent": "Level {n}, next up",
+  "@levelCurrent": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "levelLocked": "Level {n}, locked",
+  "@levelLocked": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "botDescription": "Your opponent on the way to the summit."
+}

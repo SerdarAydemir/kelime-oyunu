@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:kelime_oyunu/core/constants/app_dimensions.dart';
 import 'package:kelime_oyunu/core/constants/app_typography.dart';
 import 'package:kelime_oyunu/core/constants/game_constants.dart';
+import 'package:kelime_oyunu/l10n/generated/app_localizations.dart';
 
 /// The thin "‹ Bölüm X / N" strip above the score header.
 ///
@@ -17,23 +18,24 @@ class LevelTopBar extends StatelessWidget {
   final int levelId;
 
   /// Leaves for the level grid. The match is already saved at its last turn
-  /// boundary, so it will be waiting under "Devam Et".
+  /// boundary, so it will be waiting under "Yarım kalan oyun".
   final VoidCallback onExit;
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     return SizedBox(
       height: AppDimensions.minTapTarget,
       child: Stack(
         alignment: Alignment.center,
         children: [
-          Text('Bölüm $levelId / $kLastLevelId', style: AppTypography.pill),
+          Text(l10n.levelOfTotal(levelId, kLastLevelId), style: AppTypography.pill),
           Align(
             alignment: Alignment.centerLeft,
             child: IconButton(
               onPressed: onExit,
               icon: const Icon(Icons.arrow_back, size: AppDimensions.iconM),
-              tooltip: 'Bölümler',
+              tooltip: l10n.levels,
             ),
           ),
         ],

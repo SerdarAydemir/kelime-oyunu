@@ -45,8 +45,8 @@ const _cell11 = WordCell(row: 1, col: 1);
 const _defaultRack = [RackTile(letter: 'K'), RackTile(letter: 'O'), RackTile(letter: 'L')];
 
 const _botProfile = BotProfile(
-  id: 'sokrates',
-  name: 'Sokrates',
+  id: 'rakip',
+  name: 'Rakip',
   avatarAsset: 'assets/bot.png',
   description: 'Test bot',
   difficultyBand: DifficultyBand.medium,

@@ -5,6 +5,7 @@ import 'package:kelime_oyunu/core/constants/app_typography.dart';
 import 'package:kelime_oyunu/core/theme/app_tokens.dart';
 import 'package:kelime_oyunu/data/models/puzzle.dart';
 import 'package:kelime_oyunu/features/gameplay/engine/rack_manager.dart';
+import 'package:kelime_oyunu/l10n/generated/app_localizations.dart';
 
 /// Payload of a letter drag: which rack tile is being dragged and, when the
 /// drag started from a pending letter on the board, the cell it came from
@@ -160,7 +161,7 @@ class _PlusSlotWidget extends StatelessWidget {
                   borderRadius: BorderRadius.circular(8),
                 ),
                 child: Text(
-                  'Ad',
+                  AppLocalizations.of(context).ad,
                   style: TextStyle(
                     fontSize: 9,
                     fontWeight: FontWeight.bold,

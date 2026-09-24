@@ -12,15 +12,21 @@ import 'package:kelime_oyunu/features/gameplay/engine/bot_engine.dart';
 import 'package:kelime_oyunu/features/gameplay/engine/rack_manager.dart';
 import 'package:kelime_oyunu/features/gameplay/engine/score_engine.dart';
 import 'package:kelime_oyunu/features/gameplay/view/game_active_body.dart';
+import 'package:kelime_oyunu/l10n/generated/app_localizations.dart';
 
-// Bot identity used for all matches in this version of the screen.
-const _kBotProfile = BotProfile(
-  id: 'sokrates',
-  name: 'Sokrates',
-  avatarAsset: 'assets/images/sokrates.png',
-  description: 'Her şeyi sorgulayan filozofla akıl yarıştıracaksın.',
-  difficultyBand: DifficultyBand.medium,
-);
+// Bot identity used for all matches in this version of the screen. The
+// opponent is simply "Rakip" (design rule: never a named persona), so the
+// display name comes from the active locale.
+BotProfile _botProfile(BuildContext context) {
+  final l10n = AppLocalizations.of(context);
+  return BotProfile(
+    id: 'rakip',
+    name: l10n.bot,
+    avatarAsset: 'assets/images/rakip.png',
+    description: l10n.botDescription,
+    difficultyBand: DifficultyBand.medium,
+  );
+}
 
 /// Entry point widget. Creates the [GameBloc] and provides it to the subtree.
 class GameScreen extends StatelessWidget {
@@ -52,7 +58,7 @@ class GameScreen extends StatelessWidget {
         scoreEngine: const ScoreEngine(),
         rackManager: const RackManager(),
         botEngine: const BotEngine(),
-        botProfile: _kBotProfile,
+        botProfile: _botProfile(context),
         puzzleIndex: puzzleId - 1,
         progressRepo: progressRepo,
         sessionRepo: sessionRepo,
@@ -123,7 +129,7 @@ class _GameBody extends StatelessWidget {
             GameActive() => GameActiveBody(
               state: state,
               puzzleId: puzzleId,
-              botProfile: _kBotProfile,
+              botProfile: _botProfile(context),
             ),
           },
         );

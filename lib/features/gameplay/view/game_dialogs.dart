@@ -7,6 +7,7 @@ import 'package:kelime_oyunu/features/gameplay/engine/rack_manager.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/clue_sheet.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/result_dialog.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/swap_sheet.dart';
+import 'package:kelime_oyunu/l10n/generated/app_localizations.dart';
 
 /// Modal dialogs and bottom sheets opened by the active game body. Each one
 /// only collects the player's answer; dispatching to the bloc stays with the
@@ -62,14 +63,15 @@ void showClueSheet(BuildContext context, List<ClueSpec> clues) {
 /// Asks whether to spend the reveal joker on [clue]'s word. Returns true only
 /// on "Evet"; "Hayır" and dismissing the dialog both return false.
 Future<bool> confirmRevealDialog(BuildContext context, ClueSpec clue) async {
+  final l10n = AppLocalizations.of(context);
   final confirmed = await showDialog<bool>(
     context: context,
     builder: (ctx) => AlertDialog(
-      title: const Text('Bu kelimeyi açmak istediğinize emin misiniz?'),
+      title: Text(l10n.revealConfirmTitle),
       content: Text(clue.text),
       actions: [
-        TextButton(onPressed: () => Navigator.pop(ctx, false), child: const Text('Hayır')),
-        TextButton(onPressed: () => Navigator.pop(ctx, true), child: const Text('Evet')),
+        TextButton(onPressed: () => Navigator.pop(ctx, false), child: Text(l10n.no)),
+        TextButton(onPressed: () => Navigator.pop(ctx, true), child: Text(l10n.yes)),
       ],
     ),
   );
@@ -79,17 +81,15 @@ Future<bool> confirmRevealDialog(BuildContext context, ClueSpec clue) async {
 /// Asks whether to unlock the sixth rack slot (+1 letter joker). Returns true
 /// only on "Evet".
 Future<bool> confirmSixthSlotDialog(BuildContext context) async {
+  final l10n = AppLocalizations.of(context);
   final confirmed = await showDialog<bool>(
     context: context,
     builder: (ctx) => AlertDialog(
-      title: const Text('+1 harf jokeri'),
-      content: const Text(
-        'Reklam izleyerek 6. harf yuvasını açmak ister misin? '
-        'Bu maç boyunca her el 6 harfle oynarsın; eli boşaltırsan +6 bonus!',
-      ),
+      title: Text(l10n.sixthSlotTitle),
+      content: Text(l10n.sixthSlotBody),
       actions: [
-        TextButton(onPressed: () => Navigator.pop(ctx, false), child: const Text('Hayır')),
-        TextButton(onPressed: () => Navigator.pop(ctx, true), child: const Text('Evet')),
+        TextButton(onPressed: () => Navigator.pop(ctx, false), child: Text(l10n.no)),
+        TextButton(onPressed: () => Navigator.pop(ctx, true), child: Text(l10n.yes)),
       ],
     ),
   );
