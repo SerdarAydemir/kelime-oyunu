@@ -4,7 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:kelime_oyunu/core/constants/app_dimensions.dart';
 import 'package:kelime_oyunu/core/constants/app_typography.dart';
 import 'package:kelime_oyunu/core/theme/app_tokens.dart';
+import 'package:kelime_oyunu/data/models/puzzle.dart';
 import 'package:kelime_oyunu/features/gameplay/bloc/game_state.dart';
+import 'package:kelime_oyunu/features/gameplay/bloc/move_narration.dart';
+import 'package:kelime_oyunu/features/gameplay/widgets/narration_controller.dart';
+import 'package:kelime_oyunu/features/gameplay/widgets/narration_timeline.dart';
 import 'package:kelime_oyunu/l10n/generated/app_localizations.dart';
 
 /// Which tint the turn pill wears (README "Turn pill").
@@ -32,6 +36,36 @@ TurnPillSpec turnPillFor(GameActive state, AppLocalizations l10n) {
     return (text: l10n.turnTap, tint: TurnTint.player, dots: false);
   }
   return (text: l10n.turnYou, tint: TurnTint.player, dots: false);
+}
+
+/// The story-time pill, or null when nothing is being narrated right now:
+/// "{WORD} · +{n} puan" while a completed word's bonus badge holds (amber for
+/// the player, blue for the opponent), "Bu harf buraya uymuyor" (red) while a
+/// wrong letter sits on its cell. Reads the narration clock only — it never
+/// gates or alters it.
+TurnPillSpec? narrationPillFor(
+  NarrationController controller,
+  PuzzleData puzzle,
+  AppLocalizations l10n,
+) {
+  final timeline = controller.currentTimeline;
+  if (timeline == null) return null;
+  final progress = controller.progress;
+  final actorTint = controller.currentActor == NarrationActor.bot ? TurnTint.bot : TurnTint.player;
+  TurnPillSpec? wrong;
+  for (final cue in timeline.cues) {
+    if (progress < cue.landAt || progress > cue.absorbAt) continue;
+    if (cue.kind == CueKind.wordBonus && cue.event.completedWordId != null) {
+      final word = puzzle.words.where((w) => w.id == cue.event.completedWordId);
+      if (word.isEmpty) continue;
+      // A completed word outranks a wrong letter in the same move.
+      return (text: l10n.wordDone(word.first.answer, cue.delta), tint: actorTint, dots: false);
+    }
+    if (cue.kind == CueKind.letter && cue.delta < 0) {
+      wrong = (text: l10n.wrongLetter, tint: TurnTint.wrong, dots: false);
+    }
+  }
+  return wrong;
 }
 
 /// The r999 status pill under the scorebar: amber tint for the player's

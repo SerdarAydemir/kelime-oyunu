@@ -13,6 +13,8 @@ extension _LetterFlights on _NarrationLayerState {
     final src = _sourceLocal(controller.currentActor);
     if (src == null) return const [];
     final progress = controller.progress;
+    final isBot = controller.currentActor == NarrationActor.bot;
+    final tokens = context.tokens;
     final tiles = <Widget>[];
     for (var i = 0; i < timeline.cues.length; i++) {
       final cue = timeline.cues[i];
@@ -24,13 +26,41 @@ extension _LetterFlights on _NarrationLayerState {
       if (t < 0 || t >= 1) continue; // not launched yet, or already landed
       final target = Offset((cellPos.col + 0.5) * cell, (cellPos.row + 0.5) * cell);
       final pos = Offset.lerp(src, target, Curves.easeInOut.transform(t))!;
+      // The bot's target cell wears a 2 px blue inset while its tile is in
+      // the air (README "Harf uçuşu"); the player's own letters were already
+      // sitting on their cells as pending tiles, so they get no marker.
+      if (isBot) {
+        tiles.add(
+          Positioned(
+            left: cellPos.col * cell,
+            top: cellPos.row * cell,
+            width: cell,
+            height: cell,
+            child: IgnorePointer(
+              child: Container(
+                margin: const EdgeInsets.all(1),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(AppDimensions.radiusCell),
+                  border: Border.all(color: tokens.inkBot, width: 2),
+                ),
+              ),
+            ),
+          ),
+        );
+      }
       tiles.add(
         Positioned(
           left: pos.dx - cell / 2,
           top: pos.dy - cell / 2,
           width: cell,
           height: cell,
-          child: FlyingTile(letter: letter, size: cell, phase: t),
+          child: FlyingTile(
+            letter: letter,
+            size: cell,
+            phase: t,
+            ink: isBot ? tokens.inkBot : null,
+            rotationDeg: isBot ? -14 : 0,
+          ),
         ),
       );
     }

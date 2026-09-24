@@ -72,10 +72,23 @@ class CellPulse extends StatelessWidget {
 /// in on launch and out on arrival; the layer positions it and picks [phase]
 /// (0 = just launched, 1 = landing).
 class FlyingTile extends StatelessWidget {
-  const FlyingTile({required this.letter, required this.size, required this.phase, super.key});
+  const FlyingTile({
+    required this.letter,
+    required this.size,
+    required this.phase,
+    this.ink,
+    this.rotationDeg = 0,
+    super.key,
+  });
 
   final String letter;
   final double size;
+
+  /// Glyph colour; defaults to `tileInk`. The bot's letters fly in `inkBot`.
+  final Color? ink;
+
+  /// Constant tilt in degrees (README "Harf uçuşu": the bot tile at −14°).
+  final double rotationDeg;
 
   /// Flight progress in [0, 1]. Drives a gentle lift-then-settle scale and the
   /// fade in/out so the hand-off to the committed glyph is seamless.
@@ -91,20 +104,26 @@ class FlyingTile extends StatelessWidget {
     final tokens = context.tokens;
     return Opacity(
       opacity: opacity,
-      child: Transform.scale(
-        scale: scale,
-        child: Container(
-          width: size,
-          height: size,
-          decoration: BoxDecoration(
-            color: tokens.tile,
-            borderRadius: BorderRadius.circular(size * 0.14),
-            boxShadow: [BoxShadow(color: tokens.dim, blurRadius: 8, offset: const Offset(0, 4))],
-          ),
-          alignment: Alignment.center,
-          child: Text(
-            letter,
-            style: AppTypography.tileLetter.copyWith(fontSize: size * 0.5, color: tokens.tileInk),
+      child: Transform.rotate(
+        angle: rotationDeg * math.pi / 180,
+        child: Transform.scale(
+          scale: scale,
+          child: Container(
+            width: size,
+            height: size,
+            decoration: BoxDecoration(
+              color: tokens.tile,
+              borderRadius: BorderRadius.circular(size * 0.14),
+              boxShadow: [BoxShadow(color: tokens.dim, blurRadius: 8, offset: const Offset(0, 4))],
+            ),
+            alignment: Alignment.center,
+            child: Text(
+              letter,
+              style: AppTypography.tileLetter.copyWith(
+                fontSize: size * 0.5,
+                color: ink ?? tokens.tileInk,
+              ),
+            ),
           ),
         ),
       ),
@@ -113,8 +132,9 @@ class FlyingTile extends StatelessWidget {
 }
 
 /// A returning letter tile: the wrong letter, shown sitting on its cell during
-/// the narration and then carried back to the rack by the layer. Fades out
-/// only in the last stretch of the return trip.
+/// the narration (the cell flashes `cellWrong` with a 2 px `error` ring —
+/// README "Yanlış harf") and then carried back to the rack by the layer.
+/// Fades out only in the last stretch of the return trip.
 class GhostLetterTile extends StatelessWidget {
   const GhostLetterTile({required this.letter, required this.size, this.fade = 1.0, super.key});
 
@@ -132,9 +152,9 @@ class GhostLetterTile extends StatelessWidget {
         height: size,
         margin: EdgeInsets.all(size * 0.08),
         decoration: BoxDecoration(
-          color: tokens.tile,
+          color: tokens.cellWrong,
           borderRadius: BorderRadius.circular(size * 0.12),
-          border: Border.all(color: tokens.error, width: 1.5),
+          border: Border.all(color: tokens.error, width: 2),
         ),
         alignment: Alignment.center,
         child: Text(

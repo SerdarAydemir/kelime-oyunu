@@ -5,10 +5,11 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:kelime_oyunu/core/theme/app_tokens.dart';
 
-/// The word-completion celebration: a golden cell-aligned rounded frame with a
-/// bright shimmer travelling around its border while it holds (the "+N" badge
-/// sits over it), fading only at the end as the badge flies to the score.
-/// Pure function of [local] over the word cue's land→absorb window.
+/// The word-completion celebration (README "Kelime tamamlandı"): a 3 px amber
+/// ring around the word with a pulsing amber glow and a bright shimmer
+/// travelling around the border while it holds (the "+N" badge sits over
+/// it), fading only at the end as the badge flies to the score. Pure
+/// function of [local] over the word cue's land→absorb window.
 class WordFrame extends StatelessWidget {
   const WordFrame({required this.local, super.key});
 
@@ -55,21 +56,23 @@ class _GoldenFramePainter extends CustomPainter {
       (Offset.zero & size).deflate(2),
       const Radius.circular(8),
     );
-    // Soft golden glow behind the border.
+    // Glow `0 0 30 6 rgba(242,194,122,.55)`, pulsing (≈ 1.2 s over the
+    // 1.9 s hold): spread 6 → stroke 12 under a 15 px blur.
+    final pulse = 0.7 + 0.3 * math.sin(sweep / 4 * 1.6);
     canvas.drawRRect(
       rrect,
       Paint()
         ..style = PaintingStyle.stroke
-        ..strokeWidth = 6
-        ..color = tokens.accent.withValues(alpha: 0.35 * alpha)
-        ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 6),
+        ..strokeWidth = 12
+        ..color = tokens.accent.withValues(alpha: 0.55 * pulse * alpha)
+        ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 15),
     );
-    // Base golden border.
+    // 3 px amber ring.
     canvas.drawRRect(
       rrect,
       Paint()
         ..style = PaintingStyle.stroke
-        ..strokeWidth = 2.5
+        ..strokeWidth = 3
         ..color = tokens.accent,
     );
     // Travelling shimmer: a bright arc sweeping around the border.

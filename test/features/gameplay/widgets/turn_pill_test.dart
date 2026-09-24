@@ -5,9 +5,11 @@ import 'package:flutter_test/flutter_test.dart';
 
 import 'package:kelime_oyunu/data/models/puzzle.dart';
 import 'package:kelime_oyunu/features/gameplay/bloc/game_state.dart';
+import 'package:kelime_oyunu/features/gameplay/bloc/move_narration.dart';
 import 'package:kelime_oyunu/features/gameplay/engine/rack_manager.dart';
 import 'package:kelime_oyunu/features/gameplay/engine/score_engine.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/level_top_bar.dart';
+import 'package:kelime_oyunu/features/gameplay/widgets/narration_controller.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/score_header.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/turn_pill.dart';
 import 'package:kelime_oyunu/l10n/generated/app_localizations.dart';
@@ -110,5 +112,103 @@ void main() {
     expect(find.textContaining('/'), findsNothing);
     expect(find.byIcon(Icons.arrow_back), findsOneWidget);
     expect(find.byIcon(Icons.more_horiz), findsOneWidget);
+  });
+
+  narrationPillTests();
+}
+
+/// Hosts a real [NarrationController] so `tester.pump` drives the story clock.
+class _NarrationHost extends StatefulWidget {
+  const _NarrationHost({required this.state, required this.onController});
+
+  final GameActive state;
+  final void Function(NarrationController controller) onController;
+
+  @override
+  State<_NarrationHost> createState() => _NarrationHostState();
+}
+
+class _NarrationHostState extends State<_NarrationHost> with SingleTickerProviderStateMixin {
+  late final NarrationController controller;
+
+  @override
+  void initState() {
+    super.initState();
+    controller = NarrationController(vsync: this)..sync(widget.state);
+    widget.onController(controller);
+  }
+
+  @override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) => const SizedBox();
+}
+
+void narrationPillTests() {
+  const c1 = WordCell(row: 1, col: 1);
+  const c2 = WordCell(row: 1, col: 2);
+  const c3 = WordCell(row: 1, col: 3);
+
+  Future<Set<String>> pillTextsDuring(WidgetTester tester, MoveNarration narration) async {
+    late NarrationController controller;
+    late AppLocalizations l10n;
+    final state = _state().copyWith(narration: narration);
+    await tester.pumpWidget(
+      localizedApp(
+        home: Builder(
+          builder: (context) {
+            l10n = AppLocalizations.of(context);
+            return _NarrationHost(state: state, onController: (c) => controller = c);
+          },
+        ),
+      ),
+    );
+    await tester.pump();
+    final seen = <String>{};
+    for (var i = 0; i < 120; i++) {
+      await tester.pump(const Duration(milliseconds: 40));
+      final spec = narrationPillFor(controller, _puzzle, l10n);
+      if (spec != null) seen.add('${spec.tint.name}:${spec.text}');
+    }
+    return seen;
+  }
+
+  testWidgets('narrationPillFor announces the completed word with its bonus', (tester) async {
+    final seen = await pillTextsDuring(
+      tester,
+      const MoveNarration(
+        id: 1,
+        actor: NarrationActor.player,
+        events: [
+          ScoreEvent(cell: c1, delta: 1),
+          ScoreEvent(cell: c2, delta: 1),
+          ScoreEvent(cell: c3, delta: 1, completedWordId: 'w1', wordBonus: 3),
+          ScoreEvent(delta: 3, completedWordId: 'w1', wordBonus: 3),
+        ],
+        placements: [
+          Placement(cell: c1, letter: 'K', expected: 'K'),
+          Placement(cell: c2, letter: 'O', expected: 'O'),
+          Placement(cell: c3, letter: 'L', expected: 'L'),
+        ],
+      ),
+    );
+    expect(seen, contains('player:KOL · +3 puan'));
+  });
+
+  testWidgets('narrationPillFor flags a wrong letter in red', (tester) async {
+    final seen = await pillTextsDuring(
+      tester,
+      const MoveNarration(
+        id: 2,
+        actor: NarrationActor.player,
+        events: [ScoreEvent(cell: c1, delta: -1)],
+        placements: [Placement(cell: c1, letter: 'Z', expected: 'K')],
+      ),
+    );
+    expect(seen, contains('wrong:Bu harf buraya uymuyor'));
   });
 }

@@ -166,7 +166,11 @@ class _GameActiveBodyState extends State<GameActiveBody>
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: AppDimensions.space8),
-                  child: TurnPill(spec: turnPillFor(state, l10n)),
+                  child: TurnPill(
+                    spec:
+                        narrationPillFor(_narration, state.puzzle, l10n) ??
+                        turnPillFor(state, l10n),
+                  ),
                 ),
                 Expanded(
                   child: Padding(
