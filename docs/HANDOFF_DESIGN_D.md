@@ -150,6 +150,17 @@ akışı için) ve `flutter run --dart-define=DEV_UNLOCK_ALL=true`.
 | Interactions: ses/titreşim | Ayarlar anahtarları | Davranış yok (FAZ 5). |
 | Ad labels level>3 | `showAdLabelsFor` | Tam. |
 
+## D2 düzeltmeleri (2026-09-25, kullanıcı GIF'i üzerine)
+
+| Commit | Ne |
+|---|---|
+| `4402f8e fix(narration): word bonus badge no longer wraps` | Kelime bonusu rozeti hücre genişliğinde bir kutuda konumlanıyordu; "+12" satır kırıp yalnız "+" görünüyordu. Kutu üç hücre genişliğinde, hücreye ortalı. |
+| `c52e639 fix(splash): Android 12 splash icon drawn for the circle mask` | Android 12+ sistem splash'i 480 px kare tile'ı 240 dp daireye büyütüp kırpıyordu (koyu, bulanık, kesik merkez). Artık `assets/icon/splash_icon_android12.png` (1152 px, yalnız dağ işareti, güvenli daire içinde) + `icon_background_color` navy daire; `tools/make_icons.sh` üretir. Emülatörde doğrulandı: krem zemin, navy daire, keskin işaret. Android 12 API yuvarlak kare tile çizemez; README'nin 120 dp kutusu Flutter splash rotasında aynen duruyor. |
+
+Not: sistem splash'i tema tercihini bilemez — Ayarlar'da "Koyu" seçiliyken
+cihaz açık modda olsa da native splash açık (krem), ardından gelen Flutter
+splash koyu olur. Kaçınılmaz; `ThemeMode.system` kullanan oyuncuda tutarlıdır.
+
 ## Açık kalanlar
 - FAZ 5: ses/titreşim davranışı; FAZ 6: AdMob (`AdService`), UMP + ATT
   (`ConsentService`), in_app_purchase (`PurchaseService`), fiyatların mağazadan
