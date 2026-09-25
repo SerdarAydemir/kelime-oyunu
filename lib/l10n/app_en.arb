@@ -313,5 +313,9 @@
       }
     }
   },
-  "howToPlay": "How to play?"
+  "howToPlay": "How to play?",
+  "owned": "Active",
+  "claimed": "Claimed",
+  "purchased": "Purchased",
+  "restored": "Purchases restored"
 }

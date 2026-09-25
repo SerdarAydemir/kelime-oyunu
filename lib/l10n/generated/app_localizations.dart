@@ -1057,6 +1057,30 @@ abstract class AppLocalizations {
   /// In tr, this message translates to:
   /// **'Nasıl oynanır?'**
   String get howToPlay;
+
+  /// No description provided for @owned.
+  ///
+  /// In tr, this message translates to:
+  /// **'Aktif'**
+  String get owned;
+
+  /// No description provided for @claimed.
+  ///
+  /// In tr, this message translates to:
+  /// **'Alındı'**
+  String get claimed;
+
+  /// No description provided for @purchased.
+  ///
+  /// In tr, this message translates to:
+  /// **'Satın alındı'**
+  String get purchased;
+
+  /// No description provided for @restored.
+  ///
+  /// In tr, this message translates to:
+  /// **'Satın alımlar geri yüklendi'**
+  String get restored;
 }
 
 class _AppLocalizationsDelegate

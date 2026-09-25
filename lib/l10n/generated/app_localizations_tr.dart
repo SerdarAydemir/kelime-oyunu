@@ -538,4 +538,16 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get howToPlay => 'Nasıl oynanır?';
+
+  @override
+  String get owned => 'Aktif';
+
+  @override
+  String get claimed => 'Alındı';
+
+  @override
+  String get purchased => 'Satın alındı';
+
+  @override
+  String get restored => 'Satın alımlar geri yüklendi';
 }

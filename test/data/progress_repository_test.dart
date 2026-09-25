@@ -78,6 +78,34 @@ void runContractTests(String label, Future<ProgressRepository> Function(TestCloc
       expect(repo.dailyStreak, 2);
     });
 
+    test('coins accumulate and the ad-free unlock persists', () async {
+      final repo = await make(TestClock());
+      await repo.addCoins(150);
+      await repo.addCoins(500);
+      await repo.setAdFree();
+      expect(repo.coins, 650);
+      expect(repo.adFree, isTrue);
+    });
+
+    test(
+      'the daily campfire pays 20 coins once per local day and never touches the streak',
+      () async {
+        final clock = TestClock();
+        final repo = await make(clock);
+        await repo.recordMatchFinished(wordsFound: 1);
+        expect(await repo.claimDailyCampfire(), isTrue);
+        expect(await repo.claimDailyCampfire(), isFalse);
+        expect(repo.coins, 20);
+        expect(repo.campfireClaimedToday, isTrue);
+        expect(repo.dailyStreak, 1);
+        clock.advanceDays(1);
+        expect(repo.campfireClaimedToday, isFalse);
+        expect(await repo.claimDailyCampfire(), isTrue);
+        expect(repo.coins, 40);
+        expect(repo.dailyStreak, 1, reason: 'the campfire is not a played match');
+      },
+    );
+
     test('reset returns to a fresh player', () async {
       final repo = await make(TestClock());
       await repo.recordWin(4);
@@ -90,6 +118,8 @@ void runContractTests(String label, Future<ProgressRepository> Function(TestCloc
       expect(repo.dailyStreak, 0);
       expect(repo.wordsFound, 0);
       expect(repo.isUnlocked(2), isFalse);
+      expect(repo.coins, 0);
+      expect(repo.adFree, isFalse);
     });
 
     test('a win does not touch the stats', () async {
@@ -216,6 +246,9 @@ void main() {
       expect(repo.altitudeMeters, 360);
       expect(repo.dailyStreak, 0);
       expect(repo.wordsFound, 0);
+      expect(repo.coins, 0);
+      expect(repo.adFree, isFalse);
+      expect(repo.campfireClaimedToday, isFalse);
       // Writing stats keeps the ladder.
       await repo.recordMatchFinished(wordsFound: 2);
       expect(repo.highestCompletedLevel, 9);

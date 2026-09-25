@@ -44,19 +44,68 @@ abstract class ProgressRepository {
   /// "İlerlemeyi sıfırla": back to a fresh player — ladder, stats, everything
   /// this record holds. Irreversible; the settings screen confirms first.
   Future<void> reset();
+
+  // ── Camp shop ────────────────────────────────────────────────────────────
+
+  /// Camp-coin balance ("KAMP PARASI").
+  int get coins;
+
+  /// "Reklamsız tırmanış" bought (one-time).
+  bool get adFree;
+
+  /// Whether today's campfire was already claimed (local calendar day).
+  bool get campfireClaimedToday;
+
+  Future<void> addCoins(int amount);
+
+  Future<void> setAdFree();
+
+  /// "Günlük kamp ateşi": +[kCampfireCoins] once per local day. Returns
+  /// false (and changes nothing) when today's was already taken. Never
+  /// touches the daily streak — that counts finished matches only.
+  Future<bool> claimDailyCampfire();
 }
+
+/// Coins the daily campfire pays out (README: "Her gün 20 para").
+const int kCampfireCoins = 20;
 
 /// What the streak and word counters persist. Day keys are local-calendar
 /// `yyyy-mm-dd` strings (the device's local time defines the day boundary).
 @immutable
 class ProgressStats {
-  const ProgressStats({this.lastPlayedDay, this.streak = 0, this.wordsFound = 0});
+  const ProgressStats({
+    this.lastPlayedDay,
+    this.streak = 0,
+    this.wordsFound = 0,
+    this.coins = 0,
+    this.adFree = false,
+    this.lastCampfireDay,
+  });
 
   final String? lastPlayedDay;
   final int streak;
   final int wordsFound;
+  final int coins;
+  final bool adFree;
+  final String? lastCampfireDay;
 
   static const ProgressStats empty = ProgressStats();
+
+  ProgressStats copyWith({
+    String? lastPlayedDay,
+    int? streak,
+    int? wordsFound,
+    int? coins,
+    bool? adFree,
+    String? lastCampfireDay,
+  }) => ProgressStats(
+    lastPlayedDay: lastPlayedDay ?? this.lastPlayedDay,
+    streak: streak ?? this.streak,
+    wordsFound: wordsFound ?? this.wordsFound,
+    coins: coins ?? this.coins,
+    adFree: adFree ?? this.adFree,
+    lastCampfireDay: lastCampfireDay ?? this.lastCampfireDay,
+  );
 }
 
 /// Shared progression arithmetic — the single definition of "unlocked", the
@@ -78,6 +127,33 @@ mixin _ProgressRules implements ProgressRepository {
 
   @override
   int get wordsFound => stats.wordsFound;
+
+  @override
+  int get coins => stats.coins;
+
+  @override
+  bool get adFree => stats.adFree;
+
+  @override
+  bool get campfireClaimedToday => stats.lastCampfireDay == dayKey(now());
+
+  /// Persists [next] without touching the ladder.
+  Future<void> writeStats(ProgressStats next);
+
+  @override
+  Future<void> addCoins(int amount) => writeStats(stats.copyWith(coins: stats.coins + amount));
+
+  @override
+  Future<void> setAdFree() => writeStats(stats.copyWith(adFree: true));
+
+  @override
+  Future<bool> claimDailyCampfire() async {
+    if (campfireClaimedToday) return false;
+    await writeStats(
+      stats.copyWith(coins: stats.coins + kCampfireCoins, lastCampfireDay: dayKey(now())),
+    );
+    return true;
+  }
 
   @override
   int get dailyStreak {
@@ -108,7 +184,7 @@ mixin _ProgressRules implements ProgressRepository {
     } else {
       streak = 1;
     }
-    return ProgressStats(
+    return current.copyWith(
       lastPlayedDay: todayKey,
       streak: streak,
       wordsFound: current.wordsFound + wordsFound,
@@ -167,10 +243,15 @@ class HiveProgressRepository with _ProgressRules implements ProgressRepository {
     final last = json['last_played_day'];
     final streak = json['streak'];
     final words = json['words_found'];
+    final coins = json['coins'];
+    final campfire = json['last_campfire_day'];
     return ProgressStats(
       lastPlayedDay: last is String ? last : null,
       streak: streak is int ? streak : 0,
       wordsFound: words is int ? words : 0,
+      coins: coins is int ? coins : 0,
+      adFree: json['ad_free'] == true,
+      lastCampfireDay: campfire is String ? campfire : null,
     );
   }
 
@@ -182,6 +263,9 @@ class HiveProgressRepository with _ProgressRules implements ProgressRepository {
       'last_played_day': stats.lastPlayedDay,
       'streak': stats.streak,
       'words_found': stats.wordsFound,
+      'coins': stats.coins,
+      'ad_free': stats.adFree,
+      'last_campfire_day': stats.lastCampfireDay,
     }),
   );
 
@@ -195,6 +279,10 @@ class HiveProgressRepository with _ProgressRules implements ProgressRepository {
   @override
   Future<void> recordMatchFinished({required int wordsFound}) =>
       _write(highest: highestCompletedLevel, stats: nextStats(wordsFound));
+
+  @override
+  Future<void> writeStats(ProgressStats next) =>
+      _write(highest: highestCompletedLevel, stats: next);
 
   @override
   Future<void> reset() => _box.delete(_recordKey);
@@ -229,6 +317,9 @@ class InMemoryProgressRepository with _ProgressRules implements ProgressReposito
   @override
   Future<void> recordMatchFinished({required int wordsFound}) async =>
       _stats = nextStats(wordsFound);
+
+  @override
+  Future<void> writeStats(ProgressStats next) async => _stats = next;
 
   @override
   Future<void> reset() async {

@@ -6,6 +6,7 @@ import 'package:kelime_oyunu/core/config/dev_flags.dart';
 import 'package:kelime_oyunu/core/router/first_run.dart';
 import 'package:kelime_oyunu/core/services/ad_service.dart';
 import 'package:kelime_oyunu/core/services/consent_service.dart';
+import 'package:kelime_oyunu/core/services/purchase_service.dart';
 import 'package:kelime_oyunu/core/services/mock_ad_service.dart';
 
 import 'package:kelime_oyunu/data/repositories/progress_repository.dart';
@@ -20,6 +21,7 @@ import 'package:kelime_oyunu/features/map/view/climb_map_screen.dart';
 import 'package:kelime_oyunu/features/onboarding/view/onboarding_screen.dart';
 import 'package:kelime_oyunu/features/result/view/result_screen.dart';
 import 'package:kelime_oyunu/features/settings/view/settings_screen.dart';
+import 'package:kelime_oyunu/features/shop/view/shop_screen.dart';
 import 'package:kelime_oyunu/l10n/generated/app_localizations.dart';
 import 'package:kelime_oyunu/features/splash/view/splash_screen.dart';
 
@@ -34,6 +36,7 @@ abstract final class AppRouter {
     required SessionRepository sessionRepo,
     required SettingsRepository settingsRepo,
     ConsentService consentService = const MockConsentService(),
+    PurchaseService purchaseService = const MockPurchaseService(),
   }) => GoRouter(
     initialLocation: '/splash',
     routes: [
@@ -115,7 +118,8 @@ abstract final class AppRouter {
       ),
       GoRoute(
         path: '/shop',
-        builder: (context, state) => const _PlaceholderScreen(label: 'Shop'),
+        builder: (context, state) =>
+            ShopScreen(progressRepo: progressRepo, purchases: purchaseService),
       ),
       GoRoute(
         path: '/settings',

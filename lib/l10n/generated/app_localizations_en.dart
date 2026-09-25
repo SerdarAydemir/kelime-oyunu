@@ -535,4 +535,16 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get howToPlay => 'How to play?';
+
+  @override
+  String get owned => 'Active';
+
+  @override
+  String get claimed => 'Claimed';
+
+  @override
+  String get purchased => 'Purchased';
+
+  @override
+  String get restored => 'Purchases restored';
 }
