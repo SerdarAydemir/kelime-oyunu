@@ -88,6 +88,10 @@ Release'i her SDK ekleyişinde emülatörde aç, `build/app/outputs/mapping/rele
   `AppDimensions` (RADII/SPACE/BUTTONS), `AppTheme.dark()/light()`, arb metinleri, `AppLogo`.
   Token değişecekse önce `kz-tokens.js`, sonra Dart (`docs/HANDOFF_DESIGN_A.md`).
 - Tema modu `SettingsCubit` (shared_preferences), varsayılan `system`.
+- **Servis arayüzleri (mock → FAZ 6):** `lib/core/services/`: `AdService`, `ConsentService`
+  (UMP + ATT), `PurchaseService` (`in_app_purchase` yasağı FAZ 6'da kalkar); hepsi
+  `AppRouter.build` / `GameScreen` ile enjekte edilir. İlk açılış bayrakları
+  (`consentDone/attAsked/onboardingDone`) `AppSettings`'te; `firstRoute()` splash hedefini seçer.
 - **Reklam kapısı:** `AdService.showRewarded()` (`lib/core/services/`), MVP `MockAdService`;
   6. yuva, "Şimdi değiştir" ve ipucu bu kapıdan geçer, `unavailable` → `showOfflineToast`.
   Gerçek SDK aynı arayüzü uygular, `GameScreen.adService` ile enjekte edilir.
@@ -301,9 +305,16 @@ tasarımı uygulanmadı).
   silindi), tam ekran sonuç rotaları `/result/:level`. Release APK emülatörde
   açıldı. Kontrol listesi: `docs/HANDOFF_DESIGN_C.md`.
 
+- Tasarım oturumu D (2026-09-25) ✅ — ayarlar `/settings`, onay `/consent` +
+  iOS ATT ara ekranı, onboarding `/onboarding` (ilk açılış akışı `firstRoute`),
+  mağaza `/shop` (kamp parası / reklamsız / kamp ateşi, `PurchaseService` mock),
+  legal `/legal/*` (asset markdown), oyun ⋯ menüsü. Tüm README ekranları var;
+  fark listesi ve emülatör listesi: `docs/HANDOFF_DESIGN_D.md`.
+
 **Sıradaki (planlı, yapılmadı):**
-- **Tasarım oturumu D** — ayarlar UI (tema/ses/titreşim/gökyüzü), ⋯ menüsü,
-  onboarding/consent/ATT, shop, legal. Önce B ve C'nin emülatör listeleri.
+- Emülatörde B/C/D kontrol listeleri (iki tema), store ekran görüntüsü çerçeveleri.
+- FAZ 5 ses/titreşim; FAZ 6 gerçek SDK'lar (`AdService`, `ConsentService`,
+  `PurchaseService` arayüzleri hazır), kamp parası harcama yolu.
 - FAZ 4 artıkları (`docs/HANDOFF_REFACTOR.md` "Bulgular"): alpha-only gölge
   renkleri token'a, dialog/bot-profil string'leri `.arb`'a, kullanılmayan
   `AppColors.gridCellSelected`/`star`, hücre-boyutu hesabının ortaklaştırılması,
