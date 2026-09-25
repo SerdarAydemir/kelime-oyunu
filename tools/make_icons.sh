@@ -17,6 +17,8 @@
 #                            (sin160°, −cos160°); gradient length
 #                            1024·(|sin|+|cos|) ≈ 1312 px → the two barycentric
 #                            anchors sit ±656 px from the centre along it)
+#   splash_icon_android12.png 1152×1152 Android 12+ splash icon (mark only,
+#                            navy icon circle comes from flutter_native_splash)
 #   splash_logo.png          480×480 rounded tile (r28/120 → 96 px). 480 px is
 #                            deliberate: flutter_native_splash treats the
 #                            source as xxxhdpi (÷4 per density), so 480 px
@@ -47,6 +49,13 @@ magick "${PNG[@]}" -size 1024x1024 xc: \
 magick "${PNG[@]}" "$OUT/app_icon.png" \
   \( -size 1024x1024 xc:none -fill white -draw "roundrectangle 0,0 1023,1023 239,239" \) \
   -compose DstIn -composite -resize 480x480 "$OUT/splash_logo.png"
+
+# Android 12+ splash icon: 1152 px = 288 dp @4x; the system masks a 240 dp
+# circle and the mark must sit inside the inner 192 dp, so the trimmed
+# drawing is scaled to 560 px (diagonal ≈ 175 dp) and centred.
+magick "${PNG[@]}" -background none -density 384 "$SRC/app-icon-1a-foreground.svg" \
+  -trim +repage -resize 560x560 \
+  -gravity center -background none -extent 1152x1152 "$OUT/splash_icon_android12.png"
 
 # Safe-zone check for the adaptive foreground (fails loudly if the drawing
 # would be clipped by a circular launcher mask).

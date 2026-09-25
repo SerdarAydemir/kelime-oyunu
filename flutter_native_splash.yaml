@@ -6,10 +6,16 @@ flutter_native_splash:
   color: "#f3ead8"        # THEMES.light.bgFlat
   color_dark: "#0b1a33"   # THEMES.dark.bgFlat
   image: assets/icon/splash_logo.png
+  # Android 12+ draws the icon inside a 240 dp circle mask on a 288 dp canvas,
+  # so it gets its own asset: the mountain mark alone, centred with the safe
+  # margin (content < 192 dp), on a navy icon circle (LOGO_BG) so the cream
+  # snow cells stay visible on the cream light background.
   android_12:
     color: "#f3ead8"
     color_dark: "#0b1a33"
-    image: assets/icon/splash_logo.png
+    image: assets/icon/splash_icon_android12.png
+    icon_background_color: "#0b1a33"
+    icon_background_color_dark: "#1c3358"
   android: true
   ios: true
   web: false
