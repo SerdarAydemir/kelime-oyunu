@@ -494,4 +494,17 @@ class AppLocalizationsEn extends AppLocalizations {
   String meters(int m) {
     return '$m m';
   }
+
+  @override
+  String get resetConfirmTitle => 'Reset progress?';
+
+  @override
+  String get resetConfirmBody =>
+      'Every level, your altitude, streak and camp coins will be deleted. This cannot be undone.';
+
+  @override
+  String get cancel => 'Cancel';
+
+  @override
+  String get adPrefsDone => 'Ad preferences updated';
 }

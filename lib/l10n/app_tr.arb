@@ -294,5 +294,9 @@
         "type": "int"
       }
     }
-  }
+  },
+  "resetConfirmTitle": "İlerlemeyi sıfırla?",
+  "resetConfirmBody": "Tüm bölümler, irtifa, seri ve kamp parası silinir. Bu işlem geri alınamaz.",
+  "cancel": "Vazgeç",
+  "adPrefsDone": "Reklam tercihleri güncellendi"
 }

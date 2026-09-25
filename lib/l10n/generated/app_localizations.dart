@@ -985,6 +985,30 @@ abstract class AppLocalizations {
   /// In tr, this message translates to:
   /// **'{m} m'**
   String meters(int m);
+
+  /// No description provided for @resetConfirmTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'İlerlemeyi sıfırla?'**
+  String get resetConfirmTitle;
+
+  /// No description provided for @resetConfirmBody.
+  ///
+  /// In tr, this message translates to:
+  /// **'Tüm bölümler, irtifa, seri ve kamp parası silinir. Bu işlem geri alınamaz.'**
+  String get resetConfirmBody;
+
+  /// No description provided for @cancel.
+  ///
+  /// In tr, this message translates to:
+  /// **'Vazgeç'**
+  String get cancel;
+
+  /// No description provided for @adPrefsDone.
+  ///
+  /// In tr, this message translates to:
+  /// **'Reklam tercihleri güncellendi'**
+  String get adPrefsDone;
 }
 
 class _AppLocalizationsDelegate

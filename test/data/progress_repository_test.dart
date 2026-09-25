@@ -78,6 +78,20 @@ void runContractTests(String label, Future<ProgressRepository> Function(TestCloc
       expect(repo.dailyStreak, 2);
     });
 
+    test('reset returns to a fresh player', () async {
+      final repo = await make(TestClock());
+      await repo.recordWin(4);
+      await repo.recordMatchFinished(wordsFound: 6);
+
+      await repo.reset();
+
+      expect(repo.highestCompletedLevel, 0);
+      expect(repo.altitudeMeters, 0);
+      expect(repo.dailyStreak, 0);
+      expect(repo.wordsFound, 0);
+      expect(repo.isUnlocked(2), isFalse);
+    });
+
     test('a win does not touch the stats', () async {
       final repo = await make(TestClock());
       await repo.recordMatchFinished(wordsFound: 2);

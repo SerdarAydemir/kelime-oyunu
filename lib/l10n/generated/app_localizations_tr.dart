@@ -495,4 +495,17 @@ class AppLocalizationsTr extends AppLocalizations {
   String meters(int m) {
     return '$m m';
   }
+
+  @override
+  String get resetConfirmTitle => 'İlerlemeyi sıfırla?';
+
+  @override
+  String get resetConfirmBody =>
+      'Tüm bölümler, irtifa, seri ve kamp parası silinir. Bu işlem geri alınamaz.';
+
+  @override
+  String get cancel => 'Vazgeç';
+
+  @override
+  String get adPrefsDone => 'Reklam tercihleri güncellendi';
 }

@@ -294,5 +294,9 @@
         "type": "int"
       }
     }
-  }
+  },
+  "resetConfirmTitle": "Reset progress?",
+  "resetConfirmBody": "Every level, your altitude, streak and camp coins will be deleted. This cannot be undone.",
+  "cancel": "Cancel",
+  "adPrefsDone": "Ad preferences updated"
 }

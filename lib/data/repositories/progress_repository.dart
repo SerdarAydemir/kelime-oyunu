@@ -40,6 +40,10 @@ abstract class ProgressRepository {
   /// Records that a match finished today (any outcome): extends or restarts
   /// the daily streak and adds the [wordsFound] in that match to the total.
   Future<void> recordMatchFinished({required int wordsFound});
+
+  /// "İlerlemeyi sıfırla": back to a fresh player — ladder, stats, everything
+  /// this record holds. Irreversible; the settings screen confirms first.
+  Future<void> reset();
 }
 
 /// What the streak and word counters persist. Day keys are local-calendar
@@ -191,6 +195,9 @@ class HiveProgressRepository with _ProgressRules implements ProgressRepository {
   @override
   Future<void> recordMatchFinished({required int wordsFound}) =>
       _write(highest: highestCompletedLevel, stats: nextStats(wordsFound));
+
+  @override
+  Future<void> reset() => _box.delete(_recordKey);
 }
 
 /// Volatile implementation used by tests and as the default dependency, so a
@@ -222,4 +229,10 @@ class InMemoryProgressRepository with _ProgressRules implements ProgressReposito
   @override
   Future<void> recordMatchFinished({required int wordsFound}) async =>
       _stats = nextStats(wordsFound);
+
+  @override
+  Future<void> reset() async {
+    _highest = 0;
+    _stats = ProgressStats.empty;
+  }
 }

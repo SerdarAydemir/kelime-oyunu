@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:kelime_oyunu/core/config/dev_flags.dart';
 import 'package:kelime_oyunu/core/services/ad_service.dart';
+import 'package:kelime_oyunu/core/services/consent_service.dart';
 import 'package:kelime_oyunu/core/services/mock_ad_service.dart';
 
 import 'package:kelime_oyunu/data/repositories/progress_repository.dart';
@@ -12,6 +13,7 @@ import 'package:kelime_oyunu/features/home/view/home_screen.dart';
 import 'package:kelime_oyunu/features/gameplay/bloc/game_state.dart';
 import 'package:kelime_oyunu/features/map/view/climb_map_screen.dart';
 import 'package:kelime_oyunu/features/result/view/result_screen.dart';
+import 'package:kelime_oyunu/features/settings/view/settings_screen.dart';
 import 'package:kelime_oyunu/l10n/generated/app_localizations.dart';
 import 'package:kelime_oyunu/features/splash/view/splash_screen.dart';
 
@@ -24,6 +26,7 @@ abstract final class AppRouter {
   static GoRouter build({
     required ProgressRepository progressRepo,
     required SessionRepository sessionRepo,
+    ConsentService consentService = const MockConsentService(),
   }) => GoRouter(
     initialLocation: '/splash',
     routes: [
@@ -97,7 +100,11 @@ abstract final class AppRouter {
       ),
       GoRoute(
         path: '/settings',
-        builder: (context, state) => const _PlaceholderScreen(label: 'Settings'),
+        builder: (context, state) => SettingsScreen(
+          progressRepo: progressRepo,
+          sessionRepo: sessionRepo,
+          consentService: consentService,
+        ),
       ),
       GoRoute(
         path: '/legal/privacy',
