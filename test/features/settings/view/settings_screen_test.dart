@@ -142,6 +142,9 @@ void main() {
     await tester.pumpWidget(h.build());
     await tester.pumpAndSettle();
 
+    await tester.scrollUntilVisible(find.text('İlerlemeyi sıfırla'), 200);
+    await tester.ensureVisible(find.text('İlerlemeyi sıfırla'));
+    await tester.pumpAndSettle();
     await tester.tap(find.text('İlerlemeyi sıfırla'));
     await tester.pumpAndSettle();
     expect(find.text('İlerlemeyi sıfırla?'), findsOneWidget);

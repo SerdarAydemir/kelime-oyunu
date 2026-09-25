@@ -123,6 +123,7 @@ class _GameGroup extends StatelessWidget {
               sub: l10n.skySub,
               trailing: SettingsToggle(value: settings.skyEnabled, onChanged: cubit.setSkyEnabled),
             ),
+            SettingsRow(label: l10n.howToPlay, onTap: () => context.push('/onboarding')),
           ],
         );
       },

@@ -17,6 +17,7 @@ import 'package:kelime_oyunu/features/gameplay/view/game_screen.dart';
 import 'package:kelime_oyunu/features/home/view/home_screen.dart';
 import 'package:kelime_oyunu/features/gameplay/bloc/game_state.dart';
 import 'package:kelime_oyunu/features/map/view/climb_map_screen.dart';
+import 'package:kelime_oyunu/features/onboarding/view/onboarding_screen.dart';
 import 'package:kelime_oyunu/features/result/view/result_screen.dart';
 import 'package:kelime_oyunu/features/settings/view/settings_screen.dart';
 import 'package:kelime_oyunu/l10n/generated/app_localizations.dart';
@@ -58,6 +59,11 @@ abstract final class AppRouter {
       GoRoute(
         path: '/consent',
         builder: (context, state) => ConsentScreen(consentService: consentService),
+      ),
+      GoRoute(
+        path: '/onboarding',
+        builder: (context, state) =>
+            OnboardingScreen(firstRun: state.uri.queryParameters['first'] == '1'),
       ),
       GoRoute(
         path: '/consent/att',

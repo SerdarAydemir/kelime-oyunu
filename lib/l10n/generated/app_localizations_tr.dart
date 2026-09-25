@@ -516,4 +516,26 @@ class AppLocalizationsTr extends AppLocalizations {
   @override
   String get attBullet2 =>
       'Vermezsen oyun aynen devam eder, reklamlar genel olur';
+
+  @override
+  String get onb2 => 'Harfi koy, onayla';
+
+  @override
+  String get onb2Sub =>
+      'Doğru harf yerinde kalır ve puan getirir; yanlış harf tepsine geri döner.';
+
+  @override
+  String get onb3 => 'Rakip cevap verir';
+
+  @override
+  String get onb3Sub =>
+      'Her hamlenden sonra Rakip kendi harflerini koyar; tahta dolunca puanı yüksek olan kazanır.';
+
+  @override
+  String onbProgress(int n) {
+    return '$n / 3';
+  }
+
+  @override
+  String get howToPlay => 'Nasıl oynanır?';
 }

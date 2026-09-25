@@ -12,9 +12,27 @@ void main() {
   });
 
   test('after consent, iOS sees the ATT pre-prompt once; Android skips it', () {
-    const consented = AppSettings(consentDone: true);
+    const consented = AppSettings(consentDone: true, onboardingDone: true);
     expect(firstRoute(consented, isIOS: true), '/consent/att');
     expect(firstRoute(consented, isIOS: false), '/');
-    expect(firstRoute(const AppSettings(consentDone: true, attAsked: true), isIOS: true), '/');
+    expect(
+      firstRoute(
+        const AppSettings(consentDone: true, attAsked: true, onboardingDone: true),
+        isIOS: true,
+      ),
+      '/',
+    );
+  });
+
+  test('the tutorial follows consent (and ATT) until it was seen once', () {
+    expect(firstRoute(const AppSettings(consentDone: true), isIOS: false), '/onboarding?first=1');
+    expect(
+      firstRoute(const AppSettings(consentDone: true, attAsked: true), isIOS: true),
+      '/onboarding?first=1',
+    );
+    expect(
+      firstRoute(const AppSettings(consentDone: true, onboardingDone: true), isIOS: false),
+      '/',
+    );
   });
 }

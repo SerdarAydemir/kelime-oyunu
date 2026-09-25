@@ -17,8 +17,16 @@ import 'package:kelime_oyunu/features/settings/cubit/settings_cubit.dart';
 import '../../helpers/localized_app.dart';
 
 class _Harness {
-  _Harness({required this.isIOS, this.initial = '/consent', bool consentDone = false})
-    : settingsRepo = InMemorySettingsRepository(initial: AppSettings(consentDone: consentDone));
+  // The tutorial gate is covered by first_run_test; these flows start with
+  // it already seen unless a test says otherwise.
+  _Harness({
+    required this.isIOS,
+    this.initial = '/consent',
+    bool consentDone = false,
+    bool onboardingDone = true,
+  }) : settingsRepo = InMemorySettingsRepository(
+         initial: AppSettings(consentDone: consentDone, onboardingDone: onboardingDone),
+       );
 
   final bool isIOS;
   final String initial;
@@ -45,6 +53,7 @@ class _Harness {
           builder: (_, _) => const AttScreen(consentService: MockConsentService()),
         ),
         GoRoute(path: '/', builder: (_, s) => capture(s)),
+        GoRoute(path: '/onboarding', builder: (_, s) => capture(s)),
         GoRoute(path: '/legal/:page', builder: (_, s) => capture(s)),
       ],
     );
@@ -98,6 +107,15 @@ void main() {
     await tester.pumpAndSettle();
     expect(h.cubit.state.attAsked, isTrue);
     expect(h.visited, ['/']);
+  });
+
+  testWidgets('a first run continues into the tutorial after consent', (tester) async {
+    final h = _Harness(isIOS: false, onboardingDone: false);
+    await tester.pumpWidget(h.build());
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Kabul et ve başla'));
+    await tester.pumpAndSettle();
+    expect(h.visited, ['/onboarding?first=1']);
   });
 
   testWidgets('ATT "Şimdi değil" also marks the prompt as asked', (tester) async {

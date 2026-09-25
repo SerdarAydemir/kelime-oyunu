@@ -513,4 +513,26 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get attBullet2 => 'If not, the game continues as is with generic ads';
+
+  @override
+  String get onb2 => 'Place the letter, confirm';
+
+  @override
+  String get onb2Sub =>
+      'A correct letter stays and scores; a wrong one returns to your rack.';
+
+  @override
+  String get onb3 => 'The opponent replies';
+
+  @override
+  String get onb3Sub =>
+      'After each of your moves the opponent places its letters; when the board is full the higher score wins.';
+
+  @override
+  String onbProgress(int n) {
+    return '$n / 3';
+  }
+
+  @override
+  String get howToPlay => 'How to play?';
 }

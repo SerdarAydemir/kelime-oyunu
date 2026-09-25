@@ -1021,6 +1021,42 @@ abstract class AppLocalizations {
   /// In tr, this message translates to:
   /// **'Vermezsen oyun aynen devam eder, reklamlar genel olur'**
   String get attBullet2;
+
+  /// No description provided for @onb2.
+  ///
+  /// In tr, this message translates to:
+  /// **'Harfi koy, onayla'**
+  String get onb2;
+
+  /// No description provided for @onb2Sub.
+  ///
+  /// In tr, this message translates to:
+  /// **'Doğru harf yerinde kalır ve puan getirir; yanlış harf tepsine geri döner.'**
+  String get onb2Sub;
+
+  /// No description provided for @onb3.
+  ///
+  /// In tr, this message translates to:
+  /// **'Rakip cevap verir'**
+  String get onb3;
+
+  /// No description provided for @onb3Sub.
+  ///
+  /// In tr, this message translates to:
+  /// **'Her hamlenden sonra Rakip kendi harflerini koyar; tahta dolunca puanı yüksek olan kazanır.'**
+  String get onb3Sub;
+
+  /// No description provided for @onbProgress.
+  ///
+  /// In tr, this message translates to:
+  /// **'{n} / 3'**
+  String onbProgress(int n);
+
+  /// No description provided for @howToPlay.
+  ///
+  /// In tr, this message translates to:
+  /// **'Nasıl oynanır?'**
+  String get howToPlay;
 }
 
 class _AppLocalizationsDelegate

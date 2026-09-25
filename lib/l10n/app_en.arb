@@ -300,5 +300,18 @@
   "cancel": "Cancel",
   "adPrefsDone": "Ad preferences updated",
   "attBullet1": "If you allow it, ads match your interests",
-  "attBullet2": "If not, the game continues as is with generic ads"
+  "attBullet2": "If not, the game continues as is with generic ads",
+  "onb2": "Place the letter, confirm",
+  "onb2Sub": "A correct letter stays and scores; a wrong one returns to your rack.",
+  "onb3": "The opponent replies",
+  "onb3Sub": "After each of your moves the opponent places its letters; when the board is full the higher score wins.",
+  "onbProgress": "{n} / 3",
+  "@onbProgress": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "howToPlay": "How to play?"
 }

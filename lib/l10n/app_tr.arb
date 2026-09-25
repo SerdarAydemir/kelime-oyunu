@@ -300,5 +300,18 @@
   "cancel": "Vazgeç",
   "adPrefsDone": "Reklam tercihleri güncellendi",
   "attBullet1": "İzin verirsen reklamlar ilgi alanlarına göre seçilir",
-  "attBullet2": "Vermezsen oyun aynen devam eder, reklamlar genel olur"
+  "attBullet2": "Vermezsen oyun aynen devam eder, reklamlar genel olur",
+  "onb2": "Harfi koy, onayla",
+  "onb2Sub": "Doğru harf yerinde kalır ve puan getirir; yanlış harf tepsine geri döner.",
+  "onb3": "Rakip cevap verir",
+  "onb3Sub": "Her hamlenden sonra Rakip kendi harflerini koyar; tahta dolunca puanı yüksek olan kazanır.",
+  "onbProgress": "{n} / 3",
+  "@onbProgress": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "howToPlay": "Nasıl oynanır?"
 }
