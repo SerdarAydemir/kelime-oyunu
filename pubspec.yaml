@@ -77,6 +77,8 @@ flutter:
     # Placeholder dirs — populate before first build
     - assets/images/
     - assets/audio/
+    # Privacy / terms copy (markdown dialect, see lib/features/legal)
+    - assets/legal/
 
   # Bundled offline (no google_fonts — the game must work without network).
   # Static instances cut from the Google Fonts variable masters (OFL 1.1;

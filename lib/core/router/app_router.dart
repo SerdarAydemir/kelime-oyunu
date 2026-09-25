@@ -16,6 +16,7 @@ import 'package:kelime_oyunu/features/consent/view/att_screen.dart';
 import 'package:kelime_oyunu/features/consent/view/consent_screen.dart';
 import 'package:kelime_oyunu/features/gameplay/view/game_screen.dart';
 import 'package:kelime_oyunu/features/home/view/home_screen.dart';
+import 'package:kelime_oyunu/features/legal/view/legal_screen.dart';
 import 'package:kelime_oyunu/features/gameplay/bloc/game_state.dart';
 import 'package:kelime_oyunu/features/map/view/climb_map_screen.dart';
 import 'package:kelime_oyunu/features/onboarding/view/onboarding_screen.dart';
@@ -131,11 +132,11 @@ abstract final class AppRouter {
       ),
       GoRoute(
         path: '/legal/privacy',
-        builder: (context, state) => const _PlaceholderScreen(label: 'Privacy Policy'),
+        builder: (context, state) => const LegalScreen(page: LegalPage.privacy),
       ),
       GoRoute(
         path: '/legal/terms',
-        builder: (context, state) => const _PlaceholderScreen(label: 'Terms of Service'),
+        builder: (context, state) => const LegalScreen(page: LegalPage.terms),
       ),
     ],
   );
