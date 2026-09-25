@@ -550,4 +550,11 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get restored => 'Satın alımlar geri yüklendi';
+
+  @override
+  String get leaveGameTitle => 'Haritaya dön?';
+
+  @override
+  String get leaveGameBody =>
+      'Yarım kalan oyun kaydedilir; ana ekrandan kaldığın yerden devam edebilirsin.';
 }

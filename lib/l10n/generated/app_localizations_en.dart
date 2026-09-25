@@ -547,4 +547,11 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get restored => 'Purchases restored';
+
+  @override
+  String get leaveGameTitle => 'Back to the map?';
+
+  @override
+  String get leaveGameBody =>
+      'Your unfinished game is saved; you can pick it up from the home screen.';
 }

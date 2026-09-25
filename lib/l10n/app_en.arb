@@ -317,5 +317,7 @@
   "owned": "Active",
   "claimed": "Claimed",
   "purchased": "Purchased",
-  "restored": "Purchases restored"
+  "restored": "Purchases restored",
+  "leaveGameTitle": "Back to the map?",
+  "leaveGameBody": "Your unfinished game is saved; you can pick it up from the home screen."
 }

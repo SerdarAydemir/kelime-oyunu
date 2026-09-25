@@ -1081,6 +1081,18 @@ abstract class AppLocalizations {
   /// In tr, this message translates to:
   /// **'Satın alımlar geri yüklendi'**
   String get restored;
+
+  /// No description provided for @leaveGameTitle.
+  ///
+  /// In tr, this message translates to:
+  /// **'Haritaya dön?'**
+  String get leaveGameTitle;
+
+  /// No description provided for @leaveGameBody.
+  ///
+  /// In tr, this message translates to:
+  /// **'Yarım kalan oyun kaydedilir; ana ekrandan kaldığın yerden devam edebilirsin.'**
+  String get leaveGameBody;
 }
 
 class _AppLocalizationsDelegate

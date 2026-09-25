@@ -317,5 +317,7 @@
   "owned": "Aktif",
   "claimed": "Alındı",
   "purchased": "Satın alındı",
-  "restored": "Satın alımlar geri yüklendi"
+  "restored": "Satın alımlar geri yüklendi",
+  "leaveGameTitle": "Haritaya dön?",
+  "leaveGameBody": "Yarım kalan oyun kaydedilir; ana ekrandan kaldığın yerden devam edebilirsin."
 }

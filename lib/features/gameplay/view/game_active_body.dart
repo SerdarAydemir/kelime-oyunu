@@ -18,6 +18,7 @@ import 'package:kelime_oyunu/features/result/view/result_screen.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/action_bar.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/ad_label.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/board_frame.dart';
+import 'package:kelime_oyunu/features/gameplay/widgets/game_menu_sheet.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/grid_painter.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/level_top_bar.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/narration_controller.dart';
@@ -150,6 +151,7 @@ class _GameActiveBodyState extends State<GameActiveBody>
                   // Leaving is safe: the match is saved at every turn boundary
                   // and comes back as "Yarım kalan oyun" on the home screen.
                   onExit: () => context.go('/map'),
+                  onMore: () => showGameMenu(context),
                 ),
                 ScoreHeader(
                   // Lagging display scores: the counter walks up as the narration
