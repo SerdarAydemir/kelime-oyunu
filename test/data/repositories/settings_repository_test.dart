@@ -25,6 +25,9 @@ void main() {
       soundEnabled: false,
       hapticsEnabled: true,
       skyEnabled: false,
+      consentDone: true,
+      attAsked: true,
+      onboardingDone: true,
     );
 
     await repo.write(settings);

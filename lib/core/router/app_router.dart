@@ -1,13 +1,18 @@
 // lib/core/router/app_router.dart
+import 'package:flutter/foundation.dart' show defaultTargetPlatform;
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:kelime_oyunu/core/config/dev_flags.dart';
+import 'package:kelime_oyunu/core/router/first_run.dart';
 import 'package:kelime_oyunu/core/services/ad_service.dart';
 import 'package:kelime_oyunu/core/services/consent_service.dart';
 import 'package:kelime_oyunu/core/services/mock_ad_service.dart';
 
 import 'package:kelime_oyunu/data/repositories/progress_repository.dart';
 import 'package:kelime_oyunu/data/repositories/session_repository.dart';
+import 'package:kelime_oyunu/data/repositories/settings_repository.dart';
+import 'package:kelime_oyunu/features/consent/view/att_screen.dart';
+import 'package:kelime_oyunu/features/consent/view/consent_screen.dart';
 import 'package:kelime_oyunu/features/gameplay/view/game_screen.dart';
 import 'package:kelime_oyunu/features/home/view/home_screen.dart';
 import 'package:kelime_oyunu/features/gameplay/bloc/game_state.dart';
@@ -26,6 +31,7 @@ abstract final class AppRouter {
   static GoRouter build({
     required ProgressRepository progressRepo,
     required SessionRepository sessionRepo,
+    required SettingsRepository settingsRepo,
     ConsentService consentService = const MockConsentService(),
   }) => GoRouter(
     initialLocation: '/splash',
@@ -34,7 +40,10 @@ abstract final class AppRouter {
       // picks up where they left off (F7).
       GoRoute(
         path: '/splash',
-        builder: (context, state) => const SplashScreen(next: '/'),
+        // First run: consent (and the ATT pre-prompt on iOS) before home.
+        builder: (context, state) => SplashScreen(
+          next: firstRoute(settingsRepo.read(), isIOS: defaultTargetPlatform == TargetPlatform.iOS),
+        ),
       ),
       GoRoute(
         path: '/',
@@ -48,7 +57,11 @@ abstract final class AppRouter {
       GoRoute(path: '/levels', redirect: (context, state) => '/map'),
       GoRoute(
         path: '/consent',
-        builder: (context, state) => const _PlaceholderScreen(label: 'Consent'),
+        builder: (context, state) => ConsentScreen(consentService: consentService),
+      ),
+      GoRoute(
+        path: '/consent/att',
+        builder: (context, state) => AttScreen(consentService: consentService),
       ),
       GoRoute(
         path: '/menu',

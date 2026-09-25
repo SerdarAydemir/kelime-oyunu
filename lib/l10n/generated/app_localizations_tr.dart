@@ -508,4 +508,12 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get adPrefsDone => 'Reklam tercihleri güncellendi';
+
+  @override
+  String get attBullet1 =>
+      'İzin verirsen reklamlar ilgi alanlarına göre seçilir';
+
+  @override
+  String get attBullet2 =>
+      'Vermezsen oyun aynen devam eder, reklamlar genel olur';
 }

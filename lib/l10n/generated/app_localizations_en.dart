@@ -507,4 +507,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get adPrefsDone => 'Ad preferences updated';
+
+  @override
+  String get attBullet1 => 'If you allow it, ads match your interests';
+
+  @override
+  String get attBullet2 => 'If not, the game continues as is with generic ads';
 }

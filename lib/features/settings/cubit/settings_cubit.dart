@@ -27,6 +27,13 @@ class SettingsCubit extends Cubit<AppSettings> {
 
   void setSkyEnabled(bool enabled) => _update(state.copyWith(skyEnabled: enabled));
 
+  // First-run gates — one-way.
+  void markConsentDone() => _update(state.copyWith(consentDone: true));
+
+  void markAttAsked() => _update(state.copyWith(attAsked: true));
+
+  void markOnboardingDone() => _update(state.copyWith(onboardingDone: true));
+
   void _update(AppSettings next) {
     if (next == state) return;
     emit(next);

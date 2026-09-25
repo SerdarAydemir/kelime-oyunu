@@ -298,5 +298,7 @@
   "resetConfirmTitle": "Reset progress?",
   "resetConfirmBody": "Every level, your altitude, streak and camp coins will be deleted. This cannot be undone.",
   "cancel": "Cancel",
-  "adPrefsDone": "Ad preferences updated"
+  "adPrefsDone": "Ad preferences updated",
+  "attBullet1": "If you allow it, ads match your interests",
+  "attBullet2": "If not, the game continues as is with generic ads"
 }

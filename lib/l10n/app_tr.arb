@@ -298,5 +298,7 @@
   "resetConfirmTitle": "İlerlemeyi sıfırla?",
   "resetConfirmBody": "Tüm bölümler, irtifa, seri ve kamp parası silinir. Bu işlem geri alınamaz.",
   "cancel": "Vazgeç",
-  "adPrefsDone": "Reklam tercihleri güncellendi"
+  "adPrefsDone": "Reklam tercihleri güncellendi",
+  "attBullet1": "İzin verirsen reklamlar ilgi alanlarına göre seçilir",
+  "attBullet2": "Vermezsen oyun aynen devam eder, reklamlar genel olur"
 }

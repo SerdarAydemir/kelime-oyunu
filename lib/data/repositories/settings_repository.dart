@@ -26,6 +26,9 @@ class SharedPrefsSettingsRepository implements SettingsRepository {
   static const String soundKey = 'settings.sound';
   static const String hapticsKey = 'settings.haptics';
   static const String skyKey = 'settings.sky';
+  static const String consentKey = 'flags.consent_done';
+  static const String attKey = 'flags.att_asked';
+  static const String onboardingKey = 'flags.onboarding_done';
 
   @override
   AppSettings read() => AppSettings(
@@ -33,6 +36,9 @@ class SharedPrefsSettingsRepository implements SettingsRepository {
     soundEnabled: _prefs.getBool(soundKey) ?? AppSettings.defaults.soundEnabled,
     hapticsEnabled: _prefs.getBool(hapticsKey) ?? AppSettings.defaults.hapticsEnabled,
     skyEnabled: _prefs.getBool(skyKey) ?? AppSettings.defaults.skyEnabled,
+    consentDone: _prefs.getBool(consentKey) ?? false,
+    attAsked: _prefs.getBool(attKey) ?? false,
+    onboardingDone: _prefs.getBool(onboardingKey) ?? false,
   );
 
   @override
@@ -42,6 +48,9 @@ class SharedPrefsSettingsRepository implements SettingsRepository {
       _prefs.setBool(soundKey, settings.soundEnabled),
       _prefs.setBool(hapticsKey, settings.hapticsEnabled),
       _prefs.setBool(skyKey, settings.skyEnabled),
+      _prefs.setBool(consentKey, settings.consentDone),
+      _prefs.setBool(attKey, settings.attAsked),
+      _prefs.setBool(onboardingKey, settings.onboardingDone),
     ]);
   }
 

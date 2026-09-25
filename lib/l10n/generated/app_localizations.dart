@@ -1009,6 +1009,18 @@ abstract class AppLocalizations {
   /// In tr, this message translates to:
   /// **'Reklam tercihleri güncellendi'**
   String get adPrefsDone;
+
+  /// No description provided for @attBullet1.
+  ///
+  /// In tr, this message translates to:
+  /// **'İzin verirsen reklamlar ilgi alanlarına göre seçilir'**
+  String get attBullet1;
+
+  /// No description provided for @attBullet2.
+  ///
+  /// In tr, this message translates to:
+  /// **'Vermezsen oyun aynen devam eder, reklamlar genel olur'**
+  String get attBullet2;
 }
 
 class _AppLocalizationsDelegate

@@ -42,6 +42,7 @@ class _KelimeOyunuAppState extends State<KelimeOyunuApp> {
   late final GoRouter _router = AppRouter.build(
     progressRepo: widget.progressRepo,
     sessionRepo: widget.sessionRepo,
+    settingsRepo: widget.settingsRepo,
   );
 
   @override

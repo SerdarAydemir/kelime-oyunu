@@ -15,6 +15,9 @@ class AppSettings extends Equatable {
     this.soundEnabled = true,
     this.hapticsEnabled = true,
     this.skyEnabled = true,
+    this.consentDone = false,
+    this.attAsked = false,
+    this.onboardingDone = false,
   });
 
   /// "Görünüm": Açık / Koyu / Sistem — default Sistem.
@@ -29,6 +32,17 @@ class AppSettings extends Equatable {
   /// "Gökyüzü": home / map gradient shifts with progress.
   final bool skyEnabled;
 
+  /// First-run gates (README flow: splash → consent → onboarding → home).
+  /// The consent card was answered once.
+  final bool consentDone;
+
+  /// The iOS ATT pre-prompt was shown once (never re-shown; the system
+  /// dialog itself is one-shot anyway).
+  final bool attAsked;
+
+  /// The three-card tutorial was finished or skipped once.
+  final bool onboardingDone;
+
   static const AppSettings defaults = AppSettings();
 
   AppSettings copyWith({
@@ -36,13 +50,27 @@ class AppSettings extends Equatable {
     bool? soundEnabled,
     bool? hapticsEnabled,
     bool? skyEnabled,
+    bool? consentDone,
+    bool? attAsked,
+    bool? onboardingDone,
   }) => AppSettings(
     themeMode: themeMode ?? this.themeMode,
     soundEnabled: soundEnabled ?? this.soundEnabled,
     hapticsEnabled: hapticsEnabled ?? this.hapticsEnabled,
     skyEnabled: skyEnabled ?? this.skyEnabled,
+    consentDone: consentDone ?? this.consentDone,
+    attAsked: attAsked ?? this.attAsked,
+    onboardingDone: onboardingDone ?? this.onboardingDone,
   );
 
   @override
-  List<Object?> get props => [themeMode, soundEnabled, hapticsEnabled, skyEnabled];
+  List<Object?> get props => [
+    themeMode,
+    soundEnabled,
+    hapticsEnabled,
+    skyEnabled,
+    consentDone,
+    attAsked,
+    onboardingDone,
+  ];
 }
