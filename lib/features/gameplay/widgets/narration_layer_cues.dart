@@ -111,11 +111,14 @@ extension _ScoreCues on _NarrationLayerState {
         final targetOrigin = target - Offset(cell / 2, cell / 2);
         origin = Offset.lerp(cellOrigin, targetOrigin, eased)!;
       }
+      // The badge box is three cells wide, centred on the cell: a "+12"
+      // headline pill is wider than one cell and would otherwise wrap to
+      // "+" / "12" inside a cell-tight box.
       widgets.add(
         Positioned(
-          left: origin.dx,
+          left: origin.dx - cell,
           top: origin.dy,
-          width: cell,
+          width: cell * 3,
           height: cell,
           child: NarrationBadge(
             text: _label(cue),
