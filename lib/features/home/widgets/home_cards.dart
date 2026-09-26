@@ -1,5 +1,7 @@
 // lib/features/home/widgets/home_cards.dart
 
+import 'dart:ui' show ImageFilter;
+
 import 'package:flutter/material.dart';
 import 'package:kelime_oyunu/core/constants/app_dimensions.dart';
 import 'package:kelime_oyunu/core/constants/app_typography.dart';
@@ -19,15 +21,12 @@ class NowPill extends StatelessWidget {
     final tokens = context.tokens;
     final l10n = AppLocalizations.of(context);
     final small = AppTypography.pill.copyWith(color: tokens.text);
-    return Container(
+    return GlassSurface(
+      blur: 6,
+      radius: AppDimensions.radiusPill,
       padding: const EdgeInsets.symmetric(
         horizontal: AppDimensions.space16,
         vertical: AppDimensions.space8,
-      ),
-      decoration: BoxDecoration(
-        color: tokens.card,
-        borderRadius: BorderRadius.circular(AppDimensions.radiusPill),
-        border: Border.all(color: tokens.border),
       ),
       child: Row(
         mainAxisSize: MainAxisSize.min,
@@ -80,16 +79,13 @@ class SaveCard extends StatelessWidget {
     final tokens = context.tokens;
     final l10n = AppLocalizations.of(context);
     final resume = this.resume;
-    return Container(
+    return GlassSurface(
+      blur: 8,
+      radius: AppDimensions.radiusListCard,
       width: double.infinity,
       padding: const EdgeInsets.symmetric(
         horizontal: AppDimensions.space16,
         vertical: AppDimensions.space18,
-      ),
-      decoration: BoxDecoration(
-        color: tokens.card,
-        borderRadius: BorderRadius.circular(AppDimensions.radiusListCard),
-        border: Border.all(color: tokens.border),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -111,6 +107,46 @@ class SaveCard extends StatelessWidget {
                 : AppTypography.bodySmall.copyWith(color: tokens.text.withValues(alpha: 0.6)),
           ),
         ],
+      ),
+    );
+  }
+}
+
+/// Translucent `card` surface with a backdrop blur and a 1 px `border`
+/// (README "Home": pill blur 6, save card blur 8).
+class GlassSurface extends StatelessWidget {
+  const GlassSurface({
+    required this.blur,
+    required this.radius,
+    required this.padding,
+    required this.child,
+    this.width,
+    super.key,
+  });
+
+  final double blur;
+  final double radius;
+  final EdgeInsets padding;
+  final Widget child;
+  final double? width;
+
+  @override
+  Widget build(BuildContext context) {
+    final tokens = context.tokens;
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(radius),
+      child: BackdropFilter(
+        filter: ImageFilter.blur(sigmaX: blur, sigmaY: blur),
+        child: Container(
+          width: width,
+          padding: padding,
+          decoration: BoxDecoration(
+            color: tokens.card,
+            borderRadius: BorderRadius.circular(radius),
+            border: Border.all(color: tokens.border),
+          ),
+          child: child,
+        ),
       ),
     );
   }
