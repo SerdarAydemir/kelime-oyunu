@@ -48,6 +48,7 @@ class _Harness {
         ),
         GoRoute(path: '/shop', builder: (_, s) => capture(s)),
         GoRoute(path: '/legal/:page', builder: (_, s) => capture(s)),
+        GoRoute(path: '/onboarding', builder: (_, s) => capture(s)),
         GoRoute(path: '/', builder: (_, s) => capture(s)),
       ],
     );
@@ -137,8 +138,9 @@ void main() {
     expect(h.settingsRepo.read(), const AppSettings(skyEnabled: false));
   });
 
-  testWidgets('reset asks first, then wipes progress and the saved match', (tester) async {
+  testWidgets('reset asks first, then wipes progress and restarts the tutorial', (tester) async {
     final h = _Harness(highestCompletedLevel: 7);
+    h.cubit.markOnboardingDone();
     await tester.pumpWidget(h.build());
     await tester.pumpAndSettle();
 
@@ -157,6 +159,8 @@ void main() {
     await tester.tap(find.text('Sil').last);
     await tester.pumpAndSettle();
     expect(h.progressRepo.highestCompletedLevel, 0);
+    expect(h.cubit.state.onboardingDone, isFalse);
+    expect(h.destination, '/onboarding?first=1');
   });
 
   testWidgets('shop and legal rows navigate; ad preferences confirm', (tester) async {

@@ -169,9 +169,14 @@ class _AccountGroup extends StatelessWidget {
         ],
       ),
     );
-    if (confirmed != true) return;
+    if (confirmed != true || !context.mounted) return;
+    final settings = context.read<SettingsCubit>();
+    final router = GoRouter.of(context);
     await progressRepo.reset();
     await sessionRepo.clear();
+    // A fresh player starts over with the tutorial, then lands on home.
+    settings.resetOnboarding();
+    router.go('/onboarding?first=1');
   }
 
   @override

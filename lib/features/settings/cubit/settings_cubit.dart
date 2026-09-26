@@ -34,6 +34,9 @@ class SettingsCubit extends Cubit<AppSettings> {
 
   void markOnboardingDone() => _update(state.copyWith(onboardingDone: true));
 
+  /// "İlerlemeyi sıfırla": a fresh player sees the tutorial again.
+  void resetOnboarding() => _update(state.copyWith(onboardingDone: false));
+
   void _update(AppSettings next) {
     if (next == state) return;
     emit(next);
