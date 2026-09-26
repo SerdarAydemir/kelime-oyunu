@@ -145,7 +145,11 @@ class _SelectableTile extends StatelessWidget {
           boxShadow: [BoxShadow(color: tokens.tileShadow, offset: const Offset(0, 4))],
         ),
         alignment: Alignment.center,
-        child: Text(letter, style: AppTypography.tileLetter.copyWith(color: tokens.tileInk)),
+        child: Text(
+          letter,
+          textScaler: TextScaler.noScaling,
+          style: AppTypography.tileLetter.copyWith(color: tokens.tileInk),
+        ),
       ),
     );
   }
@@ -175,26 +179,34 @@ class _OptionButton extends StatelessWidget {
     final label = Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Row(
-          mainAxisSize: MainAxisSize.min,
+        // Wrap + centred text: at large system fonts the title and the ad
+        // label fold instead of overflowing the button.
+        Wrap(
+          alignment: WrapAlignment.center,
+          crossAxisAlignment: WrapCrossAlignment.center,
+          spacing: AppDimensions.space6,
           children: [
             Text(
               title,
+              textAlign: TextAlign.center,
               style: (primary ? AppTypography.buttonPrimary : AppTypography.buttonSecondary)
                   .copyWith(color: ink),
             ),
-            if (showAdLabel) ...[const SizedBox(width: AppDimensions.space6), AdLabel(color: ink)],
+            if (showAdLabel) AdLabel(color: ink),
           ],
         ),
         Text(
           subtitle,
+          textAlign: TextAlign.center,
           style: AppTypography.label.copyWith(color: ink.withValues(alpha: 0.75), height: 1.2),
         ),
       ],
     );
+    // Minimum heights (56 / 52): the two-line label may grow them at large
+    // system fonts instead of overflowing.
     if (primary) {
-      return SizedBox(
-        height: AppDimensions.buttonPrimary,
+      return ConstrainedBox(
+        constraints: const BoxConstraints(minHeight: AppDimensions.buttonPrimary),
         child: FilledButton(
           onPressed: onPressed,
           style: FilledButton.styleFrom(
@@ -208,8 +220,8 @@ class _OptionButton extends StatelessWidget {
         ),
       );
     }
-    return SizedBox(
-      height: AppDimensions.buttonGame,
+    return ConstrainedBox(
+      constraints: const BoxConstraints(minHeight: AppDimensions.buttonGame),
       child: OutlinedButton(
         onPressed: onPressed,
         style: OutlinedButton.styleFrom(

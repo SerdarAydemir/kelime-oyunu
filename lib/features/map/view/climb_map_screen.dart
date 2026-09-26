@@ -221,7 +221,7 @@ class _FogHeader extends StatelessWidget {
     final l10n = AppLocalizations.of(context);
     return IgnorePointer(
       child: Container(
-        height: 200,
+        constraints: const BoxConstraints(minHeight: 200),
         decoration: BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topCenter,

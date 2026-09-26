@@ -78,42 +78,51 @@ class ResultScreen extends StatelessWidget {
             if (!won)
               const Positioned(left: 0, right: 0, bottom: 300, child: Center(child: Campfire())),
             SafeArea(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: AppDimensions.space24),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const SizedBox(height: AppDimensions.space40),
-                    ResultTag(level: levelId, outcome: outcome),
-                    const SizedBox(height: AppDimensions.space12),
-                    ResultHeadline(text: headline),
-                    if (sub != null) ...[
-                      const SizedBox(height: AppDimensions.space12),
-                      Text(
-                        sub,
-                        style: AppTypography.body.copyWith(
-                          color: tokens.text.withValues(alpha: 0.8),
-                        ),
+              // Scrolls only at large system fonts; the Spacer otherwise pins
+              // the score card and buttons to the bottom.
+              child: CustomScrollView(
+                slivers: [
+                  SliverFillRemaining(
+                    hasScrollBody: false,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: AppDimensions.space24),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const SizedBox(height: AppDimensions.space40),
+                          ResultTag(level: levelId, outcome: outcome),
+                          const SizedBox(height: AppDimensions.space12),
+                          ResultHeadline(text: headline),
+                          if (sub != null) ...[
+                            const SizedBox(height: AppDimensions.space12),
+                            Text(
+                              sub,
+                              style: AppTypography.body.copyWith(
+                                color: tokens.text.withValues(alpha: 0.8),
+                              ),
+                            ),
+                          ],
+                          if (won) ...[
+                            const SizedBox(height: AppDimensions.space16),
+                            AltitudePill(gain: kMetersPerLevel, total: levelId * kMetersPerLevel),
+                          ],
+                          const Spacer(),
+                          ScoreCard(playerScore: playerScore, botScore: botScore, botName: botName),
+                          if (_finishedAll) ...[
+                            const SizedBox(height: AppDimensions.space12),
+                            Text(
+                              l10n.allLevelsDone,
+                              style: AppTypography.body.copyWith(color: tokens.text),
+                            ),
+                          ],
+                          const SizedBox(height: AppDimensions.space16),
+                          _Actions(screen: this),
+                          const SizedBox(height: AppDimensions.space16),
+                        ],
                       ),
-                    ],
-                    if (won) ...[
-                      const SizedBox(height: AppDimensions.space16),
-                      AltitudePill(gain: kMetersPerLevel, total: levelId * kMetersPerLevel),
-                    ],
-                    const Spacer(),
-                    ScoreCard(playerScore: playerScore, botScore: botScore, botName: botName),
-                    if (_finishedAll) ...[
-                      const SizedBox(height: AppDimensions.space12),
-                      Text(
-                        l10n.allLevelsDone,
-                        style: AppTypography.body.copyWith(color: tokens.text),
-                      ),
-                    ],
-                    const SizedBox(height: AppDimensions.space16),
-                    _Actions(screen: this),
-                    const SizedBox(height: AppDimensions.space16),
-                  ],
-                ),
+                    ),
+                  ),
+                ],
               ),
             ),
           ],

@@ -141,7 +141,11 @@ class DragFeedbackTile extends StatelessWidget {
             ],
           ),
           alignment: Alignment.center,
-          child: Text(letter, style: AppTypography.tileLetter.copyWith(color: tokens.tileInk)),
+          child: Text(
+            letter,
+            textScaler: TextScaler.noScaling,
+            style: AppTypography.tileLetter.copyWith(color: tokens.tileInk),
+          ),
         ),
       ),
     );
@@ -181,6 +185,7 @@ class _PlusSlotWidget extends StatelessWidget {
                   const SizedBox(height: 2),
                   Text(
                     l10n.addLetter,
+                    textScaler: TextScaler.noScaling,
                     style: AppTypography.buttonPrimary.copyWith(
                       fontSize: 7.5,
                       height: 1,
@@ -245,7 +250,11 @@ class _RackTileWidget extends StatelessWidget {
           ],
         ),
         alignment: Alignment.center,
-        child: Text(tile.letter, style: AppTypography.tileLetter.copyWith(color: tokens.tileInk)),
+        child: Text(
+          tile.letter,
+          textScaler: TextScaler.noScaling,
+          style: AppTypography.tileLetter.copyWith(color: tokens.tileInk),
+        ),
       );
     }
     final l10n = AppLocalizations.of(context);

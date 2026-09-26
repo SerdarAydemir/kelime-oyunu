@@ -187,6 +187,7 @@ class _RevealButton extends StatelessWidget {
                 Icon(active ? Icons.lightbulb : Icons.lightbulb_outline, color: ink, size: 17),
                 Text(
                   l10n.hint,
+                  textScaler: TextScaler.noScaling,
                   style: AppTypography.buttonPrimary.copyWith(fontSize: 7, height: 1.2, color: ink),
                 ),
                 if (showAdLabel) AdLabel(color: ink),

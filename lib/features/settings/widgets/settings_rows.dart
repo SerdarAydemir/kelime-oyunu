@@ -90,7 +90,16 @@ class SettingsRow extends StatelessWidget {
                 ],
               ),
             ),
-            ?trailing,
+            // A wide control (the appearance pill) scales down at large
+            // system fonts rather than pushing past the row.
+            if (trailing != null)
+              Flexible(
+                child: FittedBox(
+                  fit: BoxFit.scaleDown,
+                  alignment: Alignment.centerRight,
+                  child: trailing,
+                ),
+              ),
             if (trailing == null && onTap != null)
               Icon(Icons.chevron_right, color: tokens.text.withValues(alpha: 0.66)),
           ],

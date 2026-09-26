@@ -56,53 +56,66 @@ class _HomeBody extends StatelessWidget {
             ),
             const Positioned.fill(child: MountainBackdrop()),
             SafeArea(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: AppDimensions.space24),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const SizedBox(height: AppDimensions.space24),
-                    Text(
-                      l10n.homeTag,
-                      style: AppTypography.label.copyWith(
-                        letterSpacing: 3,
-                        color: tokens.text.withValues(alpha: 0.8),
+              // Scrolls only when large system fonts push the content past the
+              // screen; otherwise the Spacer keeps the cards at the bottom.
+              child: CustomScrollView(
+                slivers: [
+                  SliverFillRemaining(
+                    hasScrollBody: false,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: AppDimensions.space24),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const SizedBox(height: AppDimensions.space24),
+                          Text(
+                            l10n.homeTag,
+                            style: AppTypography.label.copyWith(
+                              letterSpacing: 3,
+                              color: tokens.text.withValues(alpha: 0.8),
+                            ),
+                          ),
+                          const SizedBox(height: AppDimensions.space12),
+                          // The brand mark scales a little, never 1.6× (it is a logo).
+                          MediaQuery.withClampedTextScaling(
+                            maxScaleFactor: 1.2,
+                            child: Text(
+                              l10n.appNameStacked,
+                              style: AppTypography.display.copyWith(color: tokens.text),
+                            ),
+                          ),
+                          const SizedBox(height: AppDimensions.space20),
+                          NowPill(level: state.nextLevel, meters: state.altitudeMeters),
+                          const SizedBox(height: AppDimensions.space12),
+                          StatsRow(streakDays: state.dailyStreak, wordsFound: state.wordsFound),
+                          const Spacer(),
+                          SaveCard(resume: state.resume),
+                          const SizedBox(height: AppDimensions.space16),
+                          _PrimaryCta(state: state),
+                          const SizedBox(height: AppDimensions.space10),
+                          Row(
+                            children: [
+                              Expanded(
+                                child: SecondaryButton(
+                                  label: l10n.map,
+                                  onPressed: () => context.go('/map'),
+                                ),
+                              ),
+                              const SizedBox(width: AppDimensions.space10),
+                              Expanded(
+                                child: SecondaryButton(
+                                  label: l10n.settings,
+                                  onPressed: () => context.push('/settings'),
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: AppDimensions.space16),
+                        ],
                       ),
                     ),
-                    const SizedBox(height: AppDimensions.space12),
-                    Text(
-                      l10n.appNameStacked,
-                      style: AppTypography.display.copyWith(color: tokens.text),
-                    ),
-                    const SizedBox(height: AppDimensions.space20),
-                    NowPill(level: state.nextLevel, meters: state.altitudeMeters),
-                    const SizedBox(height: AppDimensions.space12),
-                    StatsRow(streakDays: state.dailyStreak, wordsFound: state.wordsFound),
-                    const Spacer(),
-                    SaveCard(resume: state.resume),
-                    const SizedBox(height: AppDimensions.space16),
-                    _PrimaryCta(state: state),
-                    const SizedBox(height: AppDimensions.space10),
-                    Row(
-                      children: [
-                        Expanded(
-                          child: SecondaryButton(
-                            label: l10n.map,
-                            onPressed: () => context.go('/map'),
-                          ),
-                        ),
-                        const SizedBox(width: AppDimensions.space10),
-                        Expanded(
-                          child: SecondaryButton(
-                            label: l10n.settings,
-                            onPressed: () => context.push('/settings'),
-                          ),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: AppDimensions.space16),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
           ],

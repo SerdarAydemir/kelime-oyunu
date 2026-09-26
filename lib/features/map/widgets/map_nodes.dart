@@ -91,6 +91,7 @@ class _DoneCard extends StatelessWidget {
             tokens.cellLetter,
             Text(
               '$level',
+              textScaler: TextScaler.noScaling,
               style: AppTypography.screenTitle.copyWith(fontSize: 11, color: tokens.ink),
             ),
           ),
@@ -154,10 +155,12 @@ class _CurrentNodeState extends State<_CurrentNode> with SingleTickerProviderSta
         children: [
           Text(
             '${widget.level}',
+            textScaler: TextScaler.noScaling,
             style: AppTypography.screenTitle.copyWith(fontSize: 24, color: tokens.accentInk),
           ),
           Text(
             l10n.here,
+            textScaler: TextScaler.noScaling,
             style: AppTypography.buttonPrimary.copyWith(
               fontSize: 8,
               height: 1,
@@ -187,7 +190,11 @@ class _UpcomingNode extends StatelessWidget {
         child: Center(
           child: level == null
               ? Icon(Icons.lock, size: AppDimensions.iconS, color: tokens.faint)
-              : Text('$level', style: AppTypography.nodeNumber.copyWith(color: tokens.text)),
+              : Text(
+                  '$level',
+                  textScaler: TextScaler.noScaling,
+                  style: AppTypography.nodeNumber.copyWith(color: tokens.text),
+                ),
         ),
       ),
     );
@@ -215,7 +222,11 @@ class _FarNode extends StatelessWidget {
       height: 32,
       decoration: BoxDecoration(shape: BoxShape.circle, color: tokens.surface),
       alignment: Alignment.center,
-      child: Text('$level', style: AppTypography.label.copyWith(color: tokens.text)),
+      child: Text(
+        '$level',
+        textScaler: TextScaler.noScaling,
+        style: AppTypography.label.copyWith(color: tokens.text),
+      ),
     );
   }
 }

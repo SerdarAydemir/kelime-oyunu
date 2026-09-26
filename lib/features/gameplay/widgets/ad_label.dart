@@ -28,6 +28,7 @@ class AdLabel extends StatelessWidget {
           const SizedBox(width: 1),
           Text(
             AppLocalizations.of(context).ad,
+            textScaler: TextScaler.noScaling,
             style: AppTypography.label.copyWith(fontSize: 7, height: 1, color: ink),
           ),
         ],

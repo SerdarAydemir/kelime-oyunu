@@ -45,22 +45,29 @@ class SheetShell extends StatelessWidget {
               ),
             ),
             const SizedBox(height: AppDimensions.space16),
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.end,
+            // Wrap: the trailing counter folds under the title at large fonts.
+            Wrap(
+              alignment: WrapAlignment.spaceBetween,
+              crossAxisAlignment: WrapCrossAlignment.end,
+              spacing: AppDimensions.space12,
               children: [
-                Expanded(
-                  child: Text(
-                    title,
-                    style: AppTypography.screenTitle.copyWith(
-                      fontSize: 24,
-                      color: tokens.sheetText,
-                    ),
-                  ),
+                Text(
+                  title,
+                  style: AppTypography.screenTitle.copyWith(fontSize: 24, color: tokens.sheetText),
                 ),
                 ?trailing,
               ],
             ),
-            ...children,
+            // The body scrolls when it outgrows the sheet (large fonts).
+            Flexible(
+              child: SingleChildScrollView(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: children,
+                ),
+              ),
+            ),
           ],
         ),
       ),

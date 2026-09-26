@@ -28,16 +28,17 @@ class NowPill extends StatelessWidget {
         horizontal: AppDimensions.space16,
         vertical: AppDimensions.space8,
       ),
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
+      // Wrap, not Row: at large system fonts the three parts fold onto a
+      // second line instead of overflowing the pill.
+      child: Wrap(
+        crossAxisAlignment: WrapCrossAlignment.center,
+        spacing: AppDimensions.space8,
         children: [
           Text(l10n.now, style: small),
-          const SizedBox(width: AppDimensions.space8),
           Text(
             '${l10n.level} $level',
             style: AppTypography.screenTitle.copyWith(fontSize: 20, color: tokens.text),
           ),
-          const SizedBox(width: AppDimensions.space8),
           Text('· ${l10n.meters(meters)}', style: small),
         ],
       ),

@@ -119,6 +119,7 @@ class FlyingTile extends StatelessWidget {
             alignment: Alignment.center,
             child: Text(
               letter,
+              textScaler: TextScaler.noScaling,
               style: AppTypography.tileLetter.copyWith(
                 fontSize: size * 0.5,
                 color: ink ?? tokens.tileInk,
@@ -159,6 +160,7 @@ class GhostLetterTile extends StatelessWidget {
         alignment: Alignment.center,
         child: Text(
           letter,
+          textScaler: TextScaler.noScaling,
           style: AppTypography.tileLetter.copyWith(fontSize: size * 0.42, color: tokens.tileInk),
         ),
       ),
@@ -229,6 +231,7 @@ class NarrationBadge extends StatelessWidget {
               ),
               child: Text(
                 text,
+                textScaler: TextScaler.noScaling,
                 style: AppTypography.buttonSecondary.copyWith(
                   color: ink ?? tokens.solidText,
                   fontSize: big ? 22 : 15,

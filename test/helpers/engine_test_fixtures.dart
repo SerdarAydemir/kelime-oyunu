@@ -54,9 +54,7 @@ List<CellSpec> letterCellsFor(List<WordSpec> words) {
     for (var i = 0; i < word.cells.length; i++) {
       final cell = word.cells[i];
       final existing = byPos[cell];
-      final ids = existing == null
-          ? <String>[word.id]
-          : <String>[...existing.wordIds, word.id];
+      final ids = existing == null ? <String>[word.id] : <String>[...existing.wordIds, word.id];
       byPos[cell] = CellSpec(
         row: cell.row,
         col: cell.col,
