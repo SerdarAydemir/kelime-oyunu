@@ -43,6 +43,16 @@ void main() {
     );
   });
 
+  testWidgets('tiles and the joker slot are labelled for TalkBack', (tester) async {
+    final handle = tester.ensureSemantics();
+    await tester.pumpWidget(_rackHarness(selected: 2, plus: true));
+    expect(find.bySemanticsLabel('Harf K'), findsOneWidget);
+    expect(find.bySemanticsLabel('Yerleştirildi; geri almak için basılı tut'), findsOneWidget);
+    expect(find.bySemanticsLabel('Harf L, seçili'), findsOneWidget);
+    expect(find.bySemanticsLabel('HARF EKLE'), findsOneWidget);
+    handle.dispose();
+  });
+
   testWidgets('the selected tile is lifted 8 dp', (tester) async {
     await tester.pumpWidget(_rackHarness(selected: 2));
     await tester.pumpAndSettle();

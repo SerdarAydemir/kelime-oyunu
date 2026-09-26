@@ -323,5 +323,73 @@
   "onbDemoClue": "İP",
   "onbDemoPending": "İ",
   "onbDemoTile": "L",
-  "onbDemoBot": "İK"
+  "onbDemoBot": "İK",
+  "a11yClueCell": "İpucu: {clue} · {direction}",
+  "@a11yClueCell": {
+    "placeholders": {
+      "clue": {
+        "type": "String"
+      },
+      "direction": {
+        "type": "String"
+      }
+    }
+  },
+  "a11yLetterCell": "Harf {letter}, satır {row} sütun {col}",
+  "@a11yLetterCell": {
+    "placeholders": {
+      "letter": {
+        "type": "String"
+      },
+      "row": {
+        "type": "int"
+      },
+      "col": {
+        "type": "int"
+      }
+    }
+  },
+  "a11yPendingCell": "Bekleyen harf {letter}, satır {row} sütun {col}; geri almak için dokun",
+  "@a11yPendingCell": {
+    "placeholders": {
+      "letter": {
+        "type": "String"
+      },
+      "row": {
+        "type": "int"
+      },
+      "col": {
+        "type": "int"
+      }
+    }
+  },
+  "a11yEmptyCell": "Boş hücre, satır {row} sütun {col}",
+  "@a11yEmptyCell": {
+    "placeholders": {
+      "row": {
+        "type": "int"
+      },
+      "col": {
+        "type": "int"
+      }
+    }
+  },
+  "a11yTile": "Harf {letter}",
+  "@a11yTile": {
+    "placeholders": {
+      "letter": {
+        "type": "String"
+      }
+    }
+  },
+  "a11yTileSelected": "Harf {letter}, seçili",
+  "@a11yTileSelected": {
+    "placeholders": {
+      "letter": {
+        "type": "String"
+      }
+    }
+  },
+  "a11yTilePlaced": "Yerleştirildi; geri almak için basılı tut",
+  "a11yCorner": "Kelime Zirvesi logosu"
 }

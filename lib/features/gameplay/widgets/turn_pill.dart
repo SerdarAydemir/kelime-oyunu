@@ -83,29 +83,36 @@ class TurnPill extends StatelessWidget {
       TurnTint.bot => (tokens.bot.withValues(alpha: 0.18), tokens.text),
       TurnTint.wrong => (tokens.error.withValues(alpha: 0.18), tokens.text),
     };
-    return AnimatedContainer(
-      duration: const Duration(milliseconds: 200),
-      padding: const EdgeInsets.symmetric(
-        horizontal: AppDimensions.space12,
-        vertical: AppDimensions.space6,
-      ),
-      decoration: BoxDecoration(
-        color: fill,
-        borderRadius: BorderRadius.circular(AppDimensions.radiusPill),
-      ),
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Text(
-            spec.text,
-            style: AppTypography.overline.copyWith(
-              letterSpacing: 0,
-              fontWeight: FontWeight.w700,
-              color: ink,
+    // liveRegion: TalkBack announces each turn-state change.
+    return Semantics(
+      liveRegion: true,
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 200),
+        padding: const EdgeInsets.symmetric(
+          horizontal: AppDimensions.space12,
+          vertical: AppDimensions.space6,
+        ),
+        decoration: BoxDecoration(
+          color: fill,
+          borderRadius: BorderRadius.circular(AppDimensions.radiusPill),
+        ),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              spec.text,
+              style: AppTypography.overline.copyWith(
+                letterSpacing: 0,
+                fontWeight: FontWeight.w700,
+                color: ink,
+              ),
             ),
-          ),
-          if (spec.dots) ...[const SizedBox(width: AppDimensions.space6), _BobbingDots(color: ink)],
-        ],
+            if (spec.dots) ...[
+              const SizedBox(width: AppDimensions.space6),
+              _BobbingDots(color: ink),
+            ],
+          ],
+        ),
       ),
     );
   }

@@ -1117,6 +1117,54 @@ abstract class AppLocalizations {
   /// In tr, this message translates to:
   /// **'İK'**
   String get onbDemoBot;
+
+  /// No description provided for @a11yClueCell.
+  ///
+  /// In tr, this message translates to:
+  /// **'İpucu: {clue} · {direction}'**
+  String a11yClueCell(String clue, String direction);
+
+  /// No description provided for @a11yLetterCell.
+  ///
+  /// In tr, this message translates to:
+  /// **'Harf {letter}, satır {row} sütun {col}'**
+  String a11yLetterCell(String letter, int row, int col);
+
+  /// No description provided for @a11yPendingCell.
+  ///
+  /// In tr, this message translates to:
+  /// **'Bekleyen harf {letter}, satır {row} sütun {col}; geri almak için dokun'**
+  String a11yPendingCell(String letter, int row, int col);
+
+  /// No description provided for @a11yEmptyCell.
+  ///
+  /// In tr, this message translates to:
+  /// **'Boş hücre, satır {row} sütun {col}'**
+  String a11yEmptyCell(int row, int col);
+
+  /// No description provided for @a11yTile.
+  ///
+  /// In tr, this message translates to:
+  /// **'Harf {letter}'**
+  String a11yTile(String letter);
+
+  /// No description provided for @a11yTileSelected.
+  ///
+  /// In tr, this message translates to:
+  /// **'Harf {letter}, seçili'**
+  String a11yTileSelected(String letter);
+
+  /// No description provided for @a11yTilePlaced.
+  ///
+  /// In tr, this message translates to:
+  /// **'Yerleştirildi; geri almak için basılı tut'**
+  String get a11yTilePlaced;
+
+  /// No description provided for @a11yCorner.
+  ///
+  /// In tr, this message translates to:
+  /// **'Kelime Zirvesi logosu'**
+  String get a11yCorner;
 }
 
 class _AppLocalizationsDelegate

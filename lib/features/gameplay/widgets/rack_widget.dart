@@ -160,30 +160,36 @@ class _PlusSlotWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final tokens = context.tokens;
     final l10n = AppLocalizations.of(context);
-    return GestureDetector(
-      onTap: onTap,
-      child: Opacity(
-        opacity: onTap == null ? 0.4 : 1.0,
-        child: CustomPaint(
-          painter: DashedBorderPainter(color: tokens.accent, radius: AppDimensions.radiusTile),
-          child: SizedBox(
-            width: AppDimensions.tileWidth,
-            height: AppDimensions.tileHeight,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(Icons.add, size: AppDimensions.iconS, color: tokens.accent),
-                const SizedBox(height: 2),
-                Text(
-                  l10n.addLetter,
-                  style: AppTypography.buttonPrimary.copyWith(
-                    fontSize: 7.5,
-                    height: 1,
-                    color: tokens.accent,
+    return Semantics(
+      button: true,
+      enabled: onTap != null,
+      excludeSemantics: true,
+      label: l10n.addLetter,
+      child: GestureDetector(
+        onTap: onTap,
+        child: Opacity(
+          opacity: onTap == null ? 0.4 : 1.0,
+          child: CustomPaint(
+            painter: DashedBorderPainter(color: tokens.accent, radius: AppDimensions.radiusTile),
+            child: SizedBox(
+              width: AppDimensions.tileWidth,
+              height: AppDimensions.tileHeight,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.add, size: AppDimensions.iconS, color: tokens.accent),
+                  const SizedBox(height: 2),
+                  Text(
+                    l10n.addLetter,
+                    style: AppTypography.buttonPrimary.copyWith(
+                      fontSize: 7.5,
+                      height: 1,
+                      color: tokens.accent,
+                    ),
                   ),
-                ),
-                if (showAdLabel) ...[const SizedBox(height: 2), AdLabel(color: tokens.accent)],
-              ],
+                  if (showAdLabel) ...[const SizedBox(height: 2), AdLabel(color: tokens.accent)],
+                ],
+              ),
             ),
           ),
         ),
@@ -242,6 +248,19 @@ class _RackTileWidget extends StatelessWidget {
         child: Text(tile.letter, style: AppTypography.tileLetter.copyWith(color: tokens.tileInk)),
       );
     }
-    return GestureDetector(onTap: onTap, onLongPress: onLongPress, child: body);
+    final l10n = AppLocalizations.of(context);
+    // excludeSemantics: the label already says the letter; the glyph inside
+    // must not be read out a second time.
+    return Semantics(
+      button: !tile.isPlaced,
+      selected: selected,
+      excludeSemantics: true,
+      label: tile.isPlaced
+          ? l10n.a11yTilePlaced
+          : selected
+          ? l10n.a11yTileSelected(tile.letter)
+          : l10n.a11yTile(tile.letter),
+      child: GestureDetector(onTap: onTap, onLongPress: onLongPress, child: body),
+    );
   }
 }

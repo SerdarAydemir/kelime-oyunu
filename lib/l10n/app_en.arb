@@ -323,5 +323,73 @@
   "onbDemoClue": "IP",
   "onbDemoPending": "I",
   "onbDemoTile": "L",
-  "onbDemoBot": "IK"
+  "onbDemoBot": "IK",
+  "a11yClueCell": "Clue: {clue} · {direction}",
+  "@a11yClueCell": {
+    "placeholders": {
+      "clue": {
+        "type": "String"
+      },
+      "direction": {
+        "type": "String"
+      }
+    }
+  },
+  "a11yLetterCell": "Letter {letter}, row {row} column {col}",
+  "@a11yLetterCell": {
+    "placeholders": {
+      "letter": {
+        "type": "String"
+      },
+      "row": {
+        "type": "int"
+      },
+      "col": {
+        "type": "int"
+      }
+    }
+  },
+  "a11yPendingCell": "Pending letter {letter}, row {row} column {col}; tap to take back",
+  "@a11yPendingCell": {
+    "placeholders": {
+      "letter": {
+        "type": "String"
+      },
+      "row": {
+        "type": "int"
+      },
+      "col": {
+        "type": "int"
+      }
+    }
+  },
+  "a11yEmptyCell": "Empty cell, row {row} column {col}",
+  "@a11yEmptyCell": {
+    "placeholders": {
+      "row": {
+        "type": "int"
+      },
+      "col": {
+        "type": "int"
+      }
+    }
+  },
+  "a11yTile": "Letter {letter}",
+  "@a11yTile": {
+    "placeholders": {
+      "letter": {
+        "type": "String"
+      }
+    }
+  },
+  "a11yTileSelected": "Letter {letter}, selected",
+  "@a11yTileSelected": {
+    "placeholders": {
+      "letter": {
+        "type": "String"
+      }
+    }
+  },
+  "a11yTilePlaced": "Placed; long-press to take back",
+  "a11yCorner": "Kelime Zirvesi logo"
 }

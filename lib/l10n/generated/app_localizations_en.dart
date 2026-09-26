@@ -566,4 +566,40 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get onbDemoBot => 'IK';
+
+  @override
+  String a11yClueCell(String clue, String direction) {
+    return 'Clue: $clue · $direction';
+  }
+
+  @override
+  String a11yLetterCell(String letter, int row, int col) {
+    return 'Letter $letter, row $row column $col';
+  }
+
+  @override
+  String a11yPendingCell(String letter, int row, int col) {
+    return 'Pending letter $letter, row $row column $col; tap to take back';
+  }
+
+  @override
+  String a11yEmptyCell(int row, int col) {
+    return 'Empty cell, row $row column $col';
+  }
+
+  @override
+  String a11yTile(String letter) {
+    return 'Letter $letter';
+  }
+
+  @override
+  String a11yTileSelected(String letter) {
+    return 'Letter $letter, selected';
+  }
+
+  @override
+  String get a11yTilePlaced => 'Placed; long-press to take back';
+
+  @override
+  String get a11yCorner => 'Kelime Zirvesi logo';
 }

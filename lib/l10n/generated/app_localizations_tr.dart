@@ -569,4 +569,40 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get onbDemoBot => 'İK';
+
+  @override
+  String a11yClueCell(String clue, String direction) {
+    return 'İpucu: $clue · $direction';
+  }
+
+  @override
+  String a11yLetterCell(String letter, int row, int col) {
+    return 'Harf $letter, satır $row sütun $col';
+  }
+
+  @override
+  String a11yPendingCell(String letter, int row, int col) {
+    return 'Bekleyen harf $letter, satır $row sütun $col; geri almak için dokun';
+  }
+
+  @override
+  String a11yEmptyCell(int row, int col) {
+    return 'Boş hücre, satır $row sütun $col';
+  }
+
+  @override
+  String a11yTile(String letter) {
+    return 'Harf $letter';
+  }
+
+  @override
+  String a11yTileSelected(String letter) {
+    return 'Harf $letter, seçili';
+  }
+
+  @override
+  String get a11yTilePlaced => 'Yerleştirildi; geri almak için basılı tut';
+
+  @override
+  String get a11yCorner => 'Kelime Zirvesi logosu';
 }

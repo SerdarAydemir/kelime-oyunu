@@ -7,6 +7,7 @@ import 'package:kelime_oyunu/core/theme/app_tokens.dart';
 import 'package:kelime_oyunu/data/models/puzzle.dart';
 import 'package:kelime_oyunu/features/gameplay/engine/score_engine.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/grid_dynamic_painter.dart';
+import 'package:kelime_oyunu/features/gameplay/widgets/grid_semantics.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/grid_static_painter.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/pending_letter_draggable.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/rack_widget.dart';
@@ -190,6 +191,15 @@ class _GridPainterState extends State<GridPainter> {
                           hiddenPendingCell: _liftedPending.value,
                         ),
                       ),
+                    ),
+                  ),
+                  // Screen-reader labels per cell (TalkBack); pointer-inert.
+                  Positioned.fill(
+                    child: GridSemantics(
+                      puzzle: puzzle,
+                      board: widget.board,
+                      pendingPlacements: widget.pendingPlacements,
+                      cellSize: cell,
                     ),
                   ),
                   GestureDetector(

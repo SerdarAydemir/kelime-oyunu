@@ -9,6 +9,10 @@ import 'package:kelime_oyunu/features/gameplay/engine/score_engine.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/grid_painter.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/rack_widget.dart';
 
+// Relative import — test helpers are not importable via package: path.
+// ignore: always_use_package_imports
+import '../../../helpers/localized_app.dart';
+
 // A 9x7 puzzle exercising every static branch: a blank top-left corner (the
 // brand "K"), a single long clue (auto-scale + ellipsis path), a double-clue
 // cell (split + divider), and a letter cell. (0,0) is intentionally absent so
@@ -64,7 +68,7 @@ Widget _harness({
   void Function(DragTileData, WordCell)? onDrop,
   bool Function(WordCell)? isPlaceable,
 }) {
-  return MaterialApp(
+  return localizedApp(
     home: Scaffold(
       body: SizedBox(
         width: width,
@@ -100,7 +104,7 @@ Widget _dragHarness({
   List<Placement> pending = const [],
   void Function(WordCell)? onPendingCancelled,
 }) {
-  return MaterialApp(
+  return localizedApp(
     home: Scaffold(
       body: Column(
         children: [
@@ -159,6 +163,21 @@ Offset _gridOrigin(WidgetTester tester) => tester.getTopLeft(
 );
 
 void main() {
+  testWidgets('every cell carries a screen-reader label', (tester) async {
+    final handle = tester.ensureSemantics();
+    await tester.pumpWidget(_harness(width: 350, height: 450));
+    // Two clue cells (one single, one double: two clues joined) …
+    expect(find.bySemanticsLabel(RegExp('^İpucu: ')), findsNWidgets(2));
+    expect(
+      find.bySemanticsLabel(RegExp('Farklı renklerde · AŞAĞI; İpucu: Futbolda atlanamayan · SAĞA')),
+      findsOneWidget,
+    );
+    // … the logo corner and the empty letter cell at row 2, column 2.
+    expect(find.bySemanticsLabel('Kelime Zirvesi logosu'), findsOneWidget);
+    expect(find.bySemanticsLabel('Boş hücre, satır 2 sütun 2'), findsOneWidget);
+    handle.dispose();
+  });
+
   group('GridPainter renders without overflow or exception', () {
     // Each entry is a (width, height) constraint to stress the fit math.
     const cases = <(String, double, double)>[

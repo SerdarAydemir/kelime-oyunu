@@ -86,19 +86,24 @@ class _SwapButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final tokens = context.tokens;
-    return InkWell(
-      onTap: onTap,
-      customBorder: const CircleBorder(),
-      child: Opacity(
-        opacity: onTap == null ? 0.4 : 1.0,
-        child: Container(
-          width: AppDimensions.buttonGame,
-          height: AppDimensions.buttonGame,
-          decoration: BoxDecoration(
-            shape: BoxShape.circle,
-            border: Border.all(color: tokens.faint, width: 1.5),
+    return Semantics(
+      button: true,
+      enabled: onTap != null,
+      label: AppLocalizations.of(context).swap,
+      child: InkWell(
+        onTap: onTap,
+        customBorder: const CircleBorder(),
+        child: Opacity(
+          opacity: onTap == null ? 0.4 : 1.0,
+          child: Container(
+            width: AppDimensions.buttonGame,
+            height: AppDimensions.buttonGame,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              border: Border.all(color: tokens.faint, width: 1.5),
+            ),
+            child: Icon(Icons.swap_horiz, color: tokens.text, size: 22),
           ),
-          child: Icon(Icons.swap_horiz, color: tokens.text, size: 22),
         ),
       ),
     );
@@ -157,29 +162,36 @@ class _RevealButton extends StatelessWidget {
     final tokens = context.tokens;
     final l10n = AppLocalizations.of(context);
     final ink = active ? tokens.accentInk : tokens.accent;
-    return InkWell(
-      onTap: onReveal,
-      customBorder: const CircleBorder(),
-      child: Opacity(
-        opacity: onReveal == null ? 0.4 : 1.0,
-        child: Container(
-          width: AppDimensions.buttonGame,
-          height: AppDimensions.buttonGame,
-          decoration: BoxDecoration(
-            shape: BoxShape.circle,
-            color: active ? tokens.accent : tokens.accent.withValues(alpha: 0.15),
-            border: Border.all(color: tokens.accent, width: 1.5),
-          ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Icon(active ? Icons.lightbulb : Icons.lightbulb_outline, color: ink, size: 17),
-              Text(
-                l10n.hint,
-                style: AppTypography.buttonPrimary.copyWith(fontSize: 7, height: 1.2, color: ink),
-              ),
-              if (showAdLabel) AdLabel(color: ink),
-            ],
+    return Semantics(
+      button: true,
+      enabled: onReveal != null,
+      toggled: active,
+      excludeSemantics: true,
+      label: l10n.hint,
+      child: InkWell(
+        onTap: onReveal,
+        customBorder: const CircleBorder(),
+        child: Opacity(
+          opacity: onReveal == null ? 0.4 : 1.0,
+          child: Container(
+            width: AppDimensions.buttonGame,
+            height: AppDimensions.buttonGame,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: active ? tokens.accent : tokens.accent.withValues(alpha: 0.15),
+              border: Border.all(color: tokens.accent, width: 1.5),
+            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(active ? Icons.lightbulb : Icons.lightbulb_outline, color: ink, size: 17),
+                Text(
+                  l10n.hint,
+                  style: AppTypography.buttonPrimary.copyWith(fontSize: 7, height: 1.2, color: ink),
+                ),
+                if (showAdLabel) AdLabel(color: ink),
+              ],
+            ),
           ),
         ),
       ),
