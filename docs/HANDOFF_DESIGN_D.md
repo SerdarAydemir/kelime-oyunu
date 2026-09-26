@@ -132,15 +132,17 @@ akışı için) ve `flutter run --dart-define=DEV_UNLOCK_ALL=true`.
 
 ## Tasarım eksikleri turu — README ekranı ↔ uygulama (bilinçli sapmalar hariç)
 
+> Oturum E (2026-09-26) kapanışları işlendi; kalan satırlar bilinçli sapma ya da uygulama dışı iş.
+
 | README ekranı | Uygulama | Fark / eksik |
 |---|---|---|
 | Splash | `/splash` | Tam. |
 | Onboarding | `/onboarding` | Kart 1'deki şerit README'ye yakın; 2–3. kart illüstrasyonları README'de tarif edilmediği için türetildi. Nokta/çip/CTA tam. |
-| Consent | `/consent` | Sırtların %70/%60 opaklıkları tek %65 ile; gerisi tam. |
+| Consent | `/consent` | Tam (E: sırtlar `mtn1` %70 / `mtn2` %60). |
 | ATT | `/consent/att` | Madde metinleri README'de yok, türetildi. Gerçek sistem diyaloğu FAZ 6. |
-| Home | `/` | Tam. "blur 6" pill'de blur yok (BackdropFilter maliyeti; düz `card` zemin). |
+| Home | `/` | Tam (E: pill blur 6, kayıt kartı blur 8 — `GlassSurface`). |
 | Climb map | `/map` | Done kartı mini grid'de "letter with level number" var; patika 3 px dash 5/9; sis; tam. Done düğümleri widget (performans ölçülmedi). |
-| Game | `/gameplay/:id` | Kesikli uçuş yayları ve "+12 ↑" ok glifi yok; ipucu font tablosu yerine otomatik sığdırma; "▶ reklam" alt etiketi 7 px (README ile aynı). |
+| Game | `/gameplay/:id` | Tam (E: mavi/kırmızı kesikli uçuş yayları, "+N ↑"). **Bilinçli:** ipucu font tablosu yerine test edilmiş otomatik sığdırma (9–14 px, hece-tire). |
 | Clue sheet / Swap sheet | sheet'ler | Tam. |
 | Result | `/result/:id` | Güneş/skor renkleri token'a eşlendi (sapma kaydı); "+40 m → X m" kamp irtifası. |
 | Settings | `/settings` | Tam + ek "Nasıl oynanır?" satırı (README'de yok). |

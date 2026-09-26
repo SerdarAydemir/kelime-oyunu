@@ -311,10 +311,18 @@ tasarımı uygulanmadı).
   legal `/legal/*` (asset markdown), oyun ⋯ menüsü. Tüm README ekranları var;
   fark listesi ve emülatör listesi: `docs/HANDOFF_DESIGN_D.md`.
 
+- Oturum E (2026-09-26) ✅ — tasarım eksikleri kapatıldı (onay sırtları, home
+  blur, uçuş yayları, "+N ↑"), kalite geçişi: kontrast ≥ 4.5:1 (`link` token),
+  büyük yazı 1.3/1.6 ve 360×640 testleri, sistem geri tuşu her rotada,
+  TalkBack etiketleri, sıfırla → onboarding. **Tasarım fazı kapandı.**
+  Ayrıntı ve açık kalanlar: `docs/HANDOFF_E.md`.
+
 **Sıradaki (planlı, yapılmadı):**
-- Emülatörde B/C/D kontrol listeleri (iki tema), store ekran görüntüsü çerçeveleri.
-- FAZ 5 ses/titreşim; FAZ 6 gerçek SDK'lar (`AdService`, `ConsentService`,
-  `PurchaseService` arayüzleri hazır), kamp parası harcama yolu.
+- iOS hattı (simülatörde ATT ekranı, LaunchScreen, TestFlight).
+- FAZ 5 ses/titreşim (ayar anahtarları hazır, davranış yok).
+- Görsel ipucu pilotu.
+- FAZ 6 gerçek SDK'lar (`AdService`, `ConsentService`, `PurchaseService`
+  arayüzleri hazır), kamp parası harcama yolu, store görselleri.
 - FAZ 4 artıkları (`docs/HANDOFF_REFACTOR.md` "Bulgular"): alpha-only gölge
   renkleri token'a, dialog/bot-profil string'leri `.arb`'a, kullanılmayan
   `AppColors.gridCellSelected`/`star`, hücre-boyutu hesabının ortaklaştırılması,
