@@ -80,6 +80,10 @@ class _GameActiveBodyState extends State<GameActiveBody>
   /// rack and bar wear their dimmed looks.
   bool get _botTurn => state.phase == TurnPhase.botThinking || state.botThinking;
 
+  /// Short screens (360 × 640 class): README shrink order — rack height, then
+  /// gaps — so the board keeps as much height as possible.
+  bool get _compact => MediaQuery.sizeOf(context).height < AppDimensions.compactHeightBreakpoint;
+
   /// The lamp only works on the player's turn while the game is running.
   bool get _canReveal =>
       state.phase == TurnPhase.playerTurn &&
@@ -171,7 +175,9 @@ class _GameActiveBodyState extends State<GameActiveBody>
                     playerScoreKey: _playerScoreKey,
                   ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(vertical: AppDimensions.space8),
+                    padding: EdgeInsets.symmetric(
+                      vertical: _compact ? AppDimensions.space4 : AppDimensions.space8,
+                    ),
                     child: TurnPill(
                       spec:
                           narrationPillFor(_narration, state.puzzle, l10n) ??
@@ -180,9 +186,9 @@ class _GameActiveBodyState extends State<GameActiveBody>
                   ),
                   Expanded(
                     child: Padding(
-                      padding: const EdgeInsets.symmetric(
+                      padding: EdgeInsets.symmetric(
                         horizontal: AppDimensions.space16,
-                        vertical: AppDimensions.space8,
+                        vertical: _compact ? AppDimensions.space4 : AppDimensions.space8,
                       ),
                       // BoardFrame picks the largest grid that fits and gives both
                       // layers EXACT grid-sized constraints, so GridPainter and the

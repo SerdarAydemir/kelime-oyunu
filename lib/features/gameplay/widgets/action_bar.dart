@@ -21,6 +21,7 @@ class ActionBar extends StatelessWidget {
     this.revealActive = false,
     this.botTurn = false,
     this.showAdLabel = false,
+    this.compact = false,
     super.key,
   });
 
@@ -43,6 +44,12 @@ class ActionBar extends StatelessWidget {
   /// Whether the hint button carries its "▶ reklam" sub-label.
   final bool showAdLabel;
 
+  /// Short screens: 44 dp controls and tighter padding.
+  final bool compact;
+
+  static double sizeFor({required bool compact}) =>
+      compact ? AppDimensions.buttonGameCompact : AppDimensions.buttonGame;
+
   @override
   Widget build(BuildContext context) {
     final hasPending = pendingPlacements.isNotEmpty;
@@ -50,15 +57,18 @@ class ActionBar extends StatelessWidget {
       opacity: botTurn ? 0.4 : 1.0,
       duration: const Duration(milliseconds: 200),
       child: Padding(
-        padding: const EdgeInsets.fromLTRB(
+        padding: EdgeInsets.fromLTRB(
           AppDimensions.space16,
-          AppDimensions.space8,
+          compact ? AppDimensions.space4 : AppDimensions.space8,
           AppDimensions.space16,
-          AppDimensions.space12,
+          compact ? AppDimensions.space6 : AppDimensions.space12,
         ),
         child: Row(
           children: [
-            _SwapButton(onTap: hasPending ? null : onSwap),
+            _SwapButton(
+              onTap: hasPending ? null : onSwap,
+              size: sizeFor(compact: compact),
+            ),
             const SizedBox(width: AppDimensions.space10),
             Expanded(
               child: _ConfirmPassButton(
@@ -66,10 +76,16 @@ class ActionBar extends StatelessWidget {
                 botTurn: botTurn,
                 onConfirm: onConfirm,
                 onPass: onPass,
+                height: sizeFor(compact: compact),
               ),
             ),
             const SizedBox(width: AppDimensions.space10),
-            _RevealButton(onReveal: onReveal, active: revealActive, showAdLabel: showAdLabel),
+            _RevealButton(
+              onReveal: onReveal,
+              active: revealActive,
+              showAdLabel: showAdLabel,
+              size: sizeFor(compact: compact),
+            ),
           ],
         ),
       ),
@@ -79,9 +95,10 @@ class ActionBar extends StatelessWidget {
 
 /// Swap: 52 dp circle with a 1.5 px `faint` ring; 40 % when disabled.
 class _SwapButton extends StatelessWidget {
-  const _SwapButton({required this.onTap});
+  const _SwapButton({required this.onTap, required this.size});
 
   final VoidCallback? onTap;
+  final double size;
 
   @override
   Widget build(BuildContext context) {
@@ -96,8 +113,8 @@ class _SwapButton extends StatelessWidget {
         child: Opacity(
           opacity: onTap == null ? 0.4 : 1.0,
           child: Container(
-            width: AppDimensions.buttonGame,
-            height: AppDimensions.buttonGame,
+            width: size,
+            height: size,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               border: Border.all(color: tokens.faint, width: 1.5),
@@ -116,10 +133,12 @@ class _ConfirmPassButton extends StatelessWidget {
     required this.botTurn,
     required this.onConfirm,
     required this.onPass,
+    required this.height,
   });
 
   final bool hasPending;
   final bool botTurn;
+  final double height;
   final VoidCallback? onConfirm;
   final VoidCallback? onPass;
 
@@ -129,7 +148,7 @@ class _ConfirmPassButton extends StatelessWidget {
     final l10n = AppLocalizations.of(context);
     final label = botTurn ? l10n.botTurnBtn : (hasPending ? l10n.confirm : l10n.pass);
     return SizedBox(
-      height: AppDimensions.buttonGame,
+      height: height,
       child: FilledButton(
         onPressed: botTurn ? null : (hasPending ? onConfirm : onPass),
         style: FilledButton.styleFrom(
@@ -149,9 +168,15 @@ class _ConfirmPassButton extends StatelessWidget {
 /// Hint (lamp): 52 dp circle, amber 15 % fill with a 1.5 px amber ring;
 /// solid amber while reveal mode is on; 40 % when disabled.
 class _RevealButton extends StatelessWidget {
-  const _RevealButton({required this.onReveal, required this.active, required this.showAdLabel});
+  const _RevealButton({
+    required this.onReveal,
+    required this.active,
+    required this.showAdLabel,
+    required this.size,
+  });
 
   final VoidCallback? onReveal;
+  final double size;
 
   /// Reveal mode is on: render filled so the toggle state is obvious.
   final bool active;
@@ -174,8 +199,8 @@ class _RevealButton extends StatelessWidget {
         child: Opacity(
           opacity: onReveal == null ? 0.4 : 1.0,
           child: Container(
-            width: AppDimensions.buttonGame,
-            height: AppDimensions.buttonGame,
+            width: size,
+            height: size,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               color: active ? tokens.accent : tokens.accent.withValues(alpha: 0.15),

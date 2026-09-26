@@ -14,10 +14,11 @@ extension _GameControls on _GameActiveBodyState {
       opacity: _botTurn ? 0.45 : 1.0,
       duration: const Duration(milliseconds: 200),
       child: Padding(
-        padding: const EdgeInsets.only(top: AppDimensions.space12),
+        padding: EdgeInsets.only(top: _compact ? AppDimensions.space4 : AppDimensions.space12),
         child: RackWidget(
           key: _rackKey,
           rack: state.rack,
+          compact: _compact,
           selectedIndex: state.selectedRackIndex,
           // Drag mirrors the tap guards: player's turn, game running, no
           // reveal mode — the bot's turn must not accept ghost drags.
@@ -35,6 +36,7 @@ extension _GameControls on _GameActiveBodyState {
 
   Widget _actionBar(BuildContext context) {
     return ActionBar(
+      compact: _compact,
       pendingPlacements: state.pendingPlacements,
       revealActive: _revealMode,
       botTurn: _botTurn,

@@ -34,6 +34,7 @@ class RackWidget extends StatelessWidget {
     this.onPlusTap,
     this.dragEnabled = false,
     this.onDragStarted,
+    this.compact = false,
     super.key,
   });
 
@@ -61,6 +62,14 @@ class RackWidget extends StatelessWidget {
   /// Fired when a tile drag begins (e.g. to clear a pending tap-selection).
   final void Function(int rackIndex)? onDragStarted;
 
+  /// Short screens (< 700 dp): 48 dp tiles instead of 56 — the first step of
+  /// the README shrink order (rack height → gaps → board).
+  final bool compact;
+
+  /// Tile height for [compact] or regular layouts.
+  static double tileHeightFor({required bool compact}) =>
+      compact ? AppDimensions.tileHeightCompact : AppDimensions.tileHeight;
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -86,11 +95,17 @@ class RackWidget extends StatelessWidget {
             feedback: DragFeedbackTile(letter: rack[i].letter),
             childWhenDragging: Opacity(
               opacity: 0.35,
-              child: _RackTileWidget(tile: rack[i], selected: false, onTap: null),
+              child: _RackTileWidget(
+                tile: rack[i],
+                selected: false,
+                onTap: null,
+                height: tileHeightFor(compact: compact),
+              ),
             ),
             child: _RackTileWidget(
               tile: rack[i],
               selected: i == selectedIndex,
+              height: tileHeightFor(compact: compact),
               onTap: rack[i].isPlaced ? null : () => onTileTap(i),
               onLongPress: rack[i].isPlaced ? () => onTileRecall(i) : null,
             ),
@@ -98,7 +113,11 @@ class RackWidget extends StatelessWidget {
         ],
         if (showPlusSlot) ...[
           const SizedBox(width: AppDimensions.space6),
-          _PlusSlotWidget(onTap: onPlusTap, showAdLabel: showAdLabel),
+          _PlusSlotWidget(
+            onTap: onPlusTap,
+            showAdLabel: showAdLabel,
+            height: tileHeightFor(compact: compact),
+          ),
         ],
       ],
     );
@@ -155,10 +174,11 @@ class DragFeedbackTile extends StatelessWidget {
 /// The "+ HARF EKLE" joker slot: a dashed accent outline with a plus icon,
 /// the label and — when ads are live — the "▶ reklam" sub-label.
 class _PlusSlotWidget extends StatelessWidget {
-  const _PlusSlotWidget({required this.onTap, required this.showAdLabel});
+  const _PlusSlotWidget({required this.onTap, required this.showAdLabel, required this.height});
 
   final VoidCallback? onTap;
   final bool showAdLabel;
+  final double height;
 
   @override
   Widget build(BuildContext context) {
@@ -177,7 +197,7 @@ class _PlusSlotWidget extends StatelessWidget {
             painter: DashedBorderPainter(color: tokens.accent, radius: AppDimensions.radiusTile),
             child: SizedBox(
               width: AppDimensions.tileWidth,
-              height: AppDimensions.tileHeight,
+              height: height,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -211,11 +231,13 @@ class _RackTileWidget extends StatelessWidget {
     required this.tile,
     required this.selected,
     required this.onTap,
+    required this.height,
     this.onLongPress,
   });
 
   final RackTile tile;
   final bool selected;
+  final double height;
   final VoidCallback? onTap;
   final VoidCallback? onLongPress;
 
@@ -226,13 +248,13 @@ class _RackTileWidget extends StatelessWidget {
     if (tile.isPlaced) {
       body = CustomPaint(
         painter: DashedBorderPainter(color: tokens.faint, radius: AppDimensions.radiusTile),
-        child: const SizedBox(width: AppDimensions.tileWidth, height: AppDimensions.tileHeight),
+        child: SizedBox(width: AppDimensions.tileWidth, height: height),
       );
     } else {
       body = AnimatedContainer(
         duration: const Duration(milliseconds: 120),
         width: AppDimensions.tileWidth,
-        height: AppDimensions.tileHeight,
+        height: height,
         transform: Matrix4.translationValues(0, selected ? -8 : 0, 0),
         decoration: BoxDecoration(
           color: selected ? tokens.accent : tokens.tile,

@@ -59,9 +59,16 @@ abstract final class AppDimensions {
   /// Board inner padding.
   static const double boardPadding = 6.0;
 
-  /// Rack tile: 52 × 56 dp.
+  /// Rack tile: 52 × 56 dp; 48 dp tall on short screens (< 700 dp).
   static const double tileWidth = 52.0;
   static const double tileHeight = 56.0;
+  static const double tileHeightCompact = 48.0;
+
+  /// Game bottom-bar control height on short screens (52 dp otherwise).
+  static const double buttonGameCompact = 44.0;
+
+  /// Below this logical height the game screen uses the compact rack / bar.
+  static const double compactHeightBreakpoint = 700.0;
 
   /// Circular icon button (back arrow etc.) and the avatar circle.
   static const double iconButton = 40.0;
