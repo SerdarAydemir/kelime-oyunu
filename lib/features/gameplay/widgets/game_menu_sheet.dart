@@ -15,26 +15,29 @@ Future<void> showGameMenu(BuildContext context) {
   return showModalBottomSheet<void>(context: context, builder: (_) => const GameMenuSheet());
 }
 
+/// "Haritaya dön?" — asks, then leaves the match for the map. Shared by the
+/// ⋯ menu and the system back gesture on the game screen; the half-played
+/// match is already saved at its last turn boundary.
+Future<void> confirmLeaveGame(BuildContext context) async {
+  final l10n = AppLocalizations.of(context);
+  final router = GoRouter.of(context);
+  final confirmed = await showDialog<bool>(
+    context: context,
+    builder: (ctx) => AlertDialog(
+      title: Text(l10n.leaveGameTitle),
+      content: Text(l10n.leaveGameBody),
+      actions: [
+        TextButton(onPressed: () => Navigator.pop(ctx, false), child: Text(l10n.cancel)),
+        TextButton(onPressed: () => Navigator.pop(ctx, true), child: Text(l10n.backMap)),
+      ],
+    ),
+  );
+  if (confirmed != true) return;
+  router.go('/map');
+}
+
 class GameMenuSheet extends StatelessWidget {
   const GameMenuSheet({super.key});
-
-  Future<void> _leave(BuildContext context) async {
-    final l10n = AppLocalizations.of(context);
-    final router = GoRouter.of(context);
-    final confirmed = await showDialog<bool>(
-      context: context,
-      builder: (ctx) => AlertDialog(
-        title: Text(l10n.leaveGameTitle),
-        content: Text(l10n.leaveGameBody),
-        actions: [
-          TextButton(onPressed: () => Navigator.pop(ctx, false), child: Text(l10n.cancel)),
-          TextButton(onPressed: () => Navigator.pop(ctx, true), child: Text(l10n.backMap)),
-        ],
-      ),
-    );
-    if (confirmed != true) return;
-    router.go('/map');
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +62,11 @@ class GameMenuSheet extends StatelessWidget {
             context.push('/settings');
           },
         ),
-        _MenuRow(icon: Icons.map_outlined, label: l10n.backMap, onTap: () => _leave(context)),
+        _MenuRow(
+          icon: Icons.map_outlined,
+          label: l10n.backMap,
+          onTap: () => confirmLeaveGame(context),
+        ),
         const SizedBox(height: AppDimensions.space8),
       ],
     );

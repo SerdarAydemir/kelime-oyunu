@@ -133,122 +133,134 @@ class _GameActiveBodyState extends State<GameActiveBody>
   Widget build(BuildContext context) {
     final tokens = context.tokens;
     final l10n = AppLocalizations.of(context);
-    return AnimatedBuilder(
-      animation: _narration,
-      builder: (context, _) => Stack(
-        children: [
-          // bgGame gradient behind everything (README "Game screen").
-          Positioned.fill(
-            child: DecoratedBox(decoration: BoxDecoration(gradient: tokens.bgGame)),
-          ),
-          SafeArea(
-            child: Column(
-              children: [
-                // Level header + the way out. Kept above ScoreHeader as its
-                // own child so it never disturbs the "VS" centring in the header.
-                LevelTopBar(
-                  levelId: widget.puzzleId,
-                  // Leaving is safe: the match is saved at every turn boundary
-                  // and comes back as "Yarım kalan oyun" on the home screen.
-                  onExit: () => context.go('/map'),
-                  onMore: () => showGameMenu(context),
-                ),
-                ScoreHeader(
-                  // Lagging display scores: the counter walks up as the narration
-                  // lands each cue (12→13→14→15), it never snaps to the bloc total.
-                  playerScore: _narration.displayPlayerScore,
-                  botScore: _narration.displayBotScore,
-                  botName: widget.botProfile.name,
-                  botThinking: state.botThinking,
-                  avatarKey: _avatarKey,
-                  playerScoreKey: _playerScoreKey,
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: AppDimensions.space8),
-                  child: TurnPill(
-                    spec:
-                        narrationPillFor(_narration, state.puzzle, l10n) ??
-                        turnPillFor(state, l10n),
+    // System back never drops a live match silently: it asks the same
+    // "Haritaya dön?" question as the ⋯ menu.
+    return PopScope(
+      canPop: false,
+      onPopInvokedWithResult: (didPop, _) {
+        if (!didPop) confirmLeaveGame(context);
+      },
+      child: AnimatedBuilder(
+        animation: _narration,
+        builder: (context, _) => Stack(
+          children: [
+            // bgGame gradient behind everything (README "Game screen").
+            Positioned.fill(
+              child: DecoratedBox(decoration: BoxDecoration(gradient: tokens.bgGame)),
+            ),
+            SafeArea(
+              child: Column(
+                children: [
+                  // Level header + the way out. Kept above ScoreHeader as its
+                  // own child so it never disturbs the "VS" centring in the header.
+                  LevelTopBar(
+                    levelId: widget.puzzleId,
+                    // Leaving is safe: the match is saved at every turn boundary
+                    // and comes back as "Yarım kalan oyun" on the home screen.
+                    onExit: () => context.go('/map'),
+                    onMore: () => showGameMenu(context),
                   ),
-                ),
-                Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: AppDimensions.space16,
-                      vertical: AppDimensions.space8,
+                  ScoreHeader(
+                    // Lagging display scores: the counter walks up as the narration
+                    // lands each cue (12→13→14→15), it never snaps to the bloc total.
+                    playerScore: _narration.displayPlayerScore,
+                    botScore: _narration.displayBotScore,
+                    botName: widget.botProfile.name,
+                    botThinking: state.botThinking,
+                    avatarKey: _avatarKey,
+                    playerScoreKey: _playerScoreKey,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: AppDimensions.space8),
+                    child: TurnPill(
+                      spec:
+                          narrationPillFor(_narration, state.puzzle, l10n) ??
+                          turnPillFor(state, l10n),
                     ),
-                    // BoardFrame picks the largest grid that fits and gives both
-                    // layers EXACT grid-sized constraints, so GridPainter and the
-                    // narration overlay derive the same cell size — badges land on
-                    // the right cells. No scroll view.
-                    child: BoardFrame(
-                      rows: state.puzzle.grid.rows,
-                      cols: state.puzzle.grid.cols,
-                      child: Stack(
-                        // Score badges fly OUT of the grid area up to the header
-                        // (the score / bot avatar) — don't clip them mid-path.
-                        clipBehavior: Clip.none,
-                        children: [
-                          GridPainter(
-                            puzzle: state.puzzle,
-                            board: state.board,
-                            pendingPlacements: state.pendingPlacements,
-                            revealedWordIds: state.revealedWordIds,
-                            botPlacedCells: state.botPlacedCells,
-                            // Hide letters mid-flight so they pop in as their tile lands.
-                            suppressedCells: _narration.suppressedCells,
-                            revealMode: _revealMode,
-                            onCellTap: (cell, bottomHalf) => _onCellTap(context, cell, bottomHalf),
-                            isCellPlaceable: state.isPlaceable,
-                            onCellDrop: (data, cell) => _onCellDrop(context, data, cell),
-                            pendingDragEnabled: _canReveal && !_revealMode,
-                            rackIndexForPending: state.rackIndexForPending,
-                            onPendingDragCancelled: (cell) =>
-                                context.read<GameBloc>().add(LetterRecalled(cell)),
-                          ),
-                          // Non-interactive: badges only. The narrating tap-catcher
-                          // (above the whole body) owns input while a story plays.
-                          Positioned.fill(
-                            child: IgnorePointer(
-                              child: NarrationLayer(
-                                controller: _narration,
-                                puzzle: state.puzzle,
-                                rackKey: _rackKey,
-                                botAvatarKey: _avatarKey,
-                                playerScoreKey: _playerScoreKey,
+                  ),
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: AppDimensions.space16,
+                        vertical: AppDimensions.space8,
+                      ),
+                      // BoardFrame picks the largest grid that fits and gives both
+                      // layers EXACT grid-sized constraints, so GridPainter and the
+                      // narration overlay derive the same cell size — badges land on
+                      // the right cells. No scroll view.
+                      child: BoardFrame(
+                        rows: state.puzzle.grid.rows,
+                        cols: state.puzzle.grid.cols,
+                        child: Stack(
+                          // Score badges fly OUT of the grid area up to the header
+                          // (the score / bot avatar) — don't clip them mid-path.
+                          clipBehavior: Clip.none,
+                          children: [
+                            GridPainter(
+                              puzzle: state.puzzle,
+                              board: state.board,
+                              pendingPlacements: state.pendingPlacements,
+                              revealedWordIds: state.revealedWordIds,
+                              botPlacedCells: state.botPlacedCells,
+                              // Hide letters mid-flight so they pop in as their tile lands.
+                              suppressedCells: _narration.suppressedCells,
+                              revealMode: _revealMode,
+                              onCellTap: (cell, bottomHalf) =>
+                                  _onCellTap(context, cell, bottomHalf),
+                              isCellPlaceable: state.isPlaceable,
+                              onCellDrop: (data, cell) => _onCellDrop(context, data, cell),
+                              pendingDragEnabled: _canReveal && !_revealMode,
+                              rackIndexForPending: state.rackIndexForPending,
+                              onPendingDragCancelled: (cell) =>
+                                  context.read<GameBloc>().add(LetterRecalled(cell)),
+                            ),
+                            // Non-interactive: badges only. The narrating tap-catcher
+                            // (above the whole body) owns input while a story plays.
+                            Positioned.fill(
+                              child: IgnorePointer(
+                                child: NarrationLayer(
+                                  controller: _narration,
+                                  puzzle: state.puzzle,
+                                  rackKey: _rackKey,
+                                  botAvatarKey: _avatarKey,
+                                  playerScoreKey: _playerScoreKey,
+                                ),
                               ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
                   ),
-                ),
-                _rackSection(context),
-                _actionBar(context),
-              ],
-            ),
-          ),
-          // Input lock + fast-forward. While a narration plays, an opaque
-          // catcher covers everything: it swallows all gameplay input and
-          // turns any tap into a 2× speed-up (never a cancel — the player must
-          // not miss a move). It vanishes the instant the queue drains.
-          if (_narration.narrating)
-            Positioned.fill(
-              child: GestureDetector(
-                behavior: HitTestBehavior.opaque,
-                onTapDown: (_) => _narration.toggleSpeed(),
-                child: _narration.isSpedUp
-                    ? const SafeArea(
-                        child: Align(
-                          alignment: Alignment.topRight,
-                          child: Padding(padding: EdgeInsets.all(12), child: NarrationSpeedChip()),
-                        ),
-                      )
-                    : const SizedBox.expand(),
+                  _rackSection(context),
+                  _actionBar(context),
+                ],
               ),
             ),
-        ],
+            // Input lock + fast-forward. While a narration plays, an opaque
+            // catcher covers everything: it swallows all gameplay input and
+            // turns any tap into a 2× speed-up (never a cancel — the player must
+            // not miss a move). It vanishes the instant the queue drains.
+            if (_narration.narrating)
+              Positioned.fill(
+                child: GestureDetector(
+                  behavior: HitTestBehavior.opaque,
+                  onTapDown: (_) => _narration.toggleSpeed(),
+                  child: _narration.isSpedUp
+                      ? const SafeArea(
+                          child: Align(
+                            alignment: Alignment.topRight,
+                            child: Padding(
+                              padding: EdgeInsets.all(12),
+                              child: NarrationSpeedChip(),
+                            ),
+                          ),
+                        )
+                      : const SizedBox.expand(),
+                ),
+              ),
+          ],
+        ),
       ),
     );
   }

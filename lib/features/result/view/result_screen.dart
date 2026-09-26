@@ -63,6 +63,10 @@ class ResultScreen extends StatelessWidget {
     // disabled, the buttons are the only exits.
     return PopScope(
       canPop: false,
+      // System back: the map, like the "Harita" button.
+      onPopInvokedWithResult: (didPop, _) {
+        if (!didPop) context.go('/map');
+      },
       child: Scaffold(
         body: Stack(
           children: [

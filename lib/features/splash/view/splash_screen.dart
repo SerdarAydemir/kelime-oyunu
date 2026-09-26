@@ -55,36 +55,43 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
   Widget build(BuildContext context) {
     final tokens = context.tokens;
     final l10n = AppLocalizations.of(context);
-    return Scaffold(
-      backgroundColor: tokens.bgFlat,
-      body: SafeArea(
-        child: Stack(
-          children: [
-            Center(
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  const AppLogoTile(),
-                  const SizedBox(height: AppDimensions.space24),
-                  Text(l10n.appName, style: AppTypography.resultTitle.copyWith(color: tokens.text)),
-                  const SizedBox(height: AppDimensions.space8),
-                  Text(
-                    l10n.homeTag,
-                    textAlign: TextAlign.center,
-                    style: AppTypography.overline.copyWith(
-                      color: tokens.text.withValues(alpha: 0.7),
+    // Nothing to go back to while the bar fills.
+    return PopScope(
+      canPop: false,
+      child: Scaffold(
+        backgroundColor: tokens.bgFlat,
+        body: SafeArea(
+          child: Stack(
+            children: [
+              Center(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    const AppLogoTile(),
+                    const SizedBox(height: AppDimensions.space24),
+                    Text(
+                      l10n.appName,
+                      style: AppTypography.resultTitle.copyWith(color: tokens.text),
                     ),
-                  ),
-                ],
+                    const SizedBox(height: AppDimensions.space8),
+                    Text(
+                      l10n.homeTag,
+                      textAlign: TextAlign.center,
+                      style: AppTypography.overline.copyWith(
+                        color: tokens.text.withValues(alpha: 0.7),
+                      ),
+                    ),
+                  ],
+                ),
               ),
-            ),
-            Positioned(
-              left: 0,
-              right: 0,
-              bottom: 64,
-              child: Center(child: _ProgressBar(progress: _progress)),
-            ),
-          ],
+              Positioned(
+                left: 0,
+                right: 0,
+                bottom: 64,
+                child: Center(child: _ProgressBar(progress: _progress)),
+              ),
+            ],
+          ),
         ),
       ),
     );

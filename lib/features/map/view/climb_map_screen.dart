@@ -48,57 +48,66 @@ class _MapBody extends StatelessWidget {
     final tokens = context.tokens;
     final skyEnabled = context.watch<SettingsCubit?>()?.state.skyEnabled ?? true;
     return BlocBuilder<MapCubit, MapState>(
-      builder: (context, state) => Scaffold(
-        body: Stack(
-          children: [
-            Positioned.fill(
-              child: DecoratedBox(
-                decoration: BoxDecoration(
-                  gradient: mapSky(
-                    tokens,
-                    progress: state.highestCompletedLevel / kLastLevelId,
-                    enabled: skyEnabled,
+      // System back from the map goes home, never out of the app.
+      builder: (context, state) => PopScope(
+        canPop: false,
+        onPopInvokedWithResult: (didPop, _) {
+          if (!didPop) context.go('/');
+        },
+        child: Scaffold(
+          body: Stack(
+            children: [
+              Positioned.fill(
+                child: DecoratedBox(
+                  decoration: BoxDecoration(
+                    gradient: mapSky(
+                      tokens,
+                      progress: state.highestCompletedLevel / kLastLevelId,
+                      enabled: skyEnabled,
+                    ),
                   ),
                 ),
               ),
-            ),
-            Positioned.fill(child: _Trail(state: state)),
-            // Sticky fog + header over the top 200 dp. The fog itself lets
-            // taps through to the nodes under it; only the back button hits.
-            Positioned(top: 0, left: 0, right: 0, child: _FogHeader(state: state)),
-            Positioned(
-              top: 0,
-              left: 0,
-              child: SafeArea(
-                bottom: false,
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: AppDimensions.space16,
-                    vertical: AppDimensions.space8,
-                  ),
-                  child: CircleIconButton(
-                    icon: Icons.arrow_back,
-                    onPressed: () => context.go('/'),
-                    tooltip: AppLocalizations.of(context).appName,
-                  ),
-                ),
-              ),
-            ),
-            Positioned(
-              left: 0,
-              right: 0,
-              bottom: AppDimensions.space24,
-              child: SafeArea(
-                top: false,
-                child: Center(
-                  child: Text(
-                    AppLocalizations.of(context).camp,
-                    style: AppTypography.label.copyWith(color: tokens.text.withValues(alpha: 0.66)),
+              Positioned.fill(child: _Trail(state: state)),
+              // Sticky fog + header over the top 200 dp. The fog itself lets
+              // taps through to the nodes under it; only the back button hits.
+              Positioned(top: 0, left: 0, right: 0, child: _FogHeader(state: state)),
+              Positioned(
+                top: 0,
+                left: 0,
+                child: SafeArea(
+                  bottom: false,
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: AppDimensions.space16,
+                      vertical: AppDimensions.space8,
+                    ),
+                    child: CircleIconButton(
+                      icon: Icons.arrow_back,
+                      onPressed: () => context.go('/'),
+                      tooltip: AppLocalizations.of(context).appName,
+                    ),
                   ),
                 ),
               ),
-            ),
-          ],
+              Positioned(
+                left: 0,
+                right: 0,
+                bottom: AppDimensions.space24,
+                child: SafeArea(
+                  top: false,
+                  child: Center(
+                    child: Text(
+                      AppLocalizations.of(context).camp,
+                      style: AppTypography.label.copyWith(
+                        color: tokens.text.withValues(alpha: 0.66),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

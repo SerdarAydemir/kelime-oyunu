@@ -39,53 +39,57 @@ class ConsentScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final tokens = context.tokens;
     final l10n = AppLocalizations.of(context);
-    return Scaffold(
-      body: Stack(
-        children: [
-          Positioned.fill(
-            child: DecoratedBox(decoration: BoxDecoration(gradient: tokens.bgGame)),
-          ),
-          // README "Consent": two faint ridges, mtn1 at 70 %, mtn2 at 60 %.
-          const Positioned.fill(
-            child: MountainBackdrop(trail: false, layers: 2, alphas: [0.7, 0.6]),
-          ),
-          SafeArea(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(
-                    AppDimensions.space24,
-                    AppDimensions.space40,
-                    AppDimensions.space24,
-                    0,
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        l10n.consentTag,
-                        style: AppTypography.overline.copyWith(
-                          color: tokens.text.withValues(alpha: 0.7),
-                        ),
-                      ),
-                      const SizedBox(height: AppDimensions.space12),
-                      Text(
-                        l10n.consentH,
-                        style: AppTypography.resultTitle.copyWith(color: tokens.text),
-                      ),
-                    ],
-                  ),
-                ),
-                const Spacer(),
-                _ConsentCard(
-                  onAccept: () => _finish(context, consentService.requestConsent()),
-                  onManage: () => _finish(context, consentService.showPrivacyOptions()),
-                ),
-              ],
+    // First-run gate: back cannot skip the consent card.
+    return PopScope(
+      canPop: false,
+      child: Scaffold(
+        body: Stack(
+          children: [
+            Positioned.fill(
+              child: DecoratedBox(decoration: BoxDecoration(gradient: tokens.bgGame)),
             ),
-          ),
-        ],
+            // README "Consent": two faint ridges, mtn1 at 70 %, mtn2 at 60 %.
+            const Positioned.fill(
+              child: MountainBackdrop(trail: false, layers: 2, alphas: [0.7, 0.6]),
+            ),
+            SafeArea(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(
+                      AppDimensions.space24,
+                      AppDimensions.space40,
+                      AppDimensions.space24,
+                      0,
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          l10n.consentTag,
+                          style: AppTypography.overline.copyWith(
+                            color: tokens.text.withValues(alpha: 0.7),
+                          ),
+                        ),
+                        const SizedBox(height: AppDimensions.space12),
+                        Text(
+                          l10n.consentH,
+                          style: AppTypography.resultTitle.copyWith(color: tokens.text),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const Spacer(),
+                  _ConsentCard(
+                    onAccept: () => _finish(context, consentService.requestConsent()),
+                    onManage: () => _finish(context, consentService.showPrivacyOptions()),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

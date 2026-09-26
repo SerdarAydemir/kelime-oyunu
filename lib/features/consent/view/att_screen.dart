@@ -34,54 +34,58 @@ class AttScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final tokens = context.tokens;
     final l10n = AppLocalizations.of(context);
-    return Scaffold(
-      backgroundColor: tokens.bgFlat,
-      body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: AppDimensions.space24),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const SizedBox(height: AppDimensions.space40),
-              Container(
-                width: 64,
-                height: 64,
-                decoration: BoxDecoration(shape: BoxShape.circle, color: tokens.surface),
-                child: Icon(Icons.verified_user_outlined, size: 30, color: tokens.accent),
-              ),
-              const SizedBox(height: AppDimensions.space20),
-              Text(
-                l10n.attTag,
-                style: AppTypography.overline.copyWith(color: tokens.text.withValues(alpha: 0.7)),
-              ),
-              const SizedBox(height: AppDimensions.space8),
-              Text(
-                l10n.attH,
-                style: AppTypography.resultTitle.copyWith(fontSize: 36, color: tokens.text),
-              ),
-              const SizedBox(height: AppDimensions.space12),
-              Text(
-                l10n.attBody,
-                style: AppTypography.body.copyWith(
-                  height: 1.6,
-                  color: tokens.text.withValues(alpha: 0.75),
+    // First-run gate: back cannot skip the pre-prompt ("Şimdi değil" can).
+    return PopScope(
+      canPop: false,
+      child: Scaffold(
+        backgroundColor: tokens.bgFlat,
+        body: SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: AppDimensions.space24),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const SizedBox(height: AppDimensions.space40),
+                Container(
+                  width: 64,
+                  height: 64,
+                  decoration: BoxDecoration(shape: BoxShape.circle, color: tokens.surface),
+                  child: Icon(Icons.verified_user_outlined, size: 30, color: tokens.accent),
                 ),
-              ),
-              const SizedBox(height: AppDimensions.space20),
-              _BulletList(lines: [l10n.attBullet1, l10n.attBullet2]),
-              const Spacer(),
-              PrimaryButton(label: l10n.attCta, onPressed: () => _finish(context, ask: true)),
-              const SizedBox(height: AppDimensions.space4),
-              SizedBox(
-                height: AppDimensions.buttonSecondary,
-                child: TextButton(
-                  onPressed: () => _finish(context, ask: false),
-                  style: TextButton.styleFrom(foregroundColor: tokens.text),
-                  child: Text(l10n.attLater),
+                const SizedBox(height: AppDimensions.space20),
+                Text(
+                  l10n.attTag,
+                  style: AppTypography.overline.copyWith(color: tokens.text.withValues(alpha: 0.7)),
                 ),
-              ),
-              const SizedBox(height: AppDimensions.space16),
-            ],
+                const SizedBox(height: AppDimensions.space8),
+                Text(
+                  l10n.attH,
+                  style: AppTypography.resultTitle.copyWith(fontSize: 36, color: tokens.text),
+                ),
+                const SizedBox(height: AppDimensions.space12),
+                Text(
+                  l10n.attBody,
+                  style: AppTypography.body.copyWith(
+                    height: 1.6,
+                    color: tokens.text.withValues(alpha: 0.75),
+                  ),
+                ),
+                const SizedBox(height: AppDimensions.space20),
+                _BulletList(lines: [l10n.attBullet1, l10n.attBullet2]),
+                const Spacer(),
+                PrimaryButton(label: l10n.attCta, onPressed: () => _finish(context, ask: true)),
+                const SizedBox(height: AppDimensions.space4),
+                SizedBox(
+                  height: AppDimensions.buttonSecondary,
+                  child: TextButton(
+                    onPressed: () => _finish(context, ask: false),
+                    style: TextButton.styleFrom(foregroundColor: tokens.text),
+                    child: Text(l10n.attLater),
+                  ),
+                ),
+                const SizedBox(height: AppDimensions.space16),
+              ],
+            ),
           ),
         ),
       ),

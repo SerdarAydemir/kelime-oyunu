@@ -60,69 +60,76 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       1 => const {1, 2},
       _ => const {3},
     };
-    return Scaffold(
-      backgroundColor: tokens.bgFlat,
-      body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: AppDimensions.space24),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Align(
-                alignment: Alignment.centerRight,
-                child: TextButton(
-                  onPressed: _finish,
-                  style: TextButton.styleFrom(foregroundColor: tokens.text),
-                  child: Text(l10n.onbSkip),
+    // On a first run there is nothing behind the tutorial: back is inert
+    // (Atla is the way out). Opened from Settings / the menu it pops normally.
+    return PopScope(
+      canPop: !widget.firstRun,
+      child: Scaffold(
+        backgroundColor: tokens.bgFlat,
+        body: SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: AppDimensions.space24),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: TextButton(
+                    onPressed: _finish,
+                    style: TextButton.styleFrom(foregroundColor: tokens.text),
+                    child: Text(l10n.onbSkip),
+                  ),
                 ),
-              ),
-              const SizedBox(height: AppDimensions.space24),
-              OnboardingStrip(stage: _page, key: ValueKey(_page)),
-              const SizedBox(height: AppDimensions.space32),
-              Text(
-                l10n.onbProgress(_page + 1),
-                style: AppTypography.overline.copyWith(color: tokens.text.withValues(alpha: 0.66)),
-              ),
-              const SizedBox(height: AppDimensions.space8),
-              Text(
-                titles[_page],
-                style: AppTypography.resultTitle.copyWith(fontSize: 28, color: tokens.text),
-              ),
-              const SizedBox(height: AppDimensions.space8),
-              Text(
-                bodies[_page],
-                style: AppTypography.body.copyWith(color: tokens.text.withValues(alpha: 0.72)),
-              ),
-              const SizedBox(height: AppDimensions.space16),
-              Wrap(
-                spacing: AppDimensions.space6,
-                runSpacing: AppDimensions.space6,
-                children: [
-                  for (var i = 0; i < steps.length; i++)
-                    _StepChip(label: steps[i], active: activeSteps.contains(i)),
-                ],
-              ),
-              const Spacer(),
-              Row(
-                children: [
-                  for (var i = 0; i < _pages; i++) ...[
-                    if (i > 0) const SizedBox(width: AppDimensions.space6),
-                    AnimatedContainer(
-                      duration: const Duration(milliseconds: 150),
-                      width: i == _page ? 22 : 6,
-                      height: 6,
-                      decoration: BoxDecoration(
-                        color: i == _page ? tokens.accent : tokens.faint,
-                        borderRadius: BorderRadius.circular(AppDimensions.radiusPill),
-                      ),
-                    ),
+                const SizedBox(height: AppDimensions.space24),
+                OnboardingStrip(stage: _page, key: ValueKey(_page)),
+                const SizedBox(height: AppDimensions.space32),
+                Text(
+                  l10n.onbProgress(_page + 1),
+                  style: AppTypography.overline.copyWith(
+                    color: tokens.text.withValues(alpha: 0.66),
+                  ),
+                ),
+                const SizedBox(height: AppDimensions.space8),
+                Text(
+                  titles[_page],
+                  style: AppTypography.resultTitle.copyWith(fontSize: 28, color: tokens.text),
+                ),
+                const SizedBox(height: AppDimensions.space8),
+                Text(
+                  bodies[_page],
+                  style: AppTypography.body.copyWith(color: tokens.text.withValues(alpha: 0.72)),
+                ),
+                const SizedBox(height: AppDimensions.space16),
+                Wrap(
+                  spacing: AppDimensions.space6,
+                  runSpacing: AppDimensions.space6,
+                  children: [
+                    for (var i = 0; i < steps.length; i++)
+                      _StepChip(label: steps[i], active: activeSteps.contains(i)),
                   ],
-                ],
-              ),
-              const SizedBox(height: AppDimensions.space16),
-              PrimaryButton(label: l10n.onbNext, onPressed: _next),
-              const SizedBox(height: AppDimensions.space16),
-            ],
+                ),
+                const Spacer(),
+                Row(
+                  children: [
+                    for (var i = 0; i < _pages; i++) ...[
+                      if (i > 0) const SizedBox(width: AppDimensions.space6),
+                      AnimatedContainer(
+                        duration: const Duration(milliseconds: 150),
+                        width: i == _page ? 22 : 6,
+                        height: 6,
+                        decoration: BoxDecoration(
+                          color: i == _page ? tokens.accent : tokens.faint,
+                          borderRadius: BorderRadius.circular(AppDimensions.radiusPill),
+                        ),
+                      ),
+                    ],
+                  ],
+                ),
+                const SizedBox(height: AppDimensions.space16),
+                PrimaryButton(label: l10n.onbNext, onPressed: _next),
+                const SizedBox(height: AppDimensions.space16),
+              ],
+            ),
           ),
         ),
       ),
