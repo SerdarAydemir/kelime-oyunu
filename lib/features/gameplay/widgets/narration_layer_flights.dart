@@ -26,10 +26,16 @@ extension _LetterFlights on _NarrationLayerState {
       if (t < 0 || t >= 1) continue; // not launched yet, or already landed
       final target = Offset((cellPos.col + 0.5) * cell, (cellPos.row + 0.5) * cell);
       final pos = Offset.lerp(src, target, Curves.easeInOut.transform(t))!;
-      // The bot's target cell wears a 2 px blue inset while its tile is in
-      // the air (README "Harf uçuşu"); the player's own letters were already
-      // sitting on their cells as pending tiles, so they get no marker.
+      // The bot's target cell wears a 2 px blue inset and a dashed blue arc
+      // traces its flight while the tile is in the air (README "Harf uçuşu");
+      // the player's own letters were already sitting on their cells as
+      // pending tiles, so they get no marker.
       if (isBot) {
+        tiles.add(
+          Positioned.fill(
+            child: FlightArc(from: src, to: target, color: tokens.inkBot, opacity: 0.6),
+          ),
+        );
         tiles.add(
           Positioned(
             left: cellPos.col * cell,
@@ -78,6 +84,7 @@ extension _LetterFlights on _NarrationLayerState {
     final progress = controller.progress;
     final home = _sourceLocal(controller.currentActor);
     final letterByCell = {for (final p in narration.placements) p.cell: p.letter};
+    final tokens = context.tokens;
     final tiles = <Widget>[];
     for (var i = 0; i < timeline.cues.length; i++) {
       final cue = timeline.cues[i];
@@ -96,6 +103,17 @@ extension _LetterFlights on _NarrationLayerState {
         final eased = Curves.easeInCubic.transform(t.clamp(0.0, 1.0));
         origin = Offset.lerp(cellOrigin, home - Offset(cell / 2, cell / 2), eased)!;
         fade = t < 0.8 ? 1.0 : 1.0 - (t - 0.8) / 0.2;
+        // Red dashed arc from the cell back home (README "Yanlış harf").
+        tiles.add(
+          Positioned.fill(
+            child: FlightArc(
+              from: cellOrigin + Offset(cell / 2, cell / 2),
+              to: home,
+              color: tokens.error,
+              opacity: 0.6 * fade,
+            ),
+          ),
+        );
       }
       tiles.add(
         Positioned(

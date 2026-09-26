@@ -7,6 +7,7 @@ import 'package:kelime_oyunu/core/constants/app_dimensions.dart';
 import 'package:kelime_oyunu/core/theme/app_tokens.dart';
 import 'package:kelime_oyunu/data/models/puzzle.dart';
 import 'package:kelime_oyunu/features/gameplay/bloc/move_narration.dart';
+import 'package:kelime_oyunu/features/gameplay/widgets/flight_arc.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/narration_controller.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/narration_tiles.dart';
 import 'package:kelime_oyunu/features/gameplay/widgets/narration_timeline.dart';
@@ -129,7 +130,12 @@ class _NarrationLayerState extends State<NarrationLayer> {
     return WordCell(row: puzzle.grid.rows ~/ 2, col: puzzle.grid.cols ~/ 2);
   }
 
-  String _label(NarrationCue cue) => cue.delta >= 0 ? '+${cue.delta}' : '${cue.delta}';
+  /// "+12 ↑" for a completed word (README "Kelime tamamlandı"), plain "+1" /
+  /// "−1" for letters and the rack bonus.
+  String _label(NarrationCue cue) {
+    final base = cue.delta >= 0 ? '+${cue.delta}' : '${cue.delta}';
+    return cue.kind == CueKind.wordBonus ? '$base ↑' : base;
+  }
 
   Color _color(NarrationCue cue) => switch (cue.kind) {
     CueKind.letter => cue.delta >= 0 ? context.tokens.success : context.tokens.error,

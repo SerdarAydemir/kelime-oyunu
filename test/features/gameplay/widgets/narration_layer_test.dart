@@ -195,7 +195,8 @@ void main() {
       await tester.pump(const Duration(milliseconds: 30));
       if (find.byKey(const ValueKey('frame_w1')).evaluate().isNotEmpty) sawFrame = true;
       // The word bonus is ONE "+3" badge over the lit word, never three +1s.
-      if (find.text('+3').evaluate().isNotEmpty) sawTotalBadge = true;
+      // The word total reads "+3 ↑" (README "Kelime tamamlandı").
+      if (find.text('+3 ↑').evaluate().isNotEmpty) sawTotalBadge = true;
     }
     expect(sawFrame, isTrue, reason: 'expected a word-completion frame to appear');
     expect(sawTotalBadge, isTrue, reason: 'expected a single +3 total badge');
