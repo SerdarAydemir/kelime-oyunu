@@ -25,6 +25,10 @@ void main() {
       expect(AppTokens.light.gridLine, AppTokens.light.boardBorder);
       expect(AppTokens.light.cellLetter, const Color(0xFFFFFDF7));
       expect(AppTokens.light.cellLetter, isNot(AppTokens.light.board));
+      // Contrast deviations (session E).
+      expect(AppTokens.light.link, AppTokens.dark.link);
+      expect(AppTokens.light.error, const Color(0xFFAD3F2B));
+      expect(AppTokens.dark.sheetMuted, const Color(0xFF7E6045));
     });
 
     test('spot-checks light values against the JS source', () {

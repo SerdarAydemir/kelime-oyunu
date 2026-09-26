@@ -22,7 +22,7 @@ class SettingsSectionLabel extends StatelessWidget {
       ),
       child: Text(
         text,
-        style: AppTypography.overline.copyWith(color: context.tokens.text.withValues(alpha: 0.55)),
+        style: AppTypography.overline.copyWith(color: context.tokens.text.withValues(alpha: 0.66)),
       ),
     );
   }
@@ -84,7 +84,7 @@ class SettingsRow extends StatelessWidget {
                     Text(
                       sub!,
                       style: AppTypography.bodySmall.copyWith(
-                        color: tokens.text.withValues(alpha: 0.6),
+                        color: tokens.text.withValues(alpha: 0.66),
                       ),
                     ),
                 ],
@@ -92,7 +92,7 @@ class SettingsRow extends StatelessWidget {
             ),
             ?trailing,
             if (trailing == null && onTap != null)
-              Icon(Icons.chevron_right, color: tokens.text.withValues(alpha: 0.6)),
+              Icon(Icons.chevron_right, color: tokens.text.withValues(alpha: 0.66)),
           ],
         ),
       ),

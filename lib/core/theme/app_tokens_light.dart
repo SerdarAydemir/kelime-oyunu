@@ -59,6 +59,7 @@ const AppTokens _light = AppTokens(
     color: Color.fromRGBO(42, 26, 16, 0.14),
   ),
   gridLine: Color(0xFFE3D5B6),
+  link: Color(0xFF8F4F20),
   // Design says #ffffff; nudged to #fffdf7 so letter cells separate from the
   // #fffaf0 board (README "Flutter sapmaları").
   cellLetter: Color(0xFFFFFDF7),
@@ -79,7 +80,9 @@ const AppTokens _light = AppTokens(
   muted: Color.fromRGBO(11, 26, 51, 0.66),
   faint: Color.fromRGBO(11, 26, 51, 0.4),
   success: Color(0xFF4F8A5B),
-  error: Color(0xFFC8503F),
+  // Design says #c8503f (3.8:1 on bgFlat as text); darkened for 4.5:1
+  // (README "Flutter sapmaları").
+  error: Color(0xFFAD3F2B),
   bot: Color(0xFF7FA7D8),
   botInk: Color(0xFF0B1A33),
   mtn1: Color(0xFF9FB0C8),

@@ -81,7 +81,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               const SizedBox(height: AppDimensions.space32),
               Text(
                 l10n.onbProgress(_page + 1),
-                style: AppTypography.overline.copyWith(color: tokens.text.withValues(alpha: 0.6)),
+                style: AppTypography.overline.copyWith(color: tokens.text.withValues(alpha: 0.66)),
               ),
               const SizedBox(height: AppDimensions.space8),
               Text(

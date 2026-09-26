@@ -33,6 +33,7 @@ class AppTokens extends ThemeExtension<AppTokens> {
     required this.boardBorder,
     required this.boardShadow,
     required this.gridLine,
+    required this.link,
     required this.cellLetter,
     required this.cellClue,
     required this.cellPending,
@@ -135,6 +136,11 @@ class AppTokens extends ThemeExtension<AppTokens> {
   /// Hücre arası çizgi (Flutter eki, kz-tokens.js'te yok — README "Flutter
   /// sapmaları"): dark `cellClue`, light `boardBorder`.
   final Color gridLine;
+
+  /// Metin bağlantısı rengi (Flutter eki — README "Flutter sapmaları"): `arrow`
+  /// krem zeminde 4.5:1'in altında kalır; bağlantı metinleri bu koyu turuncuyu
+  /// kullanır, oklar ve ikon kareleri `arrow`'da kalır.
+  final Color link;
 
   /// Harf hücresi zemini
   final Color cellLetter;

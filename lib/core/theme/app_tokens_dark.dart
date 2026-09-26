@@ -59,6 +59,7 @@ const AppTokens _dark = AppTokens(
     color: Color.fromRGBO(0, 0, 0, 0.4),
   ),
   gridLine: Color(0xFFE9DCC1),
+  link: Color(0xFF8F4F20),
   cellLetter: Color(0xFFFFFAF0),
   cellClue: Color(0xFFE9DCC1),
   cellPending: Color(0xFFFBE3B8),
@@ -85,7 +86,9 @@ const AppTokens _dark = AppTokens(
   mtn3: Color(0xFF5A3A35),
   sheet: Color(0xFFF6ECD9),
   sheetText: Color(0xFF2A1A10),
-  sheetMuted: Color(0xFF8A6A4C),
+  // Design says #8a6a4c (4.2:1 on the cream sheet); darkened for 4.5:1
+  // (README "Flutter sapmaları").
+  sheetMuted: Color(0xFF7E6045),
   sheetCard: Color(0xFFFFFFFF),
   solid: Color(0xFF2A1A10),
   solidText: Color(0xFFF6ECD9),

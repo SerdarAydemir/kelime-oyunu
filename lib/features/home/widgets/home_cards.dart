@@ -104,7 +104,7 @@ class SaveCard extends StatelessWidget {
                 : l10n.noSaveSub,
             style: resume != null
                 ? AppTypography.nodeNumber.copyWith(fontSize: 18, color: tokens.text)
-                : AppTypography.bodySmall.copyWith(color: tokens.text.withValues(alpha: 0.6)),
+                : AppTypography.bodySmall.copyWith(color: tokens.text.withValues(alpha: 0.66)),
           ),
         ],
       ),

@@ -109,6 +109,10 @@ Store screenshots: 5 frames (Oyun · Harita · Kazandın · İpucu · Ana ekran)
 `kz-tokens.js` tasarım kaynağı olarak değişmedi; Flutter portunda (`lib/core/theme/app_tokens_*.dart`) şu sapmalar var:
 - **Eklendi `gridLine`** — hücre arası 0.5 px çizgi rengi. dark: `#e9dcc1` (= `cellClue`), light: `#e3d5b6` (= `boardBorder`). Tasarımda hücreler 2 dp boşlukla tahta zemini üzerinde ayrışıyor; painter çizgi çizdiği için ayrı token gerekti (2026-09-24, A2).
 - **Sonuç ekranı literal renkleri** — güneş `#fff3d6` → `AppTokens.light.board` (%90); skor kartında oyuncu `#e0a24a` → `accent`, rakip `#3a7fc4` → `bot`. Token dışı literal eklenmedi (2026-09-24, C).
+- **Eklendi `link`** — bağlantı metni rengi `#8f4f20` (iki tema). Tasarımın `#c77a3c` (`arrow`) bağlantıları krem sheet/bgFlat üzerinde 2.8–3.2:1 kalıyordu; oklar ve ikon kareleri `arrow`'da kaldı (2026-09-26, E).
+- **Değişti `light.error`** — `#c8503f` → `#ad3f2b`; "Sil" gibi hata metinleri açık zeminde 3.8:1'den 5.0:1'e (2026-09-26, E).
+- **Değişti `dark.sheetMuted`** — `#8a6a4c` → `#7e6045`; krem sheet üzerinde 4.2:1'den 4.9:1'e (2026-09-26, E).
+- **İkincil metin alfaları** — README'nin %55/%60/%45 metin opaklıkları açık temada 4.5:1'in altında (3.7/4.4/2.8); uygulamada ikincil metinler en az %66 (5.2:1) ile çizilir (2026-09-26, E).
 - **Değişti `light.cellLetter`** — `#ffffff` → `#fffdf7`; açık temada harf hücresi `#fffaf0` tahtadan ayrışsın diye (2026-09-24, A2).
 
 ## Design Tokens

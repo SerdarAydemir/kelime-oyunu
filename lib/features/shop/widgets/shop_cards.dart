@@ -27,11 +27,11 @@ class CoinPill extends StatelessWidget {
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Icon(Icons.monetization_on_outlined, size: 16, color: tokens.arrow),
+          Icon(Icons.monetization_on_outlined, size: 16, color: tokens.link),
           const SizedBox(width: AppDimensions.space4),
           Text(
             '$coins',
-            style: AppTypography.pill.copyWith(fontWeight: FontWeight.w800, color: tokens.arrow),
+            style: AppTypography.pill.copyWith(fontWeight: FontWeight.w800, color: tokens.link),
           ),
         ],
       ),
@@ -171,7 +171,7 @@ class CoinPackCard extends StatelessWidget {
             ),
             Text(
               l10n.unlockN(unlocks),
-              style: AppTypography.bodySmall.copyWith(color: tokens.text.withValues(alpha: 0.6)),
+              style: AppTypography.bodySmall.copyWith(color: tokens.text.withValues(alpha: 0.66)),
             ),
             const SizedBox(height: AppDimensions.space12),
             PriceChip(label: price, outlined: !featured),

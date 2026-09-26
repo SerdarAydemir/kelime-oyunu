@@ -19,6 +19,7 @@ AppTokens _lerp(AppTokens a, AppTokens b, double t) => AppTokens(
   boardBorder: Color.lerp(a.boardBorder, b.boardBorder, t)!,
   boardShadow: BoxShadow.lerp(a.boardShadow, b.boardShadow, t)!,
   gridLine: Color.lerp(a.gridLine, b.gridLine, t)!,
+  link: Color.lerp(a.link, b.link, t)!,
   cellLetter: Color.lerp(a.cellLetter, b.cellLetter, t)!,
   cellClue: Color.lerp(a.cellClue, b.cellClue, t)!,
   cellPending: Color.lerp(a.cellPending, b.cellPending, t)!,

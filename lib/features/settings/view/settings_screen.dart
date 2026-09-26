@@ -184,7 +184,7 @@ class _AccountGroup extends StatelessWidget {
           label: l10n.removeAds,
           trailing: Text(
             l10n.shopLink,
-            style: AppTypography.pill.copyWith(fontWeight: FontWeight.w700, color: tokens.arrow),
+            style: AppTypography.pill.copyWith(fontWeight: FontWeight.w700, color: tokens.link),
           ),
           onTap: () => context.push('/shop'),
         ),
@@ -219,7 +219,7 @@ class _VersionFooter extends StatelessWidget {
         return Text(
           version == null ? l10n.appName : '${l10n.appName} $version',
           textAlign: TextAlign.center,
-          style: AppTypography.bodySmall.copyWith(color: tokens.text.withValues(alpha: 0.45)),
+          style: AppTypography.bodySmall.copyWith(color: tokens.text.withValues(alpha: 0.66)),
         );
       },
     );

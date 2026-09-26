@@ -103,7 +103,7 @@ class _ConsentCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final tokens = context.tokens;
     final l10n = AppLocalizations.of(context);
-    final link = AppTypography.pill.copyWith(fontWeight: FontWeight.w700, color: tokens.arrow);
+    final link = AppTypography.pill.copyWith(fontWeight: FontWeight.w700, color: tokens.link);
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.all(AppDimensions.space20),

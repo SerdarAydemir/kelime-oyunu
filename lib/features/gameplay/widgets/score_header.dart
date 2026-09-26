@@ -61,7 +61,7 @@ class ScoreHeader extends StatelessWidget {
             l10n.vs,
             style: AppTypography.overline.copyWith(
               letterSpacing: 2,
-              color: tokens.text.withValues(alpha: 0.55),
+              color: tokens.text.withValues(alpha: 0.66),
             ),
           ),
           Expanded(

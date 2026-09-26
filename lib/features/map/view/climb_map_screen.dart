@@ -93,7 +93,7 @@ class _MapBody extends StatelessWidget {
                 child: Center(
                   child: Text(
                     AppLocalizations.of(context).camp,
-                    style: AppTypography.label.copyWith(color: tokens.text.withValues(alpha: 0.6)),
+                    style: AppTypography.label.copyWith(color: tokens.text.withValues(alpha: 0.66)),
                   ),
                 ),
               ),
@@ -265,7 +265,7 @@ class _FogHeader extends StatelessWidget {
                       Text(
                         l10n.fogUp,
                         style: AppTypography.label.copyWith(
-                          color: tokens.text.withValues(alpha: 0.6),
+                          color: tokens.text.withValues(alpha: 0.66),
                         ),
                       ),
                     ],
