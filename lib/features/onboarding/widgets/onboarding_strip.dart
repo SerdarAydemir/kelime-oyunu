@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:kelime_oyunu/core/constants/app_dimensions.dart';
 import 'package:kelime_oyunu/core/constants/app_typography.dart';
 import 'package:kelime_oyunu/core/theme/app_tokens.dart';
+import 'package:kelime_oyunu/l10n/generated/app_localizations.dart';
 
 /// The mini board strip of the tutorial cards (README "Onboarding"): clue
 /// cell → pending amber "İ" → highlighted empty cell → empty cell, with a
@@ -34,6 +35,7 @@ class _OnboardingStripState extends State<OnboardingStrip> with SingleTickerProv
   @override
   Widget build(BuildContext context) {
     final tokens = context.tokens;
+    final l10n = AppLocalizations.of(context);
     const cell = 52.0;
     Widget box(Color color, {Widget? child, Border? border}) => Container(
       width: cell,
@@ -50,12 +52,15 @@ class _OnboardingStripState extends State<OnboardingStrip> with SingleTickerProv
     final cells = <Widget>[
       box(
         tokens.cellClue,
-        child: Text('İP', style: AppTypography.clue.copyWith(fontSize: 10, color: tokens.clueText)),
+        child: Text(
+          l10n.onbDemoClue,
+          style: AppTypography.clue.copyWith(fontSize: 10, color: tokens.clueText),
+        ),
       ),
       box(
         widget.stage == 0 ? tokens.cellPending : tokens.cellLetter,
         child: Text(
-          'İ',
+          l10n.onbDemoPending,
           style: letter.copyWith(color: widget.stage == 0 ? tokens.inkPending : tokens.ink),
         ),
       ),
@@ -64,7 +69,7 @@ class _OnboardingStripState extends State<OnboardingStrip> with SingleTickerProv
         border: widget.stage == 0 ? Border.all(color: tokens.accent, width: 2) : null,
         child: widget.stage >= 1
             ? Text(
-                'L',
+                l10n.onbDemoTile,
                 style: letter.copyWith(color: widget.stage == 1 ? tokens.inkPending : tokens.ink),
               )
             : null,
@@ -73,7 +78,7 @@ class _OnboardingStripState extends State<OnboardingStrip> with SingleTickerProv
         tokens.cellLetter,
         border: widget.stage == 2 ? Border.all(color: tokens.inkBot, width: 2) : null,
         child: widget.stage == 2
-            ? Text('İK', style: letter.copyWith(fontSize: 16, color: tokens.inkBot))
+            ? Text(l10n.onbDemoBot, style: letter.copyWith(fontSize: 16, color: tokens.inkBot))
             : null,
       ),
     ];
@@ -122,7 +127,10 @@ class _OnboardingStripState extends State<OnboardingStrip> with SingleTickerProv
                     ],
                   ),
                   alignment: Alignment.center,
-                  child: Text('L', style: AppTypography.tileLetter.copyWith(color: tokens.tileInk)),
+                  child: Text(
+                    l10n.onbDemoTile,
+                    style: AppTypography.tileLetter.copyWith(color: tokens.tileInk),
+                  ),
                 ),
               ),
             ),

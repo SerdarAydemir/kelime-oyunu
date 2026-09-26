@@ -557,4 +557,16 @@ class AppLocalizationsTr extends AppLocalizations {
   @override
   String get leaveGameBody =>
       'Yarım kalan oyun kaydedilir; ana ekrandan kaldığın yerden devam edebilirsin.';
+
+  @override
+  String get onbDemoClue => 'İP';
+
+  @override
+  String get onbDemoPending => 'İ';
+
+  @override
+  String get onbDemoTile => 'L';
+
+  @override
+  String get onbDemoBot => 'İK';
 }

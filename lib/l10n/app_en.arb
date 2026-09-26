@@ -319,5 +319,9 @@
   "purchased": "Purchased",
   "restored": "Purchases restored",
   "leaveGameTitle": "Back to the map?",
-  "leaveGameBody": "Your unfinished game is saved; you can pick it up from the home screen."
+  "leaveGameBody": "Your unfinished game is saved; you can pick it up from the home screen.",
+  "onbDemoClue": "IP",
+  "onbDemoPending": "I",
+  "onbDemoTile": "L",
+  "onbDemoBot": "IK"
 }

@@ -554,4 +554,16 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get leaveGameBody =>
       'Your unfinished game is saved; you can pick it up from the home screen.';
+
+  @override
+  String get onbDemoClue => 'IP';
+
+  @override
+  String get onbDemoPending => 'I';
+
+  @override
+  String get onbDemoTile => 'L';
+
+  @override
+  String get onbDemoBot => 'IK';
 }

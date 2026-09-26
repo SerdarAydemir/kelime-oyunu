@@ -74,14 +74,6 @@ abstract final class AppRouter {
         builder: (context, state) => AttScreen(consentService: consentService),
       ),
       GoRoute(
-        path: '/menu',
-        builder: (context, state) => const _PlaceholderScreen(label: 'Menu'),
-      ),
-      GoRoute(
-        path: '/packs',
-        builder: (context, state) => const _PlaceholderScreen(label: 'Packs'),
-      ),
-      GoRoute(
         path: '/gameplay/:levelId',
         builder: (context, state) {
           final levelId = int.tryParse(state.pathParameters['levelId'] ?? '1') ?? 1;
@@ -140,20 +132,4 @@ abstract final class AppRouter {
       ),
     ],
   );
-}
-
-/// Temporary placeholder rendered for every route until the real screen
-/// widget is implemented. Displays the route label centred on a white
-/// [Scaffold] — sufficient to verify routing without crashing.
-class _PlaceholderScreen extends StatelessWidget {
-  const _PlaceholderScreen({required this.label});
-
-  final String label;
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(child: Text(label, style: Theme.of(context).textTheme.headlineMedium)),
-    );
-  }
 }

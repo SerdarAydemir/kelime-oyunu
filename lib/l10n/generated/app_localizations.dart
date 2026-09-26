@@ -1093,6 +1093,30 @@ abstract class AppLocalizations {
   /// In tr, this message translates to:
   /// **'Yarım kalan oyun kaydedilir; ana ekrandan kaldığın yerden devam edebilirsin.'**
   String get leaveGameBody;
+
+  /// No description provided for @onbDemoClue.
+  ///
+  /// In tr, this message translates to:
+  /// **'İP'**
+  String get onbDemoClue;
+
+  /// No description provided for @onbDemoPending.
+  ///
+  /// In tr, this message translates to:
+  /// **'İ'**
+  String get onbDemoPending;
+
+  /// No description provided for @onbDemoTile.
+  ///
+  /// In tr, this message translates to:
+  /// **'L'**
+  String get onbDemoTile;
+
+  /// No description provided for @onbDemoBot.
+  ///
+  /// In tr, this message translates to:
+  /// **'İK'**
+  String get onbDemoBot;
 }
 
 class _AppLocalizationsDelegate
