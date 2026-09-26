@@ -8,19 +8,33 @@ import 'package:kelime_oyunu/core/theme/app_tokens.dart';
 /// an amber dot at its end. Sits behind the content; never repaints on its
 /// own — the palette is the only input.
 class MountainBackdrop extends StatelessWidget {
-  const MountainBackdrop({this.trail = true, this.layers = 3, super.key});
+  const MountainBackdrop({
+    this.trail = true,
+    this.layers = 3,
+    this.alphas = const [0.85, 1, 1],
+    super.key,
+  });
 
   /// Whether to draw the dashed trail + dot.
   final bool trail;
 
-  /// How many ridges to draw (1–3), far to near.
+  /// How many ridges to draw (1–3), far (`mtn1`) to near (`mtn3`).
   final int layers;
+
+  /// Opacity per drawn ridge, far to near (README "Home": `mtn1` 85 %;
+  /// "Consent": `mtn1` 70 %, `mtn2` 60 %).
+  final List<double> alphas;
 
   @override
   Widget build(BuildContext context) {
     return IgnorePointer(
       child: CustomPaint(
-        painter: _MountainPainter(tokens: context.tokens, trail: trail, layers: layers),
+        painter: _MountainPainter(
+          tokens: context.tokens,
+          trail: trail,
+          layers: layers,
+          alphas: alphas,
+        ),
         child: const SizedBox.expand(),
       ),
     );
@@ -28,11 +42,17 @@ class MountainBackdrop extends StatelessWidget {
 }
 
 class _MountainPainter extends CustomPainter {
-  const _MountainPainter({required this.tokens, required this.trail, required this.layers});
+  const _MountainPainter({
+    required this.tokens,
+    required this.trail,
+    required this.layers,
+    required this.alphas,
+  });
 
   final AppTokens tokens;
   final bool trail;
   final int layers;
+  final List<double> alphas;
 
   // Ridge lines as (x, y) fractions of the canvas; each polygon closes along
   // the bottom edge.
@@ -66,9 +86,8 @@ class _MountainPainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    final colours = [tokens.mtn1.withValues(alpha: 0.85), tokens.mtn2, tokens.mtn3];
-    final first = 3 - layers.clamp(1, 3);
-    for (var i = first; i < 3; i++) {
+    final colours = [tokens.mtn1, tokens.mtn2, tokens.mtn3];
+    for (var i = 0; i < layers.clamp(1, 3); i++) {
       final path = Path()..moveTo(0, size.height);
       for (final p in _ridges[i]) {
         path.lineTo(p.dx * size.width, p.dy * size.height);
@@ -76,7 +95,8 @@ class _MountainPainter extends CustomPainter {
       path
         ..lineTo(size.width, size.height)
         ..close();
-      canvas.drawPath(path, Paint()..color = colours[i]);
+      final alpha = i < alphas.length ? alphas[i] : 1.0;
+      canvas.drawPath(path, Paint()..color = colours[i].withValues(alpha: alpha));
     }
     if (!trail) return;
     // Dashed trail up the near ridge, ending in a dot near the summit.
@@ -107,5 +127,5 @@ class _MountainPainter extends CustomPainter {
 
   @override
   bool shouldRepaint(covariant _MountainPainter old) =>
-      tokens != old.tokens || trail != old.trail || layers != old.layers;
+      tokens != old.tokens || trail != old.trail || layers != old.layers || alphas != old.alphas;
 }

@@ -45,8 +45,9 @@ class ConsentScreen extends StatelessWidget {
           Positioned.fill(
             child: DecoratedBox(decoration: BoxDecoration(gradient: tokens.bgGame)),
           ),
+          // README "Consent": two faint ridges, mtn1 at 70 %, mtn2 at 60 %.
           const Positioned.fill(
-            child: Opacity(opacity: 0.65, child: MountainBackdrop(trail: false, layers: 2)),
+            child: MountainBackdrop(trail: false, layers: 2, alphas: [0.7, 0.6]),
           ),
           SafeArea(
             child: Column(
